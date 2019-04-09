@@ -1,0 +1,5 @@
+/* Hard CSS From the Tutorial for now - this will use @import Bootsrap in the future */
+.container {
+  margin: 3rem auto;
+  max-width: 600px;
+}
