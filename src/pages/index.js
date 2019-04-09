@@ -1,15 +1,18 @@
 import React from "react"
-import { graphql } from "gatsby"
+//import { graphql } from "gatsby"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
-import 'bootstrap/dist/css/bootstrap.css'
+import InnerTitle from "../components/inner-title.js"
+import "bootstrap/dist/css/bootstrap.css"
 
 export default ({ data }) => (
-    <DefaultPageLayout>
-        <div class="col-xl-">
-            <h1 className="text-center">This is the homepage</h1>
-        </div>
-    </DefaultPageLayout>
+  <DefaultPageLayout>
+    <div class="col-xl-">
+      <InnerTitle title="This Is" accent=" the Homepage" underlined>
+        Test
+      </InnerTitle>
+    </div>
+  </DefaultPageLayout>
 )
 
 // export const pageQuery = graphql`
