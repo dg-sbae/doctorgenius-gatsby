@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css"
 
 export default ({ data }) => (
   <DefaultPageLayout>
-    <div class="col-xl-">
+    <div className="col-xl-">
       <InnerTitle title="This Is" accent=" the Homepage" underlined>
         Test
       </InnerTitle>

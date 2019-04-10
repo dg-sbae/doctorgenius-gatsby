@@ -1,0 +1,49 @@
+@import "_site-variables.scss";
+
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero {
+  height: 425px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.accent-block {
+  padding: 2rem;
+  background-color: rgba($primary, 0.95);
+  color: $primary-text;
+}
+.accent-block h1 {
+  font-size: 0.75rem;
+  background: $secondary;
+  display: inline;
+  padding: 2px 5px;
+}
+.accentedParagraph {
+  margin-left: 15px;
+}
+
+.accent-block .accentedParagraph p:before {
+  background-color: $secondary;
+}
+.accentedParagraph p:before {
+  background-color: $primary;
+}
+
+.accentedParagraph p:before {
+  width: 5px;
+  margin-left: -10px;
+  height: 3rem;
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+.white-text {
+  color: white;
+}
