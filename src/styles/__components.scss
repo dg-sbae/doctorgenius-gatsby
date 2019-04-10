@@ -1,0 +1,24 @@
+/* Components - Reusable content pieces which will probably be <Components>*/
+.accent-block {
+  padding: 2rem;
+  background-color: rgba($primary, 0.95);
+  color: $primary-text;
+}
+.accent-block h1 {
+  font-size: 0.75rem;
+  background: $secondary;
+  display: inline;
+  padding: 2px 5px;
+}
+.accentedParagraph {
+  margin-left: 15px;
+}
+
+.accentedParagraph p:before {
+  width: 5px;
+  margin-left: -10px;
+  height: 3rem;
+  content: "";
+  display: inline-block;
+  position: absolute;
+}

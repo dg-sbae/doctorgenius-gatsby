@@ -1,0 +1,14 @@
+/* Text - Colors and fonts - font-size, font-family, color */
+header,
+nav,
+nav > a,
+nav > ul > li,
+nav > ul > li > a {
+  color: white;
+}
+.white-text {
+  color: white;
+}
+.accent-block {
+  color: $primary-text;
+}
