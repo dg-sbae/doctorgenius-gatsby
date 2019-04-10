@@ -5,8 +5,8 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 
 import "bootstrap/dist/css/bootstrap.css"
-import "../style/company-page.scss"
-import "../style/global-styles.scss"
+import "../styles/company-page.scss"
+import "../styles/global-styles.scss"
 
 export default props => (
   <DefaultPageLayout>
