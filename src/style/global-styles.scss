@@ -6,10 +6,16 @@
   transform: translateX(-50%);
 }
 
+/* Page Layout */
+header {
+  position: absolute;
+}
 .hero {
-  height: 425px;
-  background-size: contain;
+  height: 675px;
+  width: 100vw;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,13 +35,6 @@
   margin-left: 15px;
 }
 
-.accent-block .accentedParagraph p:before {
-  background-color: $secondary;
-}
-.accentedParagraph p:before {
-  background-color: $primary;
-}
-
 .accentedParagraph p:before {
   width: 5px;
   margin-left: -10px;
@@ -44,6 +43,29 @@
   display: inline-block;
   position: absolute;
 }
+
+/* Background Colors */
+.accent-block .accentedParagraph p:before {
+  background-color: $secondary;
+}
+.accentedParagraph p:before {
+  background-color: $primary;
+}
+.accent-block {
+  background-color: rgba($primary, 0.95);
+}
+
+/* Text */
+header,
+nav,
+nav > a,
+nav > ul > li,
+nav > ul > li > a {
+  color: white;
+}
 .white-text {
   color: white;
+}
+.accent-block {
+  color: $primary-text;
 }
