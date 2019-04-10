@@ -17,7 +17,7 @@ import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
 
 export default ({ data }) => (
   <DefaultPageLayout>
-    {/*<div class="col-xl-">
+    {/*<div className="col-xl-">
       <InnerTitle title="This Is" accent=" the Homepage" underlined>
         Test
       </InnerTitle>
