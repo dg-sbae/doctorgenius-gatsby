@@ -2,6 +2,10 @@
 header {
   position: absolute;
 }
+.main-content {
+  background: url(/pixel-map.png) no-repeat,
+    url(/pixel-map.png) bottom no-repeat;
+}
 .hero {
   height: 555px;
   width: 100vw;
@@ -16,4 +20,14 @@ header {
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+.row-medium {
+  min-height: 400px;
+}
+.row-tall {
+  min-height: 750px;
+}
+.callout-heading {
+  position: relative;
+  display: inline-block;
 }

@@ -92,7 +92,7 @@ export default ({ data }) => (
       <div class="row">
         <div class="col-xl-12">
           <div class="full-bleed marketing-dashboard-background d-flex justify-content-center align-items-center">
-            <img src={homepageMobileMockup} alt="" />
+            <img class="full-bleed-image" src={homepageMobileMockup} alt="" />
           </div>
         </div>
       </div>

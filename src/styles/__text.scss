@@ -9,6 +9,29 @@ nav > ul > li > a {
 .white-text {
   color: white;
 }
+.text-accent,
+.callout-heading,
+.callout-link > a {
+  color: $primary;
+}
+.callout > p {
+  color: $mute;
+}
 .accent-block {
   color: $primary-text;
+}
+
+.inner-title .strapline {
+  color: $primary;
+}
+
+.callout {
+  font-weight: bold;
+  .callout-heading {
+    font-size: 85px;
+  }
+  .callout-heading sup {
+    text-transform: uppercase;
+    font-size: 18px;
+  }
 }
