@@ -1,20 +1,24 @@
 html { font-size: 16px; }
 
-.inner-title { font-size: 1rem; text-align: center; padding-bottom: 24px; margin-bottom: 52px; }
+.inner-title { font-size: 1rem; text-align: center; }
+.header.inner-title { padding-bottom: 24px; margin-bottom: 52px; }
 .inner-title h3.strapline { font-size: 1.25em; color: #0074CF; }
 .inner-title h2 { font-size: 2.625em; }
-.panel .inner-title h2 { color: #0074CF; }
+
+/* Panel */
+.panel .inner-title { padding-bottom: 0; margin-bottom: 0; }
+.panel .inner-title h2 { color: #0074CF; font-size: 40px; }
 .panel { text-align: center; }
 span.bold { font-weight: 800; }
-p.accented { position:relative; }
+p.accented { position: relative; text-align: left; padding-left: 15px; }
 p.accented:before { content:''; width:4px; height:40px; background:#0074CF; position:absolute; left:-4px; }
-.full-bleed img { width: 70%; margin: 0 auto; display: block; }
-.full-bleed.marketing-dashboard-background { background: url('../img/full-bleed-bg-slanted.png'); }
+/* .full-bleed { height: 100%; } */
+.full-bleed img { width: 50%; margin: 0 auto; display: block; }
+.full-bleed.marketing-dashboard-background { background: url('../img/full-bleed-bg-slanted.png') 50% 50% no-repeat; background-size: cover; width: 105vw;}
 .col-xl-6 img { width: 100%; }
 .inner-title a { color: #0074CF; cursor: pointer; }
 .button { background-color: #0074CF; color: #fff; padding: 5px 10px; }
 .button.flat { border-radius: 0.1rem; }
 .button.rounded { border-radius: 1rem; }
 .button a {  }
-.col-xl-6 > div { height: 100%; }
-
+/* .col-xl-6 > div { height: 100%; } */

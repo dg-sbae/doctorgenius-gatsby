@@ -5,6 +5,8 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import InnerTitle from "../components/inner-title.js"
 import "bootstrap/dist/css/bootstrap.css"
 
+import { FaArrowRight } from 'react-icons/fa';
+
 import medal from "../img/medal.png"
 import money from "../img/money.png"
 import stars from "../img/stars.png"
@@ -25,7 +27,7 @@ export default ({ data }) => (
     <div class="container">
       <div class="row">
         <div class="col-xl-12">
-          <div class="inner-title">
+          <div class="header inner-title">
             <h3 class="strapline">Performance, Results, Excellence</h3>
             <h2>We Care About Your Success</h2>
           </div>
@@ -72,7 +74,7 @@ export default ({ data }) => (
           <div class="content-block">
             <div class="row">
               <div class="col-xl-12">
-                <div class="inner-title">
+                <div class="header inner-title">
                   <h3 class="strapline">Built for success</h3>
                   <h2>All-in-One <span class="bold">Marketing Dashboard</span></h2>
                 </div>
@@ -89,14 +91,14 @@ export default ({ data }) => (
       </div>
       <div class="row">
         <div class="col-xl-12">
-          <div class="full-bleed marketing-dashboard-background">
+          <div class="full-bleed marketing-dashboard-background d-flex justify-content-center align-items-center">
             <img src={homepageMobileMockup} alt="" />
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-xl-12">
-          <div class="inner-title">
+          <div class="header inner-title">
             <h3 class="strapline">Setting the foundation for success</h3>
             <h2>Why Choose <span class="bold">Doctor Genius</span></h2>
           </div>
@@ -104,19 +106,15 @@ export default ({ data }) => (
         <div class="col-xl-6">
           <img src={newPatientAcquisitions} alt="" />
         </div>
-        <div class="col-xl-6">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="inner-title">
-                <h2>Why is Doctor Genius #1 in new patient acquisitions?</h2>
-                <p class="accented">When you join the Doctor Genius Family, we are now partnered. We have a direct interest in your business doing well.</p>
-              </div>
-            </div>
+        <div class="col-xl-6 d-flex justify-content-center align-items-center">
+          <div class="inner-title">
+            <h2>Why is Doctor Genius #1 in new patient acquisitions?</h2>
+            <p class="accented">When you join the Doctor Genius Family, we are now partnered. We have a direct interest in your business doing well.</p>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-xl-6">
+        <div class="col-xl-6 d-flex justify-content-center align-items-center">
           <div class="inner-title">
             <h2>What makes Doctor Genius different?</h2>
             <p class="accented">We are not a cookie cutter type program. We are a performance based program and take pride in your success.</p>
@@ -130,7 +128,7 @@ export default ({ data }) => (
         <div class="col-xl-6">
           <img src={dgClientSatisfaction} alt="" />
         </div>
-        <div class="col-xl-6">
+        <div class="col-xl-6 d-flex justify-content-center align-items-center">
           <div class="inner-title">
             <h2>How would you rate Doctor Genius client satisfaction?</h2>
             <p class="accented">Don't take our word for it, see what our clients say about us 100+ 5 Stars.  Check our <a href="/reviews">reviews</a></p>
@@ -145,12 +143,10 @@ export default ({ data }) => (
               Our support team is very excited to help you and get your company on the right path of success.</p>
             </div>
           </div>
-          <div class="col-xl-6">
-            <div class="d-flex justify-content-center align-items-center">
+          <div class="col-xl-6 d-flex justify-content-center align-items-center">
               <div class="button flat">
-                <a>Request Demo <i></i></a>
+                <a>Request Demo <FaArrowRight /></a>
               </div>
-            </div>
           </div>
       </div>
     </div>
