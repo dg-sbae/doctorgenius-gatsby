@@ -3,3 +3,9 @@
 @import "_components.scss";
 @import "_backgrounds.scss";
 @import "_text.scss";
+
+/* Bootstrap? */
+.img-responsive {
+  max-width: 100%;
+  margin: auto;
+}

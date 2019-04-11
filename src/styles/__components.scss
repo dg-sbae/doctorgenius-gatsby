@@ -1,24 +1,91 @@
 /* Components - Reusable content pieces which will probably be <Components>*/
+.inner-title.underline h2,
+.inner-title h2.underline {
+  text-decoration: underline;
+  /* This isn't working perfectly but it's a start
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 10%,
+    grey 10%,
+    grey 40%,
+    transparent 40%,
+    transparent 60%,
+    grey 60%,
+    grey 90%,
+    transparent 90%,
+    transparent 95%,
+    grey 95%,
+    grey 100%
+  );
+  background-position: 0 1.9em;
+  overflow: visible;
+  background-repeat: repeat-x;
+  background-size: 50% 5px;
+  display: block;
+  height: 2em;*/
+}
+.inner-title {
+  text-align: center;
+}
+
 .accent-block {
   padding: 2rem;
   background-color: rgba($primary, 0.95);
   color: $primary-text;
-}
-.accent-block h1 {
-  font-size: 0.75rem;
-  background: $secondary;
-  display: inline;
-  padding: 2px 5px;
-}
-.accentedParagraph {
-  margin-left: 15px;
+  h1 {
+    font-size: 0.75rem;
+    background: $secondary;
+    display: inline;
+    padding: 2px 5px;
+  }
 }
 
-.accentedParagraph p:before {
-  width: 5px;
-  margin-left: -10px;
-  height: 3rem;
-  content: "";
-  display: inline-block;
+.accentedParagraph,
+.accented-paragraph {
+  margin-left: 15px;
+  .accentedParagraph p:before {
+    width: 3px;
+    margin-left: -15px;
+    margin-top: 2px;
+    height: 3rem;
+    content: "";
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+.callout-heading {
+  display: flex;
+  align-items: center;
+}
+.callout-heading sup {
+  line-height: 1;
+  margin-right: 5px;
+}
+
+.card-slider .card,
+.card-slider .card img {
+  height: 150px; /* This image probably needs to be a background image */
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.card i {
+  width: 10%;
+}
+.card-content-wrapper {
+  width: 60%;
+}
+.card img {
   position: absolute;
+  right: 0;
+}
+
+@for $headingNum from 1 through 6 {
+  h#{$headingNum} {
+    margin-bottom: $content-block-heading-margin;
+  }
 }
