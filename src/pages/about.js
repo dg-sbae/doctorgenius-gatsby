@@ -13,6 +13,7 @@ export default props => (
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}
+        {/* @todo: Heros need a thin grey border underneath, not included in pic */}
         <Container>
           <div className="valign-wrapper row">
             <div className="col-sm-5">
@@ -53,7 +54,7 @@ export default props => (
               </div>
             </div>
             <div className="col-sm-6 d-flex justify-content-center">
-              <img className="logo" src="/logo.png" alt="Our Logo" />
+              <img className="logo" src="" alt="Our Logo" />
             </div>
           </div>
           <div className="row d-flex align-items-center row-medium">
@@ -65,7 +66,7 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div class="icon-wrapper">
-                  <img class="img-icon" src="/icon-web.png" />
+                  <img class="img-icon" src="" />
                 </div>
                 <p class="panel-heading">1 million +</p>
                 <p>
@@ -77,7 +78,7 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div className="icon-wrapper">
-                  <img class="img-icon" src="/icon-search-engine.png" />
+                  <img class="img-icon" src="" />
                 </div>
                 <p class="panel-heading">500+</p>
                 <p>
@@ -89,7 +90,7 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div className="icon-wrapper">
-                  <img class="img-icon" src="/icon-doctors.png" />
+                  <img class="img-icon" src="" />
                 </div>
                 <p class="panel-heading">30 +</p>
                 <p>
@@ -101,7 +102,7 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div className="icon-wrapper">
-                  <img class="img-icon" src="/icon-stars.png" />
+                  <img class="img-icon" src="" />
                 </div>
                 <p class="panel-heading">4.9 Stars</p>
                 <p>
