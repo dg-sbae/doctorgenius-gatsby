@@ -54,7 +54,7 @@ export default props => (
               </div>
             </div>
             <div className="col-sm-6 d-flex justify-content-center">
-              <img className="logo" src="" alt="Our Logo" />
+              <img src="/icon/logo-blue.svg" />
             </div>
           </div>
           <div className="row d-flex align-items-center row-medium">
@@ -66,7 +66,7 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div class="icon-wrapper">
-                  <img class="img-icon" src="" />
+                  <img class="img-icon" src="/icon/web.svg" />
                 </div>
                 <p class="panel-heading">1 million +</p>
                 <p>
@@ -78,7 +78,7 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div className="icon-wrapper">
-                  <img class="img-icon" src="" />
+                  <img class="img-icon" src="/icon/search-engine.svg" />
                 </div>
                 <p class="panel-heading">500+</p>
                 <p>
@@ -90,7 +90,7 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div className="icon-wrapper">
-                  <img class="img-icon" src="" />
+                  <img class="img-icon" src="/icon/doctors.svg" />
                 </div>
                 <p class="panel-heading">30 +</p>
                 <p>
@@ -102,7 +102,7 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div className="icon-wrapper">
-                  <img class="img-icon" src="" />
+                  <img class="img-icon" src="/icon/stars.svg" />
                 </div>
                 <p class="panel-heading">4.9 Stars</p>
                 <p>
@@ -114,7 +114,7 @@ export default props => (
           </div>
           <div className="row row-tall d-flex align-items-center">
             <div className="col-sm-6 d-flex flex-sm-column align-items-center">
-              <img src="/search-result.png" />
+              <img src="/png/search-result.png" />
             </div>
             <div className="col-sm-6 d-flex flex-sm-column align-items-center">
               <div className="callout">
@@ -169,7 +169,7 @@ export default props => (
                   </div>
                   <img
                     className="img-responsive"
-                    src="/testimonials-slider-profile-1.png"
+                    src="/png/testimonials-slider-profile-1.png"
                   />
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default props => (
                       States.
                     </p>
                     <a href="#" className="link-with-icon">
-                      <i className="fa fa-arrow-left" />
+                      <img src="/icon/right-arrow-blue.svg" class="link-icon" />
                       Contact Us
                     </a>
                   </div>
@@ -202,7 +202,7 @@ export default props => (
             <div className="col-sm-6">
               <img
                 className="img-responsive"
-                src="/computer-and-mobile-detail.png"
+                src="/png/computer-and-mobile-detail.png"
               />
             </div>
           </div>
