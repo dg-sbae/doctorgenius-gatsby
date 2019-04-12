@@ -20,7 +20,7 @@ export default props => (
               <div className="accent-block">
                 <h1>Company</h1>
                 <h2>What We Are About</h2>
-                <div className="accentedParagraph">
+                <div className="accented-paragraph">
                   <p>
                     DoctorGenius establishes and boosts your brand online using
                     innovative digital marketing and search engine optimization
@@ -42,7 +42,7 @@ export default props => (
                     The <b>Doctor Genius</b> Story
                   </h2>
                 </div>
-                <div className="accentedParagraph">
+                <div className="accented-paragraph">
                   <p>
                     We are based in Irvine, California, USA. Dental Genius has
                     consistent 5 Star Ratings on Google+, and A Rated with the
@@ -182,7 +182,7 @@ export default props => (
                   <h2>
                     Let's <b>Talk Partnership</b>
                   </h2>
-                  <div className="acented-paragraph">
+                  <div className="accented-paragraph">
                     <p>
                       We are based in Irvine, California, USA. Dental Genius has
                       consistent 5 Star Ratings on Google+, and A Rated with the
