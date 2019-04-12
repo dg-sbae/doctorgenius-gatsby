@@ -57,6 +57,7 @@
 
 .callout-heading {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .callout-heading sup {
@@ -83,9 +84,17 @@
   position: absolute;
   right: 0;
 }
-
-@for $headingNum from 1 through 6 {
-  h#{$headingNum} {
-    margin-bottom: $content-block-heading-margin;
-  }
+.icon-wrapper {
+  /* dimensions of the icon-wrapper should be set with fixed height and width, in the individual page css */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.icon-wrapper .img-icon {
+  max-height: 100%;
+  object-fit: contain;
+}
+.link-icon {
+  margin-right: 10px;
 }

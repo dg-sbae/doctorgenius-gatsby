@@ -1,4 +1,10 @@
 /* Text - Colors and fonts - font-size, font-family, color */
+@for $headingNum from 1 through 6 {
+  h#{$headingNum} {
+    margin-bottom: $content-block-heading-margin;
+  }
+}
+
 header,
 nav,
 nav > a,
