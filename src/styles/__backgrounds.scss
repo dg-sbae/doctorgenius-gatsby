@@ -2,7 +2,8 @@
 .accent-block .accentedParagraph p:before {
   background-color: $secondary;
 }
-.accentedParagraph p:before {
+.accentedParagraph p:before,
+.accented-paragraph p:before {
   background-color: $primary;
 }
 .accent-block {
