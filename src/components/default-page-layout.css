@@ -1,12 +1,12 @@
 /* .col-xl-6 > div { height: 100%; } */
 @import url("https://use.typekit.net/xmg2hgf.css");
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500");
 
 html {
   font-size: 16px;
 }
 body {
-    font-family: agenda, sans-serif!important;
+  font-family: agenda, sans-serif !important;
 }
 .main-content {
   background: url(/pixel-map.png);
@@ -15,12 +15,12 @@ body {
   font-size: 1rem;
   text-align: center;
 }
-.header.inner-title { 
-    padding-bottom: 24px; 
-    margin-bottom: 52px; 
+.header.inner-title {
+  padding-bottom: 24px;
+  margin-bottom: 52px;
 }
 .header.inner-title h2 {
-    font-weight: 300;
+  font-weight: 300;
 }
 .inner-title h3.strapline {
   font-size: 1.25em;
@@ -32,24 +32,27 @@ body {
   font-weight: 500;
 }
 /* Panel */
-.panel .inner-title { padding-bottom: 0; margin-bottom: 0; }
+.panel .inner-title {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 .panel .inner-title h2 {
   color: #0074cf;
   font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 .panel {
-  text-align: center; 
+  text-align: center;
 }
 span.bold {
   font-weight: 600;
 }
 p.accented {
   position: relative;
-  text-align: left; 
+  text-align: left;
   padding-left: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 p.accented:before {
   content: "";
@@ -66,9 +69,9 @@ p.accented:before {
   display: block;
 }
 .full-bleed.marketing-dashboard-background {
-  background: url("../img/full-bleed-bg-slanted.png") 50% 50% no-repeat; 
-  background-size: cover; 
-  width: 105vw;;
+  background: url("../img/full-bleed-bg-slanted.png") 50% 50% no-repeat;
+  background-size: cover;
+  width: 105vw;
 }
 .col-xl-6 img {
   width: 100%;
