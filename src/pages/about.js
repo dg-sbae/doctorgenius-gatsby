@@ -54,7 +54,7 @@ export default props => (
               </div>
             </div>
             <div className="col-sm-6 d-flex justify-content-center">
-              <img src="/icon/logo-blue.svg" />
+              <img src="/icon/logo-blue.svg" alt="Our Logo" />
             </div>
           </div>
           <div className="row d-flex align-items-center row-medium">
@@ -66,7 +66,11 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div class="icon-wrapper">
-                  <img class="img-icon" src="/icon/web.svg" />
+                  <img
+                    class="img-icon"
+                    src="/icon/web.svg"
+                    alt="Icon of a Website"
+                  />
                 </div>
                 <p class="panel-heading">1 million +</p>
                 <p>
@@ -78,7 +82,11 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div className="icon-wrapper">
-                  <img class="img-icon" src="/icon/search-engine.svg" />
+                  <img
+                    class="img-icon"
+                    src="/icon/search-engine.svg"
+                    alt="Icon of a Search Engine Page"
+                  />
                 </div>
                 <p class="panel-heading">500+</p>
                 <p>
@@ -90,7 +98,11 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div className="icon-wrapper">
-                  <img class="img-icon" src="/icon/doctors.svg" />
+                  <img
+                    class="img-icon"
+                    src="/icon/doctors.svg"
+                    alt="Icon of a Group of Doctors"
+                  />
                 </div>
                 <p class="panel-heading">30 +</p>
                 <p>
@@ -102,19 +114,23 @@ export default props => (
             <div class="col-sm-3 align-self-start">
               <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
                 <div className="icon-wrapper">
-                  <img class="img-icon" src="/icon/stars.svg" />
+                  <img
+                    class="img-icon"
+                    src="/icon/stars.svg"
+                    alt="Icon of Stars"
+                  />
                 </div>
                 <p class="panel-heading">4.9 Stars</p>
                 <p>
                   We take pride in our google reviews. Read our google reviews.{" "}
-                  <a href="#">(click here)</a>
+                  <a href="$#">(click here)</a>
                 </p>
               </div>
             </div>
           </div>
           <div className="row row-tall d-flex align-items-center">
             <div className="col-sm-6 d-flex flex-sm-column align-items-center">
-              <img src="/png/search-result.png" />
+              <img src="/png/search-result.png" alt="Search Results Page" />
             </div>
             <div className="col-sm-6 d-flex flex-sm-column align-items-center">
               <div className="callout">
@@ -133,7 +149,7 @@ export default props => (
                   <p className="text-accent">New Patient Inuiries</p>
                   <p class="text-mute">12 Months Duration</p>
                   <div class="callout-link">
-                    <a href="#">
+                    <a href="$#">
                       <i className="fa fa-arrow-right" />
                       Learn More
                     </a>
@@ -170,6 +186,7 @@ export default props => (
                   <img
                     className="img-responsive"
                     src="/png/testimonials-slider-profile-1.png"
+                    alt="A Doctor"
                   />
                 </div>
               </div>
@@ -191,8 +208,12 @@ export default props => (
                       solutions to medical & health practices within the United
                       States.
                     </p>
-                    <a href="#" className="link-with-icon">
-                      <img src="/icon/right-arrow-blue.svg" class="link-icon" />
+                    <a href="$#" className="link-with-icon">
+                      <img
+                        src="/icon/right-arrow-blue.svg"
+                        class="link-icon"
+                        alt="Icon of a Right Arrow"
+                      />
                       Contact Us
                     </a>
                   </div>
@@ -203,6 +224,7 @@ export default props => (
               <img
                 className="img-responsive"
                 src="/png/computer-and-mobile-detail.png"
+                alt="Device Screens"
               />
             </div>
           </div>
