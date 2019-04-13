@@ -4,14 +4,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
-    {
+    /*{
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         typekit: {
           id: 'xxxxxx' //TODO Need to get this id
         }
       }
-    }
+    }*/
     /* {
         resolve: `gatsby-source-wordpress`,
         options: {
