@@ -1,4 +1,8 @@
 /* Page Layout - Positioning elements and general page structure*/
+html,
+body {
+  overflow-x: auto; /* Allows 100vw to not include scrollbars */
+}
 header {
   position: absolute;
 }
