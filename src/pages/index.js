@@ -7,6 +7,7 @@ import Container from "../components/Container"
 // import InnerTitle from "../components/inner-title.js"
 import "bootstrap/dist/css/bootstrap.css"
 import "../styles/global-styles.scss"
+import "../styles/homepage.scss"
 
 import { FaArrowRight } from "react-icons/fa"
 
@@ -22,7 +23,7 @@ import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
 
 export default ({ data }, props) => (
   <DefaultPageLayout>
-    <div className={props["*"]}>
+    <div className={props["*"] || "homepage"}>
       {/*<div className="col-xl-">
         <InnerTitle title="This Is" accent=" the Homepage" underlined>
           Test
