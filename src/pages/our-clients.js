@@ -18,13 +18,14 @@ export default props => (
           <div className="valign-wrapper row">
             <div className="col-sm-5">
               <div className="accent-block">
-                <h1>Company</h1>
-                <h2>What We Are About</h2>
+                <h1>Dentistry Practices</h1>
+                <h2>Engage and Convert More Patients to Your Practice</h2>
                 <div className="accented-paragraph">
                   <p>
-                    DoctorGenius establishes and boosts your brand online using
-                    innovative digital marketing and search engine optimization
-                    strategies.
+                    Doctor Genius provides digital marketing solutions by
+                    leveraging content, mobile-first web design, SEO, online
+                    directories, and social media to drive new patients to your
+                    private practice
                   </p>
                 </div>
               </div>
@@ -35,97 +36,97 @@ export default props => (
       <Main>
         <Container>
           <div className="row d-flex align-items-center row-medium">
-            <div className="col-sm-6">
+            <div className="col-sm-8 offset-sm-2">
               <div className="content-block">
-                <div className="innerTitle">
-                  <h2>
-                    The <b>Doctor Genius</b> Story
+                <div className="inner-title centered">
+                  <div class="strapline">Marketing Performance</div>
+                  <h2 className="underline">
+                    <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better{" "}
+                    <b>Visibility Online</b>
                   </h2>
                 </div>
                 <div className="accented-paragraph">
                   <p>
-                    We are based in Irvine, California, USA. Dental Genius has
-                    consistent 5 Star Ratings on Google+, and A Rated with the
-                    BBB. We employ and all-star development, support, and sales
-                    team to provide high level online marketing solutions to
-                    medical & health practices within the United States.
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with
+                    the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with
+                    the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with
+                    the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 d-flex justify-content-center">
-              <img src="/icon/logo-blue.svg" alt="Our Logo" />
-            </div>
           </div>
           <div className="row d-flex align-items-center row-medium">
-            <div class="col-sm-12">
-              <div class="inner-title underlined">
-                Doctor Genius <b>by the numbers</b>
+            <div class="col-sm-7">
+              <div class="inner-title">
+                <h3 className="m-0">Case Study: Titan Dental</h3>
+                <div className="subtitle muted">The first 6 months</div>
+              </div>
+              <div class="case-study-table">
+                <div className="case-study-item">
+                  <p className="callout">1,125%</p>
+                  <p>Increase in Google First-Page Revenue</p>
+                </div>
+                <div className="case-study-item">
+                  <p className="callout">100%</p>
+                  <p>Increase in Revenue</p>
+                </div>
+                <div className="case-study-item">
+                  <p className="callout">60%</p>
+                  <p>Growth in organic Search Traffic</p>
+                </div>
+                <div className="case-study-item">
+                  <p className="callout">500%</p>
+                  <p>Growth in Reviews Across the Web</p>
+                </div>
+                <div className="case-study-item">
+                  <p className="callout">200%</p>
+                  <p>New Patient Appointments</p>
+                </div>
+                <div className="case-study-item">
+                  <p className="callout">88%</p>
+                  <p>Increase in New Patient Calls!</p>
+                </div>
               </div>
             </div>
-            <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
-                <div class="icon-wrapper">
-                  <img
-                    class="img-icon"
-                    src="/icon/web.svg"
-                    alt="Icon of a Website"
-                  />
-                </div>
-                <p class="panel-heading">1 million +</p>
-                <p>
-                  Words published to our clients’ website blogs and social
-                  profiles
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
-                <div className="icon-wrapper">
-                  <img
-                    class="img-icon"
-                    src="/icon/search-engine.svg"
-                    alt="Icon of a Search Engine Page"
-                  />
-                </div>
-                <p class="panel-heading">500+</p>
-                <p>
-                  Over 1000+ Dental Practices use Doctor Genius Web & SEO
-                  services
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
-                <div className="icon-wrapper">
-                  <img
-                    class="img-icon"
-                    src="/icon/doctors.svg"
-                    alt="Icon of a Group of Doctors"
-                  />
-                </div>
-                <p class="panel-heading">30 +</p>
-                <p>
-                  In-House Support, Development, and Writers work for Doctor
-                  Genius
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
-                <div className="icon-wrapper">
-                  <img
-                    class="img-icon"
-                    src="/icon/stars.svg"
-                    alt="Icon of Stars"
-                  />
-                </div>
-                <p class="panel-heading">4.9 Stars</p>
-                <p>
-                  We take pride in our google reviews. Read our google reviews.{" "}
-                  <a href="$#">(click here)</a>
-                </p>
-              </div>
+            <div class="col-sm-5">
+              <img
+                className="img-responsive"
+                src="/png/search-result.png"
+                alt="Search Results Page"
+              />
             </div>
           </div>
           <div className="row row-tall d-flex align-items-center">
