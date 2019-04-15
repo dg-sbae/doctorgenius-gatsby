@@ -1,3 +1,12 @@
+/* Text types:
+
+Headings (inner title)
+Paragragh (accented paragraph)
+"Callout" (blue, bold, suually numbers, larger fontsize)
+"Detail" (different font, thinner line-height, thinnger kerning
+
+*/
+
 /* Text - Colors and fonts - font-size, font-family, color */
 @for $headingNum from 1 through 6 {
   h#{$headingNum}:not(.m-0) {
