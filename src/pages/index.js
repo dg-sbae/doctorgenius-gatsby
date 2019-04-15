@@ -53,7 +53,7 @@ export default ({ data }, props) => (
         <Container>
           <div class="row">
             <div class="col-xl-12">
-              <div class="header inner-title">
+              <div class="header inner-title center">
                 <h3 class="strapline">Performance, Results, Excellence</h3>
                 <h2 class="underline">We Care About Your Success</h2>
               </div>
@@ -100,7 +100,7 @@ export default ({ data }, props) => (
               <div class="content-block">
                 <div class="row">
                   <div class="col-xl-12">
-                    <div class="header inner-title">
+                    <div class="header inner-title center">
                       <h3 class="strapline">Built for success</h3>
                       <h2>
                         All-in-One <span class="bold">Marketing Dashboard</span>
@@ -133,7 +133,7 @@ export default ({ data }, props) => (
           </div>
           <div class="row">
             <div class="col-xl-12">
-              <div class="header inner-title">
+              <div class="header inner-title center">
                 <h3 class="strapline">Setting the foundation for success</h3>
                 <h2>
                   Why Choose <span class="bold">Doctor Genius</span>

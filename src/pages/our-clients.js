@@ -38,7 +38,7 @@ export default props => (
           <div className="row d-flex align-items-center row-medium">
             <div className="col-sm-8 offset-sm-2">
               <div className="content-block">
-                <div className="inner-title centered">
+                <div className="inner-title center">
                   <div class="strapline">Marketing Performance</div>
                   <h2 className="underline">
                     <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better{" "}
@@ -90,7 +90,7 @@ export default props => (
           </div>
           <div className="row d-flex align-items-center row-medium">
             <div class="col-sm-7">
-              <div class="inner-title">
+              <div class="inner-title center">
                 <h3 className="m-0">Case Study: Titan Dental</h3>
                 <div className="subtitle muted">The first 6 months</div>
               </div>

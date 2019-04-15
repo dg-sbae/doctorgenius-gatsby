@@ -76,7 +76,7 @@ inner-title:                                div.inner-title
     segmented underline                     div.inner-title.underlined h2:after
     supports strapline above                div.inner-title div.strapline (maybe div.inner-title p.strapline)
     or subtitle below                       div.inner-title div.subtitle
-    centered                                div.inner-title.centered
+    center                                  div.inner-title.center
 
 Strapline                                   .strapline
     accented color
