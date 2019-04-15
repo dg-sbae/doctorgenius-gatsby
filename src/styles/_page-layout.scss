@@ -40,4 +40,8 @@ header {
   img {
     width: 100%;
   }
+  .container {
+    max-width: 1200px; /* This will be implememnted better in the bootstrap grid scss */
+    /* 100px per column */
+  }
 }

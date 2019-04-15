@@ -1,9 +1,18 @@
 @import url("https://use.typekit.net/xmg2hgf.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500");
 
+/* Text types:
+
+Headings (inner title)
+Paragragh (accented paragraph)
+"Callout" (blue, bold, suually numbers, larger fontsize)
+"Detail" (different font, thinner line-height, thinnger kerning
+
+*/
+
 /* Text - Colors and fonts - font-size, font-family, color */
 @for $headingNum from 1 through 6 {
-  h#{$headingNum} {
+  h#{$headingNum}:not(.m-0) {
     margin-bottom: $content-block-heading-margin;
   }
 }
@@ -82,6 +91,10 @@ nav > ul > li > a {
   a {
     color: $primary;
   }
+}
+
+.inner-title .subtitle.muted {
+  color: $mute-text;
 }
 
 .callout {

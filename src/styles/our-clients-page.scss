@@ -1,0 +1,41 @@
+@import "_site-variables.scss";
+
+.hero {
+  background-image: url("/hero/our-clients.png");
+}
+.icon-wrapper {
+  height: 67px;
+  width: 103px;
+}
+.case-study-table {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(3, 100px);
+}
+.case-study-item {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.case-study-item p:not(.callout) {
+  font-family: Roboto;
+  flex-basis: 150px;
+  font-size: 0.9375rem; /* 15px */
+  margin: 0;
+  padding: 0;
+}
+.case-study-item .callout {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  flex-basis: 150px;
+  letter-spacing: -0.12rem;
+  margin-right: 10px;
+  /* inherit this from somewhere else */
+  color: $primary;
+  font-size: 2.5rem; /* 40px */
+  font-weight: bold;
+}
