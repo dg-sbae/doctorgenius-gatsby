@@ -1,8 +1,18 @@
+@import url("https://use.typekit.net/xmg2hgf.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500");
+
 /* Text - Colors and fonts - font-size, font-family, color */
 @for $headingNum from 1 through 6 {
   h#{$headingNum} {
     margin-bottom: $content-block-heading-margin;
   }
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: agenda, sans-serif !important;
 }
 
 header,
@@ -27,8 +37,51 @@ nav > ul > li > a {
   color: $primary-text;
 }
 
+.homepage {
+  .accent-block {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 27.5px;
+      background: none;
+      display: inline-block;
+    }
+
+    .accented-paragraph {
+      p {
+        &:before {
+          background-color: $homepage-secondary-accent;
+        }
+      }
+    }
+  }
+}
+
 .inner-title .strapline {
   color: $primary;
+}
+.inner-title {
+  h3 {
+    &.strapline {
+      font-size: 1.25em;
+      color: $primary;
+      font-weight: 600;
+    }
+
+    &.header {
+      h2 {
+        font-weight: 300;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 2.625em;
+    font-weight: 500;
+  }
+
+  a {
+    color: $primary;
+  }
 }
 
 .callout {
@@ -39,5 +92,42 @@ nav > ul > li > a {
   .callout-heading sup {
     text-transform: uppercase;
     font-size: 18px;
+  }
+}
+
+.panel {
+  .inner-title {
+    h2 {
+      color: $primary;
+      font-size: 40px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+    }
+  }
+}
+
+span {
+  &.bold {
+    font-weight: 600;
+  }
+}
+
+p {
+  &.accented {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.button {
+  color: #fff;
+}
+
+.homepage {
+  .hero {
+    .accent-block {
+      h1 {
+        font-size: 4.5rem;
+      }
+    }
   }
 }
