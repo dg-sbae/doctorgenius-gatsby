@@ -19,6 +19,17 @@
   justify-content: center;
   align-items: center;
   height: 100px;
+
+  /* There has to be a better way to do these css grid inline borders */
+  &:nth-child(odd) {
+    border-right: 1px solid #dfdfdf;
+  }
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4) {
+    border-bottom: 1px solid #dfdfdf;
+  }
 }
 .case-study-item p:not(.callout) {
   font-family: Roboto;
