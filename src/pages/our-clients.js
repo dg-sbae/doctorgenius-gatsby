@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.css"
 import "../styles/our-clients-page.scss"
 import "../styles/global-styles.scss"
 
+//import "../"
+
 export default props => (
   <DefaultPageLayout>
     <div className={props["*"]}>
@@ -36,7 +38,7 @@ export default props => (
       <Main>
         <Container>
           <div className="row d-flex align-items-center row-medium">
-            <div className="col-sm-8 offset-sm-2">
+            <div className="col-sm-9 offset-sm-1">
               <div className="content-block">
                 <div className="inner-title center">
                   <div class="strapline">Marketing Performance</div>
@@ -88,6 +90,7 @@ export default props => (
               </div>
             </div>
           </div>
+          <div className="spacer solid" />
           <div className="row d-flex align-items-center row-medium">
             <div class="col-sm-7">
               <div class="inner-title center">

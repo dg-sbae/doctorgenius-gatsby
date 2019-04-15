@@ -82,9 +82,9 @@ Strapline                                   .strapline
     accented color
     smaller font
 
-spacer div                                  div.divider
-    sizes (in ems)                          div.divider.small/.medium/.large (?)
-    with optional hr                        div.divider.solid
+spacer div                                  div.spacer
+    sizes (in ems)                          div.spacer.small/.medium/.large (?)
+    with optional hr                        div.spacer.solid
 
 panel                                      div.panel
     image/icon                             div.panel img
