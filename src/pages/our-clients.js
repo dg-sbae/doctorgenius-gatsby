@@ -129,36 +129,36 @@ export default props => (
               />
             </div>
           </div>
-          <div className="row row-tall d-flex align-items-center">
-            <div className="col-sm-6 d-flex flex-sm-column align-items-center">
-              <img src="/png/search-result.png" alt="Search Results Page" />
-            </div>
-            <div className="col-sm-6 d-flex flex-sm-column align-items-center">
-              <div className="callout">
-                <div className="inner-title underline">
-                  <h2>
-                    Our <b>Clients Average</b>
-                  </h2>
-                  <div class="callout-heading">
-                    <sup>
-                      Up
-                      <br />
-                      To
-                    </sup>
-                    <p>600%</p>
-                  </div>
-                  <p className="text-accent">New Patient Inuiries</p>
-                  <p class="text-mute">12 Months Duration</p>
-                  <div class="callout-link">
-                    <a href="$#">
-                      <i className="fa fa-arrow-right" />
-                      Learn More
-                    </a>
+          <div className="full-bleed-wrapper">
+            <div className="full-bleed full-bleed-background-image">&nbsp;</div>
+            <div className="full-bleed-content-wrapper">
+              <div className="row align-items-center">
+                <div className="col-sm-5 offset-sm-7">
+                  <div className="content-block">
+                    <div className="inner-title">
+                      <h2>Check which plan works for your practice</h2>
+                    </div>
+                    <div className="accented-paragraph medium-width">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc dui turpis, sodales ut mollis quis, ullamcorper a
+                        metus
+                      </p>
+                      <a href="$#" className="link-with-icon">
+                        <img
+                          src="/icon/right-arrow-blue.svg"
+                          class="link-icon"
+                          alt="Icon of a Right Arrow"
+                        />
+                        See Our Plans
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="row row-tall">
             <div className="col-sm-12 d-flex justify-content-center">
               <div className="inner-title">
