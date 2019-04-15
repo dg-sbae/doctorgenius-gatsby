@@ -40,6 +40,10 @@ nav > ul > li > a {
   color: $primary;
 }
 
+.inner-title .subtitle.muted {
+  color: $mute-text;
+}
+
 .callout {
   font-weight: bold;
   .callout-heading {
