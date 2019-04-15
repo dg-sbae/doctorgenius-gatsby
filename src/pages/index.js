@@ -24,24 +24,19 @@ import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
 export default ({ data }, props) => (
   <DefaultPageLayout>
     <div className={props["*"] || "homepage"}>
-      {/*<div className="col-xl-">
-        <InnerTitle title="This Is" accent=" the Homepage" underlined>
-          Test
-        </InnerTitle>
-      </div>*/}
       <div className="hero">
         {/* Hero will be a layout component */}
         <Container>
           <div className="valign-wrapper row">
-            <div className="col-sm-5">
+            <div className="col-lg-7">
               <div className="accent-block">
-                <h1>Company</h1>
-                <h2>What We Are About</h2>
-                <div className="accentedParagraph">
+                <h1>The Leader in New Patient Acquisition</h1>
+                <div className="accented-paragraph">
                   <p>
-                    DoctorGenius establishes and boosts your brand online using
-                    innovative digital marketing and search engine optimization
-                    strategies.
+                    Doctor Genius offers high-end web marketing services to
+                    health professionals throughout the United States. Learn how
+                    we funnel traffic to converted patient directly to your
+                    practice.
                   </p>
                 </div>
               </div>
