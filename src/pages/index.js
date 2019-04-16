@@ -125,7 +125,7 @@ export default ({ data }, props) => (
           </div>
           <div class="row row-medium d-flex align-items-center">
             <div class="col-xl-12">
-              <div class="header inner-title">
+              <div class="header inner-title center">
                 <h3 class="strapline">Setting the foundation for success</h3>
                 <h2 class="underline">
                   Why Choose <span class="bold">Doctor Genius</span>

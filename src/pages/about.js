@@ -59,8 +59,10 @@ export default props => (
           </div>
           <div className="row d-flex align-items-center row-medium">
             <div class="col-sm-12">
-              <div class="inner-title underlined">
-                Doctor Genius <b>by the numbers</b>
+              <div class="inner-title center underline">
+                <h2>
+                  Doctor Genius <b>by the numbers</b>
+                </h2>
               </div>
             </div>
             <div class="col-sm-3 align-self-start">
@@ -134,7 +136,7 @@ export default props => (
             </div>
             <div className="col-sm-6 d-flex flex-sm-column align-items-center">
               <div className="callout">
-                <div className="inner-title underline">
+                <div className="inner-title underline center">
                   <h2>
                     Our <b>Clients Average</b>
                   </h2>
@@ -160,9 +162,9 @@ export default props => (
           </div>
           <div className="row row-tall">
             <div className="col-sm-12 d-flex justify-content-center">
-              <div className="inner-title">
+              <div className="inner-title center underline">
                 <div className="strapline">Testimonials</div>
-                <h2 class="underline">
+                <h2>
                   What <b>Clients Are Saying</b>
                 </h2>
               </div>
