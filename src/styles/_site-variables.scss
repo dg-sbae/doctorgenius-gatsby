@@ -8,3 +8,19 @@ $secondary: #005a91;
 $homepage-secondary-accent: #33b2ff;
 
 $content-block-heading-margin: 27.5px; /* This needs fixed, maybe ems? */
+
+/* Bootstrap overrides: */
+$grid-breakpoints: (
+  xs: 0,
+  /* Not Implemented */ sm: 576px,
+  /* Not Implemented */ md: 768px,
+  lg: 1300px,
+  /* Not Used */ xl: 4000px,
+) !default;
+
+$container-max-widths: (
+  /* Not Implemented */ sm: 540px,
+  /* Not Implemented */ md: 720px,
+  lg: 1250px,
+  /* Not Used */ xl: 1600px
+) !default;
