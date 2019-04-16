@@ -4,7 +4,6 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import "bootstrap/dist/css/bootstrap.css"
 import "../styles/our-clients-page.scss"
 import "../styles/global-styles.scss"
 
