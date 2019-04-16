@@ -48,9 +48,9 @@ export default ({ data }, props) => (
         <Container>
           <div className="row row-medium">
             <div className="col-xl-12 d-flex align-items-center justify-content-center">
-              <div className="header inner-title">
+              <div className="header inner-title underline center">
                 <h3 className="strapline">Performance, Results, Excellence</h3>
-                <h2 className="underline">We Care About Your Success</h2>
+                <h2>We Care About Your Success</h2>
               </div>
             </div>
             <div className="col-xl-3 align-self-start">
@@ -96,9 +96,9 @@ export default ({ data }, props) => (
           </div>
           <div class="row row-medium d-flex align-items-center justify-content-center">
             <div class="col-xl-12">
-              <div class="header inner-title">
+              <div class="header inner-title underline center">
                 <h3 class="strapline">Built for success</h3>
-                <h2 class="underline">
+                <h2>
                   All-in-One <span class="bold">Marketing Dashboard</span>
                 </h2>
               </div>
@@ -125,15 +125,19 @@ export default ({ data }, props) => (
           </div>
           <div class="row row-medium d-flex align-items-center">
             <div class="col-xl-12">
-              <div class="header inner-title center">
+              <div class="header inner-title center underline">
                 <h3 class="strapline">Setting the foundation for success</h3>
-                <h2 class="underline">
+                <h2>
                   Why Choose <span class="bold">Doctor Genius</span>
                 </h2>
               </div>
             </div>
             <div class="col-xl-6">
-              <img src={newPatientAcquisitions} alt="" />
+              <img
+                className="img-responsive"
+                src={newPatientAcquisitions}
+                alt=""
+              />
             </div>
             <div class="col-xl-6 d-flex justify-content-center align-items-center">
               <div className="content-block">
@@ -165,12 +169,16 @@ export default ({ data }, props) => (
               </div>
             </div>
             <div class="col-xl-6">
-              <img src={dgDifferent} alt="" />
+              <img className="img-responsive" src={dgDifferent} alt="" />
             </div>
           </div>
           <div class="row row-medium">
             <div class="col-xl-6">
-              <img src={dgClientSatisfaction} alt="" />
+              <img
+                className="img-responsive"
+                src={dgClientSatisfaction}
+                alt=""
+              />
             </div>
             <div class="col-xl-6 d-flex justify-content-center align-items-center">
               <div class="content-block">
