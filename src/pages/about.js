@@ -146,7 +146,7 @@ export default props => (
                     </sup>
                     <p>600%</p>
                   </div>
-                  <p className="text-accent">New Patient Inuiries</p>
+                  <p className="text-accent">New Patient Inquiries</p>
                   <p class="text-mute">12 Months Duration</p>
                   <div class="callout-link">
                     <a href="$#">
