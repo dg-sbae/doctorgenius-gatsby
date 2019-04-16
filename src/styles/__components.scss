@@ -1,53 +1,12 @@
-/* Components - Reusable content pieces which will probably be <Components>*/
-<<<<<<< HEAD
-.inner-title.underline h2,
-.inner-title h2.underline {
-  // text-decoration: underline;
-  /* This isn't working perfectly but it's a start */
-  background-image: linear-gradient(
-    to right,
-    transparent 0%,
-    transparent 20%,
-    #9c9c9c 20%,
-    #9c9c9c 46%,
-    transparent 46%,
-    transparent 48%,
-    #9c9c9c 48%,
-    #9c9c9c 52%,
-    transparent 52%,
-    transparent 54%,
-    #9c9c9c 54%,
-    #9c9c9c 80%,
-    transparent 80%,
-    transparent 100%
-  );
-  background-position: 0 1.9em;
-  overflow: visible;
-  background-repeat: repeat-x;
-  background-size: 100% 5px;
-  display: inline-block;
-  height: 1.95em;
-  margin-bottom: 0;
-}
-
-.inner-title.centered {
-  text-align: center;
-  font-size: 1rem;
-
-  &.header {
-    padding-bottom: 24px;
-    margin-bottom: 52px;
-  }
-
-  a {
-    cursor: pointer;
-=======
+/* Components - Reusable content pieces which will probably be <Components> */
 
 .inner-title {
   text-align: left;
   &.center {
     text-align: center;
+    font-size: 1rem; /* We should move this into text */
   }
+
   &.underline h2,
   & h2.underline {
     background-position: 0 1.9em;
@@ -56,7 +15,6 @@
     background-size: 100% 5px;
     display: inline-block;
     height: 1.95em;
-
     // text-decoration: underline;
     /* This isn't working perfectly but it's a start */
     background-image: linear-gradient(
@@ -76,10 +34,11 @@
       transparent 80%,
       transparent 100%
     );
->>>>>>> d583a9b7d7ab8d3cced678172cb4ace495c408b8
   }
 }
-
+a {
+  cursor: pointer;
+}
 .accent-block {
   padding: 2rem;
   background-color: rgba($primary, 0.95);
@@ -204,10 +163,6 @@
   z-index: 2; /* ensure any child elements sit above pseudos */
 }
 /* TODO END - Homepage border in the hero - need to fix this */
-
-.content-block {
-  .inner-title {
-    text-align: left;
 
 .spacer {
   width: 90%;
