@@ -4,17 +4,26 @@
   text-align: left;
   &.center {
     text-align: center;
+  }
+  &.header {
+    padding-bottom: 24px;
+    margin-bottom: 52px;
+  }
+  a {
+    cursor: pointer;
     font-size: 1rem; /* We should move this into text */
   }
 
   &.underline h2,
-  & h2.underline {
+  h2.underline {
     background-position: 0 1.9em;
     overflow: visible;
     background-repeat: repeat-x;
     background-size: 100% 5px;
     display: inline-block;
     height: 1.95em;
+    margin-bottom: 0;
+
     // text-decoration: underline;
     /* This isn't working perfectly but it's a start */
     background-image: linear-gradient(
@@ -163,6 +172,12 @@ a {
   z-index: 2; /* ensure any child elements sit above pseudos */
 }
 /* TODO END - Homepage border in the hero - need to fix this */
+
+.content-block {
+  .inner-title {
+    text-align: left;
+  }
+}
 
 .spacer {
   width: 90%;
