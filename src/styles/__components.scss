@@ -1,4 +1,4 @@
-/* Components - Reusable content pieces which will probably be <Components>*/
+/* Components - Reusable content pieces which will probably be <Components> */
 
 .inner-title {
   text-align: left;
@@ -11,7 +11,9 @@
   }
   a {
     cursor: pointer;
+    font-size: 1rem; /* We should move this into text */
   }
+
   &.underline h2,
   h2.underline {
     background-position: 0 1.9em;
@@ -43,7 +45,9 @@
     );
   }
 }
-
+a {
+  cursor: pointer;
+}
 .accent-block {
   padding: 2rem;
   background-color: rgba($primary, 0.95);
