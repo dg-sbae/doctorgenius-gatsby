@@ -33,7 +33,7 @@ export default props => (
       </div>
       <Main>
         <Container>
-          <div className="row d-flex align-items-center row-medium">
+          <div className="row padded d-flex align-items-center">
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">
@@ -56,7 +56,8 @@ export default props => (
               <img src="/icon/logo-blue.svg" alt="Our Logo" />
             </div>
           </div>
-          <div className="row d-flex align-items-center row-medium">
+
+          <div className="row padded d-flex align-items-center ">
             <div class="col-sm-12">
               <div className="inner-title center">
                 <h2 className="underline">
@@ -65,7 +66,7 @@ export default props => (
               </div>
             </div>
             <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
+              <div class="panel">
                 <div class="icon-wrapper">
                   <img
                     class="img-icon"
@@ -81,7 +82,7 @@ export default props => (
               </div>
             </div>
             <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
+              <div class="panel">
                 <div className="icon-wrapper">
                   <img
                     class="img-icon"
@@ -97,7 +98,7 @@ export default props => (
               </div>
             </div>
             <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
+              <div class="panel">
                 <div className="icon-wrapper">
                   <img
                     class="img-icon"
@@ -113,7 +114,7 @@ export default props => (
               </div>
             </div>
             <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
+              <div class="panel">
                 <div className="icon-wrapper">
                   <img
                     class="img-icon"
@@ -159,7 +160,7 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row row-tall">
+          <div className="row padded tall-bottom">
             <div className="col-sm-12 d-flex justify-content-center">
               <div className="inner-title center">
                 <div className="strapline">Testimonials</div>
@@ -193,7 +194,7 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row d-flex align-items-center">
+          <div className="row padded tall-top d-flex align-items-center">
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">

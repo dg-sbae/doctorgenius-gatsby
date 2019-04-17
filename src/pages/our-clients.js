@@ -146,7 +146,7 @@ export default props => (
             </div>
           </div>
           <div className="spacer solid" />
-          <div className="row d-flex align-items-center row-medium">
+          <div className="row padded short-top">
             <div class="col-sm-7">
               <div class="inner-title center">
                 <h3 className="m-0">Case Study: Titan Dental</h3>
@@ -197,7 +197,7 @@ export default props => (
               />
             </div>
           </div>
-          <div className="full-bleed-wrapper">
+          <div className="full-bleed-wrapper pad-md">
             <div className="full-bleed full-bleed-background-image">&nbsp;</div>
             <div className="full-bleed-content-wrapper">
               <div className="row align-items-center">
@@ -227,7 +227,7 @@ export default props => (
             </div>
           </div>
 
-          <div className="row row-tall">
+          <div className="row padded tall-bottom">
             <div className="col-sm-12 d-flex justify-content-center">
               <div className="inner-title">
                 <div className="strapline">Testimonials</div>
@@ -261,7 +261,7 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row d-flex align-items-center">
+          <div className="row padded tall-top d-flex align-items-center">
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">

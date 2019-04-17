@@ -65,11 +65,28 @@ header {
   margin-left: 50%;
   transform: translateX(-50%);
 }
-.row-medium {
-  min-height: 400px;
+.row {
+  &.padded {
+    padding-top: 60px;
+    &.short-top {
+      padding-top: 30px;
+    }
+    &.tall-top {
+      padding-top: 90px;
+    }
+
+    padding-bottom: 30px;
+    &.short-bottom {
+      padding-bottom: 15px;
+    }
+    &.tall-bottom {
+      padding-bottom: 60px;
+    }
+  }
 }
-.row-tall {
-  min-height: 750px;
+.inner-title {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .callout-heading {
   position: relative;
@@ -82,7 +99,17 @@ header {
   }
 }
 
-.container {
-  max-width: 1200px; /* This will be implememnted better in the bootstrap grid scss */
-  /* 100px per column */
+.center {
+  text-align: center;
+}
+
+/* Utility classes applied to inner elements, like link-with-icon. Not for rows */
+.pad-sm {
+  padding: 15px;
+}
+.pad-md {
+  padding: 30px;
+}
+.pad-lg {
+  padding: 60px;
 }
