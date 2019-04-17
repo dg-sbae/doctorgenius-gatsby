@@ -27,7 +27,7 @@ export default ({ data }, props) => (
       <div className="hero">
         {/* Hero will be a layout component */}
         <Container>
-          <div className="valign-wrapper row">
+          <div className="row">
             <div className="col-sm-7">
               <div class="accent-block">
                 <div class="border-horizontal border-top-left" />
@@ -54,15 +54,15 @@ export default ({ data }, props) => (
       </div>
       <Main>
         <Container>
-          <div className="row row-medium">
-            <div className="col-sm-12 d-flex align-items-center justify-content-center">
+          <div className="row padded panel-row">
+            <div className="col-sm-12">
               <div className="header inner-title center">
                 <h3 className="strapline">Performance, Results, Excellence</h3>
                 <h2 className="underline">We Care About Your Success</h2>
               </div>
             </div>
-            <div className="col-sm-3 align-self-start">
-              <div className="panel d-flex flex-sm-column align-items-center justify-content-start">
+            <div className="col-sm-3">
+              <div className="panel">
                 <div class="icon-wrapper">
                   <img className="img-icon" src={medal} alt="Icon of a medal" />
                 </div>
@@ -70,8 +70,8 @@ export default ({ data }, props) => (
                 <p>Increase in Google First-Page Results</p>
               </div>
             </div>
-            <div className="col-sm-3 align-self-start">
-              <div className="panel d-flex flex-sm-column align-items-center justify-content-start">
+            <div className="col-sm-3">
+              <div className="panel">
                 <div class="icon-wrapper">
                   <img className="img-icon" src={money} alt="Icon of money" />
                 </div>
@@ -79,8 +79,8 @@ export default ({ data }, props) => (
                 <p>Increase in Revenue!</p>
               </div>
             </div>
-            <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
+            <div class="col-sm-3">
+              <div class="panel">
                 <div class="icon-wrapper">
                   <img
                     className="img-icon"
@@ -92,8 +92,8 @@ export default ({ data }, props) => (
                 <p>Increase in New Patient Calls!</p>
               </div>
             </div>
-            <div class="col-sm-3 align-self-start">
-              <div class="panel d-flex flex-sm-column align-items-center justify-content-start">
+            <div class="col-sm-3">
+              <div class="panel">
                 <div class="icon-wrapper">
                   <img className="img-icon" src={stars} alt="Icon of Stars" />
                 </div>
@@ -102,7 +102,7 @@ export default ({ data }, props) => (
               </div>
             </div>
           </div>
-          <div class="row row-medium d-flex align-items-center justify-content-center">
+          <div class="row padded">
             <div class="col-sm-12">
               <div class="header inner-title center">
                 <h3 class="strapline">Built for success</h3>
@@ -120,9 +120,9 @@ export default ({ data }, props) => (
               </p>
             </div>
           </div>
-          <div class="row row-tall">
+          <div class="row padded short-top tall-bottom">
             <div class="col-sm-12">
-              <div class="full-bleed marketing-dashboard-background d-flex justify-content-center align-items-center">
+              <div class="full-bleed marketing-dashboard-background">
                 <img
                   class="full-bleed-image"
                   src={homepageMobileMockup}
@@ -131,7 +131,7 @@ export default ({ data }, props) => (
               </div>
             </div>
           </div>
-          <div class="row row-medium d-flex align-items-center">
+          <div class="row padded tall-top short-bottom">
             <div class="col-sm-12">
               <div class="header inner-title center">
                 <h3 class="strapline">Setting the foundation for success</h3>
@@ -147,7 +147,7 @@ export default ({ data }, props) => (
                 alt=""
               />
             </div>
-            <div class="col-sm-6 d-flex justify-content-center align-items-center">
+            <div class="col-sm-5">
               <div className="content-block">
                 <div class="inner-title">
                   <h2>Why is Doctor Genius #1 in new patient acquisitions?</h2>
@@ -162,8 +162,7 @@ export default ({ data }, props) => (
               </div>
             </div>
           </div>
-          <div class="row row-medium">
-            <div class="col-sm-6 d-flex justify-content-center align-items-center">
+          <div class="row padded short-top short-bottom">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>What makes Doctor Genius different?</h2>
@@ -180,7 +179,7 @@ export default ({ data }, props) => (
               <img className="img-responsive" src={dgDifferent} alt="" />
             </div>
           </div>
-          <div class="row row-medium">
+          <div class="row padded short-top">
             <div class="col-sm-6">
               <img
                 className="img-responsive"
@@ -188,7 +187,7 @@ export default ({ data }, props) => (
                 alt=""
               />
             </div>
-            <div class="col-sm-6 d-flex justify-content-center align-items-center">
+            <div class="col-sm-5">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>How would you rate Doctor Genius client satisfaction?</h2>
@@ -202,8 +201,7 @@ export default ({ data }, props) => (
               </div>
             </div>
           </div>
-          <div class="row row-medium">
-            <div class="col-sm-6 d-flex justify-content-center align-items-center">
+          <div class="row padded short-top">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>
@@ -221,7 +219,6 @@ export default ({ data }, props) => (
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 d-flex justify-content-center align-items-center">
             <div class="col-sm-5">
               <div class="center">
                 <a href="/" className="button flat white-text">

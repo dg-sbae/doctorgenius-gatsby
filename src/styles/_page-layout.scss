@@ -66,6 +66,8 @@ header {
   transform: translateX(-50%);
 }
 .row {
+  justify-content: center;
+  align-items: center;
   &.padded {
     padding-top: 60px;
     &.short-top {
