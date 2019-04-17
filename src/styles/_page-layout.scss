@@ -5,7 +5,26 @@ body {
 }
 header {
   position: absolute;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  &.scrolled {
+    height: 80px;
+  }
 }
+
+/* Secondary Header is the large icon navigation which affixes to the top of the main header on scroll */
+.secondary-header {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &.scrolled {
+    height: 115px;
+  }
+}
+
 .main-content {
   background: url(/png/pixel-map.png) no-repeat,
     url(/png/pixel-map.png) bottom no-repeat;
