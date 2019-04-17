@@ -1,9 +1,9 @@
 Company (About)
 <h2>What <span>Clients Are Saying</span></h2>
 
-<div class="inner-title underlined">
+<div class="inner-title">
     <h3 class="subheading">Testimonials</h3>
-    <h2 >What <span>Clients Are Saying</span></h2>
+    <h2 class="underlined">What <span>Clients Are Saying</span></h2>
 </div>
 
 

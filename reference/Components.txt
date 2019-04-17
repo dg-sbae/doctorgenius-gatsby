@@ -73,7 +73,7 @@ Button                                      div.button
 inner-title:                                div.inner-title
     h2-h4                                   div.inner-title h2(-h4)
     accented span                           div.inner-title h2 .span
-    segmented underline                     div.inner-title.underlined h2:after
+    segmented underline                     div.inner-title h2.underline:after
     supports strapline above                div.inner-title div.strapline (maybe div.inner-title p.strapline)
     or subtitle below                       div.inner-title div.subtitle
     center                                  div.inner-title.center

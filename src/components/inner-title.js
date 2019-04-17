@@ -8,7 +8,7 @@ import innerTitleStyles from "./inner-title.module.css"
 </div>
 */
 
-export default ({ children, underlined, title, accent }) => (
+export default ({ children, underline, title, accent }) => (
   <div className={innerTitleStyles.innerTitle}>
     <h1
       className={

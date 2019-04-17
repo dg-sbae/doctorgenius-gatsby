@@ -48,9 +48,9 @@ export default ({ data }, props) => (
         <Container>
           <div className="row row-medium">
             <div className="col-sm-12 d-flex align-items-center justify-content-center">
-              <div className="header inner-title underline center">
+              <div className="header inner-title center">
                 <h3 className="strapline">Performance, Results, Excellence</h3>
-                <h2>We Care About Your Success</h2>
+                <h2 className="underline">We Care About Your Success</h2>
               </div>
             </div>
             <div className="col-sm-3 align-self-start">
@@ -96,9 +96,9 @@ export default ({ data }, props) => (
           </div>
           <div class="row row-medium d-flex align-items-center justify-content-center">
             <div class="col-sm-12">
-              <div class="header inner-title underline center">
+              <div class="header inner-title center">
                 <h3 class="strapline">Built for success</h3>
-                <h2>
+                <h2 className="underline">
                   All-in-One <span class="bold">Marketing Dashboard</span>
                 </h2>
               </div>
@@ -125,9 +125,9 @@ export default ({ data }, props) => (
           </div>
           <div class="row row-medium d-flex align-items-center">
             <div class="col-sm-12">
-              <div class="header inner-title center underline">
+              <div class="header inner-title center">
                 <h3 class="strapline">Setting the foundation for success</h3>
-                <h2>
+                <h2 className="underline">
                   Why Choose <span class="bold">Doctor Genius</span>
                 </h2>
               </div>
