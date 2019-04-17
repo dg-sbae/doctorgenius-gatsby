@@ -1,5 +1,6 @@
 /* Spacing */
 $m1: 37.5px;
+$pad: 15px;
 
 /* Colors */
 $primary: #047bc7;
@@ -30,7 +31,7 @@ $container-max-widths: (
 ) !default;
 
 $grid-gutter-width: $m1 * 2 !default;
-/* hompage 
+/* hompage
     h3 x20px semibold
     h2 x45px light/semibold
     p accented x17px xroboto regular
@@ -40,7 +41,7 @@ $grid-gutter-width: $m1 * 2 !default;
     hero h1 xagenda x81px thin/semibold
     hero accented-paragraph p 18px xroboto regular
     panel p.panel-heading montserrat 40px bold
-    panel p xagenda 18px regular 
+    panel p xagenda 18px regular
 */
 
 $font-family-base: agenda !default;
