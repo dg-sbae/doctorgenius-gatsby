@@ -222,8 +222,9 @@ export default ({ data }, props) => (
               </div>
             </div>
             <div class="col-sm-6 d-flex justify-content-center align-items-center">
-              <div class="button flat">
-                <a href="/" className="white-text">
+            <div class="col-sm-5">
+              <div class="center">
+                <a href="/" className="button flat white-text">
                   Request Demo <FaArrowRight />
                 </a>
               </div>
