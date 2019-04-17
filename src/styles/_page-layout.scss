@@ -15,13 +15,25 @@ header {
 }
 
 /* Secondary Header is the large icon navigation which affixes to the top of the main header on scroll */
-.secondary-header {
+.secondary-nav {
   height: 190px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   &.scrolled {
     height: 115px;
+  }
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+  &:after {
+    width: 100%;
+    border-bottom: 1px solid $mute;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
   }
 }
 
@@ -53,11 +65,28 @@ header {
   margin-left: 50%;
   transform: translateX(-50%);
 }
-.row-medium {
-  min-height: 400px;
+.row {
+  &.padded {
+    padding-top: 60px;
+    &.short-top {
+      padding-top: 30px;
+    }
+    &.tall-top {
+      padding-top: 90px;
+    }
+
+    padding-bottom: 30px;
+    &.short-bottom {
+      padding-bottom: 15px;
+    }
+    &.tall-bottom {
+      padding-bottom: 60px;
+    }
+  }
 }
-.row-tall {
-  min-height: 750px;
+.inner-title {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .callout-heading {
   position: relative;
@@ -70,7 +99,17 @@ header {
   }
 }
 
-.container {
-  max-width: 1200px; /* This will be implememnted better in the bootstrap grid scss */
-  /* 100px per column */
+.center {
+  text-align: center;
+}
+
+/* Utility classes applied to inner elements, like link-with-icon. Not for rows */
+.pad-sm {
+  padding: 15px;
+}
+.pad-md {
+  padding: 30px;
+}
+.pad-lg {
+  padding: 60px;
 }
