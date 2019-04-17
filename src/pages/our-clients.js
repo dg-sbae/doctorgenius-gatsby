@@ -36,7 +36,63 @@ export default props => (
       </div>
       <Main>
         <Container>
-          <div className="row d-flex align-items-center row-medium">
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="secondary-nav">
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src="/icon/tooth-shine-nav.svg"
+                      alt="Tooth"
+                    />
+                  </div>
+                  <p>Dental Practices</p>
+                </div>
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src="/icon/urgent-care-nav.svg"
+                      alt="First Aid"
+                    />
+                  </div>
+                  <p>Urgent Care Clinics</p>
+                </div>
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src="/icon/chiropractor-nav.svg"
+                      alt="Spine"
+                    />
+                  </div>
+                  <p>Chiropractor Practices</p>
+                </div>
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src="/icon/surgeon-nav.svg"
+                      alt="Surgeon"
+                    />
+                  </div>
+                  <p>Cosmetic Surgeons</p>
+                </div>
+                <div class="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src="/icon/sphygmomanometer-nav.svg"
+                      alt="Sphygomomanometer"
+                    />
+                  </div>
+                  <p>Healthcare Marketing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row padded d-flex align-items-center">
             <div className="col-sm-9 offset-sm-1">
               <div className="content-block">
                 <div className="inner-title center">
@@ -121,6 +177,16 @@ export default props => (
                   <p className="callout">88%</p>
                   <p>Increase in New Patient Calls!</p>
                 </div>
+              </div>
+              <div className="center pad-md">
+                <a href="$#" className="link-with-icon">
+                  <img
+                    src="/icon/right-arrow-blue.svg"
+                    class="link-icon"
+                    alt="Icon of a Right Arrow"
+                  />
+                  View Case Study
+                </a>
               </div>
             </div>
             <div class="col-sm-5">

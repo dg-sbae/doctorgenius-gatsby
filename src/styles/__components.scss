@@ -99,7 +99,6 @@
 
 .icon-wrapper {
   /* dimensions of the icon-wrapper should be set with fixed height and width, in the individual page css */
-  margin-bottom: $m1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,6 +113,12 @@
 }
 /* Panel */
 .panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
   margin-left: calc(
     17.5px / 2
