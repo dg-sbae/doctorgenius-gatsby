@@ -29,7 +29,15 @@ export default ({ data }, props) => (
         <Container>
           <div className="valign-wrapper row">
             <div className="col-sm-7">
-              <div className="accent-block">
+              <div class="accent-block">
+                <div class="border-horizontal border-top-left" />
+                <div class="border-horizontal border-top-right" />
+                <div class="border-horizontal border-bottom-left" />
+                <div class="border-horizontal border-bottom-right" />
+                <div class="border-vertical border-left-top" />
+                <div class="border-vertical border-right-top" />
+                <div class="border-vertical border-left-bottom" />
+                <div class="border-vertical border-right-bottom" />
                 <h1>The Leader in New Patient Acquisition</h1>
                 <div className="accented-paragraph">
                   <p>

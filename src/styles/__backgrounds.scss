@@ -11,9 +11,11 @@
   background-color: rgba($primary, 0.95);
 }
 
-// .homepage .accent-block {
-//   background-color: transparent;
-// }
+.homepage {
+  .accent-block {
+    background-color: transparent;
+  }
+}
 
 .main-content {
   background: url(/png/pixel-map.png);
