@@ -1,3 +1,7 @@
+/* Spacing */
+$m1: 37.5px;
+
+/* Colors */
 $primary: #047bc7;
 $primary-text: white;
 $mute: #a2a2a2;
@@ -21,6 +25,8 @@ $grid-breakpoints: (
 $container-max-widths: (
   /* Not Implemented */ sm: 540px,
   /* Not Implemented */ md: 720px,
-  lg: 1250px,
+  /* 104px per .col-1*/ lg: 1248px,
   /* Not Used */ xl: 1600px
 ) !default;
+
+$grid-gutter-width: $m1 * 2 !default;
