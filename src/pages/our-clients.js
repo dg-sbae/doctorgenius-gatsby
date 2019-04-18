@@ -192,7 +192,7 @@ export default props => (
             </div>
             <div class="col-sm-5">
               <img
-                className="img-responsive"
+                className="img-responsive blur-bleed"
                 src="/png/search-result.png"
                 alt="Search Results Page"
               />
