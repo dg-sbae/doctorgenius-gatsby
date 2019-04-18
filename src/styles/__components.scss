@@ -7,7 +7,7 @@
   }
   a {
     cursor: pointer;
-    font-size: 1rem; /* We should move this into text */
+    font-size: $font-size-normal-text; /* We should move this into text */
   }
 
   h2.underline {
@@ -37,7 +37,7 @@
   background-color: rgba($primary, 0.95);
   color: $primary-text;
   h1 {
-    font-size: 0.75rem;
+    font-size: $h1-font-size;
     background: $secondary;
     display: inline;
     padding: 2px 5px;
@@ -150,8 +150,15 @@
   }
 }
 
+<<<<<<< Updated upstream
 .button.flat {
   display: inline-block;
   padding: 0.5em;
   margin: auto;
+=======
+.button {
+  &.flat {
+    padding: 0.5rem;
+  }
+>>>>>>> Stashed changes
 }
