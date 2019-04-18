@@ -149,16 +149,9 @@
     margin: 2rem 5% 0;
   }
 }
-
-<<<<<<< Updated upstream
-.button.flat {
-  display: inline-block;
-  padding: 0.5em;
-  margin: auto;
-=======
 .button {
   &.flat {
-    padding: 0.5rem;
+    padding: 0.5em;
+    margin: auto;
   }
->>>>>>> Stashed changes
 }
