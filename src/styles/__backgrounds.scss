@@ -22,13 +22,6 @@
 }
 
 .full-bleed {
-  &.marketing-dashboard-background {
-    background: url("../img/full-bleed-bg-slanted.png") 50% 50% no-repeat;
-    background-size: cover;
-    width: 105vw;
-    height: 100%;
-  }
-
   .full-bleed-image {
     width: 50%;
     margin: 0 auto;

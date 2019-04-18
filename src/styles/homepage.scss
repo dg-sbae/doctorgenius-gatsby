@@ -5,6 +5,12 @@
     transform: translateX(-10%);
   }
 
+  .marketing-dashboard-background {
+    background: url("../img/full-bleed-bg-slanted.png") 50% 50% no-repeat;
+    height: 800px;
+    background-position: 46% center;
+  }
+
   .hero {
     height: 740px;
     background-image: url("/hero/homepage-option-1.png");

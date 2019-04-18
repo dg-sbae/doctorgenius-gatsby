@@ -118,22 +118,29 @@ export default ({ data }, props) => (
                   Our robust, comprehensive marketing solutions helps keep your
                   online digital marketing presence ahead of competition. We
                   provide tools and analysis to improve new patient acquisition
-                  with transparent reporting to measure our results.
+                  with transparent reporting to measure our results. with
+                  transparent reporting to measure our results.
                 </p>
               </div>
             </div>
           </div>
-          <div class="row padded short-top tall-bottom">
-            <div class="col-sm-12">
-              <div class="full-bleed marketing-dashboard-background">
-                <img
-                  class="full-bleed-image"
-                  src={homepageMobileMockup}
-                  alt=""
-                />
+          <div className="full-bleed-wrapper pad-md">
+            <div className="full-bleed marketing-dashboard-background" />
+            <div className="full-bleed-content-wrapper">
+              <div className="row">
+                <div className="col-sm-1" />
+                <div className="col-sm-10">
+                  <img
+                    src={homepageMobileMockup}
+                    alt=""
+                    className="img-responsive"
+                  />
+                </div>
+                <div className="col-sm-1" />
               </div>
             </div>
           </div>
+
           <div class="row padded tall-top short-bottom">
             <div class="col-sm-12">
               <div class="inner-title center">

@@ -199,9 +199,9 @@ export default props => (
             </div>
           </div>
           <div className="full-bleed-wrapper pad-md">
-            <div className="full-bleed full-bleed-background-image">&nbsp;</div>
+            <div className="full-bleed check-plans-background-image" />
             <div className="full-bleed-content-wrapper">
-              <div className="row align-items-center">
+              <div className="row">
                 <div className="col-sm-5 offset-sm-7">
                   <div className="content-block">
                     <div className="inner-title">
