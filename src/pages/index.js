@@ -49,6 +49,7 @@ export default ({ data }, props) => (
                 </div>
               </div>
             </div>
+            <div className="col-sm-5" />
           </div>
         </Container>
       </div>
@@ -142,7 +143,7 @@ export default ({ data }, props) => (
             </div>
             <div class="col-sm-6">
               <img
-                className="img-responsive"
+                className="img-responsive blur-bleed"
                 src={newPatientAcquisitions}
                 alt=""
               />
@@ -160,9 +161,12 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
+              <div className="col-sm-1" />
             </div>
           </div>
           <div class="row padded short-top short-bottom">
+            <div className="col-sm-1" />
+            <div class="col-sm-5">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>What makes Doctor Genius different?</h2>
@@ -176,13 +180,17 @@ export default ({ data }, props) => (
               </div>
             </div>
             <div class="col-sm-6">
-              <img className="img-responsive" src={dgDifferent} alt="" />
+              <img
+                className="img-responsive blur-bleed"
+                src={dgDifferent}
+                alt=""
+              />
             </div>
           </div>
-          <div class="row padded short-top">
+          <div class="row padded short-top tall-bottom">
             <div class="col-sm-6">
               <img
-                className="img-responsive"
+                className="img-responsive blur-bleed"
                 src={dgClientSatisfaction}
                 alt=""
               />
@@ -199,9 +207,12 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
+              <div className="col-sm-1" />
             </div>
           </div>
-          <div class="row padded short-top">
+          <div class="row padded tall-top">
+            <div className="col-sm-1" />
+            <div class="col-sm-5">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>
@@ -226,6 +237,7 @@ export default ({ data }, props) => (
                 </a>
               </div>
             </div>
+            <div className="col-sm-1" />
           </div>
         </Container>
       </Main>

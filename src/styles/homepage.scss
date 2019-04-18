@@ -1,4 +1,10 @@
 .homepage {
+  .blur-bleed {
+    /* homepage images are slightly larger, meaning they should bleed slightly less */
+    max-width: 120%;
+    transform: translateX(-10%);
+  }
+
   .hero {
     height: 740px;
     background-image: url("/hero/homepage-option-1.png");

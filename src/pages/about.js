@@ -28,6 +28,7 @@ export default props => (
                 </div>
               </div>
             </div>
+            <div className="col-sm-7" />
           </div>
         </Container>
       </div>
@@ -52,7 +53,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-6 center">
               <img src="/icon/logo-blue.svg" alt="Our Logo" />
             </div>
           </div>

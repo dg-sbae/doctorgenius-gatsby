@@ -31,6 +31,7 @@ export default props => (
                 </div>
               </div>
             </div>
+            <div className="col-sm-7" />
           </div>
         </Container>
       </div>
