@@ -31,13 +31,14 @@ export default props => (
                 </div>
               </div>
             </div>
+            <div className="col-sm-7" />
           </div>
         </Container>
       </div>
       <Main>
         <Container>
           <div className="row">
-            <div className="col-sm-12">
+            <div className="col-sm-12 panel-row">
               <div className="secondary-nav">
                 <div className="panel">
                   <div className="icon-wrapper">
@@ -92,7 +93,7 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row padded d-flex align-items-center">
+          <div className="row padded">
             <div className="col-sm-9 offset-sm-1">
               <div className="content-block">
                 <div className="inner-title center">
@@ -191,7 +192,7 @@ export default props => (
             </div>
             <div class="col-sm-5">
               <img
-                className="img-responsive"
+                className="img-responsive blur-bleed"
                 src="/png/search-result.png"
                 alt="Search Results Page"
               />
@@ -228,8 +229,8 @@ export default props => (
           </div>
 
           <div className="row padded tall-bottom">
-            <div className="col-sm-12 d-flex justify-content-center">
-              <div className="inner-title">
+            <div className="col-sm-12">
+              <div className="inner-title center">
                 <div className="strapline">Testimonials</div>
                 <h2 class="underline">
                   What <b>Clients Are Saying</b>
@@ -261,7 +262,7 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row padded tall-top d-flex align-items-center">
+          <div className="row padded tall-top">
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">

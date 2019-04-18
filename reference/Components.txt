@@ -62,11 +62,11 @@ logo                                        img.logo / div.logo { background-ima
 
 accented paragraph      p.accented
 
-Button                                      div.button
-    rounded Button                          div.button.rounded
-    Slightly rounded, flat sides button     div.button.flat
-    link                                    div.button a
-    icon                                    div.button img/svg/i
+Button                                      a.button
+    rounded Button                          a.button.rounded
+    Slightly rounded, flat sides button     a.button.flat
+    link                                    a.button
+    icon                                    a.button img/svg/i
 
 
 
@@ -86,7 +86,7 @@ spacer div                                  div.spacer
     sizes (in ems)                          div.spacer.small/.medium/.large (?)
     with optional hr                        div.spacer.solid
 
-panel                                      div.panel
+panel                                      row.panel-row div.panel (Aligns columns containing panels to the row flex-start)
     image/icon                             div.panel img
     heading: bold/                         div.panel .inner-title
     copy                                   div.panel p / div.panel p.accented
