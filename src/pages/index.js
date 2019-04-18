@@ -112,13 +112,15 @@ export default ({ data }, props) => (
                 </h2>
               </div>
             </div>
-            <div class="accented-paragraph col-sm-6">
-              <p>
-                Our robust, comprehensive marketing solutions helps keep your
-                online digital marketing presence ahead of competition. We
-                provide tools and analysis to improve new patient acquisition
-                with transparent reporting to measure our results.
-              </p>
+            <div class="col-sm-6">
+              <div className="accented-paragraph">
+                <p>
+                  Our robust, comprehensive marketing solutions helps keep your
+                  online digital marketing presence ahead of competition. We
+                  provide tools and analysis to improve new patient acquisition
+                  with transparent reporting to measure our results.
+                </p>
+              </div>
             </div>
           </div>
           <div class="row padded short-top tall-bottom">
@@ -153,7 +155,7 @@ export default ({ data }, props) => (
                 <div class="inner-title">
                   <h2>Why is Doctor Genius #1 in new patient acquisitions?</h2>
                   <div class="accented-paragraph">
-                    <p>
+                    <p className="s-thin">
                       When you join the Doctor Genius Family, we are now
                       partnered. We have a direct interest in your business
                       doing well.
@@ -171,7 +173,7 @@ export default ({ data }, props) => (
                 <div class="inner-title">
                   <h2>What makes Doctor Genius different?</h2>
                   <div class="accented-paragraph">
-                    <p>
+                    <p className="m-thin">
                       We are not a cookie cutter type program. We are a
                       performance based program and take pride in your success.
                     </p>
@@ -200,7 +202,7 @@ export default ({ data }, props) => (
                 <div class="inner-title">
                   <h2>How would you rate Doctor Genius client satisfaction?</h2>
                   <div class="accented-paragraph">
-                    <p>
+                    <p className="s-thin">
                       Don't take our word for it, see what our clients say about
                       us 100+ 5 Stars. Check our <a href="/reviews">reviews</a>
                     </p>
@@ -220,7 +222,7 @@ export default ({ data }, props) => (
                     Genius today!
                   </h2>
                   <div class="accented-paragraph">
-                    <p class="accented-paragraph">
+                    <p class="s-thin">
                       The Genius platform makes every part of your company
                       process more efficient. Our support team is very excited
                       to help you and get your company on the right path of

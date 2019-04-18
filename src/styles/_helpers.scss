@@ -21,3 +21,17 @@
 .pad-xl {
   padding: $pad * 4;
 }
+
+/* Paragraph content needs more flexibility */
+p {
+  &.l-thin {
+    /* these class name aren't the best */
+    width: 50%;
+  }
+  &.m-thin {
+    width: 66%;
+  }
+  &.s-thin {
+    width: 75%;
+  }
+}
