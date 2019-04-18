@@ -1,12 +1,12 @@
 @import "_site-variables.scss";
+@import "~bootstrap/scss/functions";
+@import "_bootstrap-variables-customized";
 @import "_page-layout.scss";
 @import "_components.scss";
 @import "_backgrounds.scss";
 @import "_text.scss";
 @import "_helpers.scss";
 
-@import "~bootstrap/scss/functions";
-@import "_bootstrap-variables-customized";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
