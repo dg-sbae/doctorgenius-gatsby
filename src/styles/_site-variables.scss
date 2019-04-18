@@ -31,55 +31,68 @@ $container-max-widths: (
 ) !default;
 
 $grid-gutter-width: $m1 * 2 !default;
-/* hompage
+/* hompage 
+    hero h1 xagenda x81px thin/semibold
     h3 x20px semibold
     h2 x45px light/semibold
-    p accented x17px xroboto regular
     content-block inner-title h2 x40px medium
-    content-block inner-title p x18px xroboto regular
+    p x17px xroboto regular
     button 15px semibold xagenda white border->#233A72
-    hero h1 xagenda x81px thin/semibold
-    hero accented-paragraph p 18px xroboto regular
+    
+    accented-paragraph p x18px xroboto regular
     panel p.panel-heading montserrat 40px bold
-    panel p xagenda 18px regular
+    panel p xagenda 18px regular 
+
+    navigation link x14px xroboto xmedium
 */
 
-$font-family-base: agenda !default;
-$font-family-p-accented: roboto !default;
-$font-family-panel-heading: montserrat !default;
-
+// Base/General Variables
+$font-family-base: agenda, sans-serif !default;
 $font-size-base: 1rem !default;
+$font-size-normal-text: $font-size-base * 1.125;
 $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * 0.875 !default;
 
-$h1-font-size: $font-size-base * 5.0625 !default;
-$h2-font-size-content-block: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2.8125 !default;
+// Buttons
+$font-family-btn: $font-family-base !default;
+$font-size-btn: $font-size-base * 0.9375 !default;
+
+// Panels
+$font-family-panel-heading: montserrat, sans-serif;
+$panel-heading-font-size: $font-size-base * 2.5;
+// $panel-heading-font-weight: 700;
+
+// Headings
+$h1-font-size: $font-size-base * 3.3125 !default;
+$h2-font-size-content-block: $font-size-base * 2.5;
+// $h2-content-block-font-weight: 500;
+$h2-font-size-main: $font-size-base * 2.8125;
 $h3-font-size: $font-size-base * 1.25 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
+// $h3-font-weight: 600;
+// $heading-bold-font-weight: 600;
 
 // Homepage specific
-$homepage-font-size-lg: $font-size-base * 1.25 !default;
-$homepage-font-size-sm: $font-size-base * 0.875 !default;
+$homepage-font-size-lg: $font-size-base * 1.25;
+$homepage-font-size-sm: $font-size-base * 0.875;
+$homepage-h1-font-size: $font-size-base * 5.0625;
+// $homepage-hero-button-font-weight: 600;
 
-$homepage-font-size-content-block-inner-title-p: $font-size-base * 1.125 !default;
-$homepage-p-accented: $font-size-base * 0.8235 !default;
-$homepage-panel-heading: $font-size-base * 2.5 !default;
-$homepage-panel-p: $font-size-base * 1.125 !default;
+// Paragraphs
+$font-family-p-accented: roboto sans-serif;
+// $font-size-p: $font-size-base * 1.125;
 
-$homepage-h1-font-size: $font-size-base * 5.0625 !default;
-$homepage-h2-font-size: $font-size-base * 2.8125 !default;
-$homepage-h2-font-size-content-block: $font-size-base * 2.5 !default;
-$homepage-h3-font-size: $font-size-base * 1.25 !default;
+// Navigation
+$font-family-link-navigation: roboto, sans-serif;
+$font-size-main-navigation-content: $font-size-base * 0.9375;
+// $font-weight-link-navigation: 500;
 
-// $homepage-h1-font-size: $font-size-base * 2.5 !default;
-// $homepage-h2-font-size: $font-size-base * 2 !default;
-// $homepage-h3-font-size: $font-size-base * 1.75 !default;
-$homepage-h4-font-size: $font-size-base * 1.5 !default;
-$homepage-h5-font-size: $font-size-base * 1.25 !default;
-$homepage-h6-font-size: $font-size-base !default;
+// Hero
+// $font-weight-strapline: 500;
+$hero-strapline-font-size: $font-size-base * 1;
 
-$btn-font-family: $font-family-base !default;
-$btn-font-size: $font-size-base !default;
+// Font Weights
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+// Callouts
+$callout-heading-font-size: $font-size-base * 5.3125;
