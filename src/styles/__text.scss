@@ -240,3 +240,18 @@ p {
     font-weight: $font-weight-semibold;
   }
 }
+
+nav {
+  font-family: $font-family-body-text;
+
+  .main-links {
+    li {
+      font-size: $font-size-nav-main-links;
+      font-weight: $font-weight-medium;
+    }
+  }
+  .contact-links {
+    font-size: $font-size-nav-contact-links;
+    font-weight: $font-weight-normal;
+  }
+}
