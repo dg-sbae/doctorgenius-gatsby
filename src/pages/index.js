@@ -38,7 +38,10 @@ export default ({ data }, props) => (
                 <div class="border-vertical border-right-top" />
                 <div class="border-vertical border-left-bottom" />
                 <div class="border-vertical border-right-bottom" />
-                <h1>The Leader in New Patient Acquisition</h1>
+                <h1>
+                  <span class="font-weight-light">The Leader in</span> New
+                  Patient Acquisition
+                </h1>
                 <div className="accented-paragraph">
                   <p>
                     Doctor Genius offers high-end web marketing services to
@@ -68,7 +71,7 @@ export default ({ data }, props) => (
                   <img className="img-icon" src={medal} alt="Icon of a medal" />
                 </div>
                 <p class="panel-heading">1,125%</p>
-                <p>Increase in Google First-Page Results</p>
+                <p class="panel-body">Increase in Google First-Page Results</p>
               </div>
             </div>
             <div className="col-sm-3">
@@ -77,7 +80,7 @@ export default ({ data }, props) => (
                   <img className="img-icon" src={money} alt="Icon of money" />
                 </div>
                 <p class="panel-heading">100%</p>
-                <p>Increase in Revenue!</p>
+                <p class="panel-body">Increase in Revenue!</p>
               </div>
             </div>
             <div class="col-sm-3">
@@ -90,7 +93,7 @@ export default ({ data }, props) => (
                   />
                 </div>
                 <p class="panel-heading">88%</p>
-                <p>Increase in New Patient Calls!</p>
+                <p class="panel-body">Increase in New Patient Calls!</p>
               </div>
             </div>
             <div class="col-sm-3">
@@ -99,7 +102,7 @@ export default ({ data }, props) => (
                   <img className="img-icon" src={stars} alt="Icon of Stars" />
                 </div>
                 <p class="panel-heading">4+ Stars</p>
-                <p>We take pride in our Google reviews</p>
+                <p class="panel-body">We take pride in our Google reviews</p>
               </div>
             </div>
           </div>
@@ -107,8 +110,9 @@ export default ({ data }, props) => (
             <div class="col-sm-12">
               <div class="inner-title center">
                 <h3 class="strapline">Built for success</h3>
-                <h2 className="underline">
-                  All-in-One <span class="bold">Marketing Dashboard</span>
+                <h2 className="underline font-weight-light">
+                  All-in-One{" "}
+                  <span class="font-weight-semibold">Marketing Dashboard</span>
                 </h2>
               </div>
             </div>
@@ -145,8 +149,9 @@ export default ({ data }, props) => (
             <div class="col-sm-12">
               <div class="inner-title center">
                 <h3 class="strapline">Setting the foundation for success</h3>
-                <h2 className="underline">
-                  Why Choose <span class="bold">Doctor Genius</span>
+                <h2 className="underline font-weight-light">
+                  Why Choose{" "}
+                  <span class="font-weight-semibold">Doctor Genius</span>
                 </h2>
               </div>
             </div>
@@ -160,7 +165,7 @@ export default ({ data }, props) => (
             <div class="col-sm-5">
               <div className="content-block">
                 <div class="inner-title">
-                  <h2>Why is Doctor Genius #1 in new patient acquisitions?</h2>
+                  <h2>Why is Doctor Genius # 1 in new patient acquisitions?</h2>
                   <div class="accented-paragraph">
                     <p className="s-thin">
                       When you join the Doctor Genius Family, we are now
@@ -219,14 +224,14 @@ export default ({ data }, props) => (
               <div className="col-sm-1" />
             </div>
           </div>
-          <div class="row padded tall-top">
+          <div class="row padded tall-top request-demo-footer">
             <div className="col-sm-1" />
             <div class="col-sm-5">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>
-                    Start your <span class="bold">success</span> with Doctor
-                    Genius today!
+                    Start your <span class="font-weight-semibold">success</span>{" "}
+                    with Doctor Genius today!
                   </h2>
                   <div class="accented-paragraph">
                     <p class="s-thin">
