@@ -120,7 +120,7 @@ nav ul > li > a {
   .panel-heading {
     color: $primary;
     font-size: $panel-heading-font-size;
-    font-family: $font-family-panel-heading;
+    font-family: $font-family-inner-block-headings;
     font-weight: $font-weight-bold;
   }
   .panel-body {
@@ -129,9 +129,9 @@ nav ul > li > a {
   }
 }
 
-p {
-  &.accented {
-    font-family: $font-family-p-accented;
+.accented-paragraph {
+  p {
+    font-family: $font-family-body-text;
   }
 }
 
