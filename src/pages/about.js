@@ -38,8 +38,9 @@ export default props => (
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">
-                  <h2>
-                    The <b>Doctor Genius</b> Story
+                  <h2 class="font-weight-medium">
+                    The <span class="font-weight-semibold">Doctor Genius</span>{" "}
+                    Story
                   </h2>
                 </div>
                 <div className="accented-paragraph">
@@ -61,8 +62,9 @@ export default props => (
           <div className="row padded panel-row">
             <div class="col-sm-12">
               <div className="inner-title center">
-                <h2 className="underline">
-                  Doctor Genius <b>by the numbers</b>
+                <h2 className="underline font-weight-medium">
+                  Doctor Genius{" "}
+                  <span class="font-weight-semibold">by the numbers</span>
                 </h2>
               </div>
             </div>
@@ -76,7 +78,7 @@ export default props => (
                   />
                 </div>
                 <p class="panel-heading">1 million +</p>
-                <p>
+                <p class="panel-body">
                   Words published to our clients’ website blogs and social
                   profiles
                 </p>
@@ -92,7 +94,7 @@ export default props => (
                   />
                 </div>
                 <p class="panel-heading">500+</p>
-                <p>
+                <p class="panel-body">
                   Over 1000+ Dental Practices use Doctor Genius Web & SEO
                   services
                 </p>
@@ -108,7 +110,7 @@ export default props => (
                   />
                 </div>
                 <p class="panel-heading">30 +</p>
-                <p>
+                <p class="panel-body">
                   In-House Support, Development, and Writers work for Doctor
                   Genius
                 </p>
@@ -124,7 +126,7 @@ export default props => (
                   />
                 </div>
                 <p class="panel-heading">4.9 Stars</p>
-                <p>
+                <p class="panel-body">
                   We take pride in our google reviews. Read our google reviews.{" "}
                   <a href="$#">(click here)</a>
                 </p>
@@ -138,8 +140,9 @@ export default props => (
             <div className="col-sm-6">
               <div className="callout">
                 <div className="inner-title center">
-                  <h2 className="underline short">
-                    Our <b>Clients Average</b>
+                  <h2 className="underline short font-weight-normal">
+                    Our{" "}
+                    <span class="font-weight-semibold">Clients Average</span>
                   </h2>
                   <div class="callout-heading">
                     <sup>
@@ -150,7 +153,7 @@ export default props => (
                     <p>600%</p>
                   </div>
                   <p className="text-accent">New Patient Inquiries</p>
-                  <p class="text-mute">12 Months Duration</p>
+                  <p class="text-mute sub-text-accent">12 Months Duration</p>
                   <div class="callout-link">
                     <a href="$#">
                       <i className="fa fa-arrow-right" />
@@ -164,9 +167,10 @@ export default props => (
           <div className="row padded tall-bottom">
             <div className="col-sm-12">
               <div className="inner-title center">
-                <div className="strapline">Testimonials</div>
-                <h2 className="underline">
-                  What <b>Clients Are Saying</b>
+                <h3 className="strapline">Testimonials</h3>
+                <h2 className="underline font-weight-normal">
+                  What{" "}
+                  <span class="font-weight-semibold">Clients Are Saying</span>
                 </h2>
               </div>
             </div>
@@ -199,8 +203,9 @@ export default props => (
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">
-                  <h2>
-                    Let's <b>Talk Partnership</b>
+                  <h2 class="font-weight-normal">
+                    Let's{" "}
+                    <span class="font-weight-semibold">Talk Partnership</span>
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -211,7 +216,10 @@ export default props => (
                       solutions to medical & health practices within the United
                       States.
                     </p>
-                    <a href="$#" className="link-with-icon">
+                    <a
+                      href="$#"
+                      className="link-with-icon font-weight-semibold"
+                    >
                       <img
                         src="/icon/right-arrow-blue.svg"
                         class="link-icon"

@@ -17,7 +17,7 @@ Headings (inner title)
 
 Paragragh (accented paragraph): 17 (home), 16 (non-home)
 "Callout" (blue, bold, suually numbers, larger fontsize)
-"Detail" (different font, thinner line-height, thinnger kerning) (like the table in our-clients)
+"Detail" (different font, thinner line-height, thinner kerning) (like the table in our-clients)
 
 */
 
@@ -31,12 +31,25 @@ Paragragh (accented paragraph): 17 (home), 16 (non-home)
     margin-bottom: $content-block-heading-margin;
   }
 }
+
+h3.strapline {
+  margin-bottom: 0;
+}
+
 html {
-  font-size: 16px;
+  font-size: $font-size-base;
 }
 
 body {
   font-family: $font-family-base;
+  font-size: $font-size-normal-text;
+}
+
+.font-weight-semibold {
+  font-weight: $font-weight-semibold;
+}
+.font-weight-thin {
+  font-weight: $font-weight-thin;
 }
 
 header,
@@ -61,32 +74,10 @@ nav > ul > li > a {
   color: $primary-text;
 }
 
-.homepage {
-  .accent-block {
-    h1 {
-      font-size: $homepage-h1-font-size;
-      margin-bottom: 27.5px;
-      background: none;
-      display: inline-block;
-    }
-
-    .accented-paragraph {
-      p {
-        &:before {
-          background-color: $homepage-secondary-accent;
-        }
-      }
-    }
-  }
-
-  .panel p:not(.panel-heading) {
-    font-size: $font-size-normal-text;
-  }
-}
-
 .inner-title .strapline {
   color: $primary;
 }
+
 .inner-title {
   h3 {
     &.strapline {
@@ -98,11 +89,17 @@ nav > ul > li > a {
 
   h2 {
     font-size: $h2-font-size-main;
-    font-weight: $font-weight-medium;
+    font-weight: $font-weight-normal;
   }
 
   a {
     color: $primary;
+  }
+}
+
+.content-block {
+  h2 {
+    font-size: $h2-font-size-content-block;
   }
 }
 
@@ -128,11 +125,9 @@ nav > ul > li > a {
     font-family: $font-family-panel-heading;
     font-weight: $font-weight-bold;
   }
-}
-
-span {
-  &.bold {
-    font-weight: $font-weight-semibold;
+  .panel-body {
+    font-size: $font-size-lg;
+    color: $mute-text-darker;
   }
 }
 
@@ -153,5 +148,93 @@ p {
         font-size: $homepage-h1-font-size;
       }
     }
+  }
+}
+
+.hero {
+  .accent-block {
+    h1 {
+      font-size: $h1-font-size;
+    }
+    h2 {
+      font-size: $h2-font-size;
+      line-height: 0.9;
+    }
+  }
+}
+
+.homepage {
+  .hero {
+    .accent-block {
+      h1 {
+        font-size: $homepage-h1-font-size;
+        margin-bottom: 27.5px;
+        background: none;
+        display: inline-block;
+      }
+    }
+  }
+  .accent-block {
+    .accented-paragraph {
+      p {
+        &:before {
+          background-color: $homepage-secondary-accent;
+        }
+      }
+    }
+  }
+
+  .panel p:not(.panel-heading) {
+    font-size: $font-size-normal-text;
+  }
+}
+
+.request-demo-footer {
+  h2 {
+    font-weight: $font-weight-light;
+  }
+}
+// Testimonial Slider
+.card-content-wrapper {
+  .card-copy {
+    font-size: $font-size-base;
+    color: $mute-text-darker;
+  }
+  .card-author {
+    color: $primary;
+    font-weight: $font-weight-semibold;
+  }
+  .card-location {
+    font-weight: $font-weight-light;
+    color: $mute-text;
+  }
+}
+// Might want to make variables for this later
+.callout {
+  p {
+    &.text-accent {
+      font-size: 1.6875rem;
+      font-weight: $font-weight-normal;
+    }
+    &.sub-text-accent {
+      color: $mute;
+      font-size: 1.625rem;
+      font-family: $font-family-inner-block-subtext;
+      font-weight: $font-weight-semibold;
+    }
+  }
+  .callout-heading {
+    sup {
+      font-size: $font-size-normal-text;
+      line-height: 1.4;
+    }
+    p {
+      font-size: 5.3125rem;
+      font-family: $font-family-inner-block-headings;
+    }
+  }
+  .callout-link {
+    font-size: 0.8125rem;
+    font-weight: $font-weight-semibold;
   }
 }
