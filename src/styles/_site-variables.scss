@@ -7,6 +7,10 @@ $primary: #047bc7;
 $primary-text: white;
 $mute: #a2a2a2;
 $mute-text: #a8a8a8;
+$grid-border: #e0e0e0;
+$subtle-link: #858585;
+
+$recommended-green: #10a72f;
 
 $secondary: #005a91;
 
@@ -31,17 +35,17 @@ $container-max-widths: (
 ) !default;
 
 $grid-gutter-width: $m1 * 2 !default;
-/* hompage 
+/* hompage
     hero h1 xagenda x81px thin/semibold
     h3 x20px semibold
     h2 x45px light/semibold
     content-block inner-title h2 x40px medium
     p x17px xroboto regular
     button 15px semibold xagenda white border->#233A72
-    
+
     accented-paragraph p x18px xroboto regular
     panel p.panel-heading montserrat 40px bold
-    panel p xagenda 18px regular 
+    panel p xagenda 18px regular
 
     navigation link x14px xroboto xmedium
 */

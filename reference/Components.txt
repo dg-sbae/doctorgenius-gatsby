@@ -63,10 +63,11 @@ logo                                        img.logo / div.logo { background-ima
 accented paragraph      p.accented
 
 Button                                      a.button
-    rounded Button                          a.button.rounded
+    rounder Button                          a.button.rounder
     Slightly rounded, flat sides button     a.button.flat
     link                                    a.button
     icon                                    a.button img/svg/i
+    subtle-link (grey underlined)           a.subtle-link
 
 
 

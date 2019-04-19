@@ -107,6 +107,7 @@
 .link-icon {
   margin-right: 10px;
 }
+
 /* Panel */
 .panel-row {
   align-items: flex-start;
@@ -150,8 +151,22 @@
   }
 }
 .button {
+  background-color: $primary;
+  text-align: center;
   &.flat {
     padding: 0.5em;
     margin: auto;
   }
+  &.rounder {
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 80%;
+    color: white;
+    border-radius: 20px;
+  }
+}
+a.subtle-link {
+  color: $subtle-link;
+  text-decoration: underline;
 }
