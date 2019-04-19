@@ -7,6 +7,7 @@ $primary: #047bc7;
 $primary-text: white;
 $mute: #a2a2a2;
 $mute-text: #a8a8a8;
+$mute-text-darker: #989898;
 
 $secondary: #005a91;
 
@@ -48,6 +49,9 @@ $grid-gutter-width: $m1 * 2 !default;
 
 // Base/General Variables
 $font-family-base: agenda, sans-serif !default;
+$font-family-inner-block-headings: montserrat, sans-serif;
+$font-family-body-text: roboto, sans-serif;
+$font-family-inner-block-subtext: muli, sans-serif;
 $font-size-base: 1rem !default;
 $font-size-normal-text: $font-size-base * 1.125;
 $font-size-lg: $font-size-base * 1.25 !default;
@@ -63,7 +67,8 @@ $panel-heading-font-size: $font-size-base * 2.5;
 // $panel-heading-font-weight: 700;
 
 // Headings
-$h1-font-size: $font-size-base * 3.3125 !default;
+$h1-font-size: $font-size-base * 1 !default;
+$h2-font-size: $font-size-base * 3.3125 !default;
 $h2-font-size-content-block: $font-size-base * 2.5;
 // $h2-content-block-font-weight: 500;
 $h2-font-size-main: $font-size-base * 2.8125;
@@ -72,8 +77,6 @@ $h3-font-size: $font-size-base * 1.25 !default;
 // $heading-bold-font-weight: 600;
 
 // Homepage specific
-$homepage-font-size-lg: $font-size-base * 1.25;
-$homepage-font-size-sm: $font-size-base * 0.875;
 $homepage-h1-font-size: $font-size-base * 5.0625;
 // $homepage-hero-button-font-weight: 600;
 
@@ -93,6 +96,7 @@ $hero-strapline-font-size: $font-size-base * 1;
 // Font Weights
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
+$font-weight-thin: 100;
 
 // Callouts
 $callout-heading-font-size: $font-size-base * 5.3125;
