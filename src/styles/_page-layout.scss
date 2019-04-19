@@ -4,11 +4,48 @@ body {
   overflow-x: auto; /* Allows 100vw to not include scrollbars */
 }
 header {
-  position: absolute;
-  width: 100%;
+  position: fixed;
   height: 120px;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  .logo a {
+    display: block;
+    img {
+      height: 40px;
+      max-height: 100%;
+    }
+  }
+  nav {
+    height: 120px;
+    display: flex;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .main-links {
+        flex-basis: 45%;
+      }
+      .contact-links {
+        flex-basis: 25%;
+        img.phone {
+          /* this should probably be yet another flexbox */
+          transform: scale(1.25);
+          vertical-align: text-bottom;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 0;
+        li {
+          list-style-type: none;
+        }
+      }
+    }
+  }
+
   &.scrolled {
     height: 80px;
   }

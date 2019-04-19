@@ -45,7 +45,7 @@ export default props => (
               <div className="plans-table">
                 {/* <!-- image-row --> */}
                 <div className="grid-item image-row">
-                  <img src={tableHeader} />
+                  <img src={tableHeader} alt="Assembling a Website" />
                 </div>
                 <div className="grid-item">
                   <h2>Silver</h2>
@@ -95,37 +95,37 @@ export default props => (
                 {/* <!-- details section 1 row 1: --> */}
                 <div className="grid-item">High Performance Website</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 1 row 2: --> */}
                 <div className="grid-item">
                   SEO Focused Domain Name (Optional)
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 1 row 3: --> */}
                 <div className="grid-item">Secure Reliable Hosting</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 1 row 4: --> */}
                 <div className="grid-item">Migrated/Scraped Pages</div>
@@ -152,24 +152,24 @@ export default props => (
                   Industry Related Service Page Content
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 2 row 3: --> */}
                 <div className="grid-item">Doctor & Staff Page</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 2 row 4: --> */}
                 <div className="grid-item">Call to Action Home Page Slides</div>
@@ -189,37 +189,37 @@ export default props => (
                 {/* <!-- details section 3 row 1: --> */}
                 <div className="grid-item">On-Site Optimization</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 3 row 2: --> */}
                 <div className="grid-item">Structured Data Markup</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 3 row 3: --> */}
                 <div className="grid-item">
                   Monthly review from an SEO Analyst
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
 
                 {/* <!-- details section 3: --> */}
@@ -229,79 +229,79 @@ export default props => (
                 {/* <!-- details section 3 row 1: --> */}
                 <div className="grid-item">Google Analyst Integration</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 3 row 2: --> */}
                 <div className="grid-item">Google Ranking Reporting</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 3 row 3: --> */}
                 <div className="grid-item">Ranking Report Monthly Email</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 3 row 4: --> */}
                 <div className="grid-item">New Patient Inquiry Reporting</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 3 row 5: --> */}
                 <div className="grid-item">Call & Web Submissions Tracking</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 3 row 6: --> */}
                 <div className="grid-item">Google Analyst Integration</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 3 row 7: --> */}
                 <div className="grid-item">Appointment Request Integration</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
 
                 {/* <!-- details section 4: --> */}
@@ -312,10 +312,10 @@ export default props => (
                 <div className="grid-item">Practice Promoter</div>
                 <div className="grid-item">120 Day Trial</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 4 row 2: --> */}
                 <div className="grid-item">Blog Posts</div>
@@ -325,46 +325,46 @@ export default props => (
                 {/* <!-- details section 4 row 3: --> */}
                 <div className="grid-item">Social Media Syndication</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 4 row 4: --> */}
                 <div className="grid-item">Social Media Branding</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 4 row 5: --> */}
                 <div className="grid-item">Directory Submissions</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 4 row 6: --> */}
                 <div className="grid-item">Duplicate Suppression</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 4 row 7: --> */}
                 <div className="grid-item">
@@ -377,19 +377,19 @@ export default props => (
                 <div className="grid-item">Paid Advertising Campaigns</div>
                 <div className="grid-item" />
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 4 row 9: --> */}
                 <div className="grid-item">Paid Advertising Campaigns</div>
                 <div className="grid-item" />
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 4 row 10: --> */}
                 <div className="grid-item">Paid Advertising Campaigns</div>
@@ -406,14 +406,14 @@ export default props => (
                 <div className="grid-item" />
                 <div className="grid-item" />
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 5 row 2: --> */}
                 <div className="grid-item">2k Branded Business Cards</div>
                 <div className="grid-item" />
                 <div className="grid-item" />
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
 
                 {/* <!-- details section 6: --> */}
@@ -423,24 +423,24 @@ export default props => (
                 {/* <!-- details section 6 row 1: --> */}
                 <div className="grid-item">Call Tracking Phone Number</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 6 row 2: --> */}
                 <div className="grid-item">Call Tracking Web Integration</div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
 
                 {/* <!-- details section 7: --> */}
@@ -452,13 +452,13 @@ export default props => (
                   Dedicated Support Representative
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
                 <div className="grid-item">
-                  <img src={checkmark} />
+                  <img src={checkmark} alt="checkmark" />
                 </div>
               </div>
               <div className="plans-table no-bg">

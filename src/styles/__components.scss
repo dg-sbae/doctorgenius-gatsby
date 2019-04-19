@@ -156,6 +156,13 @@
   &.flat {
     padding: 0.5em;
     margin: auto;
+    border-radius: 5px;
+    &.transparent {
+      background: none;
+      border: 1px solid;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
   }
   &.rounder {
     font-weight: bold;
