@@ -229,7 +229,7 @@ export default props => (
                   <div className="">Integrated Performance Reporting</div>
                 </dt>
                 {/* <!-- details section 3 row 1: --> */}
-                <div className="grid-item">Google Analyst Integration</div>
+                <div className="grid-item">Google Analytics Integration</div>
                 <div className="grid-item">
                   <img src={checkmark} alt="checkmark" />
                 </div>
