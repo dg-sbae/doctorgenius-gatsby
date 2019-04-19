@@ -191,6 +191,9 @@ p {
   h2 {
     font-weight: $font-weight-light;
   }
+  p {
+    color: $demo-body-text;
+  }
 }
 // Testimonial Slider
 .card-content-wrapper {

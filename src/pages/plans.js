@@ -681,15 +681,14 @@ export default props => (
             </div>
             <div class="col-sm-1" />
           </div>
-          {/* @Brent add whtaever component magic here as well */}
-          <div class="row padded tall-top">
+          <div class="row padded tall-top request-demo-footer">
             <div className="col-sm-1" />
             <div class="col-sm-5">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>
-                    Start your <span class="bold">success</span> with Doctor
-                    Genius today!
+                    Start your <span class="font-weight-semibold">success</span>{" "}
+                    with Doctor Genius today!
                   </h2>
                   <div class="accented-paragraph">
                     <p class="s-thin">
