@@ -14,10 +14,11 @@ export default ({ children }) => (
     </Link>
     <ul style={{ listStyle: `none`, float: `right` }}>
       <ListLink to="/">Home</ListLink>
-      <ListLink to="/about/">About</ListLink>
-      <ListLink to="/contact/">Contact</ListLink>
+      <ListLink to="/">Marketing Solutions</ListLink>
       <ListLink to="/our-clients/">Our Clients</ListLink>
       <ListLink to="/plans/">Plans</ListLink>
+      <ListLink to="/about/">Company</ListLink>
+      <ListLink to="/plans/">Resources</ListLink>
     </ul>
     {children}
   </nav>
