@@ -39,7 +39,7 @@ export default props => (
               <div className="content-block">
                 <div className="innerTitle">
                   <h2 class="font-weight-medium">
-                    The <span class="font-weight-semibold">Doctor Genius</span>{" "}
+                    The <span class="font-weight-semibold">Doctor Genius</span>
                     Story
                   </h2>
                 </div>
@@ -63,7 +63,7 @@ export default props => (
             <div class="col-sm-12">
               <div className="inner-title center">
                 <h2 className="underline font-weight-medium">
-                  Doctor Genius{" "}
+                  Doctor Genius
                   <span class="font-weight-semibold">by the numbers</span>
                 </h2>
               </div>
@@ -127,7 +127,7 @@ export default props => (
                 </div>
                 <p class="panel-heading">4.9 Stars</p>
                 <p class="panel-body">
-                  We take pride in our google reviews. Read our google reviews.{" "}
+                  We take pride in our google reviews. Read our google reviews.
                   <a href="$#">(click here)</a>
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default props => (
               <div className="callout">
                 <div className="inner-title center">
                   <h2 className="underline short font-weight-normal">
-                    Our{" "}
+                    Our
                     <span class="font-weight-semibold">Clients Average</span>
                   </h2>
                   <div class="callout-heading">
@@ -169,7 +169,7 @@ export default props => (
               <div className="inner-title center">
                 <h3 className="strapline">Testimonials</h3>
                 <h2 className="underline font-weight-normal">
-                  What{" "}
+                  What
                   <span class="font-weight-semibold">Clients Are Saying</span>
                 </h2>
               </div>
@@ -185,7 +185,7 @@ export default props => (
                       Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
                       natoque penatibus et magnis dis parturient montes,
                       nascetur ridiculus mus. Donec quam felis.Lorem ipsum dolor
-                      sit amet, consectetuer adipiscing elit.{" "}
+                      sit amet, consectetuer adipiscing elit.
                     </p>
                     <p className="card-author">John Doe</p>
                     <p className="card-location">Irvine Dental Care</p>
@@ -204,7 +204,7 @@ export default props => (
               <div className="content-block">
                 <div className="innerTitle">
                   <h2 class="font-weight-normal">
-                    Let's{" "}
+                    Let's
                     <span class="font-weight-semibold">Talk Partnership</span>
                   </h2>
                   <div className="accented-paragraph">

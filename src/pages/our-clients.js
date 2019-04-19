@@ -99,7 +99,7 @@ export default props => (
                 <div className="inner-title center">
                   <div class="strapline">Marketing Performance</div>
                   <h2 className="underline">
-                    <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better{" "}
+                    <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better
                     <b>Visibility Online</b>
                   </h2>
                 </div>
@@ -248,7 +248,7 @@ export default props => (
                       Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
                       natoque penatibus et magnis dis parturient montes,
                       nascetur ridiculus mus. Donec quam felis.Lorem ipsum dolor
-                      sit amet, consectetuer adipiscing elit.{" "}
+                      sit amet, consectetuer adipiscing elit.
                     </p>
                     <p className="card-author">John Doe</p>
                     <p className="card-location">Irvine Dental Care</p>
