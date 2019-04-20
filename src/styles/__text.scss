@@ -258,3 +258,16 @@ nav {
     font-weight: $font-weight-normal;
   }
 }
+
+.link-with-icon {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-btn;
+}
+
+b {
+  font-weight: $font-weight-semibold !important;
+}
+
+a.button {
+  font-size: $font-size-btn;
+}
