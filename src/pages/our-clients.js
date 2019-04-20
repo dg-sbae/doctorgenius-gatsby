@@ -262,7 +262,7 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row padded tall-top">
+          <div className="row padded tall-top request-demo-footer">
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">
