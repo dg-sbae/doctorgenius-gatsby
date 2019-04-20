@@ -146,7 +146,7 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="spacer solid" />
+          <div className="spacer solid trim" />
           <div className="row padded short-top">
             <div class="col-sm-7">
               <div class="inner-title center">

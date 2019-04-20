@@ -86,6 +86,7 @@ Strapline                                   .strapline
 spacer div                                  div.spacer
     sizes (in ems)                          div.spacer.small/.medium/.large (?)
     with optional hr                        div.spacer.solid
+    slightly less than 100% wider           div.spacer.trim
 
 panel                                      row.panel-row div.panel (Aligns columns containing panels to the row flex-start)
     image/icon                             div.panel img
