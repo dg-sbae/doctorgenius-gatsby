@@ -34,7 +34,6 @@
 
 .accent-block {
   padding: 2rem;
-  background-color: rgba($primary, 0.95);
   color: $primary-text;
   h1 {
     font-size: $h1-font-size;
@@ -136,20 +135,28 @@
 }
 
 .spacer {
-  width: 90%;
-  margin: 1.5rem 5% 0; /* needs tweaking */
   height: 2px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  &.trim {
+    width: 90%;
+    margin-right: 5%; /* needs tweaking */
+    margin-left: 5%; /* needs tweaking */
+  }
   &.solid {
     background: $mute;
     opacity: 0.25;
   }
   &.small {
-    margin: 1rem 5% 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   &.large {
-    margin: 2rem 5% 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
+
 .button {
   background-color: $primary;
   text-align: center;

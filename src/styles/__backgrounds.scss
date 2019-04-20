@@ -36,3 +36,14 @@
 .button {
   background-color: $primary;
 }
+
+.label {
+  &.mute {
+    background: #f2f2f2;
+    color: $primary;
+  }
+  &.primary {
+    background: #005a91;
+    color: white;
+  }
+}
