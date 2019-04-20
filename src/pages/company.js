@@ -205,7 +205,7 @@ export default props => (
                 <div className="innerTitle">
                   <h2 class="font-weight-normal">
                     Let's
-                    <span class="font-weight-semibold">Talk Partnership</span>
+                    <span class="font-weight-semibold"> Talk Partnership</span>
                   </h2>
                   <div className="accented-paragraph">
                     <p>

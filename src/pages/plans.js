@@ -753,7 +753,8 @@ export default props => (
               <div class="content-block">
                 <div class="inner-title">
                   <h2>
-                    Start your <span class="font-weight-semibold">success</span>
+                    Start your{" "}
+                    <span class="font-weight-semibold">success </span>
                     with Doctor Genius today!
                   </h2>
                   <div class="accented-paragraph">
