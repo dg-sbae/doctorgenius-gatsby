@@ -382,7 +382,7 @@ export default props => (
                   <h4 class="blog-heading">Webinars & Events</h4>
                   <div class="more-events">
                     <a href="$#MoreEvents">
-                      View More{" "}
+                      View More
                       <img src={rightChevron} alt="View More Events" />
                     </a>
                   </div>
