@@ -21,7 +21,7 @@ export default props => (
                 <h2>What We Are About</h2>
                 <div className="accented-paragraph">
                   <p>
-                    DoctorGenius establishes and boosts your brand online using
+                    Doctor Genius establishes and boosts your brand online using
                     innovative digital marketing and search engine optimization
                     strategies.
                   </p>
@@ -39,7 +39,7 @@ export default props => (
               <div className="content-block">
                 <div className="innerTitle">
                   <h2 class="font-weight-medium">
-                    The <span class="font-weight-semibold">Doctor Genius</span>
+                    The <span class="font-weight-semibold">Doctor Genius </span>
                     Story
                   </h2>
                 </div>
@@ -64,7 +64,7 @@ export default props => (
               <div className="inner-title center">
                 <h2 className="underline font-weight-medium">
                   Doctor Genius
-                  <span class="font-weight-semibold">by the numbers</span>
+                  <span class="font-weight-semibold"> by the numbers</span>
                 </h2>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default props => (
                 <div className="inner-title center">
                   <h2 className="underline short font-weight-normal">
                     Our
-                    <span class="font-weight-semibold">Clients Average</span>
+                    <span class="font-weight-semibold"> Clients Average</span>
                   </h2>
                   <div class="callout-heading">
                     <sup>
@@ -170,7 +170,7 @@ export default props => (
                 <h3 className="strapline">Testimonials</h3>
                 <h2 className="underline font-weight-normal">
                   What
-                  <span class="font-weight-semibold">Clients Are Saying</span>
+                  <span class="font-weight-semibold"> Clients Are Saying</span>
                 </h2>
               </div>
             </div>

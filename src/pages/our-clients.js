@@ -97,10 +97,10 @@ export default props => (
             <div className="col-sm-9 offset-sm-1">
               <div className="content-block">
                 <div className="inner-title center">
-                  <div class="strapline">Marketing Performance</div>
+                  <h3 class="strapline">Marketing Performance</h3>
                   <h2 className="underline">
                     <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better
-                    <b>Visibility Online</b>
+                    <b> Visibility Online</b>
                   </h2>
                 </div>
                 <div className="accented-paragraph">
@@ -231,7 +231,7 @@ export default props => (
           <div className="row padded tall-bottom">
             <div className="col-sm-12">
               <div className="inner-title center">
-                <div className="strapline">Testimonials</div>
+                <h3 className="strapline">Testimonials</h3>
                 <h2 class="underline">
                   What <b>Clients Are Saying</b>
                 </h2>
