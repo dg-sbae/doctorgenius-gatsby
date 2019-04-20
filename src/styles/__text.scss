@@ -255,3 +255,16 @@ nav {
     font-weight: $font-weight-normal;
   }
 }
+
+.truncate {
+  /* Defined space must also have a width defined */
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+a.not-a-link {
+  color: inherit;
+  text-decoration: none;
+}
