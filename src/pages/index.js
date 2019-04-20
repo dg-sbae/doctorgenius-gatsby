@@ -112,7 +112,7 @@ export default ({ data }, props) => (
                 <h3 class="strapline">Built for success</h3>
                 <h2 className="underline font-weight-light">
                   All-in-One
-                  <span class="font-weight-semibold">Marketing Dashboard</span>
+                  <span class="font-weight-semibold"> Marketing Dashboard</span>
                 </h2>
               </div>
             </div>
@@ -151,7 +151,7 @@ export default ({ data }, props) => (
                 <h3 class="strapline">Setting the foundation for success</h3>
                 <h2 className="underline font-weight-light">
                   Why Choose
-                  <span class="font-weight-semibold">Doctor Genius</span>
+                  <span class="font-weight-semibold"> Doctor Genius</span>
                 </h2>
               </div>
             </div>
@@ -230,7 +230,8 @@ export default ({ data }, props) => (
               <div class="content-block">
                 <div class="inner-title">
                   <h2>
-                    Start your <span class="font-weight-semibold">success</span>
+                    Start your{" "}
+                    <span class="font-weight-semibold">success </span>
                     with Doctor Genius today!
                   </h2>
                   <div class="accented-paragraph">

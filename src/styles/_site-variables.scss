@@ -92,9 +92,13 @@ $font-size-nav-contact-links: $font-size-base * 0.875;
 $hero-strapline-font-size: $font-size-base * 1;
 
 // Font Weights
+$font-weight-thin: 100;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
-$font-weight-thin: 100;
+$font-weight-bold: 700 !default;
 
 // Callouts
 $callout-heading-font-size: $font-size-base * 5.3125;
+
+// Plans Grid
+$font-size-plans-row-heading: $font-size-base * 0.8125;

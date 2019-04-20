@@ -24,6 +24,7 @@
     grid-template-columns: 1fr 260px 260px 260px;
     grid-template-rows: 275px repeat(43, 50px);
     box-shadow: 0 3px 6px #e1e1e1;
+    font-family: $font-family-body-text;
 
     .spacer-row {
       grid-column-start: 1;
@@ -106,6 +107,32 @@
         top: 20px;
       }
     }
+    .column-signup {
+      .grid-item:not(.plans-row-title) {
+        font-weight: $font-weight-bold;
+      }
+      h2 {
+        font-weight: $font-weight-bold;
+        font-size: 23px;
+      }
+      p.column-signup-body {
+        font-size: 12px;
+        text-align: center;
+      }
+      a {
+        &.button {
+          font-weight: $font-weight-medium;
+          font-size: $font-size-btn;
+        }
+        &.subtle-link {
+          font-size: 12px;
+        }
+      }
+    }
+    .grid-item,
+    .plans-row-title {
+      font-size: $font-size-plans-row-heading;
+    }
   }
 
   .faq-table {
@@ -122,6 +149,7 @@
         font-weight: normal;
         margin-top: 12.5px;
         margin-bottom: 12.5px;
+        font-family: $font-family-body-text;
       }
     }
     .dd {

@@ -1,5 +1,5 @@
 @import url("https://use.typekit.net/xmg2hgf.css");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:200,300,400,500");
 
 /* Text types:
 
@@ -27,6 +27,9 @@ Paragragh (accented paragraph): 17 (home), 16 (non-home)
 // $homepage-panel-p: 18px;
 
 @for $headingNum from 1 through 6 {
+  h#{$headingNum} {
+    letter-spacing: -0.5px;
+  }
   h#{$headingNum}:not(.m-0) {
     margin-bottom: $content-block-heading-margin;
   }
@@ -267,4 +270,16 @@ nav {
 a.not-a-link {
   color: inherit;
   text-decoration: none;
+}
+.link-with-icon {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-btn;
+}
+
+b {
+  font-weight: $font-weight-semibold !important;
+}
+
+a.button {
+  font-size: $font-size-btn;
 }
