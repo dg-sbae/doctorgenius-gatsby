@@ -75,8 +75,7 @@ header {
 }
 
 .main-content {
-  background: url(/png/pixel-map.png) no-repeat,
-    url(/png/pixel-map.png) bottom no-repeat;
+  position: relative;
 }
 .hero {
   height: 555px;
