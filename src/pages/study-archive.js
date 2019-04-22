@@ -21,9 +21,9 @@ import { FaArrowRight } from "react-icons/fa"
 import "../styles/study-archive.scss"
 import "../styles/global-styles.scss"
 
-export default props => (
+export default ({ data }) => (
   <DefaultPageLayout>
-    <div className={props["*"]}>
+    <div className="study-archive">
       <div className="hero">
         {/* Hero will be a layout component */}
         {/* @todo: Heros need a thin grey border underneath, not included in pic */}
