@@ -92,126 +92,29 @@ export default ({ data }) => (
             <div class="col-sm-8 latest-posts">
               <h3 class="blog-heading ">Latest Posts</h3>
               <div class="spacer small solid" />
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
+              {console.log(data)}
+              {data.latest.edges.map(({ node }) => (
+                <div class="latest-post">
+                  <a href="$#Postpermalink">
+                    <div class="featured-image-holder">
+                      <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
+                    </div>
+                  </a>
+                  <div class="content-holder">
+                    <div class="details">
+                      <p class="date">{node.date}</p>
+                      <p class="label mute">{node.categories[0].name}</p>
+                    </div>
+                    <h4 class="truncate">
+                      <a class="not-a-link" href="$#Postpermalink">
+                        {node.title}
+                      </a>
+                    </h4>
+                    <p class="excerpt">{node.excerpt}</p>
                   </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="label mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
                 </div>
-              </div>
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
-                  </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="label mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
-                  </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="label mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
-                  </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="label mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
-                  </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="category mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
+              ))}
+
               <div class="pagination">
                 <a href="$#PreviousPostsPage">
                   <img src={leftChevron} alt="Navigate to Previous" />
