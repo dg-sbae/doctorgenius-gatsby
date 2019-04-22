@@ -353,7 +353,7 @@ export const pageQuery = graphql`
           excerpt
           slug
           type
-          date
+          date(formatString: "MMMM D, YYYY")
 
           featured_media {
             source_url
@@ -384,6 +384,7 @@ export const pageQuery = graphql`
           title
           excerpt
           slug
+          date(formatString: "MMMM D, YYYY")
         }
       }
     }
