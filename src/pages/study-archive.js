@@ -470,3 +470,53 @@ export default props => (
     </div>
   </DefaultPageLayout>
 )
+
+export const pageQuery = graphql`
+  query {
+    latest: allWordpressPost(
+      sort: { fields: [date], order: [DESC] }
+      limit: 5
+    ) {
+      totalCount
+      edges {
+        node {
+          title
+          excerpt
+          slug
+          type
+          date
+
+          featured_media {
+            source_url
+            localFile {
+              id
+            }
+            id
+          }
+          categories {
+            id
+            name
+          }
+          tags {
+            name
+          }
+          author {
+            name
+          }
+        }
+      }
+    }
+    popular: allWordpressPost(
+      sort: { fields: [date], order: [DESC] }
+      limit: 4
+    ) {
+      edges {
+        node {
+          title
+          excerpt
+          slug
+        }
+      }
+    }
+  }
+`
