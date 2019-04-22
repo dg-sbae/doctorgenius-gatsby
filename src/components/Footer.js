@@ -19,11 +19,11 @@ export default ({ children }) => (
           <ul>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/marketing-solutions/">Marketing Solutions</ListLink>
-            <li>Who We Serve</li>
+            <ListLink to="/our-clients/">Our Clients</ListLink>
             <ListLink to="/plans/">Plans</ListLink>
             <ListLink to="/company/">Company</ListLink>
             <ListLink to="/study-archive/">Resources</ListLink>
-            <li>Free Demo</li>
+            <ListLink to="$#">Free Demo</ListLink>
             <ListLink to="/contact/">Contact</ListLink>
           </ul>
         </div>
