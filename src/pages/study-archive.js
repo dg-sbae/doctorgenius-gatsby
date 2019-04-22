@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
