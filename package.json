@@ -14,16 +14,19 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "gatsby": "^2.3.5",
+    "gatsby": "^2.3.25",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-wordpress": "^3.0.51",
     "graphql": "^14.2.1",
     "graphql-tools": "^4.0.4",
+    "jquery": "^3.4.0",
     "node-sass": "^4.11.0",
+    "popper.js": "^1.15.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-icons": "^3.5.0"
+    "react-icons": "^3.5.0",
+    "typescript": "^3.4.4"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
