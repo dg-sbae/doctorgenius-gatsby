@@ -20,6 +20,7 @@
     "gatsby-source-wordpress": "^3.0.51",
     "graphql": "^14.2.1",
     "graphql-tools": "^4.0.4",
+    "he": "^1.2.0",
     "jquery": "^3.4.0",
     "node-sass": "^4.11.0",
     "popper.js": "^1.15.0",
