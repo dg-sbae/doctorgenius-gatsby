@@ -203,54 +203,19 @@ export default ({ data }) => (
                 </div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <div class="popular-post">
-                      <div class="image-holder">
-                        <img src={squarePlaceholder} alt="Popular Blog Post" />
-                      </div>
-                      <div class="content-holder">
-                        <h5 class="title truncate">
-                          Google’s “Medic Update” Turns Healthcare SEO Upside
-                          Down!
-                        </h5>
-                        <p class="date">March 12, 2019</p>
-                      </div>
-                    </div>
-                    <div class="popular-post">
-                      <div class="image-holder">
-                        <img src={squarePlaceholder} alt="Popular Blog Post" />
-                      </div>
-                      <div class="content-holder">
-                        <h5 class="title truncate">
-                          Google’s “Medic Update” Turns Healthcare SEO Upside
-                          Down!
-                        </h5>
-                        <p class="date">March 12, 2019</p>
-                      </div>
-                    </div>
-                    <div class="popular-post">
-                      <div class="image-holder">
-                        <img src={squarePlaceholder} alt="Popular Blog Post" />
-                      </div>
-                      <div class="content-holder">
-                        <h5 class="title truncate">
-                          Google’s “Medic Update” Turns Healthcare SEO Upside
-                          Down!
-                        </h5>
-                        <p class="date">March 12, 2019</p>
-                      </div>
-                    </div>
-                    <div class="popular-post">
-                      <div class="image-holder">
-                        <img src={squarePlaceholder} alt="Popular Blog Post" />
-                      </div>
-                      <div class="content-holder">
-                        <h5 class="title truncate">
-                          Google’s “Medic Update” Turns Healthcare SEO Upside
-                          Down!
-                        </h5>
-                        <p class="date">March 12, 2019</p>
-                      </div>
-                    </div>
+                    {data.popular.edges.map(({ node }) => (
+                      <a href="$#">
+                        <div class="popular-post">
+                          <div class="image-holder">
+                            <img src={squarePlaceholder} alt={node.title} />
+                          </div>
+                          <div class="content-holder">
+                            <h5 class="title truncate">{node.title}</h5>
+                            <p class="date">{node.date}</p>
+                          </div>
+                        </div>
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>
