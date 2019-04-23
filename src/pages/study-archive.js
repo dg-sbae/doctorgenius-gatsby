@@ -261,51 +261,16 @@ export default ({ data }) => (
                 </div>
                 <div class="spacer solid small" />
               </div>
-              <div class="col-sm-3">
-                <div class="event-wrapper">
-                  <img src={eventsPlaceholder} />
+              {data.events.edges.map(({ node }) => (
+                <div class="col-sm-3">
+                  <div class="event-wrapper">
+                    <img src={eventsPlaceholder} />
+                  </div>
+                  <a href={node.link}>
+                    <p>{he.decode(node.title)}</p>
+                  </a>
                 </div>
-                <a href="$EventPermalink">
-                  <p>
-                    Nickerson Consulting: 3 Spring Cleaning Tips to Clean Up
-                    Your Accounts Receivable
-                  </p>
-                </a>
-              </div>
-              <div class="col-sm-3">
-                <div class="event-wrapper">
-                  <img src={eventsPlaceholder} />
-                </div>
-                <a href="$EventPermalink">
-                  <p>
-                    Nickerson Consulting: 3 Spring Cleaning Tips to Clean Up
-                    Your Accounts Receivable
-                  </p>
-                </a>
-              </div>
-
-              <div class="col-sm-3">
-                <div class="event-wrapper">
-                  <img src={eventsPlaceholder} />
-                </div>
-                <a href="$EventPermalink">
-                  <p>
-                    Nickerson Consulting: 3 Spring Cleaning Tips to Clean Up
-                    Your Accounts Receivable
-                  </p>
-                </a>
-              </div>
-              <div class="col-sm-3">
-                <div class="event-wrapper">
-                  <img src={eventsPlaceholder} />
-                </div>
-                <a href="$EventPermalink">
-                  <p>
-                    Nickerson Consulting: 3 Spring Cleaning Tips to Clean Up
-                    Your Accounts Receivable
-                  </p>
-                </a>
-              </div>
+              ))}
             </div>
           </div>
           <div class="row padded tall-top request-demo-footer">
@@ -388,6 +353,19 @@ export const pageQuery = graphql`
           excerpt
           slug
           date(formatString: "MMMM D, YYYY")
+        }
+      }
+    }
+    events: allWordpressWpEvents(
+      sort: { fields: [date], order: [DESC] }
+      limit: 5
+    ) {
+      edges {
+        node {
+          title
+          date
+          wordpress_id
+          link
         }
       }
     }
