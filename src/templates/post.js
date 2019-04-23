@@ -1,21 +1,21 @@
 import React from "react"
 
-import DefaultPageLayout from "../../components/DefaultPageLayout"
-import Main from "../../components/main-content"
-import Container from "../../components/Container"
+import DefaultPageLayout from "../components/DefaultPageLayout"
+import Main from "../components/main-content"
+import Container from "../components/Container"
 
-import featuredImage from "../../img/study-single-featured-placeholder-2x1.png"
-import eventsPlaceholder from "../../img/study-archive-events-placeholder-3x2.png"
-import twitterIcon from "../../img/twitter.svg"
-import facebookIcon from "../../img/facebook.svg"
-import instagramIcon from "../../img/instagram.svg"
-import youtubeIcon from "../../img/youtube.svg"
-import leftChevron from "../../img/left-chevron.svg"
-import rightChevron from "../../img/right-chevron.svg"
+import featuredImage from "../img/study-single-featured-placeholder-2x1.png"
+import eventsPlaceholder from "../img/study-archive-events-placeholder-3x2.png"
+import twitterIcon from "../img/twitter.svg"
+import facebookIcon from "../img/facebook.svg"
+import instagramIcon from "../img/instagram.svg"
+import youtubeIcon from "../img/youtube.svg"
+import leftChevron from "../img/left-chevron.svg"
+import rightChevron from "../img/right-chevron.svg"
 import { FaArrowRight } from "react-icons/fa"
 
-import "../../styles/study-single-post.scss"
-import "../../styles/global-styles.scss"
+import "../styles/study-single-post.scss"
+import "../styles/global-styles.scss"
 
 export default props => (
   <DefaultPageLayout>
@@ -174,7 +174,7 @@ export default props => (
                   </div>
                   <div class="col-sm-3">
                     <div class="event-wrapper">
-                      <img src={eventsPlaceholder} />
+                      <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>
                     <a href="$EventPermalink">
                       <p>
@@ -185,7 +185,7 @@ export default props => (
                   </div>
                   <div class="col-sm-3">
                     <div class="event-wrapper">
-                      <img src={eventsPlaceholder} />
+                      <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>
                     <a href="$EventPermalink">
                       <p>
@@ -197,7 +197,7 @@ export default props => (
 
                   <div class="col-sm-3">
                     <div class="event-wrapper">
-                      <img src={eventsPlaceholder} />
+                      <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>
                     <a href="$EventPermalink">
                       <p>
@@ -208,7 +208,7 @@ export default props => (
                   </div>
                   <div class="col-sm-3">
                     <div class="event-wrapper">
-                      <img src={eventsPlaceholder} />
+                      <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>
                     <a href="$EventPermalink">
                       <p>

@@ -174,7 +174,7 @@ export default props => (
                   </div>
                   <div class="col-sm-3">
                     <div class="event-wrapper">
-                      <img src={eventsPlaceholder} />
+                      <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>
                     <a href="$EventPermalink">
                       <p>
@@ -185,7 +185,7 @@ export default props => (
                   </div>
                   <div class="col-sm-3">
                     <div class="event-wrapper">
-                      <img src={eventsPlaceholder} />
+                      <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>
                     <a href="$EventPermalink">
                       <p>
@@ -197,7 +197,7 @@ export default props => (
 
                   <div class="col-sm-3">
                     <div class="event-wrapper">
-                      <img src={eventsPlaceholder} />
+                      <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>
                     <a href="$EventPermalink">
                       <p>
@@ -208,7 +208,7 @@ export default props => (
                   </div>
                   <div class="col-sm-3">
                     <div class="event-wrapper">
-                      <img src={eventsPlaceholder} />
+                      <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>
                     <a href="$EventPermalink">
                       <p>

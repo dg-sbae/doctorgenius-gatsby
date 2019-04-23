@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import he from "he"
+//import { image } from "gatsby-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -190,7 +191,9 @@ export default ({ data }) => (
                         valuable resources.
                       </p>
                       <input type="text" />
-                      <a class="button rounder">Submit</a>
+                      <a href="$#submit" class="button rounder">
+                        Submit
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -264,7 +267,7 @@ export default ({ data }) => (
               {data.events.edges.map(({ node }) => (
                 <div class="col-sm-3">
                   <div class="event-wrapper">
-                    <img src={eventsPlaceholder} />
+                    <img src={eventsPlaceholder} alt="Recent Event" />
                   </div>
                   <a href={node.link}>
                     <p>{he.decode(node.title)}</p>
@@ -335,9 +338,6 @@ export const pageQuery = graphql`
             name
           }
           tags {
-            name
-          }
-          author {
             name
           }
         }
