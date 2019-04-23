@@ -35,12 +35,20 @@ module.exports = {
         },
         */
         excludedRoutes: [
+          /* WP */
           "/*/*/taxonomies",
           "/*/*/contact-forms",
           "/*/*/users",
+          "/*/*/users/**",
           "/*/*/settings",
+          "/*/*/comments",
+          "/*/*/pages",
+          "/*/*/pages/**",
+
+          /* Plugins: */
+          "/contact-form-7/**",
           "/yoast/**",
-          "/regenerate-thumbnails",
+          "/regenerate-thumbnails/**",
         ],
       },
     },
