@@ -1,0 +1,55 @@
+@import "_site-variables.scss";
+
+.case-study {
+  .hero {
+    background-image: url("/hero/case-study.png");
+  }
+  .icon-wrapper {
+    height: 67px;
+    width: 103px;
+    margin-bottom: 30px;
+  }
+
+  .logo-block {
+    text-align: center;
+
+    img {
+      padding: 10px;
+    }
+  }
+
+  .panel-quadrant {
+    .img-responsive {
+      padding-bottom: 30px;
+      width: 100px;
+    }
+
+    .panel-quad-item {
+      padding-left: 0;
+    }
+  }
+
+  .inner-title {
+    .subtitle {
+      font-size: $h2-font-size-main;
+    }
+  }
+
+  .client-quote-block {
+    text-align: center;
+    font-weight: $font-weight-light;
+
+    .client-quote {
+      color: $primary;
+      font-size: 26px;
+      padding: 35px 0 20px;
+      margin: 0 auto;
+      font-weight: $font-weight-normal;
+    }
+    .client-author {
+      color: $demo-body-text;
+      font-family: $font-family-body-text;
+      font-weight: $font-weight-medium;
+    }
+  }
+}

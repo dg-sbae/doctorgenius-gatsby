@@ -299,3 +299,16 @@ b {
 a.button {
   font-size: $font-size-btn;
 }
+
+.case-study {
+  .panel-quadrant {
+    h4 {
+      font-size: 22px;
+      font-weight: $font-weight-semibold;
+    }
+    p {
+      font-size: 14px;
+      font-weight: $font-weight-light;
+    }
+  }
+}
