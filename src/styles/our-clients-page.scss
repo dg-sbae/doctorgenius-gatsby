@@ -1,8 +1,19 @@
 @import "_site-variables.scss";
 
-.our-clients {
+.our-clients,
+.case-study {
   .hero {
     background-image: url("/hero/our-clients.png");
+  }
+  .inner-title {
+    .subtitle {
+      font-size: 29px;
+    }
+  }
+  .case-study-container {
+    h3 {
+      font-size: $h2-font-size-main;
+    }
   }
   .icon-wrapper {
     height: 67px;
@@ -50,6 +61,7 @@
     color: $primary;
     font-size: 2.5rem; /* 40px */
     font-weight: bold;
+    font-family: $font-family-inner-block-headings;
   }
   .check-plans-background-image {
     height: 475px;
