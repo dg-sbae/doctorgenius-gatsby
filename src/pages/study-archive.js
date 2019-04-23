@@ -250,6 +250,7 @@ export default ({ data }) => (
               </div>
             </div>
           </div>
+          {/* Begin Events component */}
           <div class="events-section">
             <div class="row padded tall-top">
               <div class="col-sm-12">
@@ -276,6 +277,7 @@ export default ({ data }) => (
               ))}
             </div>
           </div>
+          {/* End Events component */}
           <div class="row padded tall-top request-demo-footer">
             <div className="col-sm-1" />
             <div class="col-sm-5">
@@ -358,7 +360,7 @@ export const pageQuery = graphql`
     }
     events: allWordpressWpEvents(
       sort: { fields: [date], order: [DESC] }
-      limit: 5
+      limit: 4
     ) {
       edges {
         node {
