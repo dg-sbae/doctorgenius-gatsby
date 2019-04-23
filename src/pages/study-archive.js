@@ -393,3 +393,42 @@ export const pageQuery = graphql`
     }
   }
 `
+
+{
+  /*
+
+filter: { categories: {elemMatch: {name: {eq: "Events"} }  } }
+
+  events: allWordpressPage(
+    filter: { categories: {elemMatch: {wordpress_id: {eq: 90} }  } }
+  ) {
+    totalCount
+    edges {
+      node {
+
+        title
+        excerpt
+        slug
+        type
+        date(formatString: "MMMM D, YYYY")
+
+        featured_media {
+          source_url
+          localFile {
+            id
+          }
+          id
+        }
+        categories  {
+          id
+          name
+        }
+
+        author {
+          name
+        }
+      }
+    }
+  }
+*/
+}
