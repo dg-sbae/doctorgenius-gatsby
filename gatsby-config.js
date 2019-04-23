@@ -38,8 +38,7 @@ module.exports = {
           /* WP */
           "/*/*/taxonomies",
           "/*/*/contact-forms",
-          "/*/*/users",
-          "/*/*/users/**",
+          "/*/*/users/me",
           "/*/*/settings",
           "/*/*/comments",
           "/*/*/pages",
