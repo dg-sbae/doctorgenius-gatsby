@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import he from "he"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -107,7 +108,7 @@ export default ({ data }) => (
                     </div>
                     <h4 class="truncate">
                       <a class="not-a-link" href="$#Postpermalink">
-                        {node.title}
+                        {he.decode(node.title)}
                       </a>
                     </h4>
                     <p class="excerpt">{node.excerpt}</p>
@@ -210,7 +211,9 @@ export default ({ data }) => (
                             <img src={squarePlaceholder} alt={node.title} />
                           </div>
                           <div class="content-holder">
-                            <h5 class="title truncate">{node.title}</h5>
+                            <h5 class="title truncate">
+                              {he.decode(node.title)}
+                            </h5>
                             <p class="date">{node.date}</p>
                           </div>
                         </div>
