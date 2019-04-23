@@ -8,6 +8,7 @@ import "../styles/global-styles.scss"
 import "../styles/our-clients-page.scss"
 import "../styles/case-study.scss"
 
+import { FaArrowRight } from "react-icons/fa"
 import theSolutionsImage from "../img/the-solutions-tablet-and-search.png"
 import theChallengeImage from "../img/the-challenge-placeholder.png"
 import ramiTahhanImage from "../img/rami-tahhan.png"
@@ -257,6 +258,36 @@ export default props => (
                 alt="Search Results Page"
               />
             </div>
+          </div>
+          <div class="row padded tall-top request-demo-footer">
+            <div className="col-sm-1" />
+            <div class="col-sm-5">
+              <div class="content-block">
+                <div class="inner-title">
+                  <h2>
+                    Start your
+                    <span class="font-weight-semibold"> success </span>
+                    with Doctor Genius today!
+                  </h2>
+                  <div class="accented-paragraph">
+                    <p class="s-thin">
+                      The Genius platform makes every part of your company
+                      process more efficient. Our support team is very excited
+                      to help you and get your company on the right path of
+                      success.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <div class="center">
+                <a href="/" className="button flat white-text">
+                  Request Demo <FaArrowRight />
+                </a>
+              </div>
+            </div>
+            <div className="col-sm-1" />
           </div>
         </Container>
       </Main>
