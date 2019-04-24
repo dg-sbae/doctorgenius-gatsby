@@ -8,26 +8,44 @@ import phone from "../img/phone-white.svg"
 import "../styles/global-styles.scss"
 
 const ListLink = props => (
-  <li>
+  <li className={props.className}>
     <Link to={props.to}>{props.children}</Link>
   </li>
 )
 
 export default ({ children }) => (
-  <nav>
+  <nav className="navbar navbar-expand-md">
     <Container>
       <div class="logo">
         <Link>
-          <img src={logo} alt="Our Logo" />
+          <img className="navbar-brand" src={logo} alt="Our Logo" />
         </Link>
       </div>
-      <div class="main-links">
-        <ul>
-          <ListLink to="/marketing-solutions/">Marketing Solutions</ListLink>
-          <ListLink to="/our-clients/">Our Clients</ListLink>
-          <ListLink to="/plans/">Plans</ListLink>
-          <ListLink to="/company/">Company</ListLink>
-          <ListLink to="/study-archive/">Resources</ListLink>
+
+      <div
+        className="main-links collapse navbar-collapse"
+        id="navbarSupportedContent"
+      >
+        <ul className="navbar-nav">
+          <ListLink
+            className="dropdown-marketing-solutions"
+            to="/marketing-solutions/"
+          >
+            Marketing Solutions
+          </ListLink>
+          <ListLink className="dropdown-our-clients" to="/our-clients/">
+            Our Clients
+          </ListLink>
+
+          <ListLink className="" to="/plans/">
+            Plans
+          </ListLink>
+          <ListLink className="" to="/company/">
+            Company
+          </ListLink>
+          <ListLink className="dropdown-study-archive" to="/study-archive/">
+            Resources
+          </ListLink>
         </ul>
       </div>
       <div class="contact-links">
