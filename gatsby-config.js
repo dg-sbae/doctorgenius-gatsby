@@ -30,8 +30,8 @@ module.exports = {
         useACF: false,
         /*
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://doctor.com",
-          replacementUrl: "https://replacement-url.com",
+          sourceUrl: "https://doctorgenius.com",
+          replacementUrl: "http://localhost:8000/",
         },
         */
         excludedRoutes: [
