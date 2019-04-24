@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import he from "he"
-//import { image } from "gatsby-image"
+import Img from "gatsby-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -97,9 +97,13 @@ export default ({ data }) => (
               {console.log(data)}
               {data.latest.edges.map(({ node }) => (
                 <div class="latest-post">
-                  <a href="$#Postpermalink">
+                  <a href={node.slug}>
                     <div class="featured-image-holder">
-                      <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
+                      <Img
+                        fluid={
+                          node.featured_media.localFile.childImageSharp.fluid
+                        }
+                      />
                     </div>
                   </a>
                   <div class="content-holder">
@@ -112,7 +116,15 @@ export default ({ data }) => (
                         {he.decode(node.title)}
                       </a>
                     </h4>
-                    <p class="excerpt">{node.excerpt}</p>
+                    <p
+                      class="excerpt"
+                      dangerouslySetInnerHTML={{
+                        __html: node.excerpt.replace(
+                          /https:\/\/doctorgenius.com/,
+                          "http://localhost:8000/"
+                        ),
+                      }}
+                    />
                   </div>
                 </div>
               ))}
@@ -208,10 +220,16 @@ export default ({ data }) => (
                 <div class="row">
                   <div class="col-sm-12">
                     {data.popular.edges.map(({ node }) => (
-                      <a href="$#">
+                      <a href={node.link}>
                         <div class="popular-post">
                           <div class="image-holder">
-                            <img src={squarePlaceholder} alt={node.title} />
+                            {console.log(node)}
+                            <Img
+                              fluid={
+                                node.featured_media.localFile.childImageSharp
+                                  .fluid
+                              }
+                            />
                           </div>
                           <div class="content-holder">
                             <h5 class="title truncate">
@@ -327,11 +345,15 @@ export const pageQuery = graphql`
           slug
           type
           date(formatString: "MMMM D, YYYY")
-
+          link
           featured_media {
             source_url
             localFile {
-              id
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
             id
           }
@@ -355,6 +377,17 @@ export const pageQuery = graphql`
           excerpt
           slug
           date(formatString: "MMMM D, YYYY")
+          featured_media {
+            source_url
+            localFile {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            id
+          }
         }
       }
     }
