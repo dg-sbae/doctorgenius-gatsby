@@ -16,6 +16,7 @@
     "bootstrap": "^4.3.1",
     "gatsby": "^2.3.25",
     "gatsby-image": "^2.0.40",
+    "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-web-font-loader": "^1.0.4",
@@ -29,6 +30,7 @@
     "popper.js": "^1.15.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
     "react-icons": "^3.5.0",
     "typescript": "^3.4.4"
   },
