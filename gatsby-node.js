@@ -24,7 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
     graphql(
       `
         {
-          allWordpressPost {
+          allWordpressPost(sort: { fields: [date], order: [DESC] }) {
             edges {
               node {
                 title
@@ -71,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
       // The Post ID is prefixed with 'POST_'
       _.each(result.data.allWordpressPost.edges, edge => {
         createPage({
-          path: `/${edge.node.slug}/`,
+          path: `/study-archive/${edge.node.slug}/`,
           component: slash(postTemplate),
           context: edge.node,
         })
