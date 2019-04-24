@@ -1,4 +1,7 @@
 import React from "react"
+import { graphql } from "gatsby"
+import he from "he"
+import Img from "gatsby-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -20,9 +23,9 @@ import { FaArrowRight } from "react-icons/fa"
 import "../styles/study-archive.scss"
 import "../styles/global-styles.scss"
 
-export default props => (
+export default ({ data }) => (
   <DefaultPageLayout>
-    <div className={props["*"]}>
+    <div className="study-archive">
       <div className="hero">
         {/* Hero will be a layout component */}
         {/* @todo: Heros need a thin grey border underneath, not included in pic */}
@@ -91,126 +94,41 @@ export default props => (
             <div class="col-sm-8 latest-posts">
               <h3 class="blog-heading ">Latest Posts</h3>
               <div class="spacer small solid" />
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
+              {console.log(data)}
+              {data.latest.edges.map(({ node }) => (
+                <div class="latest-post">
+                  <a href={node.slug}>
+                    <div class="featured-image-holder">
+                      <Img
+                        fluid={
+                          node.featured_media.localFile.childImageSharp.fluid
+                        }
+                      />
+                    </div>
+                  </a>
+                  <div class="content-holder">
+                    <div class="details">
+                      <p class="date">{node.date}</p>
+                      <p class="label mute">{node.categories[0].name}</p>
+                    </div>
+                    <h4 class="truncate">
+                      <a class="not-a-link" href={node.slug}>
+                        {he.decode(node.title)}
+                      </a>
+                    </h4>
+                    <p
+                      class="excerpt"
+                      dangerouslySetInnerHTML={{
+                        __html: node.excerpt.replace(
+                          /https:\/\/doctorgenius.com/,
+                          "http://localhost:8000/"
+                        ),
+                      }}
+                    />
                   </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="label mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
                 </div>
-              </div>
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
-                  </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="label mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
-                  </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="label mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
-                  </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="label mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="latest-post">
-                <a href="$#Postpermalink">
-                  <div class="featured-image-holder">
-                    <img src={threebyTwoPlaceholder} alt="Recent Blog Post" />
-                  </div>
-                </a>
-                <div class="content-holder">
-                  <div class="details">
-                    <p class="date">March 12, 2019</p>
-                    <p class="category mute">Digital Marketing</p>
-                  </div>
-                  <h4 class="truncate">
-                    <a class="not-a-link" href="$#Postpermalink">
-                      Google’s “Medic Update” Turns Healthcare SEO Upside Down!
-                    </a>
-                  </h4>
-                  <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis. Nulla et faucibus
-                    nisl, quis sollicitudin tellus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
+              ))}
+
               <div class="pagination">
                 <a href="$#PreviousPostsPage">
                   <img src={leftChevron} alt="Navigate to Previous" />
@@ -285,7 +203,9 @@ export default props => (
                         valuable resources.
                       </p>
                       <input type="text" />
-                      <a class="button rounder">Submit</a>
+                      <a href="$#submit" class="button rounder">
+                        Submit
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -299,54 +219,27 @@ export default props => (
                 </div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <div class="popular-post">
-                      <div class="image-holder">
-                        <img src={squarePlaceholder} alt="Popular Blog Post" />
-                      </div>
-                      <div class="content-holder">
-                        <h5 class="title truncate">
-                          Google’s “Medic Update” Turns Healthcare SEO Upside
-                          Down!
-                        </h5>
-                        <p class="date">March 12, 2019</p>
-                      </div>
-                    </div>
-                    <div class="popular-post">
-                      <div class="image-holder">
-                        <img src={squarePlaceholder} alt="Popular Blog Post" />
-                      </div>
-                      <div class="content-holder">
-                        <h5 class="title truncate">
-                          Google’s “Medic Update” Turns Healthcare SEO Upside
-                          Down!
-                        </h5>
-                        <p class="date">March 12, 2019</p>
-                      </div>
-                    </div>
-                    <div class="popular-post">
-                      <div class="image-holder">
-                        <img src={squarePlaceholder} alt="Popular Blog Post" />
-                      </div>
-                      <div class="content-holder">
-                        <h5 class="title truncate">
-                          Google’s “Medic Update” Turns Healthcare SEO Upside
-                          Down!
-                        </h5>
-                        <p class="date">March 12, 2019</p>
-                      </div>
-                    </div>
-                    <div class="popular-post">
-                      <div class="image-holder">
-                        <img src={squarePlaceholder} alt="Popular Blog Post" />
-                      </div>
-                      <div class="content-holder">
-                        <h5 class="title truncate">
-                          Google’s “Medic Update” Turns Healthcare SEO Upside
-                          Down!
-                        </h5>
-                        <p class="date">March 12, 2019</p>
-                      </div>
-                    </div>
+                    {data.popular.edges.map(({ node }) => (
+                      <a href={node.link}>
+                        <div class="popular-post">
+                          <div class="image-holder">
+                            {console.log(node)}
+                            <Img
+                              fluid={
+                                node.featured_media.localFile.childImageSharp
+                                  .fluid
+                              }
+                            />
+                          </div>
+                          <div class="content-holder">
+                            <h5 class="title truncate">
+                              {he.decode(node.title)}
+                            </h5>
+                            <p class="date">{node.date}</p>
+                          </div>
+                        </div>
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -375,6 +268,7 @@ export default props => (
               </div>
             </div>
           </div>
+          {/* Begin Events component */}
           <div class="events-section">
             <div class="row padded tall-top">
               <div class="col-sm-12">
@@ -389,53 +283,19 @@ export default props => (
                 </div>
                 <div class="spacer solid small" />
               </div>
-              <div class="col-sm-3">
-                <div class="event-wrapper">
-                  <img src={eventsPlaceholder} />
+              {data.events.edges.map(({ node }) => (
+                <div class="col-sm-3">
+                  <div class="event-wrapper">
+                    <img src={eventsPlaceholder} alt="Recent Event" />
+                  </div>
+                  <a href={node.link}>
+                    <p>{he.decode(node.title)}</p>
+                  </a>
                 </div>
-                <a href="$EventPermalink">
-                  <p>
-                    Nickerson Consulting: 3 Spring Cleaning Tips to Clean Up
-                    Your Accounts Receivable
-                  </p>
-                </a>
-              </div>
-              <div class="col-sm-3">
-                <div class="event-wrapper">
-                  <img src={eventsPlaceholder} />
-                </div>
-                <a href="$EventPermalink">
-                  <p>
-                    Nickerson Consulting: 3 Spring Cleaning Tips to Clean Up
-                    Your Accounts Receivable
-                  </p>
-                </a>
-              </div>
-
-              <div class="col-sm-3">
-                <div class="event-wrapper">
-                  <img src={eventsPlaceholder} />
-                </div>
-                <a href="$EventPermalink">
-                  <p>
-                    Nickerson Consulting: 3 Spring Cleaning Tips to Clean Up
-                    Your Accounts Receivable
-                  </p>
-                </a>
-              </div>
-              <div class="col-sm-3">
-                <div class="event-wrapper">
-                  <img src={eventsPlaceholder} />
-                </div>
-                <a href="$EventPermalink">
-                  <p>
-                    Nickerson Consulting: 3 Spring Cleaning Tips to Clean Up
-                    Your Accounts Receivable
-                  </p>
-                </a>
-              </div>
+              ))}
             </div>
           </div>
+          {/* End Events component */}
           <div class="row padded tall-top request-demo-footer">
             <div className="col-sm-1" />
             <div class="col-sm-5">
@@ -470,3 +330,118 @@ export default props => (
     </div>
   </DefaultPageLayout>
 )
+
+export const pageQuery = graphql`
+  query {
+    latest: allWordpressPost(
+      sort: { fields: [date], order: [DESC] }
+      limit: 5
+    ) {
+      totalCount
+      edges {
+        node {
+          title
+          excerpt
+          slug
+          type
+          date(formatString: "MMMM D, YYYY")
+          link
+          featured_media {
+            source_url
+            localFile {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            id
+          }
+          categories {
+            id
+            name
+          }
+          tags {
+            name
+          }
+        }
+      }
+    }
+    popular: allWordpressPost(
+      sort: { fields: [date], order: [DESC] }
+      limit: 4
+    ) {
+      edges {
+        node {
+          title
+          excerpt
+          slug
+          date(formatString: "MMMM D, YYYY")
+          featured_media {
+            source_url
+            localFile {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            id
+          }
+        }
+      }
+    }
+    events: allWordpressWpEvents(
+      sort: { fields: [date], order: [DESC] }
+      limit: 4
+    ) {
+      edges {
+        node {
+          title
+          date
+          wordpress_id
+          link
+        }
+      }
+    }
+  }
+`
+
+{
+  /*
+
+filter: { categories: {elemMatch: {name: {eq: "Events"} }  } }
+
+  events: allWordpressPage(
+    filter: { categories: {elemMatch: {wordpress_id: {eq: 90} }  } }
+  ) {
+    totalCount
+    edges {
+      node {
+
+        title
+        excerpt
+        slug
+        type
+        date(formatString: "MMMM D, YYYY")
+
+        featured_media {
+          source_url
+          localFile {
+            id
+          }
+          id
+        }
+        categories  {
+          id
+          name
+        }
+
+        author {
+          name
+        }
+      }
+    }
+  }
+*/
+}

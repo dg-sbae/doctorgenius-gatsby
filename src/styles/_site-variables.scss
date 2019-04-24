@@ -14,28 +14,34 @@ $blog-page-excerpt-text-color: #707070; /*This styling and color seemed very uni
 $blog-page-date-color: #b9b9b9;
 $blog-page-headings-color: #2e6097;
 $blog-page-titles-color: #031453;
-
 $recommended-green: #10a72f;
 $mute-text-darker: #989898;
-
 $secondary: #005a91;
-
 $homepage-secondary-accent: #33b2ff;
-
 $content-block-heading-margin: 27.5px; /* This needs fixed, maybe ems? */
+
+/* @include-media named breakpoints */
+$phone: 375px;
+$tablet: 768px;
+$desktop: 1300px;
+$breakpoints: (
+  phone: $phone,
+  tablet: $tablet,
+  desktop: $desktop,
+);
 
 /* Bootstrap overrides: */
 $grid-breakpoints: (
   xs: 0,
-  /* Not Implemented */ sm: 576px,
-  /* Not Implemented */ md: 768px,
-  lg: 1300px,
+  /* Not Implemented */ sm: $phone,
+  /* Not Implemented */ md: $tablet,
+  lg: $desktop,
   /* Not Used */ xl: 4000px,
 ) !default;
 
 $container-max-widths: (
-  /* Not Implemented */ sm: 540px,
-  /* Not Implemented */ md: 720px,
+  /* Not Implemented */ sm: 300px,
+  /* Not Implemented */ md: 700px,
   /* 104px per .col-1*/ lg: 1248px,
   /* Not Used */ xl: 1600px
 ) !default;

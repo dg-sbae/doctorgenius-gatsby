@@ -3,6 +3,12 @@ html,
 body {
   overflow-x: auto; /* Allows 100vw to not include scrollbars */
 }
+.container,
+.container-fluid {
+  @include media("height<=desktop") {
+    max-width: 1248px;
+  }
+}
 header {
   position: fixed;
   height: 120px;
@@ -18,7 +24,8 @@ header {
     height: 120px;
     display: flex;
 
-    .container {
+    .container,
+    .container-fluid {
       display: flex;
       align-items: center;
       justify-content: space-between;
