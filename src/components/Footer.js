@@ -12,10 +12,10 @@ export default ({ children }) => (
   <footer>
     <Container>
       <div className="row padded tall-top footer-row">
-        <div className="col-sm-4">
-          <img src="/icon/logo-white.svg" />
+        <div className="col-sm-12 col-lg-4">
+          <img src="/icon/logo-white.svg" className="logo img-responsive" />
         </div>
-        <div className="col-sm-4 footer-page-links">
+        <div className="d-sm-none d-md-block col-sm-12 col-md-6 col-lg-4 footer-page-links">
           <ul>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/marketing-solutions/">Marketing Solutions</ListLink>
@@ -27,7 +27,7 @@ export default ({ children }) => (
             <ListLink to="/contact/">Contact</ListLink>
           </ul>
         </div>
-        <div className="col-sm-4">
+        <div className="col-sm-8 col-md-6 col-lg-4">
           <div className="footer-contact-row">
             <div className="icon-wrapper">
               <img className="img-icon" src="/icon/ringing-phone.svg" />
@@ -91,14 +91,18 @@ export default ({ children }) => (
           </div>
         </div>
       </div>
-      <div className="row padded short-top footer-subrow">
-        <div class="copyright-section">
-          &copy;2019 Doctor Genius. All Rights Reserved.
-        </div>
-        <div class="legal-links">
-          <ListLink to="/">Privacy Policy</ListLink>
-          <span> | </span>
-          <ListLink to="/">Terms and Conditions</ListLink>
+      <div className="row padded short-top">
+        <div class="col-sm-12">
+          <div class="footer-subrow">
+            <div class="copyright-section">
+              &copy;2019 Doctor Genius. All Rights Reserved.
+            </div>
+            <div class="legal-links">
+              <ListLink to="/">Privacy Policy</ListLink>
+              <span> | </span>
+              <ListLink to="/">Terms and Conditions</ListLink>
+            </div>
+          </div>
         </div>
       </div>
       {children}

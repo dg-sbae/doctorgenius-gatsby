@@ -281,15 +281,9 @@ footer {
   }
   .footer-subrow {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 
-    .copyright-section {
-      float: left;
-      display: inline;
-    }
     .legal-links {
-      margin-left: auto;
-
       li {
         display: inline;
         list-style-type: none;

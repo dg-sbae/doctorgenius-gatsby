@@ -65,7 +65,7 @@ export default ({ data }, props) => (
                 <h2 className="underline">We Care About Your Success</h2>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div class="icon-wrapper">
                   <img className="img-icon" src={medal} alt="Icon of a medal" />
@@ -74,7 +74,7 @@ export default ({ data }, props) => (
                 <p class="panel-body">Increase in Google First-Page Results</p>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div class="icon-wrapper">
                   <img className="img-icon" src={money} alt="Icon of money" />
@@ -83,7 +83,7 @@ export default ({ data }, props) => (
                 <p class="panel-body">Increase in Revenue!</p>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-3">
               <div class="panel">
                 <div class="icon-wrapper">
                   <img
@@ -96,7 +96,7 @@ export default ({ data }, props) => (
                 <p class="panel-body">Increase in New Patient Calls!</p>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-3">
               <div class="panel">
                 <div class="icon-wrapper">
                   <img className="img-icon" src={stars} alt="Icon of Stars" />
@@ -116,7 +116,7 @@ export default ({ data }, props) => (
                 </h2>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-12 col-md-8 col-lg-6">
               <div className="accented-paragraph">
                 <p>
                   Our robust, comprehensive marketing solutions helps keep your
@@ -132,7 +132,7 @@ export default ({ data }, props) => (
             <div className="full-bleed marketing-dashboard-background" />
             <div className="full-bleed-content-wrapper">
               <div className="row">
-                <div className="col-sm-1" />
+                <div className="col-sm-1 " />
                 <div className="col-sm-10">
                   <img
                     src={homepageMobileMockup}

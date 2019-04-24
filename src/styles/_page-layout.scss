@@ -5,14 +5,17 @@ body {
 }
 .container,
 .container-fluid {
-  @include media("height<=desktop") {
+  @include media(">=desktop") {
     max-width: 1248px;
   }
 }
 header {
   position: fixed;
   height: 120px;
-  width: 100%;
+  &,
+  & .container-fluid {
+    width: 100%;
+  }
   .logo a {
     display: block;
     img {
@@ -57,7 +60,19 @@ header {
     height: 80px;
   }
 }
-
+footer {
+  .footer-row {
+    .logo {
+      @include media("width<desktop") {
+        margin-bottom: 70px;
+      }
+    }
+    .footer-subrow {
+      justify-content: space-between;
+    }
+    /* justify-items: center; */
+  }
+}
 /* Secondary Header is the large icon navigation which affixes to the top of the main header on scroll */
 .secondary-nav {
   height: 190px;

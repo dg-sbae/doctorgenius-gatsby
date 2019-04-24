@@ -7,7 +7,6 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import featuredImage from "../img/study-single-featured-placeholder-2x1.png"
 import eventsPlaceholder from "../img/study-archive-events-placeholder-3x2.png"
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
