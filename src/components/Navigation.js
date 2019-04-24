@@ -9,7 +9,9 @@ import "../styles/global-styles.scss"
 
 const ListLink = props => (
   <li className={props.className}>
-    <Link to={props.to}>{props.children}</Link>
+    <Link to={props.to} activeClassName="active" partiallyActive={true}>
+      {props.children}
+    </Link>
   </li>
 )
 

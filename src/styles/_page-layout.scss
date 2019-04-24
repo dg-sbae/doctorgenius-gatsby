@@ -64,6 +64,11 @@ header {
         }
         li {
           list-style-type: none;
+
+          // Need to change this styling
+          .active {
+            color: red;
+          }
         }
       }
     }
