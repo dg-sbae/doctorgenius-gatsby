@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import he from "he"
-//import { image } from "gatsby-image"
+import Img from "gatsby-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -101,7 +101,12 @@ function PostPage({ pageContext, data }) {
                   />
 
                   <div class="featured-image">
-                    <img src={featuredImage} alt={pageContext.title} />
+                    <Img
+                      fluid={
+                        pageContext.featured_media.localFile.childImageSharp
+                          .fluid
+                      }
+                    />
                   </div>
                   <div
                     className="remainder"

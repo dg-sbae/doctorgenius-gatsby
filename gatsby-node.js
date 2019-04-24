@@ -42,8 +42,15 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   source_url
                   localFile {
-                    relativePath
-                    absolutePath
+                    childImageSharp {
+                      fluid {
+                        base64
+                        aspectRatio
+                        src
+                        srcSet
+                        sizes
+                      }
+                    }
                   }
                 }
                 author {

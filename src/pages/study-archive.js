@@ -112,7 +112,7 @@ export default ({ data }) => (
                       <p class="label mute">{node.categories[0].name}</p>
                     </div>
                     <h4 class="truncate">
-                      <a class="not-a-link" href="$#Postpermalink">
+                      <a class="not-a-link" href={node.slug}>
                         {he.decode(node.title)}
                       </a>
                     </h4>
