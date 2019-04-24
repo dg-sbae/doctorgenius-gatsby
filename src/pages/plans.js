@@ -25,7 +25,7 @@ export default props => (
                 <h1>Our Plans</h1>
                 <h2>
                   Solution To Your
-                  <span class="font-weight-semibold">Online Marketing</span>
+                  <span class="font-weight-semibold"> Online Marketing </span>
                   Needs
                 </h2>
                 <div className="accented-paragraph">
