@@ -271,6 +271,22 @@ a.not-a-link {
   color: inherit;
   text-decoration: none;
 }
+footer {
+  .footer-page-links {
+    font-size: $font-size-nav-main-links;
+    list-style-type: none;
+    font-family: $font-family-body-text;
+  }
+  .footer-contact-row {
+    font-family: $font-family-body-text;
+    font-weight: $font-weight-light;
+  }
+  .footer-subrow {
+    font-size: $font-size-subfooter;
+    font-family: $font-family-body-text;
+  }
+}
+
 .link-with-icon {
   font-weight: $font-weight-semibold;
   font-size: $font-size-btn;
@@ -282,4 +298,17 @@ b {
 
 a.button {
   font-size: $font-size-btn;
+}
+
+.case-study {
+  .panel-quadrant {
+    h4 {
+      font-size: 22px;
+      font-weight: $font-weight-semibold;
+    }
+    p {
+      font-size: 14px;
+      font-weight: $font-weight-light;
+    }
+  }
 }

@@ -148,7 +148,7 @@ export default props => (
           </div>
           <div className="spacer solid trim" />
           <div className="row padded short-top">
-            <div class="col-sm-7">
+            <div class="col-sm-7 case-study-container">
               <div class="inner-title center">
                 <h3 className="m-0">Case Study: Titan Dental</h3>
                 <div className="subtitle muted">The first 6 months</div>
