@@ -6,17 +6,19 @@ import logo from "../img/logo-white.svg"
 import phone from "../img/phone-white.svg"
 
 import "../styles/global-styles.scss"
+import "../scripts/navigationFunctionality.js"
 
 const ListLink = props => (
-  <li className={props.className}>
+  <li className={props.className} data-toggle={props.dataToggle}>
     <Link to={props.to} activeClassName="active" partiallyActive={true}>
       {props.children}
     </Link>
+    {}
   </li>
 )
 
 export default ({ children }) => (
-  <nav className="navbar navbar-expand-md">
+  <nav className="navbar navbar-expand-md fixed-top">
     <Container>
       <div class="logo">
         <Link>
@@ -31,11 +33,16 @@ export default ({ children }) => (
         <ul className="navbar-nav">
           <ListLink
             className="dropdown-marketing-solutions"
+            dataToggle="dropdown-marketing-solutions"
             to="/marketing-solutions/"
           >
             Marketing Solutions
           </ListLink>
-          <ListLink className="dropdown-our-clients" to="/our-clients/">
+          <ListLink
+            className="dropdown-our-clients"
+            dataToggle="dropdown-our-clients"
+            to="/our-clients/"
+          >
             Our Clients
           </ListLink>
 
@@ -45,7 +52,11 @@ export default ({ children }) => (
           <ListLink className="" to="/company/">
             Company
           </ListLink>
-          <ListLink className="dropdown-study-archive" to="/study-archive/">
+          <ListLink
+            className="dropdown-study-archive"
+            dataToggle="dropdown-study-archive"
+            to="/study-archive/"
+          >
             Resources
           </ListLink>
         </ul>
