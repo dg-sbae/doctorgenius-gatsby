@@ -1,7 +1,8 @@
 /* Page Layout - Positioning elements and general page structure*/
-html,
 body {
-  overflow-x: auto; /* Allows 100vw to not include scrollbars */
+  overflow-y: auto; /* Allows 100vw to not include scrollbars */
+  overflow-x: hidden;
+  width: 100vw;
 }
 .container,
 .container-fluid {
