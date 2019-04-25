@@ -18,7 +18,7 @@ import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
 import { FaArrowRight } from "react-icons/fa"
 
-import "../styles/study-archive.scss"
+import "../styles/the-study.scss"
 import "../styles/global-styles.scss"
 
 export default function({ data }) {
@@ -27,7 +27,7 @@ export default function({ data }) {
 
   return (
     <DefaultPageLayout>
-      <div className="study-archive">
+      <div className="the-study">
         <div className="hero">
           {/* Hero will be a layout component */}
           {/* @todo: Heros need a thin grey border underneath, not included in pic */}

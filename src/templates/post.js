@@ -16,7 +16,7 @@ import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
 import { FaArrowRight } from "react-icons/fa"
 
-import "../styles/study-single-post.scss"
+import "../styles/the-study-post.scss"
 import "../styles/global-styles.scss"
 
 function PostPage({ pageContext, data }) {
