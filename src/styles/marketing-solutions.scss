@@ -1,0 +1,12 @@
+@import "_site-variables.scss";
+
+.marketing-solutions {
+  .hero {
+    background-image: url("/hero/our-clients.png");
+  }
+  .check-plans-background-image {
+    height: 475px;
+    background: url("/png/our-clients-fullbleed-image.png") no-repeat;
+    background-position: 40%;
+  }
+}

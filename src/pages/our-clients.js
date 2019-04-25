@@ -7,8 +7,6 @@ import Container from "../components/Container"
 import "../styles/our-clients-page.scss"
 import "../styles/global-styles.scss"
 
-//import "../"
-
 export default props => (
   <DefaultPageLayout>
     <div className={props["*"]}>
@@ -37,6 +35,7 @@ export default props => (
       </div>
       <Main>
         <Container>
+          {/* Begin secondary nav Component: */}
           <div className="row">
             <div className="col-sm-12 panel-row">
               <div className="secondary-nav">
@@ -93,6 +92,7 @@ export default props => (
               </div>
             </div>
           </div>
+          {/* End Secondary Nav Component */}
           <div className="row padded">
             <div className="col-sm-9 offset-sm-1">
               <div className="content-block">
@@ -198,6 +198,7 @@ export default props => (
               />
             </div>
           </div>
+          {/* Begin Full bleed content row */}
           <div className="full-bleed-wrapper pad-md">
             <div className="full-bleed check-plans-background-image" />
             <div className="full-bleed-content-wrapper">
@@ -227,6 +228,7 @@ export default props => (
               </div>
             </div>
           </div>
+          {/* End Full bleed content row */}
 
           <div className="row padded tall-bottom">
             <div className="col-sm-12">

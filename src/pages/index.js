@@ -224,6 +224,7 @@ export default ({ data }, props) => (
               <div className="col-sm-1" />
             </div>
           </div>
+          {/* Begin Demo Footer */}
           <div class="row padded tall-top request-demo-footer">
             <div className="col-sm-1" />
             <div class="col-sm-5">
@@ -254,6 +255,7 @@ export default ({ data }, props) => (
             </div>
             <div className="col-sm-1" />
           </div>
+          {/* End Demo Footer */}
         </Container>
       </Main>
     </div>

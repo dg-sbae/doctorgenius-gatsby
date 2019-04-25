@@ -129,18 +129,25 @@ footer {
 }
 .full-bleed-wrapper {
   position: relative;
+  .full-bleed-content-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .full-bleed {
+    width: 100vw;
+    margin-left: 50%;
+    &:not(.flipped) {
+      transform: translateX(-50%);
+    }
+    &.flipped {
+      transform: translateX(-50%) scaleX(-1);
+      filter: FlipH;
+    }
+  }
 }
-.full-bleed-content-wrapper {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.full-bleed {
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
+
 .row {
   justify-content: center;
   align-items: center;
