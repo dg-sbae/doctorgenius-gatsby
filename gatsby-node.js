@@ -36,35 +36,6 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
           }
-
-          DigitalMarketing: allWordpressPost(
-            filter: { categories: { elemMatch: { wordpress_id: { eq: 5 } } } }
-          ) {
-            totalCount
-            edges {
-              node {
-                slug
-                categories {
-                  name
-                }
-              }
-            }
-          }
-
-          PracticeManagement: allWordpressPost(
-            filter: { categories: { elemMatch: { wordpress_id: { eq: 4 } } } }
-          ) {
-            totalCount
-            edges {
-              node {
-                slug
-                categories {
-                  name
-                }
-              }
-            }
-          }
-
           allWordpressPost(sort: { fields: [date], order: [DESC] }) {
             edges {
               node {
