@@ -346,7 +346,7 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          ...BlogPost
+          ...blogPost
         }
       }
     }
@@ -356,7 +356,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          ...BlogPost
+          ...blogPost
         }
       }
     }
@@ -366,32 +366,9 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          title
-          date
-          wordpress_id
-          link
+          ...recentEvent
         }
       }
-    }
-  }
-  fragment BlogPost on wordpress__POST {
-    title
-    excerpt
-    slug
-    date(formatString: "MMMM D, YYYY")
-    categories {
-      name
-    }
-    featured_media {
-      source_url
-      localFile {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      id
     }
   }
 `

@@ -39,41 +39,8 @@ exports.createPages = ({ graphql, actions }) => {
           allWordpressPost(sort: { fields: [date], order: [DESC] }) {
             edges {
               node {
-                title
-                content
-                excerpt
                 slug
-                type
-                date(formatString: "MMMM D, YYYY")
-                status
-                featured_media {
-                  media_details {
-                    file
-                    width
-                    height
-                  }
-                  source_url
-                  localFile {
-                    childImageSharp {
-                      fluid {
-                        base64
-                        aspectRatio
-                        src
-                        srcSet
-                        sizes
-                      }
-                    }
-                  }
-                }
-                author {
-                  name
-                }
-                categories {
-                  name
-                }
-                tags {
-                  name
-                }
+                wordpress_id
               }
             }
           }

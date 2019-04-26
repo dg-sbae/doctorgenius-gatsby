@@ -344,30 +344,7 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          title
-          excerpt
-          slug
-          type
-          date(formatString: "MMMM D, YYYY")
-          link
-          featured_media {
-            source_url
-            localFile {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            id
-          }
-          categories {
-            id
-            name
-          }
-          tags {
-            name
-          }
+          ...blogPost
         }
       }
     }
@@ -377,75 +354,20 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          title
-          excerpt
-          slug
-          date(formatString: "MMMM D, YYYY")
-          featured_media {
-            source_url
-            localFile {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            id
-          }
+          ...blogPost
         }
       }
     }
+
     events: allWordpressWpEvents(
       sort: { fields: [date], order: [DESC] }
       limit: 4
     ) {
       edges {
         node {
-          title
-          date
-          wordpress_id
-          link
+          ...recentEvent
         }
       }
     }
   }
 `
-
-{
-  /*
-
-filter: { categories: {elemMatch: {name: {eq: "Events"} }  } }
-
-  events: allWordpressPage(
-    filter: { categories: {elemMatch: {wordpress_id: {eq: 90} }  } }
-  ) {
-    totalCount
-    edges {
-      node {
-
-        title
-        excerpt
-        slug
-        type
-        date(formatString: "MMMM D, YYYY")
-
-        featured_media {
-          source_url
-          localFile {
-            id
-          }
-          id
-        }
-        categories  {
-          id
-          name
-        }
-
-        author {
-          name
-        }
-      }
-    }
-  }
-*/
-}
