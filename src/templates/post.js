@@ -16,12 +16,15 @@ import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
 import { FaArrowRight } from "react-icons/fa"
 
-import "../styles/study-single-post.scss"
+import "../styles/the-study-post.scss"
 import "../styles/global-styles.scss"
 
 function PostPage({ pageContext, data }) {
+  console.log(pageContext)
+  const post = data.currentPost
+
   //Create the two necessary parts of the blog post by splitting at the first paragraph
-  const content = pageContext.content.split(/(<p>.*?<\/p>)/)
+  const content = post.content.split(/(<p>.*?<\/p>)/)
   const intro = content.slice(1, 2).join()
   const remainder = content.slice(2).join("")
 
@@ -29,7 +32,7 @@ function PostPage({ pageContext, data }) {
 
   return (
     <DefaultPageLayout>
-      <div className="study-single-post">
+      <div className="the-study-post">
         <Main>
           <Container>
             <div className="row padded short-bottom">
@@ -53,15 +56,15 @@ function PostPage({ pageContext, data }) {
                 <div class="col-sm-1" />
                 <div class="col-sm-8">
                   <div class="upper-row">
-                    <h1 class="title">{he.decode(pageContext.title)}</h1>
+                    <h1 class="title">{he.decode(post.title)}</h1>
                     <div class="label primary">
                       <p>Practice Management</p>
                     </div>
                   </div>
                   <div class="lower-row">
                     <div class="byline">
-                      <p class="date">{pageContext.date}</p>
-                      <p class="author">{pageContext.author.name}</p>
+                      <p class="date">{post.date}</p>
+                      <p class="author">{post.author.name}</p>
                     </div>
                     <div class="share-icons">
                       <p>Share:</p>
@@ -102,8 +105,7 @@ function PostPage({ pageContext, data }) {
                   <div class="featured-image">
                     <Img
                       fluid={
-                        pageContext.featured_media.localFile.childImageSharp
-                          .fluid
+                        post.featured_media.localFile.childImageSharp.fluid
                       }
                     />
                   </div>
@@ -188,17 +190,17 @@ function PostPage({ pageContext, data }) {
 export default PostPage
 
 export const pageQuery = graphql`
-  query {
+  query($wordpress_id: Int) {
+    currentPost: wordpressPost(wordpress_id: { eq: $wordpress_id }) {
+      ...blogPost
+    }
     events: allWordpressWpEvents(
       sort: { fields: [date], order: [DESC] }
       limit: 4
     ) {
       edges {
         node {
-          title
-          date
-          wordpress_id
-          link
+          ...recentEvent
         }
       }
     }

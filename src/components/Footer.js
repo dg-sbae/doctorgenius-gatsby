@@ -22,7 +22,7 @@ export default ({ children }) => (
             <ListLink to="/our-clients/">Our Clients</ListLink>
             <ListLink to="/plans/">Plans</ListLink>
             <ListLink to="/company/">Company</ListLink>
-            <ListLink to="/study-archive/">Resources</ListLink>
+            <ListLink to="/the-study/">Resources</ListLink>
             <ListLink to="$#">Free Demo</ListLink>
             <ListLink to="/contact/">Contact</ListLink>
           </ul>

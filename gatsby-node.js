@@ -17,51 +17,30 @@ exports.createPages = ({ graphql, actions }) => {
     // it like the site has a built-in database constructed
     // from the fetched data that you can run queries against.
 
-    // ==== PAGES (WORDPRESS NATIVE) ====
-
     // ==== POSTS (WORDPRESS NATIVE AND ACF) ====
 
     graphql(
       `
         {
+          allWordpressCategory(
+            filter: {
+              name: {
+                in: ["Genius Lab", "Practice Management", "Digital Marketing"]
+              }
+            }
+          ) {
+            edges {
+              node {
+                name
+                slug
+              }
+            }
+          }
           allWordpressPost(sort: { fields: [date], order: [DESC] }) {
             edges {
               node {
-                title
-                content
-                excerpt
                 slug
-                type
-                date(formatString: "MMMM D, YYYY")
-                status
-                featured_media {
-                  media_details {
-                    file
-                    width
-                    height
-                  }
-                  source_url
-                  localFile {
-                    childImageSharp {
-                      fluid {
-                        base64
-                        aspectRatio
-                        src
-                        srcSet
-                        sizes
-                      }
-                    }
-                  }
-                }
-                author {
-                  name
-                }
-                categories {
-                  name
-                }
-                tags {
-                  name
-                }
+                wordpress_id
               }
             }
           }
@@ -73,16 +52,29 @@ exports.createPages = ({ graphql, actions }) => {
         reject(result.errors)
       }
       const postTemplate = path.resolve("./src/templates/post.js")
+      const categoryTemplate = path.resolve("./src/templates/categories.js")
+
       // We want to create a detailed page for each
       // post node. We'll just use the WordPress Slug for the slug.
       // The Post ID is prefixed with 'POST_'
       _.each(result.data.allWordpressPost.edges, edge => {
         createPage({
-          path: `/study-archive/${edge.node.slug}/`,
+          path: `/the-study/${edge.node.slug}/`,
           component: slash(postTemplate),
           context: edge.node,
         })
       })
+
+      // Create Category Pages
+
+      _.each(result.data.allWordpressCategory.edges, edge => {
+        createPage({
+          path: `/the-study/${edge.node.slug}/`,
+          component: slash(categoryTemplate),
+          context: edge.node,
+        })
+      })
+
       resolve()
     })
 

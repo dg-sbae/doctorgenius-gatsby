@@ -53,9 +53,9 @@ export default ({ children }) => (
             Company
           </ListLink>
           <ListLink
-            className="dropdown-study-archive"
-            dataToggle="dropdown-study-archive"
-            to="/study-archive/"
+            className="dropdown-the-study"
+            dataToggle="dropdown-the-study"
+            to="/the-study/"
           >
             Resources
           </ListLink>

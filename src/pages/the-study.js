@@ -11,6 +11,8 @@ import marketingCategoryImage from "../img/digital-marketing-category-image-1.7x
 import practiceManagementImage from "../img/practice-management-category-image-1.7x1.png"
 import geniusLabImage from "../img/genius-lab-category-image-1.7x1.png"
 import eventsPlaceholder from "../img/study-archive-events-placeholder-3x2.png"
+import popularPostsPlaceholder from "../img/study-archive-square-thumbnail-placeholder.png"
+import latestPostsPlaceholder from "../img/blog-archive-placeholder-3x2.png"
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
 import instagramIcon from "../img/instagram.svg"
@@ -18,16 +20,30 @@ import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
 import { FaArrowRight } from "react-icons/fa"
 
-import "../styles/study-archive.scss"
+import "../styles/the-study.scss"
 import "../styles/global-styles.scss"
 
 export default function({ data }) {
-  //Isolate the blog route to a single variable:
+  //Isolate the blog and categories routes
+  //This should be located globally, or the categories and archive page combined
   const postsPath = "/the-study/"
+  const categoriesPaths = [
+    {
+      name: "Digital Marketing",
+      slug: "digital-marketing/",
+      image: marketingCategoryImage,
+    },
+    {
+      name: "Practice Management",
+      slug: "practice-management/",
+      image: practiceManagementImage,
+    },
+    { name: "Genius Lab", slug: "genius-lab/", image: geniusLabImage },
+  ]
 
   return (
     <DefaultPageLayout>
-      <div className="study-archive">
+      <div className="the-study">
         <div className="hero">
           {/* Hero will be a layout component */}
           {/* @todo: Heros need a thin grey border underneath, not included in pic */}
@@ -55,81 +71,82 @@ export default function({ data }) {
         <Main>
           <Container>
             <div className="row padded">
-              <div className="col-sm-12">
-                <h3 class="blog-heading mb-2">Featured Posts</h3>
-              </div>
-              <div class="col-sm-4">
-                <a href="$#CategoryPages">
-                  <div class="category-image">
-                    <img src={marketingCategoryImage} alt="Digital Marketing" />
-                    <div class="label primary">
-                      <p>Digital Marketing</p>
+              {categoriesPaths.map(category => (
+                <div class="col-sm-4">
+                  <a href={postsPath + category.slug}>
+                    <div class="category-image">
+                      <img
+                        src={category.image}
+                        alt={category.name}
+                        className="img-responsive"
+                      />
+                      <div class="label primary">
+                        <p>{category.name}</p>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-sm-4">
-                <a href="$#CategoryPages">
-                  <div class="category-image">
-                    <img
-                      src={practiceManagementImage}
-                      alt="Practice Management"
-                    />
-                    <div class="label primary">
-                      <p>Practice Management</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-sm-4">
-                <a href="$#CategoryPages">
-                  <div class="category-image">
-                    <img src={geniusLabImage} alt="Genius Lab" />
-                    <div class="label primary">
-                      <p>Genius Lab</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
+                  </a>
+                </div>
+              ))}
             </div>
             <div class="row padded align-items-start short-top">
               <div class="col-sm-8 latest-posts">
                 <h3 class="blog-heading ">Latest Posts</h3>
                 <div class="spacer small solid" />
-                {console.log(data)}
-                {data.latest.edges.map(({ node }) => (
-                  <div class="latest-post">
-                    <a href={postsPath + node.slug}>
-                      <div class="featured-image-holder">
-                        <Img
-                          fluid={
-                            node.featured_media.localFile.childImageSharp.fluid
-                          }
+
+                {data.latest.edges.map(({ node }) => {
+                  // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
+                  // The deprecated categories on dg.com like "DoctorGenius" were causing an error
+                  const mainCategory = node.categories.find(c =>
+                    categoriesPaths.find(d => d.name === c.name)
+                  )
+                  console.log(mainCategory)
+                  return (
+                    <div class="latest-post">
+                      <a href={postsPath + node.slug}>
+                        <div class="featured-image-holder">
+                          <Img
+                            fluid={
+                              node.featured_media.localFile.childImageSharp
+                                .fluid
+                            }
+                          />
+                        </div>
+                      </a>
+                      <div class="content-holder">
+                        <div class="details">
+                          <p class="date">{node.date}</p>
+                          <p class="label mute">
+                            <a
+                              href={
+                                // This selects the slug from the categories array matching the mainCategory found above
+                                postsPath +
+                                categoriesPaths.find(
+                                  i => i.name === mainCategory.name
+                                ).slug
+                              }
+                            >
+                              {mainCategory.name}
+                            </a>
+                          </p>
+                        </div>
+                        <h4 class="truncate">
+                          <a class="not-a-link" href={postsPath + node.slug}>
+                            {he.decode(node.title)}
+                          </a>
+                        </h4>
+                        <p
+                          class="excerpt"
+                          dangerouslySetInnerHTML={{
+                            __html: node.excerpt.replace(
+                              /https:\/\/doctorgenius.com/,
+                              "http://localhost:8000/"
+                            ),
+                          }}
                         />
                       </div>
-                    </a>
-                    <div class="content-holder">
-                      <div class="details">
-                        <p class="date">{node.date}</p>
-                        <p class="label mute">{node.categories[0].name}</p>
-                      </div>
-                      <h4 class="truncate">
-                        <a class="not-a-link" href={postsPath + node.slug}>
-                          {he.decode(node.title)}
-                        </a>
-                      </h4>
-                      <p
-                        class="excerpt"
-                        dangerouslySetInnerHTML={{
-                          __html: node.excerpt.replace(
-                            /https:\/\/doctorgenius.com/,
-                            "http://localhost:8000/"
-                          ),
-                        }}
-                      />
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
 
                 <div class="pagination">
                   <a href="$#PreviousPostsPage">
@@ -250,21 +267,13 @@ export default function({ data }) {
                     <div class="col-sm-12">
                       <h4 class="blog-heading ">Category</h4>
                       <div class="spacer small solid" />
-                      <a href="$#CategoryPage">
-                        <span class="label primary">
-                          <p>Genius Lab</p>
-                        </span>
-                      </a>
-                      <a href="$#CategoryPage">
-                        <span class="label primary">
-                          <p>Practice Management</p>
-                        </span>
-                      </a>
-                      <a href="$#CategoryPage">
-                        <div class="label primary">
-                          <p>Digital Marketing</p>
-                        </div>
-                      </a>
+                      {categoriesPaths.map(category => (
+                        <a href={postsPath + category.slug}>
+                          <span class="label primary">
+                            <p>{category.name}</p>
+                          </span>
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -344,30 +353,7 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          title
-          excerpt
-          slug
-          type
-          date(formatString: "MMMM D, YYYY")
-          link
-          featured_media {
-            source_url
-            localFile {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            id
-          }
-          categories {
-            id
-            name
-          }
-          tags {
-            name
-          }
+          ...blogPost
         }
       }
     }
@@ -377,21 +363,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          title
-          excerpt
-          slug
-          date(formatString: "MMMM D, YYYY")
-          featured_media {
-            source_url
-            localFile {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            id
-          }
+          ...blogPost
         }
       }
     }
@@ -401,51 +373,21 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          title
-          date
-          wordpress_id
-          link
+          ...recentEvent
+        }
+      }
+    }
+    selectedCategories: allWordpressCategory(
+      filter: {
+        name: { in: ["Genius Lab", "Practice Management", "Digital Marketing"] }
+      }
+    ) {
+      edges {
+        node {
+          name
+          slug
         }
       }
     }
   }
 `
-
-{
-  /*
-
-filter: { categories: {elemMatch: {name: {eq: "Events"} }  } }
-
-  events: allWordpressPage(
-    filter: { categories: {elemMatch: {wordpress_id: {eq: 90} }  } }
-  ) {
-    totalCount
-    edges {
-      node {
-
-        title
-        excerpt
-        slug
-        type
-        date(formatString: "MMMM D, YYYY")
-
-        featured_media {
-          source_url
-          localFile {
-            id
-          }
-          id
-        }
-        categories  {
-          id
-          name
-        }
-
-        author {
-          name
-        }
-      }
-    }
-  }
-*/
-}
