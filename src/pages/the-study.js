@@ -11,6 +11,8 @@ import marketingCategoryImage from "../img/digital-marketing-category-image-1.7x
 import practiceManagementImage from "../img/practice-management-category-image-1.7x1.png"
 import geniusLabImage from "../img/genius-lab-category-image-1.7x1.png"
 import eventsPlaceholder from "../img/study-archive-events-placeholder-3x2.png"
+import popularPostsPlaceholder from "../img/study-archive-square-thumbnail-placeholder.png"
+import latestPostsPlaceholder from "../img/blog-archive-placeholder-3x2.png"
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
 import instagramIcon from "../img/instagram.svg"
@@ -250,21 +252,13 @@ export default function({ data }) {
                     <div class="col-sm-12">
                       <h4 class="blog-heading ">Category</h4>
                       <div class="spacer small solid" />
-                      <a href="$#CategoryPage">
-                        <span class="label primary">
-                          <p>Genius Lab</p>
-                        </span>
-                      </a>
-                      <a href="$#CategoryPage">
-                        <span class="label primary">
-                          <p>Practice Management</p>
-                        </span>
-                      </a>
-                      <a href="$#CategoryPage">
-                        <div class="label primary">
-                          <p>Digital Marketing</p>
-                        </div>
-                      </a>
+                      {data.selectedCategories.edges.map(({ node }) => (
+                        <a href={node.slug}>
+                          <span class="label primary">
+                            <p>{node.name}</p>
+                          </span>
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -358,7 +352,6 @@ export const pageQuery = graphql`
         }
       }
     }
-
     events: allWordpressWpEvents(
       sort: { fields: [date], order: [DESC] }
       limit: 4
@@ -366,6 +359,18 @@ export const pageQuery = graphql`
       edges {
         node {
           ...recentEvent
+        }
+      }
+    }
+    selectedCategories: allWordpressCategory(
+      filter: {
+        name: { in: ["Genius Lab", "Practice Management", "Digital Marketing"] }
+      }
+    ) {
+      edges {
+        node {
+          name
+          slug
         }
       }
     }
