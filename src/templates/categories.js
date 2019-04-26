@@ -22,7 +22,8 @@ import "../styles/the-study.scss"
 import "../styles/global-styles.scss"
 
 const CategoriesPage = ({ data }) => {
-  //Isolate the blog route to a single variable:
+  //Isolate the blog and categories routes
+  //This should be located globally, or the categories and archive page combined
   const postsPath = "/the-study/"
   const categoriesPaths = [
     {
@@ -68,14 +69,15 @@ const CategoriesPage = ({ data }) => {
         <Main>
           <Container>
             <div className="row padded">
-              <div className="col-sm-12">
-                <h3 class="blog-heading mb-2">Featured Posts</h3>
-              </div>
               {categoriesPaths.map(category => (
                 <div class="col-sm-4">
                   <a href={postsPath + category.slug}>
                     <div class="category-image">
-                      <img src={category.image} alt={category.name} />
+                      <img
+                        src={category.image}
+                        alt={category.name}
+                        className="img-responsive"
+                      />
                       <div class="label primary">
                         <p>{category.name}</p>
                       </div>
@@ -88,7 +90,6 @@ const CategoriesPage = ({ data }) => {
               <div class="col-sm-8 latest-posts">
                 <h3 class="blog-heading ">Latest Posts</h3>
                 <div class="spacer small solid" />
-                {console.log(data)}
                 {data.category.edges.map(({ node }) => {
                   // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
                   // The deprecated categories on dg.com like "DoctorGenius" were causing an error
