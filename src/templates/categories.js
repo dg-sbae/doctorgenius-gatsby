@@ -348,6 +348,7 @@ export const pageQuery = graphql`
   query($name: String) {
     category: allWordpressPost(
       filter: { categories: { elemMatch: { name: { eq: $name } } } }
+      limit: 5
     ) {
       totalCount
       edges {
