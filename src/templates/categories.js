@@ -21,7 +21,7 @@ import { FaArrowRight } from "react-icons/fa"
 import "../styles/the-study.scss"
 import "../styles/global-styles.scss"
 
-const CategoriesPage = ({ data }) => {
+const CategoriesPage = ({ data, pageContext }) => {
   //Isolate the blog and categories routes
   //This should be located globally, or the categories and archive page combined
   const postsPath = "/the-study/"
@@ -88,7 +88,7 @@ const CategoriesPage = ({ data }) => {
             </div>
             <div class="row padded align-items-start short-top">
               <div class="col-sm-8 latest-posts">
-                <h3 class="blog-heading ">Latest Posts</h3>
+                <h3 class="blog-heading ">{pageContext.name} Posts</h3>
                 <div class="spacer small solid" />
                 {data.category.edges.map(({ node }) => {
                   // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
