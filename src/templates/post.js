@@ -20,7 +20,6 @@ import "../styles/the-study-post.scss"
 import "../styles/global-styles.scss"
 
 function PostPage({ pageContext, data }) {
-  console.log(pageContext)
   const post = data.currentPost
 
   //Create the two necessary parts of the blog post by splitting at the first paragraph
