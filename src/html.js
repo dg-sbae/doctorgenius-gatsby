@@ -13,6 +13,12 @@ export default function HTML(props) {
         />
         {props.headComponents}
         <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossOrigin="anonymous"
+          // src="../node_modules/jquery/dist/jquery.min.js"
+        />
+        <script
           dangerouslySetInnerHTML={{
             __html: `
 
@@ -31,7 +37,28 @@ export default function HTML(props) {
                   document.querySelector("nav.navbar").classList.remove("main-navbar-stuck");
                   document.querySelector("nav.navbar").classList.remove("stuck-midway");
                 }
-              })
+              });
+              function toggleDropdown (e) {
+                const _d = $(e.target).closest('.dropdown'),
+                  _m = $('.dropdown-menu', _d);
+                setTimeout(function(){
+                  const shouldOpen = e.type !== 'click' && _d.is(':hover');
+                  _m.toggleClass('show', shouldOpen);
+                  _d.toggleClass('show', shouldOpen);
+                  $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+                }, e.type === 'mouseleave' ? 100 : 0);
+              }
+              
+              $('body')
+                .on('mouseenter mouseleave','.dropdown',toggleDropdown)
+                .on('click', '.dropdown-menu a', toggleDropdown);
+              
+              setTimeout(function(){
+                $('.dropdown-heading').click(function(event) {
+                  console.log("will this work");
+                  event.stopPropagation();
+                });
+              }, 3000);
             })
 
           `,

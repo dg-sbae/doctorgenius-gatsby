@@ -81,3 +81,12 @@ exports.createPages = ({ graphql, actions }) => {
     // ==== END POSTS ====
   })
 }
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  const { setWebpackConfig } = actions
+  setWebpackConfig({
+    externals: {
+      jquery: "jQuery",
+    },
+  })
+}

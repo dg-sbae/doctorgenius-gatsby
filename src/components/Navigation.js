@@ -35,7 +35,7 @@ const ListLink = props => (
 const OurClientsListLink = props => (
   <li className={props.dataToggle}>
     <Link
-      className=""
+      className="dropdown-heading"
       to={props.to}
       activeClassName="active"
       partiallyActive={true}
@@ -128,7 +128,7 @@ const OurClientsListLink = props => (
 const MarketingSolutionsListLink = props => (
   <li className={props.dataToggle}>
     <Link
-      className=""
+      className="dropdown-heading"
       to={props.to}
       activeClassName="active"
       partiallyActive={true}
@@ -227,7 +227,7 @@ const MarketingSolutionsListLink = props => (
 const StudySingleListLink = props => (
   <li className={props.dataToggle}>
     <Link
-      className=""
+      className="dropdown-heading"
       to={props.to}
       activeClassName="active"
       partiallyActive={true}
