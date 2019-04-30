@@ -253,6 +253,13 @@ nav ul > li > a {
 nav {
   font-family: $font-family-body-text;
 
+  .dropdown-menu {
+    color: $primary-text;
+    a {
+      color: inherit;
+    }
+  }
+
   .main-links {
     li {
       font-size: $font-size-nav-main-links;

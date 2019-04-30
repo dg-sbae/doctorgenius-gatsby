@@ -69,6 +69,11 @@ header {
           }
         }
       }
+
+      .dropdown-menu {
+        left: 0;
+        transform: translateX(-50%);
+      }
     }
 
     .container,
