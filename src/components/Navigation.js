@@ -22,7 +22,7 @@ export default ({ children }) => (
     <Container>
       <div class="logo">
         <Link to="#">
-          <img className="navbar-brand" src={logo} alt="Our Logo" />
+          <div class="navbar-brand logo-holder" />
         </Link>
       </div>
 

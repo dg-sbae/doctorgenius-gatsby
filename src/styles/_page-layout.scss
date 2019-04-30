@@ -20,9 +20,13 @@ header {
   }
   .logo a {
     display: block;
-    img {
+    .logo-holder {
+      background-image: url(/png/logo-white.png);
       height: 40px;
       max-height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      vertical-align: middle;
     }
   }
   nav {
@@ -36,6 +40,9 @@ header {
 
     &.navbar {
       &.main-navbar-stuck {
+        .logo-holder {
+          background-image: url(/png/logo-blue.png);
+        }
         // border-bottom: $grid-border 1px solid;
         box-shadow: 0 1px 1px $grid-border;
         // transition: all 1s;
@@ -93,6 +100,7 @@ header {
         justify-content: space-around;
         margin-bottom: 0;
         width: 100%;
+        padding-left: 0;
 
         &.navbar-nav {
           display: flex;

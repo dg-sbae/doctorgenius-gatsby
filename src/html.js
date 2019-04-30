@@ -15,7 +15,7 @@ export default function HTML(props) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-          
+
             document.addEventListener("DOMContentLoaded", function() {
               document.addEventListener("scroll", function(e) {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -23,23 +23,17 @@ export default function HTML(props) {
                   document.querySelector("nav.navbar").classList.add("main-navbar-stuck");
                   document.querySelector("nav.navbar").classList.add("stuck-midway");
                   document.querySelector("nav.navbar").classList.remove("stuck-fully");
-                  document.querySelector("nav.navbar .navbar-brand").src = "icon/logo-blue.svg";
-                  document.querySelector("nav.navbar .phone").src = "icon/phone-blue.svg";
                 } else if (winScroll >= 200) {
                   document.querySelector("nav.navbar").classList.add("main-navbar-stuck");
                   document.querySelector("nav.navbar").classList.add("stuck-fully");
                   document.querySelector("nav.navbar").classList.remove("stuck-midway");
-                  document.querySelector("nav.navbar .navbar-brand").src = "icon/logo-blue.svg";
-                  document.querySelector("nav.navbar .phone").src = "icon/phone-blue.svg";
                 } else {
                   document.querySelector("nav.navbar").classList.remove("main-navbar-stuck");
                   document.querySelector("nav.navbar").classList.remove("stuck-midway");
-                  document.querySelector("nav.navbar .navbar-brand").src = "icon/logo-white.svg";
-                  document.querySelector("nav.navbar .phone").src = "icon/phone-white.svg";
                 }
               })
             })
-          
+
           `,
           }}
         />

@@ -33,6 +33,26 @@
           }
         }
       }
+      .demo-cta {
+        margin-top: 45px;
+        margin-left: 55px;
+
+        a {
+          text-transform: uppercase;
+          background: #003e6e;
+          height: 45px;
+          width: 177px;
+          padding: 8px;
+          border-radius: 3px;
+          margin-left: 10px;
+          margin-right: 5px;
+          font-weight: 600;
+          letter-spacing: 0.25px;
+          &:hover {
+            color: lightblue;
+          }
+        }
+      }
     }
 
     .accent-block {

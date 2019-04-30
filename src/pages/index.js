@@ -15,6 +15,7 @@ import medal from "../img/medal.png"
 import money from "../img/money.png"
 import stars from "../img/stars.png"
 import groupChat from "../img/group-chat.png"
+import thinArrowRight from "../img/right-arrow.svg"
 import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
 // import fullBleedBackgroundSlanted from "../img/full-bleed-bg-slanted.png"
 import newPatientAcquisitions from "../img/home-new-patient-acquisitions.png"
@@ -51,6 +52,11 @@ export default ({ data }, props) => (
                       your practice.
                     </p>
                   </div>
+                </div>
+                <div class="demo-cta">
+                  <a href="/" className="button flat white-text">
+                    Request Demo <img src={thinArrowRight} />
+                  </a>
                 </div>
               </div>
             </div>
