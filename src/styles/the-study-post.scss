@@ -1,0 +1,70 @@
+@import "_site-variables.scss";
+.the-study-post {
+  .pagination {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-transform: uppercase;
+      color: #2e6097;
+    }
+    img {
+      margin-bottom: 3px;
+    }
+  }
+  .blog-header {
+    .upper-row,
+    .lower-row,
+    .share-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .share-icons,
+    .label {
+      width: 175px;
+    }
+    .label {
+      font-size: 12px;
+    }
+    .title {
+      max-width: calc(100% - 175px + 15px);
+      font-size: 36px;
+      font-weight: $font-weight-semibold;
+      color: #5a5a5a;
+      margin-bottom: 5px;
+      letter-spacing: -2px;
+    }
+    .date,
+    .byline {
+      color: #b9b9b9;
+      font-size: 16px;
+      line-height: 1.1;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .blog-content p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+  .featured-image img {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    transform: translateX(
+      -12.5%
+    ); /* I dont think this will pass muster with real images */
+  }
+  .events-section img {
+    max-width: 100%;
+  }
+  .grey-background {
+    background: #f4f4f4;
+    height: 535px;
+  }
+}

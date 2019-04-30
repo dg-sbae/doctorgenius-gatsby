@@ -1,0 +1,59 @@
+/* Background Colors - Anything with the solid background. Color rules only */
+.accent-block .accentedParagraph p:before {
+  background-color: $secondary;
+}
+
+.accentedParagraph p:before,
+.accented-paragraph p:before {
+  background-color: $primary;
+}
+.accent-block {
+  background: linear-gradient(
+    to right,
+    rgba(#10a5bc, 0.95) 0%,
+    rgba(#0074cf, 0.95) 100%
+  );
+}
+
+.homepage {
+  .accent-block {
+    background-color: transparent;
+  }
+}
+
+.main-content {
+  background: url(/png/pixel-map.png) no-repeat,
+    url(/png/pixel-map.png) bottom no-repeat;
+  &:before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.full-bleed {
+  .full-bleed-image {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.button {
+  background-color: $primary;
+}
+
+.label {
+  &.mute {
+    background: #f2f2f2;
+    color: $primary;
+  }
+  &.primary {
+    background: $primary;
+    color: white;
+  }
+}

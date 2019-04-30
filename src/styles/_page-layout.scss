@@ -1,0 +1,224 @@
+/* Page Layout - Positioning elements and general page structure*/
+body {
+  overflow-y: auto; /* Allows 100vw to not include scrollbars */
+  overflow-x: hidden;
+  width: 100vw;
+}
+.container,
+.container-fluid {
+  @include media(">=desktop") {
+    max-width: 1248px;
+  }
+}
+header {
+  position: fixed;
+  height: 120px;
+  z-index: 9999;
+  &,
+  & .container-fluid {
+    width: 100%;
+  }
+  .logo a {
+    display: block;
+    img {
+      height: 40px;
+      max-height: 100%;
+    }
+  }
+  nav {
+    height: 120px;
+    display: flex;
+    transition: all 0.3s;
+
+    a {
+      transition: all 0.3s;
+    }
+
+    &.navbar {
+      &.main-navbar-stuck {
+        // border-bottom: $grid-border 1px solid;
+        box-shadow: 0 1px 1px $grid-border;
+        // transition: all 1s;
+        background-color: #fff;
+        // height: 80px;
+
+        &.stuck-midway {
+          height: 100px;
+        }
+
+        &.stuck-fully {
+          height: 80px;
+        }
+
+        .active {
+          color: $primary;
+        }
+        a {
+          color: $demo-body-text;
+        }
+        .contact-links {
+          a {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .container,
+    .container-fluid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .main-links {
+        flex-basis: 45%;
+
+        &.navbar-collapse {
+          flex-grow: 0;
+        }
+      }
+      .contact-links {
+        flex-basis: 25%;
+        img.phone {
+          /* this should probably be yet another flexbox */
+          transform: scale(1.25);
+          vertical-align: text-bottom;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 0;
+        width: 100%;
+
+        &.navbar-nav {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-bottom: 0;
+          padding-left: 40px;
+        }
+        li {
+          list-style-type: none;
+          font-weight: $font-weight-normal;
+
+          // Need to change this styling
+          .active {
+            color: $primary-text;
+            font-weight: $font-weight-medium;
+          }
+        }
+      }
+    }
+  }
+
+  &.scrolled {
+    height: 80px;
+  }
+}
+footer {
+  .footer-row {
+    .logo {
+      @include media("width<desktop") {
+        margin-bottom: 70px;
+      }
+    }
+    .footer-subrow {
+      justify-content: space-between;
+    }
+    /* justify-items: center; */
+  }
+}
+/* Secondary Header is the large icon navigation which affixes to the top of the main header on scroll */
+.secondary-nav {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &.scrolled {
+    height: 115px;
+  }
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+  &:after {
+    width: 100%;
+    border-bottom: 1px solid $mute;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.main-content {
+  position: relative;
+}
+.hero {
+  height: 555px;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 55% 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.full-bleed-wrapper {
+  position: relative;
+  .full-bleed-content-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .full-bleed {
+    width: 100vw;
+    margin-left: 50%;
+    &:not(.flipped) {
+      transform: translateX(-50%);
+    }
+    &.flipped {
+      transform: translateX(-50%) scaleX(-1);
+      filter: FlipH;
+    }
+  }
+}
+
+.row {
+  justify-content: center;
+  align-items: center;
+  &.padded {
+    padding-top: 60px;
+    &.short-top {
+      padding-top: 30px;
+    }
+    &.tall-top {
+      padding-top: 90px;
+    }
+
+    padding-bottom: 30px;
+    &.short-bottom {
+      padding-bottom: 15px;
+    }
+    &.tall-bottom {
+      padding-bottom: 60px;
+    }
+  }
+}
+.inner-title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.callout-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.col-xl-6 {
+  img {
+    width: 100%;
+  }
+}

@@ -1,8 +1,3 @@
 import React from "react"
 
-export default ({ children }) => (
-    <div>
-        <p>this is the header</p>
-        {children}
-    </div>
-)
+export default ({ children }) => <header>{children}</header>

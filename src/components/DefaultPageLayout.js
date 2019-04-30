@@ -7,13 +7,13 @@ import Navigation from "../components/Navigation"
 import "./default-page-layout.css"
 
 export default ({ children }) => (
-  <div>
+  <div className="content-wrapper">
     <Header>
-        <Navigation></Navigation>
+      <Navigation />
     </Header>
 
     {children}
-    
-    <Footer></Footer>
+
+    <Footer />
   </div>
 )
