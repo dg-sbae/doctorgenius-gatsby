@@ -21,7 +21,7 @@ export default ({ children }) => (
   <nav className="navbar navbar-expand-md fixed-top">
     <Container>
       <div class="logo">
-        <Link>
+        <Link to="#">
           <img className="navbar-brand" src={logo} alt="Our Logo" />
         </Link>
       </div>
