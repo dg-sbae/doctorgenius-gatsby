@@ -51,61 +51,73 @@ export default props => (
               <div className="secondary-nav">
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={responsiveWebsitesIcon}
-                      alt="Responsive Websites"
-                    />
+                    <a href="/marketing-solutions/websites/">
+                      <img
+                        className="img-icon"
+                        src={responsiveWebsitesIcon}
+                        alt="Responsive Websites"
+                      />
+                    </a>
                   </div>
                   <p>Responsive Websites</p>
                 </div>
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={contentMarketingIcon}
-                      alt="Content Marketing"
-                    />
+                    <a href="/marketing-solutions/content-marketing/">
+                      <img
+                        className="img-icon"
+                        src={contentMarketingIcon}
+                        alt="Content Marketing"
+                      />
+                    </a>
                   </div>
                   <p>Content Marketing</p>
                 </div>
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={digitalAdvertisingIcon}
-                      alt="Digital Advertising"
-                    />
+                    <a href="/marketing-solutions/digital-advertising/">
+                      <img
+                        className="img-icon"
+                        src={digitalAdvertisingIcon}
+                        alt="Digital Advertising"
+                      />
+                    </a>
                   </div>
                   <p>Digital Advertising</p>
                 </div>
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={onlineReputationIcon}
-                      alt="Online Reputation"
-                    />
+                    <a href="/marketing-solutions/online-reputation-management/">
+                      <img
+                        className="img-icon"
+                        src={onlineReputationIcon}
+                        alt="Online Reputation"
+                      />
+                    </a>
                   </div>
                   <p>Online Reputation</p>
                 </div>
                 <div class="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={ourTechnologyIcon}
-                      alt="Our Technology"
-                    />
+                    <a href="/marketing-solutions/our-technology/">
+                      <img
+                        className="img-icon"
+                        src={ourTechnologyIcon}
+                        alt="Our Technology"
+                      />
+                    </a>
                   </div>
                   <p>Our Technology</p>
                 </div>
                 <div class="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={hostingSolutionsIcon}
-                      alt="Hosting Solutions"
-                    />
+                    <a href="/marketing-solutions/hosting-solutions/">
+                      <img
+                        className="img-icon"
+                        src={hostingSolutionsIcon}
+                        alt="Hosting Solutions"
+                      />
+                    </a>
                   </div>
                   <p>Hosting Solutions</p>
                 </div>
