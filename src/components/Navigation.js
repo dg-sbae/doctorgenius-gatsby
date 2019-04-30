@@ -6,7 +6,7 @@ import logo from "../img/logo-white.svg"
 import phone from "../img/phone-white.svg"
 
 import "../styles/global-styles.scss"
-import "../scripts/navigationFunctionality.js"
+// import "../scripts/navigationFunctionality.js"
 
 const ListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
