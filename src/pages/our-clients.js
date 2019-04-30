@@ -4,7 +4,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import "../styles/our-clients-page.scss"
+import "../styles/our-clients.scss"
 import "../styles/global-styles.scss"
 
 export default props => (
@@ -15,8 +15,8 @@ export default props => (
         {/* @todo: Heros need a thin grey border underneath, not included in pic */}
         <Container>
           <div className="valign-wrapper row">
-            <div className="col-sm-5">
-              <div className="accent-block">
+            <div className="col-sm-12">
+              <div class="hero-content accent-block">
                 <h1>Dentistry Practices</h1>
                 <h2>Engage and Convert More Patients to Your Practice</h2>
                 <div className="accented-paragraph">
@@ -29,7 +29,6 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-7" />
           </div>
         </Container>
       </div>

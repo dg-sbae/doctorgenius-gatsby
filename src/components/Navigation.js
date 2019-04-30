@@ -43,7 +43,7 @@ export default ({ children }) => (
             dataToggle="dropdown-our-clients"
             to="/our-clients/"
           >
-            Our Clients
+            Who We Serve
           </ListLink>
 
           <ListLink className="" to="/plans/">

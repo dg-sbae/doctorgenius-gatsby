@@ -20,8 +20,8 @@ export default props => (
         {/* @todo: Heros need a thin grey border underneath, not included in pic */}
         <Container>
           <div className="valign-wrapper row">
-            <div className="col-sm-5">
-              <div className="accent-block">
+            <div className="col-sm-12">
+              <div class="hero-content accent-block">
                 <h1>Our Plans</h1>
                 <h2>
                   Solution To Your
@@ -36,7 +36,6 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-7" />
           </div>
         </Container>
       </div>

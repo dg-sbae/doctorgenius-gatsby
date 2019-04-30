@@ -3,6 +3,15 @@
 .the-study {
   .hero {
     background-image: url("/hero/the-study.png");
+    .hero-content {
+      width: 465px;
+      height: 270px;
+      h2 {
+        font-size: 90px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
+    }
   }
   .blog-heading {
     color: $blog-page-headings-color;

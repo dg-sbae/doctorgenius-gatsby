@@ -49,12 +49,12 @@ export default function({ data }) {
           {/* @todo: Heros need a thin grey border underneath, not included in pic */}
           <Container>
             <div className="valign-wrapper row">
-              <div className="col-sm-5">
-                <div className="accent-block">
+              <div className="col-sm-12">
+                <div class="hero-content accent-block">
                   <h1>Resources</h1>
                   <h2>
                     The&nbsp;
-                    <span class="font-weight-semibold">Study</span>
+                    <span>Study</span>
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -64,7 +64,6 @@ export default function({ data }) {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-7" />
             </div>
           </Container>
         </div>

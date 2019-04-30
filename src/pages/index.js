@@ -28,31 +28,32 @@ export default ({ data }, props) => (
         {/* Hero will be a layout component */}
         <Container>
           <div className="row">
-            <div className="col-sm-7">
-              <div class="accent-block">
-                <div class="border-horizontal border-top-left" />
-                <div class="border-horizontal border-top-right" />
-                <div class="border-horizontal border-bottom-left" />
-                <div class="border-horizontal border-bottom-right" />
-                <div class="border-vertical border-left-top" />
-                <div class="border-vertical border-right-top" />
-                <div class="border-vertical border-left-bottom" />
-                <div class="border-vertical border-right-bottom" />
-                <h1>
-                  <span class="font-weight-light">The Leader in</span> New
-                  Patient Acquisition
-                </h1>
-                <div className="accented-paragraph">
-                  <p>
-                    Doctor Genius offers high-end web marketing services to
-                    health professionals throughout the United States. Learn how
-                    we funnel traffic to converted patient directly to your
-                    practice.
-                  </p>
+            <div className="col-sm-12">
+              <div class="hero-content">
+                <div class="accent-block">
+                  <div class="border-horizontal border-top-left" />
+                  <div class="border-horizontal border-top-right" />
+                  <div class="border-horizontal border-bottom-left" />
+                  <div class="border-horizontal border-bottom-right" />
+                  <div class="border-vertical border-left-top" />
+                  <div class="border-vertical border-right-top" />
+                  <div class="border-vertical border-left-bottom" />
+                  <div class="border-vertical border-right-bottom" />
+                  <h1>
+                    <span class="font-weight-light">The Leader in</span> New
+                    Patient Acquisition
+                  </h1>
+                  <div className="accented-paragraph">
+                    <p>
+                      Doctor Genius offers high-end web marketing services to
+                      health professionals throughout the United States. Learn
+                      how we funnel traffic to converted patient directly to
+                      your practice.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-sm-5" />
           </div>
         </Container>
       </div>

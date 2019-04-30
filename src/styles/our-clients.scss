@@ -4,6 +4,18 @@
 .case-study {
   .hero {
     background-image: url("/hero/our-clients.png");
+    height: 690px;
+    .hero-content {
+      margin-top: 50px;
+      width: 630px;
+      height: 330px;
+      h1 {
+        padding: 2px 12px;
+      }
+      h2 {
+        margin-top: 10px;
+      }
+    }
   }
   .inner-title {
     .subtitle {

@@ -5,7 +5,6 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 
 import "../styles/global-styles.scss"
-import "../styles/our-clients-page.scss"
 import "../styles/case-study.scss"
 
 import { FaArrowRight } from "react-icons/fa"
@@ -21,22 +20,23 @@ export default props => (
         {/* @todo: Heros need a thin grey border underneath, not included in pic */}
         <Container>
           <div className="valign-wrapper row">
-            <div className="col-sm-5">
-              <div className="accent-block">
-                <h1>Resources</h1>
-                <h2>
-                  The&nbsp;
-                  <span class="font-weight-semibold">Case Study </span>
-                </h2>
-                <div className="accented-paragraph">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas commodo eu metus ut convallis.
-                  </p>
+            <div className="col-sm-12">
+              <div class="hero-content">
+                <div className="hero-content accent-block">
+                  <h1>Resources</h1>
+                  <h2>
+                    The&nbsp;
+                    <span class="font-weight-semibold">Case Study </span>
+                  </h2>
+                  <div className="accented-paragraph">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas commodo eu metus ut convallis.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-sm-7" />
           </div>
         </Container>
       </div>

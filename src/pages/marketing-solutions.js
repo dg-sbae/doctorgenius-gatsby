@@ -26,20 +26,20 @@ export default props => (
         {/* @todo: Heros need a thin grey border underneath, not included in pic */}
         <Container>
           <div className="valign-wrapper row">
-            <div className="col-sm-5">
-              <div className="accent-block">
-                <h1>Responsive Websites</h1>
-                <h2>Design that leaves a lasting impression.</h2>
+            <div className="col-sm-12">
+              <div class="hero-content accent-block">
+                <h1>Marketing Solutions</h1>
+                <h2>
+                  Predictable <span>Practice Growth Solution</span>
+                </h2>
                 <div className="accented-paragraph">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas a placerat nunc, et venenatis felis. Lorem ipsum
-                    dolor sit amet, con.
+                    Proven and innovative solutions to move your business
+                    forward.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-sm-7" />
           </div>
         </Container>
       </div>
