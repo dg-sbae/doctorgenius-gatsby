@@ -4,6 +4,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
+import thinArrowRight from "../img/right-arrow.svg"
 import contentMarketingIcon from "../img/contract.svg"
 import responsiveWebsitesIcon from "../img/website.svg"
 import digitalAdvertisingIcon from "../img/digital-advertising.svg"
@@ -12,8 +13,6 @@ import ourTechnologyIcon from "../img/our-technology.svg"
 import hostingSolutionsIcon from "../img/hosting-solutions.svg"
 import lighthouseResultsOnMarketingPage from "../img/lighthouse-results-on-marketing-page.png"
 import portalDashboard from "../img/portal-dashboard.png"
-
-import { FaArrowRight } from "react-icons/fa"
 
 import "../styles/marketing-solutions.scss"
 import "../styles/global-styles.scss"
@@ -248,7 +247,7 @@ export default props => (
             <div class="col-sm-5">
               <div class="center">
                 <a href="/" className="button flat white-text">
-                  Request Demo <FaArrowRight />
+                  Request Demo <img src={thinArrowRight} />
                 </a>
               </div>
             </div>

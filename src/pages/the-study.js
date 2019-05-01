@@ -18,7 +18,7 @@ import facebookIcon from "../img/facebook.svg"
 import instagramIcon from "../img/instagram.svg"
 import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
-import { FaArrowRight } from "react-icons/fa"
+import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
 import "../styles/global-styles.scss"
@@ -330,7 +330,7 @@ export default function({ data }) {
               <div class="col-sm-5">
                 <div class="center">
                   <a href="/" className="button flat white-text">
-                    Request Demo <FaArrowRight />
+                    Request Demo <img src={thinArrowRight} />
                   </a>
                 </div>
               </div>

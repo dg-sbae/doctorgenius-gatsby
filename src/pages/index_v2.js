@@ -9,8 +9,6 @@ import Container from "../components/Container"
 import "../styles/global-styles.scss"
 import "../styles/homepage.scss"
 
-import { FaArrowRight } from "react-icons/fa"
-
 import medal from "../img/medal.png"
 import money from "../img/money.png"
 import stars from "../img/stars.png"
@@ -256,7 +254,7 @@ export default ({ data }, props) => (
             <div class="col-sm-5">
               <div class="center">
                 <a href="/" className="button flat white-text">
-                  Request Demo <FaArrowRight />
+                  Request Demo <img src={thinArrowRight} />
                 </a>
               </div>
             </div>

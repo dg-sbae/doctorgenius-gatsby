@@ -256,7 +256,7 @@ export default ({ data }, props) => (
             <div class="col-sm-5">
               <div class="center">
                 <a href="/" className="button flat white-text">
-                  Request Demo <FaArrowRight />
+                  Request Demo <img src={thinArrowRight} />
                 </a>
               </div>
             </div>
