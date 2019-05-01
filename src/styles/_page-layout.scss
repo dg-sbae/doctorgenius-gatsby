@@ -184,6 +184,16 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  &:after {
+    display: block;
+    content: "";
+    background: #e7ecf1;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
   .hero-content {
     h2 {
       margin-top: 20px;
