@@ -128,7 +128,7 @@ export default function({ data }) {
                             </a>
                           </p>
                         </div>
-                        <h4 class="truncate">
+                        <h4>
                           <a class="not-a-link" href={postsPath + node.slug}>
                             {he.decode(node.title)}
                           </a>
