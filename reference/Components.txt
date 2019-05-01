@@ -100,10 +100,10 @@ callout                                     div.callout
     paragraph block/set of callout text
     link w icon
 
-    <div class="callout">
-        <h2 class="inner-title">
-        <p class="heading">
-        <p class="blue-test">New Patient Inquiries</p> p:first {} p + p {}
+    <div className="callout">
+        <h2 className="inner-title">
+        <p className="heading">
+        <p className="blue-test">New Patient Inquiries</p> p:first {} p + p {}
         <p>12 Months Duration</p>
 
 link w icon

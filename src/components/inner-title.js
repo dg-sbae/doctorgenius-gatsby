@@ -2,8 +2,8 @@ import React from "react"
 import innerTitleStyles from "./inner-title.module.css"
 
 /*
-<div class="inner-title underlined">
-    <h3 class="subheading">Testimonials</h3>
+<div className="inner-title underlined">
+    <h3 className="subheading">Testimonials</h3>
     <h2 >What <span>Clients Are Saying</span></h2>
 </div>
 */

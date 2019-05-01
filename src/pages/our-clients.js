@@ -16,7 +16,7 @@ export default props => (
         <Container>
           <div className="valign-wrapper row">
             <div className="col-sm-12">
-              <div class="hero-content accent-block">
+              <div className="hero-content accent-block">
                 <h1>Dentistry Practices</h1>
                 <h2>Engage and Convert More Patients to Your Practice</h2>
                 <div className="accented-paragraph">
@@ -86,7 +86,7 @@ export default props => (
                   </div>
                   <p>Cosmetic Surgeons</p>
                 </div>
-                <div class="panel">
+                <div className="panel">
                   <div className="icon-wrapper">
                     <a href="/our-clients/healthcare-marketing/">
                       <img
@@ -106,7 +106,7 @@ export default props => (
             <div className="col-sm-9 offset-sm-1">
               <div className="content-block">
                 <div className="inner-title center">
-                  <h3 class="strapline">Marketing Performance</h3>
+                  <h3 className="strapline">Marketing Performance</h3>
                   <h2 className="underline">
                     <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better
                     <b> Visibility Online</b>
@@ -157,12 +157,12 @@ export default props => (
           </div>
           <div className="spacer solid trim" />
           <div className="row padded short-top">
-            <div class="col-sm-7 case-study-container">
-              <div class="inner-title center">
+            <div className="col-sm-7 case-study-container">
+              <div className="inner-title center">
                 <h3 className="m-0">Case Study: Titan Dental</h3>
                 <div className="subtitle muted">The first 6 months</div>
               </div>
-              <div class="case-study-table">
+              <div className="case-study-table">
                 <div className="case-study-item">
                   <p className="callout">1,125%</p>
                   <p>Increase in Google First-Page Revenue</p>
@@ -189,17 +189,17 @@ export default props => (
                 </div>
               </div>
               <div className="center pad-md">
-                <a href="$#" className="link-with-icon">
+                <a href="/case-study/" className="link-with-icon">
                   <img
                     src="/icon/right-arrow-blue.svg"
-                    class="link-icon"
+                    className="link-icon"
                     alt="Icon of a Right Arrow"
                   />
                   View Case Study
                 </a>
               </div>
             </div>
-            <div class="col-sm-5">
+            <div className="col-sm-5">
               <img
                 className="img-responsive blur-bleed"
                 src="/png/search-result.png"
@@ -223,10 +223,10 @@ export default props => (
                         Nunc dui turpis, sodales ut mollis quis, ullamcorper a
                         metus
                       </p>
-                      <a href="$#" className="link-with-icon">
+                      <a href="/plans/" className="link-with-icon">
                         <img
                           src="/icon/right-arrow-blue.svg"
-                          class="link-icon"
+                          className="link-icon"
                           alt="Icon of a Right Arrow"
                         />
                         See Our Plans
@@ -243,7 +243,7 @@ export default props => (
             <div className="col-sm-12">
               <div className="inner-title center">
                 <h3 className="strapline">Testimonials</h3>
-                <h2 class="underline">
+                <h2 className="underline">
                   What <b>Clients Are Saying</b>
                 </h2>
               </div>
@@ -251,7 +251,7 @@ export default props => (
 
             <div className="full-bleed">
               <div className="card-slider">
-                <div class="card">
+                <div className="card">
                   <i className="fa fa-quote">"</i>
                   <div className="card-content-wrapper">
                     <p className="card-copy">
@@ -289,10 +289,10 @@ export default props => (
                       solutions to medical & health practices within the United
                       States.
                     </p>
-                    <a href="$#" className="link-with-icon">
+                    <a href="/contact/" className="link-with-icon">
                       <img
                         src="/icon/right-arrow-blue.svg"
-                        class="link-icon"
+                        className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
                       Contact Us

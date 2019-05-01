@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Container from "../components/Container"
 
-import logo from "../img/logo-white.svg"
+//import logo from "../img/logo-white.svg"
 import phone from "../img/phone-white.svg"
 
 import "../styles/global-styles.scss"
@@ -20,9 +20,9 @@ const ListLink = props => (
 export default ({ children }) => (
   <nav className="navbar navbar-expand-md fixed-top">
     <Container>
-      <div class="logo">
-        <Link to="#">
-          <div class="navbar-brand logo-holder" />
+      <div className="logo">
+        <Link to="/">
+          <div className="navbar-brand logo-holder" />
         </Link>
       </div>
 
@@ -61,16 +61,14 @@ export default ({ children }) => (
           </ListLink>
         </ul>
       </div>
-      <div class="contact-links">
+      <div className="contact-links">
         <ul>
-          <ListLink to="$#">
-            <img src={phone} alt="Phone" class="phone" />
+          <ListLink to="/">
+            <img src={phone} alt="Phone" className="phone" />
             877.477.2311
           </ListLink>
-          <ListLink>
-            <a href="/contact/" className="button flat transparent">
-              Free Demo
-            </a>
+          <ListLink to="/contact" className="button flat transparent">
+            Free Demo
           </ListLink>
         </ul>
       </div>
