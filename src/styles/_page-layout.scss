@@ -39,6 +39,7 @@ header {
     }
 
     &.navbar {
+      position: relative;
       &.main-navbar-stuck {
         .logo-holder {
           background-image: url(/png/logo-blue.png);
@@ -70,9 +71,32 @@ header {
         }
       }
 
+      ul {
+        &.navbar-nav {
+          // position: relative;
+        }
+      }
+
+      .dropdown {
+        display: inline-block;
+        position: static;
+      }
+
       .dropdown-menu {
-        left: 0;
-        transform: translateX(-50%);
+        left: 30%;
+        right: 30%;
+        top: 100px;
+        // position: absolute;
+        // transform: translateX(-50%);
+        // margin-right: auto;
+        // margin-left: auto;
+
+        .dropdown-row {
+          // display: block;
+          .col-sm-6 {
+            // display: inline-block;
+          }
+        }
       }
     }
 
