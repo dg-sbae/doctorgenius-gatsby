@@ -10,7 +10,7 @@ import digitalAdvertisingIcon from "../img/digital-advertising.svg"
 import onlineReputationIcon from "../img/online-reputation.svg"
 import ourTechnologyIcon from "../img/our-technology.svg"
 import hostingSolutionsIcon from "../img/hosting-solutions.svg"
-import lighthouseResult from "../img/lighthouse-result.png"
+import lighthouseResultsOnMarketingPage from "../img/lighthouse-results-on-marketing-page.png"
 import portalDashboard from "../img/portal-dashboard.png"
 
 import { FaArrowRight } from "react-icons/fa"
@@ -126,9 +126,8 @@ export default props => (
           </div>
           {/* End secondary nav Component */}
           {/* Begin Split Row of content and image */}
-          <div class="row padded short-top short-bottom">
-            <div className="col-sm-1" />
-            <div class="col-sm-5">
+          <div class="row padded short-top short-bottom odd-row proven-results-row">
+            <div class="col-sm-6">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>Proven and tested results in every step of the way</h2>
@@ -152,15 +151,15 @@ export default props => (
             </div>
             <div class="col-sm-6">
               <img
-                className="img-responsive blur-bleed"
-                src={lighthouseResult}
+                className="img-responsive blur-bleed lighthouse-image"
+                src={lighthouseResultsOnMarketingPage}
                 alt="Ligthhouse Page Speed Score"
               />
             </div>
           </div>
           {/* End Split Row of content and image */}
           {/* Begin Split Row of image and content */}
-          <div class="row padded short-top tall-bottom">
+          <div class="row padded short-top tall-bottom even-row dashboard-row">
             <div class="col-sm-6">
               <img
                 className="img-responsive blur-bleed"
@@ -168,7 +167,7 @@ export default props => (
                 alt="Our Client Dashboard"
               />
             </div>
-            <div class="col-sm-5">
+            <div class="col-sm-6">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>All the tools you'll need to be in control. </h2>
@@ -190,7 +189,6 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-1" />
           </div>
           {/* End Split Row of image and content */}
           {/* Begin Full bleed content row (reversed) */}

@@ -17,4 +17,37 @@
     background: url("/png/our-clients-fullbleed-image.png") no-repeat;
     background-position: 40%;
   }
+  .lighthouse-image {
+    width: 110%;
+    max-width: 110%;
+  }
+  .proven-results-row {
+    .col-sm-6:first-of-type {
+      .content-block {
+        height: 285px;
+        width: 430px;
+        margin-left: 125px;
+        margin-right: 75px;
+      }
+    }
+    .col-sm-6:last-of-type {
+      img {
+        transform: translateX(-15%);
+      }
+    }
+  }
+  .dashboard-row {
+    .col-sm-6:first-of-type {
+      img {
+        max-width: 115%;
+      }
+    }
+    .col-sm-6:last-of-type {
+      .content-block {
+        width: 355px;
+        height: 260px;
+        margin-left: 120px;
+      }
+    }
+  }
 }
