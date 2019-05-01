@@ -1,8 +1,20 @@
 @import "_site-variables.scss";
 .plans {
   .hero {
+    height: 690px;
     background-image: url("/hero/plans.png");
     background-position: center 18%;
+    .hero-content {
+      width: 625px;
+      height: 344px;
+      padding: 2.8rem
+        /* paadding on plans page hero slightly wider, has less content */ h1 {
+        padding: 2px 12px;
+      }
+      p {
+        width: 75%;
+      }
+    }
   }
   .plans-table.no-bg {
     background: transparent;

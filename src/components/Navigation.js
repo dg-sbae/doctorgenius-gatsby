@@ -6,7 +6,7 @@ import logo from "../img/logo-white.svg"
 import phone from "../img/phone-white.svg"
 
 import "../styles/global-styles.scss"
-import "../scripts/navigationFunctionality.js"
+// import "../scripts/navigationFunctionality.js"
 
 const ListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
@@ -21,8 +21,8 @@ export default ({ children }) => (
   <nav className="navbar navbar-expand-md fixed-top">
     <Container>
       <div class="logo">
-        <Link>
-          <img className="navbar-brand" src={logo} alt="Our Logo" />
+        <Link to="#">
+          <div class="navbar-brand logo-holder" />
         </Link>
       </div>
 
@@ -43,7 +43,7 @@ export default ({ children }) => (
             dataToggle="dropdown-our-clients"
             to="/our-clients/"
           >
-            Our Clients
+            Who We Serve
           </ListLink>
 
           <ListLink className="" to="/plans/">

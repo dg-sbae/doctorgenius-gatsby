@@ -15,20 +15,23 @@ export default props => (
         {/* @todo: Heros need a thin grey border underneath, not included in pic */}
         <Container>
           <div className="valign-wrapper row">
-            <div className="col-sm-5">
-              <div className="accent-block">
-                <h1>Company</h1>
-                <h2>What We Are About</h2>
-                <div className="accented-paragraph">
-                  <p>
-                    Doctor Genius establishes and boosts your brand online using
-                    innovative digital marketing and search engine optimization
-                    strategies.
-                  </p>
+            <div className="col-sm-12">
+              <div class="hero-content">
+                <div className="hero-content accent-block">
+                  <h1>Company</h1>
+                  <h2>
+                    What <span>we are about</span>
+                  </h2>
+                  <div className="accented-paragraph">
+                    <p>
+                      Doctor Genius establishes and boosts your brand online
+                      using innovative digital marketing and search engine
+                      optimization strategies.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-sm-7" />
           </div>
         </Container>
       </div>

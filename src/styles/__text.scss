@@ -160,7 +160,13 @@ nav ul > li > a {
     h2 {
       font-size: $h2-font-size;
       line-height: 0.9;
-      font-weight: $font-weight-thin;
+      font-weight: 300;
+      span {
+        font-weight: 500;
+      }
+    }
+    p {
+      font-family: "Agenda";
     }
   }
 }
@@ -259,6 +265,11 @@ nav {
   }
 }
 
+.secondary-nav {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #787878;
+}
 .truncate {
   /* Defined space must also have a width defined */
   display: block;

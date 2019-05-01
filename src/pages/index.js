@@ -15,6 +15,7 @@ import medal from "../img/medal.png"
 import money from "../img/money.png"
 import stars from "../img/stars.png"
 import groupChat from "../img/group-chat.png"
+import thinArrowRight from "../img/right-arrow.svg"
 import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
 // import fullBleedBackgroundSlanted from "../img/full-bleed-bg-slanted.png"
 import newPatientAcquisitions from "../img/home-new-patient-acquisitions.png"
@@ -28,31 +29,37 @@ export default ({ data }, props) => (
         {/* Hero will be a layout component */}
         <Container>
           <div className="row">
-            <div className="col-sm-7">
-              <div class="accent-block">
-                <div class="border-horizontal border-top-left" />
-                <div class="border-horizontal border-top-right" />
-                <div class="border-horizontal border-bottom-left" />
-                <div class="border-horizontal border-bottom-right" />
-                <div class="border-vertical border-left-top" />
-                <div class="border-vertical border-right-top" />
-                <div class="border-vertical border-left-bottom" />
-                <div class="border-vertical border-right-bottom" />
-                <h1>
-                  <span class="font-weight-light">The Leader in</span> New
-                  Patient Acquisition
-                </h1>
-                <div className="accented-paragraph">
-                  <p>
-                    Doctor Genius offers high-end web marketing services to
-                    health professionals throughout the United States. Learn how
-                    we funnel traffic to converted patient directly to your
-                    practice.
-                  </p>
+            <div className="col-sm-12">
+              <div class="hero-content">
+                <div class="accent-block">
+                  <div class="border-horizontal border-top-left" />
+                  <div class="border-horizontal border-top-right" />
+                  <div class="border-horizontal border-bottom-left" />
+                  <div class="border-horizontal border-bottom-right" />
+                  <div class="border-vertical border-left-top" />
+                  <div class="border-vertical border-right-top" />
+                  <div class="border-vertical border-left-bottom" />
+                  <div class="border-vertical border-right-bottom" />
+                  <h1>
+                    <span class="font-weight-light">The Leader in</span> New
+                    Patient Acquisition
+                  </h1>
+                  <div className="accented-paragraph">
+                    <p>
+                      Doctor Genius offers high-end web marketing services to
+                      health professionals throughout the United States. Learn
+                      how we funnel traffic to converted patient directly to
+                      your practice.
+                    </p>
+                  </div>
+                </div>
+                <div class="demo-cta">
+                  <a href="/" className="button flat white-text">
+                    Request Demo <img src={thinArrowRight} />
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="col-sm-5" />
           </div>
         </Container>
       </div>

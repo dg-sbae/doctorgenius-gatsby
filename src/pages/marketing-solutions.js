@@ -10,7 +10,7 @@ import digitalAdvertisingIcon from "../img/digital-advertising.svg"
 import onlineReputationIcon from "../img/online-reputation.svg"
 import ourTechnologyIcon from "../img/our-technology.svg"
 import hostingSolutionsIcon from "../img/hosting-solutions.svg"
-import lighthouseResult from "../img/lighthouse-result.png"
+import lighthouseResultsOnMarketingPage from "../img/lighthouse-results-on-marketing-page.png"
 import portalDashboard from "../img/portal-dashboard.png"
 
 import { FaArrowRight } from "react-icons/fa"
@@ -26,20 +26,20 @@ export default props => (
         {/* @todo: Heros need a thin grey border underneath, not included in pic */}
         <Container>
           <div className="valign-wrapper row">
-            <div className="col-sm-5">
-              <div className="accent-block">
-                <h1>Responsive Websites</h1>
-                <h2>Design that leaves a lasting impression.</h2>
+            <div className="col-sm-12">
+              <div class="hero-content accent-block">
+                <h1>Marketing Solutions</h1>
+                <h2>
+                  Predictable <span>Practice Growth Solution</span>
+                </h2>
                 <div className="accented-paragraph">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas a placerat nunc, et venenatis felis. Lorem ipsum
-                    dolor sit amet, con.
+                    Proven and innovative solutions to move your business
+                    forward.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-sm-7" />
           </div>
         </Container>
       </div>
@@ -51,61 +51,73 @@ export default props => (
               <div className="secondary-nav">
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={responsiveWebsitesIcon}
-                      alt="Responsive Websites"
-                    />
+                    <a href="/marketing-solutions/websites/">
+                      <img
+                        className="img-icon"
+                        src={responsiveWebsitesIcon}
+                        alt="Responsive Websites"
+                      />
+                    </a>
                   </div>
                   <p>Responsive Websites</p>
                 </div>
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={contentMarketingIcon}
-                      alt="Content Marketing"
-                    />
+                    <a href="/marketing-solutions/content-marketing/">
+                      <img
+                        className="img-icon"
+                        src={contentMarketingIcon}
+                        alt="Content Marketing"
+                      />
+                    </a>
                   </div>
                   <p>Content Marketing</p>
                 </div>
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={digitalAdvertisingIcon}
-                      alt="Digital Advertising"
-                    />
+                    <a href="/marketing-solutions/digital-advertising/">
+                      <img
+                        className="img-icon"
+                        src={digitalAdvertisingIcon}
+                        alt="Digital Advertising"
+                      />
+                    </a>
                   </div>
                   <p>Digital Advertising</p>
                 </div>
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={onlineReputationIcon}
-                      alt="Online Reputation"
-                    />
+                    <a href="/marketing-solutions/online-reputation-management/">
+                      <img
+                        className="img-icon"
+                        src={onlineReputationIcon}
+                        alt="Online Reputation"
+                      />
+                    </a>
                   </div>
                   <p>Online Reputation</p>
                 </div>
                 <div class="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={ourTechnologyIcon}
-                      alt="Our Technology"
-                    />
+                    <a href="/marketing-solutions/our-technology/">
+                      <img
+                        className="img-icon"
+                        src={ourTechnologyIcon}
+                        alt="Our Technology"
+                      />
+                    </a>
                   </div>
                   <p>Our Technology</p>
                 </div>
                 <div class="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={hostingSolutionsIcon}
-                      alt="Hosting Solutions"
-                    />
+                    <a href="/marketing-solutions/hosting-solutions/">
+                      <img
+                        className="img-icon"
+                        src={hostingSolutionsIcon}
+                        alt="Hosting Solutions"
+                      />
+                    </a>
                   </div>
                   <p>Hosting Solutions</p>
                 </div>
@@ -114,9 +126,8 @@ export default props => (
           </div>
           {/* End secondary nav Component */}
           {/* Begin Split Row of content and image */}
-          <div class="row padded short-top short-bottom">
-            <div className="col-sm-1" />
-            <div class="col-sm-5">
+          <div class="row padded short-top short-bottom odd-row proven-results-row">
+            <div class="col-sm-6">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>Proven and tested results in every step of the way</h2>
@@ -140,15 +151,15 @@ export default props => (
             </div>
             <div class="col-sm-6">
               <img
-                className="img-responsive blur-bleed"
-                src={lighthouseResult}
+                className="img-responsive blur-bleed lighthouse-image"
+                src={lighthouseResultsOnMarketingPage}
                 alt="Ligthhouse Page Speed Score"
               />
             </div>
           </div>
           {/* End Split Row of content and image */}
           {/* Begin Split Row of image and content */}
-          <div class="row padded short-top tall-bottom">
+          <div class="row padded short-top tall-bottom even-row dashboard-row">
             <div class="col-sm-6">
               <img
                 className="img-responsive blur-bleed"
@@ -156,7 +167,7 @@ export default props => (
                 alt="Our Client Dashboard"
               />
             </div>
-            <div class="col-sm-5">
+            <div class="col-sm-6">
               <div class="content-block">
                 <div class="inner-title">
                   <h2>All the tools you'll need to be in control. </h2>
@@ -178,7 +189,6 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-1" />
           </div>
           {/* End Split Row of image and content */}
           {/* Begin Full bleed content row (reversed) */}

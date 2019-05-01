@@ -1,0 +1,35 @@
+@import "_site-variables.scss";
+
+.marketing-solutions-inner {
+  .hero {
+    height: 685px;
+    background-image: url("/hero/marketing-solutions-subpage.jpg");
+    .hero-content {
+      width: 492px;
+      height: 330px;
+      p {
+        width: 90%;
+      }
+    }
+  }
+
+  .icon-strapline {
+    img {
+    }
+    p {
+      font-family: "Roboto";
+      font-size: 14px;
+      color: $primary;
+      display: inline;
+    }
+    & + .inner-title {
+      h2 {
+        margin-bottom: 10px;
+        font-size: 40px;
+      }
+      & + .accented-paragraph p {
+        color: #797979;
+      }
+    }
+  }
+}

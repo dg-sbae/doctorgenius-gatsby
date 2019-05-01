@@ -4,7 +4,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import "../styles/our-clients-page.scss"
+import "../styles/our-clients.scss"
 import "../styles/global-styles.scss"
 
 export default props => (
@@ -15,8 +15,8 @@ export default props => (
         {/* @todo: Heros need a thin grey border underneath, not included in pic */}
         <Container>
           <div className="valign-wrapper row">
-            <div className="col-sm-5">
-              <div className="accent-block">
+            <div className="col-sm-12">
+              <div class="hero-content accent-block">
                 <h1>Dentistry Practices</h1>
                 <h2>Engage and Convert More Patients to Your Practice</h2>
                 <div className="accented-paragraph">
@@ -29,7 +29,6 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-7" />
           </div>
         </Container>
       </div>
@@ -39,53 +38,63 @@ export default props => (
           <div className="row">
             <div className="col-sm-12 panel-row">
               <div className="secondary-nav">
-                <div className="panel">
+                <div className="panel active">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src="/icon/tooth-shine-nav.svg"
-                      alt="Tooth"
-                    />
+                    <a href="/our-clients/dental-practices/">
+                      <img
+                        className="img-icon"
+                        src="/icon/tooth-shine-nav.svg"
+                        alt="Tooth"
+                      />
+                    </a>
                   </div>
                   <p>Dental Practices</p>
                 </div>
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src="/icon/urgent-care-nav.svg"
-                      alt="First Aid"
-                    />
+                    <a href="/our-clients/urgent-care-clinics/">
+                      <img
+                        className="img-icon"
+                        src="/icon/urgent-care-nav.svg"
+                        alt="First Aid"
+                      />
+                    </a>
                   </div>
                   <p>Urgent Care Clinics</p>
                 </div>
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src="/icon/chiropractor-nav.svg"
-                      alt="Spine"
-                    />
+                    <a href="/our-clients/chiropractor-practices/">
+                      <img
+                        className="img-icon"
+                        src="/icon/chiropractor-nav.svg"
+                        alt="Spine"
+                      />
+                    </a>
                   </div>
                   <p>Chiropractor Practices</p>
                 </div>
                 <div className="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src="/icon/surgeon-nav.svg"
-                      alt="Surgeon"
-                    />
+                    <a href="/our-clients/cosmetic-surgeons/">
+                      <img
+                        className="img-icon"
+                        src="/icon/surgeon-nav.svg"
+                        alt="Surgeon"
+                      />
+                    </a>
                   </div>
                   <p>Cosmetic Surgeons</p>
                 </div>
                 <div class="panel">
                   <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src="/icon/sphygmomanometer-nav.svg"
-                      alt="Sphygomomanometer"
-                    />
+                    <a href="/our-clients/healthcare-marketing/">
+                      <img
+                        className="img-icon"
+                        src="/icon/sphygmomanometer-nav.svg"
+                        alt="Sphygomomanometer"
+                      />
+                    </a>
                   </div>
                   <p>Healthcare Marketing</p>
                 </div>
