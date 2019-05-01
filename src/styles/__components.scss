@@ -304,3 +304,26 @@ footer {
     margin-right: 18px;
   }
 }
+
+/*
+* Some images from the deisgn have a blurred shadow/background
+* which makes the actual width larger than the dimensions appear.
+* This lets them bleed slightly out of their column space to
+* accomodate. 125% is a just a rough guess
+*/
+.img-responsive.blur-bleed {
+  width: 115%;
+  transform: translateX(-6%);
+}
+.odd-row {
+  .img-responsive.blur-bleed {
+    //transform: translateX(-12.5%);
+    transform: translateX(-6%);
+  }
+}
+.even-row {
+  .img-responsive.blur-bleed {
+    transform: translateX(6%);
+    //transform: translateX(0);
+  }
+}

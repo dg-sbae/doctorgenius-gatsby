@@ -51,14 +51,3 @@
   margin: auto;
   display: block;
 }
-/*
-* Some images from the deisgn have a blurred shadow/background
-* which makes the actual width larger than the dimensions appear.
-* This lets them bleed slightly out of their column space to
-* accomodate. 125% is a just a rough guess
-*/
-
-.img-responsive.blur-bleed {
-  max-width: 125%;
-  transform: translateX(-12.5%);
-}
