@@ -38,7 +38,7 @@ export default props => (
           <div className="row">
             <div className="col-sm-12 panel-row">
               <div className="secondary-nav">
-                <div className="panel">
+                <div className="panel active">
                   <div className="icon-wrapper">
                     <a href="/our-clients/dental-practices/">
                       <img

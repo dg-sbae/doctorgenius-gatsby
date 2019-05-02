@@ -14,7 +14,7 @@ import instagramIcon from "../img/instagram.svg"
 import youtubeIcon from "../img/youtube.svg"
 import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
-import { FaArrowRight } from "react-icons/fa"
+import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study-post.scss"
 import "../styles/global-styles.scss"
@@ -174,7 +174,7 @@ function PostPage({ pageContext, data }) {
               <div class="col-sm-5">
                 <div class="center">
                   <a href="/" className="button flat white-text">
-                    Request Demo <FaArrowRight />
+                    Request Demo <img src={thinArrowRight} />
                   </a>
                 </div>
               </div>

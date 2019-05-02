@@ -7,7 +7,7 @@ import Container from "../components/Container"
 import tableHeader from "../img/plans-table-header-image.svg"
 import checkmark from "../img/checked.svg"
 import downChevron from "../img/down-chevron.svg"
-import { FaArrowRight } from "react-icons/fa"
+import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/plans.scss"
 import "../styles/global-styles.scss"
@@ -770,7 +770,7 @@ export default props => (
             <div class="col-sm-5">
               <div class="center">
                 <a href="/" className="button flat white-text">
-                  Request Demo <FaArrowRight />
+                  Request Demo <img src={thinArrowRight} />
                 </a>
               </div>
             </div>

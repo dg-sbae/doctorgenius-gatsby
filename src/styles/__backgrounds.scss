@@ -9,8 +9,8 @@
 }
 .accent-block {
   background: linear-gradient(
-    to right,
-    rgba(#10a5bc, 0.95) 0%,
+    45deg,
+    rgba(#0b97c1, 0.95) 0%,
     rgba(#0074cf, 0.95) 100%
   );
 }
@@ -31,7 +31,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.85);
   }
 }
 

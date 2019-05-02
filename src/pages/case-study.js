@@ -7,7 +7,7 @@ import Container from "../components/Container"
 import "../styles/global-styles.scss"
 import "../styles/case-study.scss"
 
-import { FaArrowRight } from "react-icons/fa"
+import thinArrowRight from "../img/right-arrow.svg"
 import theSolutionsImage from "../img/the-solutions-tablet-and-search.png"
 import theChallengeImage from "../img/the-challenge-placeholder.png"
 import ramiTahhanImage from "../img/rami-tahhan.png"
@@ -283,7 +283,7 @@ export default props => (
             <div class="col-sm-5">
               <div class="center">
                 <a href="/" className="button flat white-text">
-                  Request Demo <FaArrowRight />
+                  Request Demo <img src={thinArrowRight} />
                 </a>
               </div>
             </div>
