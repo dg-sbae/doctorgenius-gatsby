@@ -1,6 +1,8 @@
 import React from "react"
+import { Component } from "react"
 import { Link } from "gatsby"
 import Container from "../components/Container"
+import $ from "jquery"
 
 //import logo from "../img/logo-white.svg"
 import phone from "../img/phone-white.svg"
@@ -386,63 +388,76 @@ const StudySingleListLink = props => (
   </li>
 )
 
-export default ({ children }) => (
-  <nav className="navbar navbar-expand-md fixed-top">
-    <Container>
-      <div className="logo">
-        <Link to="/">
-          <div className="navbar-brand logo-holder" />
-        </Link>
-      </div>
+class Navigation extends Component {
+  componentDidMount() {
+    $(document).ready(function() {
+      console.log("document ready")
+      $(".dropdown-heading").click(function(event) {
+        console.log("dropdown heading ready")
+        event.stopPropagation()
+      })
+    })
+  }
+  render() {
+    return (
+      <nav className="navbar navbar-expand-md fixed-top">
+        <Container>
+          <div className="logo">
+            <Link to="/">
+              <div className="navbar-brand logo-holder" />
+            </Link>
+          </div>
 
-      <div
-        className="main-links collapse navbar-collapse"
-        id="navbarSupportedContent"
-      >
-        <ul className="navbar-nav">
-          <MarketingSolutionsListLink
-            className="nav-item dropdown marketing-solutions-dropdown"
-            dataToggle="dropdown"
-            to="/marketing-solutions/"
+          <div
+            className="main-links collapse navbar-collapse"
+            id="navbarSupportedContent"
           >
-            Marketing Solutions
-          </MarketingSolutionsListLink>
-          <OurClientsListLink
-            className="nav-item dropdown who-we-serve-dropdown"
-            dataToggle="dropdown"
-            to="/our-clients/"
-          >
-            Who We Serve
-          </OurClientsListLink>
+            <ul className="navbar-nav">
+              <MarketingSolutionsListLink
+                className="nav-item dropdown marketing-solutions-dropdown"
+                dataToggle="dropdown"
+                to="/marketing-solutions/"
+              >
+                Marketing Solutions
+              </MarketingSolutionsListLink>
+              <OurClientsListLink
+                className="nav-item dropdown who-we-serve-dropdown"
+                dataToggle="dropdown"
+                to="/our-clients/"
+              >
+                Who We Serve
+              </OurClientsListLink>
 
-          <ListLink className="" to="/plans/">
-            Plans
-          </ListLink>
-          <ListLink className="" to="/company/">
-            Company
-          </ListLink>
-          <StudySingleListLink
-            className="nav-item dropdown resources-dropdown"
-            dataToggle="dropdown"
-            to="/the-study/"
-          >
-            Resources
-          </StudySingleListLink>
-        </ul>
-      </div>
-      <div className="contact-links">
-        <ul>
-          <ListLink to="/">
-            <img src={phone} alt="Phone" className="phone" />
-            877.477.2311
-          </ListLink>
-          <ListLink to="/contact" className="button flat transparent">
-            Free Demo
-          </ListLink>
-        </ul>
-      </div>
+              <ListLink className="" to="/plans/">
+                Plans
+              </ListLink>
+              <ListLink className="" to="/company/">
+                Company
+              </ListLink>
+              <StudySingleListLink
+                className="nav-item dropdown resources-dropdown"
+                dataToggle="dropdown"
+                to="/the-study/"
+              >
+                Resources
+              </StudySingleListLink>
+            </ul>
+          </div>
+          <div className="contact-links">
+            <ul>
+              <ListLink to="/">
+                <img src={phone} alt="Phone" className="phone" />
+                877.477.2311
+              </ListLink>
+              <ListLink to="/contact" className="button flat transparent">
+                Free Demo
+              </ListLink>
+            </ul>
+          </div>
+        </Container>
+      </nav>
+    )
+  }
+}
 
-      {children}
-    </Container>
-  </nav>
-)
+export default Navigation

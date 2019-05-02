@@ -38,6 +38,9 @@ export default function HTML(props) {
                   document.querySelector("nav.navbar").classList.remove("stuck-midway");
                 }
               });
+            })
+
+            $( document ).ready(function() {
               function toggleDropdown (e) {
                 const _d = $(e.target).closest('.dropdown'),
                   _m = $('.dropdown-menu', _d);
@@ -52,14 +55,7 @@ export default function HTML(props) {
               $('body')
                 .on('mouseenter mouseleave','.dropdown',toggleDropdown)
                 .on('click', '.dropdown-menu a', toggleDropdown);
-              
-              setTimeout(function(){
-                $('.dropdown-heading').click(function(event) {
-                  console.log("will this work");
-                  event.stopPropagation();
-                });
-              }, 3000);
-            })
+            });
 
           `,
           }}
