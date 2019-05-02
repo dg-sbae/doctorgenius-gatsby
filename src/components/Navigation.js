@@ -167,7 +167,7 @@ const MarketingSolutionsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="marketing-solutions/websites">
                   Responsive Websites
                 </Link>
                 <p>
@@ -183,7 +183,10 @@ const MarketingSolutionsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link
+                  className=""
+                  to="marketing-solutions/online-reputation-management"
+                >
                   Online Reputation
                 </Link>
                 <p>
@@ -201,7 +204,7 @@ const MarketingSolutionsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="marketing-solutions/content-marketing">
                   Content Marketing
                 </Link>
                 <p>
@@ -217,7 +220,7 @@ const MarketingSolutionsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="marketing-solutions/our-technology">
                   Our Technology
                 </Link>
                 <p>
@@ -236,7 +239,7 @@ const MarketingSolutionsListLink = props => (
               </div>
 
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="marketing-solutions/digital-advertising">
                   Digital Advertising
                 </Link>
                 <p>
@@ -253,7 +256,7 @@ const MarketingSolutionsListLink = props => (
               </div>
 
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="marketing-solutions/hosting-solutions">
                   Hosting Solutions
                 </Link>
                 <p>
