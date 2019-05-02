@@ -1,0 +1,95 @@
+.testimonialsSlider {
+}
+
+.cardSlider {
+  .card,
+  .card .portrait {
+    height: 315px; /* This image probably needs to be a background image */
+  }
+  .card {
+    width: 700px;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+    /* card layout: */
+    .quoteWrapper,
+    .cardContentWrapper,
+    .portraitWrapper {
+      position: absolute;
+    }
+    .quoteWrapper {
+      width: 13.188%; /* 91/691 */
+    }
+    .cardContentWrapper {
+      width: 59%; /* 387 / 691 + Bumping this up a bit */
+      left: 13.188%;
+      z-index: 1;
+    }
+    .portraitWrapper {
+      width: 37.047%; /* 256/691 */
+      right: 0;
+      z-index: 0;
+    }
+    .cardContentWrapper,
+    .quoteWrapper {
+      padding-top: 37px;
+      /*
+        Mike's design: 37px of padding-top in the testimonials card of 314px height, so you'd expect the padding-top value to be 37 / 314 = 11.783%
+        but it's not; using 11.783% gives 132.781px padding-top
+        so what is this relative to? 11.783% * x = 132.781px; x = 1127px, which is the parent container's width;
+      */
+    }
+  }
+}
+.portraitWrapper {
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.9) 20%,
+      rgba(255, 255, 255, 0.6) 40%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+.quoteMark {
+  max-width: 44%; /* 40/91 */
+  margin: auto;
+  display: block;
+}
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copy {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #989898;
+  margin-bottom: 30px;
+}
+.author {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0074cf;
+  margin-bottom: 0;
+}
+.location {
+  font-size: 1.125rem;
+  color: #888888;
+  font-weight: 300;
+  margin-bottom: 0;
+  line-height: 1;
+}

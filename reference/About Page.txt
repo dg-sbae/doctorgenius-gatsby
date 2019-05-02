@@ -1,14 +1,14 @@
 Company (About)
 <h2>What <span>Clients Are Saying</span></h2>
 
-<div class="inner-title">
-    <h3 class="subheading">Testimonials</h3>
-    <h2 class="underlined">What <span>Clients Are Saying</span></h2>
+<div className="inner-title">
+    <h3 className="subheading">Testimonials</h3>
+    <h2 className="underlined">What <span>Clients Are Saying</span></h2>
 </div>
 
 
-<div class="inner-title"> 4rem/4,2rem
-    <h3 class="subheading">Performance...</h3>
+<div className="inner-title"> 4rem/4,2rem
+    <h3 className="subheading">Performance...</h3>
     <h2>We Care...</h2>
 </div>
 

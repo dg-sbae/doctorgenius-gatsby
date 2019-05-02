@@ -52,7 +52,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                   <h1>Resources</h1>
                   <h2>
                     The&nbsp;
-                    <span class="font-weight-semibold">Study</span>
+                    <span className="font-weight-semibold">Study</span>
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -70,15 +70,15 @@ const CategoriesPage = ({ data, pageContext }) => {
           <Container>
             <div className="row padded">
               {categoriesPaths.map(category => (
-                <div class="col-sm-4">
+                <div className="col-sm-4">
                   <a href={postsPath + category.slug}>
-                    <div class="category-image">
+                    <div className="category-image">
                       <img
                         src={category.image}
                         alt={category.name}
                         className="img-responsive"
                       />
-                      <div class="label primary">
+                      <div className="label primary">
                         <p>{category.name}</p>
                       </div>
                     </div>
@@ -86,10 +86,10 @@ const CategoriesPage = ({ data, pageContext }) => {
                 </div>
               ))}
             </div>
-            <div class="row padded align-items-start short-top">
-              <div class="col-sm-8 latest-posts">
-                <h3 class="blog-heading ">{pageContext.name} Posts</h3>
-                <div class="spacer small solid" />
+            <div className="row padded align-items-start short-top">
+              <div className="col-sm-8 latest-posts">
+                <h3 className="blog-heading ">{pageContext.name} Posts</h3>
+                <div className="spacer small solid" />
                 {data.category.edges.map(({ node }) => {
                   // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
                   // The deprecated categories on dg.com like "DoctorGenius" were causing an error
@@ -98,9 +98,9 @@ const CategoriesPage = ({ data, pageContext }) => {
                   )
                   console.log(mainCategory)
                   return (
-                    <div class="latest-post">
+                    <div className="latest-post">
                       <a href={postsPath + node.slug}>
-                        <div class="featured-image-holder">
+                        <div className="featured-image-holder">
                           <Img
                             fluid={
                               node.featured_media.localFile.childImageSharp
@@ -109,10 +109,10 @@ const CategoriesPage = ({ data, pageContext }) => {
                           />
                         </div>
                       </a>
-                      <div class="content-holder">
-                        <div class="details">
-                          <p class="date">{node.date}</p>
-                          <p class="label mute">
+                      <div className="content-holder">
+                        <div className="details">
+                          <p className="date">{node.date}</p>
+                          <p className="label mute">
                             <a
                               href={
                                 // This selects the slug from the categories array matching the mainCategory found above
@@ -126,13 +126,16 @@ const CategoriesPage = ({ data, pageContext }) => {
                             </a>
                           </p>
                         </div>
-                        <h4 class="truncate">
-                          <a class="not-a-link" href={postsPath + node.slug}>
+                        <h4 className="truncate">
+                          <a
+                            className="not-a-link"
+                            href={postsPath + node.slug}
+                          >
                             {he.decode(node.title)}
                           </a>
                         </h4>
                         <p
-                          class="excerpt"
+                          className="excerpt"
                           dangerouslySetInnerHTML={{
                             __html: node.excerpt.replace(
                               /https:\/\/doctorgenius.com/,
@@ -145,100 +148,103 @@ const CategoriesPage = ({ data, pageContext }) => {
                   )
                 })}
 
-                <div class="pagination">
-                  <a href="$#PreviousPostsPage">
+                <div className="pagination">
+                  <a href="/intentional-404/PreviousPostsPage">
                     <img src={leftChevron} alt="Navigate to Previous" />
                   </a>
-                  <a href="$#Page1">
-                    <p class="active">1</p>
+                  <a href="/intentional-404/">
+                    <p className="active">1</p>
                   </a>
-                  <a href="$#Page2">
+                  <a href="/intentional-404/">
                     <p>2</p>
                   </a>
-                  <a href="$#Page3">
+                  <a href="/intentional-404/">
                     <p>3</p>
                   </a>
-                  <a href="$#Page4">
+                  <a href="/intentional-404/">
                     <p>4</p>
                   </a>
-                  <a href="$#Page5">
+                  <a href="/intentional-404/">
                     <p>5</p>
                   </a>
-                  <a href="$#NextPostsPage">
+                  <a href="/intentional-404/">
                     <img src={rightChevron} alt="Navigate to Next" />
                   </a>
                 </div>
               </div>
-              <div class="col-sm-4 sidebar">
-                <div class="stay-connected">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h3 class="blog-heading ">Stay Connected</h3>
-                      <div class="spacer small solid" />
+              <div className="col-sm-4 sidebar">
+                <div className="stay-connected">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <h3 className="blog-heading ">Stay Connected</h3>
+                      <div className="spacer small solid" />
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="social-icons-wrapper">
-                        <div class="social-icon-detail">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <div className="social-icons-wrapper">
+                        <div className="social-icon-detail">
                           <img
                             src={facebookIcon}
-                            class="social-icon"
+                            className="social-icon"
                             alt="Facebook"
                           />
                           <p>25k</p>
-                          <p class="social-unit">Likes</p>
+                          <p className="social-unit">Likes</p>
                         </div>
-                        <div class="social-icon-detail">
+                        <div className="social-icon-detail">
                           <img
                             src={twitterIcon}
-                            class="social-icon"
+                            className="social-icon"
                             alt="Twitter"
                           />
                           <p>231k</p>
-                          <p class="social-unit">Followers</p>
+                          <p className="social-unit">Followers</p>
                         </div>
-                        <div class="social-icon-detail">
+                        <div className="social-icon-detail">
                           <img
                             src={instagramIcon}
-                            class="social-icon"
+                            className="social-icon"
                             alt="Instagram"
                           />
                           <p>80k</p>
-                          <p class="social-unit">Followers</p>
+                          <p className="social-unit">Followers</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="newsletter-signup">
-                        <h4 class="newsletter-heading">Newsletter</h4>
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <div className="newsletter-signup">
+                        <h4 className="newsletter-heading">Newsletter</h4>
                         <p>
                           Subscribe to our email newsletter for useful tips and
                           valuable resources.
                         </p>
                         <input type="text" />
-                        <a href="$#submit" class="button rounder">
+                        <a
+                          href="/intentional-404/newsletter-submit"
+                          className="button rounder"
+                        >
                           Submit
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="most-popular">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h4 class="blog-heading ">Most Popular</h4>
-                      <div class="spacer small solid" />
+                <div className="most-popular">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <h4 className="blog-heading ">Most Popular</h4>
+                      <div className="spacer small solid" />
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-sm-12">
+                  <div className="row">
+                    <div className="col-sm-12">
                       {data.popular.edges.map(({ node }) => (
                         <a href={node.link}>
-                          <div class="popular-post">
-                            <div class="image-holder">
+                          <div className="popular-post">
+                            <div className="image-holder">
                               {console.log(node)}
                               <Img
                                 fluid={
@@ -247,11 +253,11 @@ const CategoriesPage = ({ data, pageContext }) => {
                                 }
                               />
                             </div>
-                            <div class="content-holder">
-                              <h5 class="title truncate">
+                            <div className="content-holder">
+                              <h5 className="title truncate">
                                 {he.decode(node.title)}
                               </h5>
-                              <p class="date">{node.date}</p>
+                              <p className="date">{node.date}</p>
                             </div>
                           </div>
                         </a>
@@ -259,14 +265,14 @@ const CategoriesPage = ({ data, pageContext }) => {
                     </div>
                   </div>
                 </div>
-                <div class="category-section">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h4 class="blog-heading ">Category</h4>
-                      <div class="spacer small solid" />
+                <div className="category-section">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <h4 className="blog-heading ">Category</h4>
+                      <div className="spacer small solid" />
                       {categoriesPaths.map(category => (
                         <a href={postsPath + category.slug}>
-                          <span class="label primary">
+                          <span className="label primary">
                             <p>{category.name}</p>
                           </span>
                         </a>
@@ -277,23 +283,23 @@ const CategoriesPage = ({ data, pageContext }) => {
               </div>
             </div>
             {/* Begin Events component */}
-            <div class="events-section">
-              <div class="row padded tall-top">
-                <div class="col-sm-12">
-                  <div class="title-holder">
-                    <h4 class="blog-heading">Webinars & Events</h4>
-                    <div class="more-events">
-                      <a href="$#MoreEvents">
+            <div className="events-section">
+              <div className="row padded tall-top">
+                <div className="col-sm-12">
+                  <div className="title-holder">
+                    <h4 className="blog-heading">Webinars & Events</h4>
+                    <div className="more-events">
+                      <a href="/intentional-404/MoreEvents">
                         View More
                         <img src={rightChevron} alt="View More Events" />
                       </a>
                     </div>
                   </div>
-                  <div class="spacer solid small" />
+                  <div className="spacer solid small" />
                 </div>
                 {data.events.edges.map(({ node }) => (
-                  <div class="col-sm-3">
-                    <div class="event-wrapper">
+                  <div className="col-sm-3">
+                    <div className="event-wrapper">
                       <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>
                     <a href={node.link}>
@@ -304,18 +310,18 @@ const CategoriesPage = ({ data, pageContext }) => {
               </div>
             </div>
             {/* End Events component */}
-            <div class="row padded tall-top request-demo-footer">
+            <div className="row padded tall-top request-demo-footer">
               <div className="col-sm-1" />
-              <div class="col-sm-5">
-                <div class="content-block">
-                  <div class="inner-title">
+              <div className="col-sm-5">
+                <div className="content-block">
+                  <div className="inner-title">
                     <h2>
                       Start your{" "}
-                      <span class="font-weight-semibold">success</span>
+                      <span className="font-weight-semibold">success</span>
                       with Doctor Genius today!
                     </h2>
-                    <div class="accented-paragraph">
-                      <p class="s-thin">
+                    <div className="accented-paragraph">
+                      <p className="s-thin">
                         The Genius platform makes every part of your company
                         process more efficient. Our support team is very excited
                         to help you and get your company on the right path of
@@ -325,10 +331,10 @@ const CategoriesPage = ({ data, pageContext }) => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-5">
-                <div class="center">
+              <div className="col-sm-5">
+                <div className="center">
                   <a href="/" className="button flat white-text">
-                    Request Demo <img src={thinArrowRight} />
+                    Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>
               </div>

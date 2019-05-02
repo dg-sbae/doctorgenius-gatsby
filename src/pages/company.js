@@ -3,6 +3,7 @@ import React from "react"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import TestimonialsSlider from "../components/testimonials-slider"
 
 import "../styles/company-page.scss"
 import "../styles/global-styles.scss"
@@ -16,7 +17,7 @@ export default props => (
         <Container>
           <div className="valign-wrapper row">
             <div className="col-sm-12">
-              <div class="hero-content">
+              <div className="hero-content">
                 <div className="hero-content accent-block">
                   <h1>Company</h1>
                   <h2>
@@ -41,8 +42,9 @@ export default props => (
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">
-                  <h2 class="font-weight-medium">
-                    The <span class="font-weight-semibold">Doctor Genius </span>
+                  <h2 className="font-weight-medium">
+                    The{" "}
+                    <span className="font-weight-semibold">Doctor Genius </span>
                     Story
                   </h2>
                 </div>
@@ -63,75 +65,77 @@ export default props => (
           </div>
 
           <div className="row padded panel-row">
-            <div class="col-sm-12">
+            <div className="col-sm-12">
               <div className="inner-title center">
                 <h2 className="underline font-weight-medium">
                   Doctor Genius
-                  <span class="font-weight-semibold"> by the numbers</span>
+                  <span className="font-weight-semibold"> by the numbers</span>
                 </h2>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="panel">
-                <div class="icon-wrapper">
+            <div className="col-sm-3">
+              <div className="panel">
+                <div className="icon-wrapper">
                   <img
-                    class="img-icon"
+                    className="img-icon"
                     src="/icon/web.svg"
                     alt="Icon of a Website"
                   />
                 </div>
-                <p class="panel-heading">1 million +</p>
-                <p class="panel-body">
+                <p className="panel-heading">1 million +</p>
+                <p className="panel-body">
                   Words published to our clients’ website blogs and social
                   profiles
                 </p>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="panel">
+            <div className="col-sm-3">
+              <div className="panel">
                 <div className="icon-wrapper">
                   <img
-                    class="img-icon"
+                    className="img-icon"
                     src="/icon/search-engine.svg"
                     alt="Icon of a Search Engine Page"
                   />
                 </div>
-                <p class="panel-heading">500+</p>
-                <p class="panel-body">
+                <p className="panel-heading">500+</p>
+                <p className="panel-body">
                   Over 1000+ Dental Practices use Doctor Genius Web & SEO
                   services
                 </p>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="panel">
+            <div className="col-sm-3">
+              <div className="panel">
                 <div className="icon-wrapper">
                   <img
-                    class="img-icon"
+                    className="img-icon"
                     src="/icon/doctors.svg"
                     alt="Icon of a Group of Doctors"
                   />
                 </div>
-                <p class="panel-heading">30 +</p>
-                <p class="panel-body">
+                <p className="panel-heading">30 +</p>
+                <p className="panel-body">
                   In-House Support, Development, and Writers work for Doctor
                   Genius
                 </p>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="panel">
+            <div className="col-sm-3">
+              <div className="panel">
                 <div className="icon-wrapper">
                   <img
-                    class="img-icon"
+                    className="img-icon"
                     src="/icon/stars.svg"
                     alt="Icon of Stars"
                   />
                 </div>
-                <p class="panel-heading">4.9 Stars</p>
-                <p class="panel-body">
+                <p className="panel-heading">4.9 Stars</p>
+                <p className="panel-body">
                   We take pride in our google reviews. Read our google reviews.
-                  <a href="$#">(click here)</a>
+                  <a href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,">
+                    (click here)
+                  </a>
                 </p>
               </div>
             </div>
@@ -145,9 +149,12 @@ export default props => (
                 <div className="inner-title center">
                   <h2 className="underline short font-weight-normal">
                     Our
-                    <span class="font-weight-semibold"> Clients Average</span>
+                    <span className="font-weight-semibold">
+                      {" "}
+                      Clients Average
+                    </span>
                   </h2>
-                  <div class="callout-heading">
+                  <div className="callout-heading">
                     <sup>
                       Up
                       <br />
@@ -156,9 +163,11 @@ export default props => (
                     <p>600%</p>
                   </div>
                   <p className="text-accent">New Patient Inquiries</p>
-                  <p class="text-mute sub-text-accent">12 Months Duration</p>
-                  <div class="callout-link">
-                    <a href="$#">
+                  <p className="text-mute sub-text-accent">
+                    12 Months Duration
+                  </p>
+                  <div className="callout-link">
+                    <a href="/our-clients/">
                       <i className="fa fa-arrow-right" />
                       Learn More
                     </a>
@@ -172,43 +181,43 @@ export default props => (
               <div className="inner-title center">
                 <h3 className="strapline">Testimonials</h3>
                 <h2 className="underline font-weight-normal">
-                  What
-                  <span class="font-weight-semibold"> Clients Are Saying</span>
+                  What&nbsp;
+                  <span className="font-weight-semibold">
+                    Clients Are Saying
+                  </span>
                 </h2>
               </div>
             </div>
-
-            <div className="full-bleed">
-              <div className="card-slider">
-                <div class="card">
-                  <i className="fa fa-quote">"</i>
-                  <div className="card-content-wrapper">
-                    <p className="card-copy">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                      natoque penatibus et magnis dis parturient montes,
-                      nascetur ridiculus mus. Donec quam felis.Lorem ipsum dolor
-                      sit amet, consectetuer adipiscing elit.
-                    </p>
-                    <p className="card-author">John Doe</p>
-                    <p className="card-location">Irvine Dental Care</p>
+            <div className="col-sm-12">
+              <div className="full-bleed-wrapper">
+                <div className="full-bleed">
+                  <div className="full-bleed-slider">
+                    <TestimonialsSlider />
                   </div>
-                  <img
-                    className="img-responsive"
-                    src="/png/testimonials-slider-profile-1.png"
-                    alt="A Doctor"
-                  />
                 </div>
               </div>
             </div>
+            {/* This is working to hold the content, but messing up the Peek - trying it in a col-12 first
+            <div className="col-sm-12">
+              <div className="full-bleed-wrapper">
+                <div className="full-bleed">
+                  <div className="full-bleed-content-wrapper" />
+                  <div className="full-bleed-image">
+                    <TestimonialsSlider />
+                  </div>
+                </div>
+              </div>
+          </div>*/}
           </div>
           <div className="row padded tall-top request-demo-footer">
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">
-                  <h2 class="font-weight-normal">
+                  <h2 className="font-weight-normal">
                     Let's
-                    <span class="font-weight-semibold"> Talk Partnership</span>
+                    <span className="font-weight-semibold">
+                      Talk Partnership
+                    </span>
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -220,12 +229,12 @@ export default props => (
                       States.
                     </p>
                     <a
-                      href="$#"
+                      href="/contact/"
                       className="link-with-icon font-weight-semibold"
                     >
                       <img
                         src="/icon/right-arrow-blue.svg"
-                        class="link-icon"
+                        className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
                       Contact Us
