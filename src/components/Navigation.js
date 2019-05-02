@@ -54,7 +54,7 @@ const OurClientsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/our-clients/dental-practices/">
                   Dental Practices
                 </Link>
                 <p>
@@ -70,7 +70,7 @@ const OurClientsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/our-clients/cosmetic-surgeons/">
                   Cosmetic Surgeons
                 </Link>
                 <p>
@@ -88,7 +88,7 @@ const OurClientsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/our-clients/urgent-care-clinics/">
                   Urgent Care Clinics
                 </Link>
                 <p>
@@ -104,7 +104,7 @@ const OurClientsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/our-clients/who-we-serve/">
                   Healthcare Marketing
                 </Link>
                 <p>
@@ -122,7 +122,7 @@ const OurClientsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/our-clients/chiropractor-practices/">
                   Chiropractor Practices
                 </Link>
                 <p>
@@ -290,7 +290,7 @@ const StudySingleListLink = props => (
                 <img className="image-icon" src={theStudy} />
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/the-study">
                   The Study
                 </Link>
                 <p>
@@ -307,7 +307,7 @@ const StudySingleListLink = props => (
               </div>
 
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/inentional-404/">
                   Webinars
                 </Link>
                 <p>
@@ -326,7 +326,7 @@ const StudySingleListLink = props => (
               </div>
 
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/case-study/">
                   Case Studies
                 </Link>
                 <p>
@@ -342,7 +342,7 @@ const StudySingleListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/inentional-404/">
                   Knowledge Base
                 </Link>
                 <p>
@@ -360,7 +360,7 @@ const StudySingleListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to={props.to}>
+                <Link className="" to="/inentional-404/">
                   eBooks &amp; Whitepapers
                 </Link>
                 <p>
