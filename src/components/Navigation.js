@@ -1,12 +1,29 @@
 import React from "react"
+import { Component } from "react"
 import { Link } from "gatsby"
 import Container from "../components/Container"
+import $ from "jquery"
 
-import logo from "../img/logo-white.svg"
+//import logo from "../img/logo-white.svg"
 import phone from "../img/phone-white.svg"
+import ourTech from "../../public/icon/our-technology-white.svg"
+import responsiveWebsites from "../../public/icon/website-white.svg"
+import info from "../../public/icon/info.svg"
+import contentMarketing from "../../public/icon/contract-white.svg"
+import onlineReputation from "../../public/icon/online-reputation-white.svg"
+import digitalAdvertising from "../../public/icon/digital-advertising-white.svg"
+import hostingSolutions from "../../public/icon/hosting-solutions-white.svg"
+import dentalPractices from "../../public/icon/tooth.svg"
+import cosmeticSurgeons from "../../public/icon/surgeon.svg"
+import urgentCare from "../../public/icon/urgent-care.svg"
+import healthcareMarketing from "../../public/icon/sphygmomanometer.svg"
+import caseStudy from "../../public/icon/briefcase.svg"
+import webinars from "../../public/icon/television.svg"
+import theStudy from "../../public/icon/the-study-white.svg"
 
 import "../styles/global-styles.scss"
-// import "../scripts/navigationFunctionality.js"
+import "bootstrap/dist/js/bootstrap.min.js"
+// import "../../static/scripts/navigationFunctionality.js"
 
 const ListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
@@ -17,65 +34,430 @@ const ListLink = props => (
   </li>
 )
 
-export default ({ children }) => (
-  <nav className="navbar navbar-expand-md fixed-top">
-    <Container>
-      <div class="logo">
-        <Link to="#">
-          <div class="navbar-brand logo-holder" />
-        </Link>
+const OurClientsListLink = props => (
+  <li className={props.dataToggle}>
+    <Link
+      className="dropdown-heading"
+      to={props.to}
+      activeClassName="active"
+      partiallyActive={true}
+      data-toggle={props.dataToggle}
+    >
+      {props.children}
+    </Link>
+    <div className="dropdown-menu caret who-we-serve-dropdown">
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={dentalPractices} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="/our-clients/dental-practices/">
+                  Dental Practices
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={cosmeticSurgeons} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="/our-clients/cosmetic-surgeons/">
+                  Cosmetic Surgeons
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={urgentCare} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="/our-clients/urgent-care-clinics/">
+                  Urgent Care Clinics
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={healthcareMarketing} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="/our-clients/who-we-serve/">
+                  Healthcare Marketing
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={ourTech} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="/our-clients/chiropractor-practices/">
+                  Chiropractor Practices
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="dropdown-content-block">
+                <Link className="" to={props.to} />
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div
-        className="main-links collapse navbar-collapse"
-        id="navbarSupportedContent"
-      >
-        <ul className="navbar-nav">
-          <ListLink
-            className="dropdown-marketing-solutions"
-            dataToggle="dropdown-marketing-solutions"
-            to="/marketing-solutions/"
-          >
-            Marketing Solutions
-          </ListLink>
-          <ListLink
-            className="dropdown-our-clients"
-            dataToggle="dropdown-our-clients"
-            to="/our-clients/"
-          >
-            Who We Serve
-          </ListLink>
-
-          <ListLink className="" to="/plans/">
-            Plans
-          </ListLink>
-          <ListLink className="" to="/company/">
-            Company
-          </ListLink>
-          <ListLink
-            className="dropdown-the-study"
-            dataToggle="dropdown-the-study"
-            to="/the-study/"
-          >
-            Resources
-          </ListLink>
-        </ul>
-      </div>
-      <div class="contact-links">
-        <ul>
-          <ListLink to="$#">
-            <img src={phone} alt="Phone" class="phone" />
-            877.477.2311
-          </ListLink>
-          <ListLink>
-            <a href="/contact/" className="button flat transparent">
-              Free Demo
-            </a>
-          </ListLink>
-        </ul>
-      </div>
-
-      {children}
-    </Container>
-  </nav>
+    </div>
+    {}
+  </li>
 )
+
+const MarketingSolutionsListLink = props => (
+  <li className={props.dataToggle}>
+    <Link
+      className="dropdown-heading"
+      to={props.to}
+      activeClassName="active"
+      partiallyActive={true}
+      data-toggle={props.dataToggle}
+    >
+      {props.children}
+    </Link>
+    <div className="dropdown-menu caret marketing-solutions-dropdown">
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={responsiveWebsites} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="marketing-solutions/websites">
+                  Responsive Websites
+                </Link>
+                <p>
+                  Our websites are power-packed with fresh & unique content
+                  tailored to your practice.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={onlineReputation} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link
+                  className=""
+                  to="marketing-solutions/online-reputation-management"
+                >
+                  Online Reputation
+                </Link>
+                <p>
+                  Our websites are power-packed with fresh & unique content
+                  tailored to your practice.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={contentMarketing} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="marketing-solutions/content-marketing">
+                  Content Marketing
+                </Link>
+                <p>
+                  Our websites are power-packed with fresh & unique content
+                  tailored to your practice.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={ourTech} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="marketing-solutions/our-technology">
+                  Our Technology
+                </Link>
+                <p>
+                  Our websites are power-packed with fresh & unique content
+                  tailored to your practice.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={digitalAdvertising} />
+                </div>
+              </div>
+
+              <div className="dropdown-content-block">
+                <Link className="" to="marketing-solutions/digital-advertising">
+                  Digital Advertising
+                </Link>
+                <p>
+                  Our websites are power-packed with fresh & unique content
+                  tailored to your practice.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={hostingSolutions} />
+                </div>
+              </div>
+
+              <div className="dropdown-content-block">
+                <Link className="" to="marketing-solutions/hosting-solutions">
+                  Hosting Solutions
+                </Link>
+                <p>
+                  Our websites are power-packed with fresh & unique content
+                  tailored to your practice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {}
+  </li>
+)
+
+const StudySingleListLink = props => (
+  <li className={props.dataToggle}>
+    <Link
+      className="dropdown-heading"
+      to={props.to}
+      activeClassName="active"
+      partiallyActive={true}
+      data-toggle={props.dataToggle}
+    >
+      {props.children}
+    </Link>
+    <div className="dropdown-menu caret resources-dropdown">
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <img className="image-icon" src={theStudy} />
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="/the-study">
+                  The Study
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={webinars} />
+                </div>
+              </div>
+
+              <div className="dropdown-content-block">
+                <Link className="" to="/inentional-404/">
+                  Webinars
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={caseStudy} />
+                </div>
+              </div>
+
+              <div className="dropdown-content-block">
+                <Link className="" to="/case-study/">
+                  Case Studies
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={info} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="/inentional-404/">
+                  Knowledge Base
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={ourTech} />
+                </div>
+              </div>
+              <div className="dropdown-content-block">
+                <Link className="" to="/inentional-404/">
+                  eBooks &amp; Whitepapers
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="dropdown-content-block">
+                <Link className="" to={props.to} />
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {}
+  </li>
+)
+
+class Navigation extends Component {
+  componentDidMount() {
+    $(document).ready(function() {
+      console.log("document ready")
+      $(".dropdown-heading").click(function(event) {
+        console.log("dropdown heading ready")
+        event.stopPropagation()
+      })
+    })
+  }
+  render() {
+    return (
+      <nav className="navbar navbar-expand-md fixed-top">
+        <Container>
+          <div className="logo">
+            <Link to="/">
+              <div className="navbar-brand logo-holder" />
+            </Link>
+          </div>
+
+          <div
+            className="main-links collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav">
+              <MarketingSolutionsListLink
+                className="nav-item dropdown marketing-solutions-dropdown"
+                dataToggle="dropdown"
+                to="/marketing-solutions/"
+              >
+                Marketing Solutions
+              </MarketingSolutionsListLink>
+              <OurClientsListLink
+                className="nav-item dropdown who-we-serve-dropdown"
+                dataToggle="dropdown"
+                to="/our-clients/"
+              >
+                Who We Serve
+              </OurClientsListLink>
+
+              <ListLink className="" to="/plans/">
+                Plans
+              </ListLink>
+              <ListLink className="" to="/company/">
+                Company
+              </ListLink>
+              <StudySingleListLink
+                className="nav-item dropdown resources-dropdown"
+                dataToggle="dropdown"
+                to="/the-study/"
+              >
+                Resources
+              </StudySingleListLink>
+            </ul>
+          </div>
+          <div className="contact-links">
+            <ul>
+              <ListLink to="/">
+                <img src={phone} alt="Phone" className="phone" />
+                877.477.2311
+              </ListLink>
+              <ListLink to="/contact" className="button flat transparent">
+                Free Demo
+              </ListLink>
+            </ul>
+          </div>
+        </Container>
+      </nav>
+    )
+  }
+}
+
+export default Navigation

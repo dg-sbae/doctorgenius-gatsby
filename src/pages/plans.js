@@ -7,7 +7,7 @@ import Container from "../components/Container"
 import tableHeader from "../img/plans-table-header-image.svg"
 import checkmark from "../img/checked.svg"
 import downChevron from "../img/down-chevron.svg"
-import { FaArrowRight } from "react-icons/fa"
+import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/plans.scss"
 import "../styles/global-styles.scss"
@@ -21,11 +21,14 @@ export default props => (
         <Container>
           <div className="valign-wrapper row">
             <div className="col-sm-12">
-              <div class="hero-content accent-block">
+              <div className="hero-content accent-block">
                 <h1>Our Plans</h1>
                 <h2>
                   Solution To Your
-                  <span class="font-weight-semibold"> Online Marketing </span>
+                  <span className="font-weight-semibold">
+                    {" "}
+                    Online Marketing{" "}
+                  </span>
                   Needs
                 </h2>
                 <div className="accented-paragraph">
@@ -53,10 +56,10 @@ export default props => (
                   <p className="column-signup-body">
                     Lorem Ipsum is simply dummy text of the printing and type.
                   </p>
-                  <a href="$#" className="button rounder">
+                  <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="$#" className="subtle-link">
+                  <a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
                   </a>
                 </div>
@@ -68,10 +71,10 @@ export default props => (
                   <p className="column-signup-body">
                     Lorem Ipsum is simply dummy text of the printing and type.
                   </p>
-                  <a href="$#" className="button rounder">
+                  <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="$#" className="subtle-link">
+                  <a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
                   </a>
                 </div>
@@ -80,10 +83,10 @@ export default props => (
                   <p className="column-signup-body">
                     Lorem Ipsum is simply dummy text of the printing and type.
                   </p>
-                  <a href="$#" className="button rounder">
+                  <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="$#" className="subtle-link">
+                  <a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
                   </a>
                 </div>
@@ -530,234 +533,273 @@ export default props => (
                 {/* <!-- cta section: --> */}
                 <div className="grid-item" />
                 <div className="grid-item column-signup">
-                  <a href="$#" className="button rounder">
+                  <a href="/intentional-404/signup" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="$#" className="subtle-link">
+                  <a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
                   </a>
                 </div>
                 <div className="grid-item column-signup">
-                  <a href="$#" className="button rounder">
+                  <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="$#" className="subtle-link">
+                  <a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
                   </a>
                 </div>
                 <div className="grid-item column-signup">
-                  <a href="$#" className="button rounder">
+                  <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="$#" className="subtle-link">
+                  <a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row padded">
-            <div class="col-sm-1" />
-            <div class="col-sm-10">
-              <div class="inner-title center">
+          <div className="row padded">
+            <div className="col-sm-1" />
+            <div className="col-sm-10">
+              <div className="inner-title center">
                 <h2>Commonly Asked Questions</h2>
               </div>
             </div>
-            <div class="col-sm-1" />
+            <div className="col-sm-1" />
           </div>
-          <div class="row padded">
-            <div class="col-sm-1" />
-            <div class="col-sm-10">
-              <div class="faq-table lg-pad">
-                <div class="faq-wrapper">
-                  <div class="question">
+          <div className="row padded">
+            <div className="col-sm-1" />
+            <div className="col-sm-10">
+              <div className="faq-table lg-pad">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>Is there a long term agreement?</p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
 
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>
                         Why is a call tracking necessary for you online
                         marketing package?
                       </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
 
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>
                         What do you do differently than other marketing
                         companies?
                       </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>
                         Can I work with other SEO companies alongside
                         Dental/Doctor Genius?
                       </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>What happens if I don't have a website? </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
 
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>When will I start seeing results? </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>
                         What if there are any spelling and grammar errors on the
                         new website?
                       </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>
                         Do I immediately own the website after signing up with
                         you?
                       </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
 
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>
                         Can you use my main line for the call tracking number?
                       </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>What is the Review Promoter? </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>
                         I have domain name emails; will this affect the work you
                         are doing?
                       </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>
                         How long does it take to get started? What happens in
                         the first two months?
                       </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
-                <div class="faq-wrapper">
-                  <div class="question">
+                <div className="faq-wrapper">
+                  <div className="question">
                     <dt>
                       <p>
                         How many calls new customers or new patients should I
                         get?
                       </p>
                     </dt>
-                    <a href="$#" class="accordion-target">
-                      <img src={downChevron} alt="Open" class="open" />
+                    <a
+                      href="/intentional-404/faq-answer"
+                      className="accordion-target"
+                    >
+                      <img src={downChevron} alt="Open" className="open" />
                     </a>
                   </div>
                   <dd />
                 </div>
               </div>
             </div>
-            <div class="col-sm-1" />
-          </div>
-          <div class="row padded tall-top request-demo-footer">
             <div className="col-sm-1" />
-            <div class="col-sm-5">
-              <div class="content-block">
-                <div class="inner-title">
+          </div>
+          <div className="row padded tall-top request-demo-footer">
+            <div className="col-sm-1" />
+            <div className="col-sm-5">
+              <div className="content-block">
+                <div className="inner-title">
                   <h2>
                     Start your
-                    <span class="font-weight-semibold"> success </span>
+                    <span className="font-weight-semibold"> success </span>
                     with Doctor Genius today!
                   </h2>
-                  <div class="accented-paragraph">
-                    <p class="s-thin">
+                  <div className="accented-paragraph">
+                    <p className="s-thin">
                       The Genius platform makes every part of your company
                       process more efficient. Our support team is very excited
                       to help you and get your company on the right path of
@@ -767,10 +809,10 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div class="col-sm-5">
-              <div class="center">
+            <div className="col-sm-5">
+              <div className="center">
                 <a href="/" className="button flat white-text">
-                  Request Demo <FaArrowRight />
+                  Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
             </div>

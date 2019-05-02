@@ -10,7 +10,7 @@ import digitalAdvertisingIcon from "../img/digital-advertising.svg"
 import onlineReputationIcon from "../img/online-reputation.svg"
 import ourTechnologyIcon from "../img/our-technology.svg"
 import hostingSolutionsIcon from "../img/hosting-solutions.svg"
-import lighthouseResult from "../img/lighthouse-result.png"
+//import lighthouseResult from "../img/lighthouse-result.png"
 
 import "../styles/marketing-solutions-inner.scss"
 import "../styles/global-styles.scss"
@@ -37,7 +37,7 @@ export default props => {
           <Container>
             <div className="valign-wrapper row">
               <div className="col-sm-12">
-                <div class="hero-content accent-block">
+                <div className="hero-content accent-block">
                   <h1>{pageTitle}</h1>
                   <h2>{pageSubtitle}</h2>
                   <div className="accented-paragraph">
@@ -180,19 +180,19 @@ export default props => {
                   className={(index % 2 ? "order-sm-12" : "") + " col-sm-1"}
                 />
                 <div class={(index % 2 ? "order-sm-6" : "") + " col-sm-5"}>
-                  <div class="content-block">
-                    <div class="icon-strapline">
+                  <div className="content-block">
+                    <div className="icon-strapline">
                       <img
                         src={row.content.icon.url}
-                        class="link-icon"
+                        className="link-icon"
                         alt={row.content.icon.alt}
                       />
                       <p>{row.content.icon.title}</p>
                     </div>
-                    <div class="inner-title">
+                    <div className="inner-title">
                       <h2>{row.content.innerTitle}</h2>
                     </div>
-                    <div class="accented-paragraph">
+                    <div className="accented-paragraph">
                       <p>{row.content.paragraph}</p>
                     </div>
                   </div>

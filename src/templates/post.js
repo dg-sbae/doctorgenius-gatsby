@@ -14,7 +14,7 @@ import instagramIcon from "../img/instagram.svg"
 import youtubeIcon from "../img/youtube.svg"
 import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
-import { FaArrowRight } from "react-icons/fa"
+import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study-post.scss"
 import "../styles/global-styles.scss"
@@ -35,73 +35,73 @@ function PostPage({ pageContext, data }) {
         <Main>
           <Container>
             <div className="row padded short-bottom">
-              <div class="col-sm-1" />
-              <div class="col-sm-8">
-                <div class="pagination">
-                  <a href="$#PreviousPostsPage">
+              <div className="col-sm-1" />
+              <div className="col-sm-8">
+                <div className="pagination">
+                  <a href="/intentional-404/PreviousPostsPage">
                     <img src={leftChevron} alt="Navigate to Previous" />
                     &nbsp;Back
                   </a>
-                  <a href="$#NextPostsPage">
+                  <a href="/intentional-404/NextPostsPage">
                     Next &nbsp;
                     <img src={rightChevron} alt="Navigate to Next" />
                   </a>
                 </div>
               </div>
-              <div class="col-sm-1" />
+              <div className="col-sm-1" />
             </div>
-            <div class="blog-header">
+            <div className="blog-header">
               <div className="row">
-                <div class="col-sm-1" />
-                <div class="col-sm-8">
-                  <div class="upper-row">
-                    <h1 class="title">{he.decode(post.title)}</h1>
-                    <div class="label primary">
+                <div className="col-sm-1" />
+                <div className="col-sm-8">
+                  <div className="upper-row">
+                    <h1 className="title">{he.decode(post.title)}</h1>
+                    <div className="label primary">
                       <p>Practice Management</p>
                     </div>
                   </div>
-                  <div class="lower-row">
-                    <div class="byline">
-                      <p class="date">{post.date}</p>
-                      <p class="author">{post.author.name}</p>
+                  <div className="lower-row">
+                    <div className="byline">
+                      <p className="date">{post.date}</p>
+                      <p className="author">{post.author.name}</p>
                     </div>
-                    <div class="share-icons">
+                    <div className="share-icons">
                       <p>Share:</p>
-                      <a href="$#">
+                      <a href="https://www.facebook.com/DoctorGeniusMarketing">
                         <img src={facebookIcon} alt="Facebook" />
                       </a>
-                      <a href="$#">
+                      <a href="https://twitter.com/DoctorGeniusCA">
                         <img src={twitterIcon} alt="Twitter" />
                       </a>
-                      <a href="$#">
+                      <a href="https://www.instagram.com/doctor.genius/">
                         <img src={instagramIcon} alt="Instagram" />
                       </a>
-                      <a href="$#">
+                      <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
                         <img src={youtubeIcon} alt="YouTube" />
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-1" />
+                <div className="col-sm-1" />
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-1" />
-              <div class="col-sm-10">
-                <div class="spacer solid" />
+            <div className="row">
+              <div className="col-sm-1" />
+              <div className="col-sm-10">
+                <div className="spacer solid" />
               </div>
-              <div class="col-sm-1" />
+              <div className="col-sm-1" />
             </div>
-            <div class="row">
-              <div class="col-sm-1" />
-              <div class="col-sm-8">
-                <div class="blog-content">
+            <div className="row">
+              <div className="col-sm-1" />
+              <div className="col-sm-8">
+                <div className="blog-content">
                   <div
-                    class="intro"
+                    className="intro"
                     dangerouslySetInnerHTML={{ __html: intro }}
                   />
 
-                  <div class="featured-image">
+                  <div className="featured-image">
                     <Img
                       fluid={
                         post.featured_media.localFile.childImageSharp.fluid
@@ -114,30 +114,30 @@ function PostPage({ pageContext, data }) {
                   />
                 </div>
               </div>
-              <div class="col-sm-1" />
+              <div className="col-sm-1" />
             </div>
 
             <div className="full-bleed-wrapper pad-md">
               <div className="full-bleed grey-background" />
               <div className="full-bleed-content-wrapper">
                 {/* Begin Events component */}
-                <div class="events-section">
-                  <div class="row padded tall-top">
-                    <div class="col-sm-12">
-                      <div class="title-holder">
-                        <h4 class="blog-heading">Webinars & Events</h4>
-                        <div class="more-events">
-                          <a href="$#MoreEvents">
+                <div className="events-section">
+                  <div className="row padded tall-top">
+                    <div className="col-sm-12">
+                      <div className="title-holder">
+                        <h4 className="blog-heading">Webinars & Events</h4>
+                        <div className="more-events">
+                          <a href="/intentional-404/MoreEvents">
                             View More
                             <img src={rightChevron} alt="View More Events" />
                           </a>
                         </div>
                       </div>
-                      <div class="spacer solid small" />
+                      <div className="spacer solid small" />
                     </div>
                     {data.events.edges.map(({ node }) => (
-                      <div class="col-sm-3">
-                        <div class="event-wrapper">
+                      <div className="col-sm-3">
+                        <div className="event-wrapper">
                           <img src={eventsPlaceholder} alt="Recent Event" />
                         </div>
                         <a href={node.link}>
@@ -150,18 +150,18 @@ function PostPage({ pageContext, data }) {
                 {/* End Events component */}
               </div>
             </div>
-            <div class="row padded tall-top request-demo-footer">
+            <div className="row padded tall-top request-demo-footer">
               <div className="col-sm-1" />
-              <div class="col-sm-5">
-                <div class="content-block">
-                  <div class="inner-title">
+              <div className="col-sm-5">
+                <div className="content-block">
+                  <div className="inner-title">
                     <h2>
                       Start your
-                      <span class="font-weight-semibold">success</span>
+                      <span className="font-weight-semibold">success</span>
                       with Doctor Genius today!
                     </h2>
-                    <div class="accented-paragraph">
-                      <p class="s-thin">
+                    <div className="accented-paragraph">
+                      <p className="s-thin">
                         The Genius platform makes every part of your company
                         process more efficient. Our support team is very excited
                         to help you and get your company on the right path of
@@ -171,10 +171,10 @@ function PostPage({ pageContext, data }) {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-5">
-                <div class="center">
+              <div className="col-sm-5">
+                <div className="center">
                   <a href="/" className="button flat white-text">
-                    Request Demo <FaArrowRight />
+                    Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>
               </div>

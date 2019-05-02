@@ -13,15 +13,18 @@
 
   &.v2 {
     .hero {
-      background-image: url("/hero/homepage-option-2.png");
+      background-image: url("/hero/homepage-v2-with-tablet.jpg");
       height: 690px;
       .demo-cta a {
         background: #0074cf;
       }
     }
+    .accent-block * {
+      border: none !important;
+    }
   }
   .hero {
-    height: 794px;
+    height: 690px;
     background-image: url("/hero/homepage-option-1.png");
     &:after {
       height: 12px;

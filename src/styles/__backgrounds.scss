@@ -41,6 +41,9 @@
     margin: 0 auto;
     display: block;
   }
+  .full-bleed-slider {
+    width: 100%;
+  }
 }
 
 .button {
@@ -55,5 +58,11 @@
   &.primary {
     background: $primary;
     color: white;
+  }
+}
+
+nav {
+  .dropdown-menu {
+    background-color: #285c94;
   }
 }

@@ -39,6 +39,7 @@ header {
     }
 
     &.navbar {
+      position: relative;
       &.main-navbar-stuck {
         .logo-holder {
           background-image: url(/png/logo-blue.png);
@@ -51,10 +52,18 @@ header {
 
         &.stuck-midway {
           height: 100px;
+
+          .dropdown-menu {
+            top: 58px;
+          }
         }
 
         &.stuck-fully {
           height: 80px;
+
+          .dropdown-menu {
+            top: 48px;
+          }
         }
 
         .active {
@@ -66,6 +75,84 @@ header {
         .contact-links {
           a {
             color: $primary;
+          }
+        }
+
+        .dropdown-menu {
+          a {
+            color: $primary-text;
+          }
+        }
+      }
+
+      ul {
+        &.navbar-nav {
+          position: relative;
+        }
+      }
+
+      .dropdown {
+        display: inline-block;
+        position: static;
+      }
+
+      .dropdown-menu {
+        left: -85px;
+        // right: 30%;
+        transition: all 0.3s;
+        top: 40px;
+        position: absolute;
+        border: none;
+        // transform: translateX(-50%);
+        // margin-right: auto;
+        // margin-left: auto;
+
+        .nav-icon-wrapper {
+          display: inline-block;
+          width: 38px;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: -8px;
+          border-bottom: 9px solid #285c94;
+          border-left: 9px solid transparent;
+          border-right: 9px solid transparent;
+        }
+
+        &.marketing-solutions-dropdown {
+          &.show {
+            &:after {
+              left: 150px;
+            }
+          }
+        }
+
+        &.who-we-serve-dropdown {
+          &.show {
+            &:after {
+              left: 300px;
+            }
+          }
+        }
+
+        &.resources-dropdown {
+          &.show {
+            &:after {
+              left: 580px;
+            }
+          }
+        }
+
+        .dropdown-content-block {
+          margin-left: 18px;
+        }
+
+        .dropdown-row {
+          // display: block;
+          .col-sm-6 {
+            // display: inline-block;
           }
         }
       }

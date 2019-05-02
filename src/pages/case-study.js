@@ -7,7 +7,7 @@ import Container from "../components/Container"
 import "../styles/global-styles.scss"
 import "../styles/case-study.scss"
 
-import { FaArrowRight } from "react-icons/fa"
+import thinArrowRight from "../img/right-arrow.svg"
 import theSolutionsImage from "../img/the-solutions-tablet-and-search.png"
 import theChallengeImage from "../img/the-challenge-placeholder.png"
 import ramiTahhanImage from "../img/rami-tahhan.png"
@@ -21,12 +21,12 @@ export default props => (
         <Container>
           <div className="valign-wrapper row">
             <div className="col-sm-12">
-              <div class="hero-content">
+              <div className="hero-content">
                 <div className="hero-content accent-block">
                   <h1>Resources</h1>
                   <h2>
                     The&nbsp;
-                    <span class="font-weight-semibold">Case Study </span>
+                    <span className="font-weight-semibold">Case Study </span>
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -59,7 +59,7 @@ export default props => (
               <img
                 className="img-responsive"
                 src={ramiTahhanImage}
-                alt="Image of Rami Tahhan"
+                alt="Rami Tahhan"
               />
             </div>
             <div className="col-sm-6">
@@ -79,12 +79,12 @@ export default props => (
                   accumsan a ligula. Aenean aliquet convallis velit.
                 </p>
               </div>
-              <div class="client-quote-block">
-                <p class="client-quote">
+              <div className="client-quote-block">
+                <p className="client-quote">
                   "Over the past 12 months, the office has doubled in revenue
                   due to proper marketing methods!"
                 </p>
-                <p class="client-author">- Rami Tahhan, D.D.S.</p>
+                <p className="client-author">- Rami Tahhan, D.D.S.</p>
               </div>
             </div>
           </div>
@@ -113,12 +113,12 @@ export default props => (
                   accumsan a ligula. Aenean aliquet convallis velit.
                 </p>
               </div>
-              <div class="client-quote-block">
-                <p class="client-quote s-thin">
+              <div className="client-quote-block">
+                <p className="client-quote s-thin">
                   "I can sleep well knowing marketing dollars are being well
                   spent."
                 </p>
-                <p class="client-author">- Rami Tahhan, D.D.S.</p>
+                <p className="client-author">- Rami Tahhan, D.D.S.</p>
               </div>
             </div>
             <div className="col-sm-6">
@@ -137,14 +137,14 @@ export default props => (
             </div>
           </div>
           <div className="row padded short-top">
-            <div class="col-sm-7">
+            <div className="col-sm-7">
               <img
                 className="img-responsive blur-bleed"
                 src={theSolutionsImage}
                 alt="Search Results Page"
               />
             </div>
-            <div class="col-sm-5 panel-quadrant">
+            <div className="col-sm-5 panel-quadrant">
               <div className="row">
                 <div className="col-sm-6 panel-quad-item">
                   <img
@@ -220,11 +220,11 @@ export default props => (
                 <h2 className="underline">The Results</h2>
               </div>
             </div>
-            <div class="col-sm-7">
-              <div class="inner-title center">
+            <div className="col-sm-7">
+              <div className="inner-title center">
                 <div className="subtitle muted">The first 6 months</div>
               </div>
-              <div class="case-study-table">
+              <div className="case-study-table">
                 <div className="case-study-item">
                   <p className="callout">1,125%</p>
                   <p>Increase in Google First-Page Revenue</p>
@@ -251,7 +251,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div class="col-sm-5">
+            <div className="col-sm-5">
               <img
                 className="img-responsive blur-bleed"
                 src="/png/search-result.png"
@@ -259,18 +259,18 @@ export default props => (
               />
             </div>
           </div>
-          <div class="row padded tall-top request-demo-footer">
+          <div className="row padded tall-top request-demo-footer">
             <div className="col-sm-1" />
-            <div class="col-sm-5">
-              <div class="content-block">
-                <div class="inner-title">
+            <div className="col-sm-5">
+              <div className="content-block">
+                <div className="inner-title">
                   <h2>
                     Start your
-                    <span class="font-weight-semibold"> success </span>
+                    <span className="font-weight-semibold"> success </span>
                     with Doctor Genius today!
                   </h2>
-                  <div class="accented-paragraph">
-                    <p class="s-thin">
+                  <div className="accented-paragraph">
+                    <p className="s-thin">
                       The Genius platform makes every part of your company
                       process more efficient. Our support team is very excited
                       to help you and get your company on the right path of
@@ -280,10 +280,10 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div class="col-sm-5">
-              <div class="center">
+            <div className="col-sm-5">
+              <div className="center">
                 <a href="/" className="button flat white-text">
-                  Request Demo <FaArrowRight />
+                  Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
             </div>
