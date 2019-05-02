@@ -45,6 +45,10 @@
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
 
+/* I'd like to move these into the component, but I can't get it working */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 /* ~bootstrap? */
 .img-responsive {
   max-width: 100%;

@@ -77,26 +77,6 @@
   }
 }
 
-.card-content-wrapper {
-  width: 60%;
-}
-.card-slider .card,
-.card-slider .card img {
-  height: 150px; /* This image probably needs to be a background image */
-}
-.card {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  i {
-    width: 10%;
-  }
-  img {
-    position: absolute;
-    right: 0;
-  }
-}
-
 .icon-wrapper {
   /* dimensions of the icon-wrapper should be set with fixed height and width, in the individual page css */
   display: flex;
@@ -325,5 +305,27 @@ footer {
   .img-responsive.blur-bleed {
     transform: translateX(6%);
     //transform: translateX(0);
+  }
+}
+
+/* Slick Slider (external Library) */
+.slick-slider .slick-dots {
+  /* overrides */
+  bottom: 0;
+  top: 100%;
+
+  margin-top: 40px;
+  li {
+    margin: 0 16px;
+
+    button:before {
+      width: 21px;
+      height: 21px;
+      font-size: 21px;
+      color: #a9a9a9;
+    }
+  }
+  li.slick-active button:before {
+    color: #148ccb;
   }
 }

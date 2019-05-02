@@ -3,6 +3,7 @@ import React from "react"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import TestimonialsSlider from "../components/testimonials-slider"
 
 import "../styles/our-clients.scss"
 import "../styles/global-styles.scss"
@@ -248,27 +249,12 @@ export default props => (
                 </h2>
               </div>
             </div>
-
-            <div className="full-bleed">
-              <div className="card-slider">
-                <div className="card">
-                  <i className="fa fa-quote">"</i>
-                  <div className="card-content-wrapper">
-                    <p className="card-copy">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                      natoque penatibus et magnis dis parturient montes,
-                      nascetur ridiculus mus. Donec quam felis.Lorem ipsum dolor
-                      sit amet, consectetuer adipiscing elit.
-                    </p>
-                    <p className="card-author">John Doe</p>
-                    <p className="card-location">Irvine Dental Care</p>
+            <div className="col-sm-12">
+              <div className="full-bleed-wrapper">
+                <div className="full-bleed">
+                  <div className="full-bleed-slider">
+                    <TestimonialsSlider />
                   </div>
-                  <img
-                    className="img-responsive"
-                    src="/png/testimonials-slider-profile-1.png"
-                    alt="A Doctor"
-                  />
                 </div>
               </div>
             </div>

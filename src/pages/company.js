@@ -181,20 +181,33 @@ export default props => (
               <div className="inner-title center">
                 <h3 className="strapline">Testimonials</h3>
                 <h2 className="underline font-weight-normal">
-                  What
+                  What&nbsp;
                   <span className="font-weight-semibold">
-                    {" "}
                     Clients Are Saying
                   </span>
                 </h2>
               </div>
             </div>
-
-            <div className="full-bleed">
-              <TestimonialsSlider test="testPropValue">
-                content
-              </TestimonialsSlider>
+            <div className="col-sm-12">
+              <div className="full-bleed-wrapper">
+                <div className="full-bleed">
+                  <div className="full-bleed-slider">
+                    <TestimonialsSlider />
+                  </div>
+                </div>
+              </div>
             </div>
+            {/* This is working to hold the content, but messing up the Peek - trying it in a col-12 first
+            <div className="col-sm-12">
+              <div className="full-bleed-wrapper">
+                <div className="full-bleed">
+                  <div className="full-bleed-content-wrapper" />
+                  <div className="full-bleed-image">
+                    <TestimonialsSlider />
+                  </div>
+                </div>
+              </div>
+          </div>*/}
           </div>
           <div className="row padded tall-top request-demo-footer">
             <div className="col-sm-6">
@@ -203,7 +216,6 @@ export default props => (
                   <h2 className="font-weight-normal">
                     Let's
                     <span className="font-weight-semibold">
-                      {" "}
                       Talk Partnership
                     </span>
                   </h2>
