@@ -10,98 +10,51 @@ export default () => (
         content: {
           icon: {
             url: "/icon/website.svg",
-            alt: "websites",
-            title: "Websites",
+            alt: "Blog and Social updates",
+            title: "Blog and Social updates",
           },
-          innerTitle: "Design Your Presence.",
+          innerTitle:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
         },
         image: {
           url: "/png/design-your-presence.png",
-          alt: "Website with Phone Version",
+          alt: "Lorem Ipsum",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/fingerprint.svg",
-            alt: "Brand Fingerprint",
-            title: "Brand Identity",
+            url: "/icon/website.svg",
+            alt: "Patient Education",
+            title: "Patient Education",
           },
           innerTitle:
-            "Your brand is the most precious component of your marketing.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
         },
         image: {
-          url: "/png/your-brand.png",
-          alt: "Designers Raising a Brand Sign",
+          url: "/png/design-your-presence.png",
+          alt: "Lorem Ipsum",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/smartphone.svg",
-            alt: "Mobile Device",
-            title: "Mobile First",
-          },
-          innerTitle: "Design & developing for maximum impact.",
-          paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
-        },
-        image: {
-          url: "/png/design-for-maximum-impact.png",
-          alt: "Website Displayed on a Mobile Phone",
-        },
-      },
-      {
-        content: {
-          icon: {
-            url: "/icon/speedometer.svg",
-            alt: "A Speedometer",
-            title: "Speed",
+            url: "/icon/website.svg",
+            alt: "Video Education",
+            title: "Video Education",
           },
           innerTitle:
-            "We build websites that will perform your business ranking.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
         },
         image: {
-          url: "/png/lighthouse-result.png",
-          alt: "High-Scoring Speed Test Results for a Website",
-        },
-      },
-      {
-        content: {
-          icon: {
-            url: "/icon/awda.svg",
-            alt: "AwDA Compliance Checkmark List",
-            title: "AwDA Compliant",
-          },
-          innerTitle: "Leave no one behind. AwDa compliant.",
-          paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
-        },
-        image: {
-          url: "/png/awda-accessibility.png",
-          alt: "Accessible Website",
-        },
-      },
-      {
-        content: {
-          icon: {
-            url: "/icon/search-engine.svg",
-            alt: "Online Search Engine",
-            title: "Search Engine Optimization",
-          },
-          innerTitle: "Identify your patients and valuable keywords.",
-          paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
-        },
-        image: {
-          url: "/png/search-result.png",
-          alt: "Search Engine Results with Your Practice In #1",
+          url: "/png/design-your-presence.png",
+          alt: "Lorem Ipsum",
         },
       },
     ]}

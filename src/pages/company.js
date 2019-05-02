@@ -197,17 +197,6 @@ export default props => (
                 </div>
               </div>
             </div>
-            {/* This is working to hold the content, but messing up the Peek - trying it in a col-12 first
-            <div className="col-sm-12">
-              <div className="full-bleed-wrapper">
-                <div className="full-bleed">
-                  <div className="full-bleed-content-wrapper" />
-                  <div className="full-bleed-image">
-                    <TestimonialsSlider />
-                  </div>
-                </div>
-              </div>
-          </div>*/}
           </div>
           <div className="row padded tall-top request-demo-footer">
             <div className="col-sm-6">
