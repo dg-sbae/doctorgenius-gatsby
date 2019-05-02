@@ -48,7 +48,7 @@ const CategoriesPage = ({ data, pageContext }) => {
           <Container>
             <div className="valign-wrapper row">
               <div className="col-sm-5">
-                <div className="hero-content">
+                <div className="hero-content accent-block">
                   <h1>Resources</h1>
                   <h2>
                     The&nbsp;
