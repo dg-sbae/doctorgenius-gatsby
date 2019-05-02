@@ -285,6 +285,52 @@ footer {
   }
 }
 
+nav {
+  .navbar-nav {
+    .dropdown {
+      &.show {
+        .dropdown-menu {
+          &.show {
+            padding: 50px;
+            .dropdown-row {
+              width: 700px;
+              justify-content: space-around;
+              &.dropdown-row:last-child {
+                .dropdown-content-block {
+                  p {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+              img {
+                padding-top: 7px;
+              }
+              .dropdown-content-block {
+                display: inline-block;
+                margin-left: 15px;
+                width: 80%;
+                vertical-align: top;
+                a {
+                  font-size: 14px;
+                  font-weight: $font-weight-medium;
+                }
+                p {
+                  font-size: 12px;
+                  font-weight: $font-weight-light;
+                  margin-top: 5px;
+                }
+              }
+            }
+            // display: flex !important;
+
+            // background-color: white;
+            // width: 500px;
+          }
+        }
+      }
+    }
+  }
+}
 /*
 * Some images from the deisgn have a blurred shadow/background
 * which makes the actual width larger than the dimensions appear.
