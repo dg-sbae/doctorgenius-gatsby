@@ -43,71 +43,91 @@ const OurClientsListLink = props => (
     >
       {props.children}
     </Link>
-    <div className="dropdown-menu">
+    <div className="dropdown-menu caret who-we-serve-dropdown">
       <div className="row">
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <img className="" src={dentalPractices} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={dentalPractices} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Dental Practices
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
             <div className="col-sm-6">
-              <img className="" src={cosmeticSurgeons} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={cosmeticSurgeons} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Cosmetic Surgeons
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <img className="" src={urgentCare} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={urgentCare} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Urgent Care Clinics
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
             <div className="col-sm-6">
-              <img className="" src={healthcareMarketing} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={healthcareMarketing} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Healthcare Marketing
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <img className="" src={ourTech} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={ourTech} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Chiropractor Practices
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
@@ -136,12 +156,16 @@ const MarketingSolutionsListLink = props => (
     >
       {props.children}
     </Link>
-    <div className="dropdown-menu">
+    <div className="dropdown-menu caret marketing-solutions-dropdown">
       <div className="row">
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <img className="" src={responsiveWebsites} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={responsiveWebsites} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Responsive Websites
@@ -153,7 +177,11 @@ const MarketingSolutionsListLink = props => (
               </div>
             </div>
             <div className="col-sm-6">
-              <img className="" src={onlineReputation} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={onlineReputation} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Online Reputation
@@ -167,7 +195,11 @@ const MarketingSolutionsListLink = props => (
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <img className="" src={contentMarketing} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={contentMarketing} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Content Marketing
@@ -179,7 +211,11 @@ const MarketingSolutionsListLink = props => (
               </div>
             </div>
             <div className="col-sm-6">
-              <img className="" src={ourTech} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={ourTech} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Our Technology
@@ -193,7 +229,12 @@ const MarketingSolutionsListLink = props => (
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <img className="" src={digitalAdvertising} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={digitalAdvertising} />
+                </div>
+              </div>
+
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Digital Advertising
@@ -205,7 +246,12 @@ const MarketingSolutionsListLink = props => (
               </div>
             </div>
             <div className="col-sm-6">
-              <img className="" src={hostingSolutions} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={hostingSolutions} />
+                </div>
+              </div>
+
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Hosting Solutions
@@ -235,71 +281,91 @@ const StudySingleListLink = props => (
     >
       {props.children}
     </Link>
-    <div className="dropdown-menu">
+    <div className="dropdown-menu caret resources-dropdown">
       <div className="row">
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <img className="" src={theStudy} />
+              <div className="nav-icon-wrapper">
+                <img className="image-icon" src={theStudy} />
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   The Study
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
             <div className="col-sm-6">
-              <img className="" src={webinars} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={webinars} />
+                </div>
+              </div>
+
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Webinars
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <img className="" src={caseStudy} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={caseStudy} />
+                </div>
+              </div>
+
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Case Studies
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
             <div className="col-sm-6">
-              <img className="" src={info} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={info} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   Knowledge Base
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <img className="" src={ourTech} />
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
+                  <img className="image-icon" src={ourTech} />
+                </div>
+              </div>
               <div className="dropdown-content-block">
                 <Link className="" to={props.to}>
                   eBooks &amp; Whitepapers
                 </Link>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet viverra posuere.
+                  volutpat mi sit amet.
                 </p>
               </div>
             </div>
@@ -332,14 +398,14 @@ export default ({ children }) => (
       >
         <ul className="navbar-nav">
           <MarketingSolutionsListLink
-            className="nav-item dropdown"
+            className="nav-item dropdown marketing-solutions-dropdown"
             dataToggle="dropdown"
             to="/marketing-solutions/"
           >
             Marketing Solutions
           </MarketingSolutionsListLink>
           <OurClientsListLink
-            className="nav-item dropdown"
+            className="nav-item dropdown who-we-serve-dropdown"
             dataToggle="dropdown"
             to="/our-clients/"
           >
@@ -353,7 +419,7 @@ export default ({ children }) => (
             Company
           </ListLink>
           <StudySingleListLink
-            className="nav-item dropdown"
+            className="nav-item dropdown resources-dropdown"
             dataToggle="dropdown"
             to="/the-study/"
           >

@@ -311,7 +311,7 @@ nav {
       &.show {
         .dropdown-menu {
           &.show {
-            padding: 40px;
+            padding: 50px;
             .dropdown-row {
               width: 700px;
               justify-content: space-around;
@@ -337,6 +337,7 @@ nav {
                 p {
                   font-size: 12px;
                   font-weight: $font-weight-light;
+                  margin-top: 5px;
                 }
               }
             }
@@ -348,6 +349,8 @@ nav {
         }
       }
     }
+  }
+}
 /*
 * Some images from the deisgn have a blurred shadow/background
 * which makes the actual width larger than the dimensions appear.
