@@ -252,11 +252,21 @@ nav ul > li > a {
 
 nav {
   font-family: $font-family-body-text;
+  .navbar-nav {
+    a {
+      color: $primary-text;
+      text-decoration: none;
+    }
+  }
 
   .dropdown-menu {
     color: $primary-text;
     a {
       color: inherit;
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
     }
   }
 
