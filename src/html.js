@@ -51,10 +51,10 @@ export default function HTML(props) {
 
                 if (heroBottom <= navBottom) {
 
-                  document.querySelector(".secondary-nav").classList.add("secondary-nav-stuck");
+                  document.querySelector(".secondary-nav-target").classList.add("secondary-nav-stuck");
                   document.querySelector(".hero").classList.add("shift-down");
                 } else {
-                  document.querySelector(".secondary-nav").classList.remove("secondary-nav-stuck");
+                  document.querySelector(".secondary-nav-target").classList.remove("secondary-nav-stuck");
                   document.querySelector(".hero").classList.remove("shift-down");
                 }
               });
