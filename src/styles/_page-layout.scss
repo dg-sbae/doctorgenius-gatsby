@@ -232,6 +232,16 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  transition: height 0.3s, width 5s;
+  &.secondary-nav-stuck {
+    position: fixed;
+    top: 80px;
+    z-index: 100;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    height: 115px;
+  }
   &.scrolled {
     height: 115px;
   }
@@ -272,6 +282,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  &.shift-down {
+    padding-top: 190px;
+  }
   &:after {
     display: block;
     content: "";
