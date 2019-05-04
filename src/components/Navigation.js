@@ -394,66 +394,166 @@ class Navigation extends Component {
       $(".dropdown-heading").click(function(event) {
         event.stopPropagation()
       })
+      $(".dropdown-menu")
+      // $("#sidebar").mCustomScrollbar({
+      //   theme: "minimal",
+      // })
+
+      $("#dismiss, .overlay").on("click", function() {
+        // hide sidebar
+        $("#sidebar").removeClass("active")
+        // hide overlay
+        $(".overlay").removeClass("active")
+      })
+
+      $("#sidenav-trigger").on("click", function() {
+        // open sidebar
+        console.log("clicked the sidebar button")
+        $("#sidebar").addClass("active")
+        // fade in the overlay
+        $(".overlay").addClass("active")
+        $(".collapse.in").toggleClass("in")
+        $("a[aria-expanded=true]").attr("aria-expanded", "false")
+      })
     })
   }
   render() {
     return (
-      <nav className="navbar navbar-expand-md fixed-top">
-        <Container>
-          <div className="logo">
-            <Link to="/">
-              <div className="navbar-brand logo-holder" />
-            </Link>
+      <div className="navigation-wrapper">
+        <nav id="sidebar">
+          <div id="dismiss">
+            <span class="dismiss-icon" />
           </div>
 
-          <div
-            className="main-links collapse navbar-collapse"
-            id="navbarSupportedContent"
-          >
-            <ul className="navbar-nav">
-              <MarketingSolutionsListLink
-                className="nav-item dropdown marketing-solutions-dropdown"
-                dataToggle="dropdown"
-                to="/marketing-solutions/"
-              >
-                Marketing Solutions
-              </MarketingSolutionsListLink>
-              <OurClientsListLink
-                className="nav-item dropdown who-we-serve-dropdown"
-                dataToggle="dropdown"
-                to="/our-clients/"
-              >
-                Who We Serve
-              </OurClientsListLink>
+          <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+          </div>
 
-              <ListLink className="" to="/plans/">
-                Plans
-              </ListLink>
-              <ListLink className="" to="/company/">
-                Company
-              </ListLink>
-              <StudySingleListLink
-                className="nav-item dropdown resources-dropdown"
-                dataToggle="dropdown"
-                to="/the-study/"
+          <ul class="list-unstyled components">
+            <p>Dummy Heading</p>
+            <li class="active">
+              <a
+                href="#homeSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
               >
-                Resources
-              </StudySingleListLink>
-            </ul>
-          </div>
-          <div className="contact-links">
-            <ul>
-              <ListLink to="/">
-                <img src={phone} alt="Phone" className="phone" />
-                877.477.2311
-              </ListLink>
-              <ListLink to="/contact" className="button flat transparent">
-                Free Demo
-              </ListLink>
-            </ul>
-          </div>
-        </Container>
-      </nav>
+                Home
+              </a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                  <a href="#">Home 1</a>
+                </li>
+                <li>
+                  <a href="#">Home 2</a>
+                </li>
+                <li>
+                  <a href="#">Home 3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">About</a>
+              <a
+                href="#pageSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+              >
+                Pages
+              </a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                  <a href="#">Page 1</a>
+                </li>
+                <li>
+                  <a href="#">Page 2</a>
+                </li>
+                <li>
+                  <a href="#">Page 3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="overlay" />
+        <nav className="navbar navbar-default navbar-expand-md fixed-top">
+          <Container>
+            {/*<button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fas fa-align-left" />
+              <span>Toggle Sidebar</span>
+    </button>*/}
+            <button
+              class="navbar-toggler"
+              id="sidenav-trigger"
+              type="button"
+              data-toggle="collapse"
+              // data-target="#navbarSupportedContent"
+              // aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon" />
+            </button>
+            <div className="logo">
+              <Link to="/">
+                <div className="navbar-brand logo-holder" />
+              </Link>
+            </div>
+
+            <div
+              className="main-links collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav">
+                <MarketingSolutionsListLink
+                  className="nav-item dropdown marketing-solutions-dropdown"
+                  dataToggle="dropdown"
+                  to="/marketing-solutions/"
+                >
+                  Marketing Solutions
+                </MarketingSolutionsListLink>
+                <OurClientsListLink
+                  className="nav-item dropdown who-we-serve-dropdown"
+                  dataToggle="dropdown"
+                  to="/our-clients/"
+                >
+                  Who We Serve
+                </OurClientsListLink>
+
+                <ListLink className="" to="/plans/">
+                  Plans
+                </ListLink>
+                <ListLink className="" to="/company/">
+                  Company
+                </ListLink>
+                <StudySingleListLink
+                  className="nav-item dropdown resources-dropdown"
+                  dataToggle="dropdown"
+                  to="/the-study/"
+                >
+                  Resources
+                </StudySingleListLink>
+              </ul>
+            </div>
+            <div className="contact-links">
+              <ul>
+                <ListLink to="/">
+                  <img src={phone} alt="Phone" className="phone" />
+                  877.477.2311
+                </ListLink>
+                <ListLink to="/contact" className="button flat transparent">
+                  Free Demo
+                </ListLink>
+              </ul>
+            </div>
+          </Container>
+        </nav>
+      </div>
     )
   }
 }
