@@ -391,9 +391,7 @@ const StudySingleListLink = props => (
 class Navigation extends Component {
   componentDidMount() {
     $(document).ready(function() {
-      console.log("document ready")
       $(".dropdown-heading").click(function(event) {
-        console.log("dropdown heading ready")
         event.stopPropagation()
       })
     })

@@ -16,15 +16,26 @@ export default function HTML(props) {
           src="https://code.jquery.com/jquery-3.3.1.min.js"
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           crossOrigin="anonymous"
-          // src="../node_modules/jquery/dist/jquery.min.js"
+          // src="../static/scripts/jquery.min.js"
         />
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
 
             document.addEventListener("DOMContentLoaded", function() {
               document.addEventListener("scroll", function(e) {
+
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = winScroll / height;
+                var navBottom = document.querySelector("nav.navbar").getBoundingClientRect().bottom;
+                var secondaryNavTop = document.querySelector(".secondary-nav").getBoundingClientRect().top;
+                var heroBottom = document.querySelector('.hero').getBoundingClientRect().bottom;
+                console.log(navBottom);
+                console.log(secondaryNavTop);
+                
+                
                 if (winScroll >= 100 && winScroll < 200) {
                   document.querySelector("nav.navbar").classList.add("main-navbar-stuck");
                   document.querySelector("nav.navbar").classList.add("stuck-midway");
@@ -36,6 +47,15 @@ export default function HTML(props) {
                 } else {
                   document.querySelector("nav.navbar").classList.remove("main-navbar-stuck");
                   document.querySelector("nav.navbar").classList.remove("stuck-midway");
+                }
+
+                if (heroBottom <= navBottom) {
+
+                  document.querySelector(".secondary-nav-target").classList.add("secondary-nav-stuck");
+                  document.querySelector(".hero").classList.add("shift-down");
+                } else {
+                  document.querySelector(".secondary-nav-target").classList.remove("secondary-nav-stuck");
+                  document.querySelector(".hero").classList.remove("shift-down");
                 }
               });
             })
