@@ -3,7 +3,7 @@
 
 .homepage {
   .hero {
-    height: 690px;
+    height: 707px;
     background-image: url("/hero/homepage-option-1.png");
     &:after {
       height: 12px;
@@ -79,8 +79,8 @@
         .accented-paragraph {
           margin-left: 23px;
           p {
+            line-height: 1.6;
             font-family: "Roboto", sans-serif; /* this may be an error, all other hero > p's use Agenda*/
-            font-size: 17.5px;
             &:before {
               width: 5px;
               margin-left: -20px;

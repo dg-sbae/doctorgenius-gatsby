@@ -31,7 +31,7 @@ Paragragh (accented paragraph): 17 (home), 16 (non-home)
     letter-spacing: -0.5px;
   }
   h#{$headingNum}:not(.m-0) {
-    margin-bottom: $content-block-heading-margin;
+    /* margin-bottom: $content-block-heading-margin;*/
   }
 }
 
@@ -162,7 +162,10 @@ nav ul > li > a {
       margin-bottom: 20px;
     }
     p {
+      font-size: 1.1875rem;
       font-family: "Agenda";
+      line-height: 1.4;
+      font-weight: $font-weight-light;
     }
   }
 }
