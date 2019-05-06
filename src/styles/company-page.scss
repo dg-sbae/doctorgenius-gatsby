@@ -1,6 +1,9 @@
 .company {
   .hero {
     background-image: url("/hero/about-us-hero.jpg");
+    h2 {
+      margin-bottom: 20px;
+    }
     .hero-content {
       width: 490px;
       height: 280px;

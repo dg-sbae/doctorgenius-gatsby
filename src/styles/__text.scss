@@ -142,13 +142,12 @@ nav ul > li > a {
   color: #fff;
 }
 
-.homepage {
-  .hero {
-    .accent-block {
-      h1 {
-        font-size: $homepage-h1-font-size;
-      }
-    }
+@mixin heading-font() {
+  font-family: "Agenda";
+  font-weight: $font-weight-semibold;
+  line-height: 0.9;
+  span {
+    font-weight: $font-weight-thin;
   }
 }
 
@@ -159,41 +158,12 @@ nav ul > li > a {
     }
     h2 {
       font-size: $h2-font-size;
-      line-height: 0.9;
-      font-weight: 300;
-      span {
-        font-weight: 500;
-      }
+      @include heading-font;
+      margin-bottom: 20px;
     }
     p {
       font-family: "Agenda";
     }
-  }
-}
-
-.homepage {
-  .hero {
-    .accent-block {
-      h1 {
-        font-size: $homepage-h1-font-size;
-        margin-bottom: 27.5px;
-        background: none;
-        display: inline-block;
-      }
-    }
-  }
-  .accent-block {
-    .accented-paragraph {
-      p {
-        &:before {
-          background-color: $homepage-secondary-accent;
-        }
-      }
-    }
-  }
-
-  .panel p:not(.panel-heading) {
-    font-size: $font-size-normal-text;
   }
 }
 

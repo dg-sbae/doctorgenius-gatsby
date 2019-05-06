@@ -21,7 +21,7 @@ export default props => (
                 <div className="hero-content accent-block">
                   <h1>Company</h1>
                   <h2>
-                    What <span>we are about</span>
+                    <span>What </span>we are about
                   </h2>
                   <div className="accented-paragraph">
                     <p>

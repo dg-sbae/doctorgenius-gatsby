@@ -1,4 +1,120 @@
+@import "_site-variables";
+@import "_text.scss";
+
 .homepage {
+  .hero {
+    height: 690px;
+    background-image: url("/hero/homepage-option-1.png");
+    &:after {
+      height: 12px;
+    }
+    .hero-content {
+      width: 690px;
+      height: 350px;
+      align-self: flex-start;
+      h1 {
+        @include heading-font;
+        padding: initial;
+        font-size: $homepage-h1-font-size;
+        margin-bottom: 27.5px;
+        background: none;
+        display: block;
+      }
+      .accent-block {
+        position: relative;
+        background: transparent;
+        .border-horizontal {
+          width: 14px;
+          position: absolute;
+
+          &.border-top-left {
+            border-top: 4px solid #fff;
+            top: 0;
+            left: 0;
+          }
+
+          &.border-top-right {
+            border-top: 4px solid #fff;
+            top: 0;
+            right: 0;
+          }
+
+          &.border-bottom-left {
+            border-bottom: 4px solid #fff;
+            bottom: 0;
+            left: 0;
+          }
+
+          &.border-bottom-right {
+            border-bottom: 4px solid #fff;
+            bottom: 0;
+            right: 0;
+          }
+        }
+        .border-vertical {
+          height: 14px;
+          position: absolute;
+          &.border-left-top {
+            border-left: 4px solid #fff;
+            top: 0;
+            left: 0;
+          }
+          &.border-right-top {
+            border-right: 4px solid #fff;
+            top: 0;
+            right: 0;
+          }
+          &.border-left-bottom {
+            border-left: 4px solid #fff;
+            bottom: 0;
+            left: 0;
+          }
+          &.border-right-bottom {
+            border-right: 4px solid #fff;
+            bottom: 0;
+            right: 0;
+          }
+        }
+
+        .accented-paragraph {
+          margin-left: 23px;
+          p {
+            font-family: "Roboto", sans-serif; /* this may be an error, all other hero > p's use Agenda*/
+            font-size: 17.5px;
+            &:before {
+              width: 5px;
+              margin-left: -20px;
+              background-color: $homepage-secondary-accent;
+            }
+          }
+        }
+      }
+      .demo-cta {
+        margin-top: 45px;
+        margin-left: 55px;
+
+        a {
+          text-transform: uppercase;
+          background: #003e6e;
+          height: 45px;
+          width: 177px;
+          padding: 10px;
+          border-radius: 3px;
+          margin-left: 10px;
+          margin-right: 5px;
+          font-weight: 600;
+          letter-spacing: 0.25px;
+          img {
+            padding-right: 5px;
+            padding-left: 15px;
+          }
+          &:hover {
+            color: lightblue;
+          }
+        }
+      }
+    }
+  }
   .blur-bleed {
     /* homepage images are slightly larger, meaning they should bleed slightly less */
     max-width: 120%;
@@ -9,6 +125,9 @@
     background: url("../img/full-bleed-bg-slanted.png") 50% 50% no-repeat;
     height: 800px;
     background-position: 46% center;
+  }
+  .panel p:not(.panel-heading) {
+    font-size: $font-size-normal-text;
   }
 
   &.v2 {
@@ -21,118 +140,6 @@
     }
     .accent-block * {
       border: none !important;
-    }
-  }
-  .hero {
-    height: 690px;
-    background-image: url("/hero/homepage-option-1.png");
-    &:after {
-      height: 12px;
-    }
-    .hero-content {
-      width: 690px;
-      height: 350px;
-      align-self: flex-start;
-      h1 {
-        line-height: 0.9;
-        padding: initial;
-      }
-      .accented-paragraph {
-        margin-left: 23px;
-        p {
-          font-family: "Roboto", sans-serif; /* this may be an error, all other hero > p's use Agenda*/
-          font-size: 17.5px;
-          &:before {
-            width: 5px;
-            margin-left: -20px;
-          }
-        }
-      }
-    }
-    .demo-cta {
-      margin-top: 45px;
-      margin-left: 55px;
-
-      a {
-        text-transform: uppercase;
-        background: #003e6e;
-        height: 45px;
-        width: 177px;
-        padding: 10px;
-        border-radius: 3px;
-        margin-left: 10px;
-        margin-right: 5px;
-        font-weight: 600;
-        letter-spacing: 0.25px;
-        img {
-          padding-right: 5px;
-          padding-left: 15px;
-        }
-        &:hover {
-          color: lightblue;
-        }
-      }
-    }
-    .accent-block {
-      position: relative;
-      background: transparent;
-      .border-horizontal {
-        width: 14px;
-        position: absolute;
-
-        &.border-top-left {
-          border-top: 4px solid #fff;
-          top: 0;
-          left: 0;
-        }
-
-        &.border-top-right {
-          border-top: 4px solid #fff;
-          top: 0;
-          right: 0;
-        }
-
-        &.border-bottom-left {
-          border-bottom: 4px solid #fff;
-          bottom: 0;
-          left: 0;
-        }
-
-        &.border-bottom-right {
-          border-bottom: 4px solid #fff;
-          bottom: 0;
-          right: 0;
-        }
-      }
-
-      .border-vertical {
-        height: 14px;
-        position: absolute;
-
-        &.border-left-top {
-          border-left: 4px solid #fff;
-          top: 0;
-          left: 0;
-        }
-
-        &.border-right-top {
-          border-right: 4px solid #fff;
-          top: 0;
-          right: 0;
-        }
-
-        &.border-left-bottom {
-          border-left: 4px solid #fff;
-          bottom: 0;
-          left: 0;
-        }
-
-        &.border-right-bottom {
-          border-right: 4px solid #fff;
-          bottom: 0;
-          right: 0;
-        }
-      }
     }
   }
 }

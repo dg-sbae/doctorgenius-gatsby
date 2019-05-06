@@ -13,7 +13,7 @@ export default () => (
             alt: "websites",
             title: "Websites",
           },
-          innerTitle: "Design Your Presence.",
+          innerTitle: "Design that leaves a lasting impression.",
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
         },
