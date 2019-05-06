@@ -29,12 +29,14 @@ export default function HTML(props) {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
                 const scrolled = winScroll / height;
-                var navBottom = document.querySelector("nav.navbar").getBoundingClientRect().bottom;
-                var secondaryNavTop = document.querySelector(".secondary-nav").getBoundingClientRect().top;
-                var heroBottom = document.querySelector('.hero').getBoundingClientRect().bottom;
-                console.log(navBottom);
-                console.log(secondaryNavTop);
-                
+
+                if (typeof(document.querySelector(".secondary-nav")) !== 'undefined' && document.querySelector(".secondary-nav") !== null) {
+                  var navBottom = document.querySelector("nav.navbar").getBoundingClientRect().bottom;
+                  var secondaryNavTop = document.querySelector(".secondary-nav").getBoundingClientRect().top;
+                  var heroBottom = document.querySelector('.hero').getBoundingClientRect().bottom;
+                  console.log(navBottom);
+                  console.log(secondaryNavTop);
+                }
                 
                 if (winScroll >= 100 && winScroll < 200) {
                   document.querySelector("nav.navbar").classList.add("main-navbar-stuck");
@@ -49,13 +51,14 @@ export default function HTML(props) {
                   document.querySelector("nav.navbar").classList.remove("stuck-midway");
                 }
 
-                if (heroBottom <= navBottom) {
-
-                  document.querySelector(".secondary-nav-target").classList.add("secondary-nav-stuck");
-                  document.querySelector(".hero").classList.add("shift-down");
-                } else {
-                  document.querySelector(".secondary-nav-target").classList.remove("secondary-nav-stuck");
-                  document.querySelector(".hero").classList.remove("shift-down");
+                if (typeof(document.querySelector(".secondary-nav")) !== 'undefined' && document.querySelector(".secondary-nav") !== null) {
+                  if (heroBottom <= navBottom) {
+                    document.querySelector(".secondary-nav-target").classList.add("secondary-nav-stuck");
+                    document.querySelector(".hero").classList.add("shift-down");
+                  } else {
+                    document.querySelector(".secondary-nav-target").classList.remove("secondary-nav-stuck");
+                    document.querySelector(".hero").classList.remove("shift-down");
+                  }
                 }
               });
             })
