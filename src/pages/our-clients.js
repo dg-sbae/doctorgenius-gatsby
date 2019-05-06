@@ -19,7 +19,9 @@ export default props => (
             <div className="col-sm-12">
               <div className="hero-content accent-block">
                 <h1>Dentistry Practices</h1>
-                <h2>Engage and Convert More Patients to Your Practice</h2>
+                <h2>
+                  <span>Engage and Convert More</span> Patients to Your Practice
+                </h2>
                 <div className="accented-paragraph">
                   <p>
                     Doctor Genius provides digital marketing solutions by

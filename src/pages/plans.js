@@ -24,12 +24,8 @@ export default props => (
               <div className="hero-content accent-block">
                 <h1>Our Plans</h1>
                 <h2>
-                  Solution To Your
-                  <span className="font-weight-semibold">
-                    {" "}
-                    Online Marketing{" "}
-                  </span>
-                  Needs
+                  <span>Solution To Your</span> Online Marketing{" "}
+                  <span>Needs</span>
                 </h2>
                 <div className="accented-paragraph">
                   <p>

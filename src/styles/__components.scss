@@ -36,10 +36,9 @@
   padding: 2rem;
   color: $primary-text;
   h1 {
-    font-size: $h1-font-size;
     background: $secondary;
-    display: inline;
-    padding: 2px 12px;
+    display: inline-block;
+    padding: 5px 15px;
   }
 }
 

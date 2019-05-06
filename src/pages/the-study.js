@@ -53,8 +53,7 @@ export default function({ data }) {
                 <div className="hero-content accent-block">
                   <h1>Resources</h1>
                   <h2>
-                    The&nbsp;
-                    <span>Study</span>
+                    <span>The</span> Study
                   </h2>
                   <div className="accented-paragraph">
                     <p>

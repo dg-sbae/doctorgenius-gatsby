@@ -18,7 +18,7 @@ import "../styles/global-styles.scss"
 export default props => {
   /* These will likely need to be dynamic props */
   const pageTitle = "Responsive Websites"
-  const pageSubtitle = "Design that leaves a lasting impression."
+  const pageSubtitle = "<span>Design that leaves a lasting</span> impression."
   const pageIntro =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Lorem ipsum dolor sit amet, con."
 
@@ -39,7 +39,7 @@ export default props => {
               <div className="col-sm-12">
                 <div className="hero-content accent-block">
                   <h1>{pageTitle}</h1>
-                  <h2>{pageSubtitle}</h2>
+                  <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
                   <div className="accented-paragraph">
                     <p>{pageIntro}</p>
                   </div>

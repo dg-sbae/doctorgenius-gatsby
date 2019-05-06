@@ -29,7 +29,7 @@ export default props => (
               <div className="hero-content accent-block">
                 <h1>Marketing Solutions</h1>
                 <h2>
-                  Predictable <span>Practice Growth Solution</span>
+                  <span>Predictable</span> Practice Growth Solution
                 </h2>
                 <div className="accented-paragraph">
                   <p>

@@ -1,13 +1,13 @@
 .company {
   .hero {
     background-image: url("/hero/about-us-hero.jpg");
+    h2 {
+      margin-bottom: 20px;
+    }
     .hero-content {
-      width: 490px;
+      width: 514px;
       height: 280px;
       margin-top: 90px;
-      p {
-        width: 90%;
-      }
     }
   }
   .icon-wrapper {
