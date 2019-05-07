@@ -15,17 +15,15 @@
 
   .icon-strapline {
     img {
+      max-width: 25px;
     }
     p {
-      font-family: "Roboto";
-      font-size: 14px;
       color: $primary;
       display: inline;
     }
     & + .inner-title {
       h2 {
         margin-bottom: 10px;
-        font-size: 40px;
       }
       & + .accented-paragraph p {
         color: #797979;

@@ -223,13 +223,6 @@ header {
         }
         li {
           list-style-type: none;
-          font-weight: $font-weight-normal;
-
-          // Need to change this styling
-          .active {
-            color: $primary-text;
-            font-weight: $font-weight-medium;
-          }
         }
       }
     }
@@ -290,15 +283,19 @@ footer {
     //   position: absolute;
     //   bottom: 0;
     // }
-    .panel.active:after {
-      background: url(http://localhost:8000/svg/secondary-nav-indicator.svg);
-      content: "";
-      display: block;
-      background-size: contain;
-      width: 107%;
-      margin-top: -5px;
-      height: 8px;
-      background-repeat: no-repeat;
+    .panel.active {
+      margin-top: 35px;
+
+      &:after {
+        background: url(http://localhost:8000/svg/secondary-nav-indicator.svg);
+        content: "";
+        display: block;
+        background-size: contain;
+        width: 107%;
+        margin-top: 5px;
+        height: 8px;
+        background-repeat: no-repeat;
+      }
     }
   }
 
@@ -324,11 +321,6 @@ footer {
       .icon-wrapper {
         width: 77px;
         height: 50px;
-      }
-
-      .panel.active:after {
-        margin-top: -10px;
-        height: 7px;
       }
     }
   }

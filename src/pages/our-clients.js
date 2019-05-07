@@ -110,7 +110,7 @@ export default props => (
           <div className="row padded">
             <div className="col-sm-9 offset-sm-1">
               <div className="content-block">
-                <div className="inner-title center">
+                <div className="inner-title center thin-heading">
                   <h3 className="strapline">Marketing Performance</h3>
                   <h2 className="underline">
                     <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better
@@ -263,7 +263,10 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row padded tall-top request-demo-footer">
+          <div className="row padded">
+            <div className="col-sm-12" />
+          </div>
+          {/*<div className="row padded tall-top request-demo-footer">
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">
@@ -298,7 +301,7 @@ export default props => (
                 alt="Device Screens"
               />
             </div>
-          </div>
+          </div>*/}
         </Container>
       </Main>
     </div>
