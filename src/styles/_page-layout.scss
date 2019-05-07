@@ -13,7 +13,7 @@ body {
 header {
   position: fixed;
   height: 120px;
-  z-index: 9999;
+  z-index: 500;
   &,
   & .container-fluid {
     width: 100%;
@@ -22,22 +22,44 @@ header {
     display: block;
     .logo-holder {
       background-image: url(/png/logo-white.png);
+      background-size: contain;
       height: 40px;
       max-height: 100%;
       width: 100%;
       background-repeat: no-repeat;
+      background-position: center;
       vertical-align: middle;
+    }
+  }
+  .phone > a {
+    display: block;
+    .phone-holder {
+      /* phone holder and image holder should be refactored to operate the same way/same markup */
+      background-image: url(/png/phone-white.png);
+      background-size: contain;
+      height: 25px;
+      width: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+      vertical-align: bottom;
+      display: inline-block;
     }
   }
   nav {
     height: 120px;
     display: flex;
     transition: all 0.3s;
-
+    .nav-button {
+      border-color: white;
+    }
     a {
       transition: all 0.3s;
     }
-
+    ul {
+      &.navbar-nav {
+        position: relative;
+      }
+    }
     &.navbar {
       position: relative;
       @include media("<=tablet") {
@@ -58,15 +80,8 @@ header {
       }
 
       &.main-navbar-stuck {
-        .logo-holder {
-          background-image: url(/png/logo-blue.png);
-        }
-        // border-bottom: $grid-border 1px solid;
         box-shadow: 0 1px 1px $grid-border;
-        // transition: all 1s;
         background-color: #fff;
-        // height: 80px;
-
         &.stuck-midway {
           height: 100px;
 
@@ -74,7 +89,6 @@ header {
             top: 58px;
           }
         }
-
         &.stuck-fully {
           height: 80px;
 
@@ -82,44 +96,44 @@ header {
             top: 48px;
           }
         }
-
-        .active {
-          color: $primary;
-        }
         a {
           color: $demo-body-text;
         }
+        .logo-holder {
+          background-image: url(/png/logo-blue.png);
+        }
+        .phone-holder {
+          background-image: url(/png/phone-blue.png);
+        }
+        .nav-button {
+          border-color: $primary;
+        }
+        .active {
+          color: $primary;
+        }
+
         .contact-links {
           a {
             color: $primary;
           }
         }
-
         .dropdown-menu {
           a {
             color: $primary-text;
           }
         }
       }
-
-      ul {
-        &.navbar-nav {
-          position: relative;
-        }
-      }
-
       .contact-links {
         @include media("<=tablet") {
           display: none;
         }
       }
-
       .dropdown {
         display: inline-block;
         position: static;
       }
-
       .dropdown-menu {
+        z-index: 150;
         left: -85px;
         // right: 30%;
         transition: all 0.3s;
@@ -129,12 +143,10 @@ header {
         // transform: translateX(-50%);
         // margin-right: auto;
         // margin-left: auto;
-
         .nav-icon-wrapper {
           display: inline-block;
           width: 38px;
         }
-
         &:after {
           content: "";
           position: absolute;
@@ -143,7 +155,6 @@ header {
           border-left: 9px solid transparent;
           border-right: 9px solid transparent;
         }
-
         &.marketing-solutions-dropdown {
           &.show {
             &:after {
@@ -151,7 +162,6 @@ header {
             }
           }
         }
-
         &.who-we-serve-dropdown {
           &.show {
             &:after {
@@ -159,7 +169,6 @@ header {
             }
           }
         }
-
         &.resources-dropdown {
           &.show {
             &:after {
@@ -167,16 +176,8 @@ header {
             }
           }
         }
-
         .dropdown-content-block {
           margin-left: 18px;
-        }
-
-        .dropdown-row {
-          // display: block;
-          .col-sm-6 {
-            // display: inline-block;
-          }
         }
       }
     }
@@ -247,9 +248,6 @@ footer {
 }
 /* Secondary Header is the large icon navigation which affixes to the top of the main header on scroll */
 .secondary-nav-target {
-  // position: fixed;
-  // z-index: 100;
-  // left: 0;
   width: 100%;
   max-width: 100%;
   height: 190px;
@@ -444,7 +442,7 @@ footer {
   right: -412px;
   display: block;
   /* top layer */
-  z-index: 9999;
+  z-index: 900;
   transition: right 0.7s;
   background-image: linear-gradient(
     to right,

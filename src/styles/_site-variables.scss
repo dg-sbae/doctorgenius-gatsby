@@ -70,7 +70,7 @@ $font-family-inner-block-subtext: muli, sans-serif;
 
 // Standard font sizes
 $font-size-base: 1rem !default; /* 16px */
-$font-size-normal-text: $font-size-base * 1.0625; /* 1.125 = 18px */ /* 1.0625 = 17 */ /* 1 = 16 */
+$font-size-normal-text: $font-size-base * 1.0625; /* 1.125 = 18px */ /* 1.0625 = 17 */ /* 1 = 16 */ /* .9375 */ /* .875 = 14 */
 $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * 0.875 !default;
 
@@ -89,9 +89,9 @@ $h2-font-size-main: $font-size-base * 2.8125;
 $h3-font-size: $font-size-base * 1.25 !default;
 
 // Navigation
-$font-size-nav-main-links: $font-size-base * 0.9;
+$font-size-nav-main-links: $font-size-base * 0.875;
 $font-size-nav-dropdown-body: $font-size-base * 0.75;
-$font-size-nav-contact-links: $font-size-base * 0.875;
+$font-size-nav-contact-links: $font-size-base * 0.9375;
 
 // Footer
 $font-size-subfooter: $font-size-base * 0.75;

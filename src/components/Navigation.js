@@ -542,11 +542,14 @@ class Navigation extends Component {
             </div>
             <div className="contact-links">
               <ul>
-                <ListLink to="/">
-                  <img src={phone} alt="Phone" className="phone" />
+                <ListLink className="phone" to="/">
+                  <div className="phone phone-holder" />
                   877.477.2311
                 </ListLink>
-                <ListLink to="/contact" className="button flat transparent">
+                <ListLink
+                  to="/contact"
+                  className="button nav-button transparent"
+                >
                   Free Demo
                 </ListLink>
               </ul>
