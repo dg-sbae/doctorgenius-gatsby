@@ -13,7 +13,7 @@ export default () => (
             alt: "websites",
             title: "Websites",
           },
-          innerTitle: "Design that leaves a lasting impression.",
+          innerTitle: "Design Your Presence.",
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
         },
@@ -63,7 +63,7 @@ export default () => (
             title: "Speed",
           },
           innerTitle:
-            "We build websites that will perform your business ranking.",
+            "We build websites <br> that will perform your business ranking.",
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
         },
@@ -79,7 +79,7 @@ export default () => (
             alt: "AwDA Compliance Checkmark List",
             title: "AwDA Compliant",
           },
-          innerTitle: "Leave no one behind. AwDa compliant.",
+          innerTitle: "Leave no one behind.<br> AwDa compliant.",
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
         },

@@ -7,7 +7,6 @@
   }
   a {
     cursor: pointer;
-    font-size: $font-size-normal-text; /* We should move this into text */
   }
 
   h2.underline {
@@ -46,6 +45,7 @@
 .accented-paragraph {
   margin-left: 15px;
   p {
+    margin-bottom: 1rem;
     &.medium-width {
       /* this may be better suited for a column, just a test */
       width: 80%;
@@ -63,6 +63,10 @@
         position: absolute;
       }
     }
+  }
+  .link-with-icon {
+    display: block;
+    margin-top: 40px;
   }
 }
 
@@ -86,6 +90,10 @@
     max-height: 100%;
     object-fit: contain;
   }
+}
+.link-with-icon {
+  display: block;
+  margin-top: 20px;
 }
 .link-icon {
   margin-right: 10px;
@@ -140,9 +148,8 @@
   background-color: $primary;
   text-align: center;
   &.flat {
-    padding: 0.5em;
-    margin: auto;
-    border-radius: 5px;
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
     &.transparent {
       background: none;
       border: 1px solid;
@@ -223,7 +230,7 @@ footer {
       ul {
         margin-bottom: 0;
         li {
-          margin-bottom: 18px;
+          margin-bottom: 15px;
           list-style-type: none;
         }
 

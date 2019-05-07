@@ -167,8 +167,15 @@ export default props => (
                     12 Months Duration
                   </p>
                   <div className="callout-link">
-                    <a href="/our-clients/">
-                      <i className="fa fa-arrow-right" />
+                    <a
+                      href="/our-clients/"
+                      className="link-with-icon font-weight-semibold"
+                    >
+                      <img
+                        src="/icon/right-arrow-blue.svg"
+                        className="link-icon"
+                        alt="Icon of a Right Arrow"
+                      />
                       Learn More
                     </a>
                   </div>

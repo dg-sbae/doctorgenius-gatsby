@@ -133,7 +133,7 @@ export default props => (
                 <div className="inner-title">
                   <h2>Proven and tested results in every step of the way</h2>
                   <div className="accented-paragraph">
-                    <p className="m-thin">
+                    <p className="s-thin">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Nunc dui turpis, sodales ut mollis quis, ullamcorper a
                       metus
@@ -173,7 +173,7 @@ export default props => (
                 <div className="inner-title">
                   <h2>All the tools you'll need to be in control. </h2>
                   <div className="accented-paragraph">
-                    <p className="m-thin">
+                    <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Nunc dui turpis, sodales ut mollis quis, ullamcorper a
                       metus
@@ -239,7 +239,7 @@ export default props => (
                     with Doctor Genius today!
                   </h2>
                   <div className="accented-paragraph">
-                    <p className="s-thin">
+                    <p>
                       The Genius platform makes every part of your company
                       process more efficient. Our support team is very excited
                       to help you and get your company on the right path of

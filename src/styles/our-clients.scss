@@ -19,10 +19,17 @@
       width: 84%;
     }
   }
+  .thin-heading {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
   .inner-title {
     .subtitle {
       font-size: 29px;
     }
+  }
+  .content-block .accented-paragraph p {
+    margin-bottom: 2rem;
   }
   .case-study-container {
     h3 {

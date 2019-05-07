@@ -1,5 +1,7 @@
 @import "_site-variables";
-@import "_text.scss";
+
+// Homepage specific
+$homepage-h1-font-size: $font-size-base * 5.0625;
 
 .homepage {
   .hero {
@@ -128,6 +130,8 @@
   }
   .panel p:not(.panel-heading) {
     font-size: $font-size-normal-text;
+    width: 60%;
+    color: black;
   }
 
   &.v2 {

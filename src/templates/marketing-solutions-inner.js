@@ -191,19 +191,32 @@ export default props => {
                         className="link-icon"
                         alt={row.content.icon.alt}
                       />
-                      <p>{row.content.icon.title}</p>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: row.content.icon.title,
+                        }}
+                      />
                     </div>
                     <div className="inner-title">
-                      <h2>{row.content.innerTitle}</h2>
+                      <h2
+                        dangerouslySetInnerHTML={{
+                          __html: row.content.innerTitle,
+                        }}
+                      />
                     </div>
                     <div className="accented-paragraph">
-                      <p>{row.content.paragraph}</p>
+                      <p
+                        className="s-thin"
+                        dangerouslySetInnerHTML={{
+                          __html: row.content.paragraph,
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
                 <div class={(index % 2 ? "order-sm-2" : "") + " col-sm-5"}>
                   <img
-                    className="img-responsive blur-bleed"
+                    className="img-responsive"
                     src={row.image.url}
                     alt={row.image.alt}
                   />

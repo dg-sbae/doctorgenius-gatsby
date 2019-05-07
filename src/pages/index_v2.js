@@ -250,7 +250,7 @@ export default ({ data }, props) => (
                     with Doctor Genius today!
                   </h2>
                   <div className="accented-paragraph">
-                    <p className="s-thin">
+                    <p>
                       The Genius platform makes every part of your company
                       process more efficient. Our support team is very excited
                       to help you and get your company on the right path of

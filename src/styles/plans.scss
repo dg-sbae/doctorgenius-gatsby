@@ -1,4 +1,7 @@
 @import "_site-variables.scss";
+// Plans Grid
+$font-size-plans-row-heading: $font-size-base * 0.8125;
+
 .plans {
   .hero {
     height: 690px;
