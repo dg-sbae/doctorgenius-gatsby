@@ -1,9 +1,4 @@
 /* Background Colors - Anything with the solid background. Color rules only */
-.accent-block .accentedParagraph p:before {
-  background-color: $secondary;
-}
-
-.accentedParagraph p:before,
 .accented-paragraph p:before {
   background-color: $primary;
 }
