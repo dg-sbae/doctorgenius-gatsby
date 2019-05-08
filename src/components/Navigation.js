@@ -20,6 +20,15 @@ import healthcareMarketing from "../../public/icon/sphygmomanometer.svg"
 import caseStudy from "../../public/icon/briefcase.svg"
 import webinars from "../../public/icon/television.svg"
 import theStudy from "../../public/icon/the-study-white.svg"
+import house from "../../public/icon/house.svg"
+import marketingSolutions from "../../public/icon/statistics.svg"
+import ourClients from "../../public/icon/our-clients.svg"
+import plans from "../../public/icon/pricing.svg"
+import company from "../../public/icon/hotel.svg"
+import resources from "../../public/icon/resources.svg"
+import freeDemo from "../../public/icon/video-options.svg"
+import contact from "../../public/icon/email.svg"
+import downArrow from "../../public/icon/down-arrow.svg"
 
 import "../styles/global-styles.scss"
 import "bootstrap/dist/js/bootstrap.min.js"
@@ -31,6 +40,194 @@ const ListLink = props => (
       {props.children}
     </Link>
     {}
+  </li>
+)
+
+const SideNavListLink = props => (
+  <li className={props.className} data-toggle={props.dataToggle}>
+    <div className="nav-icon-wrapper">
+      <div className="icon-wrapper">
+        <img className="image-icon" src={props.iconSubnav} />
+      </div>
+    </div>
+    <div className="dropdown-links">
+      <Link to={props.to} activeClassName="active" partiallyActive={true}>
+        {props.children}
+      </Link>
+    </div>
+    {}
+  </li>
+)
+
+const MarketingSolutionsSideNavListLink = props => (
+  <li className={props.className} data-toggle={props.dataToggle}>
+    <div className="nav-icon-wrapper">
+      <div className="icon-wrapper">
+        <img className="image-icon" src={props.iconSubnav} />
+      </div>
+    </div>
+    <div className="dropdown-links">
+      <div>
+        <Link to={props.to} activeClassName="active" partiallyActive={true}>
+          {props.children}
+        </Link>
+        <img className="down-arrow" src={downArrow} />
+      </div>
+      <ul>
+        <ListLink
+          to="/marketing-solutions/responsive-websites"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Responsive Websites
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/content-marketing"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Content Marketing
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/digital-advertising"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Digital Advertising
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/online-reputation"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Online Reputation
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/our-technology"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Our Technology
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/hosting-solutions"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Hosting Solutions
+        </ListLink>
+      </ul>
+    </div>
+  </li>
+)
+
+const WhoWeServeSideNavListLink = props => (
+  <li className={props.className} data-toggle={props.dataToggle}>
+    <div className="nav-icon-wrapper">
+      <div className="icon-wrapper">
+        <img className="image-icon" src={props.iconSubnav} />
+      </div>
+    </div>
+    <div className="dropdown-links">
+      <div>
+        <Link to={props.to} activeClassName="active" partiallyActive={true}>
+          {props.children}
+        </Link>
+        <img className="down-arrow" src={downArrow} />
+      </div>
+      <ul>
+        <ListLink
+          to="/marketing-solutions/responsive-websites"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Dental Practices
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/content-marketing"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Cosmetic Surgeons
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/digital-advertising"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Urgent Care Clinics
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/online-reputation"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Healthcare Marketing
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/our-technology"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Chiropractor Practices
+        </ListLink>
+      </ul>
+    </div>
+  </li>
+)
+
+const ResourcesSideNavListLink = props => (
+  <li className={props.className} data-toggle={props.dataToggle}>
+    <div className="nav-icon-wrapper">
+      <div className="icon-wrapper">
+        <img className="image-icon" src={props.iconSubnav} />
+      </div>
+    </div>
+    <div className="dropdown-links">
+      <div>
+        <Link to={props.to} activeClassName="active" partiallyActive={true}>
+          {props.children}
+        </Link>
+        <img className="down-arrow" src={downArrow} />
+      </div>
+      <ul>
+        <ListLink
+          to="/marketing-solutions/responsive-websites"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Dental Practices
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/content-marketing"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Cosmetic Surgeons
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/digital-advertising"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Urgent Care Clinics
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/online-reputation"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Healthcare Marketing
+        </ListLink>
+        <ListLink
+          to="/marketing-solutions/our-technology"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Chiropractor Practices
+        </ListLink>
+      </ul>
+    </div>
   </li>
 )
 
@@ -312,7 +509,7 @@ const StudySingleListLink = props => (
               </div>
 
               <div className="dropdown-content-block">
-                <Link className="" to="/inentional-404/">
+                <Link className="" to="/intentional-404/">
                   Webinars
                 </Link>
                 <p>
@@ -347,7 +544,7 @@ const StudySingleListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to="/inentional-404/">
+                <Link className="" to="/intentional-404/">
                   Knowledge Base
                 </Link>
                 <p>
@@ -365,7 +562,7 @@ const StudySingleListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to="/inentional-404/">
+                <Link className="" to="/intentional-404/">
                   eBooks &amp; Whitepapers
                 </Link>
                 <p>
@@ -408,12 +605,21 @@ class Navigation extends Component {
 
       $("#sidenav-trigger").on("click", function() {
         // open sidebar
-        console.log("clicked the sidebar button")
         $("#sidebar").addClass("active")
         // fade in the overlay
         $(".overlay").addClass("active")
         $(".collapse.in").toggleClass("in")
         $("a[aria-expanded=true]").attr("aria-expanded", "false")
+      })
+
+      $("#sidebar .dropdown-links .down-arrow").on("click", function() {
+        $("#sidebar .dropdown-links ul")
+          .not(this)
+          .slideUp(500)
+        $(this)
+          .parent()
+          .siblings("ul")
+          .slideDown(500)
       })
     })
   }
@@ -421,67 +627,102 @@ class Navigation extends Component {
     return (
       <div className="navigation-wrapper">
         <nav id="sidebar">
-          <div id="dismiss">
+          <button
+            class=""
+            id="dismiss"
+            type="button"
+            data-toggle=""
+            aria-expanded=""
+            aria-label=""
+          >
             <span class="dismiss-icon" />
-          </div>
+          </button>
 
-          <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
-          </div>
-
-          <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li class="active">
-              <a
-                href="#homeSubmenu"
-                data-toggle="collapse"
-                aria-expanded="false"
-              >
-                Home
-              </a>
-              <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li>
-                  <a href="#">Home 1</a>
-                </li>
-                <li>
-                  <a href="#">Home 2</a>
-                </li>
-                <li>
-                  <a href="#">Home 3</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">About</a>
-              <a
-                href="#pageSubmenu"
-                data-toggle="collapse"
-                aria-expanded="false"
-              >
-                Pages
-              </a>
-              <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                  <a href="#">Page 1</a>
-                </li>
-                <li>
-                  <a href="#">Page 2</a>
-                </li>
-                <li>
-                  <a href="#">Page 3</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Portfolio</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
+          <ul className="navbar-nav">
+            <SideNavListLink
+              className="nav-item dropdown"
+              dataToggle=""
+              iconSubnav={house}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/"
+            >
+              Home
+            </SideNavListLink>
+            <MarketingSolutionsSideNavListLink
+              className="nav-item dropdown"
+              dataToggle="dropdown"
+              iconSubnav={marketingSolutions}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/marketing-solutions"
+            >
+              Marketing Solutions
+            </MarketingSolutionsSideNavListLink>
+            <WhoWeServeSideNavListLink
+              className="nav-item dropdown"
+              dataToggle="dropdown"
+              iconSubnav={ourClients}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/our-cleints"
+            >
+              Who We Serve
+            </WhoWeServeSideNavListLink>
+            <SideNavListLink
+              className="nav-item dropdown"
+              dataToggle="dropdown"
+              iconSubnav={plans}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/plans"
+            >
+              Plans
+            </SideNavListLink>
+            <SideNavListLink
+              className="nav-item dropdown"
+              dataToggle="dropdown"
+              iconSubnav={company}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/company"
+            >
+              Company
+            </SideNavListLink>
+            <ResourcesSideNavListLink
+              className="nav-item dropdown"
+              dataToggle="dropdown"
+              iconSubnav={resources}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/resources"
+            >
+              Resources
+            </ResourcesSideNavListLink>
+            <SideNavListLink
+              className="nav-item dropdown"
+              dataToggle="dropdown"
+              iconSubnav={freeDemo}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/demo"
+            >
+              Free Demo
+            </SideNavListLink>
+            <SideNavListLink
+              className="nav-item dropdown"
+              dataToggle="dropdown"
+              iconSubnav={contact}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/contact"
+            >
+              Contact
+            </SideNavListLink>
           </ul>
         </nav>
         <div class="overlay" />
-        <nav className="navbar navbar-default navbar-expand-md fixed-top">
+        <nav className="navbar navbar-default navbar-expand-lap fixed-top">
           <Container>
             {/*<button type="button" id="sidebarCollapse" class="btn btn-info">
               <i class="fas fa-align-left" />

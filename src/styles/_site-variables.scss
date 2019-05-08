@@ -23,10 +23,12 @@ $content-block-heading-margin: 27.5px; /* This needs fixed, maybe ems? */
 /* @include-media named breakpoints */
 $phone: 375px;
 $tablet: 768px;
+$laptop: 991px;
 $desktop: 1300px;
 $breakpoints: (
   phone: $phone,
   tablet: $tablet,
+  laptop: $laptop,
   desktop: $desktop,
 );
 
@@ -35,6 +37,7 @@ $grid-breakpoints: (
   xs: 0,
   /* Not Implemented */ sm: $phone,
   /* Not Implemented */ md: $tablet,
+  lap: 992px,
   lg: $desktop,
   /* Not Used */ xl: 4000px,
 ) !default;
@@ -42,6 +45,7 @@ $grid-breakpoints: (
 $container-max-widths: (
   /* Not Implemented */ sm: 300px,
   /* Not Implemented */ md: 700px,
+  lap: 992px,
   /* 104px per .col-1*/ lg: 1248px,
   /* Not Used */ xl: 1600px
 ) !default;

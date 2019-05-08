@@ -13,7 +13,7 @@ body {
 header {
   position: fixed;
   height: 120px;
-  z-index: 500;
+  z-index: 9999;
   &,
   & .container-fluid {
     width: 100%;
@@ -124,7 +124,7 @@ header {
         }
       }
       .contact-links {
-        @include media("<=tablet") {
+        @include media("<=laptop") {
           display: none;
         }
       }
@@ -189,9 +189,6 @@ header {
       justify-content: space-between;
       .logo {
         flex-basis: 20%;
-        @include media("<=tablet") {
-          flex-basis: 100%;
-        }
       }
       .main-links {
         flex-basis: 48%;
@@ -434,6 +431,7 @@ footer {
 }
 
 #sidebar {
+  font-family: $font-family-base;
   min-width: 412px;
   max-width: 412px;
   height: 100vh;
@@ -442,16 +440,66 @@ footer {
   right: -412px;
   display: block;
   /* top layer */
-  z-index: 900;
+  z-index: 9999;
   transition: right 0.7s;
   background-image: linear-gradient(
     to right,
     rgba(4, 85, 149, 0.8),
-    rgba(15, 134, 228, 0.8),
-    rgba(4, 85, 149, 0.8)
+    rgba(15, 134, 228, 0.8) 95% 100%
   );
   clip-path: polygon(22% 0%, 100% 0%, 100% 100%, 0% 100%);
-  padding-left: 100px;
+  padding-left: 120px;
+  padding-top: 140px;
+
+  .navbar-nav {
+    // margin-top: 20px;
+
+    .nav-item {
+      margin-bottom: 28px;
+      position: relative;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.1;
+
+      .dropdown-links {
+        display: inline-block;
+        width: 75%;
+
+        a {
+          color: $primary-text;
+          text-decoration: none;
+        }
+        ul {
+          padding-left: 0;
+          display: none;
+          li {
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 400;
+            list-style-type: none;
+          }
+        }
+      }
+
+      .down-arrow {
+        vertical-align: middle;
+        margin-left: 18px;
+        width: 14px;
+      }
+    }
+    .nav-icon-wrapper {
+      width: 17%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .icon-wrapper {
+      height: 26px;
+      width: 26px;
+    }
+
+    .img-icon {
+    }
+  }
 }
 
 #sidebar.active {
