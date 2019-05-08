@@ -200,7 +200,7 @@ export default props => (
             <div className="full-bleed check-plans-background-image flipped" />
             <div className="full-bleed-content-wrapper">
               <div className="row">
-                <div className="col-sm-5">
+                <div className="col-sm-6 col-lg-5">
                   <div className="content-block">
                     <div className="inner-title">
                       <h2>Check which plan works for your practice</h2>
@@ -229,8 +229,8 @@ export default props => (
           {/* End Full bleed content row (reversed)*/}
           {/* Begin Demo Footer */}
           <div className="row padded tall-top tall-bottom request-demo-footer">
-            <div className="col-sm-1" />
-            <div className="col-sm-5">
+            <div className="col-lg-1" />
+            <div className="col-sm-6 col-lg-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>
@@ -249,14 +249,14 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-6 col-lg-5">
               <div className="center">
                 <a href="/" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
             </div>
-            <div className="col-sm-1" />
+            <div className="col-lg-1" />
           </div>
           {/* End Demo Footer */}
         </Container>

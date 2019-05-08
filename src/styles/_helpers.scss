@@ -24,14 +24,23 @@
 
 /* Paragraph content needs more flexibility */
 p {
-  &.l-thin {
-    /* these class name aren't the best */
-    width: 50%;
+  @include media(">=desktop") {
+    &.l-thin {
+      /* these class name aren't the best */
+      width: 50%;
+    }
+    &.m-thin {
+      width: 66%;
+    }
+    &.s-thin {
+      width: 75%;
+    }
   }
-  &.m-thin {
-    width: 66%;
-  }
-  &.s-thin {
-    width: 75%;
+  @include media("<desktop") {
+    &.l-thin,
+    &.m-thin,
+    &.s-thin {
+      width: 100%;
+    }
   }
 }

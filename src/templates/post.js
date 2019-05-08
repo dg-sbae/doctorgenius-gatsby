@@ -35,7 +35,7 @@ function PostPage({ pageContext, data }) {
         <Main>
           <Container>
             <div className="row padded short-bottom">
-              <div className="col-sm-1" />
+              <div className="col-lg-1" />
               <div className="col-sm-8">
                 <div className="pagination">
                   <a href="/intentional-404/PreviousPostsPage">
@@ -48,11 +48,11 @@ function PostPage({ pageContext, data }) {
                   </a>
                 </div>
               </div>
-              <div className="col-sm-1" />
+              <div className="col-lg-1" />
             </div>
             <div className="blog-header">
               <div className="row">
-                <div className="col-sm-1" />
+                <div className="col-lg-1" />
                 <div className="col-sm-8">
                   <div className="upper-row">
                     <h1 className="title">{he.decode(post.title)}</h1>
@@ -82,18 +82,18 @@ function PostPage({ pageContext, data }) {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-1" />
+                <div className="col-lg-1" />
               </div>
             </div>
             <div className="row">
-              <div className="col-sm-1" />
+              <div className="col-lg-1" />
               <div className="col-sm-10">
                 <div className="spacer solid" />
               </div>
-              <div className="col-sm-1" />
+              <div className="col-lg-1" />
             </div>
             <div className="row">
-              <div className="col-sm-1" />
+              <div className="col-lg-1" />
               <div className="col-sm-8">
                 <div className="blog-content">
                   <div
@@ -114,7 +114,7 @@ function PostPage({ pageContext, data }) {
                   />
                 </div>
               </div>
-              <div className="col-sm-1" />
+              <div className="col-lg-1" />
             </div>
 
             <div className="full-bleed-wrapper pad-md">
@@ -151,8 +151,8 @@ function PostPage({ pageContext, data }) {
               </div>
             </div>
             <div className="row padded tall-top request-demo-footer">
-              <div className="col-sm-1" />
-              <div className="col-sm-5">
+              <div className="col-lg-1" />
+              <div className="col-sm-6 col-lg-5">
                 <div className="content-block">
                   <div className="inner-title">
                     <h2>
@@ -171,14 +171,14 @@ function PostPage({ pageContext, data }) {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-5">
+              <div className="col-sm-6 col-lg-5">
                 <div className="center">
                   <a href="/" className="button flat white-text">
                     Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>
               </div>
-              <div className="col-sm-1" />
+              <div className="col-lg-1" />
             </div>
           </Container>
         </Main>

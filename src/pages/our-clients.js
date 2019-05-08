@@ -204,7 +204,7 @@ export default props => (
                 </a>
               </div>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-6 col-lg-5">
               <img
                 className="img-responsive blur-bleed"
                 src="/png/search-result.png"
@@ -217,7 +217,7 @@ export default props => (
             <div className="full-bleed check-plans-background-image" />
             <div className="full-bleed-content-wrapper">
               <div className="row">
-                <div className="col-sm-5 offset-sm-7">
+                <div className="col-sm-6 col-lg-5 offset-sm-7">
                   <div className="content-block">
                     <div className="inner-title">
                       <h2>Check which plan works for your practice</h2>
