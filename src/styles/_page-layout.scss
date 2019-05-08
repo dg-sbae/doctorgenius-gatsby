@@ -1,3 +1,5 @@
+/* @import "_responsive_grid_gutter"; */
+
 /* Page Layout - Positioning elements and general page structure*/
 body {
   overflow-y: auto; /* Allows 100vw to not include scrollbars */
@@ -394,24 +396,45 @@ footer {
   }
 }
 
+$top-padding: 60px;
+$bottom-padding: 30px;
+
+$top-padding-md: 30px;
+$bottom-padding-md: 20px;
+
 .row {
   justify-content: center;
   align-items: center;
   &.padded {
-    padding-top: 60px;
+    padding-top: $top-padding;
     &.short-top {
-      padding-top: 30px;
+      padding-top: $top-padding * 0.5;
     }
     &.tall-top {
-      padding-top: 90px;
+      padding-top: $top-padding * 1.5;
     }
-
-    padding-bottom: 30px;
+    padding-bottom: $bottom-padding;
     &.short-bottom {
-      padding-bottom: 15px;
+      padding-bottom: $bottom-padding * 0.5;
     }
     &.tall-bottom {
-      padding-bottom: 60px;
+      padding-bottom: $bottom-padding * 2;
+    }
+    @include media("<=laptop") {
+      padding-top: $top-padding-md;
+      &.short-top {
+        padding-top: $top-padding-md * 0.5;
+      }
+      &.tall-top {
+        padding-top: $top-padding-md * 1.5;
+      }
+      padding-bottom: $bottom-padding-md;
+      &.short-bottom {
+        padding-bottom: $bottom-padding-md * 0.5;
+      }
+      &.tall-bottom {
+        padding-bottom: $bottom-padding-md * 2;
+      }
     }
   }
 }
