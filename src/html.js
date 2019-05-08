@@ -34,8 +34,6 @@ export default function HTML(props) {
                   var navBottom = document.querySelector("nav.navbar").getBoundingClientRect().bottom;
                   var secondaryNavTop = document.querySelector(".secondary-nav").getBoundingClientRect().top;
                   var heroBottom = document.querySelector('.hero').getBoundingClientRect().bottom;
-                  console.log(navBottom);
-                  console.log(secondaryNavTop);
                 }
                 
                 if (winScroll >= 100 && winScroll < 200) {
