@@ -71,7 +71,9 @@ const MarketingSolutionsSideNavListLink = props => (
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           {props.children}
         </Link>
-        <img className="down-arrow" src={downArrow} />
+        <span className="down-arrow-container">
+          <img className="down-arrow" src={downArrow} />
+        </span>
       </div>
       <ul>
         <ListLink
@@ -133,7 +135,9 @@ const WhoWeServeSideNavListLink = props => (
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           {props.children}
         </Link>
-        <img className="down-arrow" src={downArrow} />
+        <span className="down-arrow-container">
+          <img className="down-arrow" src={downArrow} />
+        </span>
       </div>
       <ul>
         <ListLink
@@ -188,7 +192,9 @@ const ResourcesSideNavListLink = props => (
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           {props.children}
         </Link>
-        <img className="down-arrow" src={downArrow} />
+        <span className="down-arrow-container">
+          <img className="down-arrow" src={downArrow} />
+        </span>
       </div>
       <ul>
         <ListLink
@@ -612,15 +618,18 @@ class Navigation extends Component {
         $("a[aria-expanded=true]").attr("aria-expanded", "false")
       })
 
-      $("#sidebar .dropdown-links .down-arrow").on("click", function() {
-        $("#sidebar .dropdown-links ul")
-          .not(this)
-          .slideUp(500)
-        $(this)
-          .parent()
-          .siblings("ul")
-          .slideDown(500)
-      })
+      $("#sidebar .dropdown-links .down-arrow-container").on(
+        "click",
+        function() {
+          var thisDropdownList = $(this)
+            .parent()
+            .siblings("ul")
+          $("#sidebar .dropdown-links ul")
+            .not(thisDropdownList)
+            .slideUp(500)
+          thisDropdownList.slideDown(500)
+        }
+      )
     })
   }
   render() {

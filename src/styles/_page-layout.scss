@@ -465,6 +465,12 @@ footer {
         display: inline-block;
         width: 75%;
 
+        .down-arrow-container {
+          height: 80px;
+          width: 80px;
+          padding: 14px 5px 14px 18px;
+        }
+
         a {
           color: $primary-text;
           text-decoration: none;
@@ -483,7 +489,6 @@ footer {
 
       .down-arrow {
         vertical-align: middle;
-        margin-left: 18px;
         width: 14px;
       }
     }
