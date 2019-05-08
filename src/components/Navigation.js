@@ -745,33 +745,35 @@ class Navigation extends Component {
               Contact
             </SideNavListLink>
           </ul>
-          <ul className="social-media">
-            <ExternalLink
-              to="https://www.facebook.com/DoctorGeniusMarketing"
-              source={facebook}
-              alt="Facebook logo icon"
-            />
-            <ExternalLink
-              to="https://twitter.com/DoctorGeniusCA"
-              source={twitter}
-              alt="Twitter logo icon"
-            />
-            <ExternalLink
-              to="https://www.instagram.com/doctor.genius/"
-              source={instagram}
-              alt="Instagram logo icon"
-            />
-            <ExternalLink
-              to="https://www.linkedin.com/company/doctor-genius"
-              source={linkedin}
-              alt="LinkedIn logo icon"
-            />
-            <ExternalLink
-              to="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos"
-              source={youtube}
-              alt="Youtube logo icon"
-            />
-          </ul>
+          <div className="social-media-container">
+            <ul className="social-media">
+              <ExternalLink
+                to="https://www.facebook.com/DoctorGeniusMarketing"
+                source={facebook}
+                alt="Facebook logo icon"
+              />
+              <ExternalLink
+                to="https://twitter.com/DoctorGeniusCA"
+                source={twitter}
+                alt="Twitter logo icon"
+              />
+              <ExternalLink
+                to="https://www.instagram.com/doctor.genius/"
+                source={instagram}
+                alt="Instagram logo icon"
+              />
+              <ExternalLink
+                to="https://www.linkedin.com/company/doctor-genius"
+                source={linkedin}
+                alt="LinkedIn logo icon"
+              />
+              <ExternalLink
+                to="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos"
+                source={youtube}
+                alt="Youtube logo icon"
+              />
+            </ul>
+          </div>
         </nav>
         <div class="overlay" />
         <nav className="navbar navbar-default navbar-expand-lap fixed-top">

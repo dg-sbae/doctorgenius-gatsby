@@ -533,16 +533,29 @@ $bottom-padding-md: 20px;
     }
   }
 
-  .social-media {
+  .social-media-container {
     position: absolute;
-    bottom: 0;
-    width: 50%;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-media {
     display: flex;
     justify-content: space-between;
+    width: 50%;
+    align-items: center;
     padding-left: 0;
 
     li {
       display: inline-block;
+      vertical-align: middle;
+
+      img {
+        height: auto;
+      }
     }
   }
 }
