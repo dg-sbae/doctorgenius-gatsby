@@ -183,7 +183,9 @@ export default props => {
                 <div
                   className={(index % 2 ? "order-sm-12" : "") + " col-sm-1"}
                 />
-                <div class={(index % 2 ? "order-sm-6" : "") + " col-sm-5"}>
+                <div
+                  class={(index % 2 ? "order-sm-6" : "") + " col-sm-6 col-lg-5"}
+                >
                   <div className="content-block">
                     <div className="icon-strapline">
                       <img
@@ -214,7 +216,9 @@ export default props => {
                     </div>
                   </div>
                 </div>
-                <div class={(index % 2 ? "order-sm-2" : "") + " col-sm-5"}>
+                <div
+                  class={(index % 2 ? "order-sm-2" : "") + " col-sm-6 col-lg-5"}
+                >
                   <img
                     className="img-responsive"
                     src={row.image.url}

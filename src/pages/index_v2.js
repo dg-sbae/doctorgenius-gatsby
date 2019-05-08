@@ -144,7 +144,7 @@ export default ({ data }, props) => (
             <div className="full-bleed marketing-dashboard-background" />
             <div className="full-bleed-content-wrapper">
               <div className="row">
-                <div className="col-sm-1 " />
+                <div className="col-lg-1" />
                 <div className="col-sm-10">
                   <img
                     src={homepageMobileMockup}
@@ -152,7 +152,7 @@ export default ({ data }, props) => (
                     className="img-responsive"
                   />
                 </div>
-                <div className="col-sm-1" />
+                <div className="col-lg-1" />
               </div>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default ({ data }, props) => (
                 alt=""
               />
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-6 col-lg-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>Why is Doctor Genius # 1 in new patient acquisitions?</h2>
@@ -189,12 +189,12 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
-              <div className="col-sm-1" />
+              <div className="col-lg-1" />
             </div>
           </div>
           <div className="row padded short-top short-bottom">
-            <div className="col-sm-1" />
-            <div className="col-sm-5">
+            <div className="col-lg-1" />
+            <div className="col-sm-6 col-lg-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>What makes Doctor Genius different?</h2>
@@ -223,7 +223,7 @@ export default ({ data }, props) => (
                 alt=""
               />
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-6 col-lg-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>How would you rate Doctor Genius client satisfaction?</h2>
@@ -235,13 +235,13 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
-              <div className="col-sm-1" />
+              <div className="col-lg-1" />
             </div>
           </div>
           {/* Begin Demo Footer */}
           <div className="row padded tall-top request-demo-footer">
-            <div className="col-sm-1" />
-            <div className="col-sm-5">
+            <div className="col-lg-1" />
+            <div className="col-sm-6 col-lg-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>
@@ -260,14 +260,14 @@ export default ({ data }, props) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-6 col-lg-5">
               <div className="center">
                 <a href="/" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
             </div>
-            <div className="col-sm-1" />
+            <div className="col-lg-1" />
           </div>
           {/* End Demo Footer */}
         </Container>

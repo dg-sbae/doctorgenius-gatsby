@@ -367,6 +367,10 @@ footer {
         background: #005a91;
       }
     }
+    @include media("<=laptop") {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 .full-bleed-wrapper {

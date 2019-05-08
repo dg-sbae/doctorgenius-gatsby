@@ -144,7 +144,7 @@ export default props => (
                 alt="Search Results Page"
               />
             </div>
-            <div className="col-sm-5 panel-quadrant">
+            <div className="col-sm-6 col-lg-5 panel-quadrant">
               <div className="row">
                 <div className="col-sm-6 panel-quad-item">
                   <img
@@ -251,7 +251,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-6 col-lg-5">
               <img
                 className="img-responsive blur-bleed"
                 src="/png/search-result.png"
@@ -260,8 +260,8 @@ export default props => (
             </div>
           </div>
           <div className="row padded tall-top request-demo-footer">
-            <div className="col-sm-1" />
-            <div className="col-sm-5">
+            <div className="col-lg-1" />
+            <div className="col-sm-6 col-lg-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>
@@ -280,14 +280,14 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-6 col-lg-5">
               <div className="center">
                 <a href="/" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
             </div>
-            <div className="col-sm-1" />
+            <div className="col-lg-1" />
           </div>
         </Container>
       </Main>

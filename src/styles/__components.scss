@@ -112,6 +112,9 @@
     padding-bottom: 0;
     margin-bottom: 0;
   }
+  @include media("<=laptop") {
+    margin: auto;
+  }
 }
 
 @for $headingNum from 1 through 6 {

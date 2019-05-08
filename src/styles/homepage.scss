@@ -94,6 +94,10 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
       .demo-cta {
         margin-top: 45px;
         margin-left: 55px;
+        @include media("<=laptop") {
+          text-align: center;
+          margin-left: auto;
+        }
 
         a {
           text-transform: uppercase;
@@ -132,6 +136,9 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
     font-size: $font-size-normal-text;
     width: 60%;
     color: black;
+    @include media("<=laptop") {
+      width: 100%;
+    }
   }
 
   &.v2 {
