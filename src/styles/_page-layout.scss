@@ -84,6 +84,10 @@ header {
       &.main-navbar-stuck {
         box-shadow: 0 1px 1px $grid-border;
         background-color: #fff;
+        @include media("<=laptop") {
+          background-color: $primary;
+        }
+
         &.stuck-midway {
           height: 100px;
 
@@ -103,6 +107,9 @@ header {
         }
         .logo-holder {
           background-image: url(/png/logo-blue.png);
+          @include media("<=laptop") {
+            background-image: url(/png/logo-white.png);
+          }
         }
         .phone-holder {
           background-image: url(/png/phone-blue.png);
