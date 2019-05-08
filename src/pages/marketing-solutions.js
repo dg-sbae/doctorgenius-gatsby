@@ -29,7 +29,7 @@ export default props => (
               <div className="hero-content accent-block">
                 <h1>Marketing Solutions</h1>
                 <h2>
-                  Predictable <span>Practice Growth Solution</span>
+                  <span>Predictable</span> Practice Growth Solution
                 </h2>
                 <div className="accented-paragraph">
                   <p>
@@ -47,78 +47,80 @@ export default props => (
           {/* Begin secondary nav Component: */}
           <div className="row">
             <div className="col-sm-12 panel-row">
-              <div className="secondary-nav">
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/marketing-solutions/websites/">
-                      <img
-                        className="img-icon"
-                        src={responsiveWebsitesIcon}
-                        alt="Responsive Websites"
-                      />
-                    </a>
+              <div className="secondary-nav-target">
+                <div className="secondary-nav">
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/marketing-solutions/websites/">
+                        <img
+                          className="img-icon"
+                          src={responsiveWebsitesIcon}
+                          alt="Responsive Websites"
+                        />
+                      </a>
+                    </div>
+                    <p>Responsive Websites</p>
                   </div>
-                  <p>Responsive Websites</p>
-                </div>
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/marketing-solutions/content-marketing/">
-                      <img
-                        className="img-icon"
-                        src={contentMarketingIcon}
-                        alt="Content Marketing"
-                      />
-                    </a>
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/marketing-solutions/content-marketing/">
+                        <img
+                          className="img-icon"
+                          src={contentMarketingIcon}
+                          alt="Content Marketing"
+                        />
+                      </a>
+                    </div>
+                    <p>Content Marketing</p>
                   </div>
-                  <p>Content Marketing</p>
-                </div>
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/marketing-solutions/digital-advertising/">
-                      <img
-                        className="img-icon"
-                        src={digitalAdvertisingIcon}
-                        alt="Digital Advertising"
-                      />
-                    </a>
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/marketing-solutions/digital-advertising/">
+                        <img
+                          className="img-icon"
+                          src={digitalAdvertisingIcon}
+                          alt="Digital Advertising"
+                        />
+                      </a>
+                    </div>
+                    <p>Digital Advertising</p>
                   </div>
-                  <p>Digital Advertising</p>
-                </div>
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/marketing-solutions/online-reputation-management/">
-                      <img
-                        className="img-icon"
-                        src={onlineReputationIcon}
-                        alt="Online Reputation"
-                      />
-                    </a>
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/marketing-solutions/online-reputation-management/">
+                        <img
+                          className="img-icon"
+                          src={onlineReputationIcon}
+                          alt="Online Reputation"
+                        />
+                      </a>
+                    </div>
+                    <p>Online Reputation</p>
                   </div>
-                  <p>Online Reputation</p>
-                </div>
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/marketing-solutions/our-technology/">
-                      <img
-                        className="img-icon"
-                        src={ourTechnologyIcon}
-                        alt="Our Technology"
-                      />
-                    </a>
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/marketing-solutions/our-technology/">
+                        <img
+                          className="img-icon"
+                          src={ourTechnologyIcon}
+                          alt="Our Technology"
+                        />
+                      </a>
+                    </div>
+                    <p>Our Technology</p>
                   </div>
-                  <p>Our Technology</p>
-                </div>
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/marketing-solutions/hosting-solutions/">
-                      <img
-                        className="img-icon"
-                        src={hostingSolutionsIcon}
-                        alt="Hosting Solutions"
-                      />
-                    </a>
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/marketing-solutions/hosting-solutions/">
+                        <img
+                          className="img-icon"
+                          src={hostingSolutionsIcon}
+                          alt="Hosting Solutions"
+                        />
+                      </a>
+                    </div>
+                    <p>Hosting Solutions</p>
                   </div>
-                  <p>Hosting Solutions</p>
                 </div>
               </div>
             </div>
@@ -131,7 +133,7 @@ export default props => (
                 <div className="inner-title">
                   <h2>Proven and tested results in every step of the way</h2>
                   <div className="accented-paragraph">
-                    <p className="m-thin">
+                    <p className="s-thin">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Nunc dui turpis, sodales ut mollis quis, ullamcorper a
                       metus
@@ -171,7 +173,7 @@ export default props => (
                 <div className="inner-title">
                   <h2>All the tools you'll need to be in control. </h2>
                   <div className="accented-paragraph">
-                    <p className="m-thin">
+                    <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Nunc dui turpis, sodales ut mollis quis, ullamcorper a
                       metus
@@ -237,7 +239,7 @@ export default props => (
                     with Doctor Genius today!
                   </h2>
                   <div className="accented-paragraph">
-                    <p className="s-thin">
+                    <p>
                       The Genius platform makes every part of your company
                       process more efficient. Our support team is very excited
                       to help you and get your company on the right path of

@@ -1,58 +1,281 @@
 @import url("https://use.typekit.net/xmg2hgf.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:200,300,400,500");
 
-/* Text types:
-
-Headings (inner title)
-  same faily
-  vary size (based on h* + homepage vs non-homepage,
-    h2: 45
-      subtitle: 29
-      strapline 20 (blue)
-    h3: 40
-      subtitle:
-      strapline: 14 (blue)
-
-
-
-Paragragh (accented paragraph): 17 (home), 16 (non-home)
-"Callout" (blue, bold, suually numbers, larger fontsize)
-"Detail" (different font, thinner line-height, thinner kerning) (like the table in our-clients)
-
-*/
-
 /* Text - Colors and fonts - font-size, font-family, color */
 
-// $panel-heading-font-size: 40px;
-// $homepage-panel-p: 18px;
-
-@for $headingNum from 1 through 6 {
-  h#{$headingNum} {
-    letter-spacing: -0.5px;
-  }
-  h#{$headingNum}:not(.m-0) {
-    margin-bottom: $content-block-heading-margin;
-  }
+/* Helper classes */
+.font-weight-semibold {
+  font-weight: $font-weight-semibold;
+}
+.font-weight-thin {
+  font-weight: $font-weight-thin;
+}
+b {
+  font-weight: $font-weight-semibold !important;
+}
+.truncate {
+  /* Defined space must also have a width defined */
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 
-h3.strapline {
-  margin-bottom: 0;
-}
-
+/* Standard font sizes, families, and weights */
 html {
-  font-size: $font-size-base;
-
   body {
     font-family: $font-family-base;
     font-size: $font-size-normal-text;
   }
 }
 
-.font-weight-semibold {
+/* Navigation Elements */
+nav {
+  font-family: $font-family-body-text;
+  .main-links,
+  .contact-links {
+    a {
+      color: $primary-text;
+      text-decoration: none;
+    }
+  }
+
+  .dropdown-menu {
+    color: $primary-text;
+    a {
+      color: inherit;
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+  li {
+    font-weight: $font-weight-normal;
+    .active {
+      color: $primary-text;
+      font-weight: $font-weight-medium;
+    }
+  }
+  .main-links {
+    li {
+      font-size: $font-size-nav-main-links;
+      font-weight: $font-weight-medium;
+    }
+  }
+  .contact-links {
+    font-size: $font-size-nav-contact-links;
+    font-weight: $font-weight-normal;
+  }
+}
+.secondary-nav {
+  font-family: $font-family-body-text;
+  font-size: 14px;
+  color: #787878;
+}
+
+/* Headings */
+@for $headingNum from 1 through 6 {
+  h#{$headingNum} {
+    letter-spacing: -0.5px;
+  }
+  h#{$headingNum}:not(.m-0) {
+    /* margin-bottom: $content-block-heading-margin;*/
+  }
+}
+
+/* Components */
+
+//Standard Hero
+.hero {
+  .accent-block {
+    h1 {
+      font-size: $h1-font-size;
+    }
+    h2 {
+      font-size: $h2-font-size;
+      @include heading-font;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1875rem;
+      font-family: "Agenda";
+      line-height: 1.4;
+      font-weight: $font-weight-light;
+    }
+  }
+}
+//Inner Titles
+
+.content-block {
+  .icon-strapline {
+    p {
+      font-family: "Roboto";
+      font-weight: $font-weight-bold;
+      font-size: $font-size-sm;
+    }
+  }
+  .inner-title {
+    h2 {
+      font-size: $h2-font-size-content-block; /* See if this is really necessary conflicts with the h2 size below */
+      margin-bottom: 25px;
+    }
+  }
+}
+.inner-title {
+  h3 {
+    line-height: 1;
+    &.strapline {
+      font-size: $h3-font-size;
+      color: $primary;
+      font-weight: $font-weight-semibold;
+    }
+  }
+  h2 {
+    line-height: 1;
+    font-size: $h2-font-size-main;
+    font-weight: $font-weight-medium;
+  }
+}
+
+/* Link With Icon */
+.link-with-icon {
+  color: $primary;
+  font-size: $font-size-base;
   font-weight: $font-weight-semibold;
 }
-.font-weight-thin {
-  font-weight: $font-weight-thin;
+
+//Standard Accented Paragraphs
+.accented-paragraph {
+  p {
+    @include accented-paragraph-font;
+  }
+}
+
+//Callouts
+.callout {
+  font-weight: $font-weight-bold;
+
+  .callout-heading {
+    font-size: $callout-heading-font-size;
+    p {
+      font-size: 5.3125rem;
+      font-family: $font-family-inner-block-headings;
+    }
+    sup {
+      text-transform: uppercase;
+      font-size: $font-size-normal-text;
+      line-height: 1.2;
+    }
+  }
+  p {
+    &.text-accent {
+      font-size: 1.6875rem;
+      font-weight: $font-weight-normal;
+      letter-spacing: -0.75px;
+    }
+    &.sub-text-accent {
+      color: $mute;
+      font-size: 1.625rem;
+      font-family: $font-family-inner-block-subtext;
+      font-weight: $font-weight-medium;
+      letter-spacing: -0.25px;
+    }
+  }
+  .callout-link {
+    font-size: 0.8125rem;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+//Panels
+.panel {
+  .panel-heading {
+    color: $primary;
+    font-size: $panel-heading-font-size;
+    font-family: $font-family-inner-block-headings;
+    font-weight: $font-weight-bold;
+  }
+  .panel-body {
+    font-size: $font-size-lg;
+    color: $mute-text-darker;
+  }
+}
+
+// Standard Request demo Footer
+.request-demo-footer {
+  h2 {
+    font-weight: $font-weight-light;
+  }
+  p {
+    color: $demo-body-text;
+  }
+}
+
+// Testimonial Slider
+.card-content-wrapper {
+  .card-copy {
+    font-size: $font-size-base;
+    color: $mute-text-darker;
+  }
+  .card-author {
+    color: $primary;
+    font-weight: $font-weight-semibold;
+  }
+  .card-location {
+    font-weight: $font-weight-light;
+    color: $mute-text;
+  }
+}
+
+/* Buttons, Links */
+a.button {
+  font-size: $font-size-btn;
+}
+.button {
+  &.flat {
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+  }
+}
+
+footer {
+  .footer-page-links {
+    font-size: $font-size-btn;
+    list-style-type: none;
+    font-family: $font-family-body-text;
+  }
+  .footer-contact-row {
+    font-family: $font-family-body-text;
+    font-weight: $font-weight-light;
+    line-height: 1.3;
+  }
+  .footer-subrow {
+    font-size: $font-size-subfooter;
+    font-family: $font-family-body-text;
+  }
+}
+
+.case-study {
+  .panel-quadrant {
+    h4 {
+      font-size: 22px;
+      font-weight: $font-weight-semibold;
+    }
+    p {
+      font-size: 14px;
+      font-weight: $font-weight-light;
+    }
+  }
+}
+
+/* colors */
+// Helpers
+.white-text {
+  color: white;
 }
 
 header,
@@ -60,8 +283,13 @@ nav,
 nav ul > li > a {
   color: white;
 }
-.white-text {
-  color: white;
+.button {
+  color: #fff;
+}
+
+a.not-a-link {
+  color: inherit;
+  text-decoration: none;
 }
 .text-accent,
 .callout-heading,
@@ -79,254 +307,13 @@ nav ul > li > a {
   color: $primary;
 }
 
-.inner-title {
-  h3 {
-    &.strapline {
-      font-size: $h3-font-size;
-      color: $primary;
-      font-weight: $font-weight-semibold;
-    }
-  }
-
-  h2 {
-    font-size: $h2-font-size-main;
-    font-weight: $font-weight-normal;
-  }
-
-  a {
-    color: $primary;
-  }
-}
-
-.content-block {
-  h2 {
-    font-size: $h2-font-size-content-block;
-  }
-}
-
 .inner-title .subtitle.muted {
   color: $mute-text;
 }
 
-.callout {
-  font-weight: $font-weight-bold;
-  .callout-heading {
-    font-size: $callout-heading-font-size;
-  }
-  .callout-heading sup {
-    text-transform: uppercase;
-    font-size: $font-size-normal-text;
-  }
+/* Potentially depreceated
+h3.strapline {
+  margin-bottom: 0;
 }
 
-.panel {
-  .panel-heading {
-    color: $primary;
-    font-size: $panel-heading-font-size;
-    font-family: $font-family-inner-block-headings;
-    font-weight: $font-weight-bold;
-  }
-  .panel-body {
-    font-size: $font-size-lg;
-    color: $mute-text-darker;
-  }
-}
-
-.accented-paragraph {
-  p {
-    font-family: $font-family-body-text;
-  }
-}
-
-.button {
-  color: #fff;
-}
-
-.homepage {
-  .hero {
-    .accent-block {
-      h1 {
-        font-size: $homepage-h1-font-size;
-      }
-    }
-  }
-}
-
-.hero {
-  .accent-block {
-    h1 {
-      font-size: $h1-font-size;
-    }
-    h2 {
-      font-size: $h2-font-size;
-      line-height: 0.9;
-      font-weight: 300;
-      span {
-        font-weight: 500;
-      }
-    }
-    p {
-      font-family: "Agenda";
-    }
-  }
-}
-
-.homepage {
-  .hero {
-    .accent-block {
-      h1 {
-        font-size: $homepage-h1-font-size;
-        margin-bottom: 27.5px;
-        background: none;
-        display: inline-block;
-      }
-    }
-  }
-  .accent-block {
-    .accented-paragraph {
-      p {
-        &:before {
-          background-color: $homepage-secondary-accent;
-        }
-      }
-    }
-  }
-
-  .panel p:not(.panel-heading) {
-    font-size: $font-size-normal-text;
-  }
-}
-
-.request-demo-footer {
-  h2 {
-    font-weight: $font-weight-light;
-  }
-  p {
-    color: $demo-body-text;
-  }
-}
-// Testimonial Slider
-.card-content-wrapper {
-  .card-copy {
-    font-size: $font-size-base;
-    color: $mute-text-darker;
-  }
-  .card-author {
-    color: $primary;
-    font-weight: $font-weight-semibold;
-  }
-  .card-location {
-    font-weight: $font-weight-light;
-    color: $mute-text;
-  }
-}
-// Might want to make variables for this later
-.callout {
-  p {
-    &.text-accent {
-      font-size: 1.6875rem;
-      font-weight: $font-weight-normal;
-    }
-    &.sub-text-accent {
-      color: $mute;
-      font-size: 1.625rem;
-      font-family: $font-family-inner-block-subtext;
-      font-weight: $font-weight-semibold;
-    }
-  }
-  .callout-heading {
-    sup {
-      font-size: $font-size-normal-text;
-      line-height: 1.4;
-    }
-    p {
-      font-size: 5.3125rem;
-      font-family: $font-family-inner-block-headings;
-    }
-  }
-  .callout-link {
-    font-size: 0.8125rem;
-    font-weight: $font-weight-semibold;
-  }
-}
-
-nav {
-  font-family: $font-family-body-text;
-
-  .dropdown-menu {
-    color: $primary-text;
-    a {
-      color: inherit;
-    }
-  }
-
-  .main-links {
-    li {
-      font-size: $font-size-nav-main-links;
-      font-weight: $font-weight-medium;
-    }
-  }
-  .contact-links {
-    font-size: $font-size-nav-contact-links;
-    font-weight: $font-weight-normal;
-  }
-}
-
-.secondary-nav {
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  color: #787878;
-}
-.truncate {
-  /* Defined space must also have a width defined */
-  display: block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-}
-a.not-a-link {
-  color: inherit;
-  text-decoration: none;
-}
-footer {
-  .footer-page-links {
-    font-size: $font-size-nav-main-links;
-    list-style-type: none;
-    font-family: $font-family-body-text;
-  }
-  .footer-contact-row {
-    font-family: $font-family-body-text;
-    font-weight: $font-weight-light;
-  }
-  .footer-subrow {
-    font-size: $font-size-subfooter;
-    font-family: $font-family-body-text;
-  }
-}
-
-.link-with-icon {
-  font-weight: $font-weight-semibold;
-  font-size: $font-size-btn;
-}
-
-b {
-  font-weight: $font-weight-semibold !important;
-}
-
-a.button {
-  font-size: $font-size-btn;
-}
-
-.case-study {
-  .panel-quadrant {
-    h4 {
-      font-size: 22px;
-      font-weight: $font-weight-semibold;
-    }
-    p {
-      font-size: 14px;
-      font-weight: $font-weight-light;
-    }
-  }
-}
+*/

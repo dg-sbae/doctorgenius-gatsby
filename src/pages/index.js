@@ -39,8 +39,7 @@ export default ({ data }, props) => (
                   <div className="border-vertical border-left-bottom" />
                   <div className="border-vertical border-right-bottom" />
                   <h1>
-                    <span className="font-weight-light">The Leader in</span> New
-                    Patient Acquisition
+                    <span>The Leader in</span> New Patient Acquisition
                   </h1>
                   <div className="accented-paragraph">
                     <p>
@@ -250,7 +249,7 @@ export default ({ data }, props) => (
                     with Doctor Genius today!
                   </h2>
                   <div className="accented-paragraph">
-                    <p className="s-thin">
+                    <p>
                       The Genius platform makes every part of your company
                       process more efficient. Our support team is very excited
                       to help you and get your company on the right path of

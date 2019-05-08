@@ -1,7 +1,6 @@
 @import "_site-variables.scss";
 
-.our-clients,
-.case-study {
+.our-clients {
   .hero {
     background-image: url("/hero/our-clients.png");
     height: 690px;
@@ -16,11 +15,21 @@
         margin-top: 10px;
       }
     }
+    .accented-paragraph {
+      width: 84%;
+    }
+  }
+  .thin-heading {
+    padding-left: 20%;
+    padding-right: 20%;
   }
   .inner-title {
     .subtitle {
       font-size: 29px;
     }
+  }
+  .content-block .accented-paragraph p {
+    margin-bottom: 2rem;
   }
   .case-study-container {
     h3 {

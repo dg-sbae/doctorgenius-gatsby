@@ -1,4 +1,7 @@
 @import "_site-variables.scss";
+// Plans Grid
+$font-size-plans-row-heading: $font-size-base * 0.8125;
+
 .plans {
   .hero {
     height: 690px;
@@ -7,12 +10,9 @@
     .hero-content {
       width: 625px;
       height: 344px;
-      padding: 2.8rem
-        /* paadding on plans page hero slightly wider, has less content */ h1 {
-        padding: 2px 12px;
-      }
+      padding: 2.8rem;
       p {
-        width: 75%;
+        width: 85%;
       }
     }
   }

@@ -62,13 +62,15 @@ $grid-gutter-width: $m1 * 2 !default;
     navigation link x14px xroboto xmedium
 */
 
-// Base/General Variables
+// Standard Font Families
 $font-family-base: agenda, sans-serif !default;
 $font-family-inner-block-headings: montserrat, sans-serif;
 $font-family-body-text: roboto, sans-serif;
 $font-family-inner-block-subtext: muli, sans-serif;
-$font-size-base: 1rem !default;
-$font-size-normal-text: $font-size-base * 1.125; // 1.0625?
+
+// Standard font sizes
+$font-size-base: 1rem !default; /* 16px */
+$font-size-normal-text: $font-size-base * 1.0625; /* 1.125 = 18px */ /* 1.0625 = 17 */ /* 1 = 16 */ /* .9375 */ /* .875 = 14 */
 $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * 0.875 !default;
 
@@ -86,13 +88,10 @@ $h2-font-size-content-block: $font-size-base * 2.5;
 $h2-font-size-main: $font-size-base * 2.8125;
 $h3-font-size: $font-size-base * 1.25 !default;
 
-// Homepage specific
-$homepage-h1-font-size: $font-size-base * 5.0625;
-
 // Navigation
-$font-size-nav-main-links: $font-size-base * 0.9;
+$font-size-nav-main-links: $font-size-base * 0.875;
 $font-size-nav-dropdown-body: $font-size-base * 0.75;
-$font-size-nav-contact-links: $font-size-base * 0.875;
+$font-size-nav-contact-links: $font-size-base * 0.9375;
 
 // Footer
 $font-size-subfooter: $font-size-base * 0.75;
@@ -111,5 +110,18 @@ $font-weight-bold: 700 !default;
 // Callouts
 $callout-heading-font-size: $font-size-base * 5.3125;
 
-// Plans Grid
-$font-size-plans-row-heading: $font-size-base * 0.8125;
+/* Standard font packages */
+@mixin heading-font() {
+  font-family: $font-family-base;
+  font-weight: $font-weight-semibold;
+  line-height: 0.9;
+  span {
+    font-weight: $font-weight-thin;
+  }
+}
+
+@mixin accented-paragraph-font() {
+  font-family: $font-family-body-text;
+  font-weight: $font-weight-light;
+  font-size: $font-size-normal-text;
+}

@@ -19,7 +19,9 @@ export default props => (
             <div className="col-sm-12">
               <div className="hero-content accent-block">
                 <h1>Dentistry Practices</h1>
-                <h2>Engage and Convert More Patients to Your Practice</h2>
+                <h2>
+                  <span>Engage and Convert More</span> Patients to Your Practice
+                </h2>
                 <div className="accented-paragraph">
                   <p>
                     Doctor Genius provides digital marketing solutions by
@@ -38,66 +40,68 @@ export default props => (
           {/* Begin secondary nav Component: */}
           <div className="row">
             <div className="col-sm-12 panel-row">
-              <div className="secondary-nav">
-                <div className="panel active">
-                  <div className="icon-wrapper">
-                    <a href="/our-clients/dental-practices/">
-                      <img
-                        className="img-icon"
-                        src="/icon/tooth-shine-nav.svg"
-                        alt="Tooth"
-                      />
-                    </a>
+              <div className="secondary-nav-target">
+                <div className="secondary-nav">
+                  <div className="panel active">
+                    <div className="icon-wrapper">
+                      <a href="/our-clients/dental-practices/">
+                        <img
+                          className="img-icon"
+                          src="/icon/tooth-shine-nav.svg"
+                          alt="Tooth"
+                        />
+                      </a>
+                    </div>
+                    <p>Dental Practices</p>
                   </div>
-                  <p>Dental Practices</p>
-                </div>
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/our-clients/urgent-care-clinics/">
-                      <img
-                        className="img-icon"
-                        src="/icon/urgent-care-nav.svg"
-                        alt="First Aid"
-                      />
-                    </a>
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/our-clients/urgent-care-clinics/">
+                        <img
+                          className="img-icon"
+                          src="/icon/urgent-care-nav.svg"
+                          alt="First Aid"
+                        />
+                      </a>
+                    </div>
+                    <p>Urgent Care Clinics</p>
                   </div>
-                  <p>Urgent Care Clinics</p>
-                </div>
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/our-clients/chiropractor-practices/">
-                      <img
-                        className="img-icon"
-                        src="/icon/chiropractor-nav.svg"
-                        alt="Spine"
-                      />
-                    </a>
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/our-clients/chiropractor-practices/">
+                        <img
+                          className="img-icon"
+                          src="/icon/chiropractor-nav.svg"
+                          alt="Spine"
+                        />
+                      </a>
+                    </div>
+                    <p>Chiropractor Practices</p>
                   </div>
-                  <p>Chiropractor Practices</p>
-                </div>
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/our-clients/cosmetic-surgeons/">
-                      <img
-                        className="img-icon"
-                        src="/icon/surgeon-nav.svg"
-                        alt="Surgeon"
-                      />
-                    </a>
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/our-clients/cosmetic-surgeons/">
+                        <img
+                          className="img-icon"
+                          src="/icon/surgeon-nav.svg"
+                          alt="Surgeon"
+                        />
+                      </a>
+                    </div>
+                    <p>Cosmetic Surgeons</p>
                   </div>
-                  <p>Cosmetic Surgeons</p>
-                </div>
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <a href="/our-clients/healthcare-marketing/">
-                      <img
-                        className="img-icon"
-                        src="/icon/sphygmomanometer-nav.svg"
-                        alt="Sphygomomanometer"
-                      />
-                    </a>
+                  <div className="panel">
+                    <div className="icon-wrapper">
+                      <a href="/our-clients/healthcare-marketing/">
+                        <img
+                          className="img-icon"
+                          src="/icon/sphygmomanometer-nav.svg"
+                          alt="Sphygomomanometer"
+                        />
+                      </a>
+                    </div>
+                    <p>Healthcare Marketing</p>
                   </div>
-                  <p>Healthcare Marketing</p>
                 </div>
               </div>
             </div>
@@ -106,7 +110,7 @@ export default props => (
           <div className="row padded">
             <div className="col-sm-9 offset-sm-1">
               <div className="content-block">
-                <div className="inner-title center">
+                <div className="inner-title center thin-heading">
                   <h3 className="strapline">Marketing Performance</h3>
                   <h2 className="underline">
                     <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better
@@ -259,7 +263,10 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row padded tall-top request-demo-footer">
+          <div className="row padded">
+            <div className="col-sm-12" />
+          </div>
+          {/*<div className="row padded tall-top request-demo-footer">
             <div className="col-sm-6">
               <div className="content-block">
                 <div className="innerTitle">
@@ -294,7 +301,7 @@ export default props => (
                 alt="Device Screens"
               />
             </div>
-          </div>
+          </div>*/}
         </Container>
       </Main>
     </div>

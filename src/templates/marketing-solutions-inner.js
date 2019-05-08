@@ -18,7 +18,7 @@ import "../styles/global-styles.scss"
 export default props => {
   /* These will likely need to be dynamic props */
   const pageTitle = "Responsive Websites"
-  const pageSubtitle = "Design that leaves a lasting impression."
+  const pageSubtitle = "<span>Design that leaves a lasting</span> impression."
   const pageIntro =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Lorem ipsum dolor sit amet, con."
 
@@ -39,7 +39,7 @@ export default props => {
               <div className="col-sm-12">
                 <div className="hero-content accent-block">
                   <h1>{pageTitle}</h1>
-                  <h2>{pageSubtitle}</h2>
+                  <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
                   <div className="accented-paragraph">
                     <p>{pageIntro}</p>
                   </div>
@@ -53,116 +53,120 @@ export default props => {
             {/* Begin secondary nav Component: */}
             <div className="row">
               <div className="col-sm-12 panel-row">
-                <div className="secondary-nav">
-                  <div
-                    className={
-                      (currentPage === "/marketing-solutions/websites/"
-                        ? "active "
-                        : "") + "panel"
-                    }
-                  >
-                    <div className="icon-wrapper">
-                      <a href="/marketing-solutions/websites/">
-                        <img
-                          className="img-icon"
-                          src={responsiveWebsitesIcon}
-                          alt="Responsive Websites"
-                        />
-                      </a>
+                <div className="secondary-nav-target">
+                  <div className="secondary-nav">
+                    <div
+                      className={
+                        (currentPage === "/marketing-solutions/websites/"
+                          ? "active "
+                          : "") + "panel"
+                      }
+                    >
+                      <div className="icon-wrapper">
+                        <a href="/marketing-solutions/websites/">
+                          <img
+                            className="img-icon"
+                            src={responsiveWebsitesIcon}
+                            alt="Responsive Websites"
+                          />
+                        </a>
+                      </div>
+                      <p>Responsive Websites</p>
                     </div>
-                    <p>Responsive Websites</p>
-                  </div>
-                  <div
-                    className={
-                      (currentPage === "/marketing-solutions/content-marketing/"
-                        ? "active "
-                        : "") + "panel"
-                    }
-                  >
-                    <div className="icon-wrapper">
-                      <a href="/marketing-solutions/content-marketing/">
-                        <img
-                          className="img-icon"
-                          src={contentMarketingIcon}
-                          alt="Content Marketing"
-                        />
-                      </a>
+                    <div
+                      className={
+                        (currentPage ===
+                        "/marketing-solutions/content-marketing/"
+                          ? "active "
+                          : "") + "panel"
+                      }
+                    >
+                      <div className="icon-wrapper">
+                        <a href="/marketing-solutions/content-marketing/">
+                          <img
+                            className="img-icon"
+                            src={contentMarketingIcon}
+                            alt="Content Marketing"
+                          />
+                        </a>
+                      </div>
+                      <p>Content Marketing</p>
                     </div>
-                    <p>Content Marketing</p>
-                  </div>
-                  <div
-                    className={
-                      (currentPage ===
-                      "/marketing-solutions/digital-advertising/"
-                        ? "active "
-                        : "") + "panel"
-                    }
-                  >
-                    <div className="icon-wrapper">
-                      <a href="/marketing-solutions/digital-advertising/">
-                        <img
-                          className="img-icon"
-                          src={digitalAdvertisingIcon}
-                          alt="Digital Advertising"
-                        />
-                      </a>
+                    <div
+                      className={
+                        (currentPage ===
+                        "/marketing-solutions/digital-advertising/"
+                          ? "active "
+                          : "") + "panel"
+                      }
+                    >
+                      <div className="icon-wrapper">
+                        <a href="/marketing-solutions/digital-advertising/">
+                          <img
+                            className="img-icon"
+                            src={digitalAdvertisingIcon}
+                            alt="Digital Advertising"
+                          />
+                        </a>
+                      </div>
+                      <p>Digital Advertising</p>
                     </div>
-                    <p>Digital Advertising</p>
-                  </div>
-                  <div
-                    className={
-                      (currentPage ===
-                      "/marketing-solutions/online-reputation-management/"
-                        ? "active "
-                        : "") + "panel"
-                    }
-                  >
-                    <div className="icon-wrapper">
-                      <a href="/marketing-solutions/online-reputation-management/">
-                        <img
-                          className="img-icon"
-                          src={onlineReputationIcon}
-                          alt="Online Reputation"
-                        />
-                      </a>
+                    <div
+                      className={
+                        (currentPage ===
+                        "/marketing-solutions/online-reputation-management/"
+                          ? "active "
+                          : "") + "panel"
+                      }
+                    >
+                      <div className="icon-wrapper">
+                        <a href="/marketing-solutions/online-reputation-management/">
+                          <img
+                            className="img-icon"
+                            src={onlineReputationIcon}
+                            alt="Online Reputation"
+                          />
+                        </a>
+                      </div>
+                      <p>Online Reputation</p>
                     </div>
-                    <p>Online Reputation</p>
-                  </div>
-                  <div
-                    className={
-                      (currentPage === "/marketing-solutions/our-technology/"
-                        ? "active "
-                        : "") + "panel"
-                    }
-                  >
-                    <div className="icon-wrapper">
-                      <a href="/marketing-solutions/our-technology/">
-                        <img
-                          className="img-icon"
-                          src={ourTechnologyIcon}
-                          alt="Our Technology"
-                        />
-                      </a>
+                    <div
+                      className={
+                        (currentPage === "/marketing-solutions/our-technology/"
+                          ? "active "
+                          : "") + "panel"
+                      }
+                    >
+                      <div className="icon-wrapper">
+                        <a href="/marketing-solutions/our-technology/">
+                          <img
+                            className="img-icon"
+                            src={ourTechnologyIcon}
+                            alt="Our Technology"
+                          />
+                        </a>
+                      </div>
+                      <p>Our Technology</p>
                     </div>
-                    <p>Our Technology</p>
-                  </div>
-                  <div
-                    className={
-                      (currentPage === "/marketing-solutions/hosting-solutions/"
-                        ? "active "
-                        : "") + "panel"
-                    }
-                  >
-                    <div className="icon-wrapper">
-                      <a href="/marketing-solutions/hosting-solutions/">
-                        <img
-                          className="img-icon"
-                          src={hostingSolutionsIcon}
-                          alt="Hosting Solutions"
-                        />
-                      </a>
+                    <div
+                      className={
+                        (currentPage ===
+                        "/marketing-solutions/hosting-solutions/"
+                          ? "active "
+                          : "") + "panel"
+                      }
+                    >
+                      <div className="icon-wrapper">
+                        <a href="/marketing-solutions/hosting-solutions/">
+                          <img
+                            className="img-icon"
+                            src={hostingSolutionsIcon}
+                            alt="Hosting Solutions"
+                          />
+                        </a>
+                      </div>
+                      <p>Hosting Solutions</p>
                     </div>
-                    <p>Hosting Solutions</p>
                   </div>
                 </div>
               </div>
@@ -187,19 +191,32 @@ export default props => {
                         className="link-icon"
                         alt={row.content.icon.alt}
                       />
-                      <p>{row.content.icon.title}</p>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: row.content.icon.title,
+                        }}
+                      />
                     </div>
                     <div className="inner-title">
-                      <h2>{row.content.innerTitle}</h2>
+                      <h2
+                        dangerouslySetInnerHTML={{
+                          __html: row.content.innerTitle,
+                        }}
+                      />
                     </div>
                     <div className="accented-paragraph">
-                      <p>{row.content.paragraph}</p>
+                      <p
+                        className="s-thin"
+                        dangerouslySetInnerHTML={{
+                          __html: row.content.paragraph,
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
                 <div class={(index % 2 ? "order-sm-2" : "") + " col-sm-5"}>
                   <img
-                    className="img-responsive blur-bleed"
+                    className="img-responsive"
                     src={row.image.url}
                     alt={row.image.alt}
                   />

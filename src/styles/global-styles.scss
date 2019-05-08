@@ -49,6 +49,11 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+/* Undoing reboot */
+p {
+  margin-bottom: 0;
+}
+
 /* ~bootstrap? */
 .img-responsive {
   max-width: 100%;

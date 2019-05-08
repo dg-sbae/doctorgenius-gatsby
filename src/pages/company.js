@@ -21,7 +21,7 @@ export default props => (
                 <div className="hero-content accent-block">
                   <h1>Company</h1>
                   <h2>
-                    What <span>we are about</span>
+                    <span>What </span>we are about
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -167,8 +167,15 @@ export default props => (
                     12 Months Duration
                   </p>
                   <div className="callout-link">
-                    <a href="/our-clients/">
-                      <i className="fa fa-arrow-right" />
+                    <a
+                      href="/our-clients/"
+                      className="link-with-icon font-weight-semibold"
+                    >
+                      <img
+                        src="/icon/right-arrow-blue.svg"
+                        className="link-icon"
+                        alt="Icon of a Right Arrow"
+                      />
                       Learn More
                     </a>
                   </div>

@@ -82,11 +82,19 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   const { setWebpackConfig } = actions
   setWebpackConfig({
     externals: {
       jquery: "jQuery",
+    },
+    module: {
+      rules: [
+        {
+          test: /bootstrap/,
+          use: loaders.null(),
+        },
+      ],
     },
   })
 }
