@@ -31,6 +31,10 @@ header {
       background-repeat: no-repeat;
       background-position: center;
       vertical-align: middle;
+
+      @include media("<=laptop") {
+        margin-left: 8px;
+      }
     }
   }
   .phone > a {
