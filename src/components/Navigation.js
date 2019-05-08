@@ -29,6 +29,7 @@ import resources from "../../public/icon/resources.svg"
 import freeDemo from "../../public/icon/video-options.svg"
 import contact from "../../public/icon/email.svg"
 import downArrow from "../../public/icon/down-arrow.svg"
+import dismissIcon from "../../public/icon/dismiss-white.svg"
 
 import "../styles/global-styles.scss"
 import "bootstrap/dist/js/bootstrap.min.js"
@@ -644,7 +645,7 @@ class Navigation extends Component {
             aria-expanded=""
             aria-label=""
           >
-            <span class="dismiss-icon" />
+            <img className="dismiss-icon" src={dismissIcon} />
           </button>
 
           <ul className="navbar-nav">
