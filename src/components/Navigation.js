@@ -30,6 +30,11 @@ import freeDemo from "../../public/icon/video-options.svg"
 import contact from "../../public/icon/email.svg"
 import downArrow from "../../public/icon/down-arrow.svg"
 import dismissIcon from "../../public/icon/dismiss-white.svg"
+import facebook from "../../public/icon/facebook-white.svg"
+import twitter from "../../public/icon/twitter-white.svg"
+import instagram from "../../public/icon/instagram-white.svg"
+import linkedin from "../../public/icon/linkedin-white.svg"
+import youtube from "../../public/icon/youtube-white.svg"
 
 import "../styles/global-styles.scss"
 import "bootstrap/dist/js/bootstrap.min.js"
@@ -41,6 +46,16 @@ const ListLink = props => (
       {props.children}
     </Link>
     {}
+  </li>
+)
+
+const ExternalLink = props => (
+  <li className="">
+    <a href={props.to} target="_blank">
+      <div className="icon-wrapper">
+        <img className="img-icon" src={props.source} alt={props.alt} />
+      </div>
+    </a>
   </li>
 )
 
@@ -729,6 +744,33 @@ class Navigation extends Component {
             >
               Contact
             </SideNavListLink>
+          </ul>
+          <ul className="social-media">
+            <ExternalLink
+              to="https://www.facebook.com/DoctorGeniusMarketing"
+              source={facebook}
+              alt="Facebook logo icon"
+            />
+            <ExternalLink
+              to="https://twitter.com/DoctorGeniusCA"
+              source={twitter}
+              alt="Twitter logo icon"
+            />
+            <ExternalLink
+              to="https://www.instagram.com/doctor.genius/"
+              source={instagram}
+              alt="Instagram logo icon"
+            />
+            <ExternalLink
+              to="https://www.linkedin.com/company/doctor-genius"
+              source={linkedin}
+              alt="LinkedIn logo icon"
+            />
+            <ExternalLink
+              to="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos"
+              source={youtube}
+              alt="Youtube logo icon"
+            />
           </ul>
         </nav>
         <div class="overlay" />

@@ -532,6 +532,19 @@ $bottom-padding-md: 20px;
     .img-icon {
     }
   }
+
+  .social-media {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+    }
+  }
 }
 
 #sidebar.active {
