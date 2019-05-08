@@ -93,7 +93,7 @@ const MarketingSolutionsSideNavListLink = props => (
       </div>
       <ul>
         <ListLink
-          to="/marketing-solutions/responsive-websites"
+          to="/marketing-solutions/websites"
           activeClassName="active"
           partiallyActive={true}
         >
@@ -114,7 +114,7 @@ const MarketingSolutionsSideNavListLink = props => (
           Digital Advertising
         </ListLink>
         <ListLink
-          to="/marketing-solutions/online-reputation"
+          to="/marketing-solutions/online-reputation-management"
           activeClassName="active"
           partiallyActive={true}
         >
@@ -157,35 +157,35 @@ const WhoWeServeSideNavListLink = props => (
       </div>
       <ul>
         <ListLink
-          to="/marketing-solutions/responsive-websites"
+          to="/our-clients/dental-practices/"
           activeClassName="active"
           partiallyActive={true}
         >
           Dental Practices
         </ListLink>
         <ListLink
-          to="/marketing-solutions/content-marketing"
+          to="/our-clients/cosmetic-surgeons/"
           activeClassName="active"
           partiallyActive={true}
         >
           Cosmetic Surgeons
         </ListLink>
         <ListLink
-          to="/marketing-solutions/digital-advertising"
+          to="/our-clients/urgent-care-clinics/"
           activeClassName="active"
           partiallyActive={true}
         >
           Urgent Care Clinics
         </ListLink>
         <ListLink
-          to="/marketing-solutions/online-reputation"
+          to="/our-clients/healthcare-marketing/"
           activeClassName="active"
           partiallyActive={true}
         >
           Healthcare Marketing
         </ListLink>
         <ListLink
-          to="/marketing-solutions/our-technology"
+          to="/our-clients/chiropractor-practices/"
           activeClassName="active"
           partiallyActive={true}
         >
@@ -214,39 +214,39 @@ const ResourcesSideNavListLink = props => (
       </div>
       <ul>
         <ListLink
-          to="/marketing-solutions/responsive-websites"
+          to="/the-study"
           activeClassName="active"
           partiallyActive={true}
         >
-          Dental Practices
+          The Study
         </ListLink>
         <ListLink
-          to="/marketing-solutions/content-marketing"
+          to="/intentional-404/"
           activeClassName="active"
           partiallyActive={true}
         >
-          Cosmetic Surgeons
+          Webinars
         </ListLink>
         <ListLink
-          to="/marketing-solutions/digital-advertising"
+          to="/case-study/"
           activeClassName="active"
           partiallyActive={true}
         >
-          Urgent Care Clinics
+          Case Studies
         </ListLink>
         <ListLink
-          to="/marketing-solutions/online-reputation"
+          to="/intentional-404/"
           activeClassName="active"
           partiallyActive={true}
         >
-          Healthcare Marketing
+          Knowledge Base
         </ListLink>
         <ListLink
-          to="/marketing-solutions/our-technology"
+          to="/intentional-404/"
           activeClassName="active"
           partiallyActive={true}
         >
-          Chiropractor Practices
+          eBooks and Whitepapers
         </ListLink>
       </ul>
     </div>
@@ -690,7 +690,7 @@ class Navigation extends Component {
               iconSubnav={ourClients}
               // data-toggle="collapse"
               // aria-expanded="false"
-              to="/our-cleints"
+              to="/our-clients"
             >
               Who We Serve
             </WhoWeServeSideNavListLink>
@@ -720,7 +720,7 @@ class Navigation extends Component {
               iconSubnav={resources}
               // data-toggle="collapse"
               // aria-expanded="false"
-              to="/resources"
+              to="/the-study"
             >
               Resources
             </ResourcesSideNavListLink>
