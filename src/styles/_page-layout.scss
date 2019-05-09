@@ -156,6 +156,12 @@ header {
         // transform: translateX(-50%);
         // margin-right: auto;
         // margin-left: auto;
+        .dropdown-row {
+          margin-bottom: 35px;
+        }
+        .dropdown-row:last-child() {
+          margin-bottom: 0px;
+        }
         .nav-icon-wrapper {
           display: inline-block;
           width: 38px;
