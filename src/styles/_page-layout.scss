@@ -31,6 +31,9 @@ header {
       background-repeat: no-repeat;
       background-position: center;
       vertical-align: middle;
+      @include media("<laptop") {
+        background-position: initial;
+      }
     }
   }
   .phone > a {
@@ -49,6 +52,9 @@ header {
   }
   nav {
     height: 120px;
+    @include media("<laptop") {
+      height: 75px;
+    }
     display: flex;
     transition: all 0.3s;
     .nav-button {
@@ -64,7 +70,7 @@ header {
     }
     &.navbar {
       position: relative;
-      @include media("<=tablet") {
+      @include media("<=laptop") {
         padding-left: 24px;
         padding-right: 24px;
       }
@@ -109,6 +115,7 @@ header {
           background-image: url(/png/logo-blue.png);
           @include media("<=laptop") {
             background-image: url(/png/logo-white.png);
+            background-position: initial;
           }
         }
         .phone-holder {
@@ -193,21 +200,30 @@ header {
 
     .container,
     .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       .logo {
         flex-basis: 20%;
+        @include media("<laptop") {
+          flex-basis: 75%;
+        }
       }
       .main-links {
-        flex-basis: 48%;
+        flex-basis: 47%;
 
         &.navbar-collapse {
           flex-grow: 0;
         }
       }
       .contact-links {
-        flex-basis: 24%;
+        flex-basis: 26%;
+        @include media(">=desktop") {
+          flex-basis: 23%;
+        }
+        position: relative;
         img.phone {
           /* this should probably be yet another flexbox */
           transform: scale(1.25);
