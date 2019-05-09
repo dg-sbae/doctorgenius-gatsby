@@ -53,6 +53,10 @@ $container-max-widths: (
 ) !default;
 
 $grid-gutter-width: $m1 * 2 !default;
+$gutter-lg: 75px;
+$gutter-md: 60px;
+$gutter-sm: 50px;
+$gutter-xs: 30px;
 /* hompage
     hero h1 xagenda x81px thin/semibold
     h3 x20px semibold
