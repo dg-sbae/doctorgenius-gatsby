@@ -18,12 +18,46 @@
   }
 }
 .row {
+  @include media("<=phone") {
+    margin-right: -$gutter-xs / 2;
+    margin-left: -$gutter-xs / 2;
+    > [class*="col-"] {
+      padding-right: $gutter-xs / 2;
+      padding-left: $gutter-xs / 2;
+    }
+  }
   @include media(">phone", "<=tablet") {
     margin-right: -$gutter-sm / 2;
     margin-left: -$gutter-sm / 2;
     > [class*="col-"] {
       padding-right: $gutter-sm / 2;
       padding-left: $gutter-sm / 2;
+    }
+  }
+  /* This may prove to be problematic but is attempting to correct for the oversized
+  gutter between half columns, by shifting an extra half the gutter into the row: */
+  @include media("<=tablet") {
+    padding-left: $gutter-sm;
+    padding-right: $gutter-sm;
+    > .col-sm-6 {
+      padding-right: $gutter-sm / 4;
+      padding-left: $gutter-sm / 4;
+    }
+  }
+  @include media(">tablet", "<=laptop") {
+    margin-right: -$gutter-md / 2;
+    margin-left: -$gutter-md / 2;
+    > [class*="col-"] {
+      padding-right: $gutter-md / 2;
+      padding-left: $gutter-md / 2;
+    }
+  }
+  @include media(">laptop", "<=desktop") {
+    margin-right: -$gutter-lg / 2;
+    margin-left: -$gutter-lg / 2;
+    > [class*="col-"] {
+      padding-right: $gutter-lg / 2;
+      padding-left: $gutter-lg / 2;
     }
   }
 }
