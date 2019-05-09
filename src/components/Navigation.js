@@ -692,7 +692,7 @@ class Navigation extends Component {
               // aria-expanded="false"
               to="/our-clients"
             >
-              Who We Serve
+              Our Clients
             </WhoWeServeSideNavListLink>
             <SideNavListLink
               className="nav-item dropdown"
@@ -817,7 +817,7 @@ class Navigation extends Component {
                   dataToggle="dropdown"
                   to="/our-clients/"
                 >
-                  Who We Serve
+                  Our Clients
                 </OurClientsListLink>
 
                 <ListLink className="" to="/plans/">
