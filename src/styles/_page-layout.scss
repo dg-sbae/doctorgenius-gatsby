@@ -400,6 +400,11 @@ html .hero {
   .hero-content {
     h2 {
       margin-top: 20px;
+      margin-bottom: 20px;
+      @include media("<=tablet") {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
     }
     @include media(">=tablet") {
       .accented-paragraph p {
