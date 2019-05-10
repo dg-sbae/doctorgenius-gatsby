@@ -5,24 +5,34 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
 .homepage {
   .hero {
     height: 707px;
-    @include media("<=laptop", ">phone") {
+    @include media("<=laptop", ">tablet") {
       height: 355px;
     }
+    @include media("<=tablet", ">phone") {
+      height: 420px;
+    }
     @include media("<=phone") {
-      height: 555px;
+      height: 500px;
     }
     background-image: url("/hero/homepage-option-1.png");
-    &:after {
-      height: 12px;
+    @include media(">=desktop") {
+      &:after {
+        height: 12px;
+      }
     }
     .hero-content {
       @include media(">laptop") {
         width: 690px;
         height: 350px;
       }
-      @include media("<=laptop", ">phone") {
+      @include media("<=laptop", ">tablet") {
         margin-top: 30px;
         width: 400px;
+      }
+      @include media("<=tablet", ">phone") {
+        max-width: 100%;
+        //width: calc(50% + 100 * ((100vw - 375px) / 768));
+        //width: calc(100% - 50 * ((100vw - 375px) / 768));
       }
       @include media("<=phone") {
         width: 100%;
@@ -36,10 +46,14 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
         margin-bottom: 27.5px;
         background: none;
         display: block;
-        @include media("<=laptop") {
+        @include media("<=laptop", ">tablet") {
           font-size: 42px;
           margin-bottom: 15px;
           line-height: 0.8;
+        }
+        @include media("<=tablet") {
+          margin-bottom: 25px;
+          font-size: 42px;
         }
       }
       .accent-block {
@@ -114,6 +128,7 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
           }
         }
         @include media("<=laptop") {
+          padding: 1rem;
           .accented-paragraph {
             margin-left: 10px;
             p {
@@ -132,7 +147,7 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
       .demo-cta {
         margin-top: 45px;
         margin-left: 55px;
-        @include media("<=laptop", ">phone") {
+        @include media("<=laptop", ">tablet") {
           text-align: center;
           margin-top: 10px;
           margin-left: auto;
@@ -140,9 +155,12 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
             font-size: 12px;
           }
         }
-        @include media("<=phone") {
+        @include media("<=tablet") {
+          text-align: center;
+          margin-left: auto;
+          margin-top: 10px;
           a {
-            font-size: 15px;
+            font-size: 16px;
           }
         }
 
