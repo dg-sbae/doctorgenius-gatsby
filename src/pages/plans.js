@@ -10,7 +10,6 @@ import downChevron from "../img/down-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/plans.scss"
-import "../styles/global-styles.scss"
 
 export default props => (
   <DefaultPageLayout>

@@ -13,7 +13,6 @@ import hostingSolutionsIcon from "../img/hosting-solutions.svg"
 //import lighthouseResult from "../img/lighthouse-result.png"
 
 import "../styles/marketing-solutions-inner.scss"
-import "../styles/global-styles.scss"
 
 export default props => {
   /* These will likely need to be dynamic props */
@@ -181,7 +180,7 @@ export default props => {
                 }
               >
                 <div
-                  className={(index % 2 ? "order-sm-12" : "") + " col-sm-1"}
+                  className={(index % 2 ? "order-sm-12" : "") + " col-lg-1"}
                 />
                 <div
                   class={(index % 2 ? "order-sm-6" : "") + " col-sm-6 col-lg-5"}

@@ -36,7 +36,6 @@ import instagram from "../../public/icon/instagram-white.svg"
 import linkedin from "../../public/icon/linkedin-white.svg"
 import youtube from "../../public/icon/youtube-white.svg"
 
-import "../styles/global-styles.scss"
 import "bootstrap/dist/js/bootstrap.min.js"
 // import "../../static/scripts/navigationFunctionality.js"
 

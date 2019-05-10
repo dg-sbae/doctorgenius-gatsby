@@ -1,8 +1,4 @@
-@import url("https://use.typekit.net/xmg2hgf.css");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:200,300,400,500");
-
 /* Text - Colors and fonts - font-size, font-family, color */
-
 /* Helper classes */
 .font-weight-semibold {
   font-weight: $font-weight-semibold;
@@ -60,7 +56,7 @@ nav {
   }
   .main-links {
     li {
-      font-size: $font-size-nav-main-links;
+      font-size: 0.875rem;
       font-weight: $font-weight-medium;
     }
   }
@@ -92,14 +88,20 @@ nav {
   .accent-block {
     h1 {
       font-size: $h1-font-size;
+      font-weight: $font-weight-medium;
     }
     h2 {
-      font-size: $h2-font-size;
+      @include fluid-type(
+        38px,
+        53px,
+        $phone,
+        $desktop
+      ); /* desktop - 53, tablet - 45, small - 38 */
       @include heading-font;
       margin-bottom: 20px;
     }
     p {
-      font-size: 1.1875rem;
+      @include fluid-type(1.0625rem, 1.1875rem, $phone, 991px); /* 19 - 17 */
       font-family: "Agenda";
       line-height: 1.4;
       font-weight: $font-weight-light;
@@ -256,19 +258,6 @@ footer {
   .footer-subrow {
     font-size: $font-size-subfooter;
     font-family: $font-family-body-text;
-  }
-}
-
-.case-study {
-  .panel-quadrant {
-    h4 {
-      font-size: 22px;
-      font-weight: $font-weight-semibold;
-    }
-    p {
-      font-size: 14px;
-      font-weight: $font-weight-light;
-    }
   }
 }
 

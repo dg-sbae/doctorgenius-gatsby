@@ -1,13 +1,14 @@
-@import "_site-variables.scss";
+@import "_global-styles.scss";
 
 .our-clients {
   .hero {
     background-image: url("/hero/our-clients.png");
-    height: 690px;
     .hero-content {
-      margin-top: 50px;
-      width: 630px;
-      height: 330px;
+      @include media(">=desktop") {
+        margin-top: 50px;
+        width: 630px;
+        height: 330px;
+      }
       h1 {
         padding: 2px 12px;
       }

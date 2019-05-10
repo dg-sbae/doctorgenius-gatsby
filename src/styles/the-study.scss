@@ -1,11 +1,13 @@
-@import "_site-variables.scss";
+@import "_global-styles.scss";
 
 .the-study {
   .hero {
     background-image: url("/hero/the-study.png");
     .hero-content {
-      width: 465px;
-      height: 270px;
+      @include media(">=desktop") {
+        width: 465px;
+        height: 270px;
+      }
       h2 {
         font-size: 90px;
         margin-top: 5px;

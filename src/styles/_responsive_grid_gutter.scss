@@ -36,14 +36,19 @@
   }
   /* This may prove to be problematic but is attempting to correct for the oversized
   gutter between half columns, by shifting an extra half the gutter into the row: */
-  @include media("<=tablet") {
-    padding-left: $gutter-sm;
-    padding-right: $gutter-sm;
-    > .col-sm-6 {
-      padding-right: $gutter-sm / 4;
-      padding-left: $gutter-sm / 4;
+  /* This solution on rows wont work because the extra padding should only be applied when the row has a .col-6- child, which we can't know here
+  &.thin-middle {
+    @include media("<=tablet") {
+      padding-left: $gutter-sm;
+      padding-right: $gutter-sm;
+      & > .col-sm-6:nth-of-type(odd) {
+        padding-right: $gutter-sm / 4;
+      }
+      & > .col-sm-6:nth-of-type(even) {
+        padding-left: $gutter-sm / 4;
+      }
     }
-  }
+  }*/
   @include media(">tablet", "<=laptop") {
     margin-right: -$gutter-md / 2;
     margin-left: -$gutter-md / 2;

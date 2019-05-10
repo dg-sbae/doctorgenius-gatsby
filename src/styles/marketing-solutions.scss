@@ -1,14 +1,20 @@
-@import "_site-variables.scss";
+@import "_global-styles.scss";
 
 .marketing-solutions {
   .hero {
-    height: 687px;
     background-image: url("/hero/marketing-solutions.png");
+    @include media("<=tablet") {
+      background-position: 84% 50%;
+    }
     .hero-content {
-      width: 490px;
-      height: 295px;
-      p {
-        width: 90%;
+      @include media(">=desktop") {
+        width: 490px;
+        height: 295px;
+      }
+      @include media(">=laptop") {
+        p {
+          width: 90%;
+        }
       }
     }
   }

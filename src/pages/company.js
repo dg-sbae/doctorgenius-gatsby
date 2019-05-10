@@ -6,7 +6,6 @@ import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
 
 import "../styles/company-page.scss"
-import "../styles/global-styles.scss"
 
 export default props => (
   <DefaultPageLayout>

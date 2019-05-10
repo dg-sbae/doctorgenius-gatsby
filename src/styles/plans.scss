@@ -1,16 +1,18 @@
-@import "_site-variables.scss";
+@import "_global-styles.scss";
+
 // Plans Grid
 $font-size-plans-row-heading: $font-size-base * 0.8125;
 
 .plans {
   .hero {
-    height: 690px;
     background-image: url("/hero/plans.png");
     background-position: center 18%;
     .hero-content {
-      width: 625px;
-      height: 344px;
-      padding: 2.8rem;
+      @include media(">=desktop") {
+        width: 625px;
+        height: 344px;
+        padding: 2.8rem;
+      }
       p {
         width: 85%;
       }

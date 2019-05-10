@@ -21,7 +21,6 @@ import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
-import "../styles/global-styles.scss"
 
 export default function({ data }) {
   //Isolate the blog and categories routes

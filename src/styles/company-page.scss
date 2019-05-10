@@ -1,3 +1,5 @@
+@import "_global-styles.scss";
+
 .company {
   .hero {
     background-image: url("/hero/about-us-hero.jpg");
@@ -5,9 +7,11 @@
       margin-bottom: 20px;
     }
     .hero-content {
-      width: 514px;
-      height: 280px;
-      margin-top: 90px;
+      @include media(">=desktop") {
+        width: 514px;
+        height: 280px;
+        margin-top: 90px;
+      }
     }
   }
   .icon-wrapper {

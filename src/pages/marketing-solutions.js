@@ -15,7 +15,6 @@ import lighthouseResultsOnMarketingPage from "../img/lighthouse-results-on-marke
 import portalDashboard from "../img/portal-dashboard.png"
 
 import "../styles/marketing-solutions.scss"
-import "../styles/global-styles.scss"
 
 export default props => (
   <DefaultPageLayout>

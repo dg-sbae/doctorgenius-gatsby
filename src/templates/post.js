@@ -17,7 +17,6 @@ import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study-post.scss"
-import "../styles/global-styles.scss"
 
 function PostPage({ pageContext, data }) {
   const post = data.currentPost

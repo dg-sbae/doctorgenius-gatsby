@@ -4,7 +4,6 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import "../styles/global-styles.scss"
 import "../styles/case-study.scss"
 
 import thinArrowRight from "../img/right-arrow.svg"

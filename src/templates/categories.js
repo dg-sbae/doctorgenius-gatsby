@@ -19,7 +19,6 @@ import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
-import "../styles/global-styles.scss"
 
 const CategoriesPage = ({ data, pageContext }) => {
   //Isolate the blog and categories routes

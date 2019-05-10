@@ -1,5 +1,3 @@
-@import "_include-media";
-
 /* Spacing */
 $m1: 37.5px;
 $pad: 15px;
@@ -72,6 +70,8 @@ $gutter-xs: 30px;
     navigation link x14px xroboto xmedium
 */
 
+$rfs-base-font-size: 1.25rem !default;
+
 // Standard Font Families
 $font-family-base: agenda, sans-serif !default;
 $font-family-inner-block-headings: montserrat, sans-serif;
@@ -79,8 +79,14 @@ $font-family-body-text: roboto, sans-serif;
 $font-family-inner-block-subtext: muli, sans-serif;
 
 // Standard font sizes
+/* 1.1875 =  19px */
+/* 1.125 =  18px */
+/* 1.0625 = 17 */
+/* 1 =      16 */
+/* .9375 =  15 */
+/* .875 =   14 */
 $font-size-base: 1rem !default; /* 16px */
-$font-size-normal-text: $font-size-base * 1.0625; /* 1.125 = 18px */ /* 1.0625 = 17 */ /* 1 = 16 */ /* .9375 */ /* .875 = 14 */
+$font-size-normal-text: $font-size-base * 1.0625;
 $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * 0.875 !default;
 
@@ -93,6 +99,7 @@ $panel-heading-font-size: $font-size-base * 2.5;
 
 // Headings
 $h1-font-size: $font-size-base * 1 !default;
+/* lg - 63px; md - 63px; sm - 46px */
 $h2-font-size: $font-size-base * 3.3125 !default;
 $h2-font-size-content-block: $font-size-base * 2.5;
 $h2-font-size-main: $font-size-base * 2.8125;
@@ -107,7 +114,7 @@ $font-size-nav-contact-links: $font-size-base * 0.9375;
 $font-size-subfooter: $font-size-base * 0.75;
 
 // Hero
-$hero-strapline-font-size: $font-size-base * 1;
+/* $hero-strapline-font-size: $font-size-base * 1; - unused*/
 
 // Font Weights
 $font-weight-thin: 100;

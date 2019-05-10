@@ -6,7 +6,6 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 // import InnerTitle from "../components/inner-title.js"
 
-import "../styles/global-styles.scss"
 import "../styles/homepage.scss"
 
 import medal from "../img/medal.png"
