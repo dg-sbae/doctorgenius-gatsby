@@ -21,7 +21,7 @@ export default props => (
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}
-        {/* @todo: Heros need a thin grey border underneath, not included in pic */}
+
         <Container>
           <div className="valign-wrapper row">
             <div className="col-sm-12">

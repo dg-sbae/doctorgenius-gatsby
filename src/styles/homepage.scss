@@ -5,91 +5,126 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
 .homepage {
   .hero {
     height: 707px;
+    @include media("<=laptop", ">phone") {
+      height: 355px;
+    }
+    @include media("<=phone") {
+      height: 555px;
+    }
     background-image: url("/hero/homepage-option-1.png");
     &:after {
       height: 12px;
     }
     .hero-content {
-      @include media(">=tablet") {
+      @include media(">laptop") {
         width: 690px;
         height: 350px;
+      }
+      @include media("<=laptop", ">phone") {
+        margin-top: 30px;
+        width: 400px;
+      }
+      @include media("<=phone") {
+        width: 100%;
       }
       align-self: flex-start;
       h1 {
         @include heading-font;
         padding: initial;
         font-size: $homepage-h1-font-size;
-        @include media("<=laptop") {
-        }
+
         margin-bottom: 27.5px;
         background: none;
         display: block;
+        @include media("<=laptop") {
+          font-size: 42px;
+          margin-bottom: 15px;
+          line-height: 0.8;
+        }
       }
       .accent-block {
         position: relative;
         background: transparent;
-        .border-horizontal {
-          width: 14px;
-          position: absolute;
+        @include media(">laptop") {
+          .border-horizontal {
+            width: 14px;
+            position: absolute;
 
-          &.border-top-left {
-            border-top: 4px solid #fff;
-            top: 0;
-            left: 0;
+            &.border-top-left {
+              border-top: 4px solid #fff;
+              top: 0;
+              left: 0;
+            }
+
+            &.border-top-right {
+              border-top: 4px solid #fff;
+              top: 0;
+              right: 0;
+            }
+
+            &.border-bottom-left {
+              border-bottom: 4px solid #fff;
+              bottom: 0;
+              left: 0;
+            }
+
+            &.border-bottom-right {
+              border-bottom: 4px solid #fff;
+              bottom: 0;
+              right: 0;
+            }
           }
-
-          &.border-top-right {
-            border-top: 4px solid #fff;
-            top: 0;
-            right: 0;
-          }
-
-          &.border-bottom-left {
-            border-bottom: 4px solid #fff;
-            bottom: 0;
-            left: 0;
-          }
-
-          &.border-bottom-right {
-            border-bottom: 4px solid #fff;
-            bottom: 0;
-            right: 0;
+          .border-vertical {
+            height: 14px;
+            position: absolute;
+            &.border-left-top {
+              border-left: 4px solid #fff;
+              top: 0;
+              left: 0;
+            }
+            &.border-right-top {
+              border-right: 4px solid #fff;
+              top: 0;
+              right: 0;
+            }
+            &.border-left-bottom {
+              border-left: 4px solid #fff;
+              bottom: 0;
+              left: 0;
+            }
+            &.border-right-bottom {
+              border-right: 4px solid #fff;
+              bottom: 0;
+              right: 0;
+            }
           }
         }
-        .border-vertical {
-          height: 14px;
-          position: absolute;
-          &.border-left-top {
-            border-left: 4px solid #fff;
-            top: 0;
-            left: 0;
-          }
-          &.border-right-top {
-            border-right: 4px solid #fff;
-            top: 0;
-            right: 0;
-          }
-          &.border-left-bottom {
-            border-left: 4px solid #fff;
-            bottom: 0;
-            left: 0;
-          }
-          &.border-right-bottom {
-            border-right: 4px solid #fff;
-            bottom: 0;
-            right: 0;
+
+        @include media(">laptop") {
+          .accented-paragraph {
+            margin-left: 23px;
+            p {
+              line-height: 1.6;
+              &:before {
+                width: 5px;
+                margin-left: -20px;
+                background-color: $homepage-secondary-accent;
+              }
+            }
           }
         }
-
-        .accented-paragraph {
-          margin-left: 23px;
-          p {
-            line-height: 1.6;
-            font-family: "Roboto", sans-serif; /* this may be an error, all other hero > p's use Agenda*/
-            &:before {
-              width: 5px;
-              margin-left: -20px;
-              background-color: $homepage-secondary-accent;
+        @include media("<=laptop") {
+          .accented-paragraph {
+            margin-left: 10px;
+            p {
+              font-size: 14px;
+              line-height: 1.3;
+              &:before {
+                width: 2px;
+                height: 25px;
+                margin-left: -10px;
+                background: #33b2ff;
+              }
             }
           }
         }
@@ -97,9 +132,18 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
       .demo-cta {
         margin-top: 45px;
         margin-left: 55px;
-        @include media("<=laptop") {
+        @include media("<=laptop", ">phone") {
           text-align: center;
+          margin-top: 10px;
           margin-left: auto;
+          a {
+            font-size: 12px;
+          }
+        }
+        @include media("<=phone") {
+          a {
+            font-size: 15px;
+          }
         }
 
         a {

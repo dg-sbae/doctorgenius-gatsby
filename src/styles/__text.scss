@@ -93,15 +93,14 @@ nav {
     h2 {
       @include fluid-type(
         38px,
-        53px,
+        45px,
         $phone,
-        $desktop
+        $tablet
       ); /* desktop - 53, tablet - 45, small - 38 */
       @include heading-font;
-      margin-bottom: 20px;
     }
     p {
-      @include fluid-type(1.0625rem, 1.1875rem, $phone, 991px); /* 19 - 17 */
+      @include fluid-type(1.0625rem, 1.1875rem, $phone, $tablet); /* 19 - 17 */
       font-family: "Agenda";
       line-height: 1.4;
       font-weight: $font-weight-light;
