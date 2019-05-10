@@ -1,16 +1,15 @@
-@import "_global-styles.scss";
-
+@import "_site-variables.scss";
 .case-study {
   .hero {
     background-image: url("/hero/case-study.png");
 
     .accent-block {
-      @include media(">=desktop") {
+      @include media(">=tablet") {
         width: 470px;
         height: 271px;
       }
       h2 {
-        font-size: 5.645rem;
+        @include fluid-type(40px, 90px, $phone, $desktop);
         margin-top: 0;
       }
     }

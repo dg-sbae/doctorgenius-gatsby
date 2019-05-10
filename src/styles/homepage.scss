@@ -1,5 +1,4 @@
-@import "_global-styles.scss";
-
+@import "_site-variables.scss";
 // Homepage specific
 $homepage-h1-font-size: $font-size-base * 5.0625;
 /* lg - 81; md - 42; sm - 42 */
@@ -11,7 +10,7 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
       height: 12px;
     }
     .hero-content {
-      @include media(">=desktop") {
+      @include media(">=tablet") {
         width: 690px;
         height: 350px;
       }

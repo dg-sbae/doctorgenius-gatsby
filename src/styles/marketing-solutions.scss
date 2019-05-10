@@ -1,4 +1,4 @@
-@import "_global-styles.scss";
+@import "_site-variables.scss";
 
 .marketing-solutions {
   .hero {
@@ -7,11 +7,9 @@
       background-position: 84% 50%;
     }
     .hero-content {
-      @include media(">=desktop") {
+      @include media(">=tablet") {
         width: 490px;
         height: 295px;
-      }
-      @include media(">=laptop") {
         p {
           width: 90%;
         }

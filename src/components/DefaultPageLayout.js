@@ -4,7 +4,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Navigation from "../components/Navigation"
 
-import "./default-page-layout.css"
+import "../styles/_global-styles.scss"
 
 export default ({ children }) => (
   <div className="content-wrapper">

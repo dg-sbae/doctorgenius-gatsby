@@ -1,15 +1,13 @@
-@import "_global-styles.scss";
+@import "_site-variables.scss";
 
 .marketing-solutions-inner {
   .hero {
     background-image: url("/hero/marketing-solutions-subpage.jpg");
   }
   .hero-content {
-    @include media(">=desktop") {
-      width: 4920px;
+    @include media(">=tablet") {
+      width: 492px;
       height: 330px;
-    }
-    @include media(">=laptop") {
       p {
         width: 90%;
       }

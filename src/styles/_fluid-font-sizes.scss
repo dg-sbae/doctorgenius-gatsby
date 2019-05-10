@@ -18,7 +18,7 @@
   $min-font-size: 12px,
   $max-font-size: 21px,
   $lower-range: 420px,
-  $upper-range: 900px
+  $upper-range: 991px
 ) {
   font-size: calc(
     #{$min-font-size} + #{(
