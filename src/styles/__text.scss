@@ -119,11 +119,25 @@ nav {
   }
   .inner-title {
     h2 {
-      font-size: $h2-font-size-content-block; /* See if this is really necessary conflicts with the h2 size below */
+      span {
+        font-weight: $font-weight-light;
+      }
+      font-size: $h2-font-size-content-block;
+      /*@include fluid-type(
+        20px,
+        $h2-font-size-content-block,
+        $phone,
+        $tablet
+      ); //; /* See if this is really necessary conflicts with the h2 size below */ //font-size: $h2-font-size-main;
+      @include media("<=laptop") {
+        font-weight: $font-weight-semibold;
+        font-size: 20px;
+      }
       margin-bottom: 25px;
     }
   }
 }
+/* inner titles which live outside a content block (like coumn headings) */
 .inner-title {
   h3 {
     line-height: 1;
@@ -135,7 +149,12 @@ nav {
   }
   h2 {
     line-height: 1;
-    font-size: $h2-font-size-main;
+    @include fluid-type(
+      $h2-font-size-main * 0.65,
+      $h2-font-size-main,
+      $phone,
+      $tablet
+    ); //font-size: $h2-font-size-main;
     font-weight: $font-weight-medium;
   }
 }
@@ -151,6 +170,8 @@ nav {
 .accented-paragraph {
   p {
     @include accented-paragraph-font;
+    font-size: 14px;
+    //@include fluid-type(14px, 17px, $phone, $tablet);
   }
 }
 
@@ -194,26 +215,50 @@ nav {
 .panel {
   .panel-heading {
     color: $primary;
-    font-size: $panel-heading-font-size;
+    @include fluid-type(
+      $panel-heading-font-size * 0.85,
+      $panel-heading-font-size,
+      $laptop,
+      $desktop
+    );
     font-family: $font-family-inner-block-headings;
     font-weight: $font-weight-bold;
+    @include media("<=laptop") {
+      font-size: 24px;
+    }
   }
   .panel-body {
     font-size: $font-size-lg;
     color: $mute-text-darker;
+    line-height: 1.2;
+    @include media("<=laptop") {
+      font-size: 14px;
+    }
   }
 }
 
 // Standard Request demo Footer
+
 .request-demo-footer {
-  h2 {
-    font-weight: $font-weight-light;
-  }
-  p {
-    color: $demo-body-text;
+  .content-block {
+    h2 {
+      font-weight: $font-weight-light;
+      font-size: 46px;
+      span {
+        font-weight: $font-weight-semibold;
+      }
+      @include media("<=laptop") {
+        font-size: 26px;
+      }
+    }
+    p {
+      color: $demo-body-text;
+    }
+    a.button {
+      @include fluid-type(18px, 15px, $phone, $laptop);
+    }
   }
 }
-
 // Testimonial Slider
 .card-content-wrapper {
   .card-copy {

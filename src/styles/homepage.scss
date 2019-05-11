@@ -196,12 +196,21 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
     background: url("../img/full-bleed-bg-slanted.png") 50% 50% no-repeat;
     height: 800px;
     background-position: 46% center;
-    @include media("<=laptop") {
-      height: 550px;
+    background-size: contain;
+    width: 175%;
+    @include media("<=laptop", ">phone") {
+      height: 500px;
+      background-size: contain;
+    }
+    @include media("<=phone") {
+      height: 350px;
       background-size: cover;
     }
-    @include media("<tablet") {
-      height: 400px;
+  }
+  .full-bleed-content-wrapper {
+    @include media("<=phone") {
+      width: 183%;
+      left: -64%;
     }
   }
   .panel p:not(.panel-heading) {

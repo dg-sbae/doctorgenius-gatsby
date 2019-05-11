@@ -62,7 +62,7 @@ export default ({ data }, props) => (
       <Main>
         <Container>
           <div className="row padded panel-row">
-            <div className="col-sm-12">
+            <div className="col-sm-10">
               <div className="header inner-title center">
                 <h3 className="strapline">Performance, Results, Excellence</h3>
                 <h2 className="underline">We Care About Your Success</h2>
@@ -114,7 +114,7 @@ export default ({ data }, props) => (
             </div>
           </div>
           <div className="row padded">
-            <div className="col-sm-12">
+            <div className="col-sm-10">
               <div className="inner-title center">
                 <h3 className="strapline">Built for success</h3>
                 <h2 className="underline font-weight-light">
@@ -126,7 +126,7 @@ export default ({ data }, props) => (
                 </h2>
               </div>
             </div>
-            <div className="col-sm-12 col-md-10 col-lg-6">
+            <div className="col-sm-11 col-md-8 col-lg-6">
               <div className="accented-paragraph">
                 <p>
                   Our robust, comprehensive marketing solutions helps keep your
@@ -143,7 +143,7 @@ export default ({ data }, props) => (
             <div className="full-bleed-content-wrapper">
               <div className="row">
                 <div className="col-lg-1" />
-                <div className="col-sm-10">
+                <div className="col-sm-9">
                   <img
                     src={homepageMobileMockup}
                     alt=""
@@ -167,14 +167,14 @@ export default ({ data }, props) => (
                 </h2>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-9 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={newPatientAcquisitions}
                 alt=""
               />
             </div>
-            <div className="col-sm-6 col-lg-5">
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>Why is Doctor Genius # 1 in new patient acquisitions?</h2>
@@ -187,12 +187,12 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
-              <div className="col-lg-1" />
+              <div className="col-md-1" />
             </div>
           </div>
           <div className="row padded short-top short-bottom">
-            <div className="col-lg-1" />
-            <div className="col-sm-6 col-lg-5">
+            <div className="col-md-1" />
+            <div className="col-sm-9 col-md-5 order-xs-9">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>What makes Doctor Genius different?</h2>
@@ -205,7 +205,7 @@ export default ({ data }, props) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-9 col-md-6 order-md-9">
               <img
                 className="img-responsive blur-bleed"
                 src={dgDifferent}
@@ -214,14 +214,14 @@ export default ({ data }, props) => (
             </div>
           </div>
           <div className="row padded short-top tall-bottom">
-            <div className="col-sm-6">
+            <div className="col-sm-9 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={dgClientSatisfaction}
                 alt=""
               />
             </div>
-            <div className="col-sm-6 col-lg-5">
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>How would you rate Doctor Genius client satisfaction?</h2>
@@ -233,19 +233,17 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
-              <div className="col-lg-1" />
+              <div className="col-md-1" />
             </div>
           </div>
           {/* Begin Demo Footer */}
           <div className="row padded tall-top request-demo-footer">
-            <div className="col-lg-1" />
-            <div className="col-sm-6 col-lg-5">
+            <div className="col-md-1" />
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>
-                    Start your
-                    <span className="font-weight-semibold"> success </span>
-                    with Doctor Genius today!
+                    Start your <span>success</span> with Doctor Genius today!
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -258,14 +256,14 @@ export default ({ data }, props) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-lg-5">
+            <div className="col-sm-9 col-md-5">
               <div className="center">
                 <a href="/" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
             </div>
-            <div className="col-lg-1" />
+            <div className="col-md-1" />
           </div>
           {/* End Demo Footer */}
         </Container>
