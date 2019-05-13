@@ -266,6 +266,18 @@ header {
     height: 80px;
   }
 }
+.request-demo-footer {
+  a.button {
+    @include media("<=tablet") {
+      display: inline-block;
+      margin-top: 40px;
+      margin-bottom: 60px;
+      width: 75%;
+      text-align: center;
+    }
+  }
+}
+
 footer {
   .footer-row {
     .logo {

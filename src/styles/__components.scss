@@ -113,7 +113,10 @@
     margin-bottom: 0;
   }
   @include media("<=laptop") {
-    margin: auto;
+    margin: 20px auto 40px;
+    .panel-heading {
+      margin: 5px 0;
+    }
   }
 }
 
