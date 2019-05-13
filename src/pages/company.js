@@ -209,7 +209,7 @@ export default props => (
               <div className="content-block">
                 <div className="innerTitle">
                   <h2 className="font-weight-normal">
-                    Let's
+                    Let's{" "}
                     <span className="font-weight-semibold">
                       Talk Partnership
                     </span>
