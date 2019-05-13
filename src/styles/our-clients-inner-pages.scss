@@ -1,0 +1,48 @@
+@import "_site-variables.scss";
+
+.our-clients-inner {
+  .hero {
+    background-image: url("/hero/marketing-solutions-subpage.jpg");
+  }
+  .hero-content {
+    @include media(">=tablet") {
+      width: 492px;
+      height: 330px;
+      p {
+        width: 90%;
+      }
+    }
+  }
+
+  .icon-strapline {
+    img {
+      max-width: 25px;
+    }
+    p {
+      color: $primary;
+      display: inline;
+    }
+    & + .inner-title {
+      h2 {
+        margin-bottom: 10px;
+      }
+      & + .accented-paragraph p {
+        color: #797979;
+      }
+    }
+  }
+
+  .check-plans-background-image {
+    height: 475px;
+    background: url("/png/our-clients-fullbleed-image.png") no-repeat;
+    background-position: 40%;
+  }
+
+  .row {
+    &.padded {
+      &.tall-bottom {
+        margin-bottom: 90px;
+      }
+    }
+  }
+}
