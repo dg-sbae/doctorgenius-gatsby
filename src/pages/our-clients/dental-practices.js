@@ -4,6 +4,7 @@ import OurClientsInnerPages from "../../templates/our-clients-inner-pages"
 
 export default () => (
   <OurClientsInnerPages
+    className="dental-practices"
     page="/our-clients/dental-practices/" /* this should be dynamic from the page props */
     pageTitle="Dentistry Practices"
     pageSubTitle="<span>Engage and Convert More</span> Patients To Your Practice"

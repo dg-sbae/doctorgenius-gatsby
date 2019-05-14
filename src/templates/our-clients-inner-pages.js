@@ -27,7 +27,7 @@ export default props => {
 
   return (
     <DefaultPageLayout>
-      <div className={props["*"] + " our-clients-inner"}>
+      <div className={props["*"] + " our-clients-inner " + props.className}>
         <div className="hero">
           {/* Hero will be a layout component */}
 
