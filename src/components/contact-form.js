@@ -4,7 +4,8 @@ import thinArrowRight from "../img/right-arrow.svg"
 class FormResponse extends React.Component {
   render() {
     return (
-      <div>
+      <div className="form-response">
+        <h3>Debug:</h3>
         <p>Form data received from server:</p>
         <ul>
           <li>
@@ -50,7 +51,20 @@ class ContactForm extends React.Component {
     data.append("email", this.email.value)
     data.append("company", this.company.value)
 
-    //alert(this.name.value);
+    alert(
+      "Debug -- Data sent to server:\n" +
+        data +
+        "\n\n" +
+        "Readable format:" +
+        "\nname: " +
+        this.name.value +
+        "\ncompany: " +
+        this.company.value +
+        "\nemail: " +
+        this.email.value +
+        "\nphone: " +
+        this.phone.value
+    )
 
     fetch("http://localhost:4000/upload", {
       method: "POST",
@@ -69,8 +83,7 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>FileUpload</h1>
+      <div className="form-wrapper">
         <form onSubmit={this.handleFormSubmit}>
           <div>
             <input
@@ -78,35 +91,35 @@ class ContactForm extends React.Component {
                 this.name = ref
               }}
               type="text"
-              placeholder="Enter Your Name"
-            />
-            <input
-              ref={ref => {
-                this.phone = ref
-              }}
-              type="tel"
-              placeholder="Your Phone #"
+              placeholder="First & Last name"
             />
             <input
               ref={ref => {
                 this.company = ref
               }}
               type="text"
-              placeholder="Your Company"
+              placeholder="Practice Name ( ex. Dental Spa)"
             />
             <input
               ref={ref => {
                 this.email = ref
               }}
               type="email"
-              placeholder="Your Email"
+              placeholder="Email Address"
+            />
+            <input
+              ref={ref => {
+                this.phone = ref
+              }}
+              type="phone"
+              placeholder="Phone Number"
             />
           </div>
-          <br />
           <div>
-            <button>Submit</button>
+            <button type="submit" class="button btn flat">
+              Submit
+            </button>
           </div>
-          <hr />
           <FormResponse
             name={this.state.name}
             email={this.state.email}

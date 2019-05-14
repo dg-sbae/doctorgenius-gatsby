@@ -7,7 +7,7 @@ import ContactForm from "../components/contact-form.js"
 import star from "../img/star.svg"
 import sslBadge from "../img/ssl-logo.png"
 
-import "../styles/request-demo.scss"
+import "../styles/demo.scss"
 
 export default props => (
   <DefaultPageLayout>
@@ -87,7 +87,6 @@ export default props => (
                 </div>
                 <div class="form-body">
                   <ContactForm />
-
                   <p class="fine-print">
                     *By registering I confirm that I have read and agree to the
                     Privacy Statement.

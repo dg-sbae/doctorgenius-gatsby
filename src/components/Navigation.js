@@ -739,7 +739,7 @@ class Navigation extends Component {
               iconSubnav={contact}
               // data-toggle="collapse"
               // aria-expanded="false"
-              to="/contact"
+              to="/demo"
             >
               Contact
             </SideNavListLink>
@@ -840,10 +840,7 @@ class Navigation extends Component {
                   <div className="phone phone-holder" />
                   877.477.2311
                 </ListLink>
-                <ListLink
-                  to="/contact"
-                  className="button nav-button transparent"
-                >
+                <ListLink to="/demo" className="button nav-button transparent">
                   Free Demo
                 </ListLink>
               </ul>
