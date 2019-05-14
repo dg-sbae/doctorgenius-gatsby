@@ -324,7 +324,7 @@ const OurClientsListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to="/our-clients/who-we-serve/">
+                <Link className="" to="/our-clients/healthcare-marketing/">
                   Healthcare Marketing
                 </Link>
                 <p>
