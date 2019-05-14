@@ -9,24 +9,56 @@ export default () => (
     pageTitle="Healthcare Marketing"
     pageSubTitle="<span>Engage and Convert More</span> Patients To Your Practice"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
-    contentRows={[
-      {
-        content: {
-          icon: {
-            url: "/icon/website.svg",
-            alt: "Blog and Social updates",
-            title: "Blog and Social updates",
-          },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+    contentRows={{
+      contentParagraphBlock: {
+        heading: {
+          strapline: "Marketing Performance",
+          title:
+            "<span><b>Rank Higher, Gain New Patients, </b>Get Better <b>Visibility Online</b><span>",
         },
-        image: {
-          url: "/png/design-your-presence.png",
-          alt: "Lorem Ipsum",
-        },
+        paragraphBlock:
+          "<p>Lorem Ipsum is simply dummy text of the printing and\
+            typesetting industry. Lorem Ipsum has been the industry's\
+            standard dummy text ever since the 1500s, when an unknown\
+            printer took a galley of type and scrambled it to make a\
+            type specimen book. It has survived not only five\
+            centuries, but also the leap into electronic typesetting,\
+            remaining essentially unchanged. It was popularised in the\
+            1960s with the release of Letraset sheets containing Lorem\
+            Ipsum passages, and more recently with desktop publishing\
+            software like Aldus PageMaker including versions of Lorem\
+            Ipsum.\
+          </p>\
+          <p>\
+            Lorem Ipsum is simply dummy text of the printing and\
+            typesetting industry. Lorem Ipsum has been the industry's\
+            standard dummy text ever since the 1500s, when an unknown\
+            printer took a galley of type and scrambled it to make a\
+            type specimen book. It has survived not only five\
+            centuries, but also the leap into electronic typesetting,\
+            remaining essentially unchanged. It was popularised in the\
+            1960s with the release of Letraset sheets containing Lorem\
+            Ipsum passages, and more recently with desktop publishing\
+            software like Aldus PageMaker including versions of Lorem\
+            Ipsum.\
+          </p>\
+          <p>\
+            Lorem Ipsum is simply dummy text of the printing and\
+            typesetting industry. Lorem Ipsum has been the industry's\
+            standard dummy text ever since the 1500s, when an unknown\
+            printer took a galley of type and scrambled it to make a\
+            type specimen book. It has survived not only five\
+            centuries, but also the leap into electronic typesetting,\
+            remaining essentially unchanged. It was popularised in the\
+            1960s with the release of Letraset sheets containing Lorem\
+            Ipsum passages, and more recently with desktop publishing\
+            software like Aldus PageMaker including versions of Lorem\
+            Ipsum.\
+          </p>",
       },
-    ]}
+      contentSplitScreen: {
+        // Figure out how to implement once we know the layout
+      },
+    }}
   />
 )

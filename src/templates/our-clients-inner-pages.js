@@ -23,6 +23,7 @@ export default props => {
   //const heroImage = "/hero/marketing-solutions-subpage.png"
 
   const contentRows = props.contentRows
+  const contentParagraphBlock = contentRows["contentParagraphBlock"]
   const currentPage = props.page
 
   return (
@@ -152,55 +153,22 @@ export default props => {
               <div className="col-sm-9 offset-sm-1">
                 <div className="content-block">
                   <div className="inner-title center thin-heading">
-                    <h3 className="strapline">Marketing Performance</h3>
-                    <h2 className="underline">
-                      <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better
-                      <b> Visibility Online</b>
-                    </h2>
+                    <h3 className="strapline">
+                      {contentParagraphBlock.heading.strapline}
+                    </h3>
+                    <h2
+                      className="underline"
+                      dangerouslySetInnerHTML={{
+                        __html: contentParagraphBlock.heading.title,
+                      }}
+                    />
                   </div>
-                  <div className="accented-paragraph">
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book. It has survived not only five
-                      centuries, but also the leap into electronic typesetting,
-                      remaining essentially unchanged. It was popularised in the
-                      1960s with the release of Letraset sheets containing Lorem
-                      Ipsum passages, and more recently with desktop publishing
-                      software like Aldus PageMaker including versions of Lorem
-                      Ipsum.
-                    </p>
-
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book. It has survived not only five
-                      centuries, but also the leap into electronic typesetting,
-                      remaining essentially unchanged. It was popularised in the
-                      1960s with the release of Letraset sheets containing Lorem
-                      Ipsum passages, and more recently with desktop publishing
-                      software like Aldus PageMaker including versions of Lorem
-                      Ipsum.
-                    </p>
-
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book. It has survived not only five
-                      centuries, but also the leap into electronic typesetting,
-                      remaining essentially unchanged. It was popularised in the
-                      1960s with the release of Letraset sheets containing Lorem
-                      Ipsum passages, and more recently with desktop publishing
-                      software like Aldus PageMaker including versions of Lorem
-                      Ipsum.
-                    </p>
-                  </div>
+                  <div
+                    className="accented-paragraph"
+                    dangerouslySetInnerHTML={{
+                      __html: contentParagraphBlock.paragraphBlock,
+                    }}
+                  />
                 </div>
               </div>
             </div>
