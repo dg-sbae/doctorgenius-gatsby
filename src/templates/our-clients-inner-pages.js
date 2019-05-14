@@ -5,13 +5,11 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
 
-import contentMarketingIcon from "../img/contract.svg"
-import responsiveWebsitesIcon from "../img/website.svg"
-import digitalAdvertisingIcon from "../img/digital-advertising.svg"
-import onlineReputationIcon from "../img/online-reputation.svg"
-import ourTechnologyIcon from "../img/our-technology.svg"
-import hostingSolutionsIcon from "../img/hosting-solutions.svg"
-//import lighthouseResult from "../img/lighthouse-result.png"
+import dentalPractices from "../../public/icon/tooth-shine-nav.svg"
+import urgentCare from "../../public/icon/urgent-care-nav.svg"
+import chiropractorPractices from "../../public/icon/chiropractor-nav.svg"
+import cosmeticSurgeons from "../../public/icon/surgeon-nav.svg"
+import healthcareMarketing from "../../public/icon/sphygmomanometer-nav.svg"
 
 import "../styles/our-clients-inner-pages.scss"
 
@@ -65,7 +63,7 @@ export default props => {
                         <a href="/our-clients/dental-practices/">
                           <img
                             className="img-icon"
-                            src={responsiveWebsitesIcon}
+                            src={dentalPractices}
                             alt="Dental Practices"
                           />
                         </a>
@@ -83,7 +81,7 @@ export default props => {
                         <a href="/our-clients/urgent-care-clinics/">
                           <img
                             className="img-icon"
-                            src={contentMarketingIcon}
+                            src={urgentCare}
                             alt="Urgent Care Clinics"
                           />
                         </a>
@@ -101,7 +99,7 @@ export default props => {
                         <a href="/our-clients/chiropractor-practices/">
                           <img
                             className="img-icon"
-                            src={digitalAdvertisingIcon}
+                            src={chiropractorPractices}
                             alt="Chiropractor Practices"
                           />
                         </a>
@@ -119,7 +117,7 @@ export default props => {
                         <a href="/our-clients/cosmetic-surgeons/">
                           <img
                             className="img-icon"
-                            src={onlineReputationIcon}
+                            src={cosmeticSurgeons}
                             alt="Cosmetic Surgeons"
                           />
                         </a>
@@ -137,7 +135,7 @@ export default props => {
                         <a href="/our-clients/healthcare-marketing/">
                           <img
                             className="img-icon"
-                            src={ourTechnologyIcon}
+                            src={healthcareMarketing}
                             alt="Healthcare Marketing"
                           />
                         </a>
@@ -150,10 +148,116 @@ export default props => {
             </div>
             {/* End secondary nav Component */}
             {/* Begin main block of text */}
+            <div className="row padded">
+              <div className="col-sm-9 offset-sm-1">
+                <div className="content-block">
+                  <div className="inner-title center thin-heading">
+                    <h3 className="strapline">Marketing Performance</h3>
+                    <h2 className="underline">
+                      <b>Rank Higher</b>, <b>Gain New Patients</b>, Get Better
+                      <b> Visibility Online</b>
+                    </h2>
+                  </div>
+                  <div className="accented-paragraph">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
 
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             {/* End main block of text */}
             {/* Begin split page content */}
-
+            <div className="spacer solid trim" />
+            <div className="row padded short-top">
+              <div className="col-sm-7 case-study-container">
+                <div className="inner-title center">
+                  <h3 className="m-0">Case Study: Titan Dental</h3>
+                  <div className="subtitle muted">The first 6 months</div>
+                </div>
+                <div className="case-study-table">
+                  <div className="case-study-item">
+                    <p className="callout">1,125%</p>
+                    <p>Increase in Google First-Page Revenue</p>
+                  </div>
+                  <div className="case-study-item">
+                    <p className="callout">100%</p>
+                    <p>Increase in Revenue</p>
+                  </div>
+                  <div className="case-study-item">
+                    <p className="callout">60%</p>
+                    <p>Growth in organic Search Traffic</p>
+                  </div>
+                  <div className="case-study-item">
+                    <p className="callout">500%</p>
+                    <p>Growth in Reviews Across the Web</p>
+                  </div>
+                  <div className="case-study-item">
+                    <p className="callout">200%</p>
+                    <p>New Patient Appointments</p>
+                  </div>
+                  <div className="case-study-item">
+                    <p className="callout">88%</p>
+                    <p>Increase in New Patient Calls!</p>
+                  </div>
+                </div>
+                <div className="center pad-md">
+                  <a href="/case-study/" className="link-with-icon">
+                    <img
+                      src="/icon/right-arrow-blue.svg"
+                      className="link-icon"
+                      alt="Icon of a Right Arrow"
+                    />
+                    View Case Study
+                  </a>
+                </div>
+              </div>
+              <div className="col-sm-6 col-lg-5">
+                <img
+                  className="img-responsive blur-bleed"
+                  src="/png/search-result.png"
+                  alt="Search Results Page"
+                />
+              </div>
+            </div>
             {/* End split page content */}
             {/* Begin CTA banner */}
             <div className="full-bleed-wrapper pad-md">
