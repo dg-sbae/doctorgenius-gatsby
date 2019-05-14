@@ -255,7 +255,7 @@ const ResourcesSideNavListLink = props => (
 const OurClientsListLink = props => (
   <li className={props.dataToggle}>
     <Link
-      className="dropdown-heading"
+      className="dropdown-heading disable-link"
       to={props.to}
       activeClassName="active"
       partiallyActive={true}
@@ -611,6 +611,9 @@ class Navigation extends Component {
     $(document).ready(function() {
       $(".dropdown-heading").click(function(event) {
         event.stopPropagation()
+      })
+      $(".disable-link").click(function(event) {
+        event.preventDefault()
       })
       $(".dropdown-menu")
       // $("#sidebar").mCustomScrollbar({
