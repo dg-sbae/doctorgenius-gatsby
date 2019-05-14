@@ -27,7 +27,5 @@ export default () => (
         },
       },
     ]}
-  >
-    <h1>Chiropractic Practice</h1>
-  </OurClientsInnerPages>
+  />
 )
