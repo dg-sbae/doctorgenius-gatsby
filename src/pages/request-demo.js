@@ -3,9 +3,8 @@ import React from "react"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-
+import ContactForm from "../components/contact-form.js"
 import star from "../img/star.svg"
-import thinArrowRight from "../img/right-arrow.svg"
 import sslBadge from "../img/ssl-logo.png"
 
 import "../styles/request-demo.scss"
@@ -87,20 +86,7 @@ export default props => (
                   <h3>Contact us now for a FREE Consultation</h3>
                 </div>
                 <div class="form-body">
-                  <input type="text" placeholder="First & Last name" />
-                  <input
-                    type="text"
-                    placeholder="Practice Name (ex. Dental Spa)"
-                  />
-                  <input type="text" placeholder="Email Address" />
-                  <input type="text" placeholder="Phone Number" />
-                  <input
-                    type="submit"
-                    className="button btn flat white-text"
-                    value="Request Demo"
-                  />
-
-                  <img src={thinArrowRight} alt="Arrow Right" />
+                  <ContactForm />
 
                   <p class="fine-print">
                     *By registering I confirm that I have read and agree to the
