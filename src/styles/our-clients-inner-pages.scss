@@ -1,8 +1,34 @@
 @import "_site-variables.scss";
 
 .our-clients-inner {
+  &.dental-practices {
+    .hero {
+      background-image: url("/hero/our-clients.png");
+    }
+  }
+  &.chiropractor-practices {
+    .hero {
+      background-image: url("/hero/chiropractor-practices.jpg");
+    }
+  }
+  &.cosmetic-surgeons {
+    .hero {
+      background-image: url("/hero/cosmetic-surgeons.jpg");
+    }
+  }
+  &.healthcare-marketing {
+    .hero {
+      background-image: url("/hero/healthcare-marketing.jpg");
+    }
+  }
+  &.urgent-care-clinics {
+    .hero {
+      background-image: url("/hero/urgent-care-clinics.jpg");
+    }
+  }
+
   .hero {
-    background-image: url("/hero/our-clients.png");
+    // background-image: url("/hero/our-clients.png");
     .accented-paragraph {
       width: 84%;
     }
