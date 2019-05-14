@@ -330,7 +330,7 @@ footer {
       margin-top: 35px;
 
       &:after {
-        background: url(http://localhost:8000/svg/secondary-nav-indicator.svg);
+        background: url(/svg/secondary-nav-indicator.svg);
         content: "";
         display: block;
         background-size: contain;
