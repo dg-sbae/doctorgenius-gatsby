@@ -277,10 +277,7 @@ const OurClientsListLink = props => (
                 <Link className="" to="/our-clients/dental-practices/">
                   Dental Practices
                 </Link>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
-                </p>
+                <p>Bringing in new dental patients every day</p>
               </div>
             </div>
             <div className="col-sm-6">
@@ -293,10 +290,7 @@ const OurClientsListLink = props => (
                 <Link className="" to="/our-clients/cosmetic-surgeons/">
                   Cosmetic Surgeons
                 </Link>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
-                </p>
+                <p>Attract new patients to your office</p>
               </div>
             </div>
           </div>
@@ -312,8 +306,7 @@ const OurClientsListLink = props => (
                   Urgent Care Clinics
                 </Link>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
+                  Grow your Urgent Care Center and accelerate your revenue cycle
                 </p>
               </div>
             </div>
@@ -327,10 +320,7 @@ const OurClientsListLink = props => (
                 <Link className="" to="/our-clients/healthcare-marketing/">
                   Healthcare Marketing
                 </Link>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
-                </p>
+                <p>Complete marketing specific to healthcare industry needs</p>
               </div>
             </div>
           </div>
@@ -346,8 +336,7 @@ const OurClientsListLink = props => (
                   Chiropractor Practices
                 </Link>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
+                  Stretch your online reach and increase your new patient calls
                 </p>
               </div>
             </div>
@@ -390,10 +379,7 @@ const MarketingSolutionsListLink = props => (
                 <Link className="" to="marketing-solutions/websites">
                   Responsive Websites
                 </Link>
-                <p>
-                  Our websites are power-packed with fresh & unique content
-                  tailored to your practice.
-                </p>
+                <p>Beautiful, High Performing Websites Built to Convert</p>
               </div>
             </div>
             <div className="col-sm-6">
@@ -410,8 +396,8 @@ const MarketingSolutionsListLink = props => (
                   Online Reputation
                 </Link>
                 <p>
-                  Our websites are power-packed with fresh & unique content
-                  tailored to your practice.
+                  We direct your customers in a stepped out process that gets
+                  you reviews
                 </p>
               </div>
             </div>
@@ -427,10 +413,7 @@ const MarketingSolutionsListLink = props => (
                 <Link className="" to="marketing-solutions/content-marketing">
                   Content Marketing
                 </Link>
-                <p>
-                  Our websites are power-packed with fresh & unique content
-                  tailored to your practice.
-                </p>
+                <p>Target ROI Focused Keywords for Google Search</p>
               </div>
             </div>
             <div className="col-sm-6">
@@ -443,10 +426,7 @@ const MarketingSolutionsListLink = props => (
                 <Link className="" to="marketing-solutions/our-technology">
                   Our Technology
                 </Link>
-                <p>
-                  Our websites are power-packed with fresh & unique content
-                  tailored to your practice.
-                </p>
+                <p>Experience our performance based marketing program</p>
               </div>
             </div>
           </div>
@@ -462,10 +442,7 @@ const MarketingSolutionsListLink = props => (
                 <Link className="" to="marketing-solutions/digital-advertising">
                   Digital Advertising
                 </Link>
-                <p>
-                  Our websites are power-packed with fresh & unique content
-                  tailored to your practice.
-                </p>
+                <p>Expanding your digital reach and drawing in new patients</p>
               </div>
             </div>
             <div className="col-sm-6">
@@ -479,10 +456,7 @@ const MarketingSolutionsListLink = props => (
                 <Link className="" to="marketing-solutions/hosting-solutions">
                   Hosting Solutions
                 </Link>
-                <p>
-                  Our websites are power-packed with fresh & unique content
-                  tailored to your practice.
-                </p>
+                <p>Enterprise Power for Medical Practice Websites</p>
               </div>
             </div>
           </div>
