@@ -24,7 +24,7 @@ header {
   .logo a {
     display: block;
     .logo-holder {
-      background-image: url(/png/logo-white.png);
+      background-image: url(/icon/logo-white.svg);
       background-size: contain;
       height: 40px;
       max-height: 100%;
@@ -43,7 +43,7 @@ header {
     display: block;
     .phone-holder {
       /* phone holder and image holder should be refactored to operate the same way/same markup */
-      background-image: url(/png/phone-white.png);
+      background-image: url(/icon/phone-white.svg);
       background-size: contain;
       height: 25px;
       width: 25px;
@@ -117,14 +117,14 @@ header {
           color: $demo-body-text;
         }
         .logo-holder {
-          background-image: url(/png/logo-blue.png);
+          background-image: url(/icon/logo-blue.svg);
           @include media("<=laptop") {
-            background-image: url(/png/logo-white.png);
+            background-image: url(/icon/logo-white.svg);
             background-position: initial;
           }
         }
         .phone-holder {
-          background-image: url(/png/phone-blue.png);
+          background-image: url(/icon/phone-blue.svg);
         }
         .nav-button {
           border-color: $primary;
