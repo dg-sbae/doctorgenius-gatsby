@@ -102,7 +102,7 @@ export default ({ children }) => (
               &copy;2019 Doctor Genius. All Rights Reserved.
             </div>
             <div className="legal-links">
-              <ListLink to="/">Privacy Policy</ListLink>
+              <ListLink to="/privacy-policy">Privacy Policy</ListLink>
               <span> | </span>
               <ListLink to="/">Terms and Conditions</ListLink>
             </div>
