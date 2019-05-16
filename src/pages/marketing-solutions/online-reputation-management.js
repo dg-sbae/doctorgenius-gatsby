@@ -5,6 +5,9 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 export default () => (
   <MarketingSolutionsTemplate
     page="/marketing-solutions/online-reputation-management/" /* this should be dynamic from the page props */
+    pageTitle="Online Reputation"
+    pageSubtitle=""
+    pageIntro=""
     contentRows={[
       {
         content: {
@@ -13,10 +16,9 @@ export default () => (
             alt: "Digital Landscape",
             title: "Digital Landscape",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Gain a network of powerful listings.",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Experience the advantage of tapping into our powerful network of publisher-level connections and build a consistent web presence for your practice.",
         },
         image: {
           url: "/png/design-your-presence.png",
@@ -30,10 +32,9 @@ export default () => (
             alt: "Review Management",
             title: "Review Management",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Maintain a Positive Online Reputation.",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "9 out of 10 customers read reviews before making a purchasing decision. We combat negative search content and suppress unwanted material by promoting positive content that you control.",
         },
         image: {
           url: "/png/design-your-presence.png",
@@ -45,12 +46,11 @@ export default () => (
           icon: {
             url: "/icon/website.svg",
             alt: "Practice Promoter",
-            title: "Practice promoter",
+            title: "Practice Promoter",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Build up your street cred.",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Get reviews from your existing patients fast with our streamlined contact process and form. We direct your patients to your social profiles in a stepped out process that gets you reviews!",
         },
         image: {
           url: "/png/design-your-presence.png",
