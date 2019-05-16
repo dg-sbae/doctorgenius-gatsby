@@ -103,6 +103,7 @@ export default ({ children }) => (
             </div>
             <div className="legal-links">
               <ListLink to="/privacy-policy">Privacy Policy</ListLink>
+              {/* Waiting for page content before we show this link */}
               {/*<span> | </span>
               <ListLink to="/">Terms and Conditions</ListLink>*/}
             </div>

@@ -219,6 +219,7 @@ const ResourcesSideNavListLink = props => (
         >
           The Study
         </ListLink>
+        {/* Hidden until the content for page is finalized */}
         {/*<ListLink
           to="/intentional-404/"
           activeClassName="active"
@@ -233,6 +234,7 @@ const ResourcesSideNavListLink = props => (
         >
           Case Studies
         </ListLink>
+        {/* Hidden until the content for page is finalized */}
         {/*<ListLink
           to="/intentional-404/"
           activeClassName="active"
@@ -240,6 +242,7 @@ const ResourcesSideNavListLink = props => (
         >
           Knowledge Base
         </ListLink>*/}
+        {/* Hidden until the content for page is finalized */}
         {/*<ListLink
           to="/intentional-404/"
           activeClassName="active"
@@ -513,6 +516,7 @@ const StudySingleListLink = props => (
                 </p>
               </div>
             </div>
+            {/* Hidden until the content for page is finalized */}
             {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
@@ -532,6 +536,7 @@ const StudySingleListLink = props => (
             </div>*/}
           </div>
           {/*<div className="row dropdown-row">*/}
+          {/* Hidden until the content for page is finalized */}
           {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
@@ -549,6 +554,7 @@ const StudySingleListLink = props => (
                 </p>
               </div>
             </div>*/}
+          {/* Hidden until the content for page is finalized */}
           {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
@@ -567,6 +573,7 @@ const StudySingleListLink = props => (
             </div>*/}
           {/*</div>*/}
           {/*<div className="row dropdown-row">*/}
+          {/* Hidden until the content for page is finalized */}
           {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
