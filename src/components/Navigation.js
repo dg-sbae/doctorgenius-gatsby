@@ -813,10 +813,12 @@ class Navigation extends Component {
             </div>
             <div className="contact-links">
               <ul>
-                <ListLink className="phone" to="/">
-                  <div className="phone phone-holder" />
-                  877.477.2311
-                </ListLink>
+                <li className="phone">
+                  <a href="tel:877-477-2311">
+                    <div className="phone phone-holder" />
+                    877.477.2311
+                  </a>
+                </li>
                 <ListLink to="/demo" className="button nav-button transparent">
                   Free Demo
                 </ListLink>
