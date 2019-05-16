@@ -219,13 +219,13 @@ const ResourcesSideNavListLink = props => (
         >
           The Study
         </ListLink>
-        <ListLink
+        {/*<ListLink
           to="/intentional-404/"
           activeClassName="active"
           partiallyActive={true}
         >
           Webinars
-        </ListLink>
+        </ListLink>*/}
         <ListLink
           to="/case-study/"
           activeClassName="active"
@@ -233,20 +233,20 @@ const ResourcesSideNavListLink = props => (
         >
           Case Studies
         </ListLink>
-        <ListLink
+        {/*<ListLink
           to="/intentional-404/"
           activeClassName="active"
           partiallyActive={true}
         >
           Knowledge Base
-        </ListLink>
-        <ListLink
+        </ListLink>*/}
+        {/*<ListLink
           to="/intentional-404/"
           activeClassName="active"
           partiallyActive={true}
         >
           eBooks and Whitepapers
-        </ListLink>
+        </ListLink>*/}
       </ul>
     </div>
   </li>
@@ -499,6 +499,23 @@ const StudySingleListLink = props => (
             <div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
+                  <img className="image-icon" src={caseStudy} />
+                </div>
+              </div>
+
+              <div className="dropdown-content-block">
+                <Link className="" to="/case-study/">
+                  Case Studies
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  volutpat mi sit amet.
+                </p>
+              </div>
+            </div>
+            {/*<div className="col-sm-6">
+              <div className="nav-icon-wrapper">
+                <div className="icon-wrapper">
                   <img className="image-icon" src={webinars} />
                 </div>
               </div>
@@ -512,10 +529,10 @@ const StudySingleListLink = props => (
                   volutpat mi sit amet.
                 </p>
               </div>
-            </div>
+            </div>*/}
           </div>
-          <div className="row dropdown-row">
-            <div className="col-sm-6">
+          {/*<div className="row dropdown-row">*/}
+          {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
                   <img className="image-icon" src={caseStudy} />
@@ -531,8 +548,8 @@ const StudySingleListLink = props => (
                   volutpat mi sit amet.
                 </p>
               </div>
-            </div>
-            <div className="col-sm-6">
+            </div>*/}
+          {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
                   <img className="image-icon" src={info} />
@@ -547,10 +564,10 @@ const StudySingleListLink = props => (
                   volutpat mi sit amet.
                 </p>
               </div>
-            </div>
-          </div>
-          <div className="row dropdown-row">
-            <div className="col-sm-6">
+            </div>*/}
+          {/*</div>*/}
+          {/*<div className="row dropdown-row">*/}
+          {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
                   <img className="image-icon" src={ourTech} />
@@ -565,14 +582,14 @@ const StudySingleListLink = props => (
                   volutpat mi sit amet.
                 </p>
               </div>
-            </div>
-            <div className="col-sm-6">
+            </div>*/}
+          {/*<div className="col-sm-6">
               <div className="dropdown-content-block">
                 <Link className="" to={props.to} />
                 <p />
               </div>
-            </div>
-          </div>
+          </div>*/}
+          {/*</div>*/}
         </div>
       </div>
     </div>
