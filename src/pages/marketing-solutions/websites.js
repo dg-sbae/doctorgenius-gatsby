@@ -5,6 +5,8 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 export default () => (
   <MarketingSolutionsTemplate
     page="/marketing-solutions/websites/" /* this should be dynamic from the page props */
+    pageTitle="Responsive Websites"
+    pageSubtitle="<span>Design that leaves a lasting</span> impression."
     pageIntro="Stun your viewers with exquisitely designed websites & attractive branding. Getting appointments has never been easier."
     contentRows={[
       {
