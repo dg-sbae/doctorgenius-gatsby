@@ -16,7 +16,7 @@ export default () => (
             alt: "Digital Landscape",
             title: "Digital Landscape",
           },
-          innerTitle: "Gain a network of powerful listings.",
+          innerTitle: "Gain a network of powerful listings",
           paragraph:
             "Experience the advantage of tapping into our powerful network of publisher-level connections and build a consistent web presence for your practice.",
         },
@@ -32,7 +32,7 @@ export default () => (
             alt: "Review Management",
             title: "Review Management",
           },
-          innerTitle: "Maintain a Positive Online Reputation.",
+          innerTitle: "Maintain a Positive Online Reputation",
           paragraph:
             "9 out of 10 customers read reviews before making a purchasing decision. We combat negative search content and suppress unwanted material by promoting positive content that you control.",
         },
@@ -48,7 +48,7 @@ export default () => (
             alt: "Practice Promoter",
             title: "Practice Promoter",
           },
-          innerTitle: "Build up your street cred.",
+          innerTitle: "Build up your street cred",
           paragraph:
             "Get reviews from your existing patients fast with our streamlined contact process and form. We direct your patients to your social profiles in a stepped out process that gets you reviews!",
         },

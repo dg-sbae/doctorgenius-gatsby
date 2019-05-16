@@ -5,6 +5,9 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 export default () => (
   <MarketingSolutionsTemplate
     page="/marketing-solutions/our-technology/" /* this should be dynamic from the page props */
+    pageTitle="Our Technology"
+    pageSubtitle="<span>Extending your reach through our</span> marketing solutions"
+    pageIntro="We provide predictable, performance-driven and sustainable practice growth."
     contentRows={[
       {
         content: {
@@ -13,10 +16,9 @@ export default () => (
             alt: "Genius Portal",
             title: "Genius Portal",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Managed your performance based marketing program",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Get the information you need about your marketing program and performance in one easy to use dashboard. Our plans come with access to our data-packed platform.",
         },
         image: {
           url: "/png/design-your-presence.png",
@@ -30,10 +32,9 @@ export default () => (
             alt: "Lead Tracking",
             title: "Lead Tracking",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Get to Know your Target Patient",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Get a detailed breakdown of your leads and their disposition. Know the outcome of each instance you receive an incoming call by date, hour, and day.",
         },
         image: {
           url: "/png/design-your-presence.png",
@@ -47,10 +48,9 @@ export default () => (
             alt: "Ranking Reports",
             title: "Ranking Reports",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Identify your traffic with keyword analysis",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Narrow down what are your successful keywords, who is clicking on them, and which ones yield the highest number of new patient inquiries.",
         },
         image: {
           url: "/png/design-your-presence.png",

@@ -16,7 +16,7 @@ export default () => (
             alt: "Hyper Local",
             title: "Hyper Local",
           },
-          innerTitle: "Target ROI Focused Keywords for Google Search.",
+          innerTitle: "Target ROI Focused Keywords for Google Search",
           paragraph:
             "Increase your focus and narrow down who you are targeting to a small geographic region. Hyper-Local Targeting delivers advertising content to your local audience who is more likely to be interested in your services.",
         },
@@ -32,7 +32,7 @@ export default () => (
             alt: "Audience Optimization",
             title: "Audience Optimization",
           },
-          innerTitle: "Geo-Targeted to maximize effectiveness.",
+          innerTitle: "Geo-Targeted to maximize effectiveness",
           paragraph:
             "Informative conversion tracking analytics and raise practice awareness among potential patients.",
         },

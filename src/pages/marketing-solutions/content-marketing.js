@@ -16,7 +16,7 @@ export default () => (
             alt: "Blog and Social Updates",
             title: "Blog and Social Updates",
           },
-          innerTitle: "Content is King.",
+          innerTitle: "Content is King",
           paragraph:
             "Google is an Ecosystem powered by information. Doctor Genius will write content related to your most profitable services and utilize additional techniques like Accelerated Mobile Pages(AMP).",
         },
@@ -32,7 +32,7 @@ export default () => (
             alt: "Patient Education",
             title: "Patient Education",
           },
-          innerTitle: "Understanding your practice.",
+          innerTitle: "Understanding your practice",
           paragraph:
             "Original patient education content is posted to your blog and social media profiles to generate general interest in your medical treatments and services.",
         },
@@ -48,7 +48,7 @@ export default () => (
             alt: "Video Education",
             title: "Video Education",
           },
-          innerTitle: "Seeing is believing.",
+          innerTitle: "Seeing is believing",
           paragraph:
             "Strategic deployment of educational videos as an additional avenue for new patients to find you.",
         },
