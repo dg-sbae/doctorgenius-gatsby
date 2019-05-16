@@ -18,8 +18,7 @@ export default props => {
   /* These will likely need to be dynamic props */
   const pageTitle = "Responsive Websites"
   const pageSubtitle = "<span>Design that leaves a lasting</span> impression."
-  const pageIntro =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Lorem ipsum dolor sit amet, con."
+  const pageIntro = props.pageIntro
 
   // For now all inner pages will have the same hero image, so this will be in the sass
   //const heroImage = "/hero/marketing-solutions-subpage.png"
