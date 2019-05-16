@@ -17,43 +17,20 @@ export default () => (
             "<span><b>Rank Higher, Gain New Patients, </b>Get Better <b>Visibility Online</b><span>",
         },
         paragraphBlock:
-          "<p>Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+          "<p>In order to stand out among the masses on Google search results, professionals need a quality\
+            website service that continues maintenance and updates to the website. Doctor Genius does both of\
+            these things and more, applying skills and necessary tools to the foundation of the website. At\
+            Doctor Genius, we build a website with the potential patient’s focus in mind. We know where to\
+            place the correct terms, information and content people want immediately.\
           </p>\
-          <p>\
-            Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
-          </p>\
-          <p>\
-            Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+          <p>Our team understands that when people are considering calling a medical\
+           practice, they are searching for the surface level of information. After\
+           finding the basic information, patients may begin to look at the rest of\
+           the website to find quality content that breaks down the practice’s services.\
+           While each patient is different, there tends to be a similar search routine for\
+           medical care. Insurance also plays a significant role in selecting a medical\
+           practice. We can help the professional determine how much or little about the\
+           subject they want to place on their website.\
           </p>",
       },
       contentSplitScreen: {

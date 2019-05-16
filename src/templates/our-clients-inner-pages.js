@@ -240,9 +240,11 @@ export default props => {
                       </div>
                       <div className="accented-paragraph medium-width">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nunc dui turpis, sodales ut mollis quis,
-                          ullamcorper a metus
+                          Get access to all we have to offer: Genius Framework
+                          Website, Strategic Content Writing, Search Engine
+                          Optimization, Social Media Promotion, Integrated
+                          Performance Reporting, Dedicated Support
+                          Representative.
                         </p>
                         <a href="/plans/" className="link-with-icon">
                           <img
