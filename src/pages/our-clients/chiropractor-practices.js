@@ -7,8 +7,9 @@ export default () => (
     className="chiropractor-practices"
     page="/our-clients/chiropractor-practices/" /* this should be dynamic from the page props */
     pageTitle="Chiropractor Practices"
-    pageSubTitle="<span>Engage and Convert More</span> Patients To Your Practice"
+    pageSubTitle="<span>Stretch Your Online Reach for</span> More Patients to your Practice"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
+    caseStudy={false}
     contentRows={{
       contentParagraphBlock: {
         heading: {
@@ -17,43 +18,23 @@ export default () => (
             "<span><b>Rank Higher, Gain New Patients, </b>Get Better <b>Visibility Online</b><span>",
         },
         paragraphBlock:
-          "<p>Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+          "<p>One aspect of websites that many people may not realize is the importance of continually\
+           posting new content on a regular basis. While a post may not be necessary every day, it is\
+           important to have regular posts that display the website is active. Google sees this as a\
+           “freshness signal” that boosts your ranking and will be less inclined to put a website that\
+           only posted once in the last 6 months anywhere near the top of search results. Thus, custom\
+           blog posts can help to keep a website active.\
           </p>\
           <p>\
-            Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+          We understand that while many chiropractors provide the same general services, there are\
+          specialized services that only certain professionals offer. Thus, we can help customize the\
+          content to match those specific services. Our Support Team is available to help make changes\
+          to website content in order to help it function at its full potential.\
           </p>\
           <p>\
-            Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+          If you are interested in enhancing your website, give us a call today. We can help you and\
+          your practice upstart your chiropractic practice right with an effective and efficient\
+          website.\
           </p>",
           
       },

@@ -7,8 +7,9 @@ export default () => (
     className="cosmetic-surgeons"
     page="/our-clients/cosmetic-surgeons/" /* this should be dynamic from the page props */
     pageTitle="Cosmetic Surgeons"
-    pageSubTitle="<span>Engage and Convert More</span> Patients To Your Practice"
+    pageSubTitle="<span>Attract</span> More Patients <span>From the Internet</span>"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
+    caseStudy={false}
     contentRows={{
       contentParagraphBlock: {
         heading: {
@@ -17,43 +18,23 @@ export default () => (
             "<span><b>Rank Higher, Gain New Patients, </b>Get Better <b>Visibility Online</b><span>",
         },
         paragraphBlock:
-          "<p>Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+          "<p>While it is fairly easy for a medical practice to have a website, it is an entirely\
+           different matter when it comes to maintenance and ensuring the website looks beautiful\
+           and is functioning properly. Fortunately, the team at Doctor Genius can underscore your\
+           skills and expertise with our website framework effectively. We can also help to provide\
+           maintenance and ensure that your website is functioning properly.\
           </p>\
           <p>\
-            Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+          It is important to have quality information on a page that breaks down a professional’s\
+          practice. However, it is also important to have a website that functions properly in\
+          attracting new patients. The call to action, CTA, is one example of a tool that helps\
+          draw patients into the service from the website. The other benefit of a CTA is that it\
+          can be more than a simple “Call Now” message.\
           </p>\
           <p>\
-            Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+           Since setting up an effective website can take some time, do not hesitate to give us a call\
+           for more information or to schedule a consultation. Upstart your business right with our high\
+           performance, marketing and revenue acceleration program.\
           </p>",
       },
       contentSplitScreen: {

@@ -7,53 +7,30 @@ export default () => (
     className="urgent-care-clinics "
     page="/our-clients/urgent-care-clinics/" /* this should be dynamic from the page props */
     pageTitle="Urgent Care Clinics"
-    pageSubTitle="<span>Engage and Convert More</span> Patients To Your Practice"
-    pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
+    pageSubTitle="<span>Broaden Your</span> Online Presence <span>For New Patients to</span> Find You"
+    pageIntro="We bring you a robust platform and digital marketing solutions that focus on new patient acquisition."
+    caseStudy={false}
     contentRows={{
       contentParagraphBlock: {
         heading: {
-          strapline: "Marketing Performance",
+          strapline: "Grow Your Urgent Care Center",
           title:
-            "<span><b>Rank Higher, Gain New Patients, </b>Get Better <b>Visibility Online</b><span>",
+            "<span>Monitor and Improve <b>Patient Experience</b> and <b>Increase Retention</b><span>",
         },
         paragraphBlock:
-          "<p>Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+          "<p>Keyword searches “urgent care” averages over 1,000,000 searches per month.  Use\
+           Doctor Genius’ powerful data-driven technology to help you leverage comprehensive\
+           reporting and  make it easy for them to find and access your care.  Let your practice\
+           thrive among competitors and accelerate your revenue cycle by optimizing practice operations\
+           and financial performance\
           </p>\
           <p>\
-            Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
-          </p>\
-          <p>\
-            Lorem Ipsum is simply dummy text of the printing and\
-            typesetting industry. Lorem Ipsum has been the industry's\
-            standard dummy text ever since the 1500s, when an unknown\
-            printer took a galley of type and scrambled it to make a\
-            type specimen book. It has survived not only five\
-            centuries, but also the leap into electronic typesetting,\
-            remaining essentially unchanged. It was popularised in the\
-            1960s with the release of Letraset sheets containing Lorem\
-            Ipsum passages, and more recently with desktop publishing\
-            software like Aldus PageMaker including versions of Lorem\
-            Ipsum.\
+          On average, Doctor Genius clients see a 300% increase in new patient (volume/calls) by month 12.\
+          Our services include healthcare focused Search Engine Optimization, high-performing web content\
+          and assets, completely transparent analytical reporting and tracking, comprehensive and robust\
+          content strategy, social media marketing, reputation management tools, revenue cycle\
+          management, and much more.  Achieve your desired practice goals with the efficiency,\
+          expertise, and sustainable growth you deserve.\
           </p>",
       },
       contentSplitScreen: {

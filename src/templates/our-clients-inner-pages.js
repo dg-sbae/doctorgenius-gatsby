@@ -18,6 +18,7 @@ export default props => {
   const pageTitle = props.pageTitle
   const pageSubtitle = props.pageSubTitle
   const pageIntro = props.pageIntro
+  const isCaseStudy = props.caseStudy
 
   // For now all inner pages will have the same hero image, so this will be in the sass
   //const heroImage = "/hero/marketing-solutions-subpage.png"
@@ -173,8 +174,11 @@ export default props => {
               </div>
             </div>
             {/* End main block of text */}
-            {/* Begin split page content */}
-            <div className="spacer solid trim" />
+            {/* Begin split page content - conditional render using short circuit */}
+            { isCaseStudy &&
+              <div className="spacer solid trim" />
+            }
+            { isCaseStudy &&
             <div className="row padded short-top">
               <div className="col-sm-7 case-study-container">
                 <div className="inner-title center">
@@ -226,6 +230,8 @@ export default props => {
                 />
               </div>
             </div>
+            }
+            
             {/* End split page content */}
             {/* Begin CTA banner */}
             <div className="full-bleed-wrapper pad-md">
