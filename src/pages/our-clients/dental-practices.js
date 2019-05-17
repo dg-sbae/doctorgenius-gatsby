@@ -36,6 +36,64 @@ export default () => (
       contentSplitScreen: {
         // Figure out how to implement once we know the layout
       },
+      testimonialContent: [
+        {
+          cardContent: {
+            title: "Card 1",
+            author: "Amberly Money",
+            quote:
+              "<p>Our practice has worked with Doctor Genius for a few years now. Francesco\
+              and team have gone above and beyond to make sure that we are always top on\
+              the list for dentist in our area. We started as a brand new practice in 2009\
+              and now have a full clientele of patients with our first available hygiene\
+              appointment for six months out. Our biggest referrals are online. Thank you\
+              Francesco and Doctor Genius for your hard work and many years of working together!</p>",
+            location: "",
+            image: {
+              src: "",
+              alt: "",
+            },
+          },
+        },
+        {
+          cardContent: {
+            title: "Card 2",
+            author: "Tod Anderson",
+            quote: "<p>Coming from a Tech background before dental school, I have been searching\
+            for a good way to manage my dental web presence, including social media, and reputation.\
+            I have tried multiple things over the last 10 years, Yelp (was the worst!), Yext, Custom\
+            built website with local web developer, Prosites, to name a few and have redone my dental\
+            office web site 4 times in 10 years with little success.</p>\
+            <p>When I talked to Doctor Genius I knew right away this was the technology and service I\
+            needed to market my dental practice and manage this presence. I signed up immediately.</p>\
+            <p>As a techy dentist I can tell you dentists are too busy and usually the office team can't\
+            possible manage the complexities of web marketing with the ever changing google algorithms\
+            and with the 100's of other websites that track dentists and doctors.</p>\
+            <p>I am thrilled with the results and am excited to see Doctor Genius grow!</p>",
+            location: "",
+            image: {
+              src: "",
+              alt: "",
+            },
+          },
+        },
+        {
+          cardContent: {
+            title: "Card 3",
+            author: "Nancy Lee DDS",
+            quote: "<p>Working with Dental Genius has been great. They helped us create a new website\
+            for our office and continuously create blogs for updated content.  They have improved our\
+            office's online visibility.  The Dental Genius portal is a great tool not only to keep\
+            track on how many new patient phone calls we receive, but also to keep track on our online\
+            presence.</p>",
+            location: "",
+            image: {
+              src: "",
+              alt: "",
+            },
+          },
+        },
+      ],
     }}
   />
 )

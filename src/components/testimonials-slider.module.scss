@@ -10,6 +10,27 @@
     width: 700px;
     position: relative;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    overflow-y: auto;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #fbfbfb; 
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background-color: #bdbdbd;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #545454; 
+    }
 
     /* card layout: */
     .quoteWrapper,
@@ -75,10 +96,12 @@
   align-items: center;
 }
 .copy {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #989898;
-  margin-bottom: 30px;
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #989898;
+    margin-bottom: 30px;
+  }
 }
 .author {
   font-size: 1.125rem;

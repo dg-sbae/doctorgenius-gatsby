@@ -10,6 +10,11 @@ import styles from "./testimonials-slider.module.scss"
 import quoteMark from "../img/quote-mark.svg"
 
 export default class TestimonialsSlider extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+
   render() {
     const settings = {
       centerPadding: "29%",
@@ -20,17 +25,11 @@ export default class TestimonialsSlider extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     }
-    const cards = [
-      { title: "Card 1" },
-      { title: "Card 2" },
-      { title: "Card 3" },
-      { title: "Card 4" },
-      { title: "Card 5" },
-    ]
+    
     return (
       <div className={styles.testimonialsSlider}>
         <Slider className={styles.cardSlider} {...settings}>
-          {cards.map(card => (
+          {this.props.cards.map(card => (
             <div>
               <div className={styles.cardWrapper}>
                 <div className={styles.card}>
@@ -42,15 +41,24 @@ export default class TestimonialsSlider extends React.Component {
                     />
                   </div>
                   <div className={styles.cardContentWrapper}>
-                    <p className={styles.copy}>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    <div
+                      className={styles.copy}
+                      dangerouslySetInnerHTML={{
+                        __html: card.cardContent.quote,
+                      }}
+                    >
+                      {/*Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                       Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
                       natoque penatibus et magnis dis parturient montes,
                       nascetur ridiculus mus. Donec quam felis.Lorem ipsum dolor
-                      sit amet, consectetuer adipiscing elit.
-                    </p>
-                    <p className={styles.author}>John Doe</p>
-                    <p className={styles.location}>Irvine Dental Care</p>
+                      sit amet, consectetuer adipiscing elit.*/}
+                    </div>
+                    <p className={styles.author}>{card.cardContent.author}</p>
+                    {/* JS shortcircuit to conditionally render the location*/}
+                    { card.cardContent.location != "" &&
+                      <p className={styles.location}>{card.cardContent.location}</p>
+                    }
+                    
                   </div>
                   <div className={styles.portraitWrapper}>
                     <img

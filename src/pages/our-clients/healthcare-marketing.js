@@ -59,6 +59,58 @@ export default () => (
       contentSplitScreen: {
         // Figure out how to implement once we know the layout
       },
+      testimonialContent: [
+        {
+          cardContent: {
+            title: "Card 1",
+            author: "Don DuBose M.D.",
+            quote:
+              "<p>I was somewhat skeptical of Doctor Genius because I had been burned by other companies\
+               before. Its not easy to find reliable companies these days but Doctor Genius has been\
+               exemplary. Within 5 months my google rankings significantly increased. We are first page\
+               on most of our search terms. We have also seen an increase in our conversions from web\
+               traffic to actual appointments. Customer service is generally responsive,  I have had\
+               some delays in website adjustments, but that was partially my fault for not giving\
+               clear directions. Since then the turn around time has on adjustments have been very\
+               fast. I highly recommend Doctor Genius they have created a good return on investment\
+               (ROI)  for us.</p>",
+            location: "",
+            image: {
+              src: "",
+              alt: "",
+            },
+          },
+        },
+        {
+          cardContent: {
+            title: "Card 2",
+            author: "Roberto Bellegarrigue",
+            quote: "<p>Been working with them for 2 years now. My web visibility has increased and my new\
+            patients have doubled as a result. They're always available to talk if you have any issues or\
+            questions. Two thumbs up!! Just ask for Francesco, he's my account manager and he'll take\
+            good care of you.</p>",
+            location: "",
+            image: {
+              src: "",
+              alt: "",
+            },
+          },
+        },
+        {
+          cardContent: {
+            title: "Card 3",
+            author: "Dr James Helmy",
+            quote: "<p>These guys have changed my online presence in a dramatic way, and more patients\
+            are finding and calling us as a result of their work.  Their team is friendly and responsive,\
+            and I'd definitely recommend them to my colleagues.</p>",
+            location: "",
+            image: {
+              src: "",
+              alt: "",
+            },
+          },
+        },
+      ],
     }}
   />
 )

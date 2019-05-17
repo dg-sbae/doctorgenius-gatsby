@@ -278,7 +278,9 @@ export default props => {
                 <div className="full-bleed-wrapper">
                   <div className="full-bleed">
                     <div className="full-bleed-slider">
-                      <TestimonialsSlider />
+                      <TestimonialsSlider
+                        cards={contentRows.testimonialContent}
+                      />
                     </div>
                   </div>
                 </div>

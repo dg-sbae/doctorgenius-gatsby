@@ -59,6 +59,58 @@ export default () => (
       contentSplitScreen: {
         // Figure out how to implement once we know the layout
       },
+      testimonialContent: [
+        {
+          cardContent: {
+            title: "Card 1",
+            author: "Facial Spectrum",
+            quote:
+              "<p>Our company has been using Dr Genius since 2015.   Their team is very efficient and is\
+               easy to communicate with.  Our on line exposure has significantly improved and our\
+               patients have a quick and easy option to communicate via our web site.  The online blogs\
+               that are approved by our Doctor are very well written and easy for the average person\
+               with out clinical knowledge to read.   What I like most are their solution based\
+               approach to any of my requests.  I would recommend Dr Genius to any business looking\
+               to improve their Google rating and web site/social media exposure.</p>",
+            location: "",
+            image: {
+              src: "",
+              alt: "",
+            },
+          },
+        },
+        {
+          cardContent: {
+            title: "Card 2",
+            author: "Carla Wostrel",
+            quote: "<p>We have been with Dental Genius for 6 years now.  We've seen many changes to the\
+            company and they just keep getting better and better.  Our online referrals have more than\
+            doubled and our presence is the best in our area.  When it was time to update our website\
+            three months ago, we turned to them and are thrilled with the response we have received.</p>",
+            location: "",
+            image: {
+              src: "",
+              alt: "",
+            },
+          },
+        },
+        {
+          cardContent: {
+            title: "Card 3",
+            author: "Kristina Rivers",
+            quote: "<p>Dental Genius has amazing customer service and the return-on-investment is on\
+            point! We have used their services for almost a year, and last month we received 22 new\
+            patients. The Support Team is easy to work with, they make requested changes quickly, and\
+            we have seen our website be very effective in helping us to grow our practice. Doctor Genius\
+            is G love and special sauce and we are so happy we went with them for our SEO needs!</p>",
+            location: "",
+            image: {
+              src: "",
+              alt: "",
+            },
+          },
+        },
+      ],
     }}
   />
 )

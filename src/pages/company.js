@@ -7,6 +7,54 @@ import TestimonialsSlider from "../components/testimonials-slider"
 
 import "../styles/company-page.scss"
 
+const testimonialContent = [
+  {
+    cardContent: {
+      title: "Card 1",
+      author: "Jon Doe",
+      quote:
+        "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\
+         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus\
+          mus. Donec quam felis.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>",
+      location: "Irvine Dental Care",
+      image: {
+        src: "",
+        alt: "",
+      },
+    },
+  },
+  {
+    cardContent: {
+      title: "Card 2",
+      author: "Jon Doe",
+      quote:
+        "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\
+         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus\
+          mus. Donec quam felis.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>",
+      location: "Irvine Dental Care",
+      image: {
+        src: "",
+        alt: "",
+      },
+    },
+  },
+  {
+    cardContent: {
+      title: "Card 3",
+      author: "Jon Doe",
+      quote:
+        "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\
+         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus\
+          mus. Donec quam felis.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>",
+      location: "Irvine Dental Care",
+      image: {
+        src: "",
+        alt: "",
+      },
+    },
+  },
+];
+
 export default props => (
   <DefaultPageLayout>
     <div className={props["*"]}>
@@ -198,7 +246,7 @@ export default props => (
               <div className="full-bleed-wrapper">
                 <div className="full-bleed">
                   <div className="full-bleed-slider">
-                    <TestimonialsSlider />
+                    <TestimonialsSlider cards={testimonialContent} />
                   </div>
                 </div>
               </div>
