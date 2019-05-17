@@ -48,42 +48,42 @@ export default props => (
                 </div>
                 <div className="grid-item column-signup">
                   <h2>Silver</h2>
-                  <p className="column-signup-body">
+                  {/*<p className="column-signup-body">
                     Lorem Ipsum is simply dummy text of the printing and type.
-                  </p>
+                  </p>*/}
                   <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="/intentional-404/learn-more" className="subtle-link">
+                  {/*<a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
-                  </a>
+                  </a>*/}
                 </div>
                 <div className="grid-item column-signup">
                   <span className="recommended button rounder">
                     Recommended
                   </span>
                   <h2>Gold</h2>
-                  <p className="column-signup-body">
+                  {/*<p className="column-signup-body">
                     Lorem Ipsum is simply dummy text of the printing and type.
-                  </p>
+                  </p>*/}
                   <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="/intentional-404/learn-more" className="subtle-link">
+                  {/*<a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
-                  </a>
+                  </a>*/}
                 </div>
                 <div className="grid-item column-signup">
                   <h2>Platinum</h2>
-                  <p className="column-signup-body">
+                  {/*<p className="column-signup-body">
                     Lorem Ipsum is simply dummy text of the printing and type.
-                  </p>
+                  </p>*/}
                   <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="/intentional-404/learn-more" className="subtle-link">
+                  {/*<a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
-                  </a>
+                  </a>*/}
                 </div>
                 {/* <!-- /header-row --> */}
 
@@ -531,25 +531,25 @@ export default props => (
                   <a href="/intentional-404/signup" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="/intentional-404/learn-more" className="subtle-link">
+                  {/*<a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
-                  </a>
+                  </a>*/}
                 </div>
                 <div className="grid-item column-signup">
                   <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="/intentional-404/learn-more" className="subtle-link">
+                  {/*<a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
-                  </a>
+                  </a>*/}
                 </div>
                 <div className="grid-item column-signup">
                   <a href="/intentional-404/sign-up" className="button rounder">
                     Sign Up
                   </a>
-                  <a href="/intentional-404/learn-more" className="subtle-link">
+                  {/*<a href="/intentional-404/learn-more" className="subtle-link">
                     Learn More
-                  </a>
+                  </a>*/}
                 </div>
               </div>
             </div>
@@ -806,7 +806,7 @@ export default props => (
             </div>
             <div className="col-sm-6 col-lg-5">
               <div className="center">
-                <a href="/" className="button flat white-text">
+                <a href="/demo/" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
