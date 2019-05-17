@@ -62,7 +62,9 @@ const SideNavListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
-        <img className="image-icon" src={props.iconSubnav} />
+        <Link to={props.to} activeClassName="active" partiallyActive={true}>
+          <img className="image-icon" src={props.iconSubnav} />
+        </Link>
       </div>
     </div>
     <div className="dropdown-links">
@@ -78,7 +80,9 @@ const MarketingSolutionsSideNavListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
-        <img className="image-icon" src={props.iconSubnav} />
+        <Link to={props.to} activeClassName="active" partiallyActive={true}>
+          <img className="image-icon" src={props.iconSubnav} />
+        </Link>
       </div>
     </div>
     <div className="dropdown-links">
@@ -142,12 +146,14 @@ const WhoWeServeSideNavListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
-        <img className="image-icon" src={props.iconSubnav} />
+        <Link to={props.to} className="nav-disable-link-open-dropdown-icon" activeClassName="active" partiallyActive={true}>
+          <img className="image-icon" src={props.iconSubnav} />
+        </Link>
       </div>
     </div>
     <div className="dropdown-links">
       <div>
-        <Link to={props.to} activeClassName="active" partiallyActive={true}>
+        <Link to={props.to} className="sidenav-link-dropdown nav-disable-link-open-dropdown" activeClassName="active" partiallyActive={true}>
           {props.children}
         </Link>
         <span className="down-arrow-container">
@@ -199,7 +205,9 @@ const ResourcesSideNavListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
-        <img className="image-icon" src={props.iconSubnav} />
+        <Link to={props.to} activeClassName="active" partiallyActive={true}>
+          <img className="image-icon" src={props.iconSubnav} />
+        </Link>
       </div>
     </div>
     <div className="dropdown-links">
@@ -613,6 +621,27 @@ class Navigation extends Component {
       $(".disable-link").click(function(event) {
         event.preventDefault()
       })
+      $(".nav-disable-link-open-dropdown-icon").click(function(event) {
+        event.preventDefault()
+        var thisDropdownList = $(this)
+            .parent().parent()
+            .siblings(".dropdown-links").children("ul")
+          $("#sidebar .dropdown-links ul")
+            .not(thisDropdownList)
+            .slideUp(500)
+          thisDropdownList.slideDown(500)
+      })
+      $(".nav-disable-link-open-dropdown").click(function(event) {
+        event.preventDefault()
+        var thisDropdownList = $(this)
+            .parent()
+            .siblings("ul")
+          $("#sidebar .dropdown-links ul")
+            .not(thisDropdownList)
+            .slideUp(500)
+          thisDropdownList.slideDown(500)
+      })
+      // $("nav-disable-link-open-dropdown")
       $(".dropdown-menu")
       // $("#sidebar").mCustomScrollbar({
       //   theme: "minimal",
