@@ -53,11 +53,11 @@ const testimonialContent = [
       },
     },
   },
-];
+]
 
 export default props => (
-  <DefaultPageLayout>
-    <div className={props["*"]}>
+  <DefaultPageLayout location={props["*"]}>
+    <div>
       <div className="hero">
         {/* Hero will be a layout component */}
 

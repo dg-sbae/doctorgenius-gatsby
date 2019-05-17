@@ -12,8 +12,8 @@ import theChallengeImage from "../img/the-challenge-placeholder.png"
 import ramiTahhanImage from "../img/rami-tahhan.png"
 
 export default props => (
-  <DefaultPageLayout>
-    <div className={props["*"]}>
+  <DefaultPageLayout location={props["*"]}>
+    <div>
       <div className="hero">
         {/* Hero will be a layout component */}
 

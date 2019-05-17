@@ -20,7 +20,7 @@ import dgDifferent from "../img/home-dg-different.png"
 import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
 
 export default ({ data }, props) => (
-  <DefaultPageLayout>
+  <DefaultPageLayout location={props["*"]}>
     <div className={props["*"] || "homepage"}>
       <div className="hero">
         {/* Hero will be a layout component */}
