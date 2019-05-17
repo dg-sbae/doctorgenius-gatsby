@@ -66,7 +66,7 @@ export default props => (
             <div className="col-sm-12">
               <div className="hero-content">
                 <div className="hero-content accent-block">
-                  <h1>Company</h1>
+                  <h1>Doctor Genius</h1>
                   <h2>
                     <span>What </span>we are about
                   </h2>
@@ -145,7 +145,7 @@ export default props => (
                     alt="Icon of a Search Engine Page"
                   />
                 </div>
-                <p className="panel-heading">500+</p>
+                <p className="panel-heading">1000+</p>
                 <p className="panel-body">
                   Over 1000+ Dental Practices use Doctor Genius Web & SEO
                   services
@@ -179,10 +179,7 @@ export default props => (
                 </div>
                 <p className="panel-heading">4.9 Stars</p>
                 <p className="panel-body">
-                  We take pride in our google reviews. Read our google reviews.
-                  <a href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,">
-                    (click here)
-                  </a>
+                  We take pride in our google reviews. Read our <a href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,," target="_blank">google reviews.</a>
                 </p>
               </div>
             </div>
@@ -272,7 +269,7 @@ export default props => (
                       States.
                     </p>
                     <a
-                      href="/contact/"
+                      href="/demo/"
                       className="link-with-icon font-weight-semibold"
                     >
                       <img
