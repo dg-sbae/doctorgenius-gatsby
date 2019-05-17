@@ -8,7 +8,7 @@ import TestimonialsSlider from "../components/testimonials-slider"
 import "../styles/our-clients.scss"
 
 export default props => (
-  <DefaultPageLayout>
+  <DefaultPageLayout location={props["*"]}>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}

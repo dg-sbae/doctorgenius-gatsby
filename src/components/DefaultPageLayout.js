@@ -6,14 +6,12 @@ import Navigation from "../components/Navigation"
 
 import "../styles/_global-styles.scss"
 
-export default ({ children }) => (
-  <div className="content-wrapper">
+export default ({ children, location }, props) => (
+  <div className={location + " content-wrapper"}>
     <Header>
       <Navigation />
     </Header>
-
     {children}
-
     <Footer />
   </div>
 )

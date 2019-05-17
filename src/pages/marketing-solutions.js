@@ -17,7 +17,7 @@ import portalDashboard from "../img/portal-dashboard.png"
 import "../styles/marketing-solutions.scss"
 
 export default props => (
-  <DefaultPageLayout>
+  <DefaultPageLayout location={props["*"]}>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}

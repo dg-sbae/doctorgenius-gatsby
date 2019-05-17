@@ -7,7 +7,7 @@ import Container from "../components/Container"
 import "../styles/privacy-policy.scss"
 
 export default props => (
-  <DefaultPageLayout>
+  <DefaultPageLayout location={props["*"]}>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}

@@ -22,7 +22,7 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
 
-export default function({ data }) {
+export default function({ data }, props) {
   //Isolate the blog and categories routes
   //This should be located globally, or the categories and archive page combined
   const postsPath = "/the-study/"
@@ -41,7 +41,7 @@ export default function({ data }) {
   ]
 
   return (
-    <DefaultPageLayout>
+    <DefaultPageLayout location={props["*"]}>
       <div className="the-study">
         <div className="hero">
           {/* Hero will be a layout component */}

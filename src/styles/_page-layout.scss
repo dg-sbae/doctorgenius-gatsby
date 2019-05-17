@@ -21,6 +21,12 @@ header {
   & .container-fluid {
     width: 100%;
   }
+  .demo-only {
+    display: none !important;
+  }
+  .button.nav-button {
+    width: 45%;
+  }
   .logo a {
     display: block;
     .logo-holder {

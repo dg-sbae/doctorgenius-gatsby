@@ -120,12 +120,12 @@ class ContactForm extends React.Component {
               Submit
             </button>
           </div>
-          <FormResponse
+          {/*<FormResponse
             name={this.state.name}
             email={this.state.email}
             company={this.state.company}
             phone={this.state.phone}
-          />
+          />*/}
         </form>
       </div>
     )
