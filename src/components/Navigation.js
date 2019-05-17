@@ -836,7 +836,7 @@ class Navigation extends Component {
               </ul>
             </div>
             <div className="contact-links">
-              <ul>
+              <ul class="main-contact-links">
                 <li className="phone">
                   <a href="tel:877-477-2311">
                     <div className="phone phone-holder" />
@@ -845,6 +845,12 @@ class Navigation extends Component {
                 </li>
                 <ListLink to="/demo" className="button nav-button transparent">
                   Free Demo
+                </ListLink>
+              </ul>
+              <ul class="demo-only">
+                <li className="call">Call For Demo!</li>
+                <ListLink to="/demo" className="button nav-button transparent">
+                  <a href="tel:877-477-2311">877.477.2311</a>
                 </ListLink>
               </ul>
             </div>

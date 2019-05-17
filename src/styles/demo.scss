@@ -1,5 +1,47 @@
 @import "_site-variables.scss";
 .demo {
+  /* This is all awful and is just a hack */
+  header,
+  nav.navbar {
+    height: 80px !important;
+  }
+  .demo-only {
+    display: flex !important;
+  }
+  .main-contact-links {
+    display: none;
+  }
+  header {
+    background: $primary;
+    nav.navbar.main-navbar-stuck {
+      background: $primary;
+    }
+    .main-links .navbar-nav {
+      display: none;
+    }
+    a,
+    i {
+      color: white !important;
+    }
+    .button.nav-button {
+      padding: 8px 7.5% !important;
+      border: 1px solid !important;
+      border-radius: 6px !important;
+      letter-spacing: 0.5px !important;
+      display: block;
+      width: 50%;
+    }
+    .logo a {
+      display: block;
+      .logo-holder {
+        background-image: url(/icon/logo-white.svg) !important;
+      }
+    }
+    a .phone-holder {
+      background-image: url(http://localhost:8000/icon/phone-white.svg) !important;
+    }
+  }
+  /* End awful hack danger zone */
   .p-10 {
     padding: 10px;
   }
