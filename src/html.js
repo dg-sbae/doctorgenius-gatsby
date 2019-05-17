@@ -11,6 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link rel="icon" type="image/png" href="favicon.ico" />
         {props.headComponents}
         <script
           src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -35,7 +36,7 @@ export default function HTML(props) {
                   var secondaryNavTop = document.querySelector(".secondary-nav").getBoundingClientRect().top;
                   var heroBottom = document.querySelector('.hero').getBoundingClientRect().bottom;
                 }
-                
+
                 if (winScroll >= 100 && winScroll < 200) {
                   document.querySelector("nav.navbar").classList.add("main-navbar-stuck");
                   document.querySelector("nav.navbar").classList.add("stuck-midway");
@@ -72,7 +73,7 @@ export default function HTML(props) {
                   $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
                 }, e.type === 'mouseleave' ? 100 : 0);
               }
-              
+
               $('body')
                 .on('mouseenter mouseleave','.dropdown',toggleDropdown)
                 .on('click', '.dropdown-menu a', toggleDropdown);
