@@ -57,7 +57,7 @@ const testimonialContent = [
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
-    <div>
+    <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}
 
@@ -179,7 +179,13 @@ export default props => (
                 </div>
                 <p className="panel-heading">4.9 Stars</p>
                 <p className="panel-body">
-                  We take pride in our google reviews. Read our <a href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,," target="_blank">google reviews.</a>
+                  We take pride in our google reviews. Read our{" "}
+                  <a
+                    href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
+                    target="_blank"
+                  >
+                    google reviews.
+                  </a>
                 </p>
               </div>
             </div>
