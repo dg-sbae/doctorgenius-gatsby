@@ -6,8 +6,8 @@ export default () => (
   <MarketingSolutionsTemplate
     page="/marketing-solutions/online-reputation-management/" /* this should be dynamic from the page props */
     pageTitle="Online Reputation"
-    pageSubtitle=""
-    pageIntro=""
+    pageSubtitle="Stand out <span>from your</span> competition"
+    pageIntro="Delivering effective brand strategies that enable you to have a major edge in competitive markets."
     contentRows={[
       {
         content: {
