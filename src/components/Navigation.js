@@ -512,8 +512,8 @@ const StudySingleListLink = props => (
                   The Study
                 </Link>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
+                  Education on all things digital marketing and practice
+                  management
                 </p>
               </div>
             </div>

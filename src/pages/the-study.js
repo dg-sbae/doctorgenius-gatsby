@@ -62,8 +62,9 @@ export default function({ data }, props) {
                   </h2>
                   <div className="accented-paragraph">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Maecenas commodo eu metus ut convallis.
+                      Providing news and education on all things regarding
+                      Practice Management and Digital Marketing to help
+                      jumpstart your Practice.
                     </p>
                   </div>
                 </div>
@@ -102,7 +103,7 @@ export default function({ data }, props) {
                   const mainCategory = node.categories.find(c =>
                     categoriesPaths.find(d => d.name === c.name)
                   )
-                  console.log(mainCategory)
+                  // console.log(mainCategory)
                   return (
                     <div className="latest-post">
                       <a href={postsPath + node.slug}>
