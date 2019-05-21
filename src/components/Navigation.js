@@ -529,8 +529,7 @@ const StudySingleListLink = props => (
                   Case Studies
                 </Link>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
+                  See Doctor Genius Action Plan to address one doctor’s needs
                 </p>
               </div>
             </div>

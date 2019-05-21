@@ -9,8 +9,10 @@
         height: 271px;
       }
       h2 {
-        @include fluid-type(40px, 90px, $phone, $desktop);
-        margin-top: 0;
+        @include fluid-type(38px, 45px, $phone, $desktop);
+        @include media(">=tablet") {
+          margin-top: 20px;
+        }
       }
     }
   }
