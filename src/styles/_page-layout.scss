@@ -351,6 +351,9 @@ footer {
   &.secondary-nav-stuck {
     position: fixed;
     top: 80px;
+    @include media("<laptop") {
+      top: 76px;
+    }
     z-index: 100;
     background-color: #fff;
     // width: 100%;
@@ -376,13 +379,17 @@ footer {
 }
 
 .secondary-nav-target:after {
-  width: 100%;
-  border-bottom: 1px solid $mute;
+  border-bottom: 1px solid #dedede;
   display: block;
   content: "";
   position: absolute;
+  width: 96%;
   bottom: 0;
-  left: 0;
+  left: 2%;
+  @include media("<laptop") {
+    width: 100%;
+    left: 0;
+  }
 }
 
 .main-content {
@@ -405,6 +412,9 @@ html .hero {
   position: relative;
   &.shift-down {
     margin-bottom: 190px;
+    @include media("<laptop") {
+      margin-bottom: 0;
+    }
   }
   &:after {
     display: block;
@@ -502,7 +512,7 @@ $bottom-padding-md: 20px;
     &.tall-bottom {
       padding-bottom: $bottom-padding * 2;
     }
-    @include media("<=laptop") {
+    @include media("<laptop") {
       padding-top: $top-padding-md;
       &.short-top {
         padding-top: $top-padding-md * 0.5;
@@ -516,6 +526,9 @@ $bottom-padding-md: 20px;
       }
       &.tall-bottom {
         padding-bottom: $bottom-padding-md * 2;
+      }
+      & > .col-md-5 {
+        margin: 20px auto;
       }
     }
   }

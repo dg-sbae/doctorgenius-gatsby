@@ -180,7 +180,7 @@ export default ({ data }, props) => (
                 </h2>
               </div>
             </div>
-            <div className="col-sm-9 col-md-6">
+            <div className="col-sm-12 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={newPatientAcquisitions}
@@ -200,12 +200,11 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
-              <div className="col-md-1" />
             </div>
           </div>
           <div className="row padded short-top short-bottom">
             <div className="col-md-1" />
-            <div className="col-sm-9 col-md-5 order-xs-9">
+            <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>What makes Doctor Genius different?</h2>
@@ -218,7 +217,7 @@ export default ({ data }, props) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-9 col-md-6 order-md-9">
+            <div className="col-sm-12 col-md-6 order-sm-1 order-md-2">
               <img
                 className="img-responsive blur-bleed"
                 src={dgDifferent}
@@ -227,7 +226,7 @@ export default ({ data }, props) => (
             </div>
           </div>
           <div className="row padded short-top tall-bottom">
-            <div className="col-sm-9 col-md-6">
+            <div className="col-sm-12 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={dgClientSatisfaction}
@@ -252,7 +251,6 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
-              <div className="col-md-1" />
             </div>
           </div>
           {/* Begin Demo Footer */}
@@ -282,7 +280,6 @@ export default ({ data }, props) => (
                 </a>
               </div>
             </div>
-            <div className="col-md-1" />
           </div>
           {/* End Demo Footer */}
         </Container>
