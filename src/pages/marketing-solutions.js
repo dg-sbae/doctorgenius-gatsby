@@ -127,7 +127,8 @@ export default props => (
           {/* End secondary nav Component */}
           {/* Begin Split Row of content and image */}
           <div className="row padded short-top short-bottom odd-row proven-results-row">
-            <div className="col-sm-6">
+            <div class="col-md-1" />
+            <div className="col-sm-9 col-md-5 order-xs-9">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>Proven and tested results in every step of the way</h2>
@@ -149,7 +150,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-9 col-md-6 order-md-9">
               <img
                 className="img-responsive blur-bleed lighthouse-image"
                 src={lighthouseResultsOnMarketingPage}
