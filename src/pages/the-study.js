@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import he from "he"
 import Img from "gatsby-image"
@@ -42,6 +43,11 @@ export default function({ data }, props) {
 
   return (
     <DefaultPageLayout location={props["*"]}>
+      <Helmet>
+        <title>
+          Practice Management and Digital Marketing Blog | Doctor Genius
+        </title>
+      </Helmet>
       <div className="the-study">
         <div className="hero">
           {/* Hero will be a layout component */}

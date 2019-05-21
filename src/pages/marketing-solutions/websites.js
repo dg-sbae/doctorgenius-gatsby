@@ -8,6 +8,7 @@ export default () => (
     pageTitle="Responsive Websites"
     pageSubtitle="<span>Design that leaves a lasting</span> impression."
     pageIntro="Stun your viewers with exquisitely designed websites & attractive branding. Getting appointments has never been easier."
+    metaTitle="Conversion and Mobile First Healthcare Websites | Doctor Genius"
     contentRows={[
       {
         content: {

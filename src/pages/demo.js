@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -21,6 +22,11 @@ import "../styles/demo.scss"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
+    <Helmet>
+      <title>
+        Get a Free Demo of the Doctor Genius Marketing Platform | Doctor Genius
+      </title>
+    </Helmet>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}

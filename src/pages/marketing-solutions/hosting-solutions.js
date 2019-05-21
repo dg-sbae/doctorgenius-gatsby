@@ -8,6 +8,7 @@ export default () => (
     pageTitle="Hosting Solutions"
     pageSubtitle="Enterprise Power <span>for Medical Practice Websites</span>"
     pageIntro="We’re always first in line when it comes to running the latest technology."
+    metaTitle="Medical Practice Websites Hosting | Doctor Genius"
     contentRows={[
       {
         content: {

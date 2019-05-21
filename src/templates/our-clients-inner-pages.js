@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -19,6 +20,7 @@ export default props => {
   const pageSubtitle = props.pageSubTitle
   const pageIntro = props.pageIntro
   const isCaseStudy = props.caseStudy
+  const metaTitle = props.metaTitle
 
   // For now all inner pages will have the same hero image, so this will be in the sass
   //const heroImage = "/hero/marketing-solutions-subpage.png"
@@ -29,6 +31,9 @@ export default props => {
 
   return (
     <DefaultPageLayout>
+      <Helmet>
+        <title>{metaTitle}</title>
+      </Helmet>
       <div className={props["*"] + " our-clients-inner " + props.className}>
         <div className="hero">
           {/* Hero will be a layout component */}
@@ -175,63 +180,61 @@ export default props => {
             </div>
             {/* End main block of text */}
             {/* Begin split page content - conditional render using short circuit */}
-            { isCaseStudy &&
-              <div className="spacer solid trim" />
-            }
-            { isCaseStudy &&
-            <div className="row padded short-top">
-              <div className="col-sm-7 case-study-container">
-                <div className="inner-title center">
-                  <h3 className="m-0">Case Study: Titan Dental</h3>
-                  <div className="subtitle muted">The first 6 months</div>
+            {isCaseStudy && <div className="spacer solid trim" />}
+            {isCaseStudy && (
+              <div className="row padded short-top">
+                <div className="col-sm-7 case-study-container">
+                  <div className="inner-title center">
+                    <h3 className="m-0">Case Study: Titan Dental</h3>
+                    <div className="subtitle muted">The first 6 months</div>
+                  </div>
+                  <div className="case-study-table">
+                    <div className="case-study-item">
+                      <p className="callout">1,125%</p>
+                      <p>Increase in Google First-Page Revenue</p>
+                    </div>
+                    <div className="case-study-item">
+                      <p className="callout">100%</p>
+                      <p>Increase in Revenue</p>
+                    </div>
+                    <div className="case-study-item">
+                      <p className="callout">60%</p>
+                      <p>Growth in organic Search Traffic</p>
+                    </div>
+                    <div className="case-study-item">
+                      <p className="callout">500%</p>
+                      <p>Growth in Reviews Across the Web</p>
+                    </div>
+                    <div className="case-study-item">
+                      <p className="callout">200%</p>
+                      <p>New Patient Appointments</p>
+                    </div>
+                    <div className="case-study-item">
+                      <p className="callout">88%</p>
+                      <p>Increase in New Patient Calls!</p>
+                    </div>
+                  </div>
+                  <div className="center pad-md">
+                    <a href="/case-study/" className="link-with-icon">
+                      <img
+                        src="/icon/right-arrow-blue.svg"
+                        className="link-icon"
+                        alt="Icon of a Right Arrow"
+                      />
+                      View Case Study
+                    </a>
+                  </div>
                 </div>
-                <div className="case-study-table">
-                  <div className="case-study-item">
-                    <p className="callout">1,125%</p>
-                    <p>Increase in Google First-Page Revenue</p>
-                  </div>
-                  <div className="case-study-item">
-                    <p className="callout">100%</p>
-                    <p>Increase in Revenue</p>
-                  </div>
-                  <div className="case-study-item">
-                    <p className="callout">60%</p>
-                    <p>Growth in organic Search Traffic</p>
-                  </div>
-                  <div className="case-study-item">
-                    <p className="callout">500%</p>
-                    <p>Growth in Reviews Across the Web</p>
-                  </div>
-                  <div className="case-study-item">
-                    <p className="callout">200%</p>
-                    <p>New Patient Appointments</p>
-                  </div>
-                  <div className="case-study-item">
-                    <p className="callout">88%</p>
-                    <p>Increase in New Patient Calls!</p>
-                  </div>
-                </div>
-                <div className="center pad-md">
-                  <a href="/case-study/" className="link-with-icon">
-                    <img
-                      src="/icon/right-arrow-blue.svg"
-                      className="link-icon"
-                      alt="Icon of a Right Arrow"
-                    />
-                    View Case Study
-                  </a>
+                <div className="col-sm-6 col-lg-5">
+                  <img
+                    className="img-responsive blur-bleed"
+                    src="/png/search-result.png"
+                    alt="Search Results Page"
+                  />
                 </div>
               </div>
-              <div className="col-sm-6 col-lg-5">
-                <img
-                  className="img-responsive blur-bleed"
-                  src="/png/search-result.png"
-                  alt="Search Results Page"
-                />
-              </div>
-            </div>
-            }
-            
+            )}
+
             {/* End split page content */}
             {/* Begin CTA banner */}
             <div className="full-bleed-wrapper pad-md">

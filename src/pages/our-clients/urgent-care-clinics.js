@@ -10,6 +10,7 @@ export default () => (
     pageSubTitle="<span>Broaden Your</span> Online Presence <span>For New Patients to</span> Find You"
     pageIntro="We bring you a robust platform and digital marketing solutions that focus on new patient acquisition."
     caseStudy={false}
+    metaTitle="Grow your Urgent Care Center | Digital Marketing Agency | Doctor Genius"
     contentRows={{
       contentParagraphBlock: {
         heading: {
@@ -58,7 +59,8 @@ export default () => (
           cardContent: {
             title: "Card 2",
             author: "John Noyes",
-            quote: "<p>Doctor Genius hands down has given me the best results out of any of the 5 other\
+            quote:
+              "<p>Doctor Genius hands down has given me the best results out of any of the 5 other\
             website companies I have used.  I am actually getting significant patient calls in the 3\
             months I have been with them.  The staff is friendly and helpful.  And you can actually\
             reach them when you have a question.  You should start using this company over the rest.</p>",
@@ -73,7 +75,8 @@ export default () => (
           cardContent: {
             title: "Card 3",
             author: "Peter G",
-            quote: "<p>Doctor Genius is a wonderful practice builder. I had some bad experiences with SEO\
+            quote:
+              "<p>Doctor Genius is a wonderful practice builder. I had some bad experiences with SEO\
             companies in the past, paying for poor results. The tools DG offers and tracking reports\
             assures me that I am getting bang for my buck. Satisfied with the support as well!</p>",
             location: "",

@@ -10,6 +10,7 @@ export default () => (
     pageSubTitle="<span>Stretch Your Online Reach for</span> More Patients to your Practice"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
     caseStudy={false}
+    metaTitle="Marketing for Chiropractors | Digital Marketing Agency | Doctor Genius"
     contentRows={{
       contentParagraphBlock: {
         heading: {
@@ -36,7 +37,6 @@ export default () => (
           your practice upstart your chiropractic practice right with an effective and efficient\
           website.\
           </p>",
-          
       },
       contentSplitScreen: {
         // Figure out how to implement once we know the layout
@@ -63,7 +63,8 @@ export default () => (
           cardContent: {
             title: "Card 2",
             author: "Dr James Helmy",
-            quote: "<p>These guys have changed my online presence in a dramatic way, and more\
+            quote:
+              "<p>These guys have changed my online presence in a dramatic way, and more\
             patients are finding and calling us as a result of their work.  Their team is friendly\
             and responsive, and I'd definitely recommend them to my colleagues.</p>",
             location: "",
@@ -77,7 +78,8 @@ export default () => (
           cardContent: {
             title: "Card 3",
             author: "Mike Warren",
-            quote: "<p>Doctor Genius is the best way to provide your business with a professional\
+            quote:
+              "<p>Doctor Genius is the best way to provide your business with a professional\
             online representation. I have seen my fellow practitioner’s websites and they do not\
             compare to what Doctor Genius can provide.</p>",
             location: "",

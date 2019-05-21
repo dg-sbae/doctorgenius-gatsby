@@ -8,6 +8,7 @@ export default () => (
     pageTitle="Online Reputation"
     pageSubtitle="Stand out <span>from your</span> competition"
     pageIntro="Delivering effective brand strategies that enable you to have a major edge in competitive markets."
+    metaTitle="Online Brand and Reputation Monitoring | Doctor Genius"
     contentRows={[
       {
         content: {

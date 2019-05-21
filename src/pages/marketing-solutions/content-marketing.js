@@ -8,6 +8,7 @@ export default () => (
     pageTitle="Content Marketing"
     pageSubtitle="<span>Build New</span> Organic Traffic"
     pageIntro="Our organic content strategy main objective is to funnel traffic to your website."
+    metaTitle="Organic Search Engine Optimized Content | Healthcare Marketing Agency | Doctor Genius"
     contentRows={[
       {
         content: {

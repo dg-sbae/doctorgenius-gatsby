@@ -10,6 +10,7 @@ export default () => (
     pageSubTitle="<span>Modern Healthcare Technology</span> Solutions"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
     caseStudy={true}
+    metaTitle="Healthcare Focused Marketing Agency | New Patient Acquisition | Doctor Genius"
     contentRows={{
       contentParagraphBlock: {
         heading: {
@@ -67,7 +68,8 @@ export default () => (
           cardContent: {
             title: "Card 2",
             author: "Roberto Bellegarrigue",
-            quote: "<p>Been working with them for 2 years now. My web visibility has increased and my new\
+            quote:
+              "<p>Been working with them for 2 years now. My web visibility has increased and my new\
             patients have doubled as a result. They're always available to talk if you have any issues or\
             questions. Two thumbs up!! Just ask for Francesco, he's my account manager and he'll take\
             good care of you.</p>",
@@ -82,7 +84,8 @@ export default () => (
           cardContent: {
             title: "Card 3",
             author: "Dr James Helmy",
-            quote: "<p>These guys have changed my online presence in a dramatic way, and more patients\
+            quote:
+              "<p>These guys have changed my online presence in a dramatic way, and more patients\
             are finding and calling us as a result of their work.  Their team is friendly and responsive,\
             and I'd definitely recommend them to my colleagues.</p>",
             location: "",

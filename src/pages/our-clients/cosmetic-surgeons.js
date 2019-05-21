@@ -10,6 +10,7 @@ export default () => (
     pageSubTitle="<span>Attract</span> More Patients <span>From the Internet</span>"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
     caseStudy={false}
+    metaTitle="Cosmetic Surgeons | Increasing Your Patient Base | Digital Marketing Agency | Doctor Genius"
     contentRows={{
       contentParagraphBlock: {
         heading: {
@@ -64,7 +65,8 @@ export default () => (
           cardContent: {
             title: "Card 2",
             author: "Carla Wostrel",
-            quote: "<p>We have been with Dental Genius for 6 years now.  We've seen many changes to the\
+            quote:
+              "<p>We have been with Dental Genius for 6 years now.  We've seen many changes to the\
             company and they just keep getting better and better.  Our online referrals have more than\
             doubled and our presence is the best in our area.  When it was time to update our website\
             three months ago, we turned to them and are thrilled with the response we have received.</p>",
@@ -79,7 +81,8 @@ export default () => (
           cardContent: {
             title: "Card 3",
             author: "Kristina Rivers",
-            quote: "<p>Dental Genius has amazing customer service and the return-on-investment is on\
+            quote:
+              "<p>Dental Genius has amazing customer service and the return-on-investment is on\
             point! We have used their services for almost a year, and last month we received 22 new\
             patients. The Support Team is easy to work with, they make requested changes quickly, and\
             we have seen our website be very effective in helping us to grow our practice. Doctor Genius\

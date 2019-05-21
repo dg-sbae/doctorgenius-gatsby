@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -19,6 +20,7 @@ export default props => {
   const pageTitle = props.pageTitle
   const pageSubtitle = props.pageSubtitle
   const pageIntro = props.pageIntro
+  const metaTitle = props.metaTitle
 
   // For now all inner pages will have the same hero image, so this will be in the sass
   //const heroImage = "/hero/marketing-solutions-subpage.png"
@@ -28,6 +30,9 @@ export default props => {
 
   return (
     <DefaultPageLayout>
+      <Helmet>
+        <title>{metaTitle}</title>
+      </Helmet>
       <div className={props["*"] + " marketing-solutions-inner"}>
         <div className="hero">
           {/* Hero will be a layout component */}

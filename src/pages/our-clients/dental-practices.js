@@ -10,6 +10,7 @@ export default () => (
     pageSubTitle="<span>Engage and Convert More</span> Patients To Your Practice"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
     caseStudy={true}
+    metaTitle="Dental Patient Engagement, Acquisition, Retention | Digital Marketing Agency | Doctor Genius"
     contentRows={{
       contentParagraphBlock: {
         heading: {
@@ -60,7 +61,8 @@ export default () => (
           cardContent: {
             title: "Card 2",
             author: "Tod Anderson",
-            quote: "<p>Coming from a Tech background before dental school, I have been searching\
+            quote:
+              "<p>Coming from a Tech background before dental school, I have been searching\
             for a good way to manage my dental web presence, including social media, and reputation.\
             I have tried multiple things over the last 10 years, Yelp (was the worst!), Yext, Custom\
             built website with local web developer, Prosites, to name a few and have redone my dental\
@@ -82,7 +84,8 @@ export default () => (
           cardContent: {
             title: "Card 3",
             author: "Nancy Lee DDS",
-            quote: "<p>Working with Dental Genius has been great. They helped us create a new website\
+            quote:
+              "<p>Working with Dental Genius has been great. They helped us create a new website\
             for our office and continuously create blogs for updated content.  They have improved our\
             office's online visibility.  The Dental Genius portal is a great tool not only to keep\
             track on how many new patient phone calls we receive, but also to keep track on our online\

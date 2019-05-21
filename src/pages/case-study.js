@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -13,6 +14,12 @@ import ramiTahhanImage from "../img/rami-tahhan.png"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
+    <Helmet>
+      <title>
+        In-Depth Healthcare Marketing Case Study | Digital Marketing | Doctor
+        Genius
+      </title>
+    </Helmet>
     <div>
       <div className="hero">
         {/* Hero will be a layout component */}

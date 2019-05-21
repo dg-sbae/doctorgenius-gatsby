@@ -8,6 +8,7 @@ export default () => (
     pageTitle="Our Technology"
     pageSubtitle="<span>Extending your reach through our</span> marketing solutions"
     pageIntro="We provide predictable, performance-driven and sustainable practice growth."
+    metaTitle="New Patient Acquisition Marketing Platform | Doctor Genius"
     contentRows={[
       {
         content: {
