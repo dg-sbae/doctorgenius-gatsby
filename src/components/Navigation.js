@@ -146,14 +146,24 @@ const WhoWeServeSideNavListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
-        <Link to={props.to} className="nav-disable-link-open-dropdown-icon" activeClassName="active" partiallyActive={true}>
+        <Link
+          to={props.to}
+          className="nav-disable-link-open-dropdown-icon"
+          activeClassName="active"
+          partiallyActive={true}
+        >
           <img className="image-icon" src={props.iconSubnav} />
         </Link>
       </div>
     </div>
     <div className="dropdown-links">
       <div>
-        <Link to={props.to} className="sidenav-link-dropdown nav-disable-link-open-dropdown" activeClassName="active" partiallyActive={true}>
+        <Link
+          to={props.to}
+          className="sidenav-link-dropdown nav-disable-link-open-dropdown"
+          activeClassName="active"
+          partiallyActive={true}
+        >
           {props.children}
         </Link>
         <span className="down-arrow-container">
@@ -618,29 +628,34 @@ class Navigation extends Component {
       $(".dropdown-heading").click(function(event) {
         event.stopPropagation()
       })
-      $(".disable-link").click(function(event) {
-        event.preventDefault()
-      })
-      $(".nav-disable-link-open-dropdown-icon").click(function(event) {
-        event.preventDefault()
-        var thisDropdownList = $(this)
-            .parent().parent()
-            .siblings(".dropdown-links").children("ul")
-          $("#sidebar .dropdown-links ul")
-            .not(thisDropdownList)
-            .slideUp(500)
-          thisDropdownList.slideDown(500)
-      })
-      $(".nav-disable-link-open-dropdown").click(function(event) {
-        event.preventDefault()
-        var thisDropdownList = $(this)
-            .parent()
-            .siblings("ul")
-          $("#sidebar .dropdown-links ul")
-            .not(thisDropdownList)
-            .slideUp(500)
-          thisDropdownList.slideDown(500)
-      })
+
+      // START - Disable the title icon for the dropdown menu
+      // $(".disable-link").click(function(event) {
+      //   event.preventDefault()
+      // })
+
+      // $(".nav-disable-link-open-dropdown-icon").click(function(event) {
+      //   event.preventDefault()
+      //   var thisDropdownList = $(this)
+      //       .parent().parent()
+      //       .siblings(".dropdown-links").children("ul")
+      //     $("#sidebar .dropdown-links ul")
+      //       .not(thisDropdownList)
+      //       .slideUp(500)
+      //     thisDropdownList.slideDown(500)
+      // })
+      // $(".nav-disable-link-open-dropdown").click(function(event) {
+      //   event.preventDefault()
+      //   var thisDropdownList = $(this)
+      //       .parent()
+      //       .siblings("ul")
+      //     $("#sidebar .dropdown-links ul")
+      //       .not(thisDropdownList)
+      //       .slideUp(500)
+      //     thisDropdownList.slideDown(500)
+      // })
+      // END - Disable the title icon for the dropdown menu
+
       // $("nav-disable-link-open-dropdown")
       $(".dropdown-menu")
       // $("#sidebar").mCustomScrollbar({
@@ -719,7 +734,7 @@ class Navigation extends Component {
               iconSubnav={ourClients}
               // data-toggle="collapse"
               // aria-expanded="false"
-              to="/our-clients"
+              to="/our-clients/dental-practices"
             >
               Our Clients
             </WhoWeServeSideNavListLink>
@@ -844,7 +859,7 @@ class Navigation extends Component {
                 <OurClientsListLink
                   className="nav-item dropdown who-we-serve-dropdown"
                   dataToggle="dropdown"
-                  to="/our-clients/"
+                  to="/our-clients/dental-practices"
                 >
                   Our Clients
                 </OurClientsListLink>
