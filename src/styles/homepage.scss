@@ -194,7 +194,9 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
     max-width: 120%;
     transform: translateX(-10%);
     @include media("<laptop") {
+      width: 100%;
       transform: translateX(-5%);
+      transform: translate(0);
     }
   }
 
