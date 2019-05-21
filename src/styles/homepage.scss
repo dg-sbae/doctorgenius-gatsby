@@ -147,6 +147,7 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
       .demo-cta {
         margin-top: 45px;
         margin-left: 55px;
+
         @include media("<=laptop", ">tablet") {
           text-align: center;
           margin-top: 10px;
@@ -166,7 +167,9 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
 
         a {
           text-transform: uppercase;
-          background: #003e6e;
+          // background: #003e6e;
+          background: #3dc93d;
+          color: white;
           height: 45px;
           width: 177px;
           padding: 10px;
