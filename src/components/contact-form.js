@@ -117,7 +117,7 @@ class ContactForm extends React.Component {
           </div>
           <div>
             <button type="submit" class="button btn flat">
-              Submit
+              Request Demo <img src={thinArrowRight} alt="Arrow Right" />
             </button>
           </div>
           {/*<FormResponse
