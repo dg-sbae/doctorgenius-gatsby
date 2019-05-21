@@ -108,7 +108,13 @@ export default ({ data }, props) => (
                 </div>
                 <p className="panel-heading">4+ Stars</p>
                 <p className="panel-body">
-                  We take pride in our <a href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,," target="_blank">Google reviews</a>
+                  We take pride in our{" "}
+                  <a
+                    href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
+                    target="_blank"
+                  >
+                    Google reviews
+                  </a>
                 </p>
               </div>
             </div>
@@ -167,7 +173,7 @@ export default ({ data }, props) => (
                 </h2>
               </div>
             </div>
-            <div className="col-sm-9 col-md-6">
+            <div className="col-sm-12 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={newPatientAcquisitions}
@@ -187,12 +193,11 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
-              <div className="col-md-1" />
             </div>
           </div>
           <div className="row padded short-top short-bottom">
             <div className="col-md-1" />
-            <div className="col-sm-9 col-md-5 order-xs-9">
+            <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>What makes Doctor Genius different?</h2>
@@ -205,7 +210,7 @@ export default ({ data }, props) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-9 col-md-6 order-md-9">
+            <div className="col-sm-12 col-md-6 order-sm-1 order-md-2">
               <img
                 className="img-responsive blur-bleed"
                 src={dgDifferent}
@@ -214,7 +219,7 @@ export default ({ data }, props) => (
             </div>
           </div>
           <div className="row padded short-top tall-bottom">
-            <div className="col-sm-9 col-md-6">
+            <div className="col-sm-12 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={dgClientSatisfaction}
@@ -228,12 +233,17 @@ export default ({ data }, props) => (
                   <div className="accented-paragraph">
                     <p className="s-thin">
                       Don't take our word for it, see what our clients say about
-                      us 100+ 5 Stars. Check our <a href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,," target="_blank">reviews</a>
+                      us 100+ 5 Stars. Check our{" "}
+                      <a
+                        href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
+                        target="_blank"
+                      >
+                        reviews
+                      </a>
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="col-md-1" />
             </div>
           </div>
           {/* Begin Demo Footer */}
@@ -263,7 +273,6 @@ export default ({ data }, props) => (
                 </a>
               </div>
             </div>
-            <div className="col-md-1" />
           </div>
           {/* End Demo Footer */}
         </Container>

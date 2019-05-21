@@ -190,6 +190,9 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
     /* homepage images are slightly larger, meaning they should bleed slightly less */
     max-width: 120%;
     transform: translateX(-10%);
+    @include media("<laptop") {
+      transform: translateX(-5%);
+    }
   }
 
   .marketing-dashboard-background {
@@ -207,10 +210,18 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
       background-size: cover;
     }
   }
+  @include media("<laptop") {
+    .full-bleed-wrapper.pad-md {
+      padding: 0;
+    }
+  }
   .full-bleed-content-wrapper {
-    @include media("<=phone") {
+    @include media("<tablet") {
       width: 183%;
       left: -64%;
+      img {
+        max-height: 400px;
+      }
     }
   }
   .panel p:not(.panel-heading) {
