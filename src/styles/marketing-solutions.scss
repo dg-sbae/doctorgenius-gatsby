@@ -20,6 +20,9 @@
     height: 475px;
     background: url("/png/our-clients-fullbleed-image.png") no-repeat;
     background-position: 40%;
+    @include media("<laptop") {
+      background-position: 45%;
+    }
   }
   .lighthouse-image {
     width: 110%;
