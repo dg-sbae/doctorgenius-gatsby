@@ -128,7 +128,7 @@ export default props => (
           {/* Begin Split Row of content and image */}
           <div className="row padded short-top short-bottom odd-row proven-results-row">
             <div class="col-md-1" />
-            <div className="col-sm-9 col-md-5 order-xs-9">
+            <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>Proven and tested results in every step of the way</h2>
@@ -150,7 +150,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-9 col-md-6 order-md-9">
+            <div className="col-sm-12 col-md-6 order-sm-1 order-md-2">
               <img
                 className="img-responsive blur-bleed lighthouse-image"
                 src={lighthouseResultsOnMarketingPage}
@@ -161,14 +161,14 @@ export default props => (
           {/* End Split Row of content and image */}
           {/* Begin Split Row of image and content */}
           <div className="row padded short-top tall-bottom even-row dashboard-row">
-            <div className="col-sm-6">
+            <div className="col-sm-10 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={portalDashboard}
                 alt="Our Client Dashboard"
               />
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>All the tools you'll need to be in control. </h2>
@@ -200,7 +200,7 @@ export default props => (
             <div className="full-bleed check-plans-background-image flipped" />
             <div className="full-bleed-content-wrapper">
               <div className="row">
-                <div className="col-sm-6 col-lg-5">
+                <div className="col-sm-8 col-md-5">
                   <div className="content-block">
                     <div className="inner-title">
                       <h2>Check which plan works for your practice</h2>
@@ -222,21 +222,19 @@ export default props => (
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-7" />
+                <div className="col-sm-4 col-md-7" />
               </div>
             </div>
           </div>
           {/* End Full bleed content row (reversed)*/}
           {/* Begin Demo Footer */}
-          <div className="row padded tall-top tall-bottom request-demo-footer">
-            <div className="col-lg-1" />
-            <div className="col-sm-6 col-lg-5">
+          <div className="row padded tall-top request-demo-footer">
+            <div className="col-md-1" />
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>
-                    Start your
-                    <span className="font-weight-semibold"> success </span>
-                    with Doctor Genius today!
+                    Start your <span>success</span> with Doctor Genius today!
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -249,14 +247,13 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-lg-5">
+            <div className="col-sm-9 col-md-5">
               <div className="center">
-                <a href="/" className="button flat white-text">
+                <a href="/demo" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
             </div>
-            <div className="col-lg-1" />
           </div>
           {/* End Demo Footer */}
         </Container>
