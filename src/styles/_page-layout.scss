@@ -509,7 +509,7 @@ $bottom-padding-md: 20px;
     &.tall-bottom {
       padding-bottom: $bottom-padding * 2;
     }
-    @include media("<=laptop") {
+    @include media("<laptop") {
       padding-top: $top-padding-md;
       &.short-top {
         padding-top: $top-padding-md * 0.5;
@@ -523,6 +523,9 @@ $bottom-padding-md: 20px;
       }
       &.tall-bottom {
         padding-bottom: $bottom-padding-md * 2;
+      }
+      & > .col-md-5 {
+        margin: 20px auto;
       }
     }
   }
