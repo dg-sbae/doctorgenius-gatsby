@@ -412,6 +412,9 @@ html .hero {
   position: relative;
   &.shift-down {
     margin-bottom: 190px;
+    @include media("<laptop") {
+      margin-bottom: 0;
+    }
   }
   &:after {
     display: block;
