@@ -642,7 +642,7 @@ const CompanyListLink = props => (
                     <Link className="" to="/partnerships/">
                       Partnerships
                     </Link>
-                    <p>Lorem Ipsum until we have copy for this section</p>
+                    <p>Establishing value-added partnerships</p>
                   </div>
                 </div>
               </Link>

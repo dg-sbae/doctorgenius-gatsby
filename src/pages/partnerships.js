@@ -37,9 +37,9 @@ export default props => (
                   </h2>
                   <div className="accented-paragraph">
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever
+                      Explore opportunities to establish a value-added
+                      partnership with an organization whose central focus is
+                      success.
                     </p>
                   </div>
                 </div>
@@ -64,30 +64,12 @@ export default props => (
                 </div>
                 <div className="accented-paragraph">
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever. Lorem Ipsum is simply dummy text
-                    of the printing and typesetting industry. Lorem Ipsum has
-                    been the industry's standard dummy text ever. Lorem Ipsum is
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text
-                    ever. Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever.
-                  </p>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever. Lorem Ipsum is simply dummy text
-                    of the printing and typesetting industry. Lorem Ipsum has
-                    been the industry's standard dummy text ever. Lorem Ipsum is
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text
-                    ever. Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever. Lorem Ipsum is simply dummy text
-                    of the printing and typesetting industry. Lorem Ipsum has
-                    been the industry's standard dummy text ever.
+                    By investing in Doctor Genius, you are investing in a
+                    partnership with a company in the forefront of the
+                    healthcare digital marketing space. In each step of the way,
+                    our team of experts will take you through the process and
+                    capture the goal and mission of your organization. Call us
+                    or enter your contact information for more details today.
                   </p>
                 </div>
               </div>
