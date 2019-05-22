@@ -6,7 +6,7 @@
     .hero-content {
       @include media(">=tablet") {
         width: 465px;
-        height: 270px;
+        height: 290px;
       }
       h2 {
         @include fluid-type(40px, 90px, $phone, $desktop);
@@ -209,6 +209,22 @@
       padding: 5px;
       min-width: 200px;
       margin-bottom: 15px;
+      -webkit-transition: 0.3s background-color;
+      -moz-transition: 0.3s background-color;
+      -ms-transition: 0.3s background-color;
+      -o-transition: 0.3s background-color;
+      transition: 0.3s background-color;
+      &:hover {
+        background-color: $button-hover-blue;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    &.button {
+      &:hover {
+        background-color: $button-hover-blue;
+      }
     }
   }
 }

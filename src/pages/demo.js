@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import { Link } from "gatsby"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -104,8 +105,11 @@ export default props => (
                 <div class="form-body">
                   <ContactForm />
                   <p class="fine-print">
-                    *By registering I confirm that I have read and agree to the
-                    Privacy Statement.
+                    *By registering I confirm that I have read and agree to the{" "}
+                    <Link to="/privacy-policy" target="_blank">
+                      Privacy Statement
+                    </Link>
+                    .
                   </p>
                   <img src={sslBadge} />
                 </div>

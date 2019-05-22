@@ -29,15 +29,14 @@ export default props => (
             <div className="col-sm-12">
               <div className="hero-content">
                 <div className="hero-content accent-block">
-                  <h1>Resources</h1>
+                  <h1>Case Study</h1>
                   <h2>
-                    <span>Case </span>
-                    Study
+                    <span>Challenge</span> Accepted
                   </h2>
                   <div className="accented-paragraph">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Maecenas commodo eu metus ut convallis.
+                      The problem, the answer, and the outcome. Doctor Genius’
+                      performance driven marketing platform in action.
                     </p>
                   </div>
                 </div>
@@ -71,18 +70,15 @@ export default props => (
             <div className="col-sm-6">
               <div className="">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas a placerat nunc, et venenatis felis. Sed in nunc
-                  suscipit, sodales lectus eget, pretium erat. Donec semper
-                  hendrerit mattis. ndisse erat magna, pharetra nec varius at,
-                  accumsan a ligula. Aenean aliquet convallis velit.
+                  Dr. Rami Tahhan came to us a few years ago and was hardly
+                  found anywhere on the first page of Google. The tracking of
+                  any organic traffic related to online search was non-existent.
+                  Online branding complete online presence had much left to be
+                  desired and needed further expanding upon.
                   <br />
                   <br />
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas a placerat nunc, et venenatis felis. Sed in nunc
-                  suscipit, sodales lectus eget, pretium erat. Donec semper
-                  hendrerit mattis. ndisse erat magna, pharetra nec varius at,
-                  accumsan a ligula. Aenean aliquet convallis velit.
+                  Bottom line, Dr Tahhan wanted a marketing plan of action that
+                  would translate to results and revenue.
                 </p>
               </div>
               <div className="client-quote-block">
@@ -105,18 +101,20 @@ export default props => (
             <div className="col-sm-6">
               <div className="">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas a placerat nunc, et venenatis felis. Sed in nunc
-                  suscipit, sodales lectus eget, pretium erat. Donec semper
-                  hendrerit mattis. ndisse erat magna, pharetra nec varius at,
-                  accumsan a ligula. Aenean aliquet convallis velit.
+                  The plan was to rebuild his complete online branding with a
+                  new website. Expand his full digital presence across the
+                  myriad of relevant online directories. Enhance his practice’s
+                  ever important social profiles. Focus on customer satisfaction
+                  and increasing his positive online reputation. Persistent and
+                  never-ending content publishing to rise above his competitors
+                  in the online ranking battle.
                   <br />
                   <br />
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas a placerat nunc, et venenatis felis. Sed in nunc
-                  suscipit, sodales lectus eget, pretium erat. Donec semper
-                  hendrerit mattis. ndisse erat magna, pharetra nec varius at,
-                  accumsan a ligula. Aenean aliquet convallis velit.
+                  Providing all of this, as well as offering reporting and
+                  metrics for full transparency on the performance of this
+                  tailored marketing plan. This would allow Dr. Rami Tahhan to
+                  see the success of our marketing efforts and measure a true
+                  ROI.
                 </p>
               </div>
               <div className="client-quote-block">

@@ -12,12 +12,13 @@ const testimonialContent = [
   {
     cardContent: {
       title: "Card 1",
-      author: "Jon Doe",
+      author: "Justine Schepis",
       quote:
-        "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\
-         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus\
-          mus. Donec quam felis.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>",
-      location: "Irvine Dental Care",
+        "<p>I started using Doctor Genius to improve my Google presence and increase my monthly number\
+         of new patients. They told me it would take 3-4 months to see results. It’s been about 2 now\
+         that my Google presence has been cleaned up and my website is up and running and I am starting\
+         to see people come in the door who found us solely on Google.</p>",
+      location: "",
       image: {
         src: "",
         alt: "",
@@ -27,12 +28,14 @@ const testimonialContent = [
   {
     cardContent: {
       title: "Card 2",
-      author: "Jon Doe",
+      author: "Amberly Money",
       quote:
-        "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\
-         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus\
-          mus. Donec quam felis.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>",
-      location: "Irvine Dental Care",
+        "<p>Our practice has worked with Doctor Genius for a few years now. Francesco and team have\
+         gone above and beyond to make sure that we are always top on the list for “Dentist” in our area.\
+         We started as a brand new practice in 2009 and now have a full clientele of patients with our\
+         first available hygiene appointment for six months out. Our biggest referrals are online. Thank\
+         you Francesco and Doctor Genius for your hard work and many years of working together!</p>",
+      location: "",
       image: {
         src: "",
         alt: "",
@@ -42,12 +45,34 @@ const testimonialContent = [
   {
     cardContent: {
       title: "Card 3",
-      author: "Jon Doe",
+      author: "Baylee Michaels",
       quote:
-        "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\
-         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus\
-          mus. Donec quam felis.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>",
-      location: "Irvine Dental Care",
+        "<p>Until working with this company, you would have never heard me say that I enjoyed speaking\
+         with a customer service rep. Without fail every person I have spoken with on this team has been\
+         so kind to me. I spoke with a lady by the name of Victoria Tegeler the other day and she was so\
+         patient with me as she answered all of my questions and concerns. With this company I have never\
+         been in the dark. They send me weekly updates as well as have a portal for me to track everything\
+         that they do to see how well their services are working for us. I'd give them a 7 star rating if\
+         I could!</p>",
+      location: "",
+      image: {
+        src: "",
+        alt: "",
+      },
+    },
+  },
+  {
+    cardContent: {
+      title: "Card 4",
+      author: "Amir Saz",
+      quote:
+        "<p>We signed up with DG at the Anaheim Dental Convention. I had worked with 2 other companies\
+         previously and in my opinion did not get honest work or any decent results. We were a new office\
+         in the area on page 26 or 27 of Google and had moved up some but still invisible. But now we\
+         are more visible in a very competitive area in the country and starting to get some calls. I\
+         am quite happy so far. I have been working with Shawn and Kylie , two knowledgeable and fine\
+         individuals to work with. Thank you guys.</p>",
+      location: "",
       image: {
         src: "",
         alt: "",
