@@ -183,7 +183,8 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
             padding-left: 15px;
           }
           &:hover {
-            color: lightblue;
+            color: $primary-text;
+            background-color: $button-hover-green;
           }
         }
       }

@@ -137,6 +137,9 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
         &.button {
           font-weight: $font-weight-medium;
           font-size: $font-size-btn;
+          &:hover {
+            background-color: $button-hover-blue;
+          }
         }
         &.subtle-link {
           font-size: 12px;
