@@ -11,21 +11,53 @@ import quoteMark from "../img/quote-mark.svg"
 
 export default class TestimonialsSlider extends React.Component {
   constructor(props) {
-    super(props);
-
+    super(props)
   }
 
   render() {
     const settings = {
-      centerPadding: "29%",
+      centerPadding: "28%",
       centerMode: true,
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            centerPadding: "17%",
+          },
+        },
+        {
+          breakpoint: 1300,
+          settings: {
+            centerPadding: "15%",
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            centerPadding: "10%",
+          },
+        },
+        {
+          breakpoint: 880,
+          settings: {
+            centerPadding: "6%",
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            centerPadding: false,
+            centerPadding: "0",
+          },
+        },
+      ],
     }
-    
+
     return (
       <div className={styles.testimonialsSlider}>
         <Slider className={styles.cardSlider} {...settings}>
@@ -55,10 +87,11 @@ export default class TestimonialsSlider extends React.Component {
                     </div>
                     <p className={styles.author}>{card.cardContent.author}</p>
                     {/* JS shortcircuit to conditionally render the location*/}
-                    { card.cardContent.location != "" &&
-                      <p className={styles.location}>{card.cardContent.location}</p>
-                    }
-                    
+                    {card.cardContent.location != "" && (
+                      <p className={styles.location}>
+                        {card.cardContent.location}
+                      </p>
+                    )}
                   </div>
                   <div className={styles.portraitWrapper}>
                     <img

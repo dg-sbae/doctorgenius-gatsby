@@ -1,4 +1,8 @@
 .testimonialsSlider {
+  .slick-list {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .cardSlider {
@@ -6,6 +10,7 @@
   .card .portrait {
     height: 315px; /* This image probably needs to be a background image */
   }
+
   .card {
     width: 700px;
     position: relative;
@@ -19,7 +24,7 @@
 
     /* Track */
     &::-webkit-scrollbar-track {
-      background: #fbfbfb; 
+      background: #fbfbfb;
     }
 
     /* Handle */
@@ -29,7 +34,7 @@
 
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background-color: #545454; 
+      background-color: #545454;
     }
 
     /* card layout: */
@@ -67,6 +72,7 @@
     max-width: 100%;
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
   &:after {
     position: absolute;

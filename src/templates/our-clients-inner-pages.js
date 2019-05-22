@@ -156,7 +156,7 @@ export default props => {
             {/* End secondary nav Component */}
             {/* Begin main block of text */}
             <div className="row padded">
-              <div className="col-sm-9 offset-sm-1">
+              <div className="col-sm-12 col-md-10 col-lg-10">
                 <div className="content-block">
                   <div className="inner-title center thin-heading">
                     <h3 className="strapline">
@@ -183,7 +183,7 @@ export default props => {
             {isCaseStudy && <div className="spacer solid trim" />}
             {isCaseStudy && (
               <div className="row padded short-top">
-                <div className="col-sm-7 case-study-container">
+                <div className="col-sm-12 col-md-7 col-lg-7 order-sm-2 order-md-1 case-study-container">
                   <div className="inner-title center">
                     <h3 className="m-0">Case Study: Titan Dental</h3>
                     <div className="subtitle muted">The first 6 months</div>
@@ -225,7 +225,7 @@ export default props => {
                     </a>
                   </div>
                 </div>
-                <div className="col-sm-6 col-lg-5">
+                <div className="col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col">
                   <img
                     className="img-responsive blur-bleed"
                     src="/png/search-result.png"
@@ -241,8 +241,8 @@ export default props => {
               <div className="full-bleed check-plans-background-image" />
               <div className="full-bleed-content-wrapper">
                 <div className="row">
-                  <div className="col-sm-7" />
-                  <div className="col-sm-6 col-lg-5">
+                  <div className="col-sm-4 col-md-6 col-lg-7" />
+                  <div className="col-sm-8 col-md-6 col-lg-5">
                     <div className="content-block">
                       <div className="inner-title">
                         <h2>Check which plan works for your practice</h2>
