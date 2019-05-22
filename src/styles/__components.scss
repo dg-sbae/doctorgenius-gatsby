@@ -236,6 +236,11 @@ a.subtle-link {
 footer {
   background-color: $primary;
   color: $primary-text;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   .padded.footer-row {
     padding-bottom: 50px;
@@ -259,7 +264,31 @@ footer {
         }
 
         a {
+          position: relative;
           color: $primary-text;
+          transition: 0.3s color;
+          text-decoration: none;
+          &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: $primary-text;
+            // visibility: hidden;
+            // -webkit-transform: scaleX(0.5);
+            // transform: scaleX(0.5);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+          }
+          &:hover:before {
+            // visibility: visible;
+            // -webkit-transform: scaleX(1);
+            width: 100%;
+            // transform: scaleX(1);
+            // color: #eaeaea;
+          }
         }
       }
     }
