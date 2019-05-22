@@ -145,7 +145,7 @@ nav {
         $phone,
         $tablet
       ); //; /* See if this is really necessary conflicts with the h2 size below */ //font-size: $h2-font-size-main;
-      @include media("<=laptop") {
+      @include media("<tablet") {
         font-weight: $font-weight-semibold;
         font-size: 20px;
       }

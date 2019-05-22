@@ -184,10 +184,16 @@ export default props => {
                 }
               >
                 <div
-                  className={(index % 2 ? "order-sm-12" : "") + " col-lg-1"}
+                  className={
+                    (index % 2 ? "order-md-1" : "order-md-1") + " col-md-1"
+                  }
                 />
                 <div
-                  class={(index % 2 ? "order-sm-6" : "") + " col-sm-6 col-lg-5"}
+                  class={
+                    (index % 2
+                      ? "order-sm-2 order-md-3"
+                      : "order-sm-2 order-md-2") + " col-sm-9 col-md-5"
+                  }
                 >
                   <div className="content-block">
                     <div className="icon-strapline">
@@ -220,7 +226,11 @@ export default props => {
                   </div>
                 </div>
                 <div
-                  class={(index % 2 ? "order-sm-2" : "") + " col-sm-6 col-lg-5"}
+                  class={
+                    (index % 2
+                      ? "order-sm-1 order-md-2"
+                      : "order-sm-1 order-md-3") + " col-sm-12 col-md-5"
+                  }
                 >
                   <img
                     className="img-responsive"
@@ -229,7 +239,9 @@ export default props => {
                   />
                 </div>
                 <div
-                  className={(index % 2 ? "order-sm-1" : "") + " col-sm-1"}
+                  className={
+                    (index % 2 ? "order-sm-12" : "order-sm-12") + " col-md-1"
+                  }
                 />
               </div>
             ))}

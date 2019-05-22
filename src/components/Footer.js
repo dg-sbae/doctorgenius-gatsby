@@ -31,7 +31,7 @@ export default ({ children }) => (
             <ListLink to="/contact/">Contact</ListLink>
           </ul>
         </div>
-        <div className="col-sm-8 col-md-6 col-lg-4">
+        <div className="col-sm-10 col-md-6 col-lg-4">
           <div className="footer-contact-row">
             <div className="icon-wrapper">
               <img

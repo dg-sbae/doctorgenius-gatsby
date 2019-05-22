@@ -52,6 +52,15 @@
   .thin-heading {
     padding-left: 20%;
     padding-right: 20%;
+    @include media("<laptop") {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+  .img-col {
+    @include media("<laptop") {
+      padding: 0;
+    }
   }
   .inner-title {
     .subtitle {
@@ -64,6 +73,23 @@
   .case-study-container {
     h3 {
       font-size: $h2-font-size-main;
+      @include fluid-type(21px, 45px, $tablet, $laptop);
+    }
+    .subtitle {
+      @include fluid-type(14px, 29px, $tablet, $laptop);
+    }
+    .callout {
+      font-size: 2.5rem; /* 40px */
+      @include fluid-type(16px, 35px, $tablet, $laptop);
+    }
+    p:not(.callout) {
+      font-size: 0.9375rem; /* 15px */
+      @include fluid-type(9px, 15px, $phone, $laptop);
+    }
+    @include media("<laptop") {
+      .link-with-icon {
+        margin-top: 0;
+      }
     }
   }
   .icon-wrapper {
@@ -75,6 +101,14 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(3, 100px);
+    @include media("<laptop") {
+      grid-template-rows: repeat(3, 75px);
+    }
+  }
+  .pad-md {
+    @include media("<laptop") {
+      padding: 10px;
+    }
   }
   .case-study-item {
     padding: 20px;
@@ -82,6 +116,10 @@
     justify-content: center;
     align-items: center;
     height: 100px;
+    @include media("<laptop") {
+      height: 75px;
+      padding: 10px;
+    }
 
     /* There has to be a better way to do these css grid inline borders */
     &:nth-child(odd) {
@@ -97,7 +135,6 @@
   .case-study-item p:not(.callout) {
     font-family: Roboto;
     flex-basis: 150px;
-    font-size: 0.9375rem; /* 15px */
     margin: 0;
     padding: 0;
   }
@@ -110,14 +147,20 @@
     margin-right: 10px;
     /* inherit this from somewhere else */
     color: $primary;
-    font-size: 2.5rem; /* 40px */
     font-weight: bold;
     font-family: $font-family-inner-block-headings;
+    @include media("<laptop") {
+      letter-spacing: 0rem;
+      flex-basis: initial;
+    }
   }
   .check-plans-background-image {
     height: 475px;
     background: url("/png/our-clients-fullbleed-image.png") no-repeat;
     background-position: 40%;
+    @include media("<tablet") {
+      background-position: 48%;
+    }
   }
   .row {
     &.padded {
