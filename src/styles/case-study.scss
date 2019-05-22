@@ -16,11 +16,14 @@
       }
     }
   }
-  .icon-wrapper {
-    height: 67px;
-    width: 103px;
-    margin-bottom: 30px;
+  .panel {
+    .icon-wrapper {
+      height: 67px;
+      width: 103px;
+      margin-bottom: 30px;
+    }
   }
+
   .nav-icon-wrapper,
   .footer-contact-row {
     .icon-wrapper {

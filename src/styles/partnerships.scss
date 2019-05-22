@@ -13,17 +13,17 @@
     }
   }
 
-  .icon-wrapper {
-    height: 150px;
-    width: 200px;
-    // margin-bottom: 30px;
-    .img-icon {
-      max-width: 100%;
-    }
-  }
-
   .panel {
     margin: 0 0 20px 0;
+
+    .icon-wrapper {
+      height: 150px;
+      width: 200px;
+      // margin-bottom: 30px;
+      .img-icon {
+        max-width: 100%;
+      }
+    }
   }
 
   .nav-icon-wrapper,
