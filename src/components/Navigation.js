@@ -619,7 +619,7 @@ const CompanyListLink = props => (
               <Link className="" to="/company/">
                 <div>
                   <div className="nav-icon-wrapper">
-                    <img className="image-icon" src={theStudy} />
+                    <img className="image-icon" src={company} />
                   </div>
                   <div className="dropdown-content-block">
                     <Link className="" to="/company/">
