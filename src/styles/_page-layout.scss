@@ -179,6 +179,10 @@ header {
         .nav-icon-wrapper {
           display: inline-block;
           width: 38px;
+          .image-icon {
+            width: 32px;
+            height: 39px;
+          }
         }
         &:after {
           content: "";

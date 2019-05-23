@@ -148,7 +148,7 @@ const WhoWeServeSideNavListLink = props => (
       <div className="icon-wrapper">
         <Link
           to={props.to}
-          className="nav-disable-link-open-dropdown-icon"
+          className=""
           activeClassName="active"
           partiallyActive={true}
         >
@@ -160,7 +160,7 @@ const WhoWeServeSideNavListLink = props => (
       <div>
         <Link
           to={props.to}
-          className="sidenav-link-dropdown nav-disable-link-open-dropdown"
+          className="sidenav-link-dropdown"
           activeClassName="active"
           partiallyActive={true}
         >
@@ -205,6 +205,55 @@ const WhoWeServeSideNavListLink = props => (
           partiallyActive={true}
         >
           Chiropractor Practices
+        </ListLink>
+      </ul>
+    </div>
+  </li>
+)
+
+const CompanySideNavListLink = props => (
+  <li className={props.className} data-toggle={props.dataToggle}>
+    <div className="nav-icon-wrapper">
+      <div className="icon-wrapper">
+        <Link
+          to={props.to}
+          className="nav-disable-link-open-dropdown-icon"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          <img className="image-icon" src={props.iconSubnav} />
+        </Link>
+      </div>
+    </div>
+    <div className="dropdown-links">
+      <div>
+        <Link
+          to={props.to}
+          className="nav-disable-link-open-dropdown"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          {props.children}
+        </Link>
+        <span className="down-arrow-container">
+          <img className="down-arrow" src={downArrow} />
+        </span>
+      </div>
+      <ul>
+        <ListLink
+          to="/company/"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          About
+        </ListLink>
+        {/* Hidden until the content for page is finalized */}
+        <ListLink
+          to="/partnerships/"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Partnerships
         </ListLink>
       </ul>
     </div>
@@ -276,7 +325,7 @@ const ResourcesSideNavListLink = props => (
 const OurClientsListLink = props => (
   <li className={props.dataToggle}>
     <Link
-      className="dropdown-heading disable-link"
+      className="dropdown-heading"
       to={props.to}
       activeClassName="active"
       partiallyActive={true}
@@ -551,6 +600,64 @@ const MarketingSolutionsListLink = props => (
   </li>
 )
 
+const CompanyListLink = props => (
+  <li className={props.dataToggle}>
+    <Link
+      className="dropdown-heading disable-link"
+      to={props.to}
+      activeClassName="active"
+      partiallyActive={true}
+      data-toggle={props.dataToggle}
+    >
+      {props.children}
+    </Link>
+    <div className="dropdown-menu caret resources-dropdown">
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <Link className="" to="/company/">
+                <div>
+                  <div className="nav-icon-wrapper">
+                    <img className="image-icon" src={company} />
+                  </div>
+                  <div className="dropdown-content-block">
+                    <Link className="" to="/company/">
+                      About
+                    </Link>
+                    <p>
+                      Offering high-end marketing services to health
+                      professionals
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-sm-6">
+              <Link className="" to="/partnerships/">
+                <div>
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img className="image-icon" src={caseStudy} />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <Link className="" to="/partnerships/">
+                      Partnerships
+                    </Link>
+                    <p>Establishing value-added partnerships</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {}
+  </li>
+)
+
 const StudySingleListLink = props => (
   <li className={props.dataToggle}>
     <Link
@@ -700,37 +807,33 @@ class Navigation extends Component {
       })
 
       // START - Disable the title icon for the dropdown menu
-      // $(".disable-link").click(function(event) {
-      //   event.preventDefault()
-      // })
+      $(".disable-link").click(function(event) {
+        event.preventDefault()
+      })
 
-      // $(".nav-disable-link-open-dropdown-icon").click(function(event) {
-      //   event.preventDefault()
-      //   var thisDropdownList = $(this)
-      //       .parent().parent()
-      //       .siblings(".dropdown-links").children("ul")
-      //     $("#sidebar .dropdown-links ul")
-      //       .not(thisDropdownList)
-      //       .slideUp(500)
-      //     thisDropdownList.slideDown(500)
-      // })
-      // $(".nav-disable-link-open-dropdown").click(function(event) {
-      //   event.preventDefault()
-      //   var thisDropdownList = $(this)
-      //       .parent()
-      //       .siblings("ul")
-      //     $("#sidebar .dropdown-links ul")
-      //       .not(thisDropdownList)
-      //       .slideUp(500)
-      //     thisDropdownList.slideDown(500)
-      // })
+      $(".nav-disable-link-open-dropdown-icon").click(function(event) {
+        event.preventDefault()
+        var thisDropdownList = $(this)
+          .parent()
+          .parent()
+          .siblings(".dropdown-links")
+          .children("ul")
+        $("#sidebar .dropdown-links ul")
+          .not(thisDropdownList)
+          .slideUp(500)
+        thisDropdownList.slideDown(500)
+      })
+      $(".nav-disable-link-open-dropdown").click(function(event) {
+        event.preventDefault()
+        var thisDropdownList = $(this)
+          .parent()
+          .siblings("ul")
+        $("#sidebar .dropdown-links ul")
+          .not(thisDropdownList)
+          .slideUp(500)
+        thisDropdownList.slideDown(500)
+      })
       // END - Disable the title icon for the dropdown menu
-
-      // $("nav-disable-link-open-dropdown")
-      $(".dropdown-menu")
-      // $("#sidebar").mCustomScrollbar({
-      //   theme: "minimal",
-      // })
 
       $("#dismiss, .overlay").on("click", function() {
         // hide sidebar
@@ -818,7 +921,7 @@ class Navigation extends Component {
             >
               Plans
             </SideNavListLink>
-            <SideNavListLink
+            <CompanySideNavListLink
               className="nav-item dropdown"
               dataToggle="dropdown"
               iconSubnav={company}
@@ -827,7 +930,7 @@ class Navigation extends Component {
               to="/company"
             >
               Company
-            </SideNavListLink>
+            </CompanySideNavListLink>
             <ResourcesSideNavListLink
               className="nav-item dropdown"
               dataToggle="dropdown"
@@ -937,9 +1040,13 @@ class Navigation extends Component {
                 <ListLink className="" to="/plans/">
                   Plans
                 </ListLink>
-                <ListLink className="" to="/company/">
+                <CompanyListLink
+                  className="nav-item dropdown company-dropdown"
+                  dataToggle="dropdown"
+                  to="/company/"
+                >
                   Company
-                </ListLink>
+                </CompanyListLink>
                 <StudySingleListLink
                   className="nav-item dropdown resources-dropdown"
                   dataToggle="dropdown"
