@@ -625,7 +625,10 @@ const CompanyListLink = props => (
                     <Link className="" to="/company/">
                       About
                     </Link>
-                    <p>Lorem ipsum until we have copy for this section</p>
+                    <p>
+                      Offering high-end marketing services to health
+                      professionals
+                    </p>
                   </div>
                 </div>
               </Link>
