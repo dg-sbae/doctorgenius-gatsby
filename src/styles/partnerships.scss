@@ -12,17 +12,40 @@
       }
     }
   }
-
+  .panel-row {
+    .logo-partnership-item:nth-child(even) {
+      .panel {
+        @include media("<=laptop") {
+          align-items: flex-end;
+        }
+      }
+    }
+    .logo-partnership-item:nth-child(odd) {
+      .panel {
+        @include media("<=laptop") {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
   .panel {
     margin: 0 0 20px 0;
 
     .icon-wrapper {
       height: 150px;
-      width: 200px;
+      max-width: 200px;
+      width: 100%;
       // margin-bottom: 30px;
       .img-icon {
         max-width: 100%;
       }
+    }
+  }
+
+  .featured-partners-row {
+    @include media("<=1248px") {
+      padding-left: 6%;
+      padding-right: 6%;
     }
   }
 
@@ -45,5 +68,13 @@
   }
   .content-block .accented-paragraph p {
     margin-bottom: 2rem;
+  }
+
+  .request-demo-footer {
+    > div {
+      @include media("<=tablet") {
+        padding-bottom: 30px;
+      }
+    }
   }
 }

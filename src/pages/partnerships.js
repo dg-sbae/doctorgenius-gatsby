@@ -75,7 +75,7 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row padded panel-row">
+          <div className="row padded panel-row featured-partners-row">
             <div className="col-sm-12">
               <div className="content-block">
                 <div className="inner-title center thin-heading">
@@ -85,7 +85,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="logo-partnership-item col-sm-6 col-lap-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -96,7 +96,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="logo-partnership-item col-sm-6 col-lap-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -107,7 +107,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="logo-partnership-item col-sm-6 col-lap-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -118,7 +118,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="logo-partnership-item col-sm-6 col-lap-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -129,7 +129,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="logo-partnership-item col-sm-6 col-lap-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -140,7 +140,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="logo-partnership-item col-sm-6 col-lap-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -151,7 +151,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="logo-partnership-item col-sm-6 col-lap-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -162,7 +162,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="logo-partnership-item col-sm-6 col-lap-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img className="img-icon" src={jllLogo} alt="Icon JLL Logo" />
@@ -171,7 +171,7 @@ export default props => (
             </div>
           </div>
           <div className="row padded tall-top request-demo-footer">
-            <div className="col-sm-6">
+            <div className="col-sm-8 .offset-sm-2 order-sm-2 col-md-6 offset-md-0 order-md-1">
               <div className="content-block">
                 <div className="innerTitle">
                   <h2 className="font-weight-normal">
@@ -204,7 +204,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-10 offset-sm-1 order-sm-1 col-md-6 offset-md-0 order-md-2">
               <img
                 className="img-responsive"
                 src="/png/computer-and-mobile-detail.png"
