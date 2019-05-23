@@ -1,0 +1,26 @@
+.question,
+.answer {
+  border-bottom: 1px solid #e7e7e7;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  .open {
+    background: red;
+  }
+  .closed {
+    background: green;
+  }
+  dt p {
+    font-size: 18px; /* this section needs to inherit font from somewhere */
+    font-weight: normal;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+    //font-family: $font-family-body-text;
+  }
+}
+.dd {
+  display: none;
+}
