@@ -98,7 +98,6 @@
       }
     }
   }
-
   .pagination {
     display: flex;
     justify-content: space-between;
@@ -148,6 +147,9 @@
         font-weight: light;
       }
     }
+  }
+  .newsletter.row {
+    display: none;
   }
   .newsletter-signup {
     margin-top: 40px;

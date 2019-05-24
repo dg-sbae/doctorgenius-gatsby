@@ -8,24 +8,43 @@ export const FAQAnswer = props => <dd>{props.children}</dd>
 export class FAQ extends Component {
   constructor(props) {
     super(props)
-    this.state = { open: false }
-  }
-  handeClick() {
-    //this.setState({ open: true })
+    this.state = {
+      open: props.open === true ? true : false,
+    }
   }
   render() {
     return (
-      <div className="faqWrapper">
-        <div className={styles.question}>{this.props.question}</div>
-        <a onclick={this.handleClick} className="accordion-target">
-          <img src={downChevron} alt="Open" className="open" />
-        </a>
-        <div
-          className={
-            this.state.open ? styles.answer.open : styles.answer.closed
-          }
-        >
-          {this.props.answer}
+      <div
+        className={
+          (this.state.open === true ? styles.open : styles.closed) +
+          " " +
+          styles.faq +
+          " faqWrapper "
+        }
+      >
+        <div className={styles.faqHeader}>
+          <div className={styles.question}>
+            <FAQQuestion>{this.props.question}</FAQQuestion>
+          </div>
+          <button
+            className={
+              styles.accordionTarget +
+              " " +
+              styles.accordionTargetRemove +
+              " " +
+              styles.accordionTargetTransform +
+              " " +
+              (this.state.open === true
+                ? ""
+                : styles.accordionTargetRemoveChevronDown)
+            }
+            onClick={() => this.setState({ open: !this.state.open })}
+          >
+            <span className={styles.visuallyHidden}>Toggle FAQ</span>
+          </button>
+        </div>
+        <div className={styles.answer}>
+          <FAQAnswer>{this.props.answer}</FAQAnswer>
         </div>
       </div>
     )

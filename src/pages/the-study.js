@@ -220,7 +220,7 @@ export default function({ data }, props) {
                       </div>
                     </div>
                   </div>
-                  <div className="row">
+                  <div className="newsletter row">
                     <div className="col-sm-12">
                       <div className="newsletter-signup">
                         <h4 className="newsletter-heading">Newsletter</h4>
