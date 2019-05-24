@@ -4,15 +4,9 @@ import { Helmet } from "react-helmet"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-import FAQAccordion, {
-  FAQ,
-  FAQQuestion,
-  FAQAnswer,
-} from "../components/faq-accordion"
+import FAQAccordion, { FAQ } from "../components/faq-accordion"
 
-import tableHeader from "../img/plans-table-header-image.svg"
 import checkmark from "../img/checked.svg"
-import downChevron from "../img/down-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/plans.scss"
@@ -56,7 +50,7 @@ export default props => (
               <div className="plans-table">
                 {/* <!-- image-row --> */}
                 <div className="grid-item image-row">
-                  <img src={tableHeader} alt="Assembling a Website" />
+                  <div class="background-holder" />
                   <p>DoctorGenius Tier Package</p>
                 </div>
                 <div className="grid-item column-signup">
