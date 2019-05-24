@@ -8,13 +8,48 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
     background-image: url("/hero/plans.png");
     background-position: center 18%;
     .hero-content {
-      @include media(">=tablet") {
+      p {
+        width: 85%;
+      }
+      @include media("<desktop", "<=laptop") {
         width: 625px;
         height: 344px;
         padding: 2.8rem;
       }
-      p {
-        width: 85%;
+      @include media("<laptop") {
+        width: 400px;
+        height: 224px;
+        padding: 1.5rem;
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .image-row {
+    .background-holder {
+      width: 100%;
+      height: 100%;
+      background: url("../img/plans-table-header-image.svg") no-repeat
+        center/contain;
+      @include media("<tablet") {
+        display: none;
+      }
+    }
+    p {
+      display: none;
+      @include media("<tablet") {
+        display: block;
+      }
+    }
+    img {
+      max-width: 100%;
+      object-fit: contain;
+      @include media("<desktop") {
+        padding: 2%;
+      }
+      @include media("<tablet") {
+        display: none;
       }
     }
   }
@@ -22,6 +57,9 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
     background: transparent;
     box-shadow: none;
     grid-template-rows: 120px;
+    @include media("<tablet") {
+      display: none;
+    }
     .grid-item {
       padding: 0px !important;
       justify-content: center !important;
@@ -39,7 +77,21 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
     grid-template-rows: 275px repeat(43, 50px);
     box-shadow: 0 3px 6px #e1e1e1;
     font-family: $font-family-body-text;
+    @include media("<desktop") {
+      /* grid items:
+      229x49 180x49 180x49 180x49 = 769
+      29.77%  23.407% 23.407% 23.407%
 
+      */
+      max-width: 100%;
+      grid-template-columns: 1fr 23.407% 23.407% 23.407%;
+      grid-template-rows: 200px repeat(43, 50px);
+      margin-right: 0;
+      margin-left: 0;
+    }
+    @include media("<tablet") {
+      grid-template-rows: 45px repeat(43, 50px);
+    }
     .spacer-row {
       grid-column-start: 1;
       grid-column-end: 5;
@@ -57,8 +109,11 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
     /* First Column and Spacer Rows */
     .grid-item:nth-of-type(4n + 1),
     .spacer-row {
-      padding-left: 25px;
+      padding-left: 30px;
       justify-content: flex-start;
+      @include media("<650px") {
+        padding-left: 10px;
+      }
     }
 
     /* Borders */
@@ -78,7 +133,14 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
       }
       /* First grid Item: */
       &:first-of-type {
-        padding: 30px !important;
+        padding: 20px !important;
+        @include media("<tablet") {
+          padding: 0% !important;
+          display: flex;
+          align-items: center !important;
+          justify-content: center !important;
+          text-align: center;
+        }
       }
       /* First Row */
       &:not(:nth-of-type(n + 5)) {
@@ -88,6 +150,16 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        @include media("<desktop") {
+          padding: 75px 15px 50px;
+        }
+        @include media("<tablet") {
+          padding: 0;
+          display: flex;
+          align-items: center !important;
+          justify-content: center !important;
+          text-align: center;
+        }
       }
       /* First column */
       &:nth-of-type(4n + 1) {
@@ -118,7 +190,13 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
         font-size: 10px;
         width: 40%;
         position: absolute;
-        top: 20px;
+        top: 30px;
+        @include media("<desktop") {
+          width: 60%;
+        }
+        @include media("<tablet") {
+          display: none;
+        }
       }
     }
     .column-signup {
@@ -133,12 +211,16 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
         font-size: 12px;
         text-align: center;
       }
+
       a {
         &.button {
           font-weight: $font-weight-medium;
           font-size: $font-size-btn;
           &:hover {
             background-color: $button-hover-blue;
+          }
+          @include media("<tablet") {
+            display: none;
           }
         }
         &.subtle-link {
@@ -149,28 +231,15 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
     .grid-item,
     .plans-row-title {
       font-size: $font-size-plans-row-heading;
-    }
-  }
-
-  .faq-table {
-    .question {
-      border-bottom: 1px solid #e7e7e7;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-left: 15px;
-      padding-right: 15px;
-      dt p {
-        font-size: 18px; /* this section needs to inherit font from somewhere */
-        font-weight: normal;
-        margin-top: 12.5px;
-        margin-bottom: 12.5px;
-        font-family: $font-family-body-text;
+      @include media("<tablet") {
+        line-height: 1;
       }
-    }
-    .dd {
-      display: none;
+      @include media("<tablet") {
+        @include fluid-type(9px, 12px, $phone, $tablet);
+        h2 {
+          @include fluid-type(9px, 23px, $phone, $tablet);
+        }
+      }
     }
   }
 }

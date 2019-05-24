@@ -400,10 +400,10 @@ footer {
   position: relative;
 }
 html .hero {
-  @include media(">=tablet") {
+  @include media("<desktop") {
     height: 690px;
   }
-  @include media("<tablet") {
+  @include media("<laptop") {
     height: 480px;
   }
   width: 100%;
@@ -433,8 +433,8 @@ html .hero {
     h2 {
       margin-top: 20px;
       margin-bottom: 20px;
-      @include media("<=tablet") {
-        margin-top: 0;
+      @include media("<laptop") {
+        margin-top: 5px;
         margin-bottom: 5px;
       }
     }
@@ -466,8 +466,9 @@ html .hero {
       width: 400px;
       height: auto;
     }
-    @include media("<=phone") {
+    @include media("<=425px") {
       width: 100%;
+      max-width: 100%;
     }
   }
 }
