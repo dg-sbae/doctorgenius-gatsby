@@ -50,7 +50,7 @@ export default props => (
       <Main>
         <Container>
           <div className="row padded">
-            <div className="col-sm-9 offset-sm-1">
+            <div className="col-sm-12 col-md-8 col-lg-8">
               <div className="content-block">
                 <div className="inner-title center thin-heading">
                   <h3 className="strapline">Partnerships</h3>
@@ -84,87 +84,95 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="logo-partnership-item col-sm-6 col-lap-3">
-              <div className="panel">
-                <div className="icon-wrapper">
-                  <img
-                    className="img-icon"
-                    src={googleLogo}
-                    alt="Icon of Google Logo"
-                  />
+            <div className="row">
+              <div className="logo-partnership-item col-sm-6 col-lap-3">
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src={googleLogo}
+                      alt="Icon of Google Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="logo-partnership-item col-sm-6 col-lap-3">
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src={pulseCheckLogo}
+                      alt="Icon of Pulse Check Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="logo-partnership-item col-sm-6 col-lap-3">
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src={picisLogo}
+                      alt="Icon of Pulse Check Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="logo-partnership-item col-sm-6 col-lap-3">
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src={boaLogo}
+                      alt="Icon of Bank of America Logo"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="logo-partnership-item col-sm-6 col-lap-3">
-              <div className="panel">
-                <div className="icon-wrapper">
-                  <img
-                    className="img-icon"
-                    src={pulseCheckLogo}
-                    alt="Icon of Pulse Check Logo"
-                  />
+            <div className="row">
+              <div className="logo-partnership-item col-sm-6 col-lap-3">
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src={pattersonLogo}
+                      alt="Icon of Patterson Dental Logo"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="logo-partnership-item col-sm-6 col-lap-3">
-              <div className="panel">
-                <div className="icon-wrapper">
-                  <img
-                    className="img-icon"
-                    src={picisLogo}
-                    alt="Icon of Pulse Check Logo"
-                  />
+              <div className="logo-partnership-item col-sm-6 col-lap-3">
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src={roiLogo}
+                      alt="Icon of ROI Logo"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="logo-partnership-item col-sm-6 col-lap-3">
-              <div className="panel">
-                <div className="icon-wrapper">
-                  <img
-                    className="img-icon"
-                    src={boaLogo}
-                    alt="Icon of Bank of America Logo"
-                  />
+              <div className="logo-partnership-item col-sm-6 col-lap-3">
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src={hrHealthLogo}
+                      alt="Icon of HR for Health Logo"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="logo-partnership-item col-sm-6 col-lap-3">
-              <div className="panel">
-                <div className="icon-wrapper">
-                  <img
-                    className="img-icon"
-                    src={pattersonLogo}
-                    alt="Icon of Patterson Dental Logo"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="logo-partnership-item col-sm-6 col-lap-3">
-              <div className="panel">
-                <div className="icon-wrapper">
-                  <img
-                    className="img-icon"
-                    src={roiLogo}
-                    alt="Icon of ROI Logo"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="logo-partnership-item col-sm-6 col-lap-3">
-              <div className="panel">
-                <div className="icon-wrapper">
-                  <img
-                    className="img-icon"
-                    src={hrHealthLogo}
-                    alt="Icon of HR for Health Logo"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="logo-partnership-item col-sm-6 col-lap-3">
-              <div className="panel">
-                <div className="icon-wrapper">
-                  <img className="img-icon" src={jllLogo} alt="Icon JLL Logo" />
+              <div className="logo-partnership-item col-sm-6 col-lap-3">
+                <div className="panel">
+                  <div className="icon-wrapper">
+                    <img
+                      className="img-icon"
+                      src={jllLogo}
+                      alt="Icon JLL Logo"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -203,7 +211,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-10 offset-sm-1 order-sm-1 col-md-6 offset-md-0 order-md-2">
+            <div className="col-sm-10 order-sm-1 col-md-6 offset-md-0 order-md-2">
               <img
                 className="img-responsive"
                 src="/png/computer-and-mobile-detail.png"
