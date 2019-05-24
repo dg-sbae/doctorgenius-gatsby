@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-import TestimonialsSlider from "../components/testimonials-slider"
 
 import googleLogo from "../../public/icon/logo-google.png"
 import pulseCheckLogo from "../../public/icon/pulse-check-logo.png"
