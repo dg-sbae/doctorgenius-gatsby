@@ -400,9 +400,8 @@ footer {
   position: relative;
 }
 html .hero {
-  @include media("<desktop") {
-    height: 690px;
-  }
+  height: 690px;
+
   @include media("<laptop") {
     height: 480px;
   }
