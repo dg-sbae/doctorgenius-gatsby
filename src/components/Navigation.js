@@ -1025,7 +1025,7 @@ class Navigation extends Component {
                 <MarketingSolutionsListLink
                   className="nav-item dropdown marketing-solutions-dropdown"
                   dataToggle="dropdown"
-                  to="/marketing-solutions/"
+                  to="/marketing-solutions"
                 >
                   Marketing Solutions
                 </MarketingSolutionsListLink>

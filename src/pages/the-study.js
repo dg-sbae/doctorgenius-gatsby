@@ -457,6 +457,7 @@ export const pageQuery = graphql`
       }
     }
     popular: allWordpressPost(
+      filter: { categories: { elemMatch: { name: { eq: "Popular" } } } }
       sort: { fields: [date], order: [DESC] }
       limit: 4
     ) {
