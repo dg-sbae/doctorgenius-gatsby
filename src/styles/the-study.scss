@@ -1,7 +1,7 @@
 @import "_site-variables.scss";
 
 .the-study {
-  @include media("<laptop") {
+  @include media("<desktop") {
     .hidden {
       display: none;
     }
@@ -147,12 +147,11 @@
       }
       .content-holder {
         width: 50%;
-
         .title {
-          @include fluid-type(20px, 28px, $phone, $laptop);
+          @include fluid-type(20px, 32px, $phone, $laptop);
         }
         .excerpt {
-          @include fluid-type(14px, 17px, $phone, $laptop);
+          @include fluid-type(14px, 18px, $phone, $laptop);
         }
         .details,
         .details p {
@@ -161,11 +160,16 @@
       }
     }
     @include media("<tablet") {
+      display: block;
       height: auto;
-      margin-bottom: 20px;
-
+      margin-bottom: 40px;
+      .content-holder,
+      .featured-image-holder {
+        width: 100%;
+      }
       .content-holder {
         padding-bottom: 5px;
+        margin-left: 0;
       }
       .featured-image-holder {
         height: auto;
@@ -191,7 +195,7 @@
     }
   }
   .stay-connected {
-    @include media("<laptop") {
+    @include media("<desktop") {
       display: none;
     }
   }
@@ -282,9 +286,6 @@
   }
   .row.category {
     @include media("<desktop") {
-      padding-top: 20px;
-    }
-    @include media("<laptop") {
       display: none;
     }
   }
