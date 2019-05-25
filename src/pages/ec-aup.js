@@ -18,7 +18,7 @@ export default props => (
             <div className="col-sm-12">
               <div className="hero-content">
                 <div className="hero-content accent-block">
-                  <h1>EC-AUP</h1>
+                  <h1>EC AUP</h1>
                   <h2>
                     <span>
                       Electronic Communications and Acceptable Use Policy
