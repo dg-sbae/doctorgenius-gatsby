@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -9,6 +10,11 @@ import "../styles/ec-aup.scss"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
+    <Helmet>
+      <title>
+        Electronic Communications and Acceptable Use Policy | Doctor Genius
+      </title>
+    </Helmet>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}
@@ -20,9 +26,8 @@ export default props => (
                 <div className="hero-content accent-block">
                   <h1>EC AUP</h1>
                   <h2>
-                    <span>
-                      Electronic Communications and Acceptable Use Policy
-                    </span>
+                    <span>Electronic Communications and</span> Acceptable Use
+                    Policy
                   </h2>
                   <div className="accented-paragraph">
                     <p>
