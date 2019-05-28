@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import he from "he"
@@ -22,6 +22,77 @@ import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
+const ResponsivePostsColumnHeader = props => (
+  <div className="col-sm-12 d-lg-none responsive-tab-trigger">
+    <h3
+      onClick={props.onClick}
+      data-column="latest"
+      className={
+        (props.currentColumn === "latest" ? "active" : "") + " blog-heading"
+      }
+    >
+      Latest Posts
+    </h3>
+    <h3
+      onClick={props.onClick}
+      data-column="popular"
+      className={
+        (props.currentColumn === "popular" ? "active" : "") + " blog-heading"
+      }
+    >
+      Popular Posts
+    </h3>
+    <div className="spacer small solid" />
+  </div>
+)
+const LatestPostsColumn = props => (
+  <div
+    className={
+      (props.currentColumn === "latest" ? "active" : "hidden") +
+      " col-sm-12 col-lg-8 latest-posts"
+    }
+  >
+    {props.children}
+  </div>
+)
+const PopularPostsColumn = props => (
+  <div
+    className={
+      (props.currentColumn === "popular" ? "active" : "hidden") +
+      " col-sm-12 col-md-12 col-lg-4 sidebar"
+    }
+  >
+    {props.children}
+  </div>
+)
+
+class ResponsivePostsColumn extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentColumn: "latest",
+    }
+    this.onClick = this.onClick.bind(this)
+  }
+  onClick(e) {
+    this.setState({ currentColumn: e.currentTarget.dataset.column })
+  }
+  render() {
+    //Add the current column to the child components
+    const childrenWithProps = React.Children.map(this.props.children, child =>
+      React.cloneElement(child, { currentColumn: this.state.currentColumn })
+    )
+    return (
+      <>
+        <ResponsivePostsColumnHeader
+          onClick={this.onClick}
+          currentColumn={this.state.currentColumn}
+        />
+        {childrenWithProps}
+      </>
+    )
+  }
+}
 
 export default function({ data }, props) {
   //Isolate the blog and categories routes
@@ -74,7 +145,7 @@ export default function({ data }, props) {
         </div>
         <Main>
           <Container>
-            <div className="row padded">
+            <div className="row padded category">
               {categoriesPaths.map(category => (
                 <div className="col-sm-4">
                   <a href={postsPath + category.slug}>
@@ -93,201 +164,219 @@ export default function({ data }, props) {
               ))}
             </div>
             <div className="row padded align-items-start short-top">
-              <div className="col-sm-8 latest-posts">
-                <h3 className="blog-heading ">Latest Posts</h3>
-                <div className="spacer small solid" />
+              <ResponsivePostsColumn>
+                <LatestPostsColumn>
+                  <h3 className="blog-heading d-sm-none d-lg-block">
+                    Latest Posts
+                  </h3>
+                  <div className=" d-sm-none spacer small solid" />
 
-                {data.latest.edges.map(({ node }) => {
-                  // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
-                  // The deprecated categories on dg.com like "DoctorGenius" were causing an error
-                  const mainCategory = node.categories.find(c =>
-                    categoriesPaths.find(d => d.name === c.name)
-                  )
-                  // console.log(mainCategory)
-                  return (
-                    <div className="latest-post">
-                      <a href={postsPath + node.slug}>
+                  {data.latest.edges.map(({ node }) => {
+                    // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
+                    // The deprecated categories on dg.com like "DoctorGenius" were causing an error
+                    const mainCategory = node.categories.find(c =>
+                      categoriesPaths.find(d => d.name === c.name)
+                    )
+                    // console.log(mainCategory)
+                    return (
+                      <div className="latest-post">
                         <div className="featured-image-holder">
-                          <Img
-                            fluid={
-                              node.featured_media.localFile.childImageSharp
-                                .fluid
-                            }
-                          />
-                        </div>
-                      </a>
-                      <div className="content-holder">
-                        <div className="details">
-                          <p className="date">{node.date}</p>
-                          <p className="label mute">
-                            <a
-                              href={
-                                // This selects the slug from the categories array matching the mainCategory found above
-                                postsPath +
-                                categoriesPaths.find(
-                                  i => i.name === mainCategory.name
-                                ).slug
+                          <a href={postsPath + node.slug}>
+                            <Img
+                              fluid={
+                                node.featured_media.localFile.childImageSharp
+                                  .fluid
                               }
-                            >
-                              {mainCategory.name}
-                            </a>
-                          </p>
-                        </div>
-                        <h4>
-                          <a
-                            className="not-a-link"
-                            href={postsPath + node.slug}
-                          >
-                            {he.decode(node.title)}
+                            />
                           </a>
-                        </h4>
-                        <p
-                          className="excerpt"
-                          dangerouslySetInnerHTML={{
-                            __html: node.excerpt.replace(
-                              /https:\/\/doctorgenius.com/,
-                              "http://localhost:8000/"
-                            ),
-                          }}
-                        />
-                      </div>
-                    </div>
-                  )
-                })}
-
-                <div className="pagination">
-                  <a href="/intentional-404/">
-                    <img src={leftChevron} alt="Navigate to Previous" />
-                  </a>
-                  <a href="/intentional-404/">
-                    <p className="active">1</p>
-                  </a>
-                  <a href="/intentional-404/">
-                    <p>2</p>
-                  </a>
-                  <a href="/intentional-404/">
-                    <p>3</p>
-                  </a>
-                  <a href="/intentional-404/">
-                    <p>4</p>
-                  </a>
-                  <a href="/intentional-404/">
-                    <p>5</p>
-                  </a>
-                  <a href="/intentional-404/NextPostsPage">
-                    <img src={rightChevron} alt="Navigate to Next" />
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-4 sidebar">
-                <div className="stay-connected">
-                  <div className="row">
-                    <div className="col-sm-12">
-                      <h3 className="blog-heading ">Stay Connected</h3>
-                      <div className="spacer small solid" />
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-sm-12">
-                      <div className="social-icons-wrapper">
-                        <div className="social-icon-detail">
-                          <img
-                            src={facebookIcon}
-                            className="social-icon"
-                            alt="Facebook"
-                          />
-                          <p>25k</p>
-                          <p className="social-unit">Likes</p>
                         </div>
-                        <div className="social-icon-detail">
-                          <img
-                            src={twitterIcon}
-                            className="social-icon"
-                            alt="Twitter"
-                          />
-                          <p>231k</p>
-                          <p className="social-unit">Followers</p>
-                        </div>
-                        <div className="social-icon-detail">
-                          <img
-                            src={instagramIcon}
-                            className="social-icon"
-                            alt="Instagram"
-                          />
-                          <p>80k</p>
-                          <p className="social-unit">Followers</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="newsletter row">
-                    <div className="col-sm-12">
-                      <div className="newsletter-signup">
-                        <h4 className="newsletter-heading">Newsletter</h4>
-                        <p>
-                          Subscribe to our email newsletter for useful tips and
-                          valuable resources.
-                        </p>
-                        <input type="text" />
-                        <a
-                          href="/intentional-404/newslettersubmit"
-                          className="button rounder"
-                        >
-                          Submit
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="most-popular">
-                  <div className="row">
-                    <div className="col-sm-12">
-                      <h4 className="blog-heading ">Most Popular</h4>
-                      <div className="spacer small solid" />
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-sm-12">
-                      {data.popular.edges.map(({ node }) => (
-                        <a href={node.link}>
-                          <div className="popular-post">
-                            <div className="image-holder">
-                              {console.log(node)}
-                              <Img
-                                fluid={
-                                  node.featured_media.localFile.childImageSharp
-                                    .fluid
+                        <div className="content-holder">
+                          <div className="details">
+                            <p className="date">{node.date}</p>
+                            <p className="label mute">
+                              <a
+                                href={
+                                  // This selects the slug from the categories array matching the mainCategory found above
+                                  postsPath +
+                                  categoriesPaths.find(
+                                    i => i.name === mainCategory.name
+                                  ).slug
                                 }
-                              />
-                            </div>
-                            <div className="content-holder">
-                              <h5 className="title truncate">
-                                {he.decode(node.title)}
-                              </h5>
-                              <p className="date">{node.date}</p>
-                            </div>
+                              >
+                                {mainCategory.name}
+                              </a>
+                            </p>
                           </div>
-                        </a>
-                      ))}
+                          <h4 className="title">
+                            <a
+                              className="not-a-link"
+                              href={postsPath + node.slug}
+                            >
+                              {he.decode(node.title)}
+                            </a>
+                          </h4>
+                          <p
+                            className="excerpt"
+                            dangerouslySetInnerHTML={{
+                              __html: node.excerpt.replace(
+                                /https:\/\/doctorgenius.com/,
+                                "http://localhost:8000/"
+                              ),
+                            }}
+                          />
+                        </div>
+                      </div>
+                    )
+                  })}
+
+                  <div className="pagination">
+                    <a href="/intentional-404/">
+                      <img src={leftChevron} alt="Navigate to Previous" />
+                    </a>
+                    <a href="/intentional-404/">
+                      <p className="active">1</p>
+                    </a>
+                    <a href="/intentional-404/">
+                      <p>2</p>
+                    </a>
+                    <a href="/intentional-404/">
+                      <p>3</p>
+                    </a>
+                    <a href="/intentional-404/">
+                      <p>4</p>
+                    </a>
+                    <a href="/intentional-404/">
+                      <p>5</p>
+                    </a>
+                    <a href="/intentional-404/NextPostsPage">
+                      <img src={rightChevron} alt="Navigate to Next" />
+                    </a>
+                  </div>
+                </LatestPostsColumn>
+                <PopularPostsColumn>
+                  <div className="stay-connected">
+                    <div className="row">
+                      <div className="col-sm-12">
+                        <h3 className="blog-heading ">Stay Connected</h3>
+                        <div className="spacer small solid" />
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-sm-12">
+                        <div className="social-icons-wrapper">
+                          <div className="social-icon-detail">
+                            <img
+                              src={facebookIcon}
+                              className="social-icon"
+                              alt="Facebook"
+                            />
+                            <p>25k</p>
+                            <p className="social-unit">Likes</p>
+                          </div>
+                          <div className="social-icon-detail">
+                            <img
+                              src={twitterIcon}
+                              className="social-icon"
+                              alt="Twitter"
+                            />
+                            <p>231k</p>
+                            <p className="social-unit">Followers</p>
+                          </div>
+                          <div className="social-icon-detail">
+                            <img
+                              src={instagramIcon}
+                              className="social-icon"
+                              alt="Instagram"
+                            />
+                            <p>80k</p>
+                            <p className="social-unit">Followers</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="newsletter row">
+                      <div className="col-sm-12">
+                        <div className="newsletter-signup">
+                          <h4 className="newsletter-heading">Newsletter</h4>
+                          <p>
+                            Subscribe to our email newsletter for useful tips
+                            and valuable resources.
+                          </p>
+                          <input type="text" />
+                          <a
+                            href="/intentional-404/newslettersubmit"
+                            className="button rounder"
+                          >
+                            Submit
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="category-section">
-                  <div className="row">
-                    <div className="col-sm-12">
-                      <h4 className="blog-heading ">Category</h4>
-                      <div className="spacer small solid" />
-                      {categoriesPaths.map(category => (
-                        <a href={postsPath + category.slug}>
-                          <span className="label primary">
-                            <p>{category.name}</p>
-                          </span>
-                        </a>
-                      ))}
+                  <div className="most-popular">
+                    <div className="row d-sm-none d-lg-block padded short-top short-bottom">
+                      <div className="col-sm-12">
+                        <h4 className="blog-heading ">Most Popular</h4>
+                        <div className="d-md-none spacer small solid" />
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-sm-12">
+                        {data.popular.edges.map(({ node }) => (
+                          <a href={node.link}>
+                            <div className="popular-post">
+                              <div className="featured-image-holder">
+                                {console.log(node)}
+                                <Img
+                                  fluid={
+                                    node.featured_media.localFile
+                                      .childImageSharp.fluid
+                                  }
+                                />
+                              </div>
+                              <div className="content-holder">
+                                <p className="d-md-block d-lg-none details date">
+                                  {node.date}
+                                </p>
+                                <h5 className="title">
+                                  {he.decode(node.title)}
+                                </h5>
+                                <p className="d-md-none d-lg-block details date">
+                                  {node.date}
+                                </p>
+                                <p
+                                  className="excerpt d-md-block d-lg-none"
+                                  dangerouslySetInnerHTML={{
+                                    __html: node.excerpt.replace(
+                                      /https:\/\/doctorgenius.com/,
+                                      "http://localhost:8000/"
+                                    ),
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                  <div className="category-section">
+                    <div className="row">
+                      <div className="col-sm-12">
+                        <h4 className="blog-heading ">Category</h4>
+                        <div className="spacer small solid" />
+                        {categoriesPaths.map(category => (
+                          <a href={postsPath + category.slug}>
+                            <span className="label primary">
+                              <p>{category.name}</p>
+                            </span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </PopularPostsColumn>
+              </ResponsivePostsColumn>
             </div>
             {/* Begin Events component */}
             <div className="events-section">

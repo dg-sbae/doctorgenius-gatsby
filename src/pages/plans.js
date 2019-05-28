@@ -58,7 +58,7 @@ export default props => (
                   {/*<p className="column-signup-body">
                     Lorem Ipsum is simply dummy text of the printing and type.
                   </p>*/}
-                  <a href="/intentional-404/sign-up" className="button rounder">
+                  <a href="/demo" className="button rounder">
                     Sign Up
                   </a>
                   {/*<a href="/intentional-404/learn-more" className="subtle-link">
@@ -73,7 +73,7 @@ export default props => (
                   {/*<p className="column-signup-body">
                     Lorem Ipsum is simply dummy text of the printing and type.
                   </p>*/}
-                  <a href="/intentional-404/sign-up" className="button rounder">
+                  <a href="/demo" className="button rounder">
                     Sign Up
                   </a>
                   {/*<a href="/intentional-404/learn-more" className="subtle-link">
@@ -85,7 +85,7 @@ export default props => (
                   {/*<p className="column-signup-body">
                     Lorem Ipsum is simply dummy text of the printing and type.
                   </p>*/}
-                  <a href="/intentional-404/sign-up" className="button rounder">
+                  <a href="/demo" className="button rounder">
                     Sign Up
                   </a>
                   {/*<a href="/intentional-404/learn-more" className="subtle-link">
@@ -543,7 +543,7 @@ export default props => (
                   </a>*/}
                 </div>
                 <div className="grid-item column-signup">
-                  <a href="/intentional-404/sign-up" className="button rounder">
+                  <a href="/demo" className="button rounder">
                     Sign Up
                   </a>
                   {/*<a href="/intentional-404/learn-more" className="subtle-link">
@@ -551,7 +551,7 @@ export default props => (
                   </a>*/}
                 </div>
                 <div className="grid-item column-signup">
-                  <a href="/intentional-404/sign-up" className="button rounder">
+                  <a href="/demo" className="button rounder">
                     Sign Up
                   </a>
                   {/*<a href="/intentional-404/learn-more" className="subtle-link">

@@ -7,18 +7,18 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
   .hero {
     background-image: url("/hero/plans.png");
     background-position: center 18%;
+    height: 650px;
     .hero-content {
       p {
         width: 85%;
       }
-      @include media("<desktop", "<=laptop") {
-        width: 625px;
-        height: 344px;
-        padding: 2.8rem;
-      }
+      width: 625px;
+      height: 344px;
+      padding: 2.8rem;
+
       @include media("<laptop") {
         width: 400px;
-        height: 224px;
+        height: auto;
         padding: 1.5rem;
         p {
           width: 100%;
