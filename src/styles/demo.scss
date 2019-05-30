@@ -299,7 +299,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin-left: 28px;
+
+      @include media("<desktop") {
+        margin-left: 28px;
+      }
       @include media("<=tablet") {
         width: 100%;
       }
@@ -339,8 +342,8 @@
       .portrait {
         border-radius: 50%;
         // max-width: 100%;
-        max-width: 105px;
-        width: 105px;
+        max-width: 90px;
+        width: 90px;
         @include media("<desktop") {
           width: 85%;
         }
