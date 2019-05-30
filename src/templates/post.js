@@ -18,13 +18,31 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study-post.scss"
 
-function PostPage({ pageContext, data }) {
+function PostPage({ pageContext, data, location }) {
   const post = data.currentPost
 
   //Create the two necessary parts of the blog post by splitting at the first paragraph
   const content = post.content.split(/(<p>(\S)*?<\/p>)/)
   const intro = content.slice(1, 2).join()
   const remainder = content.slice(2).join("")
+
+  let escapedTitle = post.title.replace(/\s/g, "+")
+  let escapedLink = encodeURIComponent(location.href)
+
+  let facebookShareLink =
+    "https://www.facebook.com/sharer/sharer.php?u=" +
+    escapedLink +
+    "&title=" +
+    escapedTitle
+
+  /* https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview.html */
+  let twitterShareLink =
+    "https://twitter.com/intent/tweet?text=Interesting%20Article:%20" +
+    escapedTitle +
+    "%20(from%20" +
+    escapedLink +
+    ")%20."
+  console.log()
   /*
   let testIntro = content.slice(1, 2)
   console.log(content, testIntro, testIntro)
@@ -47,8 +65,9 @@ function PostPage({ pageContext, data }) {
   */
 
   return (
-    <DefaultPageLayout>
-      <div className="the-study-post">
+    <DefaultPageLayout location="the-study-post">
+      <div className="page-wrapper">
+        <div class="hero-padding" />
         <Main>
           <Container>
             <div className="row padded short-bottom">
@@ -96,22 +115,32 @@ function PostPage({ pageContext, data }) {
                         <p className="author">{post.author.name}</p>
                       </div>
                     </div>
-
                     <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
                       <div className="share-icons">
                         <p>Share:</p>
-                        <a href="https://www.facebook.com/DoctorGeniusMarketing">
+                        <a href={facebookShareLink}>
+                          {/* https://www.facebook.com/DoctorGeniusMarketing*/}
+                          {/*https://www.facebook.com/sharer/sharer.php?u=
+                        http%3A%2F%2Fstackoverflow.com
+                        (http://stackoverflow.com)
+                        %2Fq%2F20956229%2F1101509&picture=http%3A%2F%2Fwww.applezein.net%2Fwordpress%2Fwp-content%2Fuploads%2F2015%2F03%2Ffacebook-logo.jpg
+                        (/q/)
+                        &title=A+nice+question+about+Facebook
+                        &quote=Does+anyone+know+if+there+have+been+recent+changes+which+could+have+suddenly+stopped+this+from+working%3F&description=Apparently%2C+the+accepted+answer+is+not+correct.
+*/}
                           <img src={facebookIcon} alt="Facebook" />
                         </a>
-                        <a href="https://twitter.com/DoctorGeniusCA">
+                        <a href={twitterShareLink}>
                           <img src={twitterIcon} alt="Twitter" />
                         </a>
+                        {/*
                         <a href="https://www.instagram.com/doctor.genius/">
                           <img src={instagramIcon} alt="Instagram" />
                         </a>
                         <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
                           <img src={youtubeIcon} alt="YouTube" />
                         </a>
+                        */}
                       </div>
                     </div>
                   </div>
@@ -185,18 +214,17 @@ function PostPage({ pageContext, data }) {
                 {/* End Events component */}
               </div>
             </div>
+            {/* Begin Demo Footer */}
             <div className="row padded tall-top request-demo-footer">
-              <div className="col-lg-1" />
-              <div className="col-sm-6 col-lg-5">
+              <div className="col-md-1" />
+              <div className="col-sm-9 col-md-5">
                 <div className="content-block">
                   <div className="inner-title">
                     <h2>
-                      Start your
-                      <span className="font-weight-semibold"> success </span>
-                      with Doctor Genius today!
+                      Start your <span>success</span> with Doctor Genius today!
                     </h2>
                     <div className="accented-paragraph">
-                      <p className="s-thin">
+                      <p>
                         The Genius platform makes every part of your company
                         process more efficient. Our support team is very excited
                         to help you and get your company on the right path of
@@ -206,15 +234,15 @@ function PostPage({ pageContext, data }) {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-6 col-lg-5">
+              <div className="col-sm-9 col-md-5">
                 <div className="center">
                   <a href="/demo" className="button flat white-text">
                     Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>
               </div>
-              <div className="col-lg-1" />
             </div>
+            {/* End Demo Footer */}
           </Container>
         </Main>
       </div>
