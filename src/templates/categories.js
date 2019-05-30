@@ -95,7 +95,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                   const mainCategory = node.categories.find(c =>
                     categoriesPaths.find(d => d.name === c.name)
                   )
-                  console.log(mainCategory)
+                  //console.log(mainCategory)
                   return (
                     <div className="latest-post">
                       <a href={postsPath + node.slug}>
@@ -244,13 +244,15 @@ const CategoriesPage = ({ data, pageContext }) => {
                         <a href={node.link}>
                           <div className="popular-post">
                             <div className="image-holder">
-                              {console.log(node)}
-                              <Img
-                                fluid={
-                                  node.featured_media.localFile.childImageSharp
-                                    .fluid
-                                }
-                              />
+                              {
+                                //console.log(node)}
+                                <Img
+                                  fluid={
+                                    node.featured_media.localFile
+                                      .childImageSharp.fluid
+                                  }
+                                />
+                              }
                             </div>
                             <div className="content-holder">
                               <h5 className="title truncate">

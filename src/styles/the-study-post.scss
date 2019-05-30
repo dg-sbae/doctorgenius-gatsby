@@ -15,6 +15,9 @@
     }
   }
   .blog-header {
+    .upper-row .title {
+      margin-right: 3%;
+    }
     .upper-row,
     .lower-row,
     .share-icons {
@@ -24,18 +27,28 @@
     }
     .share-icons,
     .label {
-      width: 175px;
+      //width: 175px;
     }
     .label {
       font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include media("<laptop") {
+        height: 30px;
+        width: auto;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
     }
     .title {
-      max-width: calc(100% - 175px + 15px);
+      //max-width: calc(100% - 175px + 15px);
       font-size: 36px;
       font-weight: $font-weight-semibold;
       color: #5a5a5a;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       letter-spacing: -2px;
+      line-height: 1;
     }
     .date,
     .byline {
@@ -47,25 +60,74 @@
       margin-bottom: 0;
     }
   }
-  .blog-content p {
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: lighter;
-    line-height: 1.9;
-    margin-bottom: 20px;
+}
+@include media("<desktop") {
+  .label,
+  .share-icons {
+    margin-top: 20px;
+    margin-bottom: 25px;
   }
-  .featured-image img {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    transform: translateX(
-      -12.5%
-    ); /* I dont think this will pass muster with real images */
+  .blog-header .title {
+    max-width: 80%;
   }
-  .events-section img {
+  .blog-header .share-icons {
     max-width: 100%;
+    justify-content: flex-end !important;
+    & > a {
+      margin: 0 10px;
+      @include media("<500px") {
+        margin: 0 2.5%;
+      }
+    }
   }
-  .grey-background {
-    background: #f4f4f4;
-    height: 535px;
+  .label p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+}
+
+.blog-content p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+.featured-image {
+  width: 125%;
+  margin-left: 50%;
+  transform: translateX(
+    -50%
+  ); /* I dont think this will pass muster with real images */
+  margin-top: 10px;
+  margin-bottom: 30px;
+  @include media("<desktop") {
+    width: 100%;
+    margin-left: 0%;
+    transform: translateX(0%);
+  }
+}
+.events {
+  display: none;
+}
+.events-section img {
+  max-width: 100%;
+}
+.grey-background {
+  background: #f4f4f4;
+  height: 535px;
+}
+
+.mobile-image-row {
+  display: none;
+  @include media("<desktop") {
+    display: block;
+  }
+}
+.featured-image {
+  display: block;
+  @include media("<desktop") {
+    display: none;
   }
 }

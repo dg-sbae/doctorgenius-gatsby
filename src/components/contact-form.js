@@ -46,10 +46,17 @@ class ContactForm extends React.Component {
     ev.preventDefault()
 
     const data = new FormData()
+    /*
     data.append("name", this.name.value)
     data.append("phone", this.phone.value)
     data.append("email", this.email.value)
     data.append("company", this.company.value)
+    */
+
+    data.append("name", "Hardcoded jared")
+    data.append("phone", "1234567890")
+    data.append("email", "jparmenter@doctorgenius.com")
+    data.append("company", "Hardcoded Company")
 
     alert(
       "Debug -- Data sent to server:\n" +
@@ -66,10 +73,14 @@ class ContactForm extends React.Component {
         this.phone.value
     )
 
-    fetch("http://localhost:4000/upload", {
+    fetch("http://nodetest.dgd3v.com/upload", {
       method: "POST",
       body: data,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
     }).then(response => {
+      console.log(response)
       response.json().then(body => {
         this.setState({
           name: body.name,
@@ -120,12 +131,12 @@ class ContactForm extends React.Component {
               Request Demo <img src={thinArrowRight} alt="Arrow Right" />
             </button>
           </div>
-          {/*<FormResponse
+          <FormResponse
             name={this.state.name}
             email={this.state.email}
             company={this.state.company}
             phone={this.state.phone}
-          />*/}
+          />
         </form>
       </div>
     )

@@ -100,7 +100,13 @@ header {
         box-shadow: 0 1px 1px $grid-border;
         background-color: #fff;
         @include media("<=laptop") {
-          background-color: $primary;
+          //background-color: $primary;
+          background: linear-gradient(
+            45deg,
+            rgba(#0074cf, 0.95) 0%,
+            rgba(#0074cf, 0.95) 55%,
+            rgba(#0b97c1, 0.95) 100%
+          );
         }
 
         &.stuck-midway {
