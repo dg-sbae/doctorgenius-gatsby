@@ -52,12 +52,12 @@ class ContactForm extends React.Component {
     data.append("email", this.email.value)
     data.append("company", this.company.value)
     */
-
-    data.append("name", "Hardcoded jared")
+    console.log("Data: ", data)
+    data.append("name", "Hardcoded Sent Without -form-encoded header")
     data.append("phone", "1234567890")
     data.append("email", "jparmenter@doctorgenius.com")
     data.append("company", "Hardcoded Company")
-
+    console.log("Data: ", data)
     alert(
       "Debug -- Data sent to server:\n" +
         data +
@@ -73,11 +73,17 @@ class ContactForm extends React.Component {
         this.phone.value
     )
 
+    console.log("Data: ", data)
+    console.log("Stringified: ", JSON.stringify(data))
     fetch("http://nodetest.dgd3v.com/upload", {
       method: "POST",
       body: data,
       headers: {
+        /*
+        "Content-Type": "multipart/form-data",
         "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "multipart/form-data",
+        */
       },
     }).then(response => {
       console.log(response)
@@ -95,6 +101,7 @@ class ContactForm extends React.Component {
   render() {
     return (
       <div className="form-wrapper">
+        {/*<form onSubmit={this.handleFormSubmit}  enctype="multipart/form-data">*/}
         <form onSubmit={this.handleFormSubmit}>
           <div>
             <input
