@@ -96,22 +96,6 @@ function PostPage({ pageContext, data }) {
                         <p className="author">{post.author.name}</p>
                       </div>
                     </div>
-<<<<<<< HEAD
-                    <div className="share-icons">
-                      <p>Share:</p>
-                      <a href="https://www.facebook.com/DoctorGeniusMarketing">
-                        <img src={facebookIcon} alt="Facebook" />
-                      </a>
-                      <a href="https://twitter.com/DoctorGeniusCA">
-                        <img src={twitterIcon} alt="Twitter" />
-                      </a>
-                      <a href="https://www.instagram.com/doctor.genius">
-                        <img src={instagramIcon} alt="Instagram" />
-                      </a>
-                      <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
-                        <img src={youtubeIcon} alt="YouTube" />
-                      </a>
-=======
 
                     <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
                       <div className="share-icons">
@@ -129,7 +113,6 @@ function PostPage({ pageContext, data }) {
                           <img src={youtubeIcon} alt="YouTube" />
                         </a>
                       </div>
->>>>>>> 555bc9a1ead18f54288edbef2f4b7f6804ad418a
                     </div>
                   </div>
                   <div className="col-lg-1" />
