@@ -27,15 +27,15 @@ const CategoriesPage = ({ data, pageContext }) => {
   const categoriesPaths = [
     {
       name: "Digital Marketing",
-      slug: "digital-marketing/",
+      slug: "digital-marketing",
       image: marketingCategoryImage,
     },
     {
       name: "Practice Management",
-      slug: "practice-management/",
+      slug: "practice-management",
       image: practiceManagementImage,
     },
-    { name: "Genius Lab", slug: "genius-lab/", image: geniusLabImage },
+    { name: "Genius Lab", slug: "genius-lab", image: geniusLabImage },
   ]
 
   return (
@@ -316,7 +316,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                   <div className="inner-title">
                     <h2>
                       Start your{" "}
-                      <span className="font-weight-semibold">success</span>
+                      <span className="font-weight-semibold">success </span>
                       with Doctor Genius today!
                     </h2>
                     <div className="accented-paragraph">
@@ -332,7 +332,7 @@ const CategoriesPage = ({ data, pageContext }) => {
               </div>
               <div className="col-sm-6 col-lg-5">
                 <div className="center">
-                  <a href="/" className="button flat white-text">
+                  <a href="/demo" className="button flat white-text">
                     Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>

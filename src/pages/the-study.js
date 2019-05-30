@@ -101,15 +101,15 @@ export default function({ data }, props) {
   const categoriesPaths = [
     {
       name: "Digital Marketing",
-      slug: "digital-marketing/",
+      slug: "digital-marketing",
       image: marketingCategoryImage,
     },
     {
       name: "Practice Management",
-      slug: "practice-management/",
+      slug: "practice-management",
       image: practiceManagementImage,
     },
-    { name: "Genius Lab", slug: "genius-lab/", image: geniusLabImage },
+    { name: "Genius Lab", slug: "genius-lab", image: geniusLabImage },
   ]
 
   return (

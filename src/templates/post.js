@@ -72,7 +72,7 @@ function PostPage({ pageContext, data }) {
                       <a href="https://twitter.com/DoctorGeniusCA">
                         <img src={twitterIcon} alt="Twitter" />
                       </a>
-                      <a href="https://www.instagram.com/doctor.genius/">
+                      <a href="https://www.instagram.com/doctor.genius">
                         <img src={instagramIcon} alt="Instagram" />
                       </a>
                       <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
@@ -156,7 +156,7 @@ function PostPage({ pageContext, data }) {
                   <div className="inner-title">
                     <h2>
                       Start your
-                      <span className="font-weight-semibold">success</span>
+                      <span className="font-weight-semibold"> success </span>
                       with Doctor Genius today!
                     </h2>
                     <div className="accented-paragraph">
@@ -172,7 +172,7 @@ function PostPage({ pageContext, data }) {
               </div>
               <div className="col-sm-6 col-lg-5">
                 <div className="center">
-                  <a href="/" className="button flat white-text">
+                  <a href="/demo" className="button flat white-text">
                     Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>
