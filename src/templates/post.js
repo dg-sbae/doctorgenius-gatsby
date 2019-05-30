@@ -22,11 +22,29 @@ function PostPage({ pageContext, data }) {
   const post = data.currentPost
 
   //Create the two necessary parts of the blog post by splitting at the first paragraph
-  const content = post.content.split(/(<p>.*?<\/p>)/)
+  const content = post.content.split(/(<p>(\S)*?<\/p>)/)
   const intro = content.slice(1, 2).join()
   const remainder = content.slice(2).join("")
+  /*
+  let testIntro = content.slice(1, 2)
+  console.log(content, testIntro, testIntro)
+  let start = 1
+  let end = 2
+  while (
+    testIntro[start] === "<p></p>" ||
+    testIntro[start] === "<p>&nbsp;</p>" ||
+    testIntro[start] === ""
+  ) {
+    console.log("test intro" + testIntro)
+    start++
+    testIntro = content.slice(start + 1, start + 2)
+  }
+  //const intro = content.slice(1, 2).join()
+  const intro = testIntro
+  const remainder = content.slice(2).join("")
 
-  console.log(intro, remainder)
+  //console.log(intro, remainder)
+  */
 
   return (
     <DefaultPageLayout>
@@ -35,7 +53,7 @@ function PostPage({ pageContext, data }) {
           <Container>
             <div className="row padded short-bottom">
               <div className="col-lg-1" />
-              <div className="col-sm-8">
+              <div className="col-lg-8">
                 <div className="pagination">
                   <a href="/intentional-404/PreviousPostsPage">
                     <img src={leftChevron} alt="Navigate to Previous" />
@@ -51,49 +69,67 @@ function PostPage({ pageContext, data }) {
             </div>
             <div className="blog-header">
               <div className="row">
-                <div className="col-lg-1" />
-                <div className="col-sm-8">
-                  <div className="upper-row">
-                    <h1 className="title">{he.decode(post.title)}</h1>
-                    <div className="label primary">
-                      <p>Practice Management</p>
+                <div className="col-lg-2" />
+                <div className="col-lg-9">
+                  <div className="row mobile-image-row">
+                    <div className="col-xs-12">
+                      <Img
+                        fluid={
+                          post.featured_media.localFile.childImageSharp.fluid
+                        }
+                      />
                     </div>
                   </div>
-                  <div className="lower-row">
-                    <div className="byline">
-                      <p className="date">{post.date}</p>
-                      <p className="author">{post.author.name}</p>
+                  <div className="row upper-row">
+                    <div class="col-lg-9 order-lg-1 order-sm-3">
+                      <h1 className="title">{he.decode(post.title)}</h1>
                     </div>
-                    <div className="share-icons">
-                      <p>Share:</p>
-                      <a href="https://www.facebook.com/DoctorGeniusMarketing">
-                        <img src={facebookIcon} alt="Facebook" />
-                      </a>
-                      <a href="https://twitter.com/DoctorGeniusCA">
-                        <img src={twitterIcon} alt="Twitter" />
-                      </a>
-                      <a href="https://www.instagram.com/doctor.genius/">
-                        <img src={instagramIcon} alt="Instagram" />
-                      </a>
-                      <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
-                        <img src={youtubeIcon} alt="YouTube" />
-                      </a>
+                    <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
+                      <div className="label primary">
+                        <p>Practice Management</p>
+                      </div>
+                    </div>
+
+                    <div className="col-sm-12 col-lg-4 order-sm-4 order-lg-3">
+                      <div className="byline">
+                        <p className="date">{post.date}</p>
+                        <p className="author">{post.author.name}</p>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
+                      <div className="share-icons">
+                        <p>Share:</p>
+                        <a href="https://www.facebook.com/DoctorGeniusMarketing">
+                          <img src={facebookIcon} alt="Facebook" />
+                        </a>
+                        <a href="https://twitter.com/DoctorGeniusCA">
+                          <img src={twitterIcon} alt="Twitter" />
+                        </a>
+                        <a href="https://www.instagram.com/doctor.genius/">
+                          <img src={instagramIcon} alt="Instagram" />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
+                          <img src={youtubeIcon} alt="YouTube" />
+                        </a>
+                      </div>
                     </div>
                   </div>
+                  <div className="col-lg-1" />
                 </div>
                 <div className="col-lg-1" />
               </div>
             </div>
             <div className="row">
               <div className="col-lg-1" />
-              <div className="col-sm-10">
+              <div className="col-lg-10">
                 <div className="spacer solid" />
               </div>
               <div className="col-lg-1" />
             </div>
             <div className="row">
               <div className="col-lg-1" />
-              <div className="col-sm-8">
+              <div className="col-lg-8">
                 <div className="blog-content">
                   <div
                     className="intro"
@@ -116,13 +152,13 @@ function PostPage({ pageContext, data }) {
               <div className="col-lg-1" />
             </div>
 
-            <div className="full-bleed-wrapper pad-md">
+            <div className="full-bleed-wrapper pad-md events">
               <div className="full-bleed grey-background" />
               <div className="full-bleed-content-wrapper">
                 {/* Begin Events component */}
                 <div className="events-section">
                   <div className="row padded tall-top">
-                    <div className="col-sm-12">
+                    <div className="col-lg-12">
                       <div className="title-holder">
                         <h4 className="blog-heading">Webinars & Events</h4>
                         <div className="more-events">
@@ -135,7 +171,7 @@ function PostPage({ pageContext, data }) {
                       <div className="spacer solid small" />
                     </div>
                     {data.events.edges.map(({ node }) => (
-                      <div className="col-sm-3">
+                      <div className="col-lg-3">
                         <div className="event-wrapper">
                           <img src={eventsPlaceholder} alt="Recent Event" />
                         </div>
