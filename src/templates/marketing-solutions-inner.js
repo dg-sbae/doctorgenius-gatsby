@@ -60,13 +60,13 @@ export default props => {
                   <div className="secondary-nav">
                     <div
                       className={
-                        (currentPage === "/marketing-solutions/websites/"
+                        (currentPage === "/marketing-solutions/websites"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/websites/">
+                        <a href="/marketing-solutions/websites">
                           <img
                             className="img-icon"
                             src={responsiveWebsitesIcon}
@@ -79,13 +79,13 @@ export default props => {
                     <div
                       className={
                         (currentPage ===
-                        "/marketing-solutions/content-marketing/"
+                        "/marketing-solutions/content-marketing"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/content-marketing/">
+                        <a href="/marketing-solutions/content-marketing">
                           <img
                             className="img-icon"
                             src={contentMarketingIcon}
@@ -98,13 +98,13 @@ export default props => {
                     <div
                       className={
                         (currentPage ===
-                        "/marketing-solutions/digital-advertising/"
+                        "/marketing-solutions/digital-advertising"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/digital-advertising/">
+                        <a href="/marketing-solutions/digital-advertising">
                           <img
                             className="img-icon"
                             src={digitalAdvertisingIcon}
@@ -117,13 +117,13 @@ export default props => {
                     <div
                       className={
                         (currentPage ===
-                        "/marketing-solutions/online-reputation-management/"
+                        "/marketing-solutions/online-reputation-management"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/online-reputation-management/">
+                        <a href="/marketing-solutions/online-reputation-management">
                           <img
                             className="img-icon"
                             src={onlineReputationIcon}
@@ -135,13 +135,13 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/marketing-solutions/our-technology/"
+                        (currentPage === "/marketing-solutions/our-technology"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/our-technology/">
+                        <a href="/marketing-solutions/our-technology">
                           <img
                             className="img-icon"
                             src={ourTechnologyIcon}
@@ -154,13 +154,13 @@ export default props => {
                     <div
                       className={
                         (currentPage ===
-                        "/marketing-solutions/hosting-solutions/"
+                        "/marketing-solutions/hosting-solutions"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/hosting-solutions/">
+                        <a href="/marketing-solutions/hosting-solutions">
                           <img
                             className="img-icon"
                             src={hostingSolutionsIcon}

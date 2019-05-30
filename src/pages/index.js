@@ -57,7 +57,7 @@ export default ({ data }, props) => (
                   </div>
                 </div>
                 <div className="demo-cta">
-                  <a href="/" className="button flat white-text">
+                  <a href="/demo" className="button flat white-text">
                     Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>

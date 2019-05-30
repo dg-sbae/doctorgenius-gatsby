@@ -197,7 +197,7 @@ export default props => (
                       States.
                     </p>
                     <a
-                      href="/demo/"
+                      href="/demo"
                       className="link-with-icon font-weight-semibold"
                     >
                       <img

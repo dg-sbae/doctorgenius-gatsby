@@ -286,7 +286,7 @@ export default props => (
             </div>
             <div className="col-sm-6 col-lg-5">
               <div className="center">
-                <a href="/" className="button flat white-text">
+                <a href="/demo" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>

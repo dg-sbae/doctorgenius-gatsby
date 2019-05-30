@@ -230,22 +230,22 @@ export default function({ data }, props) {
                   })}
 
                   <div className="pagination">
-                    <a href="/intentional-404/">
+                    <a href="/intentional-404">
                       <img src={leftChevron} alt="Navigate to Previous" />
                     </a>
-                    <a href="/intentional-404/">
+                    <a href="/intentional-404">
                       <p className="active">1</p>
                     </a>
-                    <a href="/intentional-404/">
+                    <a href="/intentional-404">
                       <p>2</p>
                     </a>
-                    <a href="/intentional-404/">
+                    <a href="/intentional-404">
                       <p>3</p>
                     </a>
-                    <a href="/intentional-404/">
+                    <a href="/intentional-404">
                       <p>4</p>
                     </a>
-                    <a href="/intentional-404/">
+                    <a href="/intentional-404">
                       <p>5</p>
                     </a>
                     <a href="/intentional-404/NextPostsPage">
@@ -429,7 +429,7 @@ export default function({ data }, props) {
               </div>
               <div className="col-sm-6 col-lg-5">
                 <div className="center">
-                  <a href="/" className="button flat white-text">
+                  <a href="/demo" className="button flat white-text">
                     Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>

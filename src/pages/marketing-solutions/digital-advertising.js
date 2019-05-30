@@ -4,7 +4,7 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 
 export default () => (
   <MarketingSolutionsTemplate
-    page="/marketing-solutions/digital-advertising/" /* this should be dynamic from the page props */
+    page="/marketing-solutions/digital-advertising" /* this should be dynamic from the page props */
     pageTitle="Digital Advertising"
     pageSubtitle="<span>Expand your</span> Digital Reach"
     pageIntro="Sponsored Ads are a great way of drawing new patients from a variety of news sites, blogs and other niche sites across the internet."

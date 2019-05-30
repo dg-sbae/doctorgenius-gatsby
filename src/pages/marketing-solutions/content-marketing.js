@@ -4,7 +4,7 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 
 export default () => (
   <MarketingSolutionsTemplate
-    page="/marketing-solutions/content-marketing/" /* this should be dynamic from the page props */
+    page="/marketing-solutions/content-marketing" /* this should be dynamic from the page props */
     pageTitle="Content Marketing"
     pageSubtitle="<span>Build New</span> Organic Traffic"
     pageIntro="Our organic content strategy main objective is to funnel traffic to your website."

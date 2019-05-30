@@ -249,7 +249,7 @@ export default props => (
                   </p>
                   <div className="callout-link">
                     <a
-                      href="/our-clients/"
+                      href="/our-clients"
                       className="link-with-icon font-weight-semibold"
                     >
                       <img
@@ -306,7 +306,7 @@ export default props => (
                       States.
                     </p>
                     <a
-                      href="/demo/"
+                      href="/demo"
                       className="link-with-icon font-weight-semibold"
                     >
                       <img
