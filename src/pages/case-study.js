@@ -55,7 +55,7 @@ export default props => (
             </div>
           </div>
           <div className="row padded short-top">
-            <div className="col-sm-6 logo-block">
+            <div className="col-sm-8 col-md-6 col-lg-6 logo-block">
               <img
                 className="img-responsive"
                 src="/icon/titan-dental-care-logo.svg"
@@ -67,7 +67,7 @@ export default props => (
                 alt="Rami Tahhan"
               />
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-12 col-lg-6">
               <div className="">
                 <p>
                   Dr. Rami Tahhan came to us a few years ago and was hardly
@@ -98,7 +98,7 @@ export default props => (
             </div>
           </div>
           <div className="row padded short-top">
-            <div className="col-sm-6">
+            <div className="col-sm-12 col-md-10 order-2 col-lg-6 order-lg-1">
               <div className="">
                 <p>
                   The plan was to rebuild his complete online branding with a
@@ -125,8 +125,9 @@ export default props => (
                 <p className="client-author">- Rami Tahhan, D.D.S.</p>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-12 col-md-10 order-1 col-lg-6 order-lg-2 img-container">
               <img
+                className="img-responsive"
                 src={theChallengeImage}
                 alt="Doctor's waiting room placeholder"
               />
@@ -141,16 +142,16 @@ export default props => (
             </div>
           </div>
           <div className="row padded short-top">
-            <div className="col-sm-7">
+            <div className="col-md-12 col-lg-7 our-plans-img-container">
               <img
                 className="img-responsive blur-bleed"
                 src={theSolutionsImage}
                 alt="Search Results Page"
               />
             </div>
-            <div className="col-sm-6 col-lg-5 panel-quadrant">
+            <div className="col-sm-10 col-md-8 col-lg-5 panel-quadrant">
               <div className="row">
-                <div className="col-sm-6 panel-quad-item">
+                <div className="col-sm-12 col-md-6 panel-quad-item">
                   <img
                     className="img-responsive"
                     src="/icon/new-patient-opportunity.svg"
@@ -165,7 +166,7 @@ export default props => (
                     </p>
                   </div>
                 </div>
-                <div className="col-sm-6 panel-quad-item">
+                <div className="col-sm-12 col-md-6 panel-quad-item">
                   <img
                     className="img-responsive"
                     src="/icon/marketing-solutions-suite.svg"
@@ -182,8 +183,8 @@ export default props => (
                   </div>
                 </div>
               </div>
-              <div className="row padded">
-                <div className="col-sm-6 panel-quad-item">
+              <div className="row">
+                <div className="col-sm-12 col-md-6 panel-quad-item">
                   <img
                     className="img-responsive"
                     src="/icon/live-support-concierge.svg"
@@ -199,7 +200,7 @@ export default props => (
                     </p>
                   </div>
                 </div>
-                <div className="col-sm-6 panel-quad-item">
+                <div className="col-sm-12 col-md-6 panel-quad-item">
                   <img
                     className="img-responsive"
                     src="/icon/performance-driven-campaigns.svg"
@@ -224,7 +225,7 @@ export default props => (
                 <h2 className="underline">The Results</h2>
               </div>
             </div>
-            <div className="col-sm-7">
+            <div className="col-md-7 col-lg-7">
               <div className="inner-title center">
                 <div className="subtitle muted">The first 6 months</div>
               </div>
@@ -255,7 +256,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-lg-5">
+            <div className="col-md-5 col-lg-5">
               <img
                 className="img-responsive blur-bleed"
                 src="/png/search-result.png"
@@ -265,7 +266,7 @@ export default props => (
           </div>
           <div className="row padded tall-top request-demo-footer">
             <div className="col-lg-1" />
-            <div className="col-sm-6 col-lg-5">
+            <div className="col-sm-11 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>
@@ -284,7 +285,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-lg-5">
+            <div className="col-sm-11 col-md-5">
               <div className="center">
                 <a href="/demo" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />

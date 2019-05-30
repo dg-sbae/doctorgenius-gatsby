@@ -39,6 +39,22 @@
     img {
       padding: 10px;
     }
+    @include media("<=desktop") {
+      padding-bottom: 30px;
+    }
+  }
+
+  .our-plans-img-container {
+    img {
+      @include media("<=desktop") {
+        margin-bottom: 50px;
+        margin-top: -150px;
+      }
+      @include media("<=laptop") {
+        margin-bottom: 50px;
+        margin-top: -50px;
+      }
+    }
   }
 
   .panel-quadrant {
@@ -58,13 +74,39 @@
 
     .panel-quad-item {
       padding-left: 0;
+      @include media("<tablet") {
+        padding-bottom: 60px;
+        padding-left: 25px;
+      }
+      h4 {
+        @include media("<tablet") {
+          padding: 0 17%;
+          text-align: center;
+        }
+      }
+      img {
+        @include media("<tablet") {
+          padding-bottom: 10px;
+        }
+      }
+      &:last-of-type {
+      }
     }
   }
 
   .inner-title {
+    @include media("<tablet") {
+      padding-bottom: 0;
+    }
     .subtitle {
       font-size: $h2-font-size-main;
       font-style: italic;
+      @include fluid-type(
+        21px,
+        44px,
+        $tablet,
+        $laptop
+      ); /* desktop - 53, tablet - 45, small - 38 */
     }
   }
 
@@ -90,6 +132,9 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(3, 100px);
+    @include media("<=laptop") {
+      grid-template-rows: repeat(3, 75px);
+    }
   }
   .case-study-item {
     padding: 20px;
@@ -108,6 +153,10 @@
     &:nth-child(4) {
       border-bottom: 1px solid #dfdfdf;
     }
+    @include media("<=laptop") {
+      height: 75px;
+      padding: 12px;
+    }
   }
   .case-study-item p:not(.callout) {
     font-family: Roboto;
@@ -115,6 +164,12 @@
     font-size: 0.9375rem; /* 15px */
     margin: 0;
     padding: 0;
+    @include fluid-type(
+      7px,
+      15px,
+      $tablet,
+      $laptop
+    ); /* desktop - 53, tablet - 45, small - 38 */
   }
   .case-study-item .callout {
     margin: 0;
@@ -128,5 +183,39 @@
     font-size: 2.5rem; /* 40px */
     font-weight: bold;
     font-family: $font-family-inner-block-headings;
+    @include fluid-type(
+      20px,
+      40px,
+      $tablet,
+      $laptop
+    ); /* desktop - 53, tablet - 45, small - 38 */
+  }
+  .img-responsive {
+    @include media("<desktop") {
+      width: 100%;
+    }
+    &.blur-bleed {
+      @include media("<desktop") {
+        -webkit-transform: translateX(6%);
+        transform: translateX(6%);
+      }
+    }
+  }
+  .img-container {
+    @include media("<desktop") {
+      padding-bottom: 50px;
+    }
+  }
+  .request-demo-footer {
+    h2 {
+      @include media("<desktop") {
+        @include fluid-type(
+          26px,
+          45px,
+          $tablet,
+          $laptop
+        ); /* desktop - 53, tablet - 45, small - 38 */
+      }
+    }
   }
 }
