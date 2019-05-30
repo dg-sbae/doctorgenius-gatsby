@@ -301,7 +301,7 @@ export default props => (
           </div>
           <div className="row padded tall-top request-demo-footer">
             <div className="col-lg-1" />
-            <div className="col-sm-11 col-md-5">
+            <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>
@@ -320,7 +320,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-11 col-md-5">
+            <div className="col-sm-11 col-md-5 col-lg-5">
               <div className="center">
                 <a href="/demo" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
