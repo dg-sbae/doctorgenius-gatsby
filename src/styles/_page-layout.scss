@@ -286,9 +286,10 @@ header {
   a.button {
     @include media("<=tablet") {
       display: inline-block;
-      margin-top: 40px;
+      margin-top: 10px;
       margin-bottom: 60px;
       width: 75%;
+      max-width: 300px;
       text-align: center;
     }
   }

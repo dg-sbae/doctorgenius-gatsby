@@ -55,7 +55,7 @@ export default props => (
             </div>
           </div>
           <div className="row padded short-top">
-            <div className="col-sm-8 col-md-6 col-lg-6 logo-block">
+            <div className="col-sm-8 col-md-6 col-lap-6 col-lg-6 logo-block">
               <img
                 className="img-responsive"
                 src="/icon/titan-dental-care-logo.svg"
@@ -67,7 +67,7 @@ export default props => (
                 alt="Rami Tahhan"
               />
             </div>
-            <div className="col-sm-12 col-lg-6">
+            <div className="col-sm-12 col-md-10 col-lap-6 col-lg-6">
               <div className="">
                 <p>
                   Dr. Rami Tahhan came to us a few years ago and was hardly
@@ -98,7 +98,7 @@ export default props => (
             </div>
           </div>
           <div className="row padded short-top">
-            <div className="col-sm-12 col-md-10 order-2 col-lg-6 order-lg-1">
+            <div className="col-sm-12 col-md-10 order-2 col-lap-6 order-lap-1 col-lg-6 order-lg-1">
               <div className="">
                 <p>
                   The plan was to rebuild his complete online branding with a
@@ -125,7 +125,7 @@ export default props => (
                 <p className="client-author">- Rami Tahhan, D.D.S.</p>
               </div>
             </div>
-            <div className="col-sm-12 col-md-10 order-1 col-lg-6 order-lg-2 img-container">
+            <div className="col-sm-12 col-md-10 order-1 col-lap-6 order-lap-2 col-lg-6 order-lg-2 img-container">
               <img
                 className="img-responsive"
                 src={theChallengeImage}
@@ -142,23 +142,32 @@ export default props => (
             </div>
           </div>
           <div className="row padded short-top">
-            <div className="col-md-12 col-lg-7 our-plans-img-container">
+            <div className="col-md-12 col-lap-7 col-lg-7 our-plans-img-container">
               <img
                 className="img-responsive blur-bleed"
                 src={theSolutionsImage}
                 alt="Search Results Page"
               />
             </div>
-            <div className="col-sm-10 col-md-8 col-lg-5 panel-quadrant">
+            <div className="col-sm-10 col-md-10 col-lap-5 col-lg-5 panel-quadrant">
               <div className="row">
                 <div className="col-sm-12 col-md-6 panel-quad-item">
-                  <img
-                    className="img-responsive"
-                    src="/icon/new-patient-opportunity.svg"
-                    alt="Handshake icon"
-                  />
-                  <div className="">
-                    <h4>New Patient Opportunity</h4>
+                  <div class="panel">
+                    <div className="icon-wrapper">
+                      <img
+                        className="img-icon"
+                        src="/icon/new-patient-opportunity.svg"
+                        alt="Handshake icon"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="panel-quad-text-block">
+                    <h4>
+                      New Patient
+                      <br />
+                      Opportunity
+                    </h4>
                     <p>
                       The goal is to reach every patient wherever they are. In
                       the 6 months we were able to increased new quality patient
@@ -167,13 +176,22 @@ export default props => (
                   </div>
                 </div>
                 <div className="col-sm-12 col-md-6 panel-quad-item">
-                  <img
-                    className="img-responsive"
-                    src="/icon/marketing-solutions-suite.svg"
-                    alt="Webpage icon"
-                  />
-                  <div className="">
-                    <h4>Marketing Solutions Suite</h4>
+                  <div class="panel">
+                    <div className="icon-wrapper">
+                      <img
+                        className="img-icon"
+                        src="/icon/marketing-solutions-suite.svg"
+                        alt="Webpage icon"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="panel-quad-text-block">
+                    <h4>
+                      Marketing
+                      <br />
+                      Solutions Suite
+                    </h4>
                     <p>
                       Our exculsive all-in-one marketing solution keeps our
                       clients digital marketing ahead of there industry. We our
@@ -185,13 +203,21 @@ export default props => (
               </div>
               <div className="row">
                 <div className="col-sm-12 col-md-6 panel-quad-item">
-                  <img
-                    className="img-responsive"
-                    src="/icon/live-support-concierge.svg"
-                    alt="People chat icon"
-                  />
-                  <div className="">
-                    <h4>Live Support Concierge</h4>
+                  <div class="panel">
+                    <div className="icon-wrapper">
+                      <img
+                        className="img-icon"
+                        src="/icon/live-support-concierge.svg"
+                        alt="People chat icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="panel-quad-text-block">
+                    <h4>
+                      Live Support
+                      <br />
+                      Concierge
+                    </h4>
                     <p>
                       Its our duty in making sure the client and his customers
                       are happy. We provide seamless support by taking the time
@@ -201,13 +227,21 @@ export default props => (
                   </div>
                 </div>
                 <div className="col-sm-12 col-md-6 panel-quad-item">
-                  <img
-                    className="img-responsive"
-                    src="/icon/performance-driven-campaigns.svg"
-                    alt="Newspaper icon"
-                  />
-                  <div className="">
-                    <h4>Performance Driven Campaigns</h4>
+                  <div class="panel">
+                    <div className="icon-wrapper">
+                      <img
+                        className="img-icon"
+                        src="/icon/performance-driven-campaigns.svg"
+                        alt="Newspaper icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="panel-quad-text-block">
+                    <h4>
+                      Performance Driven
+                      <br />
+                      Campaigns
+                    </h4>
                     <p>
                       We are driven to improve our clients marketing preformance
                       in all areas. Our technology has proven for the first 6
@@ -225,8 +259,9 @@ export default props => (
                 <h2 className="underline">The Results</h2>
               </div>
             </div>
-            <div className="col-md-7 col-lg-7">
+            <div className="col-md-7 col-lap-7 col-lg-7 case-study-container">
               <div className="inner-title center">
+                <h3 className="m-0">Case Study: Titan Dental</h3>
                 <div className="subtitle muted">The first 6 months</div>
               </div>
               <div className="case-study-table">
@@ -256,7 +291,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-md-5 col-lg-5">
+            <div className="col-md-5 col-lap-5 col-lg-5">
               <img
                 className="img-responsive blur-bleed"
                 src="/png/search-result.png"
