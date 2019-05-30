@@ -535,7 +535,7 @@ export default props => (
                 {/* <!-- cta section: --> */}
                 <div className="grid-item" />
                 <div className="grid-item column-signup">
-                  <a href="/intentional-404/signup" className="button rounder">
+                  <a href="/demo" className="button rounder">
                     Sign Up
                   </a>
                   {/*<a href="/intentional-404/learn-more" className="subtle-link">
@@ -807,7 +807,7 @@ export default props => (
             </div>
             <div className="col-sm-6 col-lg-5">
               <div className="center">
-                <a href="/demo/" className="button flat white-text">
+                <a href="/demo" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>

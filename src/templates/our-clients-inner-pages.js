@@ -61,13 +61,13 @@ export default props => {
                   <div className="secondary-nav">
                     <div
                       className={
-                        (currentPage === "/our-clients/dental-practices/"
+                        (currentPage === "/our-clients/dental-practices"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/our-clients/dental-practices/">
+                        <a href="/our-clients/dental-practices">
                           <img
                             className="img-icon"
                             src={dentalPractices}
@@ -79,13 +79,13 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/our-clients/urgent-care-clinics/"
+                        (currentPage === "/our-clients/urgent-care-clinics"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/our-clients/urgent-care-clinics/">
+                        <a href="/our-clients/urgent-care-clinics">
                           <img
                             className="img-icon"
                             src={urgentCare}
@@ -97,13 +97,13 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/our-clients/chiropractor-practices/"
+                        (currentPage === "/our-clients/chiropractor-practices"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/our-clients/chiropractor-practices/">
+                        <a href="/our-clients/chiropractor-practices">
                           <img
                             className="img-icon"
                             src={chiropractorPractices}
@@ -115,13 +115,13 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/our-clients/cosmetic-surgeons/"
+                        (currentPage === "/our-clients/cosmetic-surgeons"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/our-clients/cosmetic-surgeons/">
+                        <a href="/our-clients/cosmetic-surgeons">
                           <img
                             className="img-icon"
                             src={cosmeticSurgeons}
@@ -133,13 +133,13 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/our-clients/healthcare-marketing/"
+                        (currentPage === "/our-clients/healthcare-marketing"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/our-clients/healthcare-marketing/">
+                        <a href="/our-clients/healthcare-marketing">
                           <img
                             className="img-icon"
                             src={healthcareMarketing}
@@ -215,7 +215,7 @@ export default props => {
                     </div>
                   </div>
                   <div className="center pad-md">
-                    <a href="/case-study/" className="link-with-icon">
+                    <a href="/case-study" className="link-with-icon">
                       <img
                         src="/icon/right-arrow-blue.svg"
                         className="link-icon"
@@ -255,7 +255,7 @@ export default props => {
                           Performance Reporting, Dedicated Support
                           Representative.
                         </p>
-                        <a href="/plans/" className="link-with-icon">
+                        <a href="/plans" className="link-with-icon">
                           <img
                             src="/icon/right-arrow-blue.svg"
                             className="link-icon"

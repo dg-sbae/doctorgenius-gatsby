@@ -172,35 +172,35 @@ const WhoWeServeSideNavListLink = props => (
       </div>
       <ul>
         <ListLink
-          to="/our-clients/dental-practices/"
+          to="/our-clients/dental-practices"
           activeClassName="active"
           partiallyActive={true}
         >
           Dental Practices
         </ListLink>
         <ListLink
-          to="/our-clients/cosmetic-surgeons/"
+          to="/our-clients/cosmetic-surgeons"
           activeClassName="active"
           partiallyActive={true}
         >
           Cosmetic Surgeons
         </ListLink>
         <ListLink
-          to="/our-clients/urgent-care-clinics/"
+          to="/our-clients/urgent-care-clinics"
           activeClassName="active"
           partiallyActive={true}
         >
           Urgent Care Clinics
         </ListLink>
         <ListLink
-          to="/our-clients/healthcare-marketing/"
+          to="/our-clients/healthcare-marketing"
           activeClassName="active"
           partiallyActive={true}
         >
           Healthcare Marketing
         </ListLink>
         <ListLink
-          to="/our-clients/chiropractor-practices/"
+          to="/our-clients/chiropractor-practices"
           activeClassName="active"
           partiallyActive={true}
         >
@@ -240,16 +240,12 @@ const CompanySideNavListLink = props => (
         </span>
       </div>
       <ul>
-        <ListLink
-          to="/company/"
-          activeClassName="active"
-          partiallyActive={true}
-        >
+        <ListLink to="/company" activeClassName="active" partiallyActive={true}>
           About
         </ListLink>
         {/* Hidden until the content for page is finalized */}
         <ListLink
-          to="/partnerships/"
+          to="/partnerships"
           activeClassName="active"
           partiallyActive={true}
         >
@@ -295,7 +291,7 @@ const ResourcesSideNavListLink = props => (
           Webinars
         </ListLink>*/}
         <ListLink
-          to="/case-study/"
+          to="/case-study"
           activeClassName="active"
           partiallyActive={true}
         >
@@ -338,7 +334,7 @@ const OurClientsListLink = props => (
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/our-clients/dental-practices/">
+              <Link className="" to="/our-clients/dental-practices">
                 <div>
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
@@ -346,7 +342,7 @@ const OurClientsListLink = props => (
                     </div>
                   </div>
                   <div className="dropdown-content-block">
-                    <Link className="" to="/our-clients/dental-practices/">
+                    <Link className="" to="/our-clients/dental-practices">
                       Dental Practices
                     </Link>
                     <p>Bringing in new dental patients every day</p>
@@ -355,7 +351,7 @@ const OurClientsListLink = props => (
               </Link>
             </div>
             <div className="col-sm-6">
-              <Link to="/our-clients/cosmetic-surgeons/">
+              <Link to="/our-clients/cosmetic-surgeons">
                 <div>
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
@@ -363,7 +359,7 @@ const OurClientsListLink = props => (
                     </div>
                   </div>
                   <div className="dropdown-content-block">
-                    <Link className="" to="/our-clients/cosmetic-surgeons/">
+                    <Link className="" to="/our-clients/cosmetic-surgeons">
                       Cosmetic Surgeons
                     </Link>
                     <p>Attract new patients to your office</p>
@@ -374,7 +370,7 @@ const OurClientsListLink = props => (
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/our-clients/urgent-care-clinics/">
+              <Link className="" to="/our-clients/urgent-care-clinics">
                 <div>
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
@@ -382,7 +378,7 @@ const OurClientsListLink = props => (
                     </div>
                   </div>
                   <div className="dropdown-content-block">
-                    <Link className="" to="/our-clients/urgent-care-clinics/">
+                    <Link className="" to="/our-clients/urgent-care-clinics">
                       Urgent Care Clinics
                     </Link>
                     <p>
@@ -394,7 +390,7 @@ const OurClientsListLink = props => (
               </Link>
             </div>
             <div className="col-sm-6">
-              <Link className="" to="/our-clients/healthcare-marketing/">
+              <Link className="" to="/our-clients/healthcare-marketing">
                 <div>
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
@@ -402,7 +398,7 @@ const OurClientsListLink = props => (
                     </div>
                   </div>
                   <div className="dropdown-content-block">
-                    <Link className="" to="/our-clients/healthcare-marketing/">
+                    <Link className="" to="/our-clients/healthcare-marketing">
                       Healthcare Marketing
                     </Link>
                     <p>
@@ -415,7 +411,7 @@ const OurClientsListLink = props => (
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/our-clients/chiropractor-practices/">
+              <Link className="" to="/our-clients/chiropractor-practices">
                 <div>
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
@@ -423,10 +419,7 @@ const OurClientsListLink = props => (
                     </div>
                   </div>
                   <div className="dropdown-content-block">
-                    <Link
-                      className=""
-                      to="/our-clients/chiropractor-practices/"
-                    >
+                    <Link className="" to="/our-clients/chiropractor-practices">
                       Chiropractor Practices
                     </Link>
                     <p>
@@ -616,13 +609,13 @@ const CompanyListLink = props => (
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/company/">
+              <Link className="" to="/company">
                 <div>
                   <div className="nav-icon-wrapper">
                     <img className="image-icon" src={company} />
                   </div>
                   <div className="dropdown-content-block">
-                    <Link className="" to="/company/">
+                    <Link className="" to="/company">
                       About
                     </Link>
                     <p>
@@ -634,7 +627,7 @@ const CompanyListLink = props => (
               </Link>
             </div>
             <div className="col-sm-6">
-              <Link className="" to="/partnerships/">
+              <Link className="" to="/partnerships">
                 <div>
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
@@ -642,7 +635,7 @@ const CompanyListLink = props => (
                     </div>
                   </div>
                   <div className="dropdown-content-block">
-                    <Link className="" to="/partnerships/">
+                    <Link className="" to="/partnerships">
                       Partnerships
                     </Link>
                     <p>Establishing value-added partnerships</p>
@@ -692,7 +685,7 @@ const StudySingleListLink = props => (
               </Link>
             </div>
             <div className="col-sm-6">
-              <Link className="" to="/case-study/">
+              <Link className="" to="/case-study">
                 <div>
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
@@ -700,7 +693,7 @@ const StudySingleListLink = props => (
                     </div>
                   </div>
                   <div className="dropdown-content-block">
-                    <Link className="" to="/case-study/">
+                    <Link className="" to="/case-study">
                       Case Studies
                     </Link>
                     <p>
@@ -720,7 +713,7 @@ const StudySingleListLink = props => (
               </div>
 
               <div className="dropdown-content-block">
-                <Link className="" to="/intentional-404/">
+                <Link className="" to="/intentional-404">
                   Webinars
                 </Link>
                 <p>
@@ -740,7 +733,7 @@ const StudySingleListLink = props => (
               </div>
 
               <div className="dropdown-content-block">
-                <Link className="" to="/case-study/">
+                <Link className="" to="/case-study">
                   Case Studies
                 </Link>
                 <p>
@@ -757,7 +750,7 @@ const StudySingleListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to="/intentional-404/">
+                <Link className="" to="/intentional-404">
                   Knowledge Base
                 </Link>
                 <p>
@@ -776,7 +769,7 @@ const StudySingleListLink = props => (
                 </div>
               </div>
               <div className="dropdown-content-block">
-                <Link className="" to="/intentional-404/">
+                <Link className="" to="/intentional-404">
                   eBooks &amp; Whitepapers
                 </Link>
                 <p>
@@ -1037,20 +1030,20 @@ class Navigation extends Component {
                   Our Clients
                 </OurClientsListLink>
 
-                <ListLink className="" to="/plans/">
+                <ListLink className="" to="/plans">
                   Plans
                 </ListLink>
                 <CompanyListLink
                   className="nav-item dropdown company-dropdown"
                   dataToggle="dropdown"
-                  to="/company/"
+                  to="/company"
                 >
                   Company
                 </CompanyListLink>
                 <StudySingleListLink
                   className="nav-item dropdown resources-dropdown"
                   dataToggle="dropdown"
-                  to="/the-study/"
+                  to="/the-study"
                 >
                   Resources
                 </StudySingleListLink>

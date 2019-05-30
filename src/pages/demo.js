@@ -33,16 +33,36 @@ export default props => (
         {/* Hero will be a layout component */}
         <Container>
           <div className="valign-wrapper row">
-            <div className="col-sm-8">
+            <div className="col-md-10 order-md-1 col-lg-8 order-lg-1 float-lg-left">
               <h1>Experience The Solution for Optimal Practice Growth</h1>
-              <p>
+              <p class="disappear">
                 Need help with new patient acquisitions, patient reminders, and
                 retention? Sign up for our demo to learn how you can have
                 predictable practice growth with Doctor Genius.
               </p>
-              <hr />
-              <div class="row valign-wrapper padded short-top">
-                <div class="col-sm-5">
+              <hr class="disappear" />
+            </div>
+            <div class="col-md-7 order-md-2 col-lap-5 col-lg-4 order-lg-2 float-lg-right p-10 contact-form-container">
+              <div class="contact-form">
+                <div class="header">
+                  <h3>Contact us now for a FREE Consultation</h3>
+                </div>
+                <div class="form-body">
+                  <ContactForm />
+                  <p class="fine-print">
+                    *By registering I confirm that I have read and agree to the{" "}
+                    <Link to="/privacy-policy" target="_blank">
+                      Privacy Statement
+                    </Link>
+                    .
+                  </p>
+                  <img src={sslBadge} />
+                </div>
+              </div>
+            </div>
+            <div className="col-md-9 order-md-3 col-lg-8 order-lg-3 float-lg-left demo-plans-row">
+              <div className="valign-wrapper row">
+                <div class="col-md-12 col-lap-10 col-lg-5 our-plans-text">
                   <div class="content-block">
                     <div class="inner-title">
                       <h2>Our Plans</h2>
@@ -56,7 +76,7 @@ export default props => (
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-md-9 col-lap-8 col-lg-7 our-plans-chart">
                   <div class="plan-details">
                     <div class="title">
                       <h3>Silver Plan</h3>
@@ -97,24 +117,6 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div class="col-sm-4 p-10">
-              <div class="contact-form">
-                <div class="header">
-                  <h3>Contact us now for a FREE Consultation</h3>
-                </div>
-                <div class="form-body">
-                  <ContactForm />
-                  <p class="fine-print">
-                    *By registering I confirm that I have read and agree to the{" "}
-                    <Link to="/privacy-policy" target="_blank">
-                      Privacy Statement
-                    </Link>
-                    .
-                  </p>
-                  <img src={sslBadge} />
-                </div>
-              </div>
-            </div>
           </div>
         </Container>
       </div>
@@ -129,7 +131,7 @@ export default props => (
           </div>
           <div className="row padded short-top">
             <div className="col-lg-1" />
-            <div className="col-sm-10">
+            <div className="col-sm-12 col-md-10 col-lg-12">
               <div class="review">
                 <div class="author">
                   <img class="portrait" src={Dennis} alt="Review Author" />
@@ -183,7 +185,7 @@ export default props => (
 
           <div className="row padded short-top">
             <div className="col-lg-1" />
-            <div className="col-sm-10">
+            <div className="col-sm-12 col-md-10 col-lg-12">
               <div class="review">
                 <div class="author">
                   <img class="portrait" src={Taylor} alt="Review Author" />
@@ -247,7 +249,7 @@ export default props => (
 
           <div className="row padded short-top">
             <div className="col-lg-1" />
-            <div className="col-sm-10">
+            <div className="col-sm-12 col-md-10 col-lg-12">
               <div class="review">
                 <div class="author">
                   <img class="portrait" src={Daniel} alt="Review Author" />
@@ -296,7 +298,7 @@ export default props => (
 
           <div className="row padded short-top">
             <div className="col-lg-1" />
-            <div className="col-sm-10">
+            <div className="col-sm-12 col-md-10 col-lg-12">
               <div class="review">
                 <div class="author">
                   <img class="portrait" src={Christina} alt="Review Author" />
@@ -339,7 +341,7 @@ export default props => (
 
           <div className="row padded short-top">
             <div className="col-lg-1" />
-            <div className="col-sm-10">
+            <div className="col-sm-12 col-md-10 col-lg-12">
               <div class="review">
                 <div class="author">
                   <img class="portrait" src={Erika} alt="Review Author" />
@@ -380,7 +382,7 @@ export default props => (
 
           <div className="row padded short-top">
             <div className="col-lg-1" />
-            <div className="col-sm-10">
+            <div className="col-sm-12 col-md-10 col-lg-12">
               <div class="review">
                 <div class="author">
                   <img class="portrait" src={Roberto} alt="Review Author" />
@@ -418,7 +420,7 @@ export default props => (
 
           <div className="row padded short-top">
             <div className="col-lg-1" />
-            <div className="col-sm-10">
+            <div className="col-sm-12 col-md-10 col-lg-12">
               <div class="review">
                 <div class="author">
                   <img class="portrait" src={Justine} alt="Review Author" />
@@ -468,7 +470,7 @@ export default props => (
 
           <div className="row padded short-top">
             <div className="col-lg-1" />
-            <div className="col-sm-10">
+            <div className="col-sm-12 col-md-10 col-lg-12">
               <div class="review">
                 <div class="author">
                   <img class="portrait" src={Alexandra} alt="Review Author" />
@@ -503,7 +505,7 @@ export default props => (
 
           <div className="row padded short-top">
             <div className="col-lg-1" />
-            <div className="col-sm-10">
+            <div className="col-sm-12 col-md-10 col-lg-12">
               <div class="review">
                 <div class="author">
                   <img class="portrait" src={Diamond} alt="Review Author" />

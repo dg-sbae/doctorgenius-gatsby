@@ -50,7 +50,7 @@ export default props => (
                 <div className="secondary-nav">
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/websites/">
+                      <a href="/marketing-solutions/websites">
                         <img
                           className="img-icon"
                           src={responsiveWebsitesIcon}
@@ -62,7 +62,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/content-marketing/">
+                      <a href="/marketing-solutions/content-marketing">
                         <img
                           className="img-icon"
                           src={contentMarketingIcon}
@@ -74,7 +74,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/digital-advertising/">
+                      <a href="/marketing-solutions/digital-advertising">
                         <img
                           className="img-icon"
                           src={digitalAdvertisingIcon}
@@ -86,7 +86,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/online-reputation-management/">
+                      <a href="/marketing-solutions/online-reputation-management">
                         <img
                           className="img-icon"
                           src={onlineReputationIcon}
@@ -98,7 +98,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/our-technology/">
+                      <a href="/marketing-solutions/our-technology">
                         <img
                           className="img-icon"
                           src={ourTechnologyIcon}
@@ -110,7 +110,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/hosting-solutions/">
+                      <a href="/marketing-solutions/hosting-solutions">
                         <img
                           className="img-icon"
                           src={hostingSolutionsIcon}
@@ -138,7 +138,7 @@ export default props => (
                       Nunc dui turpis, sodales ut mollis quis, ullamcorper a
                       metus
                     </p>
-                    <a href="/case-study/" className="link-with-icon">
+                    <a href="/case-study" className="link-with-icon">
                       <img
                         src="/icon/right-arrow-blue.svg"
                         className="link-icon"
@@ -211,7 +211,7 @@ export default props => (
                         Nunc dui turpis, sodales ut mollis quis, ullamcorper a
                         metus
                       </p>
-                      <a href="/plans/" className="link-with-icon">
+                      <a href="/plans" className="link-with-icon">
                         <img
                           src="/icon/right-arrow-blue.svg"
                           className="link-icon"

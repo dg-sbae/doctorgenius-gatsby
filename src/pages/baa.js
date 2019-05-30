@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -9,6 +10,9 @@ import "../styles/baa.scss"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
+    <Helmet>
+      <title>Standard Business Associate Agreement | Doctor Genius</title>
+    </Helmet>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}
@@ -20,7 +24,8 @@ export default props => (
                 <div className="hero-content accent-block">
                   <h1>BAA</h1>
                   <h2>
-                    <span>Standard Business Associate Agreement</span>
+                    <span>Standard Business </span>
+                    Associate Agreement
                   </h2>
                   <div className="accented-paragraph">
                     <p>

@@ -5,7 +5,7 @@ import OurClientsInnerPages from "../../templates/our-clients-inner-pages"
 export default () => (
   <OurClientsInnerPages
     className="urgent-care-clinics "
-    page="/our-clients/urgent-care-clinics/" /* this should be dynamic from the page props */
+    page="/our-clients/urgent-care-clinics" /* this should be dynamic from the page props */
     pageTitle="Urgent Care Clinics"
     pageSubTitle="<span>Broaden Your</span> Online Presence <span>For New Patients to</span> Find You"
     pageIntro="We bring you a robust platform and digital marketing solutions that focus on new patient acquisition."

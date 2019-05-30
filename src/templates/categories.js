@@ -151,22 +151,22 @@ const CategoriesPage = ({ data, pageContext }) => {
                   <a href="/intentional-404/PreviousPostsPage">
                     <img src={leftChevron} alt="Navigate to Previous" />
                   </a>
-                  <a href="/intentional-404/">
+                  <a href="/intentional-404">
                     <p className="active">1</p>
                   </a>
-                  <a href="/intentional-404/">
+                  <a href="/intentional-404">
                     <p>2</p>
                   </a>
-                  <a href="/intentional-404/">
+                  <a href="/intentional-404">
                     <p>3</p>
                   </a>
-                  <a href="/intentional-404/">
+                  <a href="/intentional-404">
                     <p>4</p>
                   </a>
-                  <a href="/intentional-404/">
+                  <a href="/intentional-404">
                     <p>5</p>
                   </a>
-                  <a href="/intentional-404/">
+                  <a href="/intentional-404">
                     <img src={rightChevron} alt="Navigate to Next" />
                   </a>
                 </div>

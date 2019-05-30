@@ -178,7 +178,7 @@ export default props => (
             </div>
           </div>
           <div className="row padded tall-top request-demo-footer">
-            <div className="col-sm-8 .offset-sm-2 order-sm-2 col-md-6 offset-md-0 order-md-1">
+            <div className="col-sm-8  order-sm-2 col-md-6 offset-md-0 order-md-1">
               <div className="content-block">
                 <div className="innerTitle">
                   <h2 className="font-weight-normal">
@@ -197,7 +197,7 @@ export default props => (
                       States.
                     </p>
                     <a
-                      href="/demo/"
+                      href="/demo"
                       className="link-with-icon font-weight-semibold"
                     >
                       <img

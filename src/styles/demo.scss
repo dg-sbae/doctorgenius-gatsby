@@ -13,6 +13,7 @@
   }
   header {
     background: $primary;
+    box-shadow: 0 1px 1px #e0e0e0;
     nav.navbar.main-navbar-stuck {
       background: $primary;
     }
@@ -46,8 +47,24 @@
     padding: 10px;
   }
   .hero {
-    height: 770px;
-    padding-top: 90px;
+    height: auto;
+    padding-top: 165px;
+    @include media("<desktop") {
+      padding-top: 110px;
+    }
+    .row {
+      @include media(">=desktop") {
+        display: inline-block;
+      }
+    }
+
+    hr {
+      @include media(">=desktop") {
+        margin: 40px 0 31px;
+      }
+    }
+
+    padding-bottom: 50px;
     background: url("/png/pixel-map.png");
     &:before {
       position: absolute;
@@ -60,29 +77,65 @@
     }
     h1 {
       font-size: 64px;
+      @include fluid-type(
+        40px,
+        58px,
+        $tablet,
+        $laptop
+      ); /* desktop - 53, tablet - 45, small - 38 */
+
       line-height: 1;
-      font-weight: $font-weight-normal;
+      font-weight: $font-weight-medium;
       margin-bottom: 25px;
       & + p {
         font-weight: $font-weight-light;
         color: #707070;
         font-size: 18px;
         margin-bottom: 20px;
+        @include media("<desktop") {
+          padding: 0 3%;
+          text-align: center;
+        }
+      }
+      @include media("<desktop") {
+        padding: 0 1%;
+        font-size: 50px;
+        text-align: center;
+      }
+      @include media("<=tablet") {
+        font-size: 35px;
       }
     }
     .inner-title {
       h2 {
         margin-bottom: 10px;
-        font-weight: $font-weight-normal;
+        font-weight: $font-weight-medium;
+        @include media("<=desktop") {
+          font-size: 45px;
+        }
+        // @include fluid-type(
+        //   $h2-font-size-main * 0.65,
+        //   $h2-font-size-main,
+        //   $phone,
+        //   $tablet
+        // ); //font-size: $h2-font-size-main;
       }
       .accented-paragraph p {
         font-size: 17px;
       }
     }
   }
+  .inner-title {
+    h2 {
+      @include media("<=desktop") {
+        font-size: 45px;
+      }
+    }
+  }
+
   .plan-details {
     position: relative;
-    padding: 20px;
+    padding: 20px 20px 20px 0;
     display: flex;
     border-bottom: 1px solid #e6e6e6;
     display: flex;
@@ -92,7 +145,6 @@
       width: 65%;
       padding-right: 20px;
       text-align: right;
-
       margin-bottom: 0;
       line-height: 1;
     }
@@ -113,20 +165,22 @@
       border-bottom: none;
     }
   }
-  .plan-details h3 {
-    font-family: "Agenda", sans-serif;
-    line-height: 0.6;
-  }
-  .plan-details h4 {
-    font-family: montserrat, sans-serif;
-    line-height: 0.75;
-  }
   .plan-details h3,
   .plan-details h4 {
     font-family: "Agenda", sans-serif;
     font-size: 40px;
     font-weight: $font-weight-normal;
   }
+  .plan-details h3 {
+    font-family: "Agenda", sans-serif;
+    line-height: 0.8;
+  }
+  .plan-details h4 {
+    font-family: montserrat, sans-serif;
+    line-height: 0.75;
+    font-weight: $font-weight-medium;
+  }
+
   .hero h1 + p,
   .fine-print,
   .details p {
@@ -146,12 +200,18 @@
     text-transform: uppercase;
     color: #0074cf;
   }
+  .contact-form-container {
+    @include media("<desktop") {
+      padding-bottom: 50px;
+    }
+  }
   .contact-form {
     height: 620px;
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     text-align: center;
     background: white;
+
     .header {
       height: auto;
       background: linear-gradient(to right, #0074cf, #1094fe);
@@ -226,15 +286,23 @@
   .main-content {
     background: url("/png/squares-background.png");
     background-size: 4px;
+    padding-bottom: 5%;
   }
   .review {
     display: flex;
     align-items: center;
+    @include media("<desktop") {
+      align-items: flex-start;
+    }
     .body {
       width: 80%;
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
+      margin-left: 28px;
+      @include media("<=tablet") {
+        width: 100%;
+      }
       .stars {
         flex-basis: 200px;
         margin-right: 10px;
@@ -265,13 +333,63 @@
       font-size: 14px;
       font-weight: $font-weight-normal;
       color: #707070;
+      @include media("<=tablet") {
+        display: none;
+      }
       .portrait {
         border-radius: 50%;
-        max-width: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
+        // max-width: 100%;
+        max-width: 105px;
+        width: 105px;
+        @include media("<desktop") {
+          width: 85%;
+        }
+        // padding-left: 50px;
+        // padding-right: 50px;
         margin-bottom: 20px;
       }
+    }
+  }
+
+  .content-block {
+    .inner-title {
+      h2 {
+        @include media("<desktop") {
+          // padding: 0 1%;
+          // font-size: 50px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .our-plans-chart {
+    .fine-print {
+      @include media("<desktop") {
+        text-align: center;
+      }
+    }
+  }
+
+  .demo-plans-row {
+    .our-plans-text,
+    .our-plans-chart {
+      @include media(">=desktop") {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+      }
+    }
+    .our-plans-section {
+      @include media(">=desktop") {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .disappear {
+    @include media("<=tablet") {
+      display: none;
     }
   }
 }
