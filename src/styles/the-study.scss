@@ -311,4 +311,13 @@
       }
     }
   }
+  .request-demo-footer {
+    a {
+      &.button {
+        &:hover {
+          background-color: $button-hover-green;
+        }
+      }
+    }
+  }
 }
