@@ -47,8 +47,9 @@ function PostPage({ pageContext, data }) {
   */
 
   return (
-    <DefaultPageLayout>
-      <div className="the-study-post">
+    <DefaultPageLayout location="the-study-post">
+      <div className="page-wrapper">
+        <div class="hero-padding" />
         <Main>
           <Container>
             <div className="row padded short-bottom">
@@ -96,23 +97,6 @@ function PostPage({ pageContext, data }) {
                         <p className="author">{post.author.name}</p>
                       </div>
                     </div>
-<<<<<<< HEAD
-                    <div className="share-icons">
-                      <p>Share:</p>
-                      <a href="https://www.facebook.com/DoctorGeniusMarketing">
-                        <img src={facebookIcon} alt="Facebook" />
-                      </a>
-                      <a href="https://twitter.com/DoctorGeniusCA">
-                        <img src={twitterIcon} alt="Twitter" />
-                      </a>
-                      <a href="https://www.instagram.com/doctor.genius">
-                        <img src={instagramIcon} alt="Instagram" />
-                      </a>
-                      <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
-                        <img src={youtubeIcon} alt="YouTube" />
-                      </a>
-=======
-
                     <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
                       <div className="share-icons">
                         <p>Share:</p>
@@ -129,7 +113,6 @@ function PostPage({ pageContext, data }) {
                           <img src={youtubeIcon} alt="YouTube" />
                         </a>
                       </div>
->>>>>>> 555bc9a1ead18f54288edbef2f4b7f6804ad418a
                     </div>
                   </div>
                   <div className="col-lg-1" />
@@ -202,18 +185,17 @@ function PostPage({ pageContext, data }) {
                 {/* End Events component */}
               </div>
             </div>
+            {/* Begin Demo Footer */}
             <div className="row padded tall-top request-demo-footer">
-              <div className="col-lg-1" />
-              <div className="col-sm-6 col-lg-5">
+              <div className="col-md-1" />
+              <div className="col-sm-9 col-md-5">
                 <div className="content-block">
                   <div className="inner-title">
                     <h2>
-                      Start your
-                      <span className="font-weight-semibold"> success </span>
-                      with Doctor Genius today!
+                      Start your <span>success</span> with Doctor Genius today!
                     </h2>
                     <div className="accented-paragraph">
-                      <p className="s-thin">
+                      <p>
                         The Genius platform makes every part of your company
                         process more efficient. Our support team is very excited
                         to help you and get your company on the right path of
@@ -223,15 +205,15 @@ function PostPage({ pageContext, data }) {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-6 col-lg-5">
+              <div className="col-sm-9 col-md-5">
                 <div className="center">
                   <a href="/demo" className="button flat white-text">
                     Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>
               </div>
-              <div className="col-lg-1" />
             </div>
+            {/* End Demo Footer */}
           </Container>
         </Main>
       </div>
