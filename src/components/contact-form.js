@@ -46,17 +46,18 @@ class ContactForm extends React.Component {
     ev.preventDefault()
 
     const data = new FormData()
-    /*
-    data.append("name", this.name.value)
+
+    /*data.append("name", this.name.value)
     data.append("phone", this.phone.value)
     data.append("email", this.email.value)
-    data.append("company", this.company.value)
-    */
+    data.append("company", this.company.value)*/
+    let hardName = "jsonData in body, explicit url encode header"
+    let hardPhone = "1234567890"
+    let hardEmail = "jparmenter@doctorgenius.com"
+    let hardCompany = "Hardcoded Company"
+    /*
     console.log("Data: ", data)
-    data.append("name", "Hardcoded Sent Without -form-encoded header")
-    data.append("phone", "1234567890")
-    data.append("email", "jparmenter@doctorgenius.com")
-    data.append("company", "Hardcoded Company")
+    */
     console.log("Data: ", data)
     alert(
       "Debug -- Data sent to server:\n" +
@@ -72,14 +73,28 @@ class ContactForm extends React.Component {
         "\nphone: " +
         this.phone.value
     )
-
-    console.log("Data: ", data)
-    console.log("Stringified: ", JSON.stringify(data))
+    let stringData
+    console.log(Object.fromEntries(data))
+    console.log("Stringified: ", JSON.stringify(Object.fromEntries(data)))
+    let jsonData = {
+      name: hardName,
+      phone: hardPhone, //this.phone.value,
+      email: hardEmail, //this.email.value,
+      company: hardCompany, //this.company.value,
+    }
+    console.log("json data: ", jsonData)
     fetch("http://nodetest.dgd3v.com/upload", {
       method: "POST",
-      body: data,
+      body: {
+        name: "Jared Test",
+        phone: "1234567890",
+        company: "Company test",
+        email: "test@test.com",
+      },
       headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
         /*
+        "Content-Type": "application/x-www-form-urlencoded",
         "Content-Type": "multipart/form-data",
         "Content-Type": "application/x-www-form-urlencoded",
         "Content-Type": "multipart/form-data",
