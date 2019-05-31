@@ -1,16 +1,16 @@
 # Old 301s from the WP doctorgenius.com
-Redirect 301 /events/business-dentistry-2017-08-04/ https://doctorgenius.com/business-dentistry-2017-08-04/
-Redirect 301 /events/ce/ https://doctorgenius.com/ce/
-Redirect 301 /events/google-partners-healthcare-marketing-091817/ https://doctorgenius.com/google-partners-healthcare-marketing-091817/
-Redirect 301 /events/google-partners-mobile-marketing-111517/ https://doctorgenius.com/google-partners-mobile-marketing-111517
-Redirect 301 /events/marketing-millennials-03152018/ https://doctorgenius.com/marketing-millennials-03152018
-Redirect 301 /events/webinar-04062018/ https://doctorgenius.com/webinar-04062018
-Redirect 301 /privacy-policy/ /privacy/
-Redirect 301 /CDA/ https://go.doctorgenius.com/cda
-Redirect 301 /cda/ https://go.doctorgenius.com/cda
+Redirect 301 /events/business-dentistry-2017-08-04/ /
+Redirect 301 /events/ce/ /
+Redirect 301 /events/google-partners-healthcare-marketing-091817/ /
+Redirect 301 /events/google-partners-mobile-marketing-111517/ /
+Redirect 301 /events/marketing-millennials-03152018/ /
+Redirect 301 /events/webinar-04062018/ /
+Redirect 301 /privacy-policy/ /
+Redirect 301 /CDA/ /
+Redirect 301 /cda/ /
 
 #New 301s to support old content from WP dg.com
-RewriteRule (^.*?)/?$ $1
+#RewriteRule (^.*?)/?$ $1
 
 Redirect 302 /events /
 Redirect 301 /portal /
