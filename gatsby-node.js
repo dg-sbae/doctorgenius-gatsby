@@ -53,6 +53,9 @@ exports.createPages = ({ graphql, actions }) => {
       }
       const postTemplate = path.resolve("./src/templates/post.js")
       const categoryTemplate = path.resolve("./src/templates/categories.js")
+      const latestPaginationTemplate = path.resolve(
+        "./src/templates/the-study-pagination.js"
+      )
 
       // We want to create a detailed page for each
       // post node. We'll just use the WordPress Slug for the slug.
@@ -62,6 +65,25 @@ exports.createPages = ({ graphql, actions }) => {
           path: `/the-study/${edge.node.slug}/`,
           component: slash(postTemplate),
           context: edge.node,
+        })
+      })
+
+      // Create the pagination pages for The Study archive
+      const numPosts = result.data.allWordpressPost.edges.length
+      const postsPerPage = 5
+      const numPages = Math.ceil(numPosts / postsPerPage)
+      // console.log(numPages)
+
+      Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? `/the-study` : `/the-study/${i + 1}`,
+          component: latestPaginationTemplate,
+          context: {
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages,
+            currentPage: i + 1,
+          },
         })
       })
 
