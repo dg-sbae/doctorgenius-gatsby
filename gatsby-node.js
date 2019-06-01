@@ -72,6 +72,7 @@ exports.createPages = ({ graphql, actions }) => {
       const numPosts = result.data.allWordpressPost.edges.length
       const postsPerPage = 5
       const numPages = Math.ceil(numPosts / postsPerPage)
+      const numPaginationLinks = numPages <= 5 ? numPages : 5
       // console.log(numPages)
 
       Array.from({ length: numPages }).forEach((_, i) => {
@@ -82,6 +83,7 @@ exports.createPages = ({ graphql, actions }) => {
             limit: postsPerPage,
             skip: i * postsPerPage,
             numPages,
+            numPaginationLinks,
             currentPage: i + 1,
           },
         })

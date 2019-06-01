@@ -21,6 +21,7 @@ import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
+import { isContext } from "vm"
 
 const ResponsivePostsColumnHeader = props => (
   <div className="col-sm-12 d-lg-none responsive-tab-trigger">
@@ -111,6 +112,31 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
     },
     { name: "Genius Lab", slug: "genius-lab", image: geniusLabImage },
   ]
+  // Variables for the next/prev button in pagination
+  const isFirst = pageContext.currentPage === 1
+  const isLast = pageContext.currentPage === pageContext.numPages
+  const prevPage =
+    pageContext.currentPage - 1 === 1
+      ? "/the-study"
+      : "/the-study/" + (pageContext.currentPage - 1).toString()
+  const nextPage = "/the-study/" + (pageContext.currentPage + 1).toString()
+
+  // Variables used in the pagination loop
+  const currentPage = pageContext.currentPage
+  const numPages = pageContext.numPages
+  var start
+  // Conditionals to choose where to start the pagination links
+  if (numPages > 5) {
+    if (currentPage - 2 >= 1 && currentPage + 2 <= numPages) {
+      start = currentPage - 2
+    } else if (currentPage - 2 < 1) {
+      start = 1
+    } else if (currentPage + 2 > numPages) {
+      start = numPages - (pageContext.numPaginationLinks - 1)
+    }
+  } else {
+    start = 1
+  }
 
   return (
     <DefaultPageLayout>
@@ -230,21 +256,42 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                   })}
 
                   <div className="pagination">
-                    <a href="/intentional-404">
-                      <img src={leftChevron} alt="Navigate to Previous" />
-                    </a>
-                    {// Loop to create pagination links based on numOfPages in
-                    Array.from({ length: pageContext.numPages }, (_, i) => (
-                      <Link
-                        key={`pagination-number${i + 1}`}
-                        to={`/the-study${i === 0 ? "" : "/" + (i + 1)}`}
-                      >
-                        {i + 1}
+                    {// Controls the prev button
+                    !isFirst && (
+                      <Link to={prevPage} rel="prev">
+                        <img src={leftChevron} alt="Navigate to Previous" />
                       </Link>
-                    ))}
-                    <a href="/intentional-404/NextPostsPage">
-                      <img src={rightChevron} alt="Navigate to Next" />
-                    </a>
+                    )}
+                    {}
+                    {// Loop to create pagination links based on numOfPages
+
+                    Array.from(
+                      { length: pageContext.numPaginationLinks },
+                      (_, i) => (
+                        <Link
+                          key={`pagination-number${i + start}`}
+                          to={`/the-study${
+                            i + start - 1 === 0 ? "" : "/" + (i + start)
+                          }`}
+                        >
+                          <p
+                            className={
+                              pageContext.currentPage === i + start
+                                ? "active"
+                                : ""
+                            }
+                          >
+                            {i + start}
+                          </p>
+                        </Link>
+                      )
+                    )}
+                    {// Controls the next button
+                    !isLast && (
+                      <Link to={nextPage} rel="next">
+                        <img src={rightChevron} alt="Navigate to Next" />
+                      </Link>
+                    )}
                   </div>
                 </LatestPostsColumn>
                 <PopularPostsColumn>
