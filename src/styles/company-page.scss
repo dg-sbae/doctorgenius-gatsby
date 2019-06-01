@@ -14,6 +14,14 @@
     }
   }
 
+  @include media("<tablet") {
+    .logo img {
+      margin-top: 40px;
+    }
+  }
+  .request-demo-footer > div {
+    margin-top: 50px;
+  }
   .panel {
     a {
       text-decoration: none;

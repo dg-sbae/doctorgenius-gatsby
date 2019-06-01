@@ -4,7 +4,7 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 
 export default () => (
   <MarketingSolutionsTemplate
-    page="/marketing-solutions/hosting-solutions" /* this should be dynamic from the page props */
+    page="hosting-solutions" /* this should be dynamic from the page props */
     pageTitle="Hosting Solutions"
     pageSubtitle="Enterprise Power <span>for Medical Practice Websites</span>"
     pageIntro="We’re always first in line when it comes to running the latest technology."

@@ -9,8 +9,8 @@ import "../styles/case-study.scss"
 
 import thinArrowRight from "../img/right-arrow.svg"
 import theSolutionsImage from "../img/the-solutions-tablet-and-search.png"
-import theChallengeImage from "../img/the-challenge-placeholder.png"
-import ramiTahhanImage from "../img/rami-tahhan.png"
+import theChallengeImage from "../img/titan-office.png"
+import titanDentalLogo from "../img/titan-dental-care.png"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
@@ -58,13 +58,8 @@ export default props => (
             <div className="col-sm-8 col-md-6 col-lap-6 col-lg-6 logo-block">
               <img
                 className="img-responsive"
-                src="/icon/titan-dental-care-logo.svg"
+                src={titanDentalLogo}
                 alt="Titan Dental Care logo"
-              />
-              <img
-                className="img-responsive"
-                src={ramiTahhanImage}
-                alt="Rami Tahhan"
               />
             </div>
             <div className="col-sm-12 col-md-10 col-lap-6 col-lg-6">
