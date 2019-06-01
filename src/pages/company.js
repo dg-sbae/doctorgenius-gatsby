@@ -82,7 +82,7 @@ const testimonialContent = [
 ]
 
 export default props => (
-  <DefaultPageLayout location={props["*"]}>
+  <DefaultPageLayout location="company">
     <Helmet>
       <title>
         Boosting Your Brand Online | Digital Marketing Agency | Doctor Genius
@@ -117,7 +117,7 @@ export default props => (
       <Main>
         <Container>
           <div className="row padded tall-top">
-            <div className="col-sm-6">
+            <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6">
               <div className="content-block">
                 <div className="innerTitle">
                   <h2 className="font-weight-medium">
@@ -128,7 +128,7 @@ export default props => (
                 </div>
                 <div className="accented-paragraph">
                   <p>
-                    We are based in Irvine, California, USA. Dental Genius has
+                    We are based in Irvine, California, USA. Doctor Genius has
                     consistent 5 Star Ratings on Google+, and A Rated with the
                     BBB. We employ and all-star development, support, and sales
                     team to provide high level online marketing solutions to
@@ -137,7 +137,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 center">
+            <div className="col-sm-12 col-md-6 center logo">
               <img src="/icon/logo-blue.svg" alt="Our Logo" />
             </div>
           </div>
@@ -151,7 +151,7 @@ export default props => (
                 </h2>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -167,7 +167,7 @@ export default props => (
                 </p>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -183,7 +183,7 @@ export default props => (
                 </p>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -192,14 +192,14 @@ export default props => (
                     alt="Icon of a Group of Doctors"
                   />
                 </div>
-                <p className="panel-heading">30 +</p>
+                <p className="panel-heading">70 +</p>
                 <p className="panel-body">
                   In-House Support, Development, and Writers work for Doctor
                   Genius
                 </p>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div className="icon-wrapper">
                   <img
@@ -221,11 +221,15 @@ export default props => (
               </div>
             </div>
           </div>
-          <div className="row padded">
-            <div className="col-sm-6">
-              <img src="/png/search-result.png" alt="Search Results Page" />
+          <div className="row padded p-sm-0">
+            <div className="col-sm-12 col-md-6">
+              <img
+                src="/png/search-result.png"
+                className="img-responsive"
+                alt="Search Results Page"
+              />
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-12 col-md-6">
               <div className="callout">
                 <div className="inner-title center">
                   <h2 className="underline short font-weight-normal">
@@ -287,7 +291,7 @@ export default props => (
             </div>
           </div>
           <div className="row padded tall-top request-demo-footer">
-            <div className="col-sm-6">
+            <div className="col-sm-10 offset-sm-1  offset-md-0 col-md-6 order-sm-2 order-md-1">
               <div className="content-block">
                 <div className="innerTitle">
                   <h2 className="font-weight-normal">
@@ -298,7 +302,7 @@ export default props => (
                   </h2>
                   <div className="accented-paragraph">
                     <p>
-                      We are based in Irvine, California, USA. Dental Genius has
+                      We are based in Irvine, California, USA. Doctor Genius has
                       consistent 5 Star Ratings on Google+, and A Rated with the
                       BBB. We employ and all-star development, support, and
                       sales team to provide high level online marketing
@@ -320,7 +324,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6 order-sm-1 order-md-2">
               <img
                 className="img-responsive"
                 src="/png/computer-and-mobile-detail.png"
