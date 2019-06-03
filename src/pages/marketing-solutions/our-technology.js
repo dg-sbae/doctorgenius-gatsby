@@ -22,7 +22,7 @@ export default () => (
             "Get the information you need about your marketing program and performance in one easy to use dashboard. Our plans come with access to our data-packed platform.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/our-technology-row-1.png",
           alt: "Lorem Ipsum",
         },
       },
@@ -38,7 +38,7 @@ export default () => (
             "Get a detailed breakdown of your leads and their disposition. Know the outcome of each instance you receive an incoming call by date, hour, and day.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/our-technology-row-2.png",
           alt: "Lorem Ipsum",
         },
       },
@@ -54,7 +54,7 @@ export default () => (
             "Narrow down what are your successful keywords, who is clicking on them, and which ones yield the highest number of new patient inquiries.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/our-technology-row-3.png",
           alt: "Lorem Ipsum",
         },
       },

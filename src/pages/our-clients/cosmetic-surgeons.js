@@ -55,9 +55,8 @@ export default () => (
                approach to any of my requests.  I would recommend Dr Genius to any business looking\
                to improve their Google rating and web site/social media exposure.</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "FS",
             },
           },
         },
@@ -71,9 +70,8 @@ export default () => (
             doubled and our presence is the best in our area.  When it was time to update our website\
             three months ago, we turned to them and are thrilled with the response we have received.</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "CW",
             },
           },
         },
@@ -88,9 +86,8 @@ export default () => (
             we have seen our website be very effective in helping us to grow our practice. Doctor Genius\
             is G love and special sauce and we are so happy we went with them for our SEO needs!</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "KR",
             },
           },
         },

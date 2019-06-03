@@ -19,9 +19,8 @@ const testimonialContent = [
          that my Google presence has been cleaned up and my website is up and running and I am starting\
          to see people come in the door who found us solely on Google.</p>",
       location: "",
-      image: {
-        src: "",
-        alt: "",
+      imageFallback: {
+        content: "JS",
       },
     },
   },
@@ -36,9 +35,8 @@ const testimonialContent = [
          first available hygiene appointment for six months out. Our biggest referrals are online. Thank\
          you Francesco and Doctor Genius for your hard work and many years of working together!</p>",
       location: "",
-      image: {
-        src: "",
-        alt: "",
+      imageFallback: {
+        content: "AM",
       },
     },
   },
@@ -55,9 +53,8 @@ const testimonialContent = [
          that they do to see how well their services are working for us. I'd give them a 7 star rating if\
          I could!</p>",
       location: "",
-      image: {
-        src: "",
-        alt: "",
+      imageFallback: {
+        content: "BM",
       },
     },
   },
@@ -73,9 +70,8 @@ const testimonialContent = [
          am quite happy so far. I have been working with Shawn and Kylie , two knowledgeable and fine\
          individuals to work with. Thank you guys.</p>",
       location: "",
-      image: {
-        src: "",
-        alt: "",
+      imageFallback: {
+        content: "AS",
       },
     },
   },

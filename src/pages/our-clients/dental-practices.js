@@ -51,9 +51,8 @@ export default () => (
               appointment for six months out. Our biggest referrals are online. Thank you\
               Francesco and Doctor Genius for your hard work and many years of working together!</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "AM",
             },
           },
         },
@@ -74,9 +73,8 @@ export default () => (
             and with the 100's of other websites that track dentists and doctors.</p>\
             <p>I am thrilled with the results and am excited to see Doctor Genius grow!</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "TA",
             },
           },
         },
@@ -91,9 +89,8 @@ export default () => (
             track on how many new patient phone calls we receive, but also to keep track on our online\
             presence.</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "NL",
             },
           },
         },
