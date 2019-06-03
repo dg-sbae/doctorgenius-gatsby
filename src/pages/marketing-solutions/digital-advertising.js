@@ -22,7 +22,7 @@ export default () => (
             "Increase your focus and narrow down who you are targeting to a small geographic region. Hyper-Local Targeting delivers advertising content to your local audience who is more likely to be interested in your services.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/digital-advertising-row-1.png",
           alt: "Lorem Ipsum",
         },
       },
@@ -38,7 +38,7 @@ export default () => (
             "Informative conversion tracking analytics and raise practice awareness among potential patients.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/digital-advertising-row-2.png",
           alt: "Lorem Ipsum",
         },
       },
