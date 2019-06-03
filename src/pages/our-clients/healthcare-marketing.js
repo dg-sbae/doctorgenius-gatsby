@@ -58,9 +58,8 @@ export default () => (
                fast. I highly recommend Doctor Genius they have created a good return on investment\
                (ROI)  for us.</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "DDB",
             },
           },
         },
@@ -74,9 +73,8 @@ export default () => (
             questions. Two thumbs up!! Just ask for Francesco, he's my account manager and he'll take\
             good care of you.</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "RB",
             },
           },
         },
@@ -89,9 +87,8 @@ export default () => (
             are finding and calling us as a result of their work.  Their team is friendly and responsive,\
             and I'd definitely recommend them to my colleagues.</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "JH",
             },
           },
         },

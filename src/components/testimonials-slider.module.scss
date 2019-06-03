@@ -8,7 +8,7 @@
 .cardSlider {
   .card,
   .card .portrait {
-    height: 315px; /* This image probably needs to be a background image */
+    height: 350px; /* This image probably needs to be a background image */
   }
 
   .card {
@@ -39,11 +39,17 @@
 
     /* card layout: */
     .quoteWrapper,
-    .cardContentWrapper,
-    .portraitWrapper {
+    .portraitWrapper,
+    .imageFallback {
+      position: sticky;
+      top: 0;
+      bottom: 0;
+    }
+    .cardContentWrapper {
       position: absolute;
     }
     .quoteWrapper {
+      display: inline-block;
       width: 13.188%; /* 91/691 */
     }
     .cardContentWrapper {
@@ -51,13 +57,16 @@
       left: 13.188%;
       z-index: 1;
     }
-    .portraitWrapper {
+    .portraitWrapper,
+    .imageFallback {
       width: 37.047%; /* 256/691 */
       right: 0;
+      float: right;
       z-index: 0;
     }
     .cardContentWrapper,
     .quoteWrapper {
+      top: 0;
       padding-top: 37px;
       /*
         Mike's design: 37px of padding-top in the testimonials card of 314px height, so you'd expect the padding-top value to be 37 / 314 = 11.783%
@@ -91,12 +100,41 @@
     );
   }
 }
+.imageFallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  h5 {
+    font-size: 75px;
+    color: white;
+    z-index: 10;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 5%,
+      rgba(97, 169, 225, 1) 45%,
+      rgba(0, 116, 207, 1) 90%,
+      rgba(0, 116, 207, 1) 100%
+    );
+  }
+}
 .quoteMark {
   max-width: 44%; /* 40/91 */
   margin: auto;
   display: block;
 }
 .cardWrapper {
+  height: 365px;
   display: flex;
   justify-content: center;
   align-items: center;

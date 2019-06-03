@@ -53,9 +53,8 @@ export default () => (
                responsive. We are planning to renew our contract for a third year so I think that\
                says it all!</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "LB-G",
             },
           },
         },
@@ -68,9 +67,8 @@ export default () => (
             patients are finding and calling us as a result of their work.  Their team is friendly\
             and responsive, and I'd definitely recommend them to my colleagues.</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "JH",
             },
           },
         },
@@ -83,9 +81,8 @@ export default () => (
             online representation. I have seen my fellow practitioner’s websites and they do not\
             compare to what Doctor Genius can provide.</p>",
             location: "",
-            image: {
-              src: "",
-              alt: "",
+            imageFallback: {
+              content: "MW",
             },
           },
         },

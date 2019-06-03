@@ -78,13 +78,7 @@ export default class TestimonialsSlider extends React.Component {
                       dangerouslySetInnerHTML={{
                         __html: card.cardContent.quote,
                       }}
-                    >
-                      {/*Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                      natoque penatibus et magnis dis parturient montes,
-                      nascetur ridiculus mus. Donec quam felis.Lorem ipsum dolor
-                      sit amet, consectetuer adipiscing elit.*/}
-                    </div>
+                    />
                     <p className={styles.author}>{card.cardContent.author}</p>
                     {/* JS shortcircuit to conditionally render the location*/}
                     {card.cardContent.location != "" && (
@@ -93,13 +87,22 @@ export default class TestimonialsSlider extends React.Component {
                       </p>
                     )}
                   </div>
-                  <div className={styles.portraitWrapper}>
-                    <img
-                      className={styles.portrait}
-                      src="/png/testimonials-slider-profile-1.png"
-                      alt="A Doctor"
-                    />
-                  </div>
+
+                  {card.cardContent.image && (
+                    <div className={styles.portraitWrapper}>
+                      <img
+                        className={styles.portrait}
+                        src="/png/testimonials-slider-profile-1.png"
+                        alt="A Doctor"
+                      />
+                    </div>
+                  )}
+                  {!card.cardContent.image &&
+                    card.cardContent.imageFallback.content && (
+                      <div className={styles.imageFallback}>
+                        <h5>{card.cardContent.imageFallback.content}</h5>
+                      </div>
+                    )}
                 </div>
               </div>
             </div>
