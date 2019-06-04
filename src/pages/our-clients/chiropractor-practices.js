@@ -4,8 +4,7 @@ import OurClientsInnerPages from "../../templates/our-clients-inner-pages"
 
 export default () => (
   <OurClientsInnerPages
-    className="chiropractor-practices"
-    page="/our-clients/chiropractor-practices" /* this should be dynamic from the page props */
+    page="chiropractor-practices" /* this should be dynamic from the page props */
     pageTitle="Chiropractor Practices"
     pageSubTitle="<span>Stretch Your Online Reach for</span> More Patients to your Practice"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
