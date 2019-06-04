@@ -20,6 +20,7 @@ import "../styles/the-study-post.scss"
 
 function PostPage({ pageContext, data, location }) {
   const post = data.currentPost
+  // console.log(post.content)
 
   //Create the two necessary parts of the blog post by splitting at the first paragraph
   const content = post.content.split(/(<p>.*?<\/p>)/)
@@ -42,7 +43,14 @@ function PostPage({ pageContext, data, location }) {
     "%20(from%20" +
     escapedLink +
     ")%20."
-  console.log()
+  // console.log()
+  // let previousPost = (typeof(pageContext.prevNode) !== 'undefined' || pageContext.prevNode != null) ?
+  const previousPost = pageContext.prevNode
+    ? "/the-study/" + pageContext.prevNode.slug
+    : null
+  const nextPost = pageContext.nextNode
+    ? "/the-study/" + pageContext.nextNode.slug
+    : null
   /*
   let testIntro = content.slice(1, 2)
   console.log(content, testIntro, testIntro)
@@ -74,14 +82,22 @@ function PostPage({ pageContext, data, location }) {
               <div className="col-lg-1" />
               <div className="col-lg-8">
                 <div className="pagination">
-                  <a href="/intentional-404/PreviousPostsPage">
-                    <img src={leftChevron} alt="Navigate to Previous" />
-                    &nbsp;Back
-                  </a>
-                  <a href="/intentional-404/NextPostsPage">
-                    Next &nbsp;
-                    <img src={rightChevron} alt="Navigate to Next" />
-                  </a>
+                  {previousPost != null ? (
+                    <a href={previousPost}>
+                      <img src={leftChevron} alt="Navigate to Previous" />
+                      &nbsp;Back
+                    </a>
+                  ) : (
+                    <p>&nbsp;</p>
+                  )}
+                  {nextPost != null ? (
+                    <a href={nextPost}>
+                      Next &nbsp;
+                      <img src={rightChevron} alt="Navigate to Next" />
+                    </a>
+                  ) : (
+                    <p>&nbsp;</p>
+                  )}
                 </div>
               </div>
               <div className="col-lg-1" />
@@ -252,8 +268,14 @@ function PostPage({ pageContext, data, location }) {
 export default PostPage
 
 export const pageQuery = graphql`
-  query($wordpress_id: Int) {
-    currentPost: wordpressPost(wordpress_id: { eq: $wordpress_id }) {
+  query($currentID: Int, $prevID: Int, $nextID: Int) {
+    currentPost: wordpressPost(wordpress_id: { eq: $currentID }) {
+      ...blogPost
+    }
+    prevPost: wordpressPost(wordpress_id: { eq: $prevID }) {
+      ...blogPost
+    }
+    nextPost: wordpressPost(wordpress_id: { eq: $nextID }) {
       ...blogPost
     }
     events: allWordpressWpEvents(
