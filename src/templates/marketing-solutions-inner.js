@@ -60,7 +60,7 @@ export default props => {
                   <div className="secondary-nav">
                     <div
                       className={
-                        (currentPage === "/marketing-solutions/websites"
+                        (currentPage === "responsive-websites"
                           ? "active "
                           : "") + "panel"
                       }
@@ -78,10 +78,8 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage ===
-                        "/marketing-solutions/content-marketing"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "content-marketing" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
@@ -97,8 +95,7 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage ===
-                        "/marketing-solutions/digital-advertising"
+                        (currentPage === "digital-advertising"
                           ? "active "
                           : "") + "panel"
                       }
@@ -116,10 +113,8 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage ===
-                        "/marketing-solutions/online-reputation-management"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "online-reputation" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
@@ -135,9 +130,8 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/marketing-solutions/our-technology"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "our-technology" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
@@ -153,10 +147,8 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage ===
-                        "/marketing-solutions/hosting-solutions"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "hosting-solutions" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
