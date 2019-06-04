@@ -54,7 +54,7 @@ export default () => (
                says it all!</p>",
             location: "",
             imageFallback: {
-              content: "LB-G",
+              content: "LB",
             },
           },
         },
