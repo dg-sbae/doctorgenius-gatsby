@@ -246,7 +246,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                             dangerouslySetInnerHTML={{
                               __html: node.excerpt.replace(
                                 /https:\/\/doctorgenius.com/,
-                                "http://localhost:8000/the-study"
+                                "/the-study"
                               ),
                             }}
                           />
@@ -390,7 +390,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                   dangerouslySetInnerHTML={{
                                     __html: node.excerpt.replace(
                                       /https:\/\/doctorgenius.com/,
-                                      "http://localhost:8000/the-study"
+                                      "/the-study"
                                     ),
                                   }}
                                 />

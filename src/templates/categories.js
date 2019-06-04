@@ -247,7 +247,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                             dangerouslySetInnerHTML={{
                               __html: node.excerpt.replace(
                                 /https:\/\/doctorgenius.com/,
-                                "http://localhost:8000/the-study"
+                                "/the-study"
                               ),
                             }}
                           />
@@ -394,7 +394,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                                   dangerouslySetInnerHTML={{
                                     __html: node.excerpt.replace(
                                       /https:\/\/doctorgenius.com/,
-                                      "http://localhost:8000/the-study"
+                                      "/the-study"
                                     ),
                                   }}
                                 />
