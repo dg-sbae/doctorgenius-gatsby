@@ -22,7 +22,7 @@ function PostPage({ pageContext, data, location }) {
   const post = data.currentPost
 
   //Create the two necessary parts of the blog post by splitting at the first paragraph
-  const content = post.content.split(/(<p>(\S)*?<\/p>)/)
+  const content = post.content.split(/(<p>.*?<\/p>)/)
   const intro = content.slice(1, 2).join()
   const remainder = content.slice(2).join("")
 
