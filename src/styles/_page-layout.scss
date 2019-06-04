@@ -190,14 +190,14 @@ header {
             height: 39px;
           }
         }
-        &:after {
-          content: "";
-          position: absolute;
-          top: -8px;
-          border-bottom: 9px solid #285c94;
-          border-left: 9px solid transparent;
-          border-right: 9px solid transparent;
-        }
+        // &:after {
+        //   content: "";
+        //   position: absolute;
+        //   top: -8px;
+        //   border-bottom: 9px solid #285c94;
+        //   border-left: 9px solid transparent;
+        //   border-right: 9px solid transparent;
+        // }
         &.marketing-solutions-dropdown {
           &.show {
             &:after {
