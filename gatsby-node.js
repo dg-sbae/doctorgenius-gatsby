@@ -158,7 +158,7 @@ exports.createPages = ({ graphql, actions }) => {
       Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
           path: i === 0 ? `/the-study` : `/the-study/${i + 1}`,
-          component: latestPaginationTemplate,
+          component: slash(latestPaginationTemplate),
           context: {
             limit: postsPerPage,
             skip: i * postsPerPage,
