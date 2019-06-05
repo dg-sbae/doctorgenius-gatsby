@@ -3,7 +3,7 @@ module.exports = {
     title: `Doctor Genius`,
   },
   plugins: [
-    `gatsby-plugin-remove-trailing-slashes`,
+    //`gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sass`,
     /*{
       resolve: 'gatsby-plugin-web-font-loader',
