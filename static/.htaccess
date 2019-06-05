@@ -1,3 +1,5 @@
+#DirectorySlash On
+
 # Old 301s from the WP doctorgenius.com
 Redirect 301 /events/business-dentistry-2017-08-04/ /
 Redirect 301 /events/ce/ /
@@ -22,8 +24,9 @@ Redirect 301 /category/digital-marketing /the-study/digital-marketing
 Redirect 301 /category/practice-management /the-study/practice-management
 Redirect 301 /category/genius-lab /the-study/genius-lab
 
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^(.*)/$ /$1 [L,R]
-
+#RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} (.+)/$
+#RewriteRule ^(.*)/$ /$1 [L,R]
+#RewriteCond %{REQUEST_URI} !(.+)/$
+#RewriteRule ^(.*) /$1/ [L,R]
