@@ -364,7 +364,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                     <div className="row">
                       <div className="col-sm-12">
                         {data.popular.edges.map(({ node }) => (
-                          <a href={`the-study/${node.slug}`}>
+                          <a href={`/the-study/${node.slug}`}>
                             <div className="popular-post">
                               <div className="featured-image-holder">
                                 {/*console.log(node)*/}
