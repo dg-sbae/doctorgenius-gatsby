@@ -7,7 +7,7 @@
     }
   }
   .hero {
-    background-image: url("/hero/the-study.png");
+    background-image: url("/hero/the-study.jpg");
     .hero-content {
       @include media(">=tablet") {
         width: 465px;
