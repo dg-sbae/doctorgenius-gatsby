@@ -353,7 +353,32 @@ footer {
 }
 
 nav {
+  &.main-navbar-stuck {
+    .navbar-nav {
+      li {
+        a {
+          &:hover {
+            text-shadow: 0 0 0.65px rgb(84, 84, 84), 0 0 0.65px rgb(84, 84, 84) !important;
+          }
+          &.active:hover {
+            text-shadow: 0 0 0.65px $primary, 0 0 0.65px $primary !important;
+          }
+        }
+      }
+    }
+  }
   .navbar-nav {
+    li {
+      a {
+        letter-spacing: 0.1em;
+        transition: text-shadow 0.3s;
+        &:hover,
+        &.active:hover {
+          text-shadow: 0 0 0.65px #fff, 0 0 0.65px #fff;
+        }
+      }
+    }
+
     .dropdown {
       &.show {
         .dropdown-menu {
