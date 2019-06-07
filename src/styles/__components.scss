@@ -381,6 +381,20 @@ nav {
 
     .dropdown {
       &.show {
+        a.dropdown-heading {
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom: 9px solid #285c94;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+          }
+        }
+
         .dropdown-menu {
           &.show {
             padding: 50px;
