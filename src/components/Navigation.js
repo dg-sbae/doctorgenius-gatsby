@@ -1057,13 +1057,19 @@ class Navigation extends Component {
                     877.477.2311
                   </a>
                 </li>
-                <ListLink to="/demo" className="button nav-button transparent">
+                <ListLink
+                  to="/demo"
+                  className="button nav-button transparent free-demo-button"
+                >
                   Free Demo
                 </ListLink>
               </ul>
               <ul class="demo-only">
                 <li className="call">Call For Demo!</li>
-                <ListLink to="/demo" className="button nav-button transparent">
+                <ListLink
+                  to="/demo"
+                  className="button nav-button transparent free-demo-button"
+                >
                   <a href="tel:877-477-2311">877.477.2311</a>
                 </ListLink>
               </ul>

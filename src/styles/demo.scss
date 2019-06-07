@@ -7,6 +7,30 @@
   }
   .demo-only {
     display: flex !important;
+    .free-demo-button {
+      transition: 0.3s background-color, 0.3s border-color;
+
+      &:hover {
+        background-color: #fff;
+        border-color: $primary;
+        a {
+          color: $primary !important;
+          transition: 0.3s color;
+        }
+      }
+    }
+  }
+  .main-navbar-stuck {
+    .free-demo-button {
+      &:hover {
+        background-color: #fff !important;
+        border-color: $primary;
+        a {
+          color: $primary !important;
+          transition: 0.3s color;
+        }
+      }
+    }
   }
   .main-contact-links {
     display: none;
