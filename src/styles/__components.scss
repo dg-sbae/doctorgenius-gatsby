@@ -370,7 +370,7 @@ nav {
   .navbar-nav {
     li {
       a {
-        letter-spacing: 0.1em;
+        // letter-spacing: 0.1em;
         transition: text-shadow 0.3s;
         &:hover,
         &.active:hover {
@@ -394,6 +394,14 @@ nav {
                   }
                 }
               }
+              .dropdown-item-block {
+                &:hover {
+                  a {
+                    text-shadow: 0 0 0.65px #8bd2ff, 0 0 0.65px #8bd2ff;
+                    color: #8bd2ff;
+                  }
+                }
+              }
               img {
                 padding-top: 7px;
               }
@@ -405,6 +413,8 @@ nav {
                 a {
                   font-size: 14px;
                   font-weight: $font-weight-medium;
+                  // letter-spacing: 0.1em;
+                  transition: text-shadow 0.3s, color 0.3s;
                 }
                 p {
                   font-size: 12px;
