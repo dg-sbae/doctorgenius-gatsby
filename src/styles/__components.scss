@@ -194,7 +194,7 @@
 
 .request-demo-footer {
   .button {
-    background: #3dc93d;
+    background: $demo-button-green;
     color: white;
   }
 }
@@ -447,16 +447,37 @@ nav {
     }
   }
   &.main-navbar-stuck {
+    .dropdown.show {
+      a.dropdown-heading {
+        &:after {
+          top: 50px;
+        }
+      }
+    }
+    &.stuck-fully {
+      .dropdown.show {
+        a.dropdown-heading {
+          &:after {
+            top: 40px;
+          }
+        }
+      }
+    }
     .free-demo-button {
+      background-color: $demo-button-green;
+      border: $demo-button-green;
       // background-color: red !important;
-      // transition: 0.3s background-color, 0.3s border-color;
+      transition: 0.3s background-color, 0.3s border-color;
+      a {
+        color: $primary-text !important;
+        transition: 0.3s color;
+      }
 
       &:hover {
-        background-color: $primary !important;
-        border-color: $primary-text !important;
+        background-color: $button-hover-green !important;
+        border-color: $button-hover-green !important;
         a {
-          color: $primary-text !important;
-          transition: 0.3s color;
+          // color: $primary-text !important;
         }
       }
     }
