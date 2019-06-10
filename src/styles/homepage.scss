@@ -210,7 +210,9 @@ $homepage-h1-font-size: $font-size-base * 5.0625;
     background-position: center center;
     background-size: cover;
     width: 180%;
-    margin-top: -5%;
+    @include media(">desktop") {
+      margin-top: -5%;
+    }
     @include media("<=desktop", ">laptop") {
       height: 500px;
       background-size: contain;
