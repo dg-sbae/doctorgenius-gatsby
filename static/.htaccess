@@ -30,3 +30,5 @@ Redirect 301 /category/genius-lab /the-study/genius-lab
 #RewriteRule ^(.*)/$ /$1 [L,R]
 #RewriteCond %{REQUEST_URI} !(.+)/$
 #RewriteRule ^(.*) /$1/ [L,R]
+
+ErrorDocument 500 http://localhost:8000/500
