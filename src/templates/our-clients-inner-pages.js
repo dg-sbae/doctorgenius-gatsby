@@ -31,7 +31,7 @@ export default props => {
       <Helmet>
         <title>{metaTitle}</title>
       </Helmet>
-      <div className={props["*"] + " our-clients-inner " + props.className}>
+      <div className={"our-clients-inner " + currentPage}>
         <div className="hero">
           {/* Hero will be a layout component */}
 
