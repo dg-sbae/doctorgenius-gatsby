@@ -22,9 +22,6 @@ export default props => {
   const isCaseStudy = props.caseStudy
   const metaTitle = props.metaTitle
 
-  // For now all inner pages will have the same hero image, so this will be in the sass
-  //const heroImage = "/hero/marketing-solutions-subpage.png"
-
   const contentRows = props.contentRows
   const contentParagraphBlock = contentRows["contentParagraphBlock"]
   const currentPage = props.page
@@ -34,7 +31,7 @@ export default props => {
       <Helmet>
         <title>{metaTitle}</title>
       </Helmet>
-      <div className={props["*"] + " our-clients-inner " + props.page}>
+      <div className={props["*"] + " our-clients-inner " + props.className}>
         <div className="hero">
           {/* Hero will be a layout component */}
 
@@ -61,8 +58,9 @@ export default props => {
                   <div className="secondary-nav">
                     <div
                       className={
-                        (currentPage === "dental-practices" ? "active " : "") +
-                        "panel"
+                        (currentPage === "/our-clients/dental-practices"
+                          ? "active "
+                          : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
@@ -78,7 +76,7 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "urgent-care-clinics"
+                        (currentPage === "/our-clients/urgent-care-clinics"
                           ? "active "
                           : "") + "panel"
                       }
@@ -96,7 +94,7 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "chiropractor-practices"
+                        (currentPage === "/our-clients/chiropractor-practices"
                           ? "active "
                           : "") + "panel"
                       }
@@ -114,8 +112,9 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "cosmetic-surgeons" ? "active " : "") +
-                        "panel"
+                        (currentPage === "/our-clients/cosmetic-surgeons"
+                          ? "active "
+                          : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
@@ -131,7 +130,7 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "healthcare-marketing"
+                        (currentPage === "/our-clients/healthcare-marketing"
                           ? "active "
                           : "") + "panel"
                       }

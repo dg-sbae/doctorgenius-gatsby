@@ -36,7 +36,7 @@ export default () => (
           innerTitle:
             "Your brand is the most precious component of your marketing",
           paragraph:
-            "Delivering effective brand strategies that Practices a major edge in competitive markets. We figure out how, what, where, when, and to whom you need to be communicating and delivering your brand messages.",
+            "Delivering effective brand strategies that practices a major edge in competitive markets. We figure out how, what, where, when, and to whom you need to be communicating and delivering your brand messages.",
         },
         image: {
           url: "/png/your-brand.png",

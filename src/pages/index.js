@@ -168,7 +168,7 @@ export default ({ data }, props) => (
             </div>
           </div>
 
-          <div className="row padded tall-top short-bottom">
+          <div className="row padded short-top short-bottom">
             <div className="col-sm-12">
               <div className="inner-title center">
                 <h3 className="strapline">
