@@ -7,14 +7,17 @@
   }
   .demo-only {
     display: flex !important;
-    .free-demo-button {
+    .free-demo-button,
+    .free-demo-button.nav-button {
       transition: 0.3s background-color, 0.3s border-color;
+      background-color: $demo-button-green;
+      border-color: $demo-button-green !important;
 
       &:hover {
-        background-color: #fff;
-        border-color: $primary;
+        background-color: $button-hover-green !important;
+        border-color: $button-hover-green !important;
         a {
-          color: $primary !important;
+          color: $primary-text !important;
           transition: 0.3s color;
         }
       }
@@ -22,11 +25,15 @@
   }
   .main-navbar-stuck {
     .free-demo-button {
+      a {
+        color: $primary-text !important;
+        transition: 0.3s color;
+      }
       &:hover {
-        background-color: #fff !important;
-        border-color: $primary;
+        background-color: $button-hover-green !important;
+        border-color: $button-hover-green !important;
         a {
-          color: $primary !important;
+          color: $primary-text !important;
           transition: 0.3s color;
         }
       }
@@ -287,7 +294,7 @@
       margin: 30px auto;
       font-weight: $font-weight-semibold;
       font-size: 15px;
-      background: #3dc93d;
+      background: $demo-button-green;
       color: white;
       box-shadow: none;
     }
