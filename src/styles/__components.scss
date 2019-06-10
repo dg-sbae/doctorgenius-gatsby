@@ -358,10 +358,10 @@ nav {
       li {
         a {
           &:hover {
-            text-shadow: 0 0 0.65px rgb(84, 84, 84), 0 0 0.65px rgb(84, 84, 84) !important;
+            text-shadow: 0 0 0.65px rgb(84, 84, 84) !important;
           }
           &.active:hover {
-            text-shadow: 0 0 0.65px $primary, 0 0 0.65px $primary !important;
+            text-shadow: 0 0 0.65px $primary !important;
           }
         }
       }
