@@ -447,6 +447,22 @@ nav {
     }
   }
   &.main-navbar-stuck {
+    .dropdown.show {
+      a.dropdown-heading {
+        &:after {
+          top: 50px;
+        }
+      }
+    }
+    &.stuck-fully {
+      .dropdown.show {
+        a.dropdown-heading {
+          &:after {
+            top: 40px;
+          }
+        }
+      }
+    }
     .free-demo-button {
       background-color: $demo-button-green;
       border: $demo-button-green;
