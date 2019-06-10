@@ -134,9 +134,10 @@ export default props => (
                   <h2>Proven and tested results in every step of the way</h2>
                   <div className="accented-paragraph">
                     <p className="s-thin">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nunc dui turpis, sodales ut mollis quis, ullamcorper a
-                      metus
+                      Powerful data-driven technology helps you leverage
+                      comprehensive reporting to achieve best-practice
+                      performance metrics, make informed business decisions, and
+                      improve efficiencies
                     </p>
                     <a href="/case-study" className="link-with-icon">
                       <img
@@ -174,9 +175,11 @@ export default props => (
                   <h2>All the tools you'll need to be in control. </h2>
                   <div className="accented-paragraph">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nunc dui turpis, sodales ut mollis quis, ullamcorper a
-                      metus
+                      Replace lorem ipsum under "All the tools..." to "In order
+                      to for you to thrive online, you must also utilize
+                      software to effectively manage the interactions you and
+                      your staff has with your leads, prospective patients, and
+                      eventual patients."
                     </p>
                     <a
                       href="/marketing-solutions/our-technology"
@@ -207,9 +210,8 @@ export default props => (
                     </div>
                     <div className="accented-paragraph medium-width">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc dui turpis, sodales ut mollis quis, ullamcorper a
-                        metus
+                        From new patient acquisition to retention, Doctor Genius
+                        has you covered.
                       </p>
                       <a href="/plans" className="link-with-icon">
                         <img

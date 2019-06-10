@@ -423,15 +423,14 @@ export default props => (
                   <img src={checkmark} alt="checkmark" />
                 </div>
                 {/* <!-- details section 4 row 7: --> */}
-                <div className="grid-item">
-                  <b>Paid Advertising Campaigns</b>
-                </div>
-                <div className="grid-item" />
-                <div className="grid-item" />
-                <div className="grid-item" />
+                <dt className="spacer-row justify-content-start">
+                  <div className="plans-row-title">
+                    Paid Advertising Campaigns
+                  </div>
+                </dt>
                 {/* <!-- details section 4 row 8: --> */}
                 <div className="grid-item plans-row-title">
-                  Paid Advertising Campaigns
+                  Google Search Display Banner Advertising
                 </div>
                 <div className="grid-item" />
                 <div className="grid-item">
@@ -442,7 +441,7 @@ export default props => (
                 </div>
                 {/* <!-- details section 4 row 9: --> */}
                 <div className="grid-item plans-row-title">
-                  Paid Advertising Campaigns
+                  Google Re‐Marketing Advertising
                 </div>
                 <div className="grid-item" />
                 <div className="grid-item">
@@ -453,7 +452,7 @@ export default props => (
                 </div>
                 {/* <!-- details section 4 row 10: --> */}
                 <div className="grid-item plans-row-title">
-                  Paid Advertising Campaigns
+                  Landing Pages on Sub Domains
                 </div>
                 <div className="grid-item" />
                 <div className="grid-item">2 Landing Pages</div>

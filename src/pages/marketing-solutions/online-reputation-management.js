@@ -49,7 +49,7 @@ export default () => (
             alt: "Practice Promoter",
             title: "Practice Promoter",
           },
-          innerTitle: "Build up your street cred",
+          innerTitle: "Boost your reach to the right patients",
           paragraph:
             "Get reviews from your existing patients fast with our streamlined contact process and form. We direct your patients to your social profiles in a stepped out process that gets you reviews!",
         },

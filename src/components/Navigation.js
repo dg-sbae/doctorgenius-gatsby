@@ -880,7 +880,7 @@ class Navigation extends Component {
               iconSubnav={house}
               // data-toggle="collapse"
               // aria-expanded="false"
-              to="/"
+              to="#"
             >
               Home
             </SideNavListLink>
@@ -1005,7 +1005,7 @@ class Navigation extends Component {
               <span class="navbar-toggler-icon" />
             </button>
             <div className="logo">
-              <Link to="/">
+              <Link to="#">
                 <div className="navbar-brand logo-holder" />
               </Link>
             </div>
