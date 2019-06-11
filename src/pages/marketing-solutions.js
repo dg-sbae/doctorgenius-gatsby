@@ -1,4 +1,5 @@
 import React from "react"
+import {Helmet} from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -18,6 +19,12 @@ import "../styles/marketing-solutions.scss"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
+    <Helmet>
+      <title>
+        Medical Digital Marketing Solutions | Predictable Practice Growth Solution
+      </title>
+      <meta name="description" content="Premier Google Partner and full-service digital marketing agency serving practices nationwide with a results-driven approach. Get new patients today."/>
+    </Helmet>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}

@@ -25,8 +25,9 @@ export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
       <title>
-        Get a Free Demo of the Doctor Genius Marketing Platform | Doctor Genius
+        Get a Free Demo of the Doctor Genius Performance Driven Marketing Platform
       </title>
+      <meta name="description" content="How is your new patient acquisition going? Is your website and marketing underperforming? Curious about a strong performance driven marketing platform?" />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">

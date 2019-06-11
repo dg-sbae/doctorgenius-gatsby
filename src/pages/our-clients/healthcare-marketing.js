@@ -9,7 +9,8 @@ export default () => (
     pageSubTitle="<span>Modern Healthcare Technology</span> Solutions"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
     caseStudy={true}
-    metaTitle="Healthcare Focused Marketing Agency | New Patient Acquisition | Doctor Genius"
+    metaTitle="Healthcare Focused Marketing Agency | New Patient Acquisition"
+    metaDescription="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Start getting the new patients your healthcare practice deserves."
     contentRows={{
       contentParagraphBlock: {
         heading: {

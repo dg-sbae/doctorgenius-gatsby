@@ -9,7 +9,8 @@ export default () => (
     pageSubTitle="<span>Attract</span> More Patients <span>From the Internet</span>"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
     caseStudy={false}
-    metaTitle="Cosmetic Surgeons | Increasing Your Patient Base | Digital Marketing Agency | Doctor Genius"
+    metaTitle="Cosmetic Surgeon Website Development & Marketing | Increase Your Patient Base"
+    metaDescription="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Start getting the new patients your practice deserves."
     contentRows={{
       contentParagraphBlock: {
         heading: {

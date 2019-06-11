@@ -8,7 +8,8 @@ export default () => (
     pageTitle="Digital Advertising"
     pageSubtitle="<span>Expand your</span> Digital Reach"
     pageIntro="Sponsored Ads are a great way of drawing new patients from a variety of news sites, blogs and other niche sites across the internet."
-    metaTitle="New Patient Acquisition | Digital Advertising | Healthcare Marketing Agency | Doctor Genius"
+    metaTitle="New Patient Acquisition | Digital Advertising | Healthcare Marketing Agency"
+    metaDescription="Want new patients fast? Organic strategies take time. Digital advertising campaigns drives new patients quick allowing your practice to thrive."
     contentRows={[
       {
         content: {

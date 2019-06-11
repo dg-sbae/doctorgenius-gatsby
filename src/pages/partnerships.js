@@ -20,7 +20,8 @@ import "../styles/partnerships.scss"
 export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
-      <title>Value Added Partnerships | Let's Talk | Doctor Genius</title>
+      <title>Value Added Partnerships | Let's Talk | View our Featured Partners</title>
+      <meta name="description" content="Learn about our partnership program that leverages our strong performance driven marketing platform with your existing customer base or technology." />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">

@@ -9,7 +9,8 @@ export default () => (
     pageSubTitle="<span>Stretch Your Online Reach for</span> More Patients to your Practice"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
     caseStudy={false}
-    metaTitle="Marketing for Chiropractors | Digital Marketing Agency | Doctor Genius"
+    metaTitle="Marketing for Chiropractors | Chiropractic Website Development & Marketing"
+    metaDescription="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Start getting the new patients your chiropractic practice deserves."
     contentRows={{
       contentParagraphBlock: {
         heading: {

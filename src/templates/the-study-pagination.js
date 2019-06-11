@@ -142,8 +142,9 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
     <DefaultPageLayout>
       <Helmet>
         <title>
-          Practice Management and Digital Marketing Blog | Doctor Genius
+        Practice Management & Digital Marketing Blog | The Study
         </title>
+        <meta name="description" content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here." />
       </Helmet>
       <div className="the-study">
         <div className="hero">

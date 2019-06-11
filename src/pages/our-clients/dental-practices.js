@@ -9,7 +9,8 @@ export default () => (
     pageSubTitle="<span>Engage and Convert More</span> Patients To Your Practice"
     pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
     caseStudy={true}
-    metaTitle="Dental Patient Engagement, Acquisition, Retention | Digital Marketing Agency | Doctor Genius"
+    metaTitle="Dental Patient Engagement, Acquisition, Retention | Predictable Practice Growth Solution"
+    metaDescription="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Start getting the new patients your dental practice deserves."
     contentRows={{
       contentParagraphBlock: {
         heading: {

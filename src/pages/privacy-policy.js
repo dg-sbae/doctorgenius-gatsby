@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -8,6 +9,12 @@ import "../styles/privacy-policy.scss"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
+    <Helmet>
+      <title>
+        Privacy Policy Doctor Genius in Irvine, CA 92606
+      </title>
+      <meta name="description" content="Privacy policy of Doctor Genius located in in Irvine, CA 92606." />
+    </Helmet>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}

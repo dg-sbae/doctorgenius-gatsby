@@ -21,6 +21,7 @@ export default props => {
   const pageIntro = props.pageIntro
   const isCaseStudy = props.caseStudy
   const metaTitle = props.metaTitle
+  const metaDescription = props.metaDescription
 
   const contentRows = props.contentRows
   const contentParagraphBlock = contentRows["contentParagraphBlock"]
@@ -30,6 +31,7 @@ export default props => {
     <DefaultPageLayout>
       <Helmet>
         <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
       </Helmet>
       <div className={"our-clients-inner " + currentPage}>
         <div className="hero">

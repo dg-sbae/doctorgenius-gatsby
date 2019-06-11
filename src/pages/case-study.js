@@ -16,9 +16,9 @@ export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
       <title>
-        In-Depth Healthcare Marketing Case Study | Digital Marketing | Doctor
-        Genius
+      In-Depth Healthcare Marketing Case Study | New Patient Acquisition Strategies
       </title>
+      <meta name="description" content="An in-depth case study of a performance driven marketing platform highlighting how content marketing done right impacts new patient acquisition." />
     </Helmet>
     <div>
       <div className="hero">

@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import he from "he"
 import Img from "gatsby-image"
@@ -146,6 +147,33 @@ const CategoriesPage = ({ data, pageContext }) => {
 
   return (
     <DefaultPageLayout>
+      
+      {
+        // Meta description for Genius Lab category
+        pageContext.slug === "genius-lab" && (
+          <Helmet>
+            <title>
+            Genius Lab Archives - Doctor Genius | Doctor Genius
+            </title>
+            <meta name="description" content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here." />
+          </Helmet>
+            )
+      }
+
+      {
+        // Meta description for all of ther categories blog pages
+        pageContext.slug !== "genius-lab" && (
+          <Helmet>
+            <title>
+            Practice Management & Digital Marketing Blog | The Study
+            </title>
+            <meta name="description" content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here." />
+          </Helmet>
+        )
+      }
+        
+        <meta name="description" content="Privacy policy of Doctor Genius located in in Irvine, CA 92606." />
+      
       <div className="the-study">
         <div className="hero">
           {/* Hero will be a layout component */}

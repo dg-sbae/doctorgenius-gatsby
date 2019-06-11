@@ -9,7 +9,8 @@ export default () => (
     pageSubTitle="<span>Broaden Your</span> Online Presence <span>For New Patients to</span> Find You"
     pageIntro="We bring you a robust platform and digital marketing solutions that focus on new patient acquisition."
     caseStudy={false}
-    metaTitle="Grow your Urgent Care Center | Digital Marketing Agency | Doctor Genius"
+    metaTitle="Grow your Urgent Care Center | Increase Your Patient Base"
+    metaDescription="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Start getting the new patients your urgent care practice deserves."
     contentRows={{
       contentParagraphBlock: {
         heading: {

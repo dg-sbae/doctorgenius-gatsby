@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import he from "he"
 import Img from "gatsby-image"
@@ -74,6 +75,12 @@ function PostPage({ pageContext, data, location }) {
 
   return (
     <DefaultPageLayout location="the-study-post">
+      <Helmet>
+        <title>
+        Practice Management & Digital Marketing Blog | The Study
+        </title>
+        <meta name="description" content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here." />
+      </Helmet>
       <div className="page-wrapper">
         <div class="hero-padding" />
         <Main>

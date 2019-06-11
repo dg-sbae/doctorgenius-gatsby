@@ -24,9 +24,10 @@ export default ({ data }, props) => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
       <title>
-        High Conversion Dental Websites | Healthcare Digital Marketing | Doctor
-        Genius
+        High Conversion Patient Acquisition Websites | Performance, Results,
+        Excellence
       </title>
+      <meta name="description" content="Start acquiring the new patients your healthcare practice deserves. Mobile first conversion focused medical websites combined with performance digital marketing." />
     </Helmet>
     <div className={props["*"] || "homepage"}>
       <div className="hero">

@@ -21,6 +21,7 @@ export default props => {
   const pageSubtitle = props.pageSubtitle
   const pageIntro = props.pageIntro
   const metaTitle = props.metaTitle
+  const metaDescription = props.metaDescription
 
   // For now all inner pages will have the same hero image, so this will be in the sass
   //const heroImage = "/hero/marketing-solutions-subpage.png"
@@ -32,6 +33,7 @@ export default props => {
     <DefaultPageLayout>
       <Helmet>
         <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
       </Helmet>
       <div className={props.page + " marketing-solutions-inner"}>
         <div className="hero">

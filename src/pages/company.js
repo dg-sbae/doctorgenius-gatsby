@@ -81,8 +81,9 @@ export default props => (
   <DefaultPageLayout location="company">
     <Helmet>
       <title>
-        Boosting Your Brand Online | Digital Marketing Agency | Doctor Genius
+        Irvine, CA Digital Marketing Agency | About Doctor Genius
       </title>
+      <meta name="description" content="Doctor Genius is an Irvine, California based digital marketing agency providing local businesses with branding, websites, content marketing, and social media marketing service." />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
