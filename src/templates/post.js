@@ -20,8 +20,20 @@ import thinArrowRight from "../img/right-arrow.svg"
 import "../styles/the-study-post.scss"
 
 function PostPage({ pageContext, data, location }) {
+  const categoriesPaths = [
+    {
+      name: "Digital Marketing",
+    },
+    {
+      name: "Practice Management",
+    },
+    { name: "Genius Lab" },
+  ]
   const post = data.currentPost
-  // console.log(post.content)
+
+  const mainCategory = post.categories.find(c =>
+    categoriesPaths.find(d => d.name === c.name)
+  )
 
   //Create the two necessary parts of the blog post by splitting at the first paragraph
   const content = post.content.split(/(<p>.*?<\/p>)/)
@@ -70,16 +82,17 @@ function PostPage({ pageContext, data, location }) {
   const intro = testIntro
   const remainder = content.slice(2).join("")
 
-  //console.log(intro, remainder)
+  
   */
 
   return (
     <DefaultPageLayout location="the-study-post">
       <Helmet>
-        <title>
-        Practice Management & Digital Marketing Blog | The Study
-        </title>
-        <meta name="description" content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here." />
+        <title>Practice Management & Digital Marketing Blog | The Study</title>
+        <meta
+          name="description"
+          content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+        />
       </Helmet>
       <div className="page-wrapper">
         <div class="hero-padding" />
@@ -128,7 +141,7 @@ function PostPage({ pageContext, data, location }) {
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
                       <div className="label primary">
-                        <p>Practice Management</p>
+                        <p>{mainCategory.name}</p>
                       </div>
                     </div>
 
@@ -278,6 +291,9 @@ export const pageQuery = graphql`
   query($currentID: Int, $prevID: Int, $nextID: Int) {
     currentPost: wordpressPost(wordpress_id: { eq: $currentID }) {
       ...blogPost
+      categories {
+        name
+      }
     }
     prevPost: wordpressPost(wordpress_id: { eq: $prevID }) {
       ...blogPost
