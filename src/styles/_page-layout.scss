@@ -568,6 +568,8 @@ $bottom-padding-md: 20px;
   width: 75%;
   max-width: 412px;
   height: 100vh;
+  // height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  // height: calc(var(--vh, 1vh) * 100);
   position: fixed;
   top: 0;
   right: -412px;
@@ -593,7 +595,7 @@ $bottom-padding-md: 20px;
     @include media("<tablet") {
       width: 65%;
     }
-    @include media("<phone") {
+    @include media("<=phone") {
       width: 75%;
     }
 
@@ -710,7 +712,7 @@ $bottom-padding-md: 20px;
   z-index: 2040;
   /* top right corner of the sidebar */
   top: 15px;
-  right: 45px;
+  right: 40px;
   background-color: transparent;
   border: none;
 
