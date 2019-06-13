@@ -363,6 +363,17 @@ a.not-a-link {
   color: $mute-text;
 }
 
+#sidebar {
+  .nav-item {
+    @include fluid-type(16px, 20px, $phone, $laptop);
+    ul {
+      li {
+        @include fluid-type(12px, 16px, $phone, $laptop);
+      }
+    }
+  }
+}
+
 /* Potentially depreceated
 h3.strapline {
   margin-bottom: 0;
