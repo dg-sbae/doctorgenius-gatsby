@@ -87,13 +87,29 @@ function PostPage({ pageContext, data, location }) {
 
   return (
     <DefaultPageLayout location="the-study-post">
-      <Helmet>
-        <title>Practice Management & Digital Marketing Blog | The Study</title>
-        <meta
-          name="description"
-          content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-        />
-      </Helmet>
+      {// Meta description for Genius Lab category post
+      mainCategory.name === "Genius Lab" && (
+        <Helmet>
+          <title>Genius Lab Archives - Doctor Genius | Doctor Genius</title>
+          <meta
+            name="description"
+            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+          />
+        </Helmet>
+      )}
+
+      {mainCategory.name !== "Genius Lab" && (
+        <Helmet>
+          <title>
+            Practice Management & Digital Marketing Blog | The Study
+          </title>
+          <meta
+            name="description"
+            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+          />
+        </Helmet>
+      )}
+
       <div className="page-wrapper">
         <div class="hero-padding" />
         <Main>
