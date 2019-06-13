@@ -566,6 +566,10 @@ $bottom-padding-md: 20px;
 #sidebar {
   font-family: $font-family-base;
   width: 75%;
+  padding-left: 8%;
+  @include media(">tablet") {
+    padding-left: 50px;
+  }
   max-width: 412px;
   height: 100vh;
   // height: 100vh; /* Fallback for browsers that do not support Custom Properties */
@@ -591,12 +595,12 @@ $bottom-padding-md: 20px;
 
   .navbar-nav {
     // margin-left: 20%;
-    width: 55%;
+    width: 70%;
     @include media("<tablet") {
-      width: 65%;
-    }
-    @include media("<=phone") {
       width: 75%;
+    }
+    @include media("<phone") {
+      width: 84%;
     }
 
     .nav-item {
@@ -712,7 +716,7 @@ $bottom-padding-md: 20px;
   z-index: 2040;
   /* top right corner of the sidebar */
   top: 15px;
-  right: 40px;
+  right: 20px;
   background-color: transparent;
   border: none;
 
