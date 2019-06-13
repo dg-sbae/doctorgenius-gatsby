@@ -795,6 +795,10 @@ const StudySingleListLink = props => (
 class Navigation extends Component {
   componentDidMount() {
     $(document).ready(function() {
+      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      // let vh = window.innerHeight * 0.01
+      // Then we set the value in the --vh custom property to the root of the document
+      // document.getElementById("sidebar").style.setProperty("--vh", `${vh}px`)
       $(".dropdown-heading").click(function(event) {
         event.stopPropagation()
       })
@@ -850,10 +854,17 @@ class Navigation extends Component {
           var thisDropdownList = $(this)
             .parent()
             .siblings("ul")
+          var thisDropdownTitle = $(this).parents(".nav-item")
           $("#sidebar .dropdown-links ul")
             .not(thisDropdownList)
             .slideUp(500)
-          thisDropdownList.slideDown(500)
+          if (thisDropdownTitle.hasClass("show")) {
+            thisDropdownTitle.removeClass("show")
+            thisDropdownList.slideUp(500)
+          } else {
+            thisDropdownList.slideDown(500)
+            thisDropdownTitle.addClass("show")
+          }
         }
       )
     })
