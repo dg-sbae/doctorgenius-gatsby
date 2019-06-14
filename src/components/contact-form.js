@@ -184,7 +184,7 @@ class ContactForm extends React.Component {
       })
     })
 
-    fetch("http://requestbin.fullcontact.com/1jqpz7t1", {
+    fetch("https://enh4puletkcmw.x.pipedream.net", {
       method: "POST",
       body: stringData,
       headers: {
@@ -196,6 +196,8 @@ class ContactForm extends React.Component {
         console.log("requestbin body:", body)
       })
     })
+
+    /*
 
     fetch("https://portal.doctorgenius.com/api/dglead", {
       method: "POST",
@@ -209,6 +211,7 @@ class ContactForm extends React.Component {
         console.log("dgleads body:", body)
       })
     })
+    */
     /*
     fetch("http://nodetest.dgd3v.com/upload", {
       method: "POST",
