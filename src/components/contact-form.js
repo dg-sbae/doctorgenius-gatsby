@@ -53,14 +53,8 @@ class ContactForm extends React.Component {
     data.append("CompanyName", this.company.value)
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
-    //let hardName = "jsonData in body, explicit url encode header"
-    //let hardPhone = "1234567890"
-    //let hardEmail = "jparmenter@doctorgenius.com"
-    //let hardCompany = "Hardcoded Company"
-    /*
-    console.log("Data: ", data)
-    */
-    //console.log("Data: ", data)
+
+    /* Deprecating alert:
     alert(
       "Debug -- Data sent to server:\n" +
         data +
@@ -75,6 +69,8 @@ class ContactForm extends React.Component {
         "\nphone: " +
         this.phone.value
     )
+    */
+
     /*
     let stringData
     console.log(Object.fromEntries(data))
@@ -198,7 +194,7 @@ class ContactForm extends React.Component {
     })
 
     /*
-
+    Deprecating this for now:
     fetch("https://portal.doctorgenius.com/api/dglead", {
       method: "POST",
       body: stringData,
