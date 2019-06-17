@@ -36,7 +36,7 @@
       ),
       white;
 
-    .cardContentWrapper {
+    .cardCopyHolder {
       /* width */
       &::-webkit-scrollbar {
         width: 5px;
@@ -153,7 +153,7 @@
   background: linear-gradient(45deg, #62b1ef, #0074cf);
 
   h5 {
-    font-size: 45px;
+    font-size: 34px;
     display: block;
     color: white;
     z-index: 10;
@@ -195,6 +195,7 @@
     font-weight: 400;
     color: #989898;
     margin-bottom: 0px;
+    padding: 10px;
   }
 }
 .open .moreLink,
@@ -202,15 +203,16 @@
   display: block;
 }
 .cardCopyHolder {
-  height: calc(1.75em * 5); /* line height * # of lines to show */
+  height: calc(10px + 1.75em * 5); /* line height * # of lines to show */
   transition: all 2s;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
+  border-radius: 12px;
 }
 .open {
   .cardCopyHolder {
     background: rgba(255, 255, 255, 0.9);
-    height: calc(1.75em * 10) !important; /* line height * # of lines to show */
+    height: calc(
+      10px + 1.75em * 10
+    ) !important; /* line height * # of lines to show */
   }
 }
 .moreLink {
