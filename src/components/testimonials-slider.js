@@ -26,26 +26,9 @@ class Card extends React.Component {
 
     if (cardContentHeight > cardContentWrapperHeight) {
       this.setState({ open: false })
-      console.log(
-        "cardContentHeight: ",
-        cardContentHeight,
-        "cardContentWrapperHeight: ",
-        cardContentWrapperHeight
-      )
-      console.log("so the card should be OPEN")
     } else {
       this.setState({ open: null })
-      console.log(
-        "cardContentHeight: ",
-        cardContentHeight,
-        "cardContentWrapperHeight: ",
-        cardContentWrapperHeight
-      )
-      console.log("so the card should be CLOSED")
     }
-
-    console.log("card has mounted: ", this)
-    console.log(jQuery('[class*="cardContentWrapper"]'))
   }
 
   render() {
