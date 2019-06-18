@@ -60,9 +60,8 @@ export default props => {
                   <div className="secondary-nav">
                     <div
                       className={
-                        (currentPage === "/our-clients/dental-practices"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "dental-practices" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
@@ -78,7 +77,7 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/our-clients/urgent-care-clinics"
+                        (currentPage === "urgent-care-clinics"
                           ? "active "
                           : "") + "panel"
                       }
@@ -96,7 +95,7 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/our-clients/chiropractor-practices"
+                        (currentPage === "chiropractor-practices"
                           ? "active "
                           : "") + "panel"
                       }
@@ -114,9 +113,8 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/our-clients/cosmetic-surgeons"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "cosmetic-surgeons" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
@@ -132,7 +130,7 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/our-clients/healthcare-marketing"
+                        (currentPage === "healthcare-marketing"
                           ? "active "
                           : "") + "panel"
                       }
