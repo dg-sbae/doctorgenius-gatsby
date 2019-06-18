@@ -166,16 +166,23 @@ header {
         position: static;
       }
       .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
         z-index: 150;
         left: -85px;
         // right: 30%;
-        transition: all 0.3s;
+        transition: opacity 0.5s;
         top: 40px;
         position: absolute;
         border: none;
         // transform: translateX(-50%);
         // margin-right: auto;
         // margin-left: auto;
+        &.show {
+          visibility: visible;
+          opacity: 1;
+        }
         .dropdown-row {
           margin-bottom: 35px;
         }

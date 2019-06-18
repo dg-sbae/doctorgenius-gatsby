@@ -380,11 +380,19 @@ nav {
     }
 
     .dropdown {
+      a.dropdown-heading {
+        &:after {
+          content: "";
+          transition: opacity 0.5s;
+          opacity: 0;
+        }
+      }
       &.show {
         a.dropdown-heading {
           position: relative;
           &:after {
-            content: "";
+            // content: "";
+            opacity: 1;
             position: absolute;
             top: 32px;
             left: 50%;
