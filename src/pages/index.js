@@ -19,6 +19,7 @@ import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
 import newPatientAcquisitions from "../img/home-new-patient-acquisitions.png"
 import dgDifferent from "../img/home-dg-different.png"
 import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
+import SEO from "../components/seo.js"
 
 export default ({ data }, props) => (
   <DefaultPageLayout location={props["*"]}>
@@ -27,9 +28,13 @@ export default ({ data }, props) => (
         High Conversion Patient Acquisition Websites | Performance, Results,
         Excellence
       </title>
-      <meta name="description" content="Start acquiring the new patients your healthcare practice deserves. Mobile first conversion focused medical websites combined with performance digital marketing." />
+      <meta
+        name="description"
+        content="Start acquiring the new patients your healthcare practice deserves. Mobile first conversion focused medical websites combined with performance digital marketing."
+      />
     </Helmet>
-    <div className={props["*"] || "homepage"}>
+    <SEO page="homepage" />
+    <div className={"homepage"}>
       <div className="hero">
         {/* Hero will be a layout component */}
         <Container>
