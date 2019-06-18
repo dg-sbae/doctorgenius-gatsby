@@ -43,18 +43,25 @@ class ContactForm extends React.Component {
   }
 
   handleFormSubmit(ev) {
+    // trigger ajax loading spiner
+
+    // Prevent the button from redirecting
     ev.preventDefault()
 
+    // Set up a new Form object
     const data = new FormData()
 
+    //Add the user-entered data
     data.append("FullName", this.name.value)
     data.append("PhoneNumber", this.phone.value)
     data.append("EmailAddress", this.email.value)
     data.append("CompanyName", this.company.value)
+
+    // Add required, internal fields for our Admin connection
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
 
-    /* Deprecating alert:
+    /* Debug:
     alert(
       "Debug -- Data sent to server:\n" +
         data +
@@ -71,24 +78,8 @@ class ContactForm extends React.Component {
     )
     */
 
-    /*
-    let stringData
-    console.log(Object.fromEntries(data))
-    console.log("Stringified: ", JSON.stringify(Object.fromEntries(data)))
-    let jsonData = {
-      name: hardName,
-      phone: hardPhone, //this.phone.value,
-      email: hardEmail, //this.email.value,
-      company: hardCompany, //this.company.value,
-    }
-    console.log("json data: ", jsonData)
-    */
-
     //NodeTest server
     //fetch("http://nodetest.dgd3v.com/upload", {
-
-    //RequestBin diagnostics:
-    //fetch("http://requestbin.fullcontact.com/1jqpz7t1", {
 
     //Salesforce integration:
     //https://portal.doctorgenius.com/api/dglead
@@ -103,54 +94,14 @@ class ContactForm extends React.Component {
     //Email:   [EmailAddress]
     //Company: [CompanyName]
 
-    //[_remote_ip]
-    //[_url]
-
-    /*
-    http://requestbin.fullcontact.com
-    POST /1jqpz7t1  application/x-www-form-urlencoded
-    354 bytes 6s ago
-    From 216.70.114.53, 54.182.230.61
-    FORM/POST PARAMETERS
-    FullName: TESTING only
-    referurl: https://doctorgenius.com/demo/
-    postToSalesForce: true
-    AccessToken: a803bcbe-f32d-41b9-81a8-62a4cd6cd446
-    EmailAddress: jparmenter@doctorgenius.com
-
-    user-email:
-    LeadSource: Main Website Organic
-    Status: New
-    CompanyName: WP Form test #2
-    Description: Form: "Request Demo B" | Form ID: 1093
-    PhoneNumber: 1234567890
-
-    HEADERS
-    Cloudfront-Viewer-Country: US
-    Total-Route-Time: 0
-    Cloudfront-Is-Mobile-Viewer: false
-    Host: requestbin.fullcontact.com
-    Cloudfront-Forwarded-Proto: http
-    Content-Type: application/x-www-form-urlencoded
-    X-Request-Id: 4e9f56e4-e8a5-45c7-b8be-8ff0cc6a73d5
-    Cloudfront-Is-Smarttv-Viewer: false
-    Accept-Encoding: deflate, gzip
-    Cloudfront-Is-Tablet-Viewer: false
-    User-Agent: WordPress/4.9.10; https://doctorgenius.com
-    Content-Length: 354
-    Via: 1.1 565c5243db2ec940986d684b1d27280f.cloudfront.net (CloudFront), 1.1 vegur
-    Connection: close
-    Connect-Time: 1
-    X-Amz-Cf-Id: Qp9CNYNyLmB2LNxwhSIZ1y9696QxyU5SwlpqZDI-JUljXmD4gyCS4A==
-    Cloudfront-Is-Desktop-Viewer: true
-    Referer: http://requestbin.fullcontact.com/1jqpz7t1
-
-    RAW BODY
-    FullName=TESTING+only&CompanyName=WP+Form+test+%232&EmailAddress=jparmenter%40doctorgenius.com&PhoneNumber=1234567890&user-email=&AccessToken=a803bcbe-f32d-41b9-81a8-62a4cd6cd446&Description=Form%3A+%22Request+Demo+B%22+%7C+Form+ID%3A+1093&Status=New&LeadSource=Main+Website+Organic&postToSalesForce=true&referurl=https%3A%2F%2Fdoctorgenius.com%2Fdemo%2F
-    */
-
+    //stringData holds the stringified, encoded form data
     let stringData = ""
-    console.log(Object.fromEntries(data))
+
+    // Debug
+    // console.log(Object.fromEntries(data))
+
+    // Turn the form body into a string by iterating over the form
+    // entries and encoding them as URI components
     Object.keys(Object.fromEntries(data)).forEach(
       e =>
         //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
@@ -158,43 +109,14 @@ class ContactForm extends React.Component {
           Object.fromEntries(data)[e]
         )}&`)
     )
+
+    // Remove the trailing '&' since there's no additional parameter
     stringData = stringData.replace(/&$/, "")
-    console.log("Stringified form data:", stringData)
 
-    //fetch("http://requestbin.fullcontact.com/1jqpz7t1", {
-    fetch("http://nodetest.dgd3v.com/upload", {
-      method: "POST",
-      body: stringData,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    }).then(response => {
-      console.log("NodeTest response:", response)
-      response.json().then(body => {
-        this.setState({
-          name: body.name,
-          phone: body.phone,
-          company: body.company,
-          email: body.email,
-        })
-      })
-    })
+    // Debug:
+    // console.log("Stringified form data:", stringData)
 
-    fetch("https://enh4puletkcmw.x.pipedream.net", {
-      method: "POST",
-      body: stringData,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    }).then(response => {
-      console.log("RequestBin response:", response)
-      response.json().then(body => {
-        console.log("requestbin body:", body)
-      })
-    })
-
-    /*
-    Deprecating this for now:
+    // Generate a request to our Admin portal (connects to SalesForce)
     fetch("https://portal.doctorgenius.com/api/dglead", {
       method: "POST",
       body: stringData,
@@ -207,32 +129,45 @@ class ContactForm extends React.Component {
         console.log("dgleads body:", body)
       })
     })
-    */
-    /*
+
+    // Generate a request to the email server
     fetch("http://nodetest.dgd3v.com/upload", {
       method: "POST",
-      body: {
-        name: "Jared Test",
-        phone: "1234567890",
-        company: "Company test",
-        email: "test@test.com",
-      },
+      body: stringData,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        /*
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Content-Type": "multipart/form-data",
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Content-Type": "multipart/form-data",
-        /
       },
-    })*/
+    }).then(response => {
+      //console.log("NodeTest response:", response)
+      response.json().then(body => {
+        this.setState({
+          name: body.name,
+          phone: body.phone,
+          company: body.company,
+          email: body.email,
+        })
+      })
+    })
+
+    /* Additional testing endpoint:
+    fetch("https://enh4puletkcmw.x.pipedream.net", {
+      method: "POST",
+      body: stringData,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    }).then(response => {
+      console.log("RequestBin response:", response)
+      response.json().then(body => {
+        console.log("requestbin body:", body)
+      })
+    })
+    */
   }
 
   render() {
     return (
       <div className="form-wrapper">
-        {/*<form onSubmit={this.handleFormSubmit}  enctype="multipart/form-data">*/}
         <form onSubmit={this.handleFormSubmit}>
           <div>
             <input
