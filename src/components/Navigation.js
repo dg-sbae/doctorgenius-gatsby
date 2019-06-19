@@ -49,7 +49,7 @@ const ListLink = props => (
 )
 
 const ExternalLink = props => (
-  <li className="">
+  <li className={props.className}>
     <a href={props.to} target="_blank">
       <div className="icon-wrapper">
         <img className="img-icon" src={props.source} alt={props.alt} />
@@ -972,26 +972,31 @@ class Navigation extends Component {
                 to="https://www.facebook.com/DoctorGeniusMarketing"
                 source={facebook}
                 alt="Facebook logo icon"
+                className="social-link-container"
               />
               <ExternalLink
                 to="https://twitter.com/DoctorGeniusCA"
                 source={twitter}
                 alt="Twitter logo icon"
+                className="social-link-container"
               />
               <ExternalLink
                 to="https://www.instagram.com/doctor.genius/"
                 source={instagram}
                 alt="Instagram logo icon"
+                className="social-link-container"
               />
               <ExternalLink
                 to="https://www.linkedin.com/company/doctor-genius"
                 source={linkedin}
                 alt="LinkedIn logo icon"
+                className="social-link-container"
               />
               <ExternalLink
                 to="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos"
                 source={youtube}
                 alt="Youtube logo icon"
+                className="social-link-container"
               />
             </ul>
           </div>
