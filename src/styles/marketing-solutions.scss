@@ -27,6 +27,9 @@
   .lighthouse-image {
     width: 110%;
     max-width: 110%;
+    @include media("<laptop") {
+      width: 100%;
+    }
   }
   .proven-results-row {
     .col-sm-6:first-of-type {

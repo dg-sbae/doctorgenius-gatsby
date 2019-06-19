@@ -225,8 +225,8 @@
     }
     &.blur-bleed {
       @include media("<laptop") {
-        -webkit-transform: translateX(6%);
-        transform: translateX(6%);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
       }
     }
   }

@@ -737,3 +737,16 @@ $bottom-padding-md: 20px;
     width: 100%;
   }
 }
+
+.full-bleed-wrapper {
+  @include media("<laptop") {
+    padding: 0 !important;
+  }
+}
+
+.row .img-container {
+  @include media("<=phone") {
+    padding-left: 37.5px !important;
+    padding-right: 37.5px !important;
+  }
+}
