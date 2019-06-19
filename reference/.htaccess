@@ -1,4 +1,6 @@
 #DirectorySlash Off
+#Direct users to a 404 if attempting to visit the parent Clients page
+RedirectMatch 404 ^/our-clients/?$
 
 # Old 301s from the WP doctorgenius.com
 Redirect 301 /events/business-dentistry-2017-08-04/ /
@@ -12,7 +14,7 @@ Redirect 301 /CDA/ /
 Redirect 301 /cda/ /
 
 #New 301s to support old content from WP dg.com
-#RewriteRule (^.*?)/?$ $1
+##RewriteRule (^.*?)/?$ $1
 
 Redirect 302 /events /
 Redirect 301 /portal /
@@ -24,15 +26,15 @@ Redirect 301 /category/digital-marketing /the-study/digital-marketing
 Redirect 301 /category/practice-management /the-study/practice-management
 Redirect 301 /category/genius-lab /the-study/genius-lab
 
-RewriteEngine on
+#RewriteEngine on
 #removing trailing slash
-RewriteCond %{REQUEST_FILENAME} \ /(.*)/(\ |$|\?)
-RewriteRule ^(.*)/$ $1 [R,L]
+#RewriteCond %{REQUEST_FILENAME} \ /(.*)/(\ |$|\?)
+#RewriteRule ^(.*)/$ $1 [R,L]
 
 # internally add the slash back
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{REQUEST_URI} !/$
-RewriteRule ^(.*)$ /$1/ [L]
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteCond %{REQUEST_URI} !/$
+#RewriteRule ^(.*)$ /$1/ [L]
 
 
 #RewriteCond %{REQUEST_FILENAME} !-d

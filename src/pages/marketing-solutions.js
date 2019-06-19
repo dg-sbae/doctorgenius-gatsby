@@ -1,5 +1,5 @@
 import React from "react"
-import {Helmet} from "react-helmet"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -21,9 +21,13 @@ export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
       <title>
-        Medical Digital Marketing Solutions | Predictable Practice Growth Solution
+        Medical Digital Marketing Solutions | Predictable Practice Growth
+        Solution
       </title>
-      <meta name="description" content="Premier Google Partner and full-service digital marketing agency serving practices nationwide with a results-driven approach. Get new patients today."/>
+      <meta
+        name="description"
+        content="Premier Google Partner and full-service digital marketing agency serving practices nationwide with a results-driven approach. Get new patients today."
+      />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
@@ -182,11 +186,10 @@ export default props => (
                   <h2>All the tools you'll need to be in control. </h2>
                   <div className="accented-paragraph">
                     <p>
-                      Replace lorem ipsum under "All the tools..." to "In order
-                      to for you to thrive online, you must also utilize
-                      software to effectively manage the interactions you and
-                      your staff has with your leads, prospective patients, and
-                      eventual patients."
+                      In order to for you to thrive online, you must also
+                      utilize software to effectively manage the interactions
+                      you and your staff has with your leads, prospective
+                      patients, and eventual patients.
                     </p>
                     <a
                       href="/marketing-solutions/our-technology"

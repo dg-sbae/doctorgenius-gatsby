@@ -58,8 +58,11 @@ class ContactForm extends React.Component {
     data.append("CompanyName", this.company.value)
 
     // Add required, internal fields for our Admin connection
+    data.append("Status", "New")
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
+    data.append("Description", "Form: Request Demo")
+    data.append("LeadSource", "(New) Main Website Organic")
 
     /* Debug:
     alert(
@@ -138,7 +141,7 @@ class ContactForm extends React.Component {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     }).then(response => {
-      //console.log("NodeTest response:", response)
+      console.log("NodeTest response:", response)
       response.json().then(body => {
         this.setState({
           name: body.name,
