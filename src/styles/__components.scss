@@ -353,6 +353,17 @@ footer {
 }
 
 nav {
+  .main-contact-links {
+    .free-demo-button {
+      padding-left: 0;
+      padding-right: 0;
+      width: auto;
+
+      a {
+        padding: 10px 21px;
+      }
+    }
+  }
   &.main-navbar-stuck {
     .navbar-nav {
       li {
