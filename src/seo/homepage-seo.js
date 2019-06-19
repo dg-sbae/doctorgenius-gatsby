@@ -1,9 +1,69 @@
 export default [
-  //Either of these formats work; all one string concatenated on the same line:
-  '{ "@context": "http://www.schema.org", "@type": "WebSite", name: "Doctor Genius", alternateName: "Irvine, CA Local Business Search Optimization Solutions, Doctor Genius", url: "https://doctorgenius.com", about: "Our website summarizes the local search engine optimization (SEO) services we offer at Doctor Genius.", description: "Explore our website to find out more about our local SEO services, and why we can be your next solution to more patient conversions and domination of your local competitive space!", copyrightHolder: "Doctor Genius", copyrightYear: "2019", headline: "Doctor Genius - Local Business Search Optimization Solutions Irvine, CA 92606 | (877) 477-2311", isFamilyFriendly: "True", offers: "Local Search Optimization Solutions", potentialAction: { "@type": "SearchAction", target: "https://doctorgenius.com?s={search_term_string}", "query-input": "required name=search_term_string", },   }',
-  '{ "@context": "http://www.schema.org", "@type": "LocalBusiness", name: "Doctor Genius", naics: "541810", description: "At Doctor Genius, we strive to provide our clients and their businesses throughout the United States with top-quality local search engine solutions. See how we can help increase the visibility of your business and get you more patient conversions by exploring the rest of our website and speaking with one of our knowledgeable sales representatives!", ethicsPolicy: "Doctor Genius takes customer satisfaction very seriously, and our goal is to provide them with top-quality services and support. If we\'ve made a mistake, we own up to it, and do our best to rectify the issue. We offer what we believe to be fair prices, sustainable for practices both small and large, to help clients convert more patients and dominate their local competitive space. Get the tools you need to show patients why you should be their new go-to local practice.", alternateName: "Irvine, CA Local Business Search Optimization Solutions, Doctor Genius", url: "https://doctorgenius.com", sameAs: [ "https://en.wikipedia.org/wiki/Local_search_engine_optimisation", "https://goo.gl/maps/LFzTP3xHGTVy6xSb7", "https://www.facebook.com/DoctorGeniusMarketing/", "https://twitter.com/doctorgeniusca?lang=en", "https://www.yelp.com/biz/doctor-genius-irvine", ], logo: "https://doctorgenius.com/wp-content/uploads/2016/07/logo-doctorgenius.png", image: "https://doctorgenius.com/wp-content/uploads/2016/07/logo-doctorgenius.png", priceRange: "$-$$$", hasMap: "https://goo.gl/maps/LFzTP3xHGTVy6xSb7", telephone: "(877) 477-2311", address: { "@type": "PostalAddress", streetAddress: "2121 Alton Pkwy #150", addressLocality: "Irvine", addressRegion: "California", postalCode: "92606", addressCountry: "United States", }, geo: { "@type": "GeoCoordinates", latitude: "33.694531", longitude: "-117.839809", name: "Irvine, California", description: "Irvine, CA 92606", sameAs: "https://en.wikipedia.org/wiki/Irvine,_California", }, areaServed: "Entire United States", potentialAction: { "@type": "SearchAction", target: "https://doctorgenius.com?s={search_term_string}", "query-input": "required name=search_term_string", }, }',
+  "{" +
+    '"@context": "http://www.schema.org",' +
+    '"@type": "WebSite",' +
+    '"name": "Doctor Genius",' +
+    '"alternateName": "Irvine, CA Local Business Search Optimization Solutions, Doctor Genius",' +
+    '"url": "https://doctorgenius.com",' +
+    '"about": "Our website summarizes the local search engine optimization (SEO) services we offer at Doctor Genius.",' +
+    '"description": "Explore our website to find out more about our local SEO services, and why we can be your next solution to more patient conversions and domination of your local competitive space!",' +
+    '"copyrightHolder": "Doctor Genius",' +
+    '"copyrightYear": "2019",' +
+    '"headline": "Doctor Genius - Local Business Search Optimization Solutions Irvine, CA 92606 | (877) 477-2311",' +
+    '"isFamilyFriendly": "True",' +
+    '"offers": "Local Search Optimization Solutions",' +
+    '"potentialAction": {' +
+    '"@type": "SearchAction",' +
+    '"target": "https://doctorgenius.com?s={search_term_string}",' +
+    '"query-input": "required name=search_term_string"' +
+    "}" +
+    "}",
 
-  //or broken up into individual strings joined by +:
+  "{" +
+    '"@context": "http://www.schema.org",' +
+    '"@type": "LocalBusiness",' +
+    '"name": "Doctor Genius",' +
+    '"naics": "541810",' +
+    '"description": "At Doctor Genius, we strive to provide our clients and their businesses throughout the United States with top-quality local search engine solutions. See how we can help increase the visibility of your business and get you more patient conversions by exploring the rest of our website and speaking with one of our knowledgeable sales representatives!",' +
+    '"ethicsPolicy": "Doctor Genius takes customer satisfaction very seriously, and our goal is to provide them with top-quality services and support. If we\'ve made a mistake, we own up to it, and do our best to rectify the issue. We offer what we believe to be fair prices, sustainable for practices both small and large, to help clients convert more patients and dominate their local competitive space. Get the tools you need to show patients why you should be their new go-to local practice.",' +
+    '"alternateName": "Irvine, CA Local Business Search Optimization Solutions, Doctor Genius",' +
+    '"url": "https://doctorgenius.com",' +
+    '"sameAs": [' +
+    '"https://en.wikipedia.org/wiki/Local_search_engine_optimisation",' +
+    '"https://goo.gl/maps/LFzTP3xHGTVy6xSb7",' +
+    '"https://www.facebook.com/DoctorGeniusMarketing/",' +
+    '"https://twitter.com/doctorgeniusca?lang=en",' +
+    '"https://www.yelp.com/biz/doctor-genius-irvine"],' +
+    '"logo": "https://doctorgenius.com/wp-content/uploads/2016/07/logo-doctorgenius.png",' +
+    '"image": "https://doctorgenius.com/wp-content/uploads/2016/07/logo-doctorgenius.png",' +
+    '"priceRange": "$-$$$",' +
+    '"hasMap": "https://goo.gl/maps/LFzTP3xHGTVy6xSb7",' +
+    '"telephone": "(877) 477-2311",' +
+    '"address": {' +
+    '"@type": "PostalAddress",' +
+    '"streetAddress": "2121 Alton Pkwy #150",' +
+    '"addressLocality": "Irvine",' +
+    '"addressRegion": "California",' +
+    '"postalCode": "92606",' +
+    '"addressCountry": "United States"' +
+    "}," +
+    '"geo": {' +
+    '"@type": "GeoCoordinates",' +
+    '"latitude": "33.694531",' +
+    '"longitude": "-117.839809",' +
+    '"name": "Irvine, California",' +
+    '"description": "Irvine, CA 92606",' +
+    '"sameAs": "https://en.wikipedia.org/wiki/Irvine,_California"' +
+    "}," +
+    '"areaServed": "Entire United States",' +
+    '"potentialAction": {' +
+    '"@type": "SearchAction",' +
+    '"target": "https://doctorgenius.com?s={search_term_string}",' +
+    '"query-input": "required name=search_term_string"' +
+    "}" +
+    "}" +
+    "}",
+
   "{" +
     '"@context": "http://www.schema.org",' +
     '"@type": "ProfessionalService",' +
