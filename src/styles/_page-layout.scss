@@ -607,8 +607,8 @@ $bottom-padding-md: 20px;
     @include media("<tablet") {
       width: 75%;
     }
-    @include media("<phone") {
-      width: 84%;
+    @include media("<=phone") {
+      width: 90%;
     }
 
     .nav-item {
