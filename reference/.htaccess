@@ -1,4 +1,6 @@
 #DirectorySlash Off
+#Direct users to a 404 if attempting to visit the parent Clients page
+RedirectMatch 404 ^/our-clients/?$
 
 # Old 301s from the WP doctorgenius.com
 Redirect 301 /events/business-dentistry-2017-08-04/ /
