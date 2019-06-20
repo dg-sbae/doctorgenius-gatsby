@@ -7,7 +7,7 @@ export default () => (
     page="content-marketing" /* this should be dynamic from the page props */
     pageTitle="Content Marketing"
     pageSubtitle="<span>Build New</span> Organic Traffic"
-    pageIntro="Our organic content strategy main objective is to funnel traffic to your website."
+    pageIntro="Our organic content strategy's main objective is to funnel traffic to your website."
     metaTitle="Organic Search Engine Optimized Content | Healthcare Marketing Agency"
     metaDescription="When was the last time your current agency updated your website? Content marketing drives website visibility which in turn drives patients."
     contentRows={[
@@ -24,7 +24,7 @@ export default () => (
         },
         image: {
           url: "/png/content-marketing-row-1.png",
-          alt: "Lorem Ipsum",
+          alt: "Content is King",
         },
       },
       {
@@ -40,7 +40,7 @@ export default () => (
         },
         image: {
           url: "/png/content-marketing-row-2.png",
-          alt: "Lorem Ipsum",
+          alt: "Understanding your practice",
         },
       },
       {
@@ -56,7 +56,7 @@ export default () => (
         },
         image: {
           url: "/png/content-marketing-row-3.png",
-          alt: "Lorem Ipsum",
+          alt: "Seeing is believing",
         },
       },
     ]}
