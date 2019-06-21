@@ -20,6 +20,8 @@ import newPatientAcquisitions from "../img/home-new-patient-acquisitions.png"
 import dgDifferent from "../img/home-dg-different.png"
 import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
 import SEO from "../components/seo.js"
+// import homepageMarketingDashboardDesktop from "../img/homepage-marketing-dashboard-desktop.png"
+// import homepageMarketingDashboardMobile from "../img/homepage-marketing-dashboard-mobile.png"
 
 export default ({ data }, props) => (
   <DefaultPageLayout location={props["*"]}>
@@ -132,6 +134,7 @@ export default ({ data }, props) => (
               </div>
             </div>
           </div>
+
           <div className="row padded">
             <div className="col-sm-10">
               <div className="inner-title center">
@@ -157,23 +160,13 @@ export default ({ data }, props) => (
               </div>
             </div>
           </div>
-          <div className="full-bleed-wrapper pad-md">
-            <div className="full-bleed marketing-dashboard-background" />
-            <div className="full-bleed-content-wrapper">
-              <div className="row">
-                <div className="col-lg-1" />
-                <div className="col-sm-9">
-                  <img
-                    src={homepageMobileMockup}
-                    alt=""
-                    className="img-responsive"
-                  />
-                </div>
-                <div className="col-lg-1" />
-              </div>
-            </div>
-          </div>
+        </Container>
 
+        <div className="row full-bleed-image-row">
+          <div className="col-12 full-bleed-img" />
+        </div>
+
+        <Container>
           <div className="row padded short-top short-bottom">
             <div className="col-sm-12">
               <div className="inner-title center">

@@ -45,6 +45,22 @@ footer {
   }
 }
 
+.full-bleed {
+  .full-bleed-content-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.full-bleed-image-row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  .full-bleed-img {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 .button {
   background-color: $primary;
 }
