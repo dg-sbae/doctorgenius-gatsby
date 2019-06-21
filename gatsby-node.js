@@ -296,6 +296,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           test: /bootstrap/,
           use: loaders.null(),
         },
+        {
+          test: /react-gtm-module/,
+          use: loaders.null(),
+        },
       ],
     },
   })
