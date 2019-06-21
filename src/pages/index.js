@@ -53,7 +53,7 @@ export default ({ data }, props) => (
                   <div className="border-vertical border-left-bottom" />
                   <div className="border-vertical border-right-bottom" />
                   <h1>
-                    <span>The Leader in</span> New Patient Acquisition
+                    <span>The Leader in</span> New Patient Acquisitions
                   </h1>
                   <div className="accented-paragraph">
                     <p>
