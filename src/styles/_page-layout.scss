@@ -112,6 +112,9 @@ header {
 
         &.stuck-midway {
           height: 100px;
+          @include media("<laptop") {
+            height: 70px;
+          }
 
           .dropdown-menu {
             top: 58px;
@@ -120,7 +123,7 @@ header {
         &.stuck-fully {
           height: 80px;
           @include media("<laptop") {
-            height: 75px;
+            height: 65px;
           }
           .dropdown-menu {
             top: 48px;

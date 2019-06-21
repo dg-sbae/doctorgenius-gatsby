@@ -37,11 +37,11 @@ export default function HTML(props) {
                   var heroBottom = document.querySelector('.hero').getBoundingClientRect().bottom;
                 }
 
-                if (winScroll >= 100 && winScroll < 200) {
+                if (winScroll > 0 && winScroll < 100) {
                   document.querySelector("nav.navbar").classList.add("main-navbar-stuck");
                   document.querySelector("nav.navbar").classList.add("stuck-midway");
                   document.querySelector("nav.navbar").classList.remove("stuck-fully");
-                } else if (winScroll >= 200) {
+                } else if (winScroll >= 100) {
                   document.querySelector("nav.navbar").classList.add("main-navbar-stuck");
                   document.querySelector("nav.navbar").classList.add("stuck-fully");
                   document.querySelector("nav.navbar").classList.remove("stuck-midway");
