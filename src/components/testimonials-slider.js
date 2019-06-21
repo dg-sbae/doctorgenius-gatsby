@@ -152,8 +152,7 @@ export default class TestimonialsSlider extends React.Component {
         {
           breakpoint: 767,
           settings: {
-            centerPadding: false,
-            centerPadding: "0",
+            centerPadding: "4%",
           },
         },
       ],

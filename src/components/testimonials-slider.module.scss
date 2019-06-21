@@ -1,3 +1,5 @@
+@import "../styles/_site-variables.scss";
+
 .testimonialsSlider {
   .slick-list {
     margin-left: 20px;
@@ -13,6 +15,21 @@
 
   .card {
     width: 700px;
+    @include media("<=800px") {
+      width: 650px;
+      // margin: 0 auto;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    @include media("<=700px") {
+      width: 80%;
+      margin: 0 auto;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    @include media("<=phone") {
+      width: 95%;
+    }
     position: relative;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     overflow-y: hidden;
@@ -75,6 +92,15 @@
     .imageArea {
       position: absolute;
       width: 17.5%;
+      @include media("<=700px") {
+        width: 27.5%;
+      }
+      @include media("<565px") {
+        width: 27.5%;
+      }
+      @include media("<400px") {
+        width: 23.5%;
+      }
       height: 100%;
       display: flex;
       align-items: center;
@@ -82,9 +108,26 @@
     .imageWrapper {
       width: 85px;
       height: 85px;
+      @include media("<=565px") {
+        width: 65px;
+        height: 65px;
+      }
+      @include media("<=400px") {
+        width: 55px;
+        height: 55px;
+      }
     }
     .authorArea {
       width: 80%;
+      @include media("<=700px") {
+        width: 73%;
+      }
+      @include media("<565px") {
+        width: 70%;
+      }
+      @include media("<400px") {
+        width: 70%;
+      }
       height: 100%;
       right: 0;
       margin-left: 2.5%;
@@ -154,6 +197,12 @@
 
   h5 {
     font-size: 34px;
+    @include media("<565px") {
+      font-size: 26px;
+    }
+    @include media("<400px") {
+      font-size: 21px;
+    }
     display: block;
     color: white;
     z-index: 10;
@@ -204,6 +253,9 @@
 }
 .cardCopyHolder {
   height: calc(10px + 1.75em * 5); /* line height * # of lines to show */
+  @include media("<=phone") {
+    height: calc(10px + 1.75em * 6);
+  }
   transition: all 2s;
   border-radius: 12px;
 }
