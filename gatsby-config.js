@@ -5,14 +5,22 @@ module.exports = {
   plugins: [
     //`gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sass`,
-    /*{
-      resolve: 'gatsby-plugin-web-font-loader',
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        typekit: {
-          id: 'xxxxxx' //TODO Need to get this id
-        }
-      }
-    }*/
+        id: "GTM-52SPGC",
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: true,
+        /*
+        // Specify optional GTM environment details.
+        gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
+        gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
+        dataLayerName: "YOUR_DATA_LAYER_NAME",
+        */
+      },
+    },
     {
       resolve: `gatsby-source-wordpress`,
       options: {
