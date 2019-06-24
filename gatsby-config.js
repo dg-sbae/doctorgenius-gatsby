@@ -26,7 +26,7 @@ module.exports = {
       options: {
         //The base URL of the WordPress site without the trailingslash and the protocol. This is required.
         //Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
-        baseUrl: `doctorgenius.com`,
+        baseUrl: `doctorgenius-wordpress.dgplex.com`,
         // The protocol. This can be http or https.
         protocol: `https`,
         // Indicates whether the site is hosted on wordpress.com.
@@ -57,6 +57,7 @@ module.exports = {
           "/contact-form-7/**",
           "/yoast/**",
           "/regenerate-thumbnails/**",
+          "/ithemes-security/**",
         ],
       },
     },
