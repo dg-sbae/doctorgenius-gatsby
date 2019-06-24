@@ -116,10 +116,6 @@
       justify-content: space-between;
       align-items: center;
     }
-    .share-icons,
-    .label {
-      //width: 175px;
-    }
     .label {
       font-size: 12px;
       display: flex;
@@ -221,5 +217,9 @@
     @include media("<desktop") {
       display: none;
     }
+  }
+  img[class*="wp-image"] {
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
