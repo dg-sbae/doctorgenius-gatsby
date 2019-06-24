@@ -95,3 +95,9 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+Deployment notes:
+
+- Run "gatsby build" at the CLI
+- Copy entire /public folder directly to remote server root
+- Copy .htaccess file from /reference to the server root

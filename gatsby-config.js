@@ -3,21 +3,30 @@ module.exports = {
     title: `Doctor Genius`,
   },
   plugins: [
+    //`gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sass`,
-    /*{
-      resolve: 'gatsby-plugin-web-font-loader',
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        typekit: {
-          id: 'xxxxxx' //TODO Need to get this id
-        }
-      }
-    }*/
+        id: "GTM-52SPGC",
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: true,
+        /*
+        // Specify optional GTM environment details.
+        gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
+        gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
+        dataLayerName: "YOUR_DATA_LAYER_NAME",
+        */
+      },
+    },
     {
       resolve: `gatsby-source-wordpress`,
       options: {
         //The base URL of the WordPress site without the trailingslash and the protocol. This is required.
         //Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
-        baseUrl: `doctorgenius.com`,
+        baseUrl: `doctorgenius-wordpress.dgplex.com`,
         // The protocol. This can be http or https.
         protocol: `https`,
         // Indicates whether the site is hosted on wordpress.com.
@@ -28,12 +37,10 @@ module.exports = {
         // If useACF is true, then the source plugin will try to import the WordPress ACF Plugin contents.
         // This feature is untested for sites hosted on WordPress.com
         useACF: false,
-        /*
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://doctorgenius.com",
-          replacementUrl: "http://localhost:8000/",
+          sourceUrl: "https://doctorgenius-wordpress.dgplex.com/",
+          replacementUrl: "/",
         },
-        */
         excludedRoutes: [
           /* WP */
           "/*/*/taxonomies",
@@ -48,6 +55,7 @@ module.exports = {
           "/contact-form-7/**",
           "/yoast/**",
           "/regenerate-thumbnails/**",
+          "/ithemes-security/**",
         ],
       },
     },

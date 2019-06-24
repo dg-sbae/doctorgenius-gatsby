@@ -4,7 +4,12 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 
 export default () => (
   <MarketingSolutionsTemplate
-    page="/marketing-solutions/online-reputation-management/" /* this should be dynamic from the page props */
+    page="online-reputation" /* this should be dynamic from the page props */
+    pageTitle="Online Reputation"
+    pageSubtitle="Stand out <span>from your</span> competition"
+    pageIntro="Delivering effective brand strategies that enable you to have a major edge in competitive markets."
+    metaTitle="Online Brand & Reputation Monitoring | Maintain a Positive Online Reputation"
+    metaDescription="We put powerful tools in your hands to deliver effective brand strategies that enable you to have a major edge in competitive markets."
     contentRows={[
       {
         content: {
@@ -13,13 +18,12 @@ export default () => (
             alt: "Digital Landscape",
             title: "Digital Landscape",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Gain a network of powerful listings",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Experience the advantage of tapping into our powerful network of publisher-level connections and build a consistent web presence for your practice.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/online-reputation-row-1.png",
           alt: "Lorem Ipsum",
         },
       },
@@ -30,13 +34,12 @@ export default () => (
             alt: "Review Management",
             title: "Review Management",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Maintain a Positive Online Reputation",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "9 out of 10 customers read reviews before making a purchasing decision. We combat negative search content and suppress unwanted material by promoting positive content that you control.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/online-reputation-row-2.png",
           alt: "Lorem Ipsum",
         },
       },
@@ -45,15 +48,14 @@ export default () => (
           icon: {
             url: "/icon/website.svg",
             alt: "Practice Promoter",
-            title: "Practice promoter",
+            title: "Practice Promoter",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Boost your reach to the right patients",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Get reviews from your existing patients fast with our streamlined contact process and form. We direct your patients to your social profiles in a stepped out process that gets you reviews!",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/online-reputation-row-3.png",
           alt: "Lorem Ipsum",
         },
       },

@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -15,14 +16,23 @@ import lighthouseResultsOnMarketingPage from "../img/lighthouse-results-on-marke
 import portalDashboard from "../img/portal-dashboard.png"
 
 import "../styles/marketing-solutions.scss"
-import "../styles/global-styles.scss"
 
 export default props => (
-  <DefaultPageLayout>
+  <DefaultPageLayout location={props["*"]}>
+    <Helmet>
+      <title>
+        Medical Digital Marketing Solutions | Predictable Practice Growth
+        Solution
+      </title>
+      <meta
+        name="description"
+        content="Premier Google Partner and full-service digital marketing agency serving practices nationwide with a results-driven approach. Get new patients today."
+      />
+    </Helmet>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}
-        {/* @todo: Heros need a thin grey border underneath, not included in pic */}
+
         <Container>
           <div className="valign-wrapper row">
             <div className="col-sm-12">
@@ -51,7 +61,7 @@ export default props => (
                 <div className="secondary-nav">
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/websites/">
+                      <a href="/marketing-solutions/websites">
                         <img
                           className="img-icon"
                           src={responsiveWebsitesIcon}
@@ -63,7 +73,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/content-marketing/">
+                      <a href="/marketing-solutions/content-marketing">
                         <img
                           className="img-icon"
                           src={contentMarketingIcon}
@@ -75,7 +85,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/digital-advertising/">
+                      <a href="/marketing-solutions/digital-advertising">
                         <img
                           className="img-icon"
                           src={digitalAdvertisingIcon}
@@ -87,7 +97,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/online-reputation-management/">
+                      <a href="/marketing-solutions/online-reputation-management">
                         <img
                           className="img-icon"
                           src={onlineReputationIcon}
@@ -99,7 +109,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/our-technology/">
+                      <a href="/marketing-solutions/our-technology">
                         <img
                           className="img-icon"
                           src={ourTechnologyIcon}
@@ -111,7 +121,7 @@ export default props => (
                   </div>
                   <div className="panel">
                     <div className="icon-wrapper">
-                      <a href="/marketing-solutions/hosting-solutions/">
+                      <a href="/marketing-solutions/hosting-solutions">
                         <img
                           className="img-icon"
                           src={hostingSolutionsIcon}
@@ -128,17 +138,19 @@ export default props => (
           {/* End secondary nav Component */}
           {/* Begin Split Row of content and image */}
           <div className="row padded short-top short-bottom odd-row proven-results-row">
-            <div className="col-sm-6">
+            <div class="col-md-1" />
+            <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>Proven and tested results in every step of the way</h2>
                   <div className="accented-paragraph">
                     <p className="s-thin">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nunc dui turpis, sodales ut mollis quis, ullamcorper a
-                      metus
+                      Powerful data-driven technology helps you leverage
+                      comprehensive reporting to achieve best-practice
+                      performance metrics, make informed business decisions, and
+                      improve efficiencies
                     </p>
-                    <a href="/case-study/" className="link-with-icon">
+                    <a href="/case-study" className="link-with-icon">
                       <img
                         src="/icon/right-arrow-blue.svg"
                         className="link-icon"
@@ -150,7 +162,7 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-12 col-md-6 order-sm-1 order-md-2">
               <img
                 className="img-responsive blur-bleed lighthouse-image"
                 src={lighthouseResultsOnMarketingPage}
@@ -161,22 +173,23 @@ export default props => (
           {/* End Split Row of content and image */}
           {/* Begin Split Row of image and content */}
           <div className="row padded short-top tall-bottom even-row dashboard-row">
-            <div className="col-sm-6">
+            <div className="col-sm-10 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={portalDashboard}
                 alt="Our Client Dashboard"
               />
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>All the tools you'll need to be in control. </h2>
                   <div className="accented-paragraph">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nunc dui turpis, sodales ut mollis quis, ullamcorper a
-                      metus
+                      In order to for you to thrive online, you must also
+                      utilize software to effectively manage the interactions
+                      you and your staff has with your leads, prospective
+                      patients, and eventual patients.
                     </p>
                     <a
                       href="/marketing-solutions/our-technology"
@@ -200,18 +213,17 @@ export default props => (
             <div className="full-bleed check-plans-background-image flipped" />
             <div className="full-bleed-content-wrapper">
               <div className="row">
-                <div className="col-sm-5">
+                <div className="col-sm-8 col-md-5">
                   <div className="content-block">
                     <div className="inner-title">
                       <h2>Check which plan works for your practice</h2>
                     </div>
                     <div className="accented-paragraph medium-width">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc dui turpis, sodales ut mollis quis, ullamcorper a
-                        metus
+                        From new patient acquisition to retention, Doctor Genius
+                        has you covered.
                       </p>
-                      <a href="/plans/" className="link-with-icon">
+                      <a href="/plans" className="link-with-icon">
                         <img
                           src="/icon/right-arrow-blue.svg"
                           className="link-icon"
@@ -222,21 +234,19 @@ export default props => (
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-7" />
+                <div className="col-sm-4 col-md-7" />
               </div>
             </div>
           </div>
           {/* End Full bleed content row (reversed)*/}
           {/* Begin Demo Footer */}
-          <div className="row padded tall-top tall-bottom request-demo-footer">
-            <div className="col-sm-1" />
-            <div className="col-sm-5">
+          <div className="row padded tall-top request-demo-footer">
+            <div className="col-md-1" />
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>
-                    Start your
-                    <span className="font-weight-semibold"> success </span>
-                    with Doctor Genius today!
+                    Start your <span>success</span> with Doctor Genius today!
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -249,14 +259,13 @@ export default props => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-9 col-md-5">
               <div className="center">
-                <a href="/" className="button flat white-text">
+                <a href="/demo" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
             </div>
-            <div className="col-sm-1" />
           </div>
           {/* End Demo Footer */}
         </Container>

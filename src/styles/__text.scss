@@ -1,8 +1,4 @@
-@import url("https://use.typekit.net/xmg2hgf.css");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:200,300,400,500");
-
 /* Text - Colors and fonts - font-size, font-family, color */
-
 /* Helper classes */
 .font-weight-semibold {
   font-weight: $font-weight-semibold;
@@ -60,7 +56,7 @@ nav {
   }
   .main-links {
     li {
-      font-size: $font-size-nav-main-links;
+      font-size: 0.875rem;
       font-weight: $font-weight-medium;
     }
   }
@@ -69,10 +65,26 @@ nav {
     font-weight: $font-weight-normal;
   }
 }
-.secondary-nav {
-  font-family: $font-family-body-text;
-  font-size: 14px;
-  color: #787878;
+.secondary-nav-target {
+  .secondary-nav {
+    font-family: $font-family-body-text;
+    font-size: 14px;
+    color: #787878;
+    .panel {
+      @include media("<laptop", ">=tablet") {
+        margin: 10px auto 20px;
+      }
+      p {
+        @include fluid-type(9.5px, 15px, $tablet, $laptop);
+      }
+    }
+  }
+  @include media("<laptop", ">=tablet") {
+    height: auto;
+  }
+  @include media("<tablet") {
+    display: none;
+  }
 }
 
 /* Headings */
@@ -92,17 +104,25 @@ nav {
   .accent-block {
     h1 {
       font-size: $h1-font-size;
+      font-weight: $font-weight-medium;
     }
     h2 {
-      font-size: $h2-font-size;
+      @include fluid-type(
+        34px,
+        45px,
+        $tablet,
+        $laptop
+      ); /* desktop - 53, tablet - 45, small - 38 */
       @include heading-font;
-      margin-bottom: 20px;
     }
     p {
-      font-size: 1.1875rem;
+      @include fluid-type(1.0625rem, 1.1875rem, $phone, $tablet); /* 19 - 17 */
       font-family: "Agenda";
       line-height: 1.4;
       font-weight: $font-weight-light;
+      @include media("<laptop") {
+        line-height: 1.1;
+      }
     }
   }
 }
@@ -118,11 +138,25 @@ nav {
   }
   .inner-title {
     h2 {
-      font-size: $h2-font-size-content-block; /* See if this is really necessary conflicts with the h2 size below */
+      span {
+        font-weight: $font-weight-light;
+      }
+      font-size: $h2-font-size-content-block;
+      /*@include fluid-type(
+        20px,
+        $h2-font-size-content-block,
+        $phone,
+        $tablet
+      ); //; /* See if this is really necessary conflicts with the h2 size below */ //font-size: $h2-font-size-main;
+      @include media("<tablet") {
+        font-weight: $font-weight-semibold;
+        font-size: 20px;
+      }
       margin-bottom: 25px;
     }
   }
 }
+/* inner titles which live outside a content block (like coumn headings) */
 .inner-title {
   h3 {
     line-height: 1;
@@ -134,7 +168,12 @@ nav {
   }
   h2 {
     line-height: 1;
-    font-size: $h2-font-size-main;
+    @include fluid-type(
+      $h2-font-size-main * 0.65,
+      $h2-font-size-main,
+      $phone,
+      $tablet
+    ); //font-size: $h2-font-size-main;
     font-weight: $font-weight-medium;
   }
 }
@@ -150,6 +189,8 @@ nav {
 .accented-paragraph {
   p {
     @include accented-paragraph-font;
+    font-size: 14px;
+    //@include fluid-type(14px, 17px, $phone, $tablet);
   }
 }
 
@@ -193,26 +234,50 @@ nav {
 .panel {
   .panel-heading {
     color: $primary;
-    font-size: $panel-heading-font-size;
+    @include fluid-type(
+      $panel-heading-font-size * 0.85,
+      $panel-heading-font-size,
+      $laptop,
+      $desktop
+    );
     font-family: $font-family-inner-block-headings;
     font-weight: $font-weight-bold;
+    @include media("<=laptop") {
+      font-size: 24px;
+    }
   }
   .panel-body {
     font-size: $font-size-lg;
     color: $mute-text-darker;
+    line-height: 1.2;
+    @include media("<=laptop") {
+      font-size: 14px;
+    }
   }
 }
 
 // Standard Request demo Footer
+
 .request-demo-footer {
-  h2 {
-    font-weight: $font-weight-light;
-  }
-  p {
-    color: $demo-body-text;
+  .content-block {
+    h2 {
+      font-weight: $font-weight-light;
+      font-size: 46px;
+      span {
+        font-weight: $font-weight-semibold;
+      }
+      @include media("<=laptop") {
+        font-size: 26px;
+      }
+    }
+    p {
+      color: $demo-body-text;
+    }
+    a.button {
+      @include fluid-type(18px, 15px, $phone, $laptop);
+    }
   }
 }
-
 // Testimonial Slider
 .card-content-wrapper {
   .card-copy {
@@ -259,19 +324,6 @@ footer {
   }
 }
 
-.case-study {
-  .panel-quadrant {
-    h4 {
-      font-size: 22px;
-      font-weight: $font-weight-semibold;
-    }
-    p {
-      font-size: 14px;
-      font-weight: $font-weight-light;
-    }
-  }
-}
-
 /* colors */
 // Helpers
 .white-text {
@@ -309,6 +361,17 @@ a.not-a-link {
 
 .inner-title .subtitle.muted {
   color: $mute-text;
+}
+
+#sidebar {
+  .nav-item {
+    @include fluid-type(16px, 20px, $phone, $laptop);
+    ul {
+      li {
+        @include fluid-type(12px, 16px, $phone, $laptop);
+      }
+    }
+  }
 }
 
 /* Potentially depreceated

@@ -2,21 +2,25 @@
 
 .our-clients {
   .hero {
-    background-image: url("/hero/our-clients.png");
-    height: 690px;
-    .hero-content {
+    background-image: url("/hero/our-clients.jpg");
+    .accented-paragraph {
+      width: 84%;
+    }
+  }
+  .hero-content {
+    @include media(">=tablet") {
       margin-top: 50px;
       width: 630px;
       height: 330px;
-      h1 {
-        padding: 2px 12px;
-      }
-      h2 {
-        margin-top: 10px;
-      }
+    }
+    h1 {
+      padding: 2px 12px;
+    }
+    h2 {
+      margin-top: 10px;
     }
     .accented-paragraph {
-      width: 84%;
+      width: 100%;
     }
   }
   .thin-heading {

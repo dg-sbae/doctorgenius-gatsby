@@ -4,7 +4,12 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 
 export default () => (
   <MarketingSolutionsTemplate
-    page="/marketing-solutions/digital-advertising/" /* this should be dynamic from the page props */
+    page="digital-advertising" /* this should be dynamic from the page props */
+    pageTitle="Digital Advertising"
+    pageSubtitle="<span>Expand your</span> Digital Reach"
+    pageIntro="Sponsored Ads are a great way of drawing new patients from a variety of news sites, blogs and other niche sites across the internet."
+    metaTitle="New Patient Acquisition | Digital Advertising | Healthcare Marketing Agency"
+    metaDescription="Want new patients fast? Organic strategies take time. Digital advertising campaigns drives new patients quick allowing your practice to thrive."
     contentRows={[
       {
         content: {
@@ -13,13 +18,12 @@ export default () => (
             alt: "Hyper Local",
             title: "Hyper Local",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Target ROI Focused Keywords for Google Search",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Increase your focus and narrow down who you are targeting to a small geographic region. Hyper-Local Targeting delivers advertising content to your local audience who is more likely to be interested in your services.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/digital-advertising-row-1.png",
           alt: "Lorem Ipsum",
         },
       },
@@ -30,13 +34,12 @@ export default () => (
             alt: "Audience Optimization",
             title: "Audience Optimization",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Geo-Targeted to maximize effectiveness",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Informative conversion tracking analytics and raise practice awareness among potential patients.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: "/png/digital-advertising-row-2.png",
           alt: "Lorem Ipsum",
         },
       },

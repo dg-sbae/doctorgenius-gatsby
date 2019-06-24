@@ -1,3 +1,4 @@
+@import "_site-variables.scss";
 .company {
   .hero {
     background-image: url("/hero/about-us-hero.jpg");
@@ -5,14 +6,39 @@
       margin-bottom: 20px;
     }
     .hero-content {
-      width: 514px;
-      height: 280px;
-      margin-top: 90px;
+      @include media(">=tablet") {
+        width: 514px;
+        height: 280px;
+        margin-top: 90px;
+      }
     }
   }
-  .icon-wrapper {
-    height: 67px;
-    width: 103px;
-    margin-bottom: 30px;
+
+  @include media("<tablet") {
+    .logo img {
+      margin-top: 40px;
+    }
+  }
+  .request-demo-footer > div {
+    margin-top: 50px;
+  }
+  .panel {
+    a {
+      text-decoration: none;
+    }
+    .icon-wrapper {
+      height: 67px;
+      width: 103px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .nav-icon-wrapper,
+  .footer-contact-row {
+    .icon-wrapper {
+      height: auto;
+      width: auto;
+      margin-bottom: 0;
+    }
   }
 }

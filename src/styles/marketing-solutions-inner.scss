@@ -1,10 +1,39 @@
 @import "_site-variables.scss";
 
 .marketing-solutions-inner {
-  .hero {
-    height: 685px;
-    background-image: url("/hero/marketing-solutions-subpage.jpg");
-    .hero-content {
+  &.content-marketing {
+    .hero {
+      background-image: url("/hero/content-marketing.jpg");
+    }
+  }
+  &.digital-advertising {
+    .hero {
+      background-image: url("/hero/digital-advertising.jpg");
+    }
+  }
+  &.hosting-solutions {
+    .hero {
+      background-image: url("/hero/hosting-solutions.jpg");
+    }
+  }
+  &.online-reputation {
+    .hero {
+      background-image: url("/hero/online-reputation.jpg");
+    }
+  }
+  &.our-technology {
+    .hero {
+      background-image: url("/hero/our-technology.jpg");
+    }
+  }
+  &.responsive-websites {
+    .hero {
+      background-image: url("/hero/responsive-websites.jpg");
+    }
+  }
+
+  .hero-content {
+    @include media(">=tablet") {
       width: 492px;
       height: 330px;
       p {

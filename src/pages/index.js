@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 //import { graphql } from "gatsby"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
@@ -6,7 +7,6 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 // import InnerTitle from "../components/inner-title.js"
 
-import "../styles/global-styles.scss"
 import "../styles/homepage.scss"
 
 import medal from "../img/medal.png"
@@ -19,10 +19,24 @@ import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
 import newPatientAcquisitions from "../img/home-new-patient-acquisitions.png"
 import dgDifferent from "../img/home-dg-different.png"
 import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
+import SEO from "../components/seo.js"
+// import homepageMarketingDashboardDesktop from "../img/homepage-marketing-dashboard-desktop.png"
+// import homepageMarketingDashboardMobile from "../img/homepage-marketing-dashboard-mobile.png"
 
 export default ({ data }, props) => (
-  <DefaultPageLayout>
-    <div className={props["*"] || "homepage"}>
+  <DefaultPageLayout location={props["*"]}>
+    <Helmet>
+      <title>
+        High Conversion Patient Acquisition Websites | Performance, Results,
+        Excellence
+      </title>
+      <meta
+        name="description"
+        content="Start acquiring the new patients your healthcare practice deserves. Mobile first conversion focused medical websites combined with performance digital marketing."
+      />
+    </Helmet>
+    <SEO page="homepage" />
+    <div className={"homepage"}>
       <div className="hero">
         {/* Hero will be a layout component */}
         <Container>
@@ -39,7 +53,7 @@ export default ({ data }, props) => (
                   <div className="border-vertical border-left-bottom" />
                   <div className="border-vertical border-right-bottom" />
                   <h1>
-                    <span>The Leader in</span> New Patient Acquisition
+                    <span>The Leader in</span> New Patient Acquisitions
                   </h1>
                   <div className="accented-paragraph">
                     <p>
@@ -51,7 +65,7 @@ export default ({ data }, props) => (
                   </div>
                 </div>
                 <div className="demo-cta">
-                  <a href="/" className="button flat white-text">
+                  <a href="/demo" className="button flat white-text">
                     Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                   </a>
                 </div>
@@ -63,7 +77,7 @@ export default ({ data }, props) => (
       <Main>
         <Container>
           <div className="row padded panel-row">
-            <div className="col-sm-12">
+            <div className="col-sm-10">
               <div className="header inner-title center">
                 <h3 className="strapline">Performance, Results, Excellence</h3>
                 <h2 className="underline">We Care About Your Success</h2>
@@ -109,13 +123,20 @@ export default ({ data }, props) => (
                 </div>
                 <p className="panel-heading">4+ Stars</p>
                 <p className="panel-body">
-                  We take pride in our Google reviews
+                  We take pride in our{" "}
+                  <a
+                    href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
+                    target="_blank"
+                  >
+                    Google reviews
+                  </a>
                 </p>
               </div>
             </div>
           </div>
+
           <div className="row padded">
-            <div className="col-sm-12">
+            <div className="col-sm-10">
               <div className="inner-title center">
                 <h3 className="strapline">Built for success</h3>
                 <h2 className="underline font-weight-light">
@@ -127,7 +148,7 @@ export default ({ data }, props) => (
                 </h2>
               </div>
             </div>
-            <div className="col-sm-12 col-md-8 col-lg-6">
+            <div className="col-sm-11 col-md-8 col-lg-6">
               <div className="accented-paragraph">
                 <p>
                   Our robust, comprehensive marketing solutions helps keep your
@@ -139,24 +160,14 @@ export default ({ data }, props) => (
               </div>
             </div>
           </div>
-          <div className="full-bleed-wrapper pad-md">
-            <div className="full-bleed marketing-dashboard-background" />
-            <div className="full-bleed-content-wrapper">
-              <div className="row">
-                <div className="col-sm-1 " />
-                <div className="col-sm-10">
-                  <img
-                    src={homepageMobileMockup}
-                    alt=""
-                    className="img-responsive"
-                  />
-                </div>
-                <div className="col-sm-1" />
-              </div>
-            </div>
-          </div>
+        </Container>
 
-          <div className="row padded tall-top short-bottom">
+        <div className="row full-bleed-image-row">
+          <div className="col-12 full-bleed-img" />
+        </div>
+
+        <Container>
+          <div className="row padded short-top short-bottom">
             <div className="col-sm-12">
               <div className="inner-title center">
                 <h3 className="strapline">
@@ -168,14 +179,14 @@ export default ({ data }, props) => (
                 </h2>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-12 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={newPatientAcquisitions}
                 alt=""
               />
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>Why is Doctor Genius # 1 in new patient acquisitions?</h2>
@@ -188,12 +199,11 @@ export default ({ data }, props) => (
                   </div>
                 </div>
               </div>
-              <div className="col-sm-1" />
             </div>
           </div>
           <div className="row padded short-top short-bottom">
-            <div className="col-sm-1" />
-            <div className="col-sm-5">
+            <div className="col-md-1" />
+            <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>What makes Doctor Genius different?</h2>
@@ -206,7 +216,7 @@ export default ({ data }, props) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-12 col-md-6 order-sm-1 order-md-2">
               <img
                 className="img-responsive blur-bleed"
                 src={dgDifferent}
@@ -215,38 +225,41 @@ export default ({ data }, props) => (
             </div>
           </div>
           <div className="row padded short-top tall-bottom">
-            <div className="col-sm-6">
+            <div className="col-sm-12 col-md-6">
               <img
                 className="img-responsive blur-bleed"
                 src={dgClientSatisfaction}
                 alt=""
               />
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>How would you rate Doctor Genius client satisfaction?</h2>
                   <div className="accented-paragraph">
                     <p className="s-thin">
                       Don't take our word for it, see what our clients say about
-                      us 100+ 5 Stars. Check our <a href="/reviews">reviews</a>
+                      us 100+ 5 Stars. Check our{" "}
+                      <a
+                        href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
+                        target="_blank"
+                      >
+                        reviews
+                      </a>
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-1" />
             </div>
           </div>
           {/* Begin Demo Footer */}
           <div className="row padded tall-top request-demo-footer">
-            <div className="col-sm-1" />
-            <div className="col-sm-5">
+            <div className="col-md-1" />
+            <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
                   <h2>
-                    Start your
-                    <span className="font-weight-semibold"> success </span>
-                    with Doctor Genius today!
+                    Start your <span>success</span> with Doctor Genius today!
                   </h2>
                   <div className="accented-paragraph">
                     <p>
@@ -259,14 +272,13 @@ export default ({ data }, props) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-9 col-md-5">
               <div className="center">
-                <a href="/" className="button flat white-text">
+                <a href="/demo" className="button flat white-text">
                   Request Demo <img src={thinArrowRight} alt="Arrow Right" />
                 </a>
               </div>
             </div>
-            <div className="col-sm-1" />
           </div>
           {/* End Demo Footer */}
         </Container>

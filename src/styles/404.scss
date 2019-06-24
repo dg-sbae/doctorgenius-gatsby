@@ -1,0 +1,14 @@
+@import "_site-variables.scss";
+
+.page-404 {
+  .hero {
+    background: url("/hero/privacy-policy-hero.jpg");
+    .accented-paragraph p {
+      color: white;
+    }
+  }
+
+  .single-top-line {
+    margin-bottom: 25px;
+  }
+}

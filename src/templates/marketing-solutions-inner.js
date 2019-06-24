@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -13,14 +14,14 @@ import hostingSolutionsIcon from "../img/hosting-solutions.svg"
 //import lighthouseResult from "../img/lighthouse-result.png"
 
 import "../styles/marketing-solutions-inner.scss"
-import "../styles/global-styles.scss"
 
 export default props => {
   /* These will likely need to be dynamic props */
-  const pageTitle = "Responsive Websites"
-  const pageSubtitle = "<span>Design that leaves a lasting</span> impression."
-  const pageIntro =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Lorem ipsum dolor sit amet, con."
+  const pageTitle = props.pageTitle
+  const pageSubtitle = props.pageSubtitle
+  const pageIntro = props.pageIntro
+  const metaTitle = props.metaTitle
+  const metaDescription = props.metaDescription
 
   // For now all inner pages will have the same hero image, so this will be in the sass
   //const heroImage = "/hero/marketing-solutions-subpage.png"
@@ -30,10 +31,14 @@ export default props => {
 
   return (
     <DefaultPageLayout>
-      <div className={props["*"] + " marketing-solutions-inner"}>
+      <Helmet>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+      </Helmet>
+      <div className={props.page + " marketing-solutions-inner"}>
         <div className="hero">
           {/* Hero will be a layout component */}
-          {/* @todo: Heros need a thin grey border underneath, not included in pic */}
+
           <Container>
             <div className="valign-wrapper row">
               <div className="col-sm-12">
@@ -57,13 +62,13 @@ export default props => {
                   <div className="secondary-nav">
                     <div
                       className={
-                        (currentPage === "/marketing-solutions/websites/"
+                        (currentPage === "responsive-websites"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/websites/">
+                        <a href="/marketing-solutions/websites">
                           <img
                             className="img-icon"
                             src={responsiveWebsitesIcon}
@@ -75,14 +80,12 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage ===
-                        "/marketing-solutions/content-marketing/"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "content-marketing" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/content-marketing/">
+                        <a href="/marketing-solutions/content-marketing">
                           <img
                             className="img-icon"
                             src={contentMarketingIcon}
@@ -94,14 +97,13 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage ===
-                        "/marketing-solutions/digital-advertising/"
+                        (currentPage === "digital-advertising"
                           ? "active "
                           : "") + "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/digital-advertising/">
+                        <a href="/marketing-solutions/digital-advertising">
                           <img
                             className="img-icon"
                             src={digitalAdvertisingIcon}
@@ -113,14 +115,12 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage ===
-                        "/marketing-solutions/online-reputation-management/"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "online-reputation" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/online-reputation-management/">
+                        <a href="/marketing-solutions/online-reputation-management">
                           <img
                             className="img-icon"
                             src={onlineReputationIcon}
@@ -132,13 +132,12 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage === "/marketing-solutions/our-technology/"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "our-technology" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/our-technology/">
+                        <a href="/marketing-solutions/our-technology">
                           <img
                             className="img-icon"
                             src={ourTechnologyIcon}
@@ -150,14 +149,12 @@ export default props => {
                     </div>
                     <div
                       className={
-                        (currentPage ===
-                        "/marketing-solutions/hosting-solutions/"
-                          ? "active "
-                          : "") + "panel"
+                        (currentPage === "hosting-solutions" ? "active " : "") +
+                        "panel"
                       }
                     >
                       <div className="icon-wrapper">
-                        <a href="/marketing-solutions/hosting-solutions/">
+                        <a href="/marketing-solutions/hosting-solutions">
                           <img
                             className="img-icon"
                             src={hostingSolutionsIcon}
@@ -181,9 +178,17 @@ export default props => {
                 }
               >
                 <div
-                  className={(index % 2 ? "order-sm-12" : "") + " col-sm-1"}
+                  className={
+                    (index % 2 ? "order-md-1" : "order-md-1") + " col-md-1"
+                  }
                 />
-                <div class={(index % 2 ? "order-sm-6" : "") + " col-sm-5"}>
+                <div
+                  class={
+                    (index % 2
+                      ? "order-sm-2 order-md-3"
+                      : "order-sm-2 order-md-2") + " col-sm-9 col-md-5"
+                  }
+                >
                   <div className="content-block">
                     <div className="icon-strapline">
                       <img
@@ -214,7 +219,13 @@ export default props => {
                     </div>
                   </div>
                 </div>
-                <div class={(index % 2 ? "order-sm-2" : "") + " col-sm-5"}>
+                <div
+                  class={
+                    (index % 2
+                      ? "order-sm-1 order-md-2"
+                      : "order-sm-1 order-md-3") + " col-sm-12 col-md-5"
+                  }
+                >
                   <img
                     className="img-responsive"
                     src={row.image.url}
@@ -222,7 +233,9 @@ export default props => {
                   />
                 </div>
                 <div
-                  className={(index % 2 ? "order-sm-1" : "") + " col-sm-1"}
+                  className={
+                    (index % 2 ? "order-sm-12" : "order-sm-12") + " col-md-1"
+                  }
                 />
               </div>
             ))}

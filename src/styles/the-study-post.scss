@@ -1,5 +1,96 @@
 @import "_site-variables.scss";
+
 .the-study-post {
+  .hero-padding {
+    width: 100%;
+    height: 90px;
+  }
+  header {
+    nav {
+      box-shadow: 0 1px 1px $grid-border;
+      background-color: #fff;
+      .nav-button {
+        color: $primary;
+        border-color: $primary;
+      }
+      & {
+        .navbar-toggler .navbar-toggler-icon {
+          background-image: url("../../static/icon/nav-toggler-blue.svg");
+          @include media("<laptop") {
+            background-image: url("../../static/icon/nav-toggler.svg");
+          }
+        }
+        .logo a {
+          .logo-holder {
+            background-image: url(/icon/logo-blue.svg);
+            @include media("<laptop") {
+              background-image: url("../../static/icon/logo-white.svg");
+            }
+          }
+        }
+        .phone > a {
+          display: block;
+          color: $primary;
+          .phone-holder {
+            /* phone holder and image holder should be refactored to operate the same way/same markup */
+            background-image: url(/icon/phone-blue.svg);
+            @include media(">=laptop") {
+              background-image: url(/icon/phone-white.svg);
+            }
+          }
+        }
+      }
+      @include media("<laptop") {
+        .navbar-toggler .navbar-toggler-icon {
+          background-image: url("../../static/icon/nav-toggler-blue.svg");
+        }
+        .logo a {
+          .logo-holder {
+            background-image: url(/icon/logo-blue.svg);
+          }
+        }
+        &.main-navbar-stuck {
+          .navbar-toggler .navbar-toggler-icon {
+            background-image: url("../../static/icon/nav-toggler.svg");
+          }
+          .logo a {
+            .logo-holder {
+              background-image: url(/icon/logo-white.svg);
+            }
+          }
+        }
+      }
+
+      li > a {
+        color: $demo-body-text;
+        .active {
+          color: $primary;
+        }
+      }
+
+      .nav-button {
+        border-color: $primary;
+      }
+
+      .contact-links {
+        a {
+          color: $primary;
+        }
+      }
+      &.main-navbar-stuck {
+        .dropdown-menu {
+          a {
+            color: $primary-text;
+          }
+        }
+      }
+      .dropdown-menu {
+        &:after {
+          border-bottom: 9px solid #285c94;
+        }
+      }
+    }
+  }
   .pagination {
     font-size: 12px;
     display: flex;
@@ -8,12 +99,16 @@
     a {
       text-transform: uppercase;
       color: #2e6097;
+      text-decoration: none;
     }
     img {
       margin-bottom: 3px;
     }
   }
   .blog-header {
+    .upper-row .title {
+      margin-right: 3%;
+    }
     .upper-row,
     .lower-row,
     .share-icons {
@@ -21,20 +116,26 @@
       justify-content: space-between;
       align-items: center;
     }
-    .share-icons,
-    .label {
-      width: 175px;
-    }
     .label {
       font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include media("<laptop") {
+        height: 30px;
+        width: auto;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
     }
     .title {
-      max-width: calc(100% - 175px + 15px);
+      //max-width: calc(100% - 175px + 15px);
       font-size: 36px;
       font-weight: $font-weight-semibold;
       color: #5a5a5a;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       letter-spacing: -2px;
+      line-height: 1;
     }
     .date,
     .byline {
@@ -46,6 +147,33 @@
       margin-bottom: 0;
     }
   }
+  @include media("<desktop") {
+    .latest-post .label,
+    .popular-post .label,
+    .share-icons {
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+    .blog-header .title {
+      max-width: 80%;
+    }
+    .blog-header .share-icons {
+      max-width: 100%;
+      justify-content: flex-end !important;
+      & > a {
+        margin: 0 10px;
+        @include media("<500px") {
+          margin: 0 2.5%;
+        }
+      }
+    }
+    .label p {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 15px;
+    }
+  }
+
   .blog-content p {
     font-family: Roboto;
     font-size: 16px;
@@ -53,12 +181,22 @@
     line-height: 1.9;
     margin-bottom: 20px;
   }
-  .featured-image img {
+  .featured-image {
+    width: 125%;
+    margin-left: 50%;
+    transform: translateX(
+      -50%
+    ); /* I dont think this will pass muster with real images */
     margin-top: 10px;
     margin-bottom: 30px;
-    transform: translateX(
-      -12.5%
-    ); /* I dont think this will pass muster with real images */
+    @include media("<desktop") {
+      width: 100%;
+      margin-left: 0%;
+      transform: translateX(0%);
+    }
+  }
+  .events {
+    display: none;
   }
   .events-section img {
     max-width: 100%;
@@ -66,5 +204,22 @@
   .grey-background {
     background: #f4f4f4;
     height: 535px;
+  }
+
+  .mobile-image-row {
+    display: none;
+    @include media("<desktop") {
+      display: block;
+    }
+  }
+  .featured-image {
+    display: block;
+    @include media("<desktop") {
+      display: none;
+    }
+  }
+  img[class*="wp-image"] {
+    max-width: 100% !important;
+    height: auto !important;
   }
 }

@@ -4,23 +4,27 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 
 export default () => (
   <MarketingSolutionsTemplate
-    page="/marketing-solutions/content-marketing/" /* this should be dynamic from the page props */
+    page="content-marketing" /* this should be dynamic from the page props */
+    pageTitle="Content Marketing"
+    pageSubtitle="<span>Build New</span> Organic Traffic"
+    pageIntro="Our organic content strategy's main objective is to funnel traffic to your website."
+    metaTitle="Organic Search Engine Optimized Content | Healthcare Marketing Agency"
+    metaDescription="When was the last time your current agency updated your website? Content marketing drives website visibility which in turn drives patients."
     contentRows={[
       {
         content: {
           icon: {
             url: "/icon/website.svg",
-            alt: "Blog and Social updates",
-            title: "Blog and Social updates",
+            alt: "Blog and Social Updates",
+            title: "Blog and Social Updates",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Content is King",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Google is an Ecosystem powered by information. Doctor Genius will write content related to your most profitable services and utilize additional techniques like Accelerated Mobile Pages(AMP).",
         },
         image: {
-          url: "/png/design-your-presence.png",
-          alt: "Lorem Ipsum",
+          url: "/png/content-marketing-row-1.png",
+          alt: "Content is King",
         },
       },
       {
@@ -30,14 +34,13 @@ export default () => (
             alt: "Patient Education",
             title: "Patient Education",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Understanding your practice",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Original patient education content is posted to your blog and social media profiles to generate general interest in your medical treatments and services.",
         },
         image: {
-          url: "/png/design-your-presence.png",
-          alt: "Lorem Ipsum",
+          url: "/png/content-marketing-row-2.png",
+          alt: "Understanding your practice",
         },
       },
       {
@@ -47,14 +50,13 @@ export default () => (
             alt: "Video Education",
             title: "Video Education",
           },
-          innerTitle:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          innerTitle: "Seeing is believing",
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a placerat nunc, et venenatis felis. Sed in nunc suscipit, sodales lectus eget, pretium erat. Donec semper hendrerit mattis.",
+            "Strategic deployment of educational videos as an additional avenue for new patients to find you.",
         },
         image: {
-          url: "/png/design-your-presence.png",
-          alt: "Lorem Ipsum",
+          url: "/png/content-marketing-row-3.png",
+          alt: "Seeing is believing",
         },
       },
     ]}

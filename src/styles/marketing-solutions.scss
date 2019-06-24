@@ -2,13 +2,17 @@
 
 .marketing-solutions {
   .hero {
-    height: 687px;
-    background-image: url("/hero/marketing-solutions.png");
+    background-image: url("/hero/marketing-solutions.jpg");
+    @include media("<=tablet") {
+      background-position: 84% 50%;
+    }
     .hero-content {
-      width: 490px;
-      height: 295px;
-      p {
-        width: 90%;
+      @include media(">=tablet") {
+        width: 490px;
+        height: 295px;
+        p {
+          width: 90%;
+        }
       }
     }
   }
@@ -16,10 +20,16 @@
     height: 475px;
     background: url("/png/our-clients-fullbleed-image.png") no-repeat;
     background-position: 40%;
+    @include media("<laptop") {
+      background-position: 45%;
+    }
   }
   .lighthouse-image {
     width: 110%;
     max-width: 110%;
+    @include media("<laptop") {
+      width: 100%;
+    }
   }
   .proven-results-row {
     .col-sm-6:first-of-type {

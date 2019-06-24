@@ -18,8 +18,11 @@ footer {
 }
 
 .main-content {
-  background: url(/png/pixel-map.png) no-repeat,
-    url(/png/pixel-map.png) bottom no-repeat;
+  background: top/300px repeat-x url(/png/background-texture.png),
+    center 50%/300px repeat-x url(/png/background-texture-flipped.png),
+    center calc(50% + 300px) / 300px repeat-x url(/png/background-texture.png),
+    bottom/300px repeat-x url(/png/background-texture-flipped.png);
+
   &:before {
     position: absolute;
     content: " ";
@@ -27,7 +30,7 @@ footer {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.65);
   }
 }
 
@@ -39,6 +42,22 @@ footer {
   }
   .full-bleed-slider {
     width: 100%;
+  }
+}
+
+.full-bleed {
+  .full-bleed-content-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.full-bleed-image-row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  .full-bleed-img {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -60,5 +79,14 @@ footer {
 nav {
   .dropdown-menu {
     background-color: #285c94;
+  }
+}
+
+.secondary-nav-stuck {
+  background: url("../../public/png/dotted-background.png");
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+
+  &:after {
+    border-bottom: none;
   }
 }

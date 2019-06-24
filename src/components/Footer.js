@@ -22,16 +22,16 @@ export default ({ children }) => (
         <div className="d-sm-none d-md-block col-sm-12 col-md-6 col-lg-4 footer-page-links">
           <ul>
             <ListLink to="/">Home</ListLink>
-            <ListLink to="/marketing-solutions/">Marketing Solutions</ListLink>
-            <ListLink to="/our-clients/">Our Clients</ListLink>
-            <ListLink to="/plans/">Plans</ListLink>
-            <ListLink to="/company/">Company</ListLink>
-            <ListLink to="/the-study/">Resources</ListLink>
+            <ListLink to="/marketing-solutions">Marketing Solutions</ListLink>
+            <ListLink to="/our-clients">Our Clients</ListLink>
+            <ListLink to="/plans">Plans</ListLink>
+            <ListLink to="/company">Company</ListLink>
+            <ListLink to="/the-study">Resources</ListLink>
             <ListLink to="/demo">Free Demo</ListLink>
-            <ListLink to="/contact/">Contact</ListLink>
+            <ListLink to="/contact">Contact</ListLink>
           </ul>
         </div>
-        <div className="col-sm-8 col-md-6 col-lg-4">
+        <div className="col-sm-10 col-md-6 col-lg-4">
           <div className="footer-contact-row">
             <div className="icon-wrapper">
               <img
@@ -102,9 +102,10 @@ export default ({ children }) => (
               &copy;2019 Doctor Genius. All Rights Reserved.
             </div>
             <div className="legal-links">
-              <ListLink to="/">Privacy Policy</ListLink>
-              <span> | </span>
-              <ListLink to="/">Terms and Conditions</ListLink>
+              <ListLink to="/privacy-policy">Privacy Policy</ListLink>
+              {/* Waiting for page content before we show this link */}
+              {/*<span> | </span>
+              <ListLink to="/">Terms and Conditions</ListLink>*/}
             </div>
           </div>
         </div>

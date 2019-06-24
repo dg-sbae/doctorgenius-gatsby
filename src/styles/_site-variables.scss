@@ -1,3 +1,6 @@
+@import "_include-media.scss";
+@import "_fluid-font-sizes.scss";
+
 /* Spacing */
 $m1: 37.5px;
 $pad: 15px;
@@ -18,15 +21,20 @@ $recommended-green: #10a72f;
 $mute-text-darker: #989898;
 $secondary: #005a91;
 $homepage-secondary-accent: #33b2ff;
+$button-hover-green: #38e038;
+$demo-button-green: #3dc93d;
+$button-hover-blue: #0289e0;
 $content-block-heading-margin: 27.5px; /* This needs fixed, maybe ems? */
 
 /* @include-media named breakpoints */
 $phone: 375px;
 $tablet: 768px;
+$laptop: 991px;
 $desktop: 1300px;
 $breakpoints: (
   phone: $phone,
   tablet: $tablet,
+  laptop: $laptop,
   desktop: $desktop,
 );
 
@@ -35,6 +43,7 @@ $grid-breakpoints: (
   xs: 0,
   /* Not Implemented */ sm: $phone,
   /* Not Implemented */ md: $tablet,
+  lap: 992px,
   lg: $desktop,
   /* Not Used */ xl: 4000px,
 ) !default;
@@ -42,11 +51,16 @@ $grid-breakpoints: (
 $container-max-widths: (
   /* Not Implemented */ sm: 300px,
   /* Not Implemented */ md: 700px,
+  lap: 992px,
   /* 104px per .col-1*/ lg: 1248px,
   /* Not Used */ xl: 1600px
 ) !default;
 
 $grid-gutter-width: $m1 * 2 !default;
+$gutter-lg: 75px;
+$gutter-md: 60px;
+$gutter-sm: 50px;
+$gutter-xs: 30px;
 /* hompage
     hero h1 xagenda x81px thin/semibold
     h3 x20px semibold
@@ -62,6 +76,8 @@ $grid-gutter-width: $m1 * 2 !default;
     navigation link x14px xroboto xmedium
 */
 
+$rfs-base-font-size: 1.25rem !default;
+
 // Standard Font Families
 $font-family-base: agenda, sans-serif !default;
 $font-family-inner-block-headings: montserrat, sans-serif;
@@ -69,8 +85,14 @@ $font-family-body-text: roboto, sans-serif;
 $font-family-inner-block-subtext: muli, sans-serif;
 
 // Standard font sizes
+/* 1.1875 =  19px */
+/* 1.125 =  18px */
+/* 1.0625 = 17 */
+/* 1 =      16 */
+/* .9375 =  15 */
+/* .875 =   14 */
 $font-size-base: 1rem !default; /* 16px */
-$font-size-normal-text: $font-size-base * 1.0625; /* 1.125 = 18px */ /* 1.0625 = 17 */ /* 1 = 16 */ /* .9375 */ /* .875 = 14 */
+$font-size-normal-text: $font-size-base * 1.0625;
 $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * 0.875 !default;
 
@@ -83,6 +105,7 @@ $panel-heading-font-size: $font-size-base * 2.5;
 
 // Headings
 $h1-font-size: $font-size-base * 1 !default;
+/* lg - 63px; md - 63px; sm - 46px */
 $h2-font-size: $font-size-base * 3.3125 !default;
 $h2-font-size-content-block: $font-size-base * 2.5;
 $h2-font-size-main: $font-size-base * 2.8125;
@@ -97,7 +120,7 @@ $font-size-nav-contact-links: $font-size-base * 0.9375;
 $font-size-subfooter: $font-size-base * 0.75;
 
 // Hero
-$hero-strapline-font-size: $font-size-base * 1;
+/* $hero-strapline-font-size: $font-size-base * 1; - unused*/
 
 // Font Weights
 $font-weight-thin: 100;
