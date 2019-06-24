@@ -134,7 +134,7 @@ class ContactForm extends React.Component {
     })
 
     // Generate a request to the email server
-    fetch("http://nodetest.dgd3v.com/upload", {
+    fetch("https://nodetest.dgplex.com/upload", {
       method: "POST",
       body: stringData,
       headers: {
