@@ -141,10 +141,11 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
   return (
     <DefaultPageLayout>
       <Helmet>
-        <title>
-        Practice Management & Digital Marketing Blog | The Study
-        </title>
-        <meta name="description" content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here." />
+        <title>Practice Management & Digital Marketing Blog | The Study</title>
+        <meta
+          name="description"
+          content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+        />
       </Helmet>
       <div className="the-study">
         <div className="hero">
@@ -246,11 +247,15 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                             className="excerpt"
                             dangerouslySetInnerHTML={{
                               __html: node.excerpt.replace(
-                                /https:\/\/doctorgenius.com/,
-                                "/the-study"
+                                /<a.*?moretag.*?<\/a>/,
+                                '... <a href="' +
+                                  postsPath +
+                                  node.slug +
+                                  '" target="_blank">[ Read More ]</a>'
                               ),
                             }}
                           />
+                          <p class="readmore-link"></p>
                         </div>
                       </div>
                     )
@@ -390,7 +395,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                   className="excerpt d-md-block d-lg-none"
                                   dangerouslySetInnerHTML={{
                                     __html: node.excerpt.replace(
-                                      /https:\/\/doctorgenius.com/,
+                                      /^\//,
                                       "/the-study"
                                     ),
                                   }}
