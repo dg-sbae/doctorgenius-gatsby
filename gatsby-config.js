@@ -37,12 +37,10 @@ module.exports = {
         // If useACF is true, then the source plugin will try to import the WordPress ACF Plugin contents.
         // This feature is untested for sites hosted on WordPress.com
         useACF: false,
-        /*
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://doctorgenius.com",
-          replacementUrl: "http://localhost:8000/",
+          sourceUrl: "https://doctorgenius-wordpress.dgplex.com/",
+          replacementUrl: "/",
         },
-        */
         excludedRoutes: [
           /* WP */
           "/*/*/taxonomies",
