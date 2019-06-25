@@ -32,7 +32,7 @@ class DG404Page extends React.Component {
     return (
       <div>
         {pagePaths.length > 0 && (
-          <DefaultPageLayout location={this.props["*"]}>
+          <DefaultPageLayout location="the-study-post">
             <div className={`${this.props["*"]} page-404`}>
               <div className="hero">
                 {/* Hero will be a layout component */}
