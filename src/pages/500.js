@@ -4,7 +4,6 @@ import { graphql, Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-import Error500 from "../img/500.png"
 
 import "../styles/500.scss"
 
@@ -33,32 +32,23 @@ class DG500Page extends React.Component {
     return (
       <div>
         {pagePaths.length > 0 && (
-          <DefaultPageLayout location={this.props["*"]}>
+          <DefaultPageLayout location="the-study-post">
             <div className={`${this.props["*"]} page-500`}>
               <div className="hero">
                 {/* Hero will be a layout component */}
 
                 <Container>
                   <div className="valign-wrapper row">
-                    <div className="col-sm-12 col-md-6 offset-md-3">
+                    <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                       <div>
                         <div className="row">
-                          <div className="col-sm-12.col-md-8.offset-md-2">
-                            <img
-                              className="error-500"
-                              src={Error500}
-                              alt="Error 500"
-                            />
-                          </div>
-                        </div>
-                        <div>
-                          <h2>
-                            <span>Something</span> Went Wrong
-                          </h2>
-                          <div className="accented-paragraph">
-                            <p>
-                              The server is currently unable to handle this
-                              request.
+                          <div className="col-sm-12 col-md-12 col-lg-12">
+                            <h1 className="text-center">500</h1>
+                            <h2 className="text-center">OOPS! INTERNAL SERVICE ERROR</h2>
+                            <p className="text-center accented-paragraph">The page you are looking for might have been removed had its changed or is temporarily unavailable. &nbsp;
+                            <Link to="/">
+                              Return to homepage
+                            </Link>
                             </p>
                           </div>
                         </div>
