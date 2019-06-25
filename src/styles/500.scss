@@ -10,17 +10,18 @@
       color: #0086d6;
       font-size: 12em;
       font-family: 'Montserrat', 'sans-serif';
+      line-height: 1;
   }
 
   .hero h2 {
     color: #5b5b5b;
     font-size: 1.6em;
     font-family: 'Montserrat', 'sans-serif';
-}
+  }
 
-  .single-top-line {
-    margin-bottom: 25px;
-  } 
+  div.sm-500 img {
+    margin: 15px 8px;
+  }
 
   @media only screen and (max-width: 1024px) {
     .hero {

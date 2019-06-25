@@ -4,6 +4,11 @@ import { graphql, Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import FacebookIcon from "../img/facebook-blue.png"
+import TwitterIcon from "../img/twitter-blue.png"
+import InstagramIcon from "../img/instagram-blue.png"
+import LinkedinIcon from "../img/linkedin-blue.png"
+import YoutubeIcon from "../img/youtube-blue.png"
 
 import "../styles/500.scss"
 
@@ -50,6 +55,25 @@ class DG500Page extends React.Component {
                               Return to homepage
                             </Link>
                             </p>
+                            <div class="row">
+                              <div class="col-sm-12 text-center sm-500">
+                                <a href="https://www.facebook.com/DoctorGeniusMarketing">
+                                  <img src={FacebookIcon} alt="Facebook Icons" />
+                                </a>
+                                <a href="https://twitter.com/DoctorGeniusCA">
+                                  <img src={TwitterIcon} alt="Facebook Icons" />
+                                </a>
+                                <a href="https://www.instagram.com/doctor.genius/">
+                                  <img src={InstagramIcon} alt="Facebook Icons" />
+                                </a>
+                                <a href="https://www.linkedin.com/company/doctor-genius">
+                                  <img src={LinkedinIcon} alt="Facebook Icons" />
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
+                                  <img src={YoutubeIcon} alt="Facebook Icons" />
+                                </a>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
