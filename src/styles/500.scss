@@ -1,0 +1,17 @@
+@import "_site-variables.scss";
+
+.page-500 {
+  .hero {
+    background-image: url("/hero/500-error.jpg");
+  }
+
+  .hero h1 {
+      color: #0086d6;
+      font-size: 5rem;
+      font-family: 'Numans', 'agenda', 'sans-serif';
+  }
+
+  .single-top-line {
+    margin-bottom: 25px;
+  } 
+}

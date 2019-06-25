@@ -4,8 +4,9 @@ import { graphql, Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import Error500 from "../img/500.png"
 
-import "../styles/404.scss"
+import "../styles/500.scss"
 
 class DG500Page extends React.Component {
   static propTypes = {
@@ -33,16 +34,24 @@ class DG500Page extends React.Component {
       <div>
         {pagePaths.length > 0 && (
           <DefaultPageLayout location={this.props["*"]}>
-            <div className={`${this.props["*"]} page-404`}>
+            <div className={`${this.props["*"]} page-500`}>
               <div className="hero">
                 {/* Hero will be a layout component */}
 
                 <Container>
                   <div className="valign-wrapper row">
-                    <div className="col-sm-6">
-                      <div className="hero-content">
-                        <div className="hero-content accent-block">
-                          <h1>500 Error</h1>
+                    <div className="col-sm-12 col-md-6 offset-md-3">
+                      <div>
+                        <div className="row">
+                          <div className="col-sm-12.col-md-8.offset-md-2">
+                            <img
+                              className="error-500"
+                              src={Error500}
+                              alt="Error 500"
+                            />
+                          </div>
+                        </div>
+                        <div>
                           <h2>
                             <span>Something</span> Went Wrong
                           </h2>
@@ -55,11 +64,11 @@ class DG500Page extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <div className="col-sm-6" />>
+                    <div className="col-sm-6" />
                   </div>
                 </Container>
               </div>
-              <Main>
+              {/*<Main>
                 <Container>
                   <div className="row padded tall-top short-bottom">
                     <div class="col-sm-12 col-md-10">
@@ -84,7 +93,7 @@ class DG500Page extends React.Component {
                     </div>
                   </div>
                 </Container>
-              </Main>
+            </Main> */}
             </div>
           </DefaultPageLayout>
         )}
