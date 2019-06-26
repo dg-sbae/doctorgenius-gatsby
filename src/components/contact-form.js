@@ -1,5 +1,8 @@
 import React from "react"
 import thinArrowRight from "../img/right-arrow.svg"
+import checkSuccess from "../img/checkSuccess.png"
+import xFail from "../img/xFail.png"
+import $ from "jquery"
 
 class FormResponse extends React.Component {
   render() {
@@ -44,6 +47,23 @@ class ContactForm extends React.Component {
 
   handleFormSubmit(ev) {
     // trigger ajax loading spiner
+    function ajaxLoaderDisplay() {
+      $('.request-demo').hide()
+      $('.lds-ellipsis').show()
+    }
+    
+    function submissionSuccess() {
+      setTimeout(() => $('.lds-ellipsis').hide(), 3000)
+      setTimeout(() => $('.positive-response').show(), 3000)
+    }
+  
+    /* function submissionFail() {
+      setTimeout(() => $('.lds-ellipsis').hide(), 3000)
+      setTimeout(() => $('.negative-response').show(), 3000)
+    } */
+
+    ajaxLoaderDisplay();
+    submissionSuccess();
 
     // Prevent the button from redirecting
     ev.preventDefault()
@@ -203,9 +223,18 @@ class ContactForm extends React.Component {
             />
           </div>
           <div>
-            <button type="submit" class="button btn flat">
+            <button type="submit" class="button btn flat request-demo">
               Request Demo <img src={thinArrowRight} alt="Arrow Right" />
             </button>
+            <div style={{display: 'none'}} class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            <div class="positive-response" style={{display: 'none', margin: '10px'}}>
+              <img src={checkSuccess} alt="Message Sent!" />
+              <p>Message Sent!</p>
+            </div>
+            <div class="negative-response" style={{display: 'none', margin: '10px'}}>
+              <img src={xFail} alt="Message Failed" />
+              <p>Message Failed</p>
+            </div>
           </div>
           {/*
           <FormResponse
