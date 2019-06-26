@@ -55,12 +55,19 @@ class ContactForm extends React.Component {
     function submissionSuccess() {
       setTimeout(() => $('.lds-ellipsis').hide(), 3000)
       setTimeout(() => $('.positive-response').show(), 3000)
+      setTimeout(() => clearFormFields(), 3000)
     }
   
     /* function submissionFail() {
       setTimeout(() => $('.lds-ellipsis').hide(), 3000)
       setTimeout(() => $('.negative-response').show(), 3000)
     } */
+
+    function clearFormFields() {
+      $('input[type="text"]').val("");
+      $('input[type="email"]').val("");
+      $('input[type="phone"]').val("");
+    }
 
     ajaxLoaderDisplay();
     submissionSuccess();
@@ -186,6 +193,9 @@ class ContactForm extends React.Component {
       })
     })
     */
+
+   //Trigger form clearing upon completion of all API calls
+   //clearFormFields();
   }
 
   render() {
