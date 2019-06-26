@@ -4,6 +4,11 @@ import { graphql, Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import FacebookIcon from "../img/facebook-blue.png"
+import TwitterIcon from "../img/twitter-blue.png"
+import InstagramIcon from "../img/instagram-blue.png"
+import LinkedinIcon from "../img/linkedin-blue.png"
+import YoutubeIcon from "../img/youtube-blue.png"
 
 import "../styles/404.scss"
 
@@ -39,27 +44,43 @@ class DG404Page extends React.Component {
 
                 <Container>
                   <div className="valign-wrapper row">
-                    <div className="col-sm-6">
-                      <div className="hero-content">
-                        <div className="hero-content accent-block">
-                          <h1>404 Error</h1>
-                          <h2>
-                            <span>Resource</span> Not Found
-                          </h2>
-                          <div className="accented-paragraph">
-                            <p>
-                              The requested address or resource could not be
-                              found on our server.
-                            </p>
-                          </div>
+                    <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                      <div className="row">
+                        <div className="col-sm-12">
+                          <h1 className="text-center">404</h1>
+                          <h2 className="text-center">OOPS! NOTHING WAS FOUND</h2>
+                          <p className="text-center">The page you are looking for might have been removed had its changed or is temporarily unavailable. &nbsp;
+                            <Link to='/'>
+                              Return to homepage
+                            </Link>
+                          </p>
+                          <div class="row">
+                              <div class="col-sm-12 text-center sm-404">
+                                <a href="https://www.facebook.com/DoctorGeniusMarketing">
+                                  <img src={FacebookIcon} alt="Facebook Icon" />
+                                </a>
+                                <a href="https://twitter.com/DoctorGeniusCA">
+                                  <img src={TwitterIcon} alt="Twitter Icon" />
+                                </a>
+                                <a href="https://www.instagram.com/doctor.genius/">
+                                  <img src={InstagramIcon} alt="Instagram Icon" />
+                                </a>
+                                <a href="https://www.linkedin.com/company/doctor-genius">
+                                  <img src={LinkedinIcon} alt="Linkedin Icon" />
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
+                                  <img src={YoutubeIcon} alt="Youtube Icon" />
+                                </a>
+                              </div>
+                            </div>
                         </div>
                       </div>
                     </div>
-                    <div className="col-sm-6" />>
+                    <div className="col-sm-6" />
                   </div>
                 </Container>
               </div>
-              <Main>
+              {/*<Main>
                 <Container>
                   <div className="row padded tall-top short-bottom">
                     <div class="col-sm-12 col-md-10">
@@ -83,7 +104,7 @@ class DG404Page extends React.Component {
                     </div>
                   </div>
                 </Container>
-              </Main>
+                            </Main> */}
             </div>
           </DefaultPageLayout>
         )}
