@@ -4,8 +4,13 @@ import { graphql, Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import FacebookIcon from "../img/facebook-blue.png"
+import TwitterIcon from "../img/twitter-blue.png"
+import InstagramIcon from "../img/instagram-blue.png"
+import LinkedinIcon from "../img/linkedin-blue.png"
+import YoutubeIcon from "../img/youtube-blue.png"
 
-import "../styles/404.scss"
+import "../styles/500.scss"
 
 class DG500Page extends React.Component {
   static propTypes = {
@@ -32,34 +37,52 @@ class DG500Page extends React.Component {
     return (
       <div>
         {pagePaths.length > 0 && (
-          <DefaultPageLayout location={this.props["*"]}>
-            <div className={`${this.props["*"]} page-404`}>
+          <DefaultPageLayout location="the-study-post">
+            <div className={`${this.props["*"]} page-500`}>
               <div className="hero">
                 {/* Hero will be a layout component */}
 
                 <Container>
                   <div className="valign-wrapper row">
-                    <div className="col-sm-6">
-                      <div className="hero-content">
-                        <div className="hero-content accent-block">
-                          <h1>500 Error</h1>
-                          <h2>
-                            <span>Something</span> Went Wrong
-                          </h2>
-                          <div className="accented-paragraph">
-                            <p>
-                              The server is currently unable to handle this
-                              request.
+                    <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                      <div>
+                        <div className="row">
+                          <div className="col-sm-12 col-md-12 col-lg-12">
+                            <h1 className="text-center">500</h1>
+                            <h2 className="text-center">OOPS! INTERNAL SERVICE ERROR</h2>
+                            <p className="text-center accented-paragraph">The page you are looking for might have been removed had its changed or is temporarily unavailable. &nbsp;
+                            <Link to="/">
+                              Return to homepage
+                            </Link>
                             </p>
+                            <div class="row">
+                              <div class="col-sm-12 text-center sm-500">
+                                <a href="https://www.facebook.com/DoctorGeniusMarketing">
+                                  <img src={FacebookIcon} alt="Facebook Icons" />
+                                </a>
+                                <a href="https://twitter.com/DoctorGeniusCA">
+                                  <img src={TwitterIcon} alt="Facebook Icons" />
+                                </a>
+                                <a href="https://www.instagram.com/doctor.genius/">
+                                  <img src={InstagramIcon} alt="Facebook Icons" />
+                                </a>
+                                <a href="https://www.linkedin.com/company/doctor-genius">
+                                  <img src={LinkedinIcon} alt="Facebook Icons" />
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
+                                  <img src={YoutubeIcon} alt="Facebook Icons" />
+                                </a>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className="col-sm-6" />>
+                    <div className="col-sm-6" />
                   </div>
                 </Container>
               </div>
-              <Main>
+              {/*<Main>
                 <Container>
                   <div className="row padded tall-top short-bottom">
                     <div class="col-sm-12 col-md-10">
@@ -84,7 +107,7 @@ class DG500Page extends React.Component {
                     </div>
                   </div>
                 </Container>
-              </Main>
+            </Main> */}
             </div>
           </DefaultPageLayout>
         )}
