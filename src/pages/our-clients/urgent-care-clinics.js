@@ -1,6 +1,7 @@
 import React from "react"
 
 import OurClientsInnerPages from "../../templates/our-clients-inner-pages"
+import TestimonialImage1 from '../../img/companyTestimonial1.png'
 
 export default () => (
   <OurClientsInnerPages
@@ -49,6 +50,7 @@ export default () => (
                and I am starting to see people come in the door who found us solely on google.  We are\
                happy and have now upgraded our package with them.</p>",
             location: "",
+            image: {TestimonialImage1},
             imageFallback: {
               content: "JS",
             },
