@@ -1,6 +1,29 @@
-#DirectorySlash Off
+RewriteEngine On
+
+# Redirect http traffic to https for the live site
+RewriteCond %{HTTP_HOST} ^doctorgenius\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://doctorgenius.com/$1 [R,L]
+RewriteCond %{HTTP_HOST} ^www.doctorgenius.com [NC]
+RewriteRule ^(.*)$ https://doctorgenius.com/$1 [L,R=301]
+
+
+# Redirect http traffic to https for the dev/QA site
+RewriteCond %{HTTP_HOST} ^doctorgenius\.dgd3v\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://doctorgenius.dgd3v.com/$1 [R,L]
+RewriteCond %{HTTP_HOST} ^www.doctorgenius.dgd3v.com [NC]
+RewriteRule ^(.*)$ https://doctorgenius.dgd3v.com/$1 [L,R=301]
+
+
 #Direct users to a 404 if attempting to visit the parent Clients page
 RedirectMatch 404 ^/our-clients/?$
+
+
+# Ensure the Gatsby error pages are being used by the server
+ErrorDocument 500 /500/index.html
+ErrorDocument 404 /404/index.html
+
 
 # Old 301s from the WP doctorgenius.com
 Redirect 301 /events/business-dentistry-2017-08-04/ /
@@ -13,9 +36,8 @@ Redirect 301 /privacy-policy/ /
 Redirect 301 /CDA/ /
 Redirect 301 /cda/ /
 
-#New 301s to support old content from WP dg.com
-##RewriteRule (^.*?)/?$ $1
 
+#New 301s to support old content from WP dg.com
 Redirect 302 /events /
 Redirect 301 /portal /
 Redirect 301 /confirmation /
@@ -25,30 +47,3 @@ Redirect 302 /contact /demo
 Redirect 301 /category/digital-marketing /the-study/digital-marketing
 Redirect 301 /category/practice-management /the-study/practice-management
 Redirect 301 /category/genius-lab /the-study/genius-lab
-
-#RewriteEngine on
-#removing trailing slash
-#RewriteCond %{REQUEST_FILENAME} \ /(.*)/(\ |$|\?)
-#RewriteRule ^(.*)/$ $1 [R,L]
-
-# internally add the slash back
-#RewriteCond %{REQUEST_FILENAME} -d
-#RewriteCond %{REQUEST_URI} !/$
-#RewriteRule ^(.*)$ /$1/ [L]
-
-
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteCond %{REQUEST_URI} (.+)
-#RewriteRule ^(.*)/$ /$1 [L,R]
-#RewriteRule ^(.*)/$ /$1/index.html [L]
-
-#RewriteCond %{REQUEST_URI} !(.+)/$
-#RewriteRule ^(.*) /$1/ [L,R]
-#RewriteCond %{REQUEST_FILENAME} -d
-#RewriteRule ^(.*[^/])$ /$1/
-
-#RewriteCond %{REQUEST_URI} (.+)/$
-#RewriteRule ^(.*) $1/index.php [L]
-
-ErrorDocument 500 /500/index.html
-ErrorDocument 404 /404/index.html
