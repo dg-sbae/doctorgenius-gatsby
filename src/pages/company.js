@@ -5,6 +5,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
+import TestimonialImage1 from "../img/companyTestimonial1.png"
 
 import "../styles/company-page.scss"
 
@@ -19,9 +20,10 @@ const testimonialContent = [
          that my Google presence has been cleaned up and my website is up and running and I am starting\
          to see people come in the door who found us solely on Google.</p>",
       location: "",
-      imageFallback: {
+      image: TestimonialImage1
+      /*imageFallback: {
         content: "JS",
-      },
+      },*/
     },
   },
   {
