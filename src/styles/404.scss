@@ -29,8 +29,7 @@
 
   @media only screen and (max-width: 1024px) {
     .hero {
-    background-image: url("/hero/500-error-tablet.jpg");
-    height:100vh;
+    background-image: url("/hero/404-error-tablet.jpg");
     }
   }
   @media only screen and (min-width:992px) and (max-width: 1024px) {
@@ -38,16 +37,20 @@
       background-position: 0% 32%;
     }
   }
-  @media only screen and (min-width:1025px) and (max-width: 1299px) {
-    .hero {
-      background-image: none;
-      background-color: #f0f3f4; 
-      height:100vh;
-    }
-  }
+  
   @media only screen and (max-width:425px){
+    .hero {
+      background-image: url("/hero/404-error-mobile.jpg");
+      }
     .hero h1 {
-      font-size: 9em;
+      font-size: 6em;
+    }
+    .hero h2 {
+      font-size: 1.3em;
+    }
+    .hero .container-fluid {
+      height: 100%;
+      padding-top: 90px;
     }
   }
 }
