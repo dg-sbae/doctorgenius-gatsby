@@ -350,11 +350,11 @@ footer {
     display: inline-block;
     margin-right: 18px;
     img {
-      border: transparent 1px solid;
+      border: transparent 2px solid;
       border-radius: 50%;
       transition: border 0.3s;
       &:hover {
-        border: $primary-text 1px solid;
+        border: $primary-text 2px solid;
       }
     }
   }
