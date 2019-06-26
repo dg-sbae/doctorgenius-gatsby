@@ -1,6 +1,8 @@
 import React from "react"
 
 import OurClientsInnerPages from "../../templates/our-clients-inner-pages"
+import TestimonialImage1 from '../../img/healthCareTestimonial1.png'
+import TestimonialImage2 from '../../img/healthCareTestimonial2.png'
 
 export default () => (
   <OurClientsInnerPages
@@ -58,9 +60,7 @@ export default () => (
                fast. I highly recommend Doctor Genius they have created a good return on investment\
                (ROI)  for us.</p>",
             location: "",
-            imageFallback: {
-              content: "DDB",
-            },
+            image: TestimonialImage1,
           },
         },
         {
@@ -73,9 +73,7 @@ export default () => (
             questions. Two thumbs up!! Just ask for Francesco, he's my account manager and he'll take\
             good care of you.</p>",
             location: "",
-            imageFallback: {
-              content: "RB",
-            },
+            image: TestimonialImage2,
           },
         },
         {

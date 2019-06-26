@@ -1,7 +1,8 @@
 import React from "react"
 
 import OurClientsInnerPages from "../../templates/our-clients-inner-pages"
-import TestimonialImage1 from '../../img/companyTestimonial1.png'
+import TestimonialImage1 from '../../img/urgentCareTestimonial1.png'
+import TestimonialImage2 from '../../img/urgentCareTestimonial2.png'
 
 export default () => (
   <OurClientsInnerPages
@@ -50,10 +51,7 @@ export default () => (
                and I am starting to see people come in the door who found us solely on google.  We are\
                happy and have now upgraded our package with them.</p>",
             location: "",
-            image: {TestimonialImage1},
-            imageFallback: {
-              content: "JS",
-            },
+            image: TestimonialImage1,
           },
         },
         {
@@ -66,9 +64,7 @@ export default () => (
             months I have been with them.  The staff is friendly and helpful.  And you can actually\
             reach them when you have a question.  You should start using this company over the rest.</p>",
             location: "",
-            imageFallback: {
-              content: "JN",
-            },
+            image: TestimonialImage2,
           },
         },
         {

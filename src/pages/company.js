@@ -20,7 +20,7 @@ const testimonialContent = [
          that my Google presence has been cleaned up and my website is up and running and I am starting\
          to see people come in the door who found us solely on Google.</p>",
       location: "",
-      image: {TestimonialImage1}
+      image: TestimonialImage1
       /*imageFallback: {
         content: "JS",
       },*/
