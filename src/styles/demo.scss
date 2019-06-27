@@ -238,6 +238,9 @@
   }
   .contact-form {
     height: 620px;
+    @include media("<=368px") {
+      height: 675px;
+    }
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     text-align: center;
