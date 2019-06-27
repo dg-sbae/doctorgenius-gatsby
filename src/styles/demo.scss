@@ -370,7 +370,7 @@
       font-size: 14px;
       font-weight: $font-weight-normal;
       color: #707070;
-      @include media("<=tablet") {
+      @include media("<tablet") {
         display: none;
       }
       .portrait {
@@ -482,6 +482,60 @@
     }
     100% {
       transform: translate(19px, 0);
+    }
+  }
+  .mobile-review-head,
+  div.mobile-review-head {
+    @include media(">=tablet") {
+      display: none;
+    }
+  }
+  div.stars,
+  div.date {
+    @include media("<tablet") {
+      display: none;
+    }
+  }
+
+  p.mobile-name,
+  div.mobile-stars,
+  div.mobile-date,
+  .mobile-review-head {
+    width: 100%;
+  }
+
+  .mobile-review-head {
+    margin-bottom: 10px;
+  }
+
+  .mobile-stars img {
+    margin-right: 5px;
+  }
+
+  .portrait-container {
+    padding: 0px 20px;
+  }
+  .bio-container {
+    padding-left: 40px;
+  }
+  p.mobile-name,
+  div.mobile-date p {
+    color: #707070;
+    font-weight: $font-weight-light;
+    font-size: 17px;
+  }
+  p.mobile-name {
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 374px) {
+    .portrait-container,
+    p.mobile-name,
+    div.mobile-date p,
+    .mobile-stars {
+      text-align: center;
+    }
+    .demo .bio-container {
+      padding: 0;
     }
   }
 }
