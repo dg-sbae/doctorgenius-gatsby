@@ -138,7 +138,7 @@ export default props => (
                       <span class="terms-blue">THE SERVICE</span>
                     </h4>
                     <p>
-                      <b>2.1 <u>General</u>:</b> sDuring the Term, Company will use commercially
+                      <b>2.1 <u>General</u>:</b> During the Term, Company will use commercially
                       reasonable efforts to provide Customer the Services pursuant to:
                       <ol class="terms-list-alpha">
                         <li>the terms of any outstanding Order.</li>
@@ -312,14 +312,9 @@ export default props => (
                     </p>
                     
                     <p>
-                      <b>3.2 <u>Privacy Policy</u>:</b> Unless it receives Customer’s prior written consent, Company: 
-                      (a) will not access, process, or otherwise use the Services or Customer Data other 
-                      than as permitted hereunder; (b) will not cause any unauthorized access to Customer 
-                      Data. However, Company may disclose Customer Data as required by applicable law or 
-                      by proper legal or governmental authority, subject to the terms of the BAA. Company 
-                      will give Customer prompt notice of any such legal or governmental demand and reasonably 
-                      cooperate with Customer in any effort to seek a protective order or otherwise to contest 
-                      such required disclosure, at Customer’s expense.
+                      <b>3.2 <u>Privacy Policy</u>:</b> The Privacy Policy applies only to Company’s 
+                      own website and does not apply to any Customer’s Website or any third-party website 
+                      or service linked thereto. 
                     </p>
 
                     <p>
@@ -332,11 +327,11 @@ export default props => (
                     <p>
                       <b>3.4 <u>Data Accuracy</u>:</b> Company will have no responsibility or liability for the 
                       accuracy of data uploaded to the Website by Customer, including without limitation Customer 
-                      Data and any other data uploaded by Users.
+                      Data and any other data uploaded by Users. 
                     </p>
 
                     <p>
-                      <b>3.5 <u></u>:</b> Company takes seriously the security of Customer Data and, thus, has 
+                      <b>3.5 <u>Customer Data</u>:</b> Company takes seriously the security of Customer Data and, thus, has 
                       taken measures Company deems reasonable and necessary to safeguard the Customer Data on 
                       Company’s servers against loss or unauthorized exposure. Any time Company is required 
                       to return Customer Data following termination of the Services, Company will do so on a 
@@ -574,7 +569,7 @@ export default props => (
                   <li>
                     <h4><span class="terms-blue">INDEMNIFICATION:</span></h4>
                     <p>Customer will defend, indemnify, and hold harmless Company 
-                      and the Company Associates (as defined below) against any “Indemnified Claim,” meaning any third party claim, 
+                      and the Company Associates (as defined below) against any <b>“Indemnified Claim,”</b> meaning any third party claim, 
                       suit, or proceeding arising out of or related to Customer’s alleged or actual use of, misuse of, or failure to 
                       use the Services, Website or Company IP, including without limitation: (a) claims by Users or by Customer’s 
                       employees, as well as by Customer’s own customers; (b) claims related to unauthorized disclosure or exposure of 
@@ -587,7 +582,7 @@ export default props => (
                       forth in this Section 8 include retention and payment of attorneys and payment of court costs, as well as settlement 
                       at Customer’s expense and payment of judgments. Company will have the right, not to be exercised unreasonably, to 
                       reject any settlement or compromise that requires that it admit wrongdoing or liability or subjects it to any ongoing 
-                      affirmative obligations. (“Company Associates” mean Company’s officers, directors, managers, members, subcontractors, 
+                      affirmative obligations. (“<b>Company Associates</b>” mean Company’s officers, directors, managers, members, subcontractors, 
                       agents, successors, and assigns and those of any affiliate of the Company.)</p>
                     
                   </li>
