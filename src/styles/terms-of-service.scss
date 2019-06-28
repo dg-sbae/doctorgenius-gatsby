@@ -1,0 +1,52 @@
+@import "_site-variables.scss";
+
+.termsofservice {
+  .hero {
+    background: url("/hero/privacy-policy-hero.jpg");
+    .accented-paragraph p {
+      color: white;
+    }
+  }
+  .terms-list-alpha {
+    list-style-type: lower-alpha;
+    margin-left: 2rem;
+  }
+  p {
+    margin-bottom: 1.5rem;
+    color: rgba(75, 75, 75, 1);
+    b {
+      color: black;
+    }
+  }
+  .terms-blue {
+    color: $primary;
+  }
+  ol {
+    padding-inline-start: 0;
+    & > li {
+      font-size: 1.5rem;
+      p,
+      li {
+        font-size: 1rem;
+      }
+    }
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h4 span.h4-subtext {
+    font-size: 1.5rem;
+  }
+  li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: 768px) {
+    .hero-content {
+      margin-top: 50px;
+      width: 630px;
+      height: 240px;
+    }
+  }
+}
