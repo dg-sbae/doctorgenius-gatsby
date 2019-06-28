@@ -7,7 +7,7 @@ import styles from "./mobile-secondary-nav.module.scss"
 import downArrow from "../../public/icon/down-arrow.svg"
 
 const mobileSubNavLinks = {
-  "marketing-solutions": [
+  marketingSolutions: [
     "Responsive Websites",
     "Content Marketing",
     "Digital Advertising",
@@ -15,7 +15,13 @@ const mobileSubNavLinks = {
     "Our Technology",
     "Hosting Solutions",
   ],
-  "marketing-solutions": [],
+  ourClients: [
+    "Dental Practices",
+    "Urgent Care Clinics",
+    "Chiropractor Practices",
+    "Cosmetic Surgeons",
+    "Healthcare Marketing",
+  ],
 }
 
 const ListLink = props => (
@@ -49,23 +55,29 @@ export default class MobileSecondaryNav extends React.Component {
   }
 
   componentDidMount() {
-    $(document).ready(function() {
+    // var props = this.props
+    $(document).ready(() => {
+      // console.log(this.props.parentPage)
       // var d = $("." + styles.innerSecondaryNavLinks)
       // var target = document.querySelector("." + styles.innerSecondaryNavLinks)
       // target.parentNode.scrollTop = target.offsetTop
-      $("." + styles.downArrowContainer).click(function(event) {
+      $("." + styles.downArrowContainer).click(event => {
         var d = $("." + styles.innerSecondaryNavLinks)
         // var heightHeader = document.querySelector(".hero").offsetHeight
+
+        var listLength = mobileSubNavLinks[this.props.parentPage].length - 1 //dont include the first title
+
+        var parentPage = mobileSubNavLinks[this.props.parentPage].map(key => {})
 
         var yPositionDropdown = document
           .querySelector("." + styles.mobileSecondaryNavDropdown)
           .getBoundingClientRect()
 
         // var bodyRect = document.body.getBoundingClientRect()
-
-        var heightSubNavDropdown = document.querySelector(
-          "." + styles.innerSecondaryNavLinks
-        ).offsetHeight
+        var heightSubNavDropdown = yPositionDropdown.height * listLength
+        // var heightSubNavDropdown = document.querySelector(
+        //   "." + styles.innerSecondaryNavLinks
+        // ).offsetHeight
         //Take the yPositionDropdown.height and multiply by the amount of items in the inner dropdown to get the height while not visible
         console.log(heightSubNavDropdown)
         console.log(yPositionDropdown.height)
@@ -82,6 +94,7 @@ export default class MobileSecondaryNav extends React.Component {
         $(document).scrollTop(BottomOfDropdown - heightViewport)
       })
 
+      // On scroll check when to stick the mobile subnav to the bottom of the navigation
       document.addEventListener("scroll", function(e) {
         console.log("scrolling")
         var navBottom = document

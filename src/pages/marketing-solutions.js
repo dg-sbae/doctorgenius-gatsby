@@ -138,7 +138,7 @@ export default props => (
           </div>
           {/* End secondary nav Component */}
           {/* Begin mobile secondary navigation component */}
-          <MobileSecondaryNav current="marketing-solutions" />
+          <MobileSecondaryNav parentPage="marketingSolutions" />
           {/* End mobile secondary navigation component */}
           {/* Begin Split Row of content and image */}
           <div className="row padded short-top short-bottom odd-row proven-results-row">
