@@ -62,4 +62,12 @@ $borderColor: #068ad8;
       }
     }
   }
+
+  &.mobileSubNavStuck {
+    position: fixed;
+    top: 65px;
+  }
+}
+
+.hero {
 }

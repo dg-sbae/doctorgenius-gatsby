@@ -6,6 +6,18 @@ import $ from "jquery"
 import styles from "./mobile-secondary-nav.module.scss"
 import downArrow from "../../public/icon/down-arrow.svg"
 
+const mobileSubNavLinks = {
+  "marketing-solutions": [
+    "Responsive Websites",
+    "Content Marketing",
+    "Digital Advertising",
+    "Online Reputation",
+    "Our Technology",
+    "Hosting Solutions",
+  ],
+  "marketing-solutions": [],
+}
+
 const ListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
     <Link to={props.to} activeClassName="active" partiallyActive={true}>
@@ -68,6 +80,29 @@ export default class MobileSecondaryNav extends React.Component {
         console.log(BottomOfDropdown)
         console.log(heightViewport)
         $(document).scrollTop(BottomOfDropdown - heightViewport)
+      })
+
+      document.addEventListener("scroll", function(e) {
+        console.log("scrolling")
+        var navBottom = document
+          .querySelector("nav.navbar")
+          .getBoundingClientRect().bottom
+        var heroBottom = document.querySelector(".hero").getBoundingClientRect()
+          .bottom
+
+        console.log(heroBottom + " : " + navBottom)
+
+        if (heroBottom <= navBottom) {
+          document
+            .querySelector("." + styles.mobileSecondaryNavDropdown)
+            .classList.add(styles.mobileSubNavStuck)
+          document.querySelector(".hero").classList.add("shift-down")
+        } else {
+          document
+            .querySelector("." + styles.mobileSecondaryNavDropdown)
+            .classList.remove(styles.mobileSubNavStuck)
+          document.querySelector(".hero").classList.remove("shift-down")
+        }
       })
 
       // document.scrollTop = BottomOfDropdown - heightViewport
