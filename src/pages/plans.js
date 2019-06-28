@@ -15,9 +15,12 @@ export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
       <title>
-      Healthcare Marketing Plans | New Patient Acquisition Strategy
+        Healthcare Marketing Plans | New Patient Acquisition Strategy
       </title>
-      <meta name="description" content="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Review our extensive lineup of plans for your practice." />
+      <meta
+        name="description"
+        content="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Review our extensive lineup of plans for your practice."
+      />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
@@ -200,11 +203,6 @@ export default props => (
                 <div className="grid-item">3 CTA Slides</div>
                 <div className="grid-item">6 CTA Slides</div>
                 <div className="grid-item">8 CTA Slides</div>
-                {/* <!-- details section 2 row 5: --> */}
-                <div className="grid-item plans-row-title">PR Release</div>
-                <div className="grid-item">&nbsp;</div>
-                <div className="grid-item">Annually</div>
-                <div className="grid-item">Bi-Annually</div>
 
                 {/* <!-- details section 3: --> */}
                 <dt className="spacer-row justify-content-start">
@@ -358,7 +356,9 @@ export default props => (
                 <div className="grid-item plans-row-title">
                   Practice Promoter
                 </div>
-                <div className="grid-item">120 Day Trial</div>
+                <div className="grid-item">
+                  <img src={checkmark} alt="checkmark" />
+                </div>
                 <div className="grid-item">
                   <img src={checkmark} alt="checkmark" />
                 </div>
