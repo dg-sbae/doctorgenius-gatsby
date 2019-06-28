@@ -25,9 +25,13 @@ export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
       <title>
-        Get a Free Demo of the Doctor Genius Performance Driven Marketing Platform
+        Get a Free Demo of the Doctor Genius Performance Driven Marketing
+        Platform
       </title>
-      <meta name="description" content="How is your new patient acquisition going? Is your website and marketing underperforming? Curious about a strong performance driven marketing platform?" />
+      <meta
+        name="description"
+        content="How is your new patient acquisition going? Is your website and marketing underperforming? Curious about a strong performance driven marketing platform?"
+      />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
@@ -143,6 +147,25 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img class="portrait" src={Dennis} alt="Review Author" />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Dennis Baik</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>11 Months Ago</p>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
