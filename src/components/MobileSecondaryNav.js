@@ -8,12 +8,12 @@ import downArrow from "../../public/icon/down-arrow.svg"
 
 const mobileSubNavLinks = {
   marketingSolutions: [
-    "Responsive Websites",
-    "Content Marketing",
-    "Digital Advertising",
-    "Online Reputation",
-    "Our Technology",
-    "Hosting Solutions",
+    { title: "Responsive Websites", slug: "websites" },
+    { title: "Content Marketing", slug: "content-marketing" },
+    { title: "Digital Advertising", slug: "digital-advertising" },
+    { title: "Online Reputation", slug: "online-reputation-management" },
+    { title: "Our Technology", slug: "our-technology" },
+    { title: "Hosting Solutions", slug: "hosting-solutions" },
   ],
   ourClients: [
     "Dental Practices",
@@ -54,6 +54,27 @@ export default class MobileSecondaryNav extends React.Component {
     }
   }
 
+  onScrollListener = () => {
+    var navBottom = document.querySelector("nav.navbar").getBoundingClientRect()
+      .bottom
+    var heroBottom = document.querySelector(".hero").getBoundingClientRect()
+      .bottom
+
+    console.log(heroBottom + " : " + navBottom)
+
+    if (heroBottom <= navBottom) {
+      document
+        .querySelector("." + styles.mobileSecondaryNavDropdown)
+        .classList.add(styles.mobileSubNavStuck)
+      document.querySelector(".hero").classList.add("shift-down")
+    } else {
+      document
+        .querySelector("." + styles.mobileSecondaryNavDropdown)
+        .classList.remove(styles.mobileSubNavStuck)
+      document.querySelector(".hero").classList.remove("shift-down")
+    }
+  }
+
   componentDidMount() {
     // var props = this.props
     $(document).ready(() => {
@@ -65,23 +86,26 @@ export default class MobileSecondaryNav extends React.Component {
         var d = $("." + styles.innerSecondaryNavLinks)
         // var heightHeader = document.querySelector(".hero").offsetHeight
 
+        // Get the number of items in the secondary Nav inner list
         var listLength = mobileSubNavLinks[this.props.parentPage].length - 1 //dont include the first title
 
-        var parentPage = mobileSubNavLinks[this.props.parentPage].map(key => {})
-
+        // Get the position of the first item in the dropdown ( since it's always visible)
         var yPositionDropdown = document
           .querySelector("." + styles.mobileSecondaryNavDropdown)
           .getBoundingClientRect()
 
         // var bodyRect = document.body.getBoundingClientRect()
+        // Gives the height of the inner part of the secondary nav (minus the first element in the list)
         var heightSubNavDropdown = yPositionDropdown.height * listLength
         // var heightSubNavDropdown = document.querySelector(
         //   "." + styles.innerSecondaryNavLinks
         // ).offsetHeight
         //Take the yPositionDropdown.height and multiply by the amount of items in the inner dropdown to get the height while not visible
-        console.log(heightSubNavDropdown)
-        console.log(yPositionDropdown.height)
-        console.log(yPositionDropdown.top)
+        console.log("height subnav dropdown " + heightSubNavDropdown)
+        console.log("dropdown of each nav item" + yPositionDropdown.height)
+        console.log(
+          "y position of the top of the first nav item" + yPositionDropdown.top
+        )
         // d.scrollTop(270)
 
         var heightTotalDropdown =
@@ -89,34 +113,14 @@ export default class MobileSecondaryNav extends React.Component {
         var BottomOfDropdown = heightTotalDropdown + yPositionDropdown.top
         var heightViewport = window.innerHeight
 
-        console.log(BottomOfDropdown)
-        console.log(heightViewport)
+        console.log("bottom of dropdown" + BottomOfDropdown)
+        console.log("height viewport" + heightViewport)
         $(document).scrollTop(BottomOfDropdown - heightViewport)
       })
 
       // On scroll check when to stick the mobile subnav to the bottom of the navigation
-      document.addEventListener("scroll", function(e) {
-        console.log("scrolling")
-        var navBottom = document
-          .querySelector("nav.navbar")
-          .getBoundingClientRect().bottom
-        var heroBottom = document.querySelector(".hero").getBoundingClientRect()
-          .bottom
-
-        console.log(heroBottom + " : " + navBottom)
-
-        if (heroBottom <= navBottom) {
-          document
-            .querySelector("." + styles.mobileSecondaryNavDropdown)
-            .classList.add(styles.mobileSubNavStuck)
-          document.querySelector(".hero").classList.add("shift-down")
-        } else {
-          document
-            .querySelector("." + styles.mobileSecondaryNavDropdown)
-            .classList.remove(styles.mobileSubNavStuck)
-          document.querySelector(".hero").classList.remove("shift-down")
-        }
-      })
+      document.addEventListener("scroll", this.onScrollListener, true)
+      // document.removeEventListener("scroll", onScrollListener, true)
 
       // document.scrollTop = BottomOfDropdown - heightViewport
 
@@ -134,6 +138,12 @@ export default class MobileSecondaryNav extends React.Component {
       //   }
       // })
     })
+  }
+
+  componentWillUnmount() {
+    console.log("unmounting")
+    document.removeEventListener("scroll", this.onScrollListener, true)
+    $("." + styles.downArrowContainer).off()
   }
 
   render() {
@@ -158,33 +168,18 @@ export default class MobileSecondaryNav extends React.Component {
                 this.state.open ? " " + styles.open : ""
               }`}
             >
-              <ListLink
-                className=""
-                to="/marketing-solutions/content-marketing"
-              >
-                Content Marketing
-              </ListLink>
-              <ListLink
-                className=""
-                to="/marketing-solutions/digital-advertising"
-              >
-                Digital Advertising
-              </ListLink>
-              <ListLink
-                className=""
-                to="/marketing-solutions/online-reputation-management"
-              >
-                Online Reputation
-              </ListLink>
-              <ListLink className="" to="/marketing-solutions/our-technology">
-                Our Technology
-              </ListLink>
-              <ListLink
-                className=""
-                to="/marketing-solutions/hosting-solutions"
-              >
-                Hosting Solutions
-              </ListLink>
+              {mobileSubNavLinks[this.props.parentPage].map(key => {
+                return (
+                  key.title !== this.props.titleItem && (
+                    <ListLink
+                      className=""
+                      to={`/marketing-solutions/${key.slug}`}
+                    >
+                      {key.title}
+                    </ListLink>
+                  )
+                )
+              })}
             </ul>
           </ul>
         </div>
