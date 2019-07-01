@@ -53,7 +53,7 @@ export default props => (
               <div className="plans-table">
                 {/* <!-- image-row --> */}
                 <div className="grid-item image-row">
-                  <div class="background-holder" />
+                  <div className="background-holder" />
                   <p>DoctorGenius Tier Package</p>
                 </div>
                 <div className="grid-item column-signup">

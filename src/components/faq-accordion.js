@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styles from "./faq-accordion.module.scss"
-import downChevron from "../img/down-chevron.svg"
+//import downChevron from "../img/down-chevron.svg"
 
 export const FAQQuestion = props => <dt>{props.children}</dt>
 export const FAQAnswer = props => <dd>{props.children}</dd>
@@ -52,10 +52,10 @@ export class FAQ extends Component {
 }
 
 export default class FAQAccordion extends Component {
-  constructor(props) {
+  /* constructor(props) {
     super(props)
-    /*this.state.active = false*/
-  }
+    this.state.active = false
+  } */
 
   render() {
     return <div class="accordionWrapper">{this.props.children}</div>

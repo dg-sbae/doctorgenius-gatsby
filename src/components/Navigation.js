@@ -63,7 +63,11 @@ const SideNavListLink = props => (
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
-          <img className="image-icon" src={props.iconSubnav} alt="Navigation Icon" />
+          <img
+            className="image-icon"
+            src={props.iconSubnav}
+            alt="Navigation Icon"
+          />
         </Link>
       </div>
     </div>
@@ -81,7 +85,11 @@ const MarketingSolutionsSideNavListLink = props => (
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
-          <img className="image-icon" src={props.iconSubnav} alt="Marketing Solutions Icon" />
+          <img
+            className="image-icon"
+            src={props.iconSubnav}
+            alt="Marketing Solutions Icon"
+          />
         </Link>
       </div>
     </div>
@@ -152,7 +160,11 @@ const WhoWeServeSideNavListLink = props => (
           activeClassName="active"
           partiallyActive={true}
         >
-          <img className="image-icon" src={props.iconSubnav} alt="Who We Serve Icon" />
+          <img
+            className="image-icon"
+            src={props.iconSubnav}
+            alt="Who We Serve Icon"
+          />
         </Link>
       </div>
     </div>
@@ -221,7 +233,11 @@ const CompanySideNavListLink = props => (
           activeClassName="active"
           partiallyActive={true}
         >
-          <img className="image-icon" src={props.iconSubnav} alt="Company Icon" />
+          <img
+            className="image-icon"
+            src={props.iconSubnav}
+            alt="Company Icon"
+          />
         </Link>
       </div>
     </div>
@@ -261,7 +277,11 @@ const ResourcesSideNavListLink = props => (
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
-          <img className="image-icon" src={props.iconSubnav} alt="Resources Icon" />
+          <img
+            className="image-icon"
+            src={props.iconSubnav}
+            alt="Resources Icon"
+          />
         </Link>
       </div>
     </div>
@@ -338,7 +358,11 @@ const OurClientsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={dentalPractices} alt="Dental Practices Icon" />
+                      <img
+                        className="image-icon"
+                        src={dentalPractices}
+                        alt="Dental Practices Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -355,7 +379,11 @@ const OurClientsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={cosmeticSurgeons} alt="Cosmetic Surgeons Icon" />
+                      <img
+                        className="image-icon"
+                        src={cosmeticSurgeons}
+                        alt="Cosmetic Surgeons Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -374,7 +402,11 @@ const OurClientsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={urgentCare} alt="Urgent Care Icon" />
+                      <img
+                        className="image-icon"
+                        src={urgentCare}
+                        alt="Urgent Care Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -394,7 +426,11 @@ const OurClientsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={healthcareMarketing} alt="Healthcare Marketing Icon" />
+                      <img
+                        className="image-icon"
+                        src={healthcareMarketing}
+                        alt="Healthcare Marketing Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -415,7 +451,11 @@ const OurClientsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={ourTech} alt="Chiropractic Icon" />
+                      <img
+                        className="image-icon"
+                        src={ourTech}
+                        alt="Chiropractic Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -464,7 +504,11 @@ const MarketingSolutionsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={responsiveWebsites} alt="Marketing Solutions Icon" />
+                      <img
+                        className="image-icon"
+                        src={responsiveWebsites}
+                        alt="Marketing Solutions Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -484,7 +528,11 @@ const MarketingSolutionsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={onlineReputation} alt="Online Reputation Icon" />
+                      <img
+                        className="image-icon"
+                        src={onlineReputation}
+                        alt="Online Reputation Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -509,7 +557,11 @@ const MarketingSolutionsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={contentMarketing} alt="Content Marketing Icon" />
+                      <img
+                        className="image-icon"
+                        src={contentMarketing}
+                        alt="Content Marketing Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -529,7 +581,11 @@ const MarketingSolutionsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={ourTech} alt="Our Technology Icon" />
+                      <img
+                        className="image-icon"
+                        src={ourTech}
+                        alt="Our Technology Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -548,7 +604,11 @@ const MarketingSolutionsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={digitalAdvertising} alt="Digital Advertising Icon" />
+                      <img
+                        className="image-icon"
+                        src={digitalAdvertising}
+                        alt="Digital Advertising Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -570,7 +630,11 @@ const MarketingSolutionsListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={hostingSolutions} alt="Hosting Solutions Icon" />
+                      <img
+                        className="image-icon"
+                        src={hostingSolutions}
+                        alt="Hosting Solutions Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -612,7 +676,11 @@ const CompanyListLink = props => (
               <Link className="" to="/company">
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
-                    <img className="image-icon" src={company} alt="Company Icon" />
+                    <img
+                      className="image-icon"
+                      src={company}
+                      alt="Company Icon"
+                    />
                   </div>
                   <div className="dropdown-content-block">
                     <Link className="" to="/company">
@@ -631,7 +699,11 @@ const CompanyListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={caseStudy} alt="Case Studies Icon" />
+                      <img
+                        className="image-icon"
+                        src={caseStudy}
+                        alt="Case Studies Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -670,7 +742,11 @@ const StudySingleListLink = props => (
               <Link className="" to="/the-study">
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
-                    <img className="image-icon" src={theStudy} alt="The Study Icon" />
+                    <img
+                      className="image-icon"
+                      src={theStudy}
+                      alt="The Study Icon"
+                    />
                   </div>
                   <div className="dropdown-content-block">
                     <Link className="" to="/the-study">
@@ -689,7 +765,11 @@ const StudySingleListLink = props => (
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <div className="icon-wrapper">
-                      <img className="image-icon" src={caseStudy} alt="Case Study Icon" />
+                      <img
+                        className="image-icon"
+                        src={caseStudy}
+                        alt="Case Study Icon"
+                      />
                     </div>
                   </div>
                   <div className="dropdown-content-block">
@@ -874,13 +954,17 @@ class Navigation extends Component {
       <div className="navigation-wrapper">
         <nav id="sidebar">
           <button
-            class=""
+            className=""
             id="dismiss"
             type="button"
             data-toggle=""
             aria-label=""
           >
-            <img className="dismiss-icon" src={dismissIcon} alt="Dismiss Icon" />
+            <img
+              className="dismiss-icon"
+              src={dismissIcon}
+              alt="Dismiss Icon"
+            />
           </button>
 
           <ul className="navbar-nav">
@@ -1000,15 +1084,15 @@ class Navigation extends Component {
             </ul>
           </div>
         </nav>
-        <div class="overlay" />
+        <div className="overlay" />
         <nav className="navbar navbar-default navbar-expand-lap fixed-top">
           <Container>
-            {/*<button type="button" id="sidebarCollapse" class="btn btn-info">
-              <i class="fas fa-align-left" />
+            {/*<button type="button" id="sidebarCollapse" className="btn btn-info">
+              <i className="fas fa-align-left" />
               <span>Toggle Sidebar</span>
     </button>*/}
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               id="sidenav-trigger"
               type="button"
               data-toggle="collapse"
@@ -1017,7 +1101,7 @@ class Navigation extends Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon" />
+              <span className="navbar-toggler-icon" />
             </button>
             <div className="logo">
               <Link to="/">
@@ -1065,7 +1149,7 @@ class Navigation extends Component {
               </ul>
             </div>
             <div className="contact-links">
-              <ul class="main-contact-links">
+              <ul className="main-contact-links">
                 <li className="phone">
                   <a href="tel:877-477-2311">
                     <div className="phone phone-holder" />
@@ -1079,7 +1163,7 @@ class Navigation extends Component {
                   Free Demo
                 </ListLink>
               </ul>
-              <ul class="demo-only">
+              <ul className="demo-only">
                 <li className="call">Call For Demo!</li>
                 <ListLink
                   to="/demo"
