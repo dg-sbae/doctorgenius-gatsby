@@ -82,9 +82,16 @@ export default class MobileSecondaryNav extends React.Component {
       // var d = $("." + styles.innerSecondaryNavLinks)
       // var target = document.querySelector("." + styles.innerSecondaryNavLinks)
       // target.parentNode.scrollTop = target.offsetTop
+
       $("." + styles.downArrowContainer).click(event => {
-        var d = $("." + styles.innerSecondaryNavLinks)
         // var heightHeader = document.querySelector(".hero").offsetHeight
+
+        // var bodyRect = document.body.getBoundingClientRect()
+
+        // var heightSubNavDropdown = document.querySelector(
+        //   "." + styles.innerSecondaryNavLinks
+        // ).offsetHeight
+        //Take the yPositionDropdown.height and multiply by the amount of items in the inner dropdown to get the height while not visible
 
         // Get the number of items in the secondary Nav inner list
         var listLength = mobileSubNavLinks[this.props.parentPage].length - 1 //dont include the first title
@@ -94,28 +101,31 @@ export default class MobileSecondaryNav extends React.Component {
           .querySelector("." + styles.mobileSecondaryNavDropdown)
           .getBoundingClientRect()
 
-        // var bodyRect = document.body.getBoundingClientRect()
         // Gives the height of the inner part of the secondary nav (minus the first element in the list)
         var heightSubNavDropdown = yPositionDropdown.height * listLength
-        // var heightSubNavDropdown = document.querySelector(
-        //   "." + styles.innerSecondaryNavLinks
-        // ).offsetHeight
-        //Take the yPositionDropdown.height and multiply by the amount of items in the inner dropdown to get the height while not visible
-        console.log("height subnav dropdown " + heightSubNavDropdown)
-        console.log("dropdown of each nav item" + yPositionDropdown.height)
-        console.log(
-          "y position of the top of the first nav item" + yPositionDropdown.top
-        )
-        // d.scrollTop(270)
 
         var heightTotalDropdown =
           yPositionDropdown.height + heightSubNavDropdown
-        var BottomOfDropdown = heightTotalDropdown + yPositionDropdown.top
+
         var heightViewport = window.innerHeight
 
-        console.log("bottom of dropdown" + BottomOfDropdown)
-        console.log("height viewport" + heightViewport)
-        $(document).scrollTop(BottomOfDropdown - heightViewport)
+        var bottomOfDropdown = heightTotalDropdown + yPositionDropdown.top
+        // var bottomOfDropdownInitial = heightTotalDropdown + yPositionDropdown.top
+
+        var differenceToScroll = bottomOfDropdown - heightViewport
+        var amountScrolled = $(document).scrollTop()
+        // console.log("height subnav dropdown " + heightSubNavDropdown)
+        // console.log("dropdown of each nav item" + yPositionDropdown.height)
+        // console.log(
+        //   "y position of the top of the first nav item" + yPositionDropdown.top
+        // )
+
+        // console.log("bottom of dropdown" + BottomOfDropdown)
+        // console.log("height viewport" + heightViewport)
+        // console.log("difference to scroll" + differenceToScroll)
+        if (!(differenceToScroll <= 0)) {
+          $(document).scrollTop(differenceToScroll + amountScrolled)
+        }
       })
 
       // On scroll check when to stick the mobile subnav to the bottom of the navigation
