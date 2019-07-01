@@ -4,7 +4,7 @@ import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 import $ from "jquery"
 
-class FormResponse extends React.Component {
+/* class FormResponse extends React.Component {
   render() {
     return (
       <div className="form-response">
@@ -29,7 +29,7 @@ class FormResponse extends React.Component {
       </div>
     )
   }
-}
+} */
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -48,29 +48,29 @@ class ContactForm extends React.Component {
   handleFormSubmit(ev) {
     // trigger ajax loading spiner
     function ajaxLoaderDisplay() {
-      $('.request-demo').hide()
-      $('.lds-ellipsis').show()
+      $(".request-demo").hide()
+      $(".lds-ellipsis").show()
     }
-    
+
     function submissionSuccess() {
-      setTimeout(() => $('.lds-ellipsis').hide(), 3000)
-      setTimeout(() => $('.positive-response').show(), 3000)
+      setTimeout(() => $(".lds-ellipsis").hide(), 3000)
+      setTimeout(() => $(".positive-response").show(), 3000)
       setTimeout(() => clearFormFields(), 3000)
     }
-  
+
     /* function submissionFail() {
       setTimeout(() => $('.lds-ellipsis').hide(), 3000)
       setTimeout(() => $('.negative-response').show(), 3000)
     } */
 
     function clearFormFields() {
-      $('input[type="text"]').val("");
-      $('input[type="email"]').val("");
-      $('input[type="phone"]').val("");
+      $('input[type="text"]').val("")
+      $('input[type="email"]').val("")
+      $('input[type="phone"]').val("")
     }
 
-    ajaxLoaderDisplay();
-    submissionSuccess();
+    ajaxLoaderDisplay()
+    submissionSuccess()
 
     // Prevent the button from redirecting
     ev.preventDefault()
@@ -194,8 +194,8 @@ class ContactForm extends React.Component {
     })
     */
 
-   //Trigger form clearing upon completion of all API calls
-   //clearFormFields();
+    //Trigger form clearing upon completion of all API calls
+    //clearFormFields();
   }
 
   render() {
@@ -236,12 +236,23 @@ class ContactForm extends React.Component {
             <button type="submit" class="button btn flat request-demo">
               Request Demo <img src={thinArrowRight} alt="Arrow Right" />
             </button>
-            <div style={{display: 'none'}} class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-            <div class="positive-response" style={{display: 'none', margin: '10px'}}>
+            <div style={{ display: "none" }} class="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div
+              class="positive-response"
+              style={{ display: "none", margin: "10px" }}
+            >
               <img src={checkSuccess} alt="Message Sent!" />
               <p>Message Sent!</p>
             </div>
-            <div class="negative-response" style={{display: 'none', margin: '10px'}}>
+            <div
+              class="negative-response"
+              style={{ display: "none", margin: "10px" }}
+            >
               <img src={xFail} alt="Message Failed" />
               <p>Message Failed</p>
             </div>
