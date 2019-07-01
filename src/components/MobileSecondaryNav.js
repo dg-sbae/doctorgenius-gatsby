@@ -158,10 +158,10 @@ export default class MobileSecondaryNav extends React.Component {
           <ul className={styles.mobileSecondaryNavDropdown}>
             <FirstListLink
               className={styles.currentSecondaryNavLink}
-              to="/marketing-solutions/websites"
+              to={`/marketing-solutions/${this.props.currentSlug}`}
               clickHandler={() => this.setState({ open: !this.state.open })}
             >
-              Responsive Websites
+              {this.props.titleItem}
             </FirstListLink>
             <ul
               className={`${styles.innerSecondaryNavLinks}${
