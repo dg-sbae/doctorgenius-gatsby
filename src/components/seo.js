@@ -1,5 +1,5 @@
 import React from "react"
-import innerTitleStyles from "./inner-title.module.css"
+//import innerTitleStyles from "./inner-title.module.css"
 import HomepageSEOContent from "../seo/homepage-seo.js"
 
 //export default ({ page }) => (page === "homepage" ? HomepageSEOContent : null)
