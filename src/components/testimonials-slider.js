@@ -8,7 +8,7 @@ import React from "react"
 import Slider from "react-slick"
 import styles from "./testimonials-slider.module.scss"
 import quoteMark from "../img/quote-mark.svg"
-import jQuery from "jquery"
+//import jQuery from "jquery"
 
 class Card extends React.Component {
   constructor(props) {
@@ -85,7 +85,7 @@ class Card extends React.Component {
                     className={styles.portrait}
                     src={card.cardContent.image}
                     alt="A Doctor"
-                    style={{height: '85px'}}
+                    style={{ height: "85px" }}
                   />
                 )}
                 {!card.cardContent.image &&
@@ -96,7 +96,7 @@ class Card extends React.Component {
                   )}
 
                 {/* JS shortcircuit to conditionally render the location*/}
-                {card.cardContent.location != "" && (
+                {card.cardContent.location !== "" && (
                   <p className={styles.location}>{card.cardContent.location}</p>
                 )}
               </div>
