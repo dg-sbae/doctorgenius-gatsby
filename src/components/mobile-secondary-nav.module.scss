@@ -14,6 +14,13 @@ $borderColor: #068ad8;
     float: right;
     line-height: $secondaryLineItemHeight - 2px;
     padding: 0 20px;
+
+    img {
+      transition: transform 0.5s;
+      &.flipped {
+        transform: rotate(-180deg);
+      }
+    }
   }
 
   li {

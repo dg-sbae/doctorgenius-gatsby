@@ -44,8 +44,6 @@ const FirstListLink = props => (
   </li>
 )
 
-const clickHandler = () => {}
-
 export default class MobileSecondaryNav extends React.Component {
   constructor(props) {
     super(props)
@@ -91,15 +89,26 @@ export default class MobileSecondaryNav extends React.Component {
         var heightTotalDropdown =
           yPositionDropdown.height + heightSubNavDropdown
         var heightViewport = window.innerHeight
-        var bottomOfDropdown = heightTotalDropdown + yPositionDropdown.top
-        var differenceToScroll = bottomOfDropdown - heightViewport
-        var amountScrolled = $(document).scrollTop()
-        var shouldScroll = !document
+        var bottomOfDropdown = heightTotalDropdown + yPositionDropdown.top // Position of the bottom of the opened secondary nav
+        var differenceToScroll = bottomOfDropdown - heightViewport // Amount of the navigation hidden outside the viewport
+        var amountScrolled = $(document).scrollTop() // Current scroll position of the entire page
+        var isOpen = document
           .querySelector("." + styles.innerSecondaryNavLinks)
           .classList.contains(styles.open)
 
+        // Open/Close Animation on the drop arrow
+        if (!isOpen) {
+          document
+            .querySelector("." + styles.downArrowContainer + " img")
+            .classList.add(styles.flipped)
+        } else {
+          document
+            .querySelector("." + styles.downArrowContainer + " img")
+            .classList.remove(styles.flipped)
+        }
+
         // Scroll the page up to match the bottom of the secondary navigation menu when opened (if necessary)
-        if (differenceToScroll > 0 && shouldScroll) {
+        if (differenceToScroll > 0 && !isOpen) {
           $("html, body").animate(
             { scrollTop: differenceToScroll + amountScrolled },
             500
