@@ -94,8 +94,12 @@ export default class MobileSecondaryNav extends React.Component {
         var bottomOfDropdown = heightTotalDropdown + yPositionDropdown.top
         var differenceToScroll = bottomOfDropdown - heightViewport
         var amountScrolled = $(document).scrollTop()
+        var shouldScroll = !document
+          .querySelector("." + styles.innerSecondaryNavLinks)
+          .classList.contains(styles.open)
 
-        if (!(differenceToScroll <= 0)) {
+        // Scroll the page up to match the bottom of the secondary navigation menu when opened (if necessary)
+        if (differenceToScroll > 0 && shouldScroll) {
           $("html, body").animate(
             { scrollTop: differenceToScroll + amountScrolled },
             500
@@ -109,6 +113,7 @@ export default class MobileSecondaryNav extends React.Component {
   }
 
   componentWillUnmount() {
+    // Remove event listeners so that they don't error on non relevant pages
     document.removeEventListener("scroll", this.onScrollListener, true)
     $("." + styles.downArrowContainer).off()
   }

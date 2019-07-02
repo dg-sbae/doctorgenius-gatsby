@@ -41,24 +41,25 @@ $borderColor: #068ad8;
   display: block;
   width: 100%;
   z-index: 999; //bring this above other elements on the screen
-  //   height: auto;
   height: $secondaryLineItemHeight;
   .currentSecondaryNavLink {
     background-color: $secondary;
     border: none;
   }
   .innerSecondaryNavLinks {
-    // height: 0;
+    height: 0;
+    max-height: 0;
+    transition: max-height 0.6s ease-in;
+    overflow: hidden;
     li {
-      height: 0;
-      visibility: hidden;
+      display: none;
       border: $borderColor solid 1px;
     }
     &.open {
+      height: auto;
+      max-height: 300px;
       li {
-        height: auto;
-        visibility: visible;
-        // border: $borderColor solid 1px;
+        display: block;
       }
     }
   }
@@ -67,7 +68,4 @@ $borderColor: #068ad8;
     position: fixed;
     top: 65px;
   }
-}
-
-.hero {
 }
