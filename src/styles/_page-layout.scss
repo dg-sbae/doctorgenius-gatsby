@@ -392,6 +392,8 @@ footer {
       height: 115px;
       margin-right: auto;
       margin-left: auto;
+      padding-left: 37.5px;
+      padding-right: 37.5px;
 
       .icon-wrapper {
         width: 77px;
@@ -446,6 +448,9 @@ html .hero {
     width: 100%;
     position: absolute;
     bottom: 0;
+    @include media("<laptop") {
+      height: 0;
+    }
   }
   .hero-content {
     h2 {

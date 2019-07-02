@@ -5,6 +5,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
+import MobileSecondaryNav from "../components/MobileSecondaryNav"
 
 import dentalPractices from "../../public/icon/tooth-shine-nav.svg"
 import urgentCare from "../../public/icon/urgent-care-nav.svg"
@@ -151,6 +152,10 @@ export default props => {
               </div>
             </div>
             {/* End secondary nav Component */}
+
+            {/* Begin mobile secondary navigation component */}
+            <MobileSecondaryNav parentPage="ourClients" titleItem={pageTitle} />
+            {/* End mobile secondary navigation component */}
             {/* Begin main block of text */}
             <div className="row padded">
               <div className="col-sm-12 col-md-10 col-lg-10">
