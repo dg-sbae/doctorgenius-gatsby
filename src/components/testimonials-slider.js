@@ -68,12 +68,18 @@ class Card extends React.Component {
               />
             </div>
             <div className={styles.moreLink}>
-              <a
+              <button
                 className="moreTrigger"
                 onClick={() => this.setState({ open: !this.state.open })}
+                style={{
+                  color: "#0576cd",
+                  background: "none",
+                  border: "none",
+                  outline: "none",
+                }}
               >
                 {this.state.open ? "LESS" : "MORE"}
-              </a>
+              </button>
             </div>
           </div>
 

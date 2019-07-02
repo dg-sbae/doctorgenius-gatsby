@@ -22,17 +22,17 @@ class DG404Page extends React.Component {
   } */
 
   render() {
-    const { pathname } = this.props.location
+    //const { pathname } = this.props.location
     const { data } = this.props
     const pagePaths = data.allSitePage.nodes.map(node => node.path)
-    let newFilePath
+    /*let newFilePath
     if (pathname === `/`) {
       newFilePath = `src/pages/index.js`
     } else if (pathname.slice(-1) === `/`) {
       newFilePath = `src/pages${pathname.slice(0, -1)}.js`
     } else {
       newFilePath = `src/pages${pathname}.js`
-    }
+    } */
 
     return (
       <div>
