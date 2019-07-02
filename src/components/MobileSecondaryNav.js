@@ -96,7 +96,10 @@ export default class MobileSecondaryNav extends React.Component {
         var amountScrolled = $(document).scrollTop()
 
         if (!(differenceToScroll <= 0)) {
-          $(document).scrollTop(differenceToScroll + amountScrolled)
+          $("html, body").animate(
+            { scrollTop: differenceToScroll + amountScrolled },
+            500
+          )
         }
       })
 
