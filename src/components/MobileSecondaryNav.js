@@ -85,7 +85,7 @@ export default class MobileSecondaryNav extends React.Component {
           .getBoundingClientRect()
 
         // Gives the height of the inner part of the secondary nav (minus the first element in the list)
-        var heightSubNavDropdown = yPositionDropdown.height * listLengt
+        var heightSubNavDropdown = yPositionDropdown.height * listLength
         var heightTotalDropdown =
           yPositionDropdown.height + heightSubNavDropdown
         var heightViewport = window.innerHeight
