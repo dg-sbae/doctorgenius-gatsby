@@ -20,8 +20,8 @@ import newPatientAcquisitions from "../img/home-new-patient-acquisitions.png"
 import dgDifferent from "../img/home-dg-different.png"
 import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
 import SEO from "../components/seo.js"
-// import homepageMarketingDashboardDesktop from "../img/homepage-marketing-dashboard-desktop.png"
-// import homepageMarketingDashboardMobile from "../img/homepage-marketing-dashboard-mobile.png"
+import homepageMarketingDashboard from "../img/homepage-marketing-dashboard.jpg"
+import homepageMarketingDashboardMobile from "../img/homepage-marketing-dashboard-mobile.jpg"
 
 export default ({ data }, props) => (
   <DefaultPageLayout location={props["*"]}>
@@ -58,9 +58,9 @@ export default ({ data }, props) => (
                   <div className="accented-paragraph">
                     <p>
                       Doctor Genius offers high-end web marketing services to
-                      health professionals throughout the United States. Learn
-                      how we funnel traffic to converted patient directly to
-                      your practice.
+                      health care professionals throughout the United States.
+                      Learn how we funnel traffic to converted patients directly
+                      to your practice.
                     </p>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default ({ data }, props) => (
           <div className="row padded">
             <div className="col-sm-10">
               <div className="inner-title center">
-                <h3 className="strapline">Built for success</h3>
+                <h3 className="strapline">Built for Success</h3>
                 <h2 className="underline font-weight-light">
                   All-in-One
                   <span className="font-weight-semibold">
@@ -154,16 +154,28 @@ export default ({ data }, props) => (
                   Our robust, comprehensive marketing solutions helps keep your
                   online digital marketing presence ahead of competition. We
                   provide tools and analysis to improve new patient acquisition
-                  with transparent reporting to measure our results. with
-                  transparent reporting to measure our results.
+                  with transparent reporting to measure our results.
                 </p>
               </div>
             </div>
           </div>
         </Container>
 
-        <div className="row full-bleed-image-row">
-          <div className="col-12 full-bleed-img" />
+        <div className="row">
+          <div className="col-12">
+            <center>
+              <img
+                className="img-responsive marketing-dashboard-lg"
+                src={homepageMarketingDashboard}
+                alt="Digital Marketing Dashboard"
+              />
+              <img
+                src={homepageMarketingDashboardMobile}
+                className="img-responsive marketing-dashboard-sm"
+                alt="Digital Marketing Dashboard"
+              />
+            </center>
+          </div>
         </div>
 
         <Container>
@@ -235,16 +247,18 @@ export default ({ data }, props) => (
             <div className="col-sm-9 col-md-5">
               <div className="content-block">
                 <div className="inner-title">
-                  <h2>How would you rate Doctor Genius client satisfaction?</h2>
+                  <h2>
+                    How would you rate Doctor Genius' client satisfaction?
+                  </h2>
                   <div className="accented-paragraph">
                     <p className="s-thin">
                       Don't take our word for it, see what our clients say about
-                      us 100+ 5 Stars. Check our{" "}
+                      our 100+ 5 Star Reputation. Check out our{" "}
                       <a
                         href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
                         target="_blank"
                       >
-                        reviews
+                        reviews here.
                       </a>
                     </p>
                   </div>

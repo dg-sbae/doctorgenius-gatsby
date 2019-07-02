@@ -267,9 +267,21 @@ $homepage-h1-font-size: $font-size-base * 4.881;
       border: none !important;
     }
   }
+
+  img.marketing-dashboard-lg {
+    @include media("<=phone") {
+      display: none;
+    }
+  }
+  img.marketing-dashboard-sm {
+    @include media(">phone") {
+      display: none;
+    }
+  }
 }
 
-.full-bleed-image-row {
+/* Removed full-bleed css as we do not use it anymore */
+/*.full-bleed-image-row {
   height: 650px;
   @include media("<=laptop") {
     height: 400px;
@@ -288,13 +300,13 @@ $homepage-h1-font-size: $font-size-base * 4.881;
   }
 }
 .full-bleed-img {
-  background: url("../img/homepage-marketing-dashboard-desktop.png") no-repeat
-    50% 50%;
+  background: url("../img/homepage-marketing-dashboard-desktop.png") no-repeat 50%
+    50%;
   background-size: cover;
   height: 100%;
   @include media("<=tablet") {
-    background: url("../img/homepage-marketing-dashboard-tablet.png") no-repeat
-      50% 50%;
+    background: url("../img/homepage-marketing-dashboard-tablet.png") no-repeat 50%
+      50%;
     background-size: cover;
     height: 100%;
   }
@@ -304,7 +316,7 @@ $homepage-h1-font-size: $font-size-base * 4.881;
     background-size: cover;
     height: 100%;
   }
-}
+} */
 
 /* TODO START- Homepage border in the hero - need to fix this */
 // .homepage .hero .accent-block {

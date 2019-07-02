@@ -9,15 +9,15 @@ import ContactForm from "../components/contact-form.js"
 import star from "../img/star.svg"
 import sslBadge from "../img/ssl-logo.png"
 
-import Dennis from "../img/icon-dennis-baik.jpg"
-import Taylor from "../img/icon-taylor-dental-care.jpg"
-import Daniel from "../img/icon-daniel-savarino.jpg"
-import Christina from "../img/icon-christina-guilin.jpg"
-import Erika from "../img/icon-erika-rodriguez.jpg"
-import Roberto from "../img/icon-roberto-bellegarrigue.jpg"
-import Justine from "../img/icon-justine-schepis.jpg"
-import Alexandra from "../img/icon-alexandra-ramasahai.jpg"
-import Diamond from "../img/icon-diamond-head-dental-care.jpg"
+import Dennis from "../img/review-dennis-baik.png"
+import Taylor from "../img/review-taylor-dental-care.png"
+import Daniel from "../img/review-daniel-savarino.png"
+import Christina from "../img/review-christina-guilin.png"
+import Erika from "../img/review-erika-rodriguez.png"
+import Roberto from "../img/review-roberto-bellegarrigue.png"
+import Justine from "../img/review-justine-schepis.png"
+import Alexandra from "../img/review-alexandra-ramasahai.png"
+import Diamond from "../img/review-diamond-head-dental-care.png"
 
 import "../styles/demo.scss"
 
@@ -25,9 +25,13 @@ export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
       <title>
-        Get a Free Demo of the Doctor Genius Performance Driven Marketing Platform
+        Get a Free Demo of the Doctor Genius Performance Driven Marketing
+        Platform
       </title>
-      <meta name="description" content="How is your new patient acquisition going? Is your website and marketing underperforming? Curious about a strong performance driven marketing platform?" />
+      <meta
+        name="description"
+        content="How is your new patient acquisition going? Is your website and marketing underperforming? Curious about a strong performance driven marketing platform?"
+      />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
@@ -143,6 +147,25 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img class="portrait" src={Dennis} alt="Review Author" />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Dennis Baik</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>11 Months Ago</p>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
@@ -196,6 +219,24 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img class="portrait" src={Taylor} alt="Review Author" />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Taylor Dental Care</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>2 Months Ago</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
@@ -260,6 +301,24 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img class="portrait" src={Daniel} alt="Review Author" />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Daniel Savarino</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>6 Months Ago</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
@@ -309,6 +368,28 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img
+                        class="portrait"
+                        src={Christina}
+                        alt="Review Author"
+                      />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Christina Guilin</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>2 Months Ago</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
@@ -352,6 +433,24 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img class="portrait" src={Erika} alt="Review Author" />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Erika Rodriguez</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>3 Weeks Ago</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
@@ -394,6 +493,24 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img class="portrait" src={Roberto} alt="Review Author" />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Roberto Bellegarrigue</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>2 Months Ago</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
@@ -432,6 +549,24 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img class="portrait" src={Justine} alt="Review Author" />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Justine Schepis</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>10 Months Ago</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
@@ -482,6 +617,28 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img
+                        class="portrait"
+                        src={Alexandra}
+                        alt="Review Author"
+                      />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Alexandra Ramsahai D.M.D</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>5 Months Ago</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
@@ -516,6 +673,24 @@ export default props => (
                   </p>
                 </div>
                 <div class="body">
+                  <div class="mobile-review-head row">
+                    <div class="col-sm-2 portrait-container">
+                      <img class="portrait" src={Diamond} alt="Review Author" />
+                    </div>
+                    <div class="col-sm-9 bio-container">
+                      <p class="mobile-name">Diamond Head Dental Care</p>
+                      <div class="mobile-stars">
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                        <img src={star} alt="Star" />
+                      </div>
+                      <div class="mobile-date">
+                        <p>11 Months Ago</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />

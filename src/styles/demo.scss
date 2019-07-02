@@ -238,6 +238,9 @@
   }
   .contact-form {
     height: 620px;
+    @include media("<=368px") {
+      height: 675px;
+    }
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     text-align: center;
@@ -370,7 +373,7 @@
       font-size: 14px;
       font-weight: $font-weight-normal;
       color: #707070;
-      @include media("<=tablet") {
+      @include media("<tablet") {
         display: none;
       }
       .portrait {
@@ -427,6 +430,115 @@
   .disappear {
     @include media("<=tablet") {
       display: none;
+    }
+  }
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #cef;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }
+  .mobile-review-head,
+  div.mobile-review-head {
+    @include media(">=tablet") {
+      display: none;
+    }
+  }
+  div.stars,
+  div.date {
+    @include media("<tablet") {
+      display: none;
+    }
+  }
+
+  p.mobile-name,
+  div.mobile-stars,
+  div.mobile-date,
+  .mobile-review-head {
+    width: 100%;
+  }
+
+  .mobile-review-head {
+    margin-bottom: 10px;
+  }
+
+  .mobile-stars img {
+    margin-right: 5px;
+  }
+
+  .portrait-container {
+    padding: 0px 20px;
+  }
+  .bio-container {
+    padding-left: 40px;
+  }
+  p.mobile-name,
+  div.mobile-date p {
+    color: #707070;
+    font-weight: $font-weight-light;
+    font-size: 17px;
+  }
+  p.mobile-name {
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 374px) {
+    .portrait-container,
+    p.mobile-name,
+    div.mobile-date p,
+    .mobile-stars {
+      text-align: center;
+    }
+    .demo .bio-container {
+      padding: 0;
     }
   }
 }

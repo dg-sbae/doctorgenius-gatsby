@@ -1,6 +1,8 @@
 import React from "react"
 
 import OurClientsInnerPages from "../../templates/our-clients-inner-pages"
+import TestimonialImage2 from '../../img/dentalTestimonial2.png'
+import TestimonialImage3 from '../../img/dentalTestimonial3.png'
 
 export default () => (
   <OurClientsInnerPages
@@ -73,9 +75,7 @@ export default () => (
             and with the 100's of other websites that track dentists and doctors.</p>\
             <p>I am thrilled with the results and am excited to see Doctor Genius grow!</p>",
             location: "",
-            imageFallback: {
-              content: "TA",
-            },
+            image: TestimonialImage2,
           },
         },
         {
@@ -89,9 +89,7 @@ export default () => (
             track on how many new patient phone calls we receive, but also to keep track on our online\
             presence.</p>",
             location: "",
-            imageFallback: {
-              content: "NL",
-            },
+            image: TestimonialImage3,
           },
         },
       ],

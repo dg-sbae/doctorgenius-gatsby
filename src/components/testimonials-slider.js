@@ -83,8 +83,9 @@ class Card extends React.Component {
                 {card.cardContent.image && (
                   <img
                     className={styles.portrait}
-                    src="/png/testimonials-slider-profile-1.png"
+                    src={card.cardContent.image}
                     alt="A Doctor"
+                    style={{height: '85px'}}
                   />
                 )}
                 {!card.cardContent.image &&
