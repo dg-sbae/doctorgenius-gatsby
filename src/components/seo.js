@@ -8,6 +8,7 @@ export default ({ page }) =>
     ? HomepageSEOContent.map(script => (
         <script
           type="application/ld+json"
+          key={script.toString()}
           dangerouslySetInnerHTML={{
             __html: script,
           }}
