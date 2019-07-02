@@ -58,6 +58,6 @@ export default class FAQAccordion extends Component {
   } */
 
   render() {
-    return <div class="accordionWrapper">{this.props.children}</div>
+    return <div className="accordionWrapper">{this.props.children}</div>
   }
 }

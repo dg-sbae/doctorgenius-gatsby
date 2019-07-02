@@ -233,24 +233,24 @@ class ContactForm extends React.Component {
             />
           </div>
           <div>
-            <button type="submit" class="button btn flat request-demo">
+            <button type="submit" className="button btn flat request-demo">
               Request Demo <img src={thinArrowRight} alt="Arrow Right" />
             </button>
-            <div style={{ display: "none" }} class="lds-ellipsis">
+            <div style={{ display: "none" }} className="lds-ellipsis">
               <div></div>
               <div></div>
               <div></div>
               <div></div>
             </div>
             <div
-              class="positive-response"
+              className="positive-response"
               style={{ display: "none", margin: "10px" }}
             >
               <img src={checkSuccess} alt="Message Sent!" />
               <p>Message Sent!</p>
             </div>
             <div
-              class="negative-response"
+              className="negative-response"
               style={{ display: "none", margin: "10px" }}
             >
               <img src={xFail} alt="Message Failed" />

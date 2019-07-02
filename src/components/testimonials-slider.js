@@ -169,7 +169,7 @@ export default class TestimonialsSlider extends React.Component {
       <div className={styles.testimonialsSlider}>
         <Slider className={styles.cardSlider} {...settings}>
           {this.props.cards.map(card => (
-            <div className={styles.cardWrapper}>
+            <div className={styles.cardWrapper} key={card.cardContent.author}>
               <Card card={card} />
             </div>
           ))}

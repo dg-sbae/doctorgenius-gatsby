@@ -138,7 +138,7 @@ export default props => (
           {/* End secondary nav Component */}
           {/* Begin Split Row of content and image */}
           <div className="row padded short-top short-bottom odd-row proven-results-row">
-            <div class="col-md-1" />
+            <div className="col-md-1" />
             <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
               <div className="content-block">
                 <div className="inner-title">
