@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import MobileSecondaryNav from "../components/MobileSecondaryNav"
 
 import contentMarketingIcon from "../img/contract.svg"
 import responsiveWebsitesIcon from "../img/website.svg"
@@ -169,6 +170,12 @@ export default props => {
               </div>
             </div>
             {/* End secondary nav Component */}
+            {/* Begin mobile secondary navigation component */}
+            <MobileSecondaryNav
+              parentPage="marketingSolutions"
+              titleItem={pageTitle}
+            />
+            {/* End mobile secondary navigation component */}
             {/* Begin Split Row of content and image */}
             {contentRows.map((row, index) => (
               <div

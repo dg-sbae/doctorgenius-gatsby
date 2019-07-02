@@ -141,7 +141,6 @@ export default props => (
           <MobileSecondaryNav
             parentPage="marketingSolutions"
             titleItem="Responsive Websites"
-            currentSlug="websites"
           />
           {/* End mobile secondary navigation component */}
           {/* Begin Split Row of content and image */}

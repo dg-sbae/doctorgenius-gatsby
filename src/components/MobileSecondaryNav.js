@@ -16,11 +16,11 @@ const mobileSubNavLinks = {
     { title: "Hosting Solutions", slug: "hosting-solutions" },
   ],
   ourClients: [
-    "Dental Practices",
-    "Urgent Care Clinics",
-    "Chiropractor Practices",
-    "Cosmetic Surgeons",
-    "Healthcare Marketing",
+    { title: "Dental Practices", slug: "dental-practices" },
+    { title: "Urgent Care Clinics", slug: "urgent-care-clinics" },
+    { title: "Chiropractor Practices", slug: "chiropractor-practices" },
+    { title: "Cosmetic Surgeons", slug: "cosmetic-surgeons" },
+    { title: "Healthcare Marketing", slug: "healthcare-marketing" },
   ],
 }
 
@@ -35,9 +35,9 @@ const ListLink = props => (
 
 const FirstListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
-    <Link to={props.to} activeClassName="active" partiallyActive={true}>
+    <span to={props.to} activeClassName="active" partiallyActive={true}>
       {props.children}
-    </Link>
+    </span>
     <span className={styles.downArrowContainer} onClick={props.clickHandler}>
       <img className={styles.downArrow} src={downArrow} />
     </span>
@@ -52,6 +52,8 @@ export default class MobileSecondaryNav extends React.Component {
     this.state = {
       open: false,
     }
+    this.parentPage =
+      props.parentPage === "ourClients" ? "our-clients" : "marketing-solutions"
   }
 
   onScrollListener = () => {
@@ -120,7 +122,7 @@ export default class MobileSecondaryNav extends React.Component {
           <ul className={styles.mobileSecondaryNavDropdown}>
             <FirstListLink
               className={styles.currentSecondaryNavLink}
-              to={`/marketing-solutions/${this.props.currentSlug}`}
+              to={`/${this.parentPage}/${this.props.currentSlug}`}
               clickHandler={() => this.setState({ open: !this.state.open })}
             >
               {this.props.titleItem}
@@ -135,7 +137,7 @@ export default class MobileSecondaryNav extends React.Component {
                   key.title !== this.props.titleItem && (
                     <ListLink
                       className=""
-                      to={`/marketing-solutions/${key.slug}`}
+                      to={`/${this.parentPage}/${key.slug}`}
                     >
                       {key.title}
                     </ListLink>
