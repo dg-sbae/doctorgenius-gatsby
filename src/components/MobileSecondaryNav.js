@@ -1,5 +1,4 @@
 import React from "react"
-import jQuery from "jquery"
 import { Link } from "gatsby"
 import $ from "jquery"
 
@@ -35,11 +34,11 @@ const ListLink = props => (
 
 const FirstListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
-    <span to={props.to} activeClassName="active" partiallyActive={true}>
+    <span activeClassName="active" partiallyActive={true}>
       {props.children}
     </span>
     <span className={styles.downArrowContainer} onClick={props.clickHandler}>
-      <img className={styles.downArrow} src={downArrow} />
+      <img className={styles.downArrow} src={downArrow} alt="Drop down arrow" />
     </span>
   </li>
 )

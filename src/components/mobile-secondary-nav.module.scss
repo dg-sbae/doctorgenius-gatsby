@@ -31,6 +31,7 @@ $borderColor: #068ad8;
     padding-left: 27px;
     padding-right: 7px;
     line-height: $secondaryLineItemHeight - 2px;
+    font-family: $font-family-body-text;
 
     a {
       color: $primary-text;
@@ -52,6 +53,7 @@ $borderColor: #068ad8;
   .currentSecondaryNavLink {
     background-color: $secondary;
     border: none;
+    font-size: 16px;
   }
   .innerSecondaryNavLinks {
     height: 0;
@@ -61,6 +63,8 @@ $borderColor: #068ad8;
     li {
       display: none;
       border: $borderColor solid 1px;
+      font-size: 15px;
+      font-weight: $font-weight-light;
     }
     &.open {
       height: auto;
