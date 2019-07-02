@@ -448,6 +448,9 @@ html .hero {
     width: 100%;
     position: absolute;
     bottom: 0;
+    @include media("<laptop") {
+      height: 0;
+    }
   }
   .hero-content {
     h2 {
