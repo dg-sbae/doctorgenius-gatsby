@@ -14,7 +14,7 @@ import money from "../img/money.png"
 import stars from "../img/stars.png"
 import groupChat from "../img/group-chat.png"
 import thinArrowRight from "../img/right-arrow.svg"
-import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
+//import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
 // import fullBleedBackgroundSlanted from "../img/full-bleed-bg-slanted.png"
 import newPatientAcquisitions from "../img/home-new-patient-acquisitions.png"
 import dgDifferent from "../img/home-dg-different.png"
@@ -127,6 +127,7 @@ export default ({ data }, props) => (
                   <a
                     href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Google reviews
                   </a>
@@ -257,6 +258,7 @@ export default ({ data }, props) => (
                       <a
                         href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         reviews here.
                       </a>

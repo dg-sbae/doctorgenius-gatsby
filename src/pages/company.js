@@ -15,12 +15,9 @@ const testimonialContent = [
       title: "Card 1",
       author: "Justine Schepis",
       quote:
-        "<p>I started using Doctor Genius to improve my Google presence and increase my monthly number\
-         of new patients. They told me it would take 3-4 months to see results. It’s been about 2 now\
-         that my Google presence has been cleaned up and my website is up and running and I am starting\
-         to see people come in the door who found us solely on Google.</p>",
+        "<p>I started using Doctor Genius to improve my Google presence and increase my monthly number of new patients. They told me it would take 3-4 months to see results. It’s been about 2 now that my Google presence has been cleaned up and my website is up and running and I am starting to see people come in the door who found us solely on Google.</p>",
       location: "",
-      image: TestimonialImage1
+      image: TestimonialImage1,
       /*imageFallback: {
         content: "JS",
       },*/
@@ -31,11 +28,7 @@ const testimonialContent = [
       title: "Card 2",
       author: "Amberly Money",
       quote:
-        "<p>Our practice has worked with Doctor Genius for a few years now. Francesco and team have\
-         gone above and beyond to make sure that we are always top on the list for “Dentist” in our area.\
-         We started as a brand new practice in 2009 and now have a full clientele of patients with our\
-         first available hygiene appointment for six months out. Our biggest referrals are online. Thank\
-         you Francesco and Doctor Genius for your hard work and many years of working together!</p>",
+        "<p>Our practice has worked with Doctor Genius for a few years now. Francesco and team have gone above and beyond to make sure that we are always top on the list for “Dentist” in our area. We started as a brand new practice in 2009 and now have a full clientele of patients with our first available hygiene appointment for six months out. Our biggest referrals are online. Thank you Francesco and Doctor Genius for your hard work and many years of working together!</p>",
       location: "",
       imageFallback: {
         content: "AM",
@@ -47,13 +40,7 @@ const testimonialContent = [
       title: "Card 3",
       author: "Baylee Michaels",
       quote:
-        "<p>Until working with this company, you would have never heard me say that I enjoyed speaking\
-         with a customer service rep. Without fail every person I have spoken with on this team has been\
-         so kind to me. I spoke with a lady by the name of Victoria Tegeler the other day and she was so\
-         patient with me as she answered all of my questions and concerns. With this company I have never\
-         been in the dark. They send me weekly updates as well as have a portal for me to track everything\
-         that they do to see how well their services are working for us. I'd give them a 7 star rating if\
-         I could!</p>",
+        "<p>Until working with this company, you would have never heard me say that I enjoyed speaking with a customer service rep. Without fail every person I have spoken with on this team has been so kind to me. I spoke with a lady by the name of Victoria Tegeler the other day and she was so patient with me as she answered all of my questions and concerns. With this company I have never been in the dark. They send me weekly updates as well as have a portal for me to track everything that they do to see how well their services are working for us. I'd give them a 7 star rating if I could!</p>",
       location: "",
       imageFallback: {
         content: "BM",
@@ -65,12 +52,7 @@ const testimonialContent = [
       title: "Card 4",
       author: "Amir Saz",
       quote:
-        "<p>We signed up with DG at the Anaheim Dental Convention. I had worked with 2 other companies\
-         previously and in my opinion did not get honest work or any decent results. We were a new office\
-         in the area on page 26 or 27 of Google and had moved up some but still invisible. But now we\
-         are more visible in a very competitive area in the country and starting to get some calls. I\
-         am quite happy so far. I have been working with Shawn and Kylie , two knowledgeable and fine\
-         individuals to work with. Thank you guys.</p>",
+        "<p>We signed up with DG at the Anaheim Dental Convention. I had worked with 2 other companies previously and in my opinion did not get honest work or any decent results. We were a new office in the area on page 26 or 27 of Google and had moved up some but still invisible. But now we are more visible in a very competitive area in the country and starting to get some calls. I am quite happy so far. I have been working with Shawn and Kylie , two knowledgeable and fine individuals to work with. Thank you guys.</p>",
       location: "",
       imageFallback: {
         content: "AS",
@@ -82,10 +64,11 @@ const testimonialContent = [
 export default props => (
   <DefaultPageLayout location="company">
     <Helmet>
-      <title>
-        Irvine, CA Digital Marketing Agency | About Doctor Genius
-      </title>
-      <meta name="description" content="Doctor Genius is an Irvine, California based digital marketing agency providing local businesses with branding, websites, content marketing, and social media marketing service." />
+      <title>Irvine, CA Digital Marketing Agency | About Doctor Genius</title>
+      <meta
+        name="description"
+        content="Doctor Genius is an Irvine, California based digital marketing agency providing local businesses with branding, websites, content marketing, and social media marketing service."
+      />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
@@ -213,6 +196,7 @@ export default props => (
                   <a
                     href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     google reviews.
                   </a>
