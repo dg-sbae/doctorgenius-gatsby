@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
-import Main from "../components/main-content"
+//import Main from "../components/main-content"
 import Container from "../components/Container"
 import FacebookIcon from "../img/facebook-blue.png"
 import TwitterIcon from "../img/twitter-blue.png"
@@ -17,9 +17,9 @@ class DG500Page extends React.Component {
     data: PropTypes.object,
   }
 
-  constructor(props) {
+  /*constructor(props) {
     super(props)
-  }
+  } */
 
   render() {
     const { pathname } = this.props.location
@@ -49,25 +49,37 @@ class DG500Page extends React.Component {
                         <div className="row">
                           <div className="col-sm-12 col-md-12 col-lg-12">
                             <h1 className="text-center">500</h1>
-                            <h2 className="text-center">OOPS! INTERNAL SERVICE ERROR</h2>
-                            <p className="text-center accented-paragraph">The page you are looking for might have been removed had its changed or is temporarily unavailable. &nbsp;
-                            <Link to="/">
-                              Return to homepage
-                            </Link>
+                            <h2 className="text-center">
+                              OOPS! INTERNAL SERVICE ERROR
+                            </h2>
+                            <p className="text-center accented-paragraph">
+                              The page you are looking for might have been
+                              removed had its changed or is temporarily
+                              unavailable. &nbsp;
+                              <Link to="/">Return to homepage</Link>
                             </p>
                             <div class="row">
                               <div class="col-sm-12 text-center sm-500">
                                 <a href="https://www.facebook.com/DoctorGeniusMarketing">
-                                  <img src={FacebookIcon} alt="Facebook Icons" />
+                                  <img
+                                    src={FacebookIcon}
+                                    alt="Facebook Icons"
+                                  />
                                 </a>
                                 <a href="https://twitter.com/DoctorGeniusCA">
                                   <img src={TwitterIcon} alt="Facebook Icons" />
                                 </a>
                                 <a href="https://www.instagram.com/doctor.genius/">
-                                  <img src={InstagramIcon} alt="Facebook Icons" />
+                                  <img
+                                    src={InstagramIcon}
+                                    alt="Facebook Icons"
+                                  />
                                 </a>
                                 <a href="https://www.linkedin.com/company/doctor-genius">
-                                  <img src={LinkedinIcon} alt="Facebook Icons" />
+                                  <img
+                                    src={LinkedinIcon}
+                                    alt="Facebook Icons"
+                                  />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
                                   <img src={YoutubeIcon} alt="Facebook Icons" />
