@@ -65,6 +65,13 @@ $borderColor: #068ad8;
       border: $borderColor solid 1px;
       font-size: 15px;
       font-weight: $font-weight-light;
+      a,
+      a:hover,
+      a:active,
+      a:visited,
+      a:focus {
+        text-decoration: none;
+      }
     }
     &.open {
       height: auto;
