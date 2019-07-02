@@ -112,9 +112,9 @@ class Card extends React.Component {
 }
 
 export default class TestimonialsSlider extends React.Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props)
-  }
+  } */
 
   render() {
     const settings = {
