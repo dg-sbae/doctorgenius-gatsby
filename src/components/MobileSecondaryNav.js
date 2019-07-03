@@ -25,18 +25,14 @@ const mobileSubNavLinks = {
 
 const ListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
-    <Link to={props.to} activeClassName="active" partiallyActive={true}>
-      {props.children}
-    </Link>
+    <Link to={props.to}>{props.children}</Link>
     {}
   </li>
 )
 
 const FirstListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
-    <span activeClassName="active" partiallyActive={true}>
-      {props.children}
-    </span>
+    <span>{props.children}</span>
     <span className={styles.downArrowContainer} onClick={props.clickHandler}>
       <img className={styles.downArrow} src={downArrow} alt="Drop down arrow" />
     </span>
@@ -154,6 +150,7 @@ export default class MobileSecondaryNav extends React.Component {
                     <ListLink
                       className=""
                       to={`/${this.parentPage}/${key.slug}`}
+                      key={key.slug}
                     >
                       {key.title}
                     </ListLink>
