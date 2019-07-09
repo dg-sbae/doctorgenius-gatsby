@@ -63,7 +63,7 @@ export default ({ children }) => (
             <address className="footer-contact-details">
               2121 Alton Parkway
               <br />
-              Irvine, CA 92880
+              Irvine, CA 92606
             </address>
           </div>
           <div className="social-media-row">
