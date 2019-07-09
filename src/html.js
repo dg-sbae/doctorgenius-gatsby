@@ -11,7 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
-        <link rel="icon" type="image/png" href="favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.ico" />
         {props.headComponents}
         <script
           src="https://code.jquery.com/jquery-3.3.1.min.js"
