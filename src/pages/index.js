@@ -16,12 +16,12 @@ import groupChat from "../img/group-chat.png"
 import thinArrowRight from "../img/right-arrow.svg"
 //import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
 // import fullBleedBackgroundSlanted from "../img/full-bleed-bg-slanted.png"
-import newPatientAcquisitions from "../img/home-new-patient-acquisitions.png"
-import dgDifferent from "../img/home-dg-different.png"
-import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
+import newPatientAcquisitions from "../img/new-patient-acquisitions.png"
+import dgDifferent from "../img/what-makes-doctorgenius-different.png"
+import dgClientSatisfaction from "../img/client-satisfaction.png"
 import SEO from "../components/seo.js"
-import homepageMarketingDashboard from "../img/homepage-marketing-dashboard.jpg"
-import homepageMarketingDashboardMobile from "../img/homepage-marketing-dashboard-mobile.jpg"
+import homepageMarketingDashboard from "../img/marketing-dashboard.jpg"
+import homepageMarketingDashboardMobile from "../img/marketing-dashboard-mobile.jpg"
 
 export default ({ data }, props) => (
   <DefaultPageLayout location={props["*"]}>

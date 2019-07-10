@@ -23,7 +23,7 @@ export default () => (
             "Nothing matters more than your practice's website reliability, so we monitor your website 24 hours a day, seven days a week.",
         },
         image: {
-          url: "/png/hosting-solutions-row-1.png",
+          url: "/png/hosting-solutions.png",
           alt: "Lorem Ipsum",
         },
       },
@@ -39,7 +39,7 @@ export default () => (
             "We take security seriously.  It is with utmost importance we protect health data integrity, confidentiality, and availability.",
         },
         image: {
-          url: "/png/hosting-solutions-row-2.png",
+          url: "/png/hosting-solutions-1.png",
           alt: "Lorem Ipsum",
         },
       },

@@ -230,8 +230,8 @@ export default props => {
                 <div className="col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col">
                   <img
                     className="img-responsive blur-bleed"
-                    src="/png/search-result.png"
-                    alt="Search Results Page"
+                    src="/png/local-business-search-result.png"
+                    alt="Local Business Search Results Page"
                   />
                 </div>
               </div>

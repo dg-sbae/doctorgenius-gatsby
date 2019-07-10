@@ -9,15 +9,15 @@ import ContactForm from "../components/contact-form.js"
 import star from "../img/star.svg"
 import sslBadge from "../img/ssl-logo.png"
 
-import Dennis from "../img/review-dennis-baik.png"
-import Taylor from "../img/review-taylor-dental-care.png"
-import Daniel from "../img/review-daniel-savarino.png"
-import Christina from "../img/review-christina-guilin.png"
-import Erika from "../img/review-erika-rodriguez.png"
-import Roberto from "../img/review-roberto-bellegarrigue.png"
-import Justine from "../img/review-justine-schepis.png"
-import Alexandra from "../img/review-alexandra-ramasahai.png"
-import Diamond from "../img/review-diamond-head-dental-care.png"
+import Dennis from "../img/marketing-review-dennis-baik.png"
+import Taylor from "../img/marketing-review-taylor-dental-care.png"
+import Daniel from "../img/marketing-review-daniel-savarino.png"
+import Christina from "../img/marketing-review-christina-guilin.png"
+import Erika from "../img/marketing-review-erika-rodriguez.png"
+import Roberto from "../img/marketing-review-roberto-bellegarrigue.png"
+import Justine from "../img/marketing-review-justine-schepis.png"
+import Alexandra from "../img/marketing-review-alexandra-ramasahai.png"
+import Diamond from "../img/marketing-review-diamond-head-dental-care.png"
 
 import "../styles/demo.scss"
 
@@ -139,7 +139,11 @@ export default props => (
             <div className="col-sm-12 col-md-10 col-lg-12">
               <div className="review">
                 <div className="author">
-                  <img className="portrait" src={Dennis} alt="Review Author" />
+                  <img
+                    className="portrait"
+                    src={Dennis}
+                    alt="Marketing Review Dennis Baik"
+                  />
                   <p>
                     Dennis
                     <br />
@@ -152,7 +156,7 @@ export default props => (
                       <img
                         className="portrait"
                         src={Dennis}
-                        alt="Review Author"
+                        alt="Marketing Review Dennis Baik"
                       />
                     </div>
                     <div className="col-sm-9 bio-container">
@@ -216,7 +220,11 @@ export default props => (
             <div className="col-sm-12 col-md-10 col-lg-12">
               <div className="review">
                 <div className="author">
-                  <img className="portrait" src={Taylor} alt="Review Author" />
+                  <img
+                    className="portrait"
+                    src={Taylor}
+                    alt="Marketing Review Taylor Dental Care"
+                  />
                   <p>
                     Taylor <br />
                     Dental Care
@@ -228,7 +236,7 @@ export default props => (
                       <img
                         className="portrait"
                         src={Taylor}
-                        alt="Review Author"
+                        alt="Marketing Review Taylor Dental Care"
                       />
                     </div>
                     <div className="col-sm-9 bio-container">
@@ -302,7 +310,11 @@ export default props => (
             <div className="col-sm-12 col-md-10 col-lg-12">
               <div className="review">
                 <div className="author">
-                  <img className="portrait" src={Daniel} alt="Review Author" />
+                  <img
+                    className="portrait"
+                    src={Daniel}
+                    alt="Marketing Review Daniel Savarino"
+                  />
                   <p>
                     Daniel <br />
                     Savarino
@@ -314,7 +326,7 @@ export default props => (
                       <img
                         className="portrait"
                         src={Daniel}
-                        alt="Review Author"
+                        alt="Marketing Review Daniel Savarino"
                       />
                     </div>
                     <div className="col-sm-9 bio-container">
@@ -376,7 +388,7 @@ export default props => (
                   <img
                     className="portrait"
                     src={Christina}
-                    alt="Review Author"
+                    alt="Marketing Review Christina Guilin"
                   />
                   <p>
                     Christina
@@ -389,7 +401,7 @@ export default props => (
                       <img
                         className="portrait"
                         src={Christina}
-                        alt="Review Author"
+                        alt="Marketing Review Christina Guilin"
                       />
                     </div>
                     <div className="col-sm-9 bio-container">
@@ -442,7 +454,11 @@ export default props => (
             <div className="col-sm-12 col-md-10 col-lg-12">
               <div className="review">
                 <div className="author">
-                  <img className="portrait" src={Erika} alt="Review Author" />
+                  <img
+                    className="portrait"
+                    src={Erika}
+                    alt="Marketing Review Erika Rodriguez"
+                  />
                   <p>
                     Erika
                     <br /> Rodriguez
@@ -454,7 +470,7 @@ export default props => (
                       <img
                         className="portrait"
                         src={Erika}
-                        alt="Review Author"
+                        alt="Marketing Review Erika Rodriguez"
                       />
                     </div>
                     <div className="col-sm-9 bio-container">
@@ -505,7 +521,11 @@ export default props => (
             <div className="col-sm-12 col-md-10 col-lg-12">
               <div className="review">
                 <div className="author">
-                  <img className="portrait" src={Roberto} alt="Review Author" />
+                  <img
+                    className="portrait"
+                    src={Roberto}
+                    alt="Marketing Review Roberto Bellegarrigue"
+                  />
                   <p>
                     Roberto
                     <br />
@@ -518,7 +538,7 @@ export default props => (
                       <img
                         className="portrait"
                         src={Roberto}
-                        alt="Review Author"
+                        alt="Marketing Review Roberto Bellegarrigue"
                       />
                     </div>
                     <div className="col-sm-9 bio-container">
@@ -565,7 +585,11 @@ export default props => (
             <div className="col-sm-12 col-md-10 col-lg-12">
               <div className="review">
                 <div className="author">
-                  <img className="portrait" src={Justine} alt="Review Author" />
+                  <img
+                    className="portrait"
+                    src={Justine}
+                    alt="Marketing Review Justine Schepis"
+                  />
                   <p>
                     Justine
                     <br />
@@ -578,7 +602,7 @@ export default props => (
                       <img
                         className="portrait"
                         src={Justine}
-                        alt="Review Author"
+                        alt="Marketing Review Justine Schepis"
                       />
                     </div>
                     <div className="col-sm-9 bio-container">
@@ -640,7 +664,7 @@ export default props => (
                   <img
                     className="portrait"
                     src={Alexandra}
-                    alt="Review Author"
+                    alt="Marketing Review Alexandra Ramsahai D.M.D"
                   />
                   <p>
                     Alexandra
@@ -654,7 +678,7 @@ export default props => (
                       <img
                         className="portrait"
                         src={Alexandra}
-                        alt="Review Author"
+                        alt="Marketing Review Alexandra Ramsahai D.M.D"
                       />
                     </div>
                     <div className="col-sm-9 bio-container">
@@ -698,7 +722,11 @@ export default props => (
             <div className="col-sm-12 col-md-10 col-lg-12">
               <div className="review">
                 <div className="author">
-                  <img className="portrait" src={Diamond} alt="Review Author" />
+                  <img
+                    className="portrait"
+                    src={Diamond}
+                    alt="Marketing Review Diamond Head Dental Care"
+                  />
                   <p>
                     Diamond Head <br />
                     Dental Care
@@ -710,7 +738,7 @@ export default props => (
                       <img
                         className="portrait"
                         src={Diamond}
-                        alt="Review Author"
+                        alt="Marketing Review Diamond Head Dental Care"
                       />
                     </div>
                     <div className="col-sm-9 bio-container">

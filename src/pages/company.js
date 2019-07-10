@@ -207,9 +207,9 @@ export default props => (
           <div className="row padded p-sm-0">
             <div className="col-sm-12 col-md-6">
               <img
-                src="/png/search-result.png"
+                src="/png/local-business-search-result.png"
                 className="img-responsive"
-                alt="Search Results Page"
+                alt="Local Business Search Results Page"
               />
             </div>
             <div className="col-sm-12 col-md-6">
@@ -310,8 +310,8 @@ export default props => (
             <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6 order-sm-1 order-md-2">
               <img
                 className="img-responsive"
-                src="/png/computer-and-mobile-detail.png"
-                alt="Device Screens"
+                src="/png/digital-marketing-partnership.png"
+                alt="Digital Marketing Partnership"
               />
             </div>
           </div>

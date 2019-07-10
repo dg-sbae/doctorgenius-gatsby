@@ -104,7 +104,7 @@ export default () => (
             "Narrow down what are your successful keywords, who is clicking on them, and which ones yield the highest number of new patient inquiries.",
         },
         image: {
-          url: "/png/search-result.png",
+          url: "/png/local-business-search-result.png",
           alt: "Search Engine Results with Your Practice In #1",
         },
       },

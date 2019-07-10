@@ -23,7 +23,7 @@ export default () => (
             "Google is an Ecosystem powered by information. Doctor Genius will write content related to your most profitable services and utilize additional techniques like Accelerated Mobile Pages(AMP).",
         },
         image: {
-          url: "/png/content-marketing-row-1.png",
+          url: "/png/content-marketing.png",
           alt: "Content is King",
         },
       },
@@ -39,7 +39,7 @@ export default () => (
             "Original patient education content is posted to your blog and social media profiles to generate general interest in your medical treatments and services.",
         },
         image: {
-          url: "/png/content-marketing-row-2.png",
+          url: "/png/content-marketing-1.png",
           alt: "Understanding your practice",
         },
       },
@@ -55,7 +55,7 @@ export default () => (
             "Strategic deployment of educational videos as an additional avenue for new patients to find you.",
         },
         image: {
-          url: "/png/content-marketing-row-3.png",
+          url: "/png/content-marketing-2.png",
           alt: "Seeing is believing",
         },
       },

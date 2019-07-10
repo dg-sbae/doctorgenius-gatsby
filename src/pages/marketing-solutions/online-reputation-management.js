@@ -23,8 +23,8 @@ export default () => (
             "Experience the advantage of tapping into our powerful network of publisher-level connections and build a consistent web presence for your practice.",
         },
         image: {
-          url: "/png/online-reputation-row-1.png",
-          alt: "Lorem Ipsum",
+          url: "/png/online-reputation1.png",
+          alt: "Gain a network of powerful listings",
         },
       },
       {
@@ -39,8 +39,8 @@ export default () => (
             "9 out of 10 customers read reviews before making a purchasing decision. We combat negative search content and suppress unwanted material by promoting positive content that you control.",
         },
         image: {
-          url: "/png/online-reputation-row-2.png",
-          alt: "Lorem Ipsum",
+          url: "/png/online-reputation-1.png",
+          alt: "Maintain a Positive Online Reputation",
         },
       },
       {
@@ -55,8 +55,8 @@ export default () => (
             "Get reviews from your existing patients fast with our streamlined contact process and form. We direct your patients to your social profiles in a stepped out process that gets you reviews!",
         },
         image: {
-          url: "/png/online-reputation-row-3.png",
-          alt: "Lorem Ipsum",
+          url: "/png/online-reputation-2.png",
+          alt: "Boost your reach to the right patients",
         },
       },
     ]}
