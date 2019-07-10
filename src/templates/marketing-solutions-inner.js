@@ -12,7 +12,6 @@ import digitalAdvertisingIcon from "../img/digital-advertising.svg"
 import onlineReputationIcon from "../img/online-reputation.svg"
 import ourTechnologyIcon from "../img/our-technology.svg"
 import hostingSolutionsIcon from "../img/hosting-solutions.svg"
-//import lighthouseResult from "../img/lighthouse-result.png"
 
 import "../styles/marketing-solutions-inner.scss"
 

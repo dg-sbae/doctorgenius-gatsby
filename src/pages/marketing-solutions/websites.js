@@ -24,7 +24,7 @@ export default () => (
         },
         image: {
           url: "/png/design-your-presence.png",
-          alt: "Website with Phone Version",
+          alt: "Design Your Presence",
         },
       },
       {
@@ -40,8 +40,8 @@ export default () => (
             "Delivering effective brand strategies that practices a major edge in competitive markets. We figure out how, what, where, when, and to whom you need to be communicating and delivering your brand messages.",
         },
         image: {
-          url: "/png/your-brand.png",
-          alt: "Designers Raising a Brand Sign",
+          url: "/png/brand-identity.png",
+          alt: "Brand Identity",
         },
       },
       {
@@ -56,8 +56,8 @@ export default () => (
             "Personalized graphics and Call-to-Action sliders, original content, and 100% Responsive and useable on all modern devices.",
         },
         image: {
-          url: "/png/design-for-maximum-impact.png",
-          alt: "Website Displayed on a Mobile Phone",
+          url: "/png/mobile-first-marketing.png",
+          alt: "Mobile First Digital Marketing",
         },
       },
       {
@@ -72,7 +72,7 @@ export default () => (
             "Improved site speed is an important signal Google uses in its ranking algorithm. Having a website that loads quickly on both mobile and desktop searches is key to giving your next potential patient the best experience while navigating your website.",
         },
         image: {
-          url: "/png/lighthouse-result.png",
+          url: "/png/high-speed-websites.png",
           alt: "High-Scoring Speed Test Results for a Website",
         },
       },
@@ -88,8 +88,8 @@ export default () => (
             "ADA Compliancy has become increasingly important to accommodate all potential customers without hindering accountability.",
         },
         image: {
-          url: "/png/awda-accessibility.png",
-          alt: "Accessible Website",
+          url: "/png/awda-compliant.png",
+          alt: "AwDA Accessible Website",
         },
       },
       {

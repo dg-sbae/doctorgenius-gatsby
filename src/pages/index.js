@@ -9,13 +9,12 @@ import Container from "../components/Container"
 
 import "../styles/homepage.scss"
 
-import medal from "../img/medal.png"
-import money from "../img/money.png"
+import medal from "../img/google-first-page.png"
+import money from "../img/increase-in-revenue.png"
 import stars from "../img/stars.png"
-import groupChat from "../img/group-chat.png"
+import groupChat from "../img/increase-in-new-patient-calls.png"
 import thinArrowRight from "../img/right-arrow.svg"
 //import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
-// import fullBleedBackgroundSlanted from "../img/full-bleed-bg-slanted.png"
 import newPatientAcquisitions from "../img/new-patient-acquisitions.png"
 import dgDifferent from "../img/what-makes-doctorgenius-different.png"
 import dgClientSatisfaction from "../img/client-satisfaction.png"
@@ -86,7 +85,11 @@ export default ({ data }, props) => (
             <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div className="icon-wrapper">
-                  <img className="img-icon" src={medal} alt="Icon of a medal" />
+                  <img
+                    className="img-icon"
+                    src={medal}
+                    alt="Increase in Google First-Page Results"
+                  />
                 </div>
                 <p className="panel-heading">1,125%</p>
                 <p className="panel-body">
@@ -97,7 +100,11 @@ export default ({ data }, props) => (
             <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div className="icon-wrapper">
-                  <img className="img-icon" src={money} alt="Icon of money" />
+                  <img
+                    className="img-icon"
+                    src={money}
+                    alt="Increase in Revenue"
+                  />
                 </div>
                 <p className="panel-heading">100%</p>
                 <p className="panel-body">Increase in Revenue!</p>
@@ -109,7 +116,7 @@ export default ({ data }, props) => (
                   <img
                     className="img-icon"
                     src={groupChat}
-                    alt="Icon of a Groupchat"
+                    alt="Increase in New Patient Calls"
                   />
                 </div>
                 <p className="panel-heading">88%</p>

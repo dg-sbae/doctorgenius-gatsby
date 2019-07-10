@@ -8,8 +8,8 @@ import Container from "../components/Container"
 import "../styles/case-study.scss"
 
 import thinArrowRight from "../img/right-arrow.svg"
-import theSolutionsImage from "../img/the-solutions-tablet-and-search.png"
-import theChallengeImage from "../img/titan-office.png"
+import theSolutionsImage from "../img/new-patient-opportunity.png"
+import theChallengeImage from "../img/dental-marketing.png"
 import titanDentalLogo from "../img/digital-marketing-client.png"
 
 export default props => (
@@ -128,7 +128,7 @@ export default props => (
               <img
                 className="img-responsive"
                 src={theChallengeImage}
-                alt="Doctor's waiting room placeholder"
+                alt="Dental Office"
               />
             </div>
           </div>
@@ -145,7 +145,7 @@ export default props => (
               <img
                 className="img-responsive blur-bleed"
                 src={theSolutionsImage}
-                alt="Search Results Page"
+                alt="Acquire New Patients"
               />
             </div>
             <div className="col-sm-10 col-md-10 col-lap-5 col-lg-5 panel-quadrant">

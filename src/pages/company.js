@@ -5,7 +5,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
-import TestimonialImage1 from "../img/companyTestimonial1.png"
+import TestimonialImage1 from "../img/doctor-genius-testimonial.png"
 
 import "../styles/company-page.scss"
 
