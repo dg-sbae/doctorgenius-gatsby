@@ -13,6 +13,7 @@ import pattersonLogo from "../../public/icon/digital-marketing-partner-patterson
 import roiLogo from "../../public/icon/digital-marketing-partner-roi-dental.png"
 import hrHealthLogo from "../../public/icon/digital-marketing-partner-hrforhealth.png"
 import jllLogo from "../../public/icon/digital-marketing-partner-jll.png"
+import digitalMarketingPartnershipImage from "../img/digital-marketing-partnership.png"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/partnerships.scss"
@@ -251,7 +252,7 @@ export default props => (
             <div className="col-sm-10 order-sm-1 col-md-6 offset-md-0 order-md-2">
               <img
                 className="img-responsive"
-                src="/png/digital-marketing-partnership.png"
+                src={digitalMarketingPartnershipImage}
                 alt="Digital Marketing Partnership"
               />
             </div>

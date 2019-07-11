@@ -11,6 +11,7 @@ import thinArrowRight from "../img/right-arrow.svg"
 import theSolutionsImage from "../img/new-patient-opportunity.png"
 import theChallengeImage from "../img/dental-marketing.png"
 import titanDentalLogo from "../img/digital-marketing-client.png"
+import searchResultsPage from "../img/local-business-search-result.png"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
@@ -293,7 +294,7 @@ export default props => (
             <div className="col-md-5 col-lap-5 col-lg-5">
               <img
                 className="img-responsive blur-bleed"
-                src="/png/local-business-search-result.png"
+                src={searchResultsPage}
                 alt="Local Business Search Results Page"
               />
             </div>

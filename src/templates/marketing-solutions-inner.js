@@ -22,10 +22,6 @@ export default props => {
   const pageIntro = props.pageIntro
   const metaTitle = props.metaTitle
   const metaDescription = props.metaDescription
-
-  // For now all inner pages will have the same hero image, so this will be in the sass
-  //const heroImage = "/hero/marketing-solutions-subpage.png"
-
   const contentRows = props.contentRows
   const currentPage = props.page
 

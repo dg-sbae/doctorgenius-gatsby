@@ -6,6 +6,8 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
 import TestimonialImage1 from "../img/doctor-genius-testimonial.png"
+import searchResultsPage from "../img/local-business-search-result.png"
+import digitalMarketingPartnerShip from "../img/digital-marketing-partnership.png"
 
 import "../styles/company-page.scss"
 
@@ -207,7 +209,7 @@ export default props => (
           <div className="row padded p-sm-0">
             <div className="col-sm-12 col-md-6">
               <img
-                src="/png/local-business-search-result.png"
+                src={searchResultsPage}
                 className="img-responsive"
                 alt="Local Business Search Results Page"
               />
@@ -310,7 +312,7 @@ export default props => (
             <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6 order-sm-1 order-md-2">
               <img
                 className="img-responsive"
-                src="/png/digital-marketing-partnership.png"
+                src={digitalMarketingPartnerShip}
                 alt="Digital Marketing Partnership"
               />
             </div>

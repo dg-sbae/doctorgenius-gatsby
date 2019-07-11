@@ -1,6 +1,8 @@
 import React from "react"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
+import digitalAdvertisingImage from "../../img/digital-advertising.png"
+import digitalAdvertisingImage2 from "../../img/geo-targeting-local-business.png"
 
 export default () => (
   <MarketingSolutionsTemplate
@@ -23,7 +25,7 @@ export default () => (
             "Increase your focus and narrow down who you are targeting to a small geographic region. Hyper-Local Targeting delivers advertising content to your local audience who is more likely to be interested in your services.",
         },
         image: {
-          url: "/png/digital-advertising.png",
+          url: digitalAdvertisingImage,
           alt: "Target ROI Focused Keywords for Google Search",
         },
       },
@@ -39,7 +41,7 @@ export default () => (
             "Informative conversion tracking analytics and raise practice awareness among potential patients.",
         },
         image: {
-          url: "/png/digital-advertising-1.png",
+          url: digitalAdvertisingImage2,
           alt: "Geo-Targeting Local Business",
         },
       },

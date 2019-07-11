@@ -18,10 +18,10 @@ footer {
 }
 
 .main-content {
-  background: top/300px repeat-x url(/png/background-texture.png),
-    center 50%/300px repeat-x url(/png/background-texture-flipped.png),
-    center calc(50% + 300px) / 300px repeat-x url(/png/background-texture.png),
-    bottom/300px repeat-x url(/png/background-texture-flipped.png);
+  background: top/300px repeat-x url(../img/background-texture.png),
+    center 50%/300px repeat-x url(../img/background-texture-flipped.png),
+    center calc(50% + 300px) / 300px repeat-x url(../img/background-texture.png),
+    bottom/300px repeat-x url(../img/background-texture-flipped.png);
 
   &:before {
     position: absolute;
@@ -83,7 +83,7 @@ nav {
 }
 
 .secondary-nav-stuck {
-  background: url("../../public/png/dotted-background.png");
+  background: url("../img/dotted-background.png");
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
 
   &:after {

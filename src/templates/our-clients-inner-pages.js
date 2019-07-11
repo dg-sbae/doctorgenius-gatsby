@@ -12,6 +12,7 @@ import urgentCare from "../../public/icon/urgent-care-nav.svg"
 import chiropractorPractices from "../../public/icon/chiropractor-nav.svg"
 import cosmeticSurgeons from "../../public/icon/surgeon-nav.svg"
 import healthcareMarketing from "../../public/icon/sphygmomanometer-nav.svg"
+import searchResultsPageImage from "../img/local-business-search-result.png"
 
 import "../styles/our-clients-inner-pages.scss"
 
@@ -230,7 +231,7 @@ export default props => {
                 <div className="col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col">
                   <img
                     className="img-responsive blur-bleed"
-                    src="/png/local-business-search-result.png"
+                    src={searchResultsPageImage}
                     alt="Local Business Search Results Page"
                   />
                 </div>

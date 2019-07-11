@@ -3,32 +3,32 @@
 .our-clients-inner {
   &.dental-practices {
     .hero {
-      background-image: url("/hero/our-clients.jpg");
+      background-image: url("../img/hero/our-clients.jpg");
     }
   }
   &.chiropractor-practices {
     .hero {
-      background-image: url("/hero/chiropractor-practices.jpg");
+      background-image: url("../img/hero/chiropractor-practices.jpg");
     }
   }
   &.cosmetic-surgeons {
     .hero {
-      background-image: url("/hero/cosmetic-surgeons.jpg");
+      background-image: url("../img/hero/cosmetic-surgeons.jpg");
     }
   }
   &.healthcare-marketing {
     .hero {
-      background-image: url("/hero/healthcare-marketing.jpg");
+      background-image: url("../img/hero/healthcare-marketing.jpg");
     }
   }
   &.urgent-care-clinics {
     .hero {
-      background-image: url("/hero/urgent-care-clinics.jpg");
+      background-image: url("../img/hero/urgent-care-clinics.jpg");
     }
   }
 
   .hero {
-    // background-image: url("/hero/our-clients.png");
+    // background-image: url("../img/hero/our-clients.png");
     .accented-paragraph {
       width: 84%;
     }
@@ -156,7 +156,7 @@
   }
   .check-plans-background-image {
     height: 475px;
-    background: url("/png/our-clients-fullbleed-image.png") no-repeat;
+    background: url("../img/our-clients-fullbleed-image.png") no-repeat;
     background-position: 40%;
     @include media("<tablet") {
       background-position: 48%;

@@ -1,6 +1,12 @@
 import React from "react"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
+import designYourPresenceImage from "../../img/design-your-presence.png"
+import brandIdentityImage from "../../img/brand-identity.png"
+import mobileFirstMarketingImage from "../../img/mobile-first-marketing.png"
+import highSpeedSitesImage from "../../img/high-speed-websites.png"
+import awdaCompliantImage from "../../img/awda-compliant.png"
+import searchResultsPageImage from "../../img/local-business-search-result.png"
 
 export default () => (
   <MarketingSolutionsTemplate
@@ -23,7 +29,7 @@ export default () => (
             "We adopt a conversion-first, as well as a mobile-first, strategy.  Our websites are power-packed with fresh & unique content tailored to your practice and services. All sites feature high-end images, attractive call-to-actions, easy to use forms, and are ready to rank.",
         },
         image: {
-          url: "/png/design-your-presence.png",
+          url: designYourPresenceImage,
           alt: "Design Your Presence",
         },
       },
@@ -40,7 +46,7 @@ export default () => (
             "Delivering effective brand strategies that practices a major edge in competitive markets. We figure out how, what, where, when, and to whom you need to be communicating and delivering your brand messages.",
         },
         image: {
-          url: "/png/brand-identity.png",
+          url: brandIdentityImage,
           alt: "Brand Identity",
         },
       },
@@ -56,7 +62,7 @@ export default () => (
             "Personalized graphics and Call-to-Action sliders, original content, and 100% Responsive and useable on all modern devices.",
         },
         image: {
-          url: "/png/mobile-first-marketing.png",
+          url: mobileFirstMarketingImage,
           alt: "Mobile First Digital Marketing",
         },
       },
@@ -72,7 +78,7 @@ export default () => (
             "Improved site speed is an important signal Google uses in its ranking algorithm. Having a website that loads quickly on both mobile and desktop searches is key to giving your next potential patient the best experience while navigating your website.",
         },
         image: {
-          url: "/png/high-speed-websites.png",
+          url: highSpeedSitesImage,
           alt: "High-Scoring Speed Test Results for a Website",
         },
       },
@@ -88,7 +94,7 @@ export default () => (
             "ADA Compliancy has become increasingly important to accommodate all potential customers without hindering accountability.",
         },
         image: {
-          url: "/png/awda-compliant.png",
+          url: awdaCompliantImage,
           alt: "AwDA Accessible Website",
         },
       },
@@ -104,7 +110,7 @@ export default () => (
             "Narrow down what are your successful keywords, who is clicking on them, and which ones yield the highest number of new patient inquiries.",
         },
         image: {
-          url: "/png/local-business-search-result.png",
+          url: searchResultsPageImage,
           alt: "Search Engine Results with Your Practice In #1",
         },
       },

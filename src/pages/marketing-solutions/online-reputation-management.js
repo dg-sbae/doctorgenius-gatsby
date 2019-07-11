@@ -1,6 +1,9 @@
 import React from "react"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
+import onlineReputationImage from "../../img/online-reputation.png"
+import onlineReputationImage2 from "../../img/positive-online-reputation.png"
+import onlineReputationImage3 from "../../img/boost-your-reach.png"
 
 export default () => (
   <MarketingSolutionsTemplate
@@ -23,7 +26,7 @@ export default () => (
             "Experience the advantage of tapping into our powerful network of publisher-level connections and build a consistent web presence for your practice.",
         },
         image: {
-          url: "/png/online-reputation1.png",
+          url: onlineReputationImage,
           alt: "Gain a network of powerful listings",
         },
       },
@@ -39,7 +42,7 @@ export default () => (
             "9 out of 10 customers read reviews before making a purchasing decision. We combat negative search content and suppress unwanted material by promoting positive content that you control.",
         },
         image: {
-          url: "/png/online-reputation-1.png",
+          url: onlineReputationImage2,
           alt: "Maintain a Positive Online Reputation",
         },
       },
@@ -55,7 +58,7 @@ export default () => (
             "Get reviews from your existing patients fast with our streamlined contact process and form. We direct your patients to your social profiles in a stepped out process that gets you reviews!",
         },
         image: {
-          url: "/png/online-reputation-2.png",
+          url: onlineReputationImage3,
           alt: "Boost your reach to the right patients",
         },
       },

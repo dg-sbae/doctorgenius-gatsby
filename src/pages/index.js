@@ -14,7 +14,6 @@ import money from "../img/increase-in-revenue.png"
 import stars from "../img/stars.png"
 import groupChat from "../img/increase-in-new-patient-calls.png"
 import thinArrowRight from "../img/right-arrow.svg"
-//import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
 import newPatientAcquisitions from "../img/new-patient-acquisitions.png"
 import dgDifferent from "../img/what-makes-doctorgenius-different.png"
 import dgClientSatisfaction from "../img/client-satisfaction.png"
@@ -203,7 +202,7 @@ export default ({ data }, props) => (
               <img
                 className="img-responsive blur-bleed"
                 src={newPatientAcquisitions}
-                alt=""
+                alt="New Patient Acquisitions"
               />
             </div>
             <div className="col-sm-9 col-md-5">
@@ -240,7 +239,7 @@ export default ({ data }, props) => (
               <img
                 className="img-responsive blur-bleed"
                 src={dgDifferent}
-                alt=""
+                alt="What makes Doctor Genius different?"
               />
             </div>
           </div>
@@ -249,7 +248,7 @@ export default ({ data }, props) => (
               <img
                 className="img-responsive blur-bleed"
                 src={dgClientSatisfaction}
-                alt=""
+                alt="Client Satisfaction"
               />
             </div>
             <div className="col-sm-9 col-md-5">

@@ -1,6 +1,9 @@
 import React from "react"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
+import geniusPortalImage from "../../img/genius-portal.png"
+import leadTrackingImage from "../../img/lead-tracking.png"
+import rankingReportImage from "../../img/ranking-reports.png"
 
 export default () => (
   <MarketingSolutionsTemplate
@@ -23,7 +26,7 @@ export default () => (
             "Get the information you need about your marketing program and performance in one easy to use dashboard. Our plans come with access to our data-packed platform.",
         },
         image: {
-          url: "/png/genius-portal.png",
+          url: geniusPortalImage,
           alt: "Genius Portal",
         },
       },
@@ -39,7 +42,7 @@ export default () => (
             "Get a detailed breakdown of your leads and their disposition. Know the outcome of each instance you receive an incoming call by date, hour, and day.",
         },
         image: {
-          url: "/png/lead-tracking.png",
+          url: leadTrackingImage,
           alt: "Lead Tracking",
         },
       },
@@ -55,7 +58,7 @@ export default () => (
             "Narrow down what are your successful keywords, who is clicking on them, and which ones yield the highest number of new patient inquiries.",
         },
         image: {
-          url: "/png/ranking-reports.png",
+          url: rankingReportImage,
           alt: "Ranking Reports",
         },
       },
