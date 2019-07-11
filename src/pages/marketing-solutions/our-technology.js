@@ -5,6 +5,8 @@ import geniusPortalImage from "../../img/genius-portal.png"
 import leadTrackingImage from "../../img/lead-tracking.png"
 import rankingReportImage from "../../img/ranking-reports.png"
 
+import websiteIcon from "../../img/icon/website.svg"
+
 export default () => (
   <MarketingSolutionsTemplate
     page="our-technology" /* this should be dynamic from the page props */
@@ -17,7 +19,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Genius Portal",
             title: "Genius Portal",
           },
@@ -33,7 +35,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Lead Tracking",
             title: "Lead Tracking",
           },
@@ -49,7 +51,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Ranking Reports",
             title: "Ranking Reports",
           },

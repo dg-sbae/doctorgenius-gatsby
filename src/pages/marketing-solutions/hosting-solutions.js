@@ -4,6 +4,8 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 import hostingSolutionsImage from "../../img/hosting-solutions.png"
 import hostingSolutionsImage2 from "../../img/hipaa-compliant.png"
 
+import websiteIcon from "../../img/icon/website.svg"
+
 export default () => (
   <MarketingSolutionsTemplate
     page="hosting-solutions" /* this should be dynamic from the page props */
@@ -16,7 +18,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Security",
             title: "Security",
           },
@@ -32,7 +34,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "HIPAA",
             title: "HIPAA",
           },

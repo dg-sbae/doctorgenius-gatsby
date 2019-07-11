@@ -8,6 +8,13 @@ import highSpeedSitesImage from "../../img/high-speed-websites.png"
 import awdaCompliantImage from "../../img/awda-compliant.png"
 import searchResultsPageImage from "../../img/local-business-search-result.png"
 
+import websiteIcon from "../../img/icon/website.svg"
+import fingerprintIcon from "../../img/icon/fingerprint.svg"
+import smartphoneIcon from "../../img/icon/smartphone.svg"
+import speedometerIcon from "../../img/icon/speedometer.svg"
+import checklistIcon from "../../img/icon/awda.svg"
+import searchEngineIcon from "../../img/icon/search-engine.svg"
+
 export default () => (
   <MarketingSolutionsTemplate
     page="responsive-websites" /* this should be dynamic from the page props */
@@ -20,7 +27,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "websites",
             title: "Websites",
           },
@@ -36,7 +43,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/fingerprint.svg",
+            url: fingerprintIcon,
             alt: "Brand Fingerprint",
             title: "Brand Identity",
           },
@@ -53,7 +60,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/smartphone.svg",
+            url: smartphoneIcon,
             alt: "Mobile Device",
             title: "Mobile First",
           },
@@ -69,7 +76,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/speedometer.svg",
+            url: speedometerIcon,
             alt: "A Speedometer",
             title: "Speed",
           },
@@ -85,7 +92,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/awda.svg",
+            url: checklistIcon,
             alt: "AwDA Compliance Checkmark List",
             title: "AwDA Compliant",
           },
@@ -101,7 +108,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/search-engine.svg",
+            url: searchEngineIcon,
             alt: "Online Search Engine",
             title: "Search Engine Optimization",
           },

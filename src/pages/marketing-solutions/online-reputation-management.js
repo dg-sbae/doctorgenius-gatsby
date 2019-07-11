@@ -5,6 +5,8 @@ import onlineReputationImage from "../../img/online-reputation.png"
 import onlineReputationImage2 from "../../img/positive-online-reputation.png"
 import onlineReputationImage3 from "../../img/boost-your-reach.png"
 
+import websiteIcon from "../../img/icon/website.svg"
+
 export default () => (
   <MarketingSolutionsTemplate
     page="online-reputation" /* this should be dynamic from the page props */
@@ -17,7 +19,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Digital Landscape",
             title: "Digital Landscape",
           },
@@ -33,7 +35,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Review Management",
             title: "Review Management",
           },
@@ -49,7 +51,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Practice Promoter",
             title: "Practice Promoter",
           },

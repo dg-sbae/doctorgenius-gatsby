@@ -13,6 +13,11 @@ import theChallengeImage from "../img/dental-marketing.png"
 import titanDentalLogo from "../img/digital-marketing-client.png"
 import searchResultsPage from "../img/local-business-search-result.png"
 
+import newPatientOppIcon from "../img/icon/new-patient-opportunity.svg"
+import marketingSolutionsIcon from "../img/icon/marketing-solutions-suite.svg"
+import liveSupportIcon from "../img/icon/live-support-concierge.svg"
+import performanceCampaignIcon from "../img/icon/performance-driven-campaigns.svg"
+
 export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
@@ -156,7 +161,7 @@ export default props => (
                     <div className="icon-wrapper">
                       <img
                         className="img-icon"
-                        src="/icon/new-patient-opportunity.svg"
+                        src={newPatientOppIcon}
                         alt="Handshake icon"
                       />
                     </div>
@@ -180,7 +185,7 @@ export default props => (
                     <div className="icon-wrapper">
                       <img
                         className="img-icon"
-                        src="/icon/marketing-solutions-suite.svg"
+                        src={marketingSolutionsIcon}
                         alt="Webpage icon"
                       />
                     </div>
@@ -207,7 +212,7 @@ export default props => (
                     <div className="icon-wrapper">
                       <img
                         className="img-icon"
-                        src="/icon/live-support-concierge.svg"
+                        src={liveSupportIcon}
                         alt="People chat icon"
                       />
                     </div>
@@ -231,7 +236,7 @@ export default props => (
                     <div className="icon-wrapper">
                       <img
                         className="img-icon"
-                        src="/icon/performance-driven-campaigns.svg"
+                        src={performanceCampaignIcon}
                         alt="Newspaper icon"
                       />
                     </div>

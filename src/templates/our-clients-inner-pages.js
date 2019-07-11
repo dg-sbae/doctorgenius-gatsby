@@ -7,12 +7,14 @@ import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 
-import dentalPractices from "../../public/icon/tooth-shine-nav.svg"
-import urgentCare from "../../public/icon/urgent-care-nav.svg"
-import chiropractorPractices from "../../public/icon/chiropractor-nav.svg"
-import cosmeticSurgeons from "../../public/icon/surgeon-nav.svg"
-import healthcareMarketing from "../../public/icon/sphygmomanometer-nav.svg"
+import dentalPractices from "../img/icon/tooth-shine-nav.svg"
+import urgentCare from "../img/icon/urgent-care-nav.svg"
+import chiropractorPractices from "../img/icon/chiropractor-nav.svg"
+import cosmeticSurgeons from "../img/icon/surgeon-nav.svg"
+import healthcareMarketing from "../img/icon/sphygmomanometer-nav.svg"
 import searchResultsPageImage from "../img/local-business-search-result.png"
+
+import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/our-clients-inner-pages.scss"
 
@@ -220,7 +222,7 @@ export default props => {
                   <div className="center pad-md">
                     <a href="/case-study" className="link-with-icon">
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
@@ -260,7 +262,7 @@ export default props => {
                         </p>
                         <a href="/plans" className="link-with-icon">
                           <img
-                            src="/icon/right-arrow-blue.svg"
+                            src={rightArrowBlue}
                             className="link-icon"
                             alt="Icon of a Right Arrow"
                           />

@@ -5,16 +5,18 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import googleLogo from "../../public/icon/google-partner.png"
-import pulseCheckLogo from "../../public/icon/digital-marketing-partner-pulsecheck.png"
-import picisLogo from "../../public/icon/digital-marketing-partner-picis.png"
-import boaLogo from "../../public/icon/digital-marketing-partner-bofa.png"
-import pattersonLogo from "../../public/icon/digital-marketing-partner-patterson.png"
-import roiLogo from "../../public/icon/digital-marketing-partner-roi-dental.png"
-import hrHealthLogo from "../../public/icon/digital-marketing-partner-hrforhealth.png"
-import jllLogo from "../../public/icon/digital-marketing-partner-jll.png"
+import googleLogo from "../img/google-partner.png"
+import pulseCheckLogo from "../img/digital-marketing-partner-pulsecheck.png"
+import picisLogo from "../img/digital-marketing-partner-picis.png"
+import boaLogo from "../img/digital-marketing-partner-bofa.png"
+import pattersonLogo from "../img/digital-marketing-partner-patterson.png"
+import roiLogo from "../img/digital-marketing-partner-roi-dental.png"
+import hrHealthLogo from "../img/digital-marketing-partner-hrforhealth.png"
+import jllLogo from "../img/digital-marketing-partner-jll.png"
 import digitalMarketingPartnershipImage from "../img/digital-marketing-partnership.png"
+
 import thinArrowRight from "../img/right-arrow.svg"
+import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/partnerships.scss"
 
@@ -239,7 +241,7 @@ export default props => (
                       className="link-with-icon font-weight-semibold"
                     >
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />

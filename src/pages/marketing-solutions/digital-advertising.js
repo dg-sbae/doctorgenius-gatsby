@@ -4,6 +4,8 @@ import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inne
 import digitalAdvertisingImage from "../../img/digital-advertising.png"
 import digitalAdvertisingImage2 from "../../img/geo-targeting-local-business.png"
 
+import websiteIcon from "../../img/icon/website.svg"
+
 export default () => (
   <MarketingSolutionsTemplate
     page="digital-advertising" /* this should be dynamic from the page props */
@@ -16,7 +18,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Hyper Local",
             title: "Hyper Local",
           },
@@ -32,7 +34,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Audience Optimization",
             title: "Audience Optimization",
           },

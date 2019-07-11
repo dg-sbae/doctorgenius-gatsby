@@ -5,6 +5,8 @@ import contentMarketingImage1 from "../../img/content-is-king.png"
 import contentMarketingImage2 from "../../img/content-marketing.png"
 import contentMarketingImage3 from "../../img/video-marketing.png"
 
+import websiteIcon from "../../img/icon/website.svg"
+
 export default () => (
   <MarketingSolutionsTemplate
     page="content-marketing" /* this should be dynamic from the page props */
@@ -17,7 +19,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Blog and Social Updates",
             title: "Blog and Social Updates",
           },
@@ -33,7 +35,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Patient Education",
             title: "Patient Education",
           },
@@ -49,7 +51,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Video Education",
             title: "Video Education",
           },

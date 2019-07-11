@@ -66,11 +66,8 @@
     .logo a {
       display: block;
       .logo-holder {
-        background-image: url(/icon/logo-white.svg) !important;
+        background-image: url("../img/icon/logo-white.svg") !important;
       }
-    }
-    a .phone-holder {
-      background-image: url(/icon/phone-white.svg) !important;
     }
   }
   /* End awful hack danger zone */

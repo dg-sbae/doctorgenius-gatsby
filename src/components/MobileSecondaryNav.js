@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import $ from "jquery"
 
 import styles from "./mobile-secondary-nav.module.scss"
-import downArrow from "../../public/icon/down-arrow.svg"
+import downArrow from "../img/icon/down-arrow.svg"
 
 const mobileSubNavLinks = {
   marketingSolutions: [
