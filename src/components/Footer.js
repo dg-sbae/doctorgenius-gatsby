@@ -8,6 +8,12 @@ const ListLink = props => (
   </li>
 )
 
+const ExternalLink = props => (
+  <li>
+    <a href={props.to}>{props.children}</a>
+  </li>
+)
+
 export default ({ children }) => (
   <footer>
     <Container>
@@ -29,6 +35,9 @@ export default ({ children }) => (
             <ListLink to="/the-study">Resources</ListLink>
             <ListLink to="/demo">Free Demo</ListLink>
             <ListLink to="/contact">Contact</ListLink>
+            <ExternalLink to="https://portal.doctorgenius.com/login">
+              Portal Login
+            </ExternalLink>
           </ul>
         </div>
         <div className="col-sm-10 col-md-6 col-lg-4">
