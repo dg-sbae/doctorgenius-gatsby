@@ -326,6 +326,13 @@ const ResourcesSideNavListLink = props => (
         >
           Case Studies
         </ListLink>
+        <ExternalListLink
+          to="https://portal.doctorgenius.com/login"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Client Portal
+        </ExternalListLink>
         {/* Hidden until the content for page is finalized */}
         {/*<ListLink
           to="/intentional-404/"
