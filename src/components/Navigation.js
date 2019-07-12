@@ -50,9 +50,7 @@ const ListLink = props => (
 
 const ExternalListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
-    <a href={props.to} activeClassName="active" partiallyActive={true}>
-      {props.children}
-    </a>
+    <a href={props.to}>{props.children}</a>
     {}
   </li>
 )
@@ -327,9 +325,8 @@ const ResourcesSideNavListLink = props => (
           Case Studies
         </ListLink>
         <ExternalListLink
+          className=""
           to="https://portal.doctorgenius.com/login"
-          activeClassName="active"
-          partiallyActive={true}
         >
           Client Portal
         </ExternalListLink>
@@ -873,12 +870,13 @@ const StudySingleListLink = props => (
                   </div>
                 </div>
                 <div className="dropdown-content-block">
-                  <ExternalListLink
+                  <a
                     className=""
-                    to="https://portal.doctorgenius.com/login"
+                    href="https://portal.doctorgenius.com/login"
+                    target="_blank"
                   >
                     Portal Login
-                  </ExternalListLink>
+                  </a>
                   <p>Access to our client portal</p>
                 </div>
               </div>
