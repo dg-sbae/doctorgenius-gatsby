@@ -35,6 +35,7 @@ import twitter from "../../public/icon/twitter-white.svg"
 import instagram from "../../public/icon/instagram-white.svg"
 import linkedin from "../../public/icon/linkedin-white.svg"
 import youtube from "../../public/icon/youtube-white.svg"
+import loginPortalIcon from "../../public/icon/icon-portal.svg"
 
 import "bootstrap/dist/js/bootstrap.min.js"
 // import "../../static/scripts/navigationFunctionality.js"
@@ -864,7 +865,7 @@ const StudySingleListLink = props => (
                   <div className="icon-wrapper">
                     <img
                       className="image-icon"
-                      src={hostingSolutions}
+                      src={loginPortalIcon}
                       alt="Client portal icon"
                     />
                   </div>
@@ -874,10 +875,13 @@ const StudySingleListLink = props => (
                     className=""
                     href="https://portal.doctorgenius.com/login"
                     target="_blank"
+                    rel="noreferrer noopener"
                   >
                     Portal Login
                   </a>
-                  <p>Access to our client portal</p>
+                  <p>
+                    Login for clients to our performance based marketing program
+                  </p>
                 </div>
               </div>
             </div>
