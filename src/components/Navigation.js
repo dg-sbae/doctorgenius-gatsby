@@ -48,6 +48,15 @@ const ListLink = props => (
   </li>
 )
 
+const ExternalListLink = props => (
+  <li className={props.className} data-toggle={props.dataToggle}>
+    <a href={props.to} activeClassName="active" partiallyActive={true}>
+      {props.children}
+    </a>
+    {}
+  </li>
+)
+
 const ExternalLink = props => (
   <li className={props.className}>
     <a href={props.to} target="_blank" rel="noreferrer noopener">
@@ -789,9 +798,9 @@ const StudySingleListLink = props => (
               </div>
             </div>*/}
           </div>
-          {/*<div className="row dropdown-row">*/}
-          {/* Hidden until the content for page is finalized */}
-          {/*<div className="col-sm-6">
+          <div className="row dropdown-row">
+            {/* Hidden until the content for page is finalized */}
+            {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
                   <img className="image-icon" src={caseStudy} />
@@ -808,8 +817,8 @@ const StudySingleListLink = props => (
                 </p>
               </div>
             </div>*/}
-          {/* Hidden until the content for page is finalized */}
-          {/*<div className="col-sm-6">
+            {/* Hidden until the content for page is finalized */}
+            {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
                   <img className="image-icon" src={info} />
@@ -825,10 +834,10 @@ const StudySingleListLink = props => (
                 </p>
               </div>
             </div>*/}
-          {/*</div>*/}
-          {/*<div className="row dropdown-row">*/}
-          {/* Hidden until the content for page is finalized */}
-          {/*<div className="col-sm-6">
+            {/*</div>*/}
+            {/*<div className="row dropdown-row">*/}
+            {/* Hidden until the content for page is finalized */}
+            {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
                   <img className="image-icon" src={ourTech} />
@@ -844,13 +853,36 @@ const StudySingleListLink = props => (
                 </p>
               </div>
             </div>*/}
-          {/*<div className="col-sm-6">
+            <div className="col-sm-6">
+              <Link className="" to="/case-study" />
+              <div className="dropdown-item-block">
+                <div className="nav-icon-wrapper">
+                  <div className="icon-wrapper">
+                    <img
+                      className="image-icon"
+                      src={hostingSolutions}
+                      alt="Client portal icon"
+                    />
+                  </div>
+                </div>
+                <div className="dropdown-content-block">
+                  <ExternalListLink
+                    className=""
+                    to="https://portal.doctorgenius.com/login"
+                  >
+                    Portal Login
+                  </ExternalListLink>
+                  <p>Access to our client portal</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6">
               <div className="dropdown-content-block">
                 <Link className="" to={props.to} />
                 <p />
               </div>
-          </div>*/}
-          {/*</div>*/}
+            </div>
+          </div>
         </div>
       </div>
     </div>
