@@ -8,6 +8,12 @@ const ListLink = props => (
   </li>
 )
 
+const ListLinkNoPrefetch = props => (
+  <li>
+    <a href={props.to}>{props.children}</a>
+  </li>
+)
+
 export default ({ children }) => (
   <footer>
     <Container>
@@ -23,12 +29,14 @@ export default ({ children }) => (
           <ul>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/marketing-solutions">Marketing Solutions</ListLink>
-            <ListLink to="/our-clients">Our Clients</ListLink>
+            <ListLinkNoPrefetch to="/our-clients">
+              Our Clients
+            </ListLinkNoPrefetch>
             <ListLink to="/plans">Plans</ListLink>
             <ListLink to="/company">Company</ListLink>
             <ListLink to="/the-study">Resources</ListLink>
             <ListLink to="/demo">Free Demo</ListLink>
-            <ListLink to="/contact">Contact</ListLink>
+            <ListLinkNoPrefetch to="/contact">Contact</ListLinkNoPrefetch>
           </ul>
         </div>
         <div className="col-sm-10 col-md-6 col-lg-4">
