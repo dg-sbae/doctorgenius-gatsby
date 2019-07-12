@@ -40,7 +40,7 @@ export default ({ children }) => (
             </ExternalLink>
           </ul>
         </div>
-        <div className="col-sm-10 col-md-6 col-lg-4">
+        <div className="col-10 col-sm-10 col-md-6 col-lg-4">
           <div className="footer-contact-row">
             <div className="icon-wrapper">
               <img

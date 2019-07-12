@@ -357,6 +357,9 @@ footer {
         border: $primary-text 2px solid;
       }
     }
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
