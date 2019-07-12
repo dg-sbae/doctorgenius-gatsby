@@ -25,7 +25,7 @@ export default ({ children }) => (
             alt="Our Logo"
           />
         </div>
-        <div className="d-sm-none d-md-block col-sm-12 col-md-6 col-lg-4 footer-page-links">
+        <div className="d-none d-sm-none d-md-block col-sm-12 col-md-6 col-lg-4 footer-page-links">
           <ul>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/marketing-solutions">Marketing Solutions</ListLink>
