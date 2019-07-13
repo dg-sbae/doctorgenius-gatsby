@@ -878,20 +878,34 @@ class Navigation extends Component {
           .parent()
           .siblings(".dropdown-links")
           .children("ul")
-        $("#sidebar .dropdown-links ul")
-          .not(thisDropdownList)
-          .slideUp(500)
-        thisDropdownList.slideDown(500)
+        var thisDropdownTitle = $(this).parents(".nav-item")
+        if (thisDropdownTitle.hasClass("show")) {
+          thisDropdownTitle.removeClass("show")
+          thisDropdownList.slideUp(500)
+        } else {
+          $("#sidebar .dropdown-links ul")
+            .not(thisDropdownList)
+            .slideUp(500)
+          thisDropdownTitle.addClass("show")
+          thisDropdownList.slideDown(500)
+        }
       })
       $(".nav-disable-link-open-dropdown").click(function(event) {
         event.preventDefault()
         var thisDropdownList = $(this)
           .parent()
           .siblings("ul")
-        $("#sidebar .dropdown-links ul")
-          .not(thisDropdownList)
-          .slideUp(500)
-        thisDropdownList.slideDown(500)
+        var thisDropdownTitle = $(this).parents(".nav-item")
+        if (thisDropdownTitle.hasClass("show")) {
+          thisDropdownTitle.removeClass("show")
+          thisDropdownList.slideUp(500)
+        } else {
+          $("#sidebar .dropdown-links ul")
+            .not(thisDropdownList)
+            .slideUp(500)
+          thisDropdownTitle.addClass("show")
+          thisDropdownList.slideDown(500)
+        }
       })
       // END - Disable the title icon for the dropdown menu
 
