@@ -1,6 +1,19 @@
 import React from "react"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
+import designYourPresenceImage from "../../img/design-your-presence.png"
+import brandIdentityImage from "../../img/brand-identity.png"
+import mobileFirstMarketingImage from "../../img/mobile-first-marketing.png"
+import highSpeedSitesImage from "../../img/high-speed-websites.png"
+import awdaCompliantImage from "../../img/awda-compliant.png"
+import searchResultsPageImage from "../../img/local-business-search-result.png"
+
+import websiteIcon from "../../img/icon/website.svg"
+import fingerprintIcon from "../../img/icon/fingerprint.svg"
+import smartphoneIcon from "../../img/icon/smartphone.svg"
+import speedometerIcon from "../../img/icon/speedometer.svg"
+import checklistIcon from "../../img/icon/awda.svg"
+import searchEngineIcon from "../../img/icon/search-engine.svg"
 
 export default () => (
   <MarketingSolutionsTemplate
@@ -14,7 +27,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "websites",
             title: "Websites",
           },
@@ -23,14 +36,14 @@ export default () => (
             "We adopt a conversion-first, as well as a mobile-first, strategy.  Our websites are power-packed with fresh & unique content tailored to your practice and services. All sites feature high-end images, attractive call-to-actions, easy to use forms, and are ready to rank.",
         },
         image: {
-          url: "/png/design-your-presence.png",
-          alt: "Website with Phone Version",
+          url: designYourPresenceImage,
+          alt: "Design Your Presence",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/fingerprint.svg",
+            url: fingerprintIcon,
             alt: "Brand Fingerprint",
             title: "Brand Identity",
           },
@@ -40,14 +53,14 @@ export default () => (
             "Delivering effective brand strategies that practices a major edge in competitive markets. We figure out how, what, where, when, and to whom you need to be communicating and delivering your brand messages.",
         },
         image: {
-          url: "/png/your-brand.png",
-          alt: "Designers Raising a Brand Sign",
+          url: brandIdentityImage,
+          alt: "Brand Identity",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/smartphone.svg",
+            url: smartphoneIcon,
             alt: "Mobile Device",
             title: "Mobile First",
           },
@@ -56,14 +69,14 @@ export default () => (
             "Personalized graphics and Call-to-Action sliders, original content, and 100% Responsive and useable on all modern devices.",
         },
         image: {
-          url: "/png/design-for-maximum-impact.png",
-          alt: "Website Displayed on a Mobile Phone",
+          url: mobileFirstMarketingImage,
+          alt: "Mobile First Digital Marketing",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/speedometer.svg",
+            url: speedometerIcon,
             alt: "A Speedometer",
             title: "Speed",
           },
@@ -72,14 +85,14 @@ export default () => (
             "Improved site speed is an important signal Google uses in its ranking algorithm. Having a website that loads quickly on both mobile and desktop searches is key to giving your next potential patient the best experience while navigating your website.",
         },
         image: {
-          url: "/png/lighthouse-result.png",
+          url: highSpeedSitesImage,
           alt: "High-Scoring Speed Test Results for a Website",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/awda.svg",
+            url: checklistIcon,
             alt: "AwDA Compliance Checkmark List",
             title: "AwDA Compliant",
           },
@@ -88,14 +101,14 @@ export default () => (
             "ADA Compliancy has become increasingly important to accommodate all potential customers without hindering accountability.",
         },
         image: {
-          url: "/png/awda-accessibility.png",
-          alt: "Accessible Website",
+          url: awdaCompliantImage,
+          alt: "AwDA Accessible Website",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/search-engine.svg",
+            url: searchEngineIcon,
             alt: "Online Search Engine",
             title: "Search Engine Optimization",
           },
@@ -104,7 +117,7 @@ export default () => (
             "Narrow down what are your successful keywords, who is clicking on them, and which ones yield the highest number of new patient inquiries.",
         },
         image: {
-          url: "/png/search-result.png",
+          url: searchResultsPageImage,
           alt: "Search Engine Results with Your Practice In #1",
         },
       },

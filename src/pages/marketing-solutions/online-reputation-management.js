@@ -1,6 +1,11 @@
 import React from "react"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
+import onlineReputationImage from "../../img/online-reputation.png"
+import onlineReputationImage2 from "../../img/positive-online-reputation.png"
+import onlineReputationImage3 from "../../img/boost-your-reach.png"
+
+import websiteIcon from "../../img/icon/website.svg"
 
 export default () => (
   <MarketingSolutionsTemplate
@@ -14,7 +19,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Digital Landscape",
             title: "Digital Landscape",
           },
@@ -23,14 +28,14 @@ export default () => (
             "Experience the advantage of tapping into our powerful network of publisher-level connections and build a consistent web presence for your practice.",
         },
         image: {
-          url: "/png/online-reputation-row-1.png",
-          alt: "Lorem Ipsum",
+          url: onlineReputationImage,
+          alt: "Gain a network of powerful listings",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Review Management",
             title: "Review Management",
           },
@@ -39,14 +44,14 @@ export default () => (
             "9 out of 10 customers read reviews before making a purchasing decision. We combat negative search content and suppress unwanted material by promoting positive content that you control.",
         },
         image: {
-          url: "/png/online-reputation-row-2.png",
-          alt: "Lorem Ipsum",
+          url: onlineReputationImage2,
+          alt: "Maintain a Positive Online Reputation",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Practice Promoter",
             title: "Practice Promoter",
           },
@@ -55,8 +60,8 @@ export default () => (
             "Get reviews from your existing patients fast with our streamlined contact process and form. We direct your patients to your social profiles in a stepped out process that gets you reviews!",
         },
         image: {
-          url: "/png/online-reputation-row-3.png",
-          alt: "Lorem Ipsum",
+          url: onlineReputationImage3,
+          alt: "Boost your reach to the right patients",
         },
       },
     ]}

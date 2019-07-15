@@ -1,6 +1,11 @@
 import React from "react"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
+import contentMarketingImage1 from "../../img/content-is-king.png"
+import contentMarketingImage2 from "../../img/content-marketing.png"
+import contentMarketingImage3 from "../../img/video-marketing.png"
+
+import websiteIcon from "../../img/icon/website.svg"
 
 export default () => (
   <MarketingSolutionsTemplate
@@ -14,7 +19,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Blog and Social Updates",
             title: "Blog and Social Updates",
           },
@@ -23,14 +28,14 @@ export default () => (
             "Google is an Ecosystem powered by information. Doctor Genius will write content related to your most profitable services and utilize additional techniques like Accelerated Mobile Pages(AMP).",
         },
         image: {
-          url: "/png/content-marketing-row-1.png",
+          url: contentMarketingImage1,
           alt: "Content is King",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Patient Education",
             title: "Patient Education",
           },
@@ -39,14 +44,14 @@ export default () => (
             "Original patient education content is posted to your blog and social media profiles to generate general interest in your medical treatments and services.",
         },
         image: {
-          url: "/png/content-marketing-row-2.png",
+          url: contentMarketingImage2,
           alt: "Understanding your practice",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Video Education",
             title: "Video Education",
           },
@@ -55,8 +60,8 @@ export default () => (
             "Strategic deployment of educational videos as an additional avenue for new patients to find you.",
         },
         image: {
-          url: "/png/content-marketing-row-3.png",
-          alt: "Seeing is believing",
+          url: contentMarketingImage3,
+          alt: "Video Marketing",
         },
       },
     ]}

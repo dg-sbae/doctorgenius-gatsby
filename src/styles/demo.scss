@@ -66,11 +66,8 @@
     .logo a {
       display: block;
       .logo-holder {
-        background-image: url(/icon/logo-white.svg) !important;
+        background-image: url("../img/icon/logo-white.svg") !important;
       }
-    }
-    a .phone-holder {
-      background-image: url(/icon/phone-white.svg) !important;
     }
   }
   /* End awful hack danger zone */
@@ -96,7 +93,7 @@
     }
 
     padding-bottom: 50px;
-    background: url("/png/pixel-map.png");
+    background: url("../img/pixel-map.png");
     &:before {
       position: absolute;
       content: " ";
@@ -321,7 +318,7 @@
     }
   }
   .main-content {
-    background: url("/png/squares-background.png");
+    background: url("../img/squares-background.png");
     background-size: 4px;
     padding-bottom: 5%;
   }

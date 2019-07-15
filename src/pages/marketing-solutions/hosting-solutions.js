@@ -1,6 +1,10 @@
 import React from "react"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
+import hostingSolutionsImage from "../../img/hosting-solutions.png"
+import hostingSolutionsImage2 from "../../img/hipaa-compliant.png"
+
+import websiteIcon from "../../img/icon/website.svg"
 
 export default () => (
   <MarketingSolutionsTemplate
@@ -14,7 +18,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Security",
             title: "Security",
           },
@@ -23,14 +27,14 @@ export default () => (
             "Nothing matters more than your practice's website reliability, so we monitor your website 24 hours a day, seven days a week.",
         },
         image: {
-          url: "/png/hosting-solutions-row-1.png",
-          alt: "Lorem Ipsum",
+          url: hostingSolutionsImage,
+          alt: "Hosting Solutions - Secure Sites",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "HIPAA",
             title: "HIPAA",
           },
@@ -39,8 +43,8 @@ export default () => (
             "We take security seriously.  It is with utmost importance we protect health data integrity, confidentiality, and availability.",
         },
         image: {
-          url: "/png/hosting-solutions-row-2.png",
-          alt: "Lorem Ipsum",
+          url: hostingSolutionsImage2,
+          alt: "Hosting Solutions - HIPAA Compliant",
         },
       },
     ]}

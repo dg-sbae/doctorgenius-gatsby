@@ -1,6 +1,11 @@
 import React from "react"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
+import geniusPortalImage from "../../img/genius-portal.png"
+import leadTrackingImage from "../../img/lead-tracking.png"
+import rankingReportImage from "../../img/ranking-reports.png"
+
+import websiteIcon from "../../img/icon/website.svg"
 
 export default () => (
   <MarketingSolutionsTemplate
@@ -14,7 +19,7 @@ export default () => (
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Genius Portal",
             title: "Genius Portal",
           },
@@ -23,14 +28,14 @@ export default () => (
             "Get the information you need about your marketing program and performance in one easy to use dashboard. Our plans come with access to our data-packed platform.",
         },
         image: {
-          url: "/png/our-technology-row-1.png",
-          alt: "Lorem Ipsum",
+          url: geniusPortalImage,
+          alt: "Genius Portal",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Lead Tracking",
             title: "Lead Tracking",
           },
@@ -39,14 +44,14 @@ export default () => (
             "Get a detailed breakdown of your leads and their disposition. Know the outcome of each instance you receive an incoming call by date, hour, and day.",
         },
         image: {
-          url: "/png/our-technology-row-2.png",
-          alt: "Lorem Ipsum",
+          url: leadTrackingImage,
+          alt: "Lead Tracking",
         },
       },
       {
         content: {
           icon: {
-            url: "/icon/website.svg",
+            url: websiteIcon,
             alt: "Ranking Reports",
             title: "Ranking Reports",
           },
@@ -55,8 +60,8 @@ export default () => (
             "Narrow down what are your successful keywords, who is clicking on them, and which ones yield the highest number of new patient inquiries.",
         },
         image: {
-          url: "/png/our-technology-row-3.png",
-          alt: "Lorem Ipsum",
+          url: rankingReportImage,
+          alt: "Ranking Reports",
         },
       },
     ]}

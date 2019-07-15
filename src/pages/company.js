@@ -5,7 +5,16 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
-import TestimonialImage1 from "../img/companyTestimonial1.png"
+import TestimonialImage1 from "../img/doctor-genius-testimonial.png"
+import searchResultsPage from "../img/local-business-search-result.png"
+import digitalMarketingPartnerShip from "../img/digital-marketing-partnership.png"
+
+import logoBlue from "../img/icon/logo-blue.svg"
+import webIcon from "../img/icon/web.svg"
+import searchEngineIcon from "../img/icon/search-engine.svg"
+import doctorsIcon from "../img/icon/doctors.svg"
+import starsIcon from "../img/icon/stars.svg"
+import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/company-page.scss"
 
@@ -120,7 +129,7 @@ export default props => (
               </div>
             </div>
             <div className="col-sm-12 col-md-6 center logo">
-              <img src="/icon/logo-blue.svg" alt="Our Logo" />
+              <img src={logoBlue} alt="Our Logo" />
             </div>
           </div>
 
@@ -138,7 +147,7 @@ export default props => (
                 <div className="icon-wrapper">
                   <img
                     className="img-icon"
-                    src="/icon/web.svg"
+                    src={webIcon}
                     alt="Icon of a Website"
                   />
                 </div>
@@ -154,7 +163,7 @@ export default props => (
                 <div className="icon-wrapper">
                   <img
                     className="img-icon"
-                    src="/icon/search-engine.svg"
+                    src={searchEngineIcon}
                     alt="Icon of a Search Engine Page"
                   />
                 </div>
@@ -170,7 +179,7 @@ export default props => (
                 <div className="icon-wrapper">
                   <img
                     className="img-icon"
-                    src="/icon/doctors.svg"
+                    src={doctorsIcon}
                     alt="Icon of a Group of Doctors"
                   />
                 </div>
@@ -186,7 +195,7 @@ export default props => (
                 <div className="icon-wrapper">
                   <img
                     className="img-icon"
-                    src="/icon/stars.svg"
+                    src={starsIcon}
                     alt="Icon of Stars"
                   />
                 </div>
@@ -207,9 +216,9 @@ export default props => (
           <div className="row padded p-sm-0">
             <div className="col-sm-12 col-md-6">
               <img
-                src="/png/search-result.png"
+                src={searchResultsPage}
                 className="img-responsive"
-                alt="Search Results Page"
+                alt="Local Business Search Results Page"
               />
             </div>
             <div className="col-sm-12 col-md-6">
@@ -240,7 +249,7 @@ export default props => (
                       className="link-with-icon font-weight-semibold"
                     >
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
@@ -297,7 +306,7 @@ export default props => (
                       className="link-with-icon font-weight-semibold"
                     >
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
@@ -310,8 +319,8 @@ export default props => (
             <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6 order-sm-1 order-md-2">
               <img
                 className="img-responsive"
-                src="/png/computer-and-mobile-detail.png"
-                alt="Device Screens"
+                src={digitalMarketingPartnerShip}
+                alt="Digital Marketing Partnership"
               />
             </div>
           </div>

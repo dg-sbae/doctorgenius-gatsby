@@ -1,8 +1,8 @@
 import React from "react"
 
 import OurClientsInnerPages from "../../templates/our-clients-inner-pages"
-import TestimonialImage2 from "../../img/dentalTestimonial2.png"
-import TestimonialImage3 from "../../img/dentalTestimonial3.png"
+import TestimonialImage2 from "../../img/dental-testimonial-1.png"
+import TestimonialImage3 from "../../img/dental-testimonial-2.png"
 
 export default () => (
   <OurClientsInnerPages

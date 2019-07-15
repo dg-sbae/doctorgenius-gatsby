@@ -16,6 +16,8 @@ import hostingSolutionsIcon from "../img/hosting-solutions.svg"
 import lighthouseResultsOnMarketingPage from "../img/lighthouse-results-on-marketing-page.png"
 import portalDashboard from "../img/portal-dashboard.png"
 
+import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
+
 import "../styles/marketing-solutions.scss"
 
 export default props => (
@@ -159,7 +161,7 @@ export default props => (
                     </p>
                     <a href="/case-study" className="link-with-icon">
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
@@ -203,7 +205,7 @@ export default props => (
                       className="link-with-icon"
                     >
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
@@ -232,7 +234,7 @@ export default props => (
                       </p>
                       <a href="/plans" className="link-with-icon">
                         <img
-                          src="/icon/right-arrow-blue.svg"
+                          src={rightArrowBlue}
                           className="link-icon"
                           alt="Icon of a Right Arrow"
                         />
