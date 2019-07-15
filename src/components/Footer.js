@@ -30,7 +30,7 @@ export default ({ children }) => (
         <div className="col-sm-12 col-lg-4">
           <img src={logoWhite} className="logo img-responsive" alt="Our Logo" />
         </div>
-        <div className="d-sm-none d-md-block col-sm-12 col-md-6 col-lg-4 footer-page-links">
+        <div className="d-none d-sm-none d-md-block col-sm-12 col-md-6 col-lg-4 footer-page-links">
           <ul>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/marketing-solutions">Marketing Solutions</ListLink>
@@ -44,7 +44,7 @@ export default ({ children }) => (
             <ListLinkNoPrefetch to="/contact">Contact</ListLinkNoPrefetch>
           </ul>
         </div>
-        <div className="col-sm-10 col-md-6 col-lg-4">
+        <div className="col-10 col-sm-10 col-md-6 col-lg-4">
           <div className="footer-contact-row">
             <div className="icon-wrapper">
               <img

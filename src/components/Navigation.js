@@ -34,6 +34,7 @@ import twitter from "../img/icon/twitter-white.svg"
 import instagram from "../img/icon/instagram-white.svg"
 import linkedin from "../img/icon/linkedin-white.svg"
 import youtube from "../img/icon/youtube-white.svg"
+import loginPortalIcon from "../../public/icon/icon-portal.svg"
 
 import "bootstrap/dist/js/bootstrap.min.js"
 // import "../../static/scripts/navigationFunctionality.js"
@@ -43,6 +44,13 @@ const ListLink = props => (
     <Link to={props.to} activeClassName="active" partiallyActive={true}>
       {props.children}
     </Link>
+    {}
+  </li>
+)
+
+const ExternalListLink = props => (
+  <li className={props.className} data-toggle={props.dataToggle}>
+    <a href={props.to}>{props.children}</a>
     {}
   </li>
 )
@@ -316,6 +324,12 @@ const ResourcesSideNavListLink = props => (
         >
           Case Studies
         </ListLink>
+        <ExternalListLink
+          className=""
+          to="https://portal.doctorgenius.com/login"
+        >
+          Client Portal
+        </ExternalListLink>
         {/* Hidden until the content for page is finalized */}
         {/*<ListLink
           to="/intentional-404/"
@@ -785,9 +799,9 @@ const StudySingleListLink = props => (
               </div>
             </div>*/}
           </div>
-          {/*<div className="row dropdown-row">*/}
-          {/* Hidden until the content for page is finalized */}
-          {/*<div className="col-sm-6">
+          <div className="row dropdown-row">
+            {/* Hidden until the content for page is finalized */}
+            {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
                   <img className="image-icon" src={caseStudy} />
@@ -804,8 +818,8 @@ const StudySingleListLink = props => (
                 </p>
               </div>
             </div>*/}
-          {/* Hidden until the content for page is finalized */}
-          {/*<div className="col-sm-6">
+            {/* Hidden until the content for page is finalized */}
+            {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
                   <img className="image-icon" src={info} />
@@ -821,10 +835,10 @@ const StudySingleListLink = props => (
                 </p>
               </div>
             </div>*/}
-          {/*</div>*/}
-          {/*<div className="row dropdown-row">*/}
-          {/* Hidden until the content for page is finalized */}
-          {/*<div className="col-sm-6">
+            {/*</div>*/}
+            {/*<div className="row dropdown-row">*/}
+            {/* Hidden until the content for page is finalized */}
+            {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
                 <div className="icon-wrapper">
                   <img className="image-icon" src={ourTech} />
@@ -840,13 +854,40 @@ const StudySingleListLink = props => (
                 </p>
               </div>
             </div>*/}
-          {/*<div className="col-sm-6">
+            <div className="col-sm-6">
+              <Link className="" to="/case-study" />
+              <div className="dropdown-item-block">
+                <div className="nav-icon-wrapper">
+                  <div className="icon-wrapper">
+                    <img
+                      className="image-icon"
+                      src={loginPortalIcon}
+                      alt="Client portal icon"
+                    />
+                  </div>
+                </div>
+                <div className="dropdown-content-block">
+                  <a
+                    className=""
+                    href="https://portal.doctorgenius.com/login"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Portal Login
+                  </a>
+                  <p>
+                    Login for clients to our performance based marketing program
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6">
               <div className="dropdown-content-block">
                 <Link className="" to={props.to} />
                 <p />
               </div>
-          </div>*/}
-          {/*</div>*/}
+            </div>
+          </div>
         </div>
       </div>
     </div>
