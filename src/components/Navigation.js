@@ -58,7 +58,7 @@ const ExternalLink = props => (
 )
 
 const SideNavListLink = props => (
-  <li className={props.className} data-toggle={props.dataToggle}>
+  <li className={props.className}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
@@ -80,7 +80,7 @@ const SideNavListLink = props => (
 )
 
 const MarketingSolutionsSideNavListLink = props => (
-  <li className={props.className} data-toggle={props.dataToggle}>
+  <li className={props.className}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
@@ -150,7 +150,7 @@ const MarketingSolutionsSideNavListLink = props => (
 )
 
 const WhoWeServeSideNavListLink = props => (
-  <li className={props.className} data-toggle={props.dataToggle}>
+  <li className={props.className}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
         <Link
@@ -223,7 +223,7 @@ const WhoWeServeSideNavListLink = props => (
 )
 
 const CompanySideNavListLink = props => (
-  <li className={props.className} data-toggle={props.dataToggle}>
+  <li className={props.className}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
         <Link
@@ -272,7 +272,7 @@ const CompanySideNavListLink = props => (
 )
 
 const ResourcesSideNavListLink = props => (
-  <li className={props.className} data-toggle={props.dataToggle}>
+  <li className={props.className}>
     <div className="nav-icon-wrapper">
       <div className="icon-wrapper">
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
@@ -353,116 +353,121 @@ const OurClientsListLink = props => (
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/our-clients/dental-practices" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={dentalPractices}
-                      alt="Dental Practices Icon"
-                    />
+              <Link className="" to="/our-clients/dental-practices">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={dentalPractices}
+                        alt="Dental Practices Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Dental Practices
+                    </span>
+                    <p>Bringing in new dental patients every day</p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/our-clients/dental-practices">
-                    Dental Practices
-                  </Link>
-                  <p>Bringing in new dental patients every day</p>
-                </div>
-              </div>
+              </Link>
             </div>
             <div className="col-sm-6">
-              <Link to="/our-clients/cosmetic-surgeons" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={cosmeticSurgeons}
-                      alt="Cosmetic Surgeons Icon"
-                    />
+              <Link to="/our-clients/cosmetic-surgeons">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={cosmeticSurgeons}
+                        alt="Cosmetic Surgeons Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Cosmetic Surgeons
+                    </span>
+                    <p>Attract new patients to your office</p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/our-clients/cosmetic-surgeons">
-                    Cosmetic Surgeons
-                  </Link>
-                  <p>Attract new patients to your office</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row dropdown-row">
-            <div className="col-sm-6">
-              <Link className="" to="/our-clients/urgent-care-clinics" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={urgentCare}
-                      alt="Urgent Care Icon"
-                    />
-                  </div>
-                </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/our-clients/urgent-care-clinics">
-                    Urgent Care Clinics
-                  </Link>
-                  <p>
-                    Grow your Urgent Care Center and accelerate your revenue
-                    cycle
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6">
-              <Link className="" to="/our-clients/healthcare-marketing" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={healthcareMarketing}
-                      alt="Healthcare Marketing Icon"
-                    />
-                  </div>
-                </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/our-clients/healthcare-marketing">
-                    Healthcare Marketing
-                  </Link>
-                  <p>
-                    Complete marketing specific to healthcare industry needs
-                  </p>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/our-clients/chiropractor-practices" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={ourTech}
-                      alt="Chiropractic Icon"
-                    />
+              <Link className="" to="/our-clients/urgent-care-clinics">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={urgentCare}
+                        alt="Urgent Care Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Urgent Care Clinics
+                    </span>
+                    <p>
+                      Grow your Urgent Care Center and accelerate your revenue
+                      cycle
+                    </p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/our-clients/chiropractor-practices">
-                    Chiropractor Practices
-                  </Link>
-                  <p>
-                    Stretch your online reach and increase your new patient
-                    calls
-                  </p>
+              </Link>
+            </div>
+            <div className="col-sm-6">
+              <Link className="" to="/our-clients/healthcare-marketing">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={healthcareMarketing}
+                        alt="Healthcare Marketing Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Healthcare Marketing
+                    </span>
+                    <p>
+                      Complete marketing specific to healthcare industry needs
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
+            </div>
+          </div>
+          <div className="row dropdown-row">
+            <div className="col-sm-6">
+              <Link className="" to="/our-clients/chiropractor-practices">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={ourTech}
+                        alt="Chiropractic Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Chiropractor Practices
+                    </span>
+                    <p>
+                      Stretch your online reach and increase your new patient
+                      calls
+                    </p>
+                  </div>
+                </div>
+              </Link>
             </div>
             <div className="col-sm-6">
               <div className="dropdown-content-block">
@@ -494,151 +499,145 @@ const MarketingSolutionsListLink = props => (
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/marketing-solutions/websites" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={responsiveWebsites}
-                      alt="Marketing Solutions Icon"
-                    />
+              <Link className="" to="/marketing-solutions/websites">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={responsiveWebsites}
+                        alt="Marketing Solutions Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Responsive Websites
+                    </span>
+                    <p>Beautiful, High Performing Websites Built to Convert</p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/marketing-solutions/websites">
-                    Responsive Websites
-                  </Link>
-                  <p>Beautiful, High Performing Websites Built to Convert</p>
-                </div>
-              </div>
+              </Link>
             </div>
             <div className="col-sm-6">
               <Link
                 className=""
                 to="/marketing-solutions/online-reputation-management"
-              />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={onlineReputation}
-                      alt="Online Reputation Icon"
-                    />
+              >
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={onlineReputation}
+                        alt="Online Reputation Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Online Reputation
+                    </span>
+                    <p>
+                      We direct your customers in a stepped out process that
+                      gets you reviews
+                    </p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link
-                    className=""
-                    to="/marketing-solutions/online-reputation-management"
-                  >
-                    Online Reputation
-                  </Link>
-                  <p>
-                    We direct your customers in a stepped out process that gets
-                    you reviews
-                  </p>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/marketing-solutions/content-marketing" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={contentMarketing}
-                      alt="Content Marketing Icon"
-                    />
+              <Link className="" to="/marketing-solutions/content-marketing">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={contentMarketing}
+                        alt="Content Marketing Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span
+                      className="dropdown-content-title"
+                      to="/marketing-solutions/content-marketing"
+                    >
+                      Content Marketing
+                    </span>
+                    <p>Target ROI Focused Keywords for Google Search</p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link
-                    className=""
-                    to="/marketing-solutions/content-marketing"
-                  >
-                    Content Marketing
-                  </Link>
-                  <p>Target ROI Focused Keywords for Google Search</p>
-                </div>
-              </div>
+              </Link>
             </div>
             <div className="col-sm-6">
-              <Link className="" to="/marketing-solutions/our-technology" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={ourTech}
-                      alt="Our Technology Icon"
-                    />
+              <Link className="" to="/marketing-solutions/our-technology">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={ourTech}
+                        alt="Our Technology Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Our Technology
+                    </span>
+                    <p>Experience our performance based marketing program</p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/marketing-solutions/our-technology">
-                    Our Technology
-                  </Link>
-                  <p>Experience our performance based marketing program</p>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link
-                className=""
-                to="/marketing-solutions/digital-advertising"
-              />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={digitalAdvertising}
-                      alt="Digital Advertising Icon"
-                    />
+              <Link className="" to="/marketing-solutions/digital-advertising">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={digitalAdvertising}
+                        alt="Digital Advertising Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Digital Advertising
+                    </span>
+                    <p>
+                      Expanding your digital reach and drawing in new patients
+                    </p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link
-                    className=""
-                    to="/marketing-solutions/digital-advertising"
-                  >
-                    Digital Advertising
-                  </Link>
-                  <p>
-                    Expanding your digital reach and drawing in new patients
-                  </p>
-                </div>
-              </div>
+              </Link>
             </div>
             <div className="col-sm-6">
-              <Link className="" to="/marketing-solutions/hosting-solutions" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={hostingSolutions}
-                      alt="Hosting Solutions Icon"
-                    />
+              <Link className="" to="/marketing-solutions/hosting-solutions">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={hostingSolutions}
+                        alt="Hosting Solutions Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">
+                      Hosting Solutions
+                    </span>
+                    <p>Enterprise Power for Medical Practice Websites</p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link
-                    className=""
-                    to="/marketing-solutions/hosting-solutions"
-                  >
-                    Hosting Solutions
-                  </Link>
-                  <p>Enterprise Power for Medical Practice Websites</p>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -664,44 +663,43 @@ const CompanyListLink = props => (
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/company" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <img
-                    className="image-icon"
-                    src={company}
-                    alt="Company Icon"
-                  />
-                </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/company">
-                    About
-                  </Link>
-                  <p>
-                    Offering high-end marketing services to health professionals
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6">
-              <Link className="" to="/partnerships" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
+              <Link className="" to="/company">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
                     <img
                       className="image-icon"
-                      src={caseStudy}
-                      alt="Case Studies Icon"
+                      src={company}
+                      alt="Company Icon"
                     />
                   </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">About</span>
+                    <p>
+                      Offering high-end marketing services to health
+                      professionals
+                    </p>
+                  </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/partnerships">
-                    Partnerships
-                  </Link>
-                  <p>Establishing value-added partnerships</p>
+              </Link>
+            </div>
+            <div className="col-sm-6">
+              <Link className="" to="/partnerships">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={caseStudy}
+                        alt="Case Studies Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">Partnerships</span>
+                    <p>Establishing value-added partnerships</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -727,47 +725,46 @@ const StudySingleListLink = props => (
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/the-study" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <img
-                    className="image-icon"
-                    src={theStudy}
-                    alt="The Study Icon"
-                  />
-                </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/the-study">
-                    The Study
-                  </Link>
-                  <p>
-                    Education on all things digital marketing and practice
-                    management
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6">
-              <Link className="" to="/case-study" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
+              <Link className="" to="/the-study">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
                     <img
                       className="image-icon"
-                      src={caseStudy}
-                      alt="Case Study Icon"
+                      src={theStudy}
+                      alt="The Study Icon"
                     />
                   </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">The Study</span>
+                    <p>
+                      Education on all things digital marketing and practice
+                      management
+                    </p>
+                  </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <Link className="" to="/case-study">
-                    Case Studies
-                  </Link>
-                  <p>
-                    See Doctor Genius Action Plan to address one doctor’s needs
-                  </p>
+              </Link>
+            </div>
+            <div className="col-sm-6">
+              <Link className="" to="/case-study">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={caseStudy}
+                        alt="Case Study Icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">Case Studies</span>
+                    <p>
+                      See Doctor Genius Action Plan to address one doctor’s
+                      needs
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
             {/* Hidden until the content for page is finalized */}
             {/*<div className="col-sm-6">
@@ -880,20 +877,34 @@ class Navigation extends Component {
           .parent()
           .siblings(".dropdown-links")
           .children("ul")
-        $("#sidebar .dropdown-links ul")
-          .not(thisDropdownList)
-          .slideUp(500)
-        thisDropdownList.slideDown(500)
+        var thisDropdownTitle = $(this).parents(".nav-item")
+        if (thisDropdownTitle.hasClass("show")) {
+          thisDropdownTitle.removeClass("show")
+          thisDropdownList.slideUp(500)
+        } else {
+          $("#sidebar .dropdown-links ul")
+            .not(thisDropdownList)
+            .slideUp(500)
+          thisDropdownTitle.addClass("show")
+          thisDropdownList.slideDown(500)
+        }
       })
       $(".nav-disable-link-open-dropdown").click(function(event) {
         event.preventDefault()
         var thisDropdownList = $(this)
           .parent()
           .siblings("ul")
-        $("#sidebar .dropdown-links ul")
-          .not(thisDropdownList)
-          .slideUp(500)
-        thisDropdownList.slideDown(500)
+        var thisDropdownTitle = $(this).parents(".nav-item")
+        if (thisDropdownTitle.hasClass("show")) {
+          thisDropdownTitle.removeClass("show")
+          thisDropdownList.slideUp(500)
+        } else {
+          $("#sidebar .dropdown-links ul")
+            .not(thisDropdownList)
+            .slideUp(500)
+          thisDropdownTitle.addClass("show")
+          thisDropdownList.slideDown(500)
+        }
       })
       // END - Disable the title icon for the dropdown menu
 
@@ -913,6 +924,7 @@ class Navigation extends Component {
         $("a[aria-expanded=true]").attr("aria-expanded", "false")
       })
 
+      // Controls toggling the dropdown items on dropdown arrow click
       $("#sidebar .dropdown-links .down-arrow-container").on(
         "click",
         function() {
@@ -929,6 +941,10 @@ class Navigation extends Component {
           } else {
             thisDropdownList.slideDown(500)
             thisDropdownTitle.addClass("show")
+            $("#sidebar .dropdown-links ul")
+              .not(thisDropdownList)
+              .parents(".nav-item")
+              .removeClass("show")
           }
         }
       )
@@ -954,7 +970,7 @@ class Navigation extends Component {
 
           <ul className="navbar-nav">
             <SideNavListLink
-              className="nav-item dropdown"
+              className="nav-item"
               dataToggle=""
               iconSubnav={house}
               // data-toggle="collapse"
@@ -964,7 +980,7 @@ class Navigation extends Component {
               Home
             </SideNavListLink>
             <MarketingSolutionsSideNavListLink
-              className="nav-item dropdown"
+              className="nav-item"
               dataToggle="dropdown"
               iconSubnav={marketingSolutions}
               // data-toggle="collapse"
@@ -974,7 +990,7 @@ class Navigation extends Component {
               Marketing Solutions
             </MarketingSolutionsSideNavListLink>
             <WhoWeServeSideNavListLink
-              className="nav-item dropdown"
+              className="nav-item"
               dataToggle="dropdown"
               iconSubnav={ourClients}
               // data-toggle="collapse"
@@ -984,7 +1000,7 @@ class Navigation extends Component {
               Our Clients
             </WhoWeServeSideNavListLink>
             <SideNavListLink
-              className="nav-item dropdown"
+              className="nav-item"
               dataToggle="dropdown"
               iconSubnav={plans}
               // data-toggle="collapse"
@@ -994,7 +1010,7 @@ class Navigation extends Component {
               Plans
             </SideNavListLink>
             <CompanySideNavListLink
-              className="nav-item dropdown"
+              className="nav-item"
               dataToggle="dropdown"
               iconSubnav={company}
               // data-toggle="collapse"
@@ -1004,7 +1020,7 @@ class Navigation extends Component {
               Company
             </CompanySideNavListLink>
             <ResourcesSideNavListLink
-              className="nav-item dropdown"
+              className="nav-item"
               dataToggle="dropdown"
               iconSubnav={resources}
               // data-toggle="collapse"
@@ -1014,7 +1030,7 @@ class Navigation extends Component {
               Resources
             </ResourcesSideNavListLink>
             <SideNavListLink
-              className="nav-item dropdown"
+              className="nav-item"
               dataToggle="dropdown"
               iconSubnav={freeDemo}
               // data-toggle="collapse"
@@ -1024,7 +1040,7 @@ class Navigation extends Component {
               Free Demo
             </SideNavListLink>
             <SideNavListLink
-              className="nav-item dropdown"
+              className="nav-item"
               dataToggle="dropdown"
               iconSubnav={contact}
               // data-toggle="collapse"
