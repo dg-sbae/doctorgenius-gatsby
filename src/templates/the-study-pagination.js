@@ -8,6 +8,7 @@ import { Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import NewsLetterSignUpForm from "../components/newsletter-form.js"
 
 import marketingCategoryImage from "../img/digital-marketing-category-image-1.7x1.png"
 import practiceManagementImage from "../img/practice-management-category-image-1.7x1.png"
@@ -341,24 +342,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                         </div>
                       </div>
                     </div>
-                    <div className="newsletter row">
-                      <div className="col-sm-12">
-                        <div className="newsletter-signup">
-                          <h4 className="newsletter-heading">Newsletter</h4>
-                          <p>
-                            Subscribe to our email newsletter for useful tips
-                            and valuable resources.
-                          </p>
-                          <input type="text" />
-                          <a
-                            href="/intentional-404/newslettersubmit"
-                            className="button rounder"
-                          >
-                            Submit
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <NewsLetterSignUpForm />
                   </div>
                   <div className="most-popular">
                     <div className="row d-sm-none d-lg-block padded short-top short-bottom">
