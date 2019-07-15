@@ -855,31 +855,31 @@ const StudySingleListLink = props => (
               </div>
             </div>*/}
             <div className="col-sm-6">
-              <Link className="" to="/case-study" />
-              <div className="dropdown-item-block">
-                <div className="nav-icon-wrapper">
-                  <div className="icon-wrapper">
-                    <img
-                      className="image-icon"
-                      src={loginPortalIcon}
-                      alt="Client portal icon"
-                    />
+              <a
+                className=""
+                href="https://portal.doctorgenius.com/login"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <div className="icon-wrapper">
+                      <img
+                        className="image-icon"
+                        src={loginPortalIcon}
+                        alt="Client portal icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">Portal Login</span>
+                    <p>
+                      Login for clients to our performance based marketing
+                      program
+                    </p>
                   </div>
                 </div>
-                <div className="dropdown-content-block">
-                  <a
-                    className=""
-                    href="https://portal.doctorgenius.com/login"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Portal Login
-                  </a>
-                  <p>
-                    Login for clients to our performance based marketing program
-                  </p>
-                </div>
-              </div>
+              </a>
             </div>
             <div className="col-sm-6">
               <div className="dropdown-content-block">
