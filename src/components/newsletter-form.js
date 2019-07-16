@@ -17,7 +17,8 @@ class NewsLetterSignUpForm extends React.Component {
   handleFormSubmit(ev) {
     // trigger ajax loading spiner
     function ajaxLoaderDisplay() {
-      $(".request-demo").hide()
+      $(".rounder").hide()
+      $(".newsletter-form").addClass("submitted")
       $(".lds-ellipsis").show()
     }
 
@@ -36,11 +37,8 @@ class NewsLetterSignUpForm extends React.Component {
       $('input[type="email"]').val("")
     }
 
-    function hideEllipsis() {
-      setTimeout(() => $(".positive-response").hide(), 10000)
-    }
-
     ajaxLoaderDisplay()
+    //Show success check and clear all form fields
     submissionSuccess()
 
     // Prevent the button from redirecting
@@ -52,37 +50,8 @@ class NewsLetterSignUpForm extends React.Component {
     //Add the user-entered data
     newsletterdata.append("EmailAddress", this.email.value)
 
-    // show email in Object
-    console.log(Object.fromEntries(newsletterdata))
-
-    /* 
-    Add required, internal fields for our Admin connection
-    data.append("Status", "New")
-    data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
-    data.append("postToSalesForce", true)
-    data.append("Description", "Form: Request Demo")
-    data.append("LeadSource", "(New) Main Website Organic")
-    */
-
-    /* Debug:
-    alert(
-      "Debug -- Data sent to server:\n" +
-        data +
-        "\n\n" +
-        "Readable format:" +
-        "\nname: " +
-        this.name.value +
-        "\ncompany: " +
-        this.company.value +
-        "\nemail: " +
-        this.email.value +
-        "\nphone: " +
-        this.phone.value
-    )
-    */
-
-    //NodeTest server
-    //fetch("http://nodetest.dgd3v.com/upload", {
+    //Convert data into a string for POST request
+    let stringData = '"' + this.email.value + '"'
 
     //Salesforce integration:
     //https://portal.doctorgenius.com/api/dglead
@@ -90,29 +59,12 @@ class NewsLetterSignUpForm extends React.Component {
 
     //Email to the support team
     //inboundleads@doctorgenius.com, alexis@doctorgenius.com
-    //[FullName] <noreply@doctorgenius.com>
-    //Doctor Genius "Request Demo"
-    //Name:    [FullName]
-    //Phone:   [PhoneNumber]
+    //<noreply@doctorgenius.com>
+    //Doctor Genius "Newsletter Signup"
     //Email:   [EmailAddress]
-    //Company: [CompanyName]
-
-    /* Generate a request to our Admin portal (connects to SalesForce)
-    fetch("https://portal.doctorgenius.com/api/dglead", {
-      method: "POST",
-      body: stringData,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    }).then(response => {
-      console.log("dglead response:", response)
-      response.json().then(body => {
-        console.log("dgleads body:", body)
-      })
-    }) */
 
     // Generate a request to the email server
-    /*fetch("https://nodetest.dgplex.com/upload", {
+    /*fetch("https://nodetest.dgplex.com/newsletter-signup", {
       method: "POST",
       body: stringData,
       headers: {
@@ -127,8 +79,8 @@ class NewsLetterSignUpForm extends React.Component {
       })
     }) */
 
-    /* Additional testing endpoint:
-    fetch("https://enh4puletkcmw.x.pipedream.net", {
+    //Additional testing endpoint:
+    fetch("https://enj8zi1w9tah.x.pipedream.net", {
       method: "POST",
       body: stringData,
       headers: {
@@ -140,13 +92,6 @@ class NewsLetterSignUpForm extends React.Component {
         console.log("requestbin body:", body)
       })
     })
-    */
-
-    //Trigger form clearing upon completion of all API calls
-    //clearFormFields();
-
-    //After 10 Seconds remove the submission success/fail message
-    hideEllipsis()
   }
 
   render() {
