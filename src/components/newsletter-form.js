@@ -64,7 +64,7 @@ class NewsLetterSignUpForm extends React.Component {
     //Email:   [EmailAddress]
 
     // Generate a request to the email server
-    /*fetch("https://nodetest.dgplex.com/newsletter-signup", {
+    fetch("https://nodetest.dgplex.com/newsletter-signup", {
       method: "POST",
       body: stringData,
       headers: {
@@ -77,10 +77,10 @@ class NewsLetterSignUpForm extends React.Component {
           email: body.email,
         })
       })
-    }) */
+    })
 
     //Additional testing endpoint:
-    fetch("https://enj8zi1w9tah.x.pipedream.net", {
+    /*fetch("https://enj8zi1w9tah.x.pipedream.net", {
       method: "POST",
       body: stringData,
       headers: {
@@ -91,7 +91,7 @@ class NewsLetterSignUpForm extends React.Component {
       response.json().then(body => {
         console.log("requestbin body:", body)
       })
-    })
+    }) */
   }
 
   render() {
