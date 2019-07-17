@@ -45,20 +45,33 @@ class NewsLetterSignUpForm extends React.Component {
     ev.preventDefault()
 
     // Set up a new Form object
-    const newsletterdata = new FormData()
+    const data = new FormData()
 
     //Add the user-entered data
-    newsletterdata.append("EmailAddress", this.email.value)
+    data.append("EmailAddress", this.email.value)
 
     //Convert data into a string for POST request
-    let stringData = '"' + this.email.value + '"'
+    let stringData = ""
+
+    // Turn the form body into a string by iterating over the form
+    // entries and encoding them as URI components
+    Object.keys(Object.fromEntries(data)).forEach(
+      e =>
+        //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
+        (stringData += `${e}=${encodeURIComponent(
+          Object.fromEntries(data)[e]
+        )}&`)
+    )
+
+    // Remove the trailing '&' since there's no additional parameter
+    stringData = stringData.replace(/&$/, "")
 
     //Salesforce integration:
     //https://portal.doctorgenius.com/api/dglead
     //tracking key: a803bcbe-f32d-41b9-81a8-62a4cd6cd446
 
     //Email to the support team
-    //inboundleads@doctorgenius.com, alexis@doctorgenius.com
+    //inboundleads@doctorgenius.com, jparmenter@doctorgenius.com
     //<noreply@doctorgenius.com>
     //Doctor Genius "Newsletter Signup"
     //Email:   [EmailAddress]
