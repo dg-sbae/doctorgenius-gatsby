@@ -8,7 +8,7 @@ import React from "react"
 import Slider from "react-slick"
 import styles from "./testimonials-slider.module.scss"
 import quoteMark from "../img/quote-mark.svg"
-import jQuery from "jquery"
+//import jQuery from "jquery"
 
 class Card extends React.Component {
   constructor(props) {
@@ -68,12 +68,18 @@ class Card extends React.Component {
               />
             </div>
             <div className={styles.moreLink}>
-              <a
+              <button
                 className="moreTrigger"
                 onClick={() => this.setState({ open: !this.state.open })}
+                style={{
+                  color: "#0576cd",
+                  background: "none",
+                  border: "none",
+                  outline: "none",
+                }}
               >
                 {this.state.open ? "LESS" : "MORE"}
-              </a>
+              </button>
             </div>
           </div>
 
@@ -85,7 +91,7 @@ class Card extends React.Component {
                     className={styles.portrait}
                     src={card.cardContent.image}
                     alt="A Doctor"
-                    style={{height: '85px'}}
+                    style={{ height: "85px" }}
                   />
                 )}
                 {!card.cardContent.image &&
@@ -96,7 +102,7 @@ class Card extends React.Component {
                   )}
 
                 {/* JS shortcircuit to conditionally render the location*/}
-                {card.cardContent.location != "" && (
+                {card.cardContent.location !== "" && (
                   <p className={styles.location}>{card.cardContent.location}</p>
                 )}
               </div>
@@ -112,9 +118,9 @@ class Card extends React.Component {
 }
 
 export default class TestimonialsSlider extends React.Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props)
-  }
+  } */
 
   render() {
     const settings = {
@@ -163,7 +169,7 @@ export default class TestimonialsSlider extends React.Component {
       <div className={styles.testimonialsSlider}>
         <Slider className={styles.cardSlider} {...settings}>
           {this.props.cards.map(card => (
-            <div className={styles.cardWrapper}>
+            <div className={styles.cardWrapper} key={card.cardContent.author}>
               <Card card={card} />
             </div>
           ))}

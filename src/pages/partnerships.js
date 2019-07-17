@@ -5,23 +5,31 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import googleLogo from "../../public/icon/logo-google.png"
-import pulseCheckLogo from "../../public/icon/pulse-check-logo.png"
-import picisLogo from "../../public/icon/logo-picis.png"
-import boaLogo from "../../public/icon/logo-bofa.png"
-import pattersonLogo from "../../public/icon/patterson-logo.png"
-import roiLogo from "../../public/icon/logo-roi-dental.png"
-import hrHealthLogo from "../../public/icon/logo-hrforhealth.png"
-import jllLogo from "../../public/icon/logo-jll.png"
+import googleLogo from "../img/google-partner.png"
+import pulseCheckLogo from "../img/digital-marketing-partner-pulsecheck.png"
+import picisLogo from "../img/digital-marketing-partner-picis.png"
+import boaLogo from "../img/digital-marketing-partner-bofa.png"
+import pattersonLogo from "../img/digital-marketing-partner-patterson.png"
+import roiLogo from "../img/digital-marketing-partner-roi-dental.png"
+import hrHealthLogo from "../img/digital-marketing-partner-hrforhealth.png"
+import jllLogo from "../img/digital-marketing-partner-jll.png"
+import digitalMarketingPartnershipImage from "../img/digital-marketing-partnership.png"
+
 import thinArrowRight from "../img/right-arrow.svg"
+import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/partnerships.scss"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
-      <title>Value Added Partnerships | Let's Talk | View our Featured Partners</title>
-      <meta name="description" content="Learn about our partnership program that leverages our strong performance driven marketing platform with your existing customer base or technology." />
+      <title>
+        Value Added Partnerships | Let's Talk | View our Featured Partners
+      </title>
+      <meta
+        name="description"
+        content="Learn about our partnership program that leverages our strong performance driven marketing platform with your existing customer base or technology."
+      />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
@@ -93,7 +101,7 @@ export default props => (
                     <img
                       className="img-icon"
                       src={googleLogo}
-                      alt="Icon of Google Logo"
+                      alt="Google Partner"
                     />
                   </div>
                 </div>
@@ -104,7 +112,7 @@ export default props => (
                     <img
                       className="img-icon"
                       src={pulseCheckLogo}
-                      alt="Icon of Pulse Check Logo"
+                      alt="Digital Marketing Partner PulseCheck"
                     />
                   </div>
                 </div>
@@ -115,7 +123,7 @@ export default props => (
                     <img
                       className="img-icon"
                       src={picisLogo}
-                      alt="Icon of Pulse Check Logo"
+                      alt="Digital Marketing Partner Picis"
                     />
                   </div>
                 </div>
@@ -126,7 +134,7 @@ export default props => (
                     <img
                       className="img-icon"
                       src={boaLogo}
-                      alt="Icon of Bank of America Logo"
+                      alt="Digital Marketing Partner Bank of America"
                     />
                   </div>
                 </div>
@@ -139,7 +147,7 @@ export default props => (
                     <img
                       className="img-icon"
                       src={pattersonLogo}
-                      alt="Icon of Patterson Dental Logo"
+                      alt="Digital Marketing Partner Patterson Companies, Inc."
                     />
                   </div>
                 </div>
@@ -150,7 +158,7 @@ export default props => (
                     <img
                       className="img-icon"
                       src={roiLogo}
-                      alt="Icon of ROI Logo"
+                      alt="Digital Marketing Partner Roi Dental Coaching"
                     />
                   </div>
                 </div>
@@ -161,7 +169,7 @@ export default props => (
                     <img
                       className="img-icon"
                       src={hrHealthLogo}
-                      alt="Icon of HR for Health Logo"
+                      alt="Digital Marketing Partner HR for Health"
                     />
                   </div>
                 </div>
@@ -172,7 +180,7 @@ export default props => (
                     <img
                       className="img-icon"
                       src={jllLogo}
-                      alt="Icon JLL Logo"
+                      alt="Digital Marketing Partner JLL"
                     />
                   </div>
                 </div>
@@ -233,7 +241,7 @@ export default props => (
                       className="link-with-icon font-weight-semibold"
                     >
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
@@ -246,8 +254,8 @@ export default props => (
             <div className="col-sm-10 order-sm-1 col-md-6 offset-md-0 order-md-2">
               <img
                 className="img-responsive"
-                src="/png/computer-and-mobile-detail.png"
-                alt="Device Screens"
+                src={digitalMarketingPartnershipImage}
+                alt="Digital Marketing Partnership"
               />
             </div>
           </div>

@@ -8,17 +8,27 @@ import Container from "../components/Container"
 import "../styles/case-study.scss"
 
 import thinArrowRight from "../img/right-arrow.svg"
-import theSolutionsImage from "../img/the-solutions-tablet-and-search.png"
-import theChallengeImage from "../img/titan-office.png"
-import titanDentalLogo from "../img/titan-dental-care.png"
+import theSolutionsImage from "../img/new-patient-opportunity.png"
+import theChallengeImage from "../img/dental-marketing.png"
+import titanDentalLogo from "../img/digital-marketing-client.png"
+import searchResultsPage from "../img/local-business-search-result.png"
+
+import newPatientOppIcon from "../img/icon/new-patient-opportunity.svg"
+import marketingSolutionsIcon from "../img/icon/marketing-solutions-suite.svg"
+import liveSupportIcon from "../img/icon/live-support-concierge.svg"
+import performanceCampaignIcon from "../img/icon/performance-driven-campaigns.svg"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
       <title>
-      In-Depth Healthcare Marketing Case Study | New Patient Acquisition Strategies
+        In-Depth Healthcare Marketing Case Study | New Patient Acquisition
+        Strategies
       </title>
-      <meta name="description" content="An in-depth case study of a performance driven marketing platform highlighting how content marketing done right impacts new patient acquisition." />
+      <meta
+        name="description"
+        content="An in-depth case study of a performance driven marketing platform highlighting how content marketing done right impacts new patient acquisition."
+      />
     </Helmet>
     <div>
       <div className="hero">
@@ -59,7 +69,7 @@ export default props => (
               <img
                 className="img-responsive"
                 src={titanDentalLogo}
-                alt="Titan Dental Care logo"
+                alt="Titan Dental Care - Digital Marketing Client"
               />
             </div>
             <div className="col-sm-12 col-md-10 col-lap-6 col-lg-6">
@@ -124,7 +134,7 @@ export default props => (
               <img
                 className="img-responsive"
                 src={theChallengeImage}
-                alt="Doctor's waiting room placeholder"
+                alt="Dental Office"
               />
             </div>
           </div>
@@ -141,7 +151,7 @@ export default props => (
               <img
                 className="img-responsive blur-bleed"
                 src={theSolutionsImage}
-                alt="Search Results Page"
+                alt="Acquire New Patients"
               />
             </div>
             <div className="col-sm-10 col-md-10 col-lap-5 col-lg-5 panel-quadrant">
@@ -151,7 +161,7 @@ export default props => (
                     <div className="icon-wrapper">
                       <img
                         className="img-icon"
-                        src="/icon/new-patient-opportunity.svg"
+                        src={newPatientOppIcon}
                         alt="Handshake icon"
                       />
                     </div>
@@ -175,7 +185,7 @@ export default props => (
                     <div className="icon-wrapper">
                       <img
                         className="img-icon"
-                        src="/icon/marketing-solutions-suite.svg"
+                        src={marketingSolutionsIcon}
                         alt="Webpage icon"
                       />
                     </div>
@@ -202,7 +212,7 @@ export default props => (
                     <div className="icon-wrapper">
                       <img
                         className="img-icon"
-                        src="/icon/live-support-concierge.svg"
+                        src={liveSupportIcon}
                         alt="People chat icon"
                       />
                     </div>
@@ -226,7 +236,7 @@ export default props => (
                     <div className="icon-wrapper">
                       <img
                         className="img-icon"
-                        src="/icon/performance-driven-campaigns.svg"
+                        src={performanceCampaignIcon}
                         alt="Newspaper icon"
                       />
                     </div>
@@ -289,8 +299,8 @@ export default props => (
             <div className="col-md-5 col-lap-5 col-lg-5">
               <img
                 className="img-responsive blur-bleed"
-                src="/png/search-result.png"
-                alt="Search Results Page"
+                src={searchResultsPage}
+                alt="Local Business Search Results Page"
               />
             </div>
           </div>

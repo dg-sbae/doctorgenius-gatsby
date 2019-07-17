@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import MobileSecondaryNav from "../components/MobileSecondaryNav"
 
 import thinArrowRight from "../img/right-arrow.svg"
 import contentMarketingIcon from "../img/contract.svg"
@@ -14,6 +15,8 @@ import ourTechnologyIcon from "../img/our-technology.svg"
 import hostingSolutionsIcon from "../img/hosting-solutions.svg"
 import lighthouseResultsOnMarketingPage from "../img/lighthouse-results-on-marketing-page.png"
 import portalDashboard from "../img/portal-dashboard.png"
+
+import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/marketing-solutions.scss"
 
@@ -136,9 +139,15 @@ export default props => (
             </div>
           </div>
           {/* End secondary nav Component */}
+          {/* Begin mobile secondary navigation component */}
+          <MobileSecondaryNav
+            parentPage="marketingSolutions"
+            titleItem="Responsive Websites"
+          />
+          {/* End mobile secondary navigation component */}
           {/* Begin Split Row of content and image */}
           <div className="row padded short-top short-bottom odd-row proven-results-row">
-            <div class="col-md-1" />
+            <div className="col-md-1" />
             <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
               <div className="content-block">
                 <div className="inner-title">
@@ -152,7 +161,7 @@ export default props => (
                     </p>
                     <a href="/case-study" className="link-with-icon">
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
@@ -196,7 +205,7 @@ export default props => (
                       className="link-with-icon"
                     >
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
@@ -225,7 +234,7 @@ export default props => (
                       </p>
                       <a href="/plans" className="link-with-icon">
                         <img
-                          src="/icon/right-arrow-blue.svg"
+                          src={rightArrowBlue}
                           className="link-icon"
                           alt="Icon of a Right Arrow"
                         />

@@ -20,7 +20,7 @@
       margin-top: 32px;
     }
     &:after {
-      background-image: url("/svg/underline.svg");
+      background-image: url("../img/underline.svg");
       content: "";
       display: block;
       height: 2px;
@@ -357,6 +357,9 @@ footer {
         border: $primary-text 2px solid;
       }
     }
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
@@ -452,7 +455,7 @@ nav {
               }
               .dropdown-item-block {
                 &:hover {
-                  a {
+                  .dropdown-content-title {
                     text-shadow: 0 0 0.65px #8bd2ff, 0 0 0.65px #8bd2ff;
                     color: #8bd2ff;
                   }
@@ -466,7 +469,7 @@ nav {
                 margin-left: 15px;
                 width: 80%;
                 vertical-align: top;
-                a {
+                .dropdown-content-title {
                   font-size: 14px;
                   font-weight: $font-weight-medium;
                   // letter-spacing: 0.1em;

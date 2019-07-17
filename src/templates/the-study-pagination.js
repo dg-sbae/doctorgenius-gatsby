@@ -8,10 +8,11 @@ import { Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import NewsLetterSignUpForm from "../components/newsletter-form.js"
 
-import marketingCategoryImage from "../img/digital-marketing-category-image-1.7x1.png"
-import practiceManagementImage from "../img/practice-management-category-image-1.7x1.png"
-import geniusLabImage from "../img/genius-lab-category-image-1.7x1.png"
+import marketingCategoryImage from "../img/digital-marketing-blog.png"
+import practiceManagementImage from "../img/practice-management-blog.png"
+import geniusLabImage from "../img/doctor-genius-blog.png"
 import eventsPlaceholder from "../img/study-archive-events-placeholder-3x2.png"
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
@@ -21,7 +22,7 @@ import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
-import { isContext } from "vm"
+//import { isContext } from "vm"
 
 const ResponsivePostsColumnHeader = props => (
   <div className="col-sm-12 d-lg-none responsive-tab-trigger">
@@ -175,7 +176,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
           <Container>
             <div className="row padded category">
               {categoriesPaths.map(category => (
-                <div className="col-sm-4">
+                <div className="col-sm-4" key={category.name}>
                   <a href={postsPath + category.slug}>
                     <div className="category-image">
                       <img
@@ -207,7 +208,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                     )
                     // console.log(mainCategory)
                     return (
-                      <div className="latest-post">
+                      <div className="latest-post" key={node.title}>
                         <div className="featured-image-holder">
                           <a href={postsPath + node.slug}>
                             <Img
@@ -255,7 +256,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                               ),
                             }}
                           />
-                          <p class="readmore-link"></p>
+                          <p className="readmore-link"></p>
                         </div>
                       </div>
                     )
@@ -341,24 +342,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                         </div>
                       </div>
                     </div>
-                    <div className="newsletter row">
-                      <div className="col-sm-12">
-                        <div className="newsletter-signup">
-                          <h4 className="newsletter-heading">Newsletter</h4>
-                          <p>
-                            Subscribe to our email newsletter for useful tips
-                            and valuable resources.
-                          </p>
-                          <input type="text" />
-                          <a
-                            href="/intentional-404/newslettersubmit"
-                            className="button rounder"
-                          >
-                            Submit
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <NewsLetterSignUpForm />
                   </div>
                   <div className="most-popular">
                     <div className="row d-sm-none d-lg-block padded short-top short-bottom">
@@ -370,7 +354,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                     <div className="row">
                       <div className="col-sm-12">
                         {data.popular.edges.map(({ node }) => (
-                          <a href={`/the-study/${node.slug}`}>
+                          <a href={`/the-study/${node.slug}`} key={node.title}>
                             <div className="popular-post">
                               <div className="featured-image-holder">
                                 {/*console.log(node)*/}
@@ -413,7 +397,10 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                         <h4 className="blog-heading ">Category</h4>
                         <div className="spacer small solid" />
                         {categoriesPaths.map(category => (
-                          <a href={postsPath + category.slug}>
+                          <a
+                            href={postsPath + category.slug}
+                            key={category.name}
+                          >
                             <span className="label primary">
                               <p>{category.name}</p>
                             </span>
@@ -441,7 +428,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                   <div className="spacer solid small" />
                 </div>
                 {data.events.edges.map(({ node }) => (
-                  <div className="col-sm-3">
+                  <div className="col-sm-3" key={node.title}>
                     <div className="event-wrapper">
                       <img src={eventsPlaceholder} alt="Recent Event" />
                     </div>

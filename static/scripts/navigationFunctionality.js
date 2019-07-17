@@ -1,5 +1,7 @@
 import phoneWhite from "../img/phone-white.svg"
 import phoneBlue from "../img/phone-blue.svg"
+import logoWhite from "../img/icon/logo-white.svg"
+import logoBlue from "../img/icon/logo-blue.svg"
 
 {
   if (typeof document !== "undefined") {
@@ -18,8 +20,7 @@ import phoneBlue from "../img/phone-blue.svg"
             .classList.add("main-navbar-stuck")
           document.querySelector("nav.navbar").classList.add("stuck-midway")
           document.querySelector("nav.navbar").classList.remove("stuck-fully")
-          document.querySelector("nav.navbar .navbar-brand").src =
-            "../icon/logo-blue.svg"
+          document.querySelector("nav.navbar .navbar-brand").src = logoBlue
           document.querySelector("nav.navbar .phone").src = phoneBlue
         } else if (winScroll >= 200) {
           document
@@ -27,16 +28,14 @@ import phoneBlue from "../img/phone-blue.svg"
             .classList.add("main-navbar-stuck")
           document.querySelector("nav.navbar").classList.add("stuck-fully")
           document.querySelector("nav.navbar").classList.remove("stuck-midway")
-          document.querySelector("nav.navbar .navbar-brand").src =
-            "../icon/logo-blue.svg"
+          document.querySelector("nav.navbar .navbar-brand").src = logoBlue
           document.querySelector("nav.navbar .phone").src = phoneBlue
         } else {
           document
             .querySelector("nav.navbar")
             .classList.remove("main-navbar-stuck")
           document.querySelector("nav.navbar").classList.remove("stuck-midway")
-          document.querySelector("nav.navbar .navbar-brand").src =
-            "../icon/logo-white.svg"
+          document.querySelector("nav.navbar .navbar-brand").src = logoWhite
           document.querySelector("nav.navbar .phone").src = phoneWhite
         }
       })

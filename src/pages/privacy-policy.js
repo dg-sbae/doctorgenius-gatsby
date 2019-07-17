@@ -10,10 +10,11 @@ import "../styles/privacy-policy.scss"
 export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
-      <title>
-        Privacy Policy Doctor Genius in Irvine, CA 92606
-      </title>
-      <meta name="description" content="Privacy policy of Doctor Genius located in in Irvine, CA 92606." />
+      <title>Privacy Policy Doctor Genius in Irvine, CA 92606</title>
+      <meta
+        name="description"
+        content="Privacy policy of Doctor Genius located in in Irvine, CA 92606."
+      />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
@@ -44,7 +45,7 @@ export default props => (
       <Main>
         <Container>
           <div className="row padded tall-top short-bottom">
-            <div class="col-sm-8">
+            <div className="col-sm-8">
               <p>
                 Your privacy is important to our Company (or “we”, “us” or
                 “our”). We want to be clear how we use the information of our
@@ -53,18 +54,18 @@ export default props => (
               </p>
             </div>
           </div>
-          <div class="row padded short-top short-bottom">
-            <div class="col-sm-8">
-              <div class="content-block">
-                <div class="inner-title">
-                  <h2 class="underline">Our Privacy Policy Explains:</h2>
+          <div className="row padded short-top short-bottom">
+            <div className="col-sm-8">
+              <div className="content-block">
+                <div className="inner-title">
+                  <h2 className="underline">Our Privacy Policy Explains:</h2>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="accented-paragraph">
+          <div className="row">
+            <div className="col-sm-6">
+              <div className="accented-paragraph">
                 <p>
                   Your privacy is important to our Company (or “we”, “us” or
                   “our”). We want to be clear how we use the information of our
@@ -74,10 +75,10 @@ export default props => (
               </div>
             </div>
           </div>
-          <div class="row padded short-top short-bottom">
-            <div class="col-sm-8">
-              <div class="content-block">
-                <div class="policy-table">
+          <div className="row padded short-top short-bottom">
+            <div className="col-sm-8">
+              <div className="content-block">
+                <div className="policy-table">
                   <ul>
                     <li>What information we collect and why we collect it.</li>
                     <li>
@@ -90,9 +91,9 @@ export default props => (
               </div>
             </div>
           </div>
-          <div class="row padded short-top short-bottom">
-            <div class="col-sm-8">
-              <div class="content-block">
+          <div className="row padded short-top short-bottom">
+            <div className="col-sm-8">
+              <div className="content-block">
                 <p>
                   This Privacy Policy applies to the information that we obtain
                   through your use of the Services. Please familiarize yourself
@@ -121,11 +122,11 @@ export default props => (
               </div>
             </div>
           </div>
-          <div class="row padded short-top short-bottom">
-            <div class="col-sm-8">
-              <div class="content-block">
-                <div class="inner-title">
-                  <h2 class="underline">Information We Collect:</h2>
+          <div className="row padded short-top short-bottom">
+            <div className="col-sm-8">
+              <div className="content-block">
+                <div className="inner-title">
+                  <h2 className="underline">Information We Collect:</h2>
                 </div>
                 <ol>
                   <li>

@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import MobileSecondaryNav from "../components/MobileSecondaryNav"
 
 import contentMarketingIcon from "../img/contract.svg"
 import responsiveWebsitesIcon from "../img/website.svg"
@@ -11,7 +12,6 @@ import digitalAdvertisingIcon from "../img/digital-advertising.svg"
 import onlineReputationIcon from "../img/online-reputation.svg"
 import ourTechnologyIcon from "../img/our-technology.svg"
 import hostingSolutionsIcon from "../img/hosting-solutions.svg"
-//import lighthouseResult from "../img/lighthouse-result.png"
 
 import "../styles/marketing-solutions-inner.scss"
 
@@ -22,10 +22,6 @@ export default props => {
   const pageIntro = props.pageIntro
   const metaTitle = props.metaTitle
   const metaDescription = props.metaDescription
-
-  // For now all inner pages will have the same hero image, so this will be in the sass
-  //const heroImage = "/hero/marketing-solutions-subpage.png"
-
   const contentRows = props.contentRows
   const currentPage = props.page
 
@@ -169,6 +165,12 @@ export default props => {
               </div>
             </div>
             {/* End secondary nav Component */}
+            {/* Begin mobile secondary navigation component */}
+            <MobileSecondaryNav
+              parentPage="marketingSolutions"
+              titleItem={pageTitle}
+            />
+            {/* End mobile secondary navigation component */}
             {/* Begin Split Row of content and image */}
             {contentRows.map((row, index) => (
               <div

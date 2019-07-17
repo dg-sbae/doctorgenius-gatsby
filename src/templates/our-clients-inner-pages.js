@@ -5,12 +5,16 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
+import MobileSecondaryNav from "../components/MobileSecondaryNav"
 
-import dentalPractices from "../../public/icon/tooth-shine-nav.svg"
-import urgentCare from "../../public/icon/urgent-care-nav.svg"
-import chiropractorPractices from "../../public/icon/chiropractor-nav.svg"
-import cosmeticSurgeons from "../../public/icon/surgeon-nav.svg"
-import healthcareMarketing from "../../public/icon/sphygmomanometer-nav.svg"
+import dentalPractices from "../img/icon/tooth-shine-nav.svg"
+import urgentCare from "../img/icon/urgent-care-nav.svg"
+import chiropractorPractices from "../img/icon/chiropractor-nav.svg"
+import cosmeticSurgeons from "../img/icon/surgeon-nav.svg"
+import healthcareMarketing from "../img/icon/sphygmomanometer-nav.svg"
+import searchResultsPageImage from "../img/local-business-search-result.png"
+
+import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/our-clients-inner-pages.scss"
 
@@ -151,6 +155,10 @@ export default props => {
               </div>
             </div>
             {/* End secondary nav Component */}
+
+            {/* Begin mobile secondary navigation component */}
+            <MobileSecondaryNav parentPage="ourClients" titleItem={pageTitle} />
+            {/* End mobile secondary navigation component */}
             {/* Begin main block of text */}
             <div className="row padded">
               <div className="col-sm-12 col-md-10 col-lg-10">
@@ -214,7 +222,7 @@ export default props => {
                   <div className="center pad-md">
                     <a href="/case-study" className="link-with-icon">
                       <img
-                        src="/icon/right-arrow-blue.svg"
+                        src={rightArrowBlue}
                         className="link-icon"
                         alt="Icon of a Right Arrow"
                       />
@@ -225,8 +233,8 @@ export default props => {
                 <div className="col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col">
                   <img
                     className="img-responsive blur-bleed"
-                    src="/png/search-result.png"
-                    alt="Search Results Page"
+                    src={searchResultsPageImage}
+                    alt="Local Business Search Results Page"
                   />
                 </div>
               </div>
@@ -254,7 +262,7 @@ export default props => {
                         </p>
                         <a href="/plans" className="link-with-icon">
                           <img
-                            src="/icon/right-arrow-blue.svg"
+                            src={rightArrowBlue}
                             className="link-icon"
                             alt="Icon of a Right Arrow"
                           />

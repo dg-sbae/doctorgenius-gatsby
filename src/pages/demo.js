@@ -9,15 +9,15 @@ import ContactForm from "../components/contact-form.js"
 import star from "../img/star.svg"
 import sslBadge from "../img/ssl-logo.png"
 
-import Dennis from "../img/review-dennis-baik.png"
-import Taylor from "../img/review-taylor-dental-care.png"
-import Daniel from "../img/review-daniel-savarino.png"
-import Christina from "../img/review-christina-guilin.png"
-import Erika from "../img/review-erika-rodriguez.png"
-import Roberto from "../img/review-roberto-bellegarrigue.png"
-import Justine from "../img/review-justine-schepis.png"
-import Alexandra from "../img/review-alexandra-ramasahai.png"
-import Diamond from "../img/review-diamond-head-dental-care.png"
+import Dennis from "../img/marketing-review-dennis-baik.png"
+import Taylor from "../img/marketing-review-taylor-dental-care.png"
+import Daniel from "../img/marketing-review-daniel-savarino.png"
+import Christina from "../img/marketing-review-christina-guilin.png"
+import Erika from "../img/marketing-review-erika-rodriguez.png"
+import Roberto from "../img/marketing-review-roberto-bellegarrigue.png"
+import Justine from "../img/marketing-review-justine-schepis.png"
+import Alexandra from "../img/marketing-review-alexandra-ramasahai.png"
+import Diamond from "../img/marketing-review-diamond-head-dental-care.png"
 
 import "../styles/demo.scss"
 
@@ -40,38 +40,38 @@ export default props => (
           <div className="valign-wrapper row">
             <div className="col-md-10 order-md-1 col-lg-8 order-lg-1 float-lg-left">
               <h1>Experience The Solution for Optimal Practice Growth</h1>
-              <p class="disappear">
+              <p className="disappear">
                 Need help with new patient acquisitions, patient reminders, and
                 retention? Sign up for our demo to learn how you can have
                 predictable practice growth with Doctor Genius.
               </p>
-              <hr class="disappear" />
+              <hr className="disappear" />
             </div>
-            <div class="col-md-7 order-md-2 col-lap-5 col-lg-4 order-lg-2 float-lg-right p-10 contact-form-container">
-              <div class="contact-form">
-                <div class="header">
+            <div className="col-md-7 order-md-2 col-lap-5 col-lg-4 order-lg-2 float-lg-right p-10 contact-form-container">
+              <div className="contact-form">
+                <div className="header">
                   <h3>Contact us now for a FREE Consultation</h3>
                 </div>
-                <div class="form-body">
+                <div className="form-body">
                   <ContactForm />
-                  <p class="fine-print">
+                  <p className="fine-print">
                     *By registering I confirm that I have read and agree to the{" "}
                     <Link to="/privacy-policy" target="_blank">
                       Privacy Statement
                     </Link>
                     .
                   </p>
-                  <img src={sslBadge} />
+                  <img src={sslBadge} alt="SSL Badge" />
                 </div>
               </div>
             </div>
             <div className="col-md-9 order-md-3 col-lg-8 order-lg-3 float-lg-left demo-plans-row">
               <div className="valign-wrapper row">
-                <div class="col-md-12 col-lap-10 col-lg-5 our-plans-text">
-                  <div class="content-block">
-                    <div class="inner-title">
+                <div className="col-md-12 col-lap-10 col-lg-5 our-plans-text">
+                  <div className="content-block">
+                    <div className="inner-title">
                       <h2>Our Plans</h2>
-                      <div class="accented-paragraph">
+                      <div className="accented-paragraph">
                         <p>
                           We created 3 individual packages that will take your
                           practice to the next level. Our tiers have unique plan
@@ -81,41 +81,41 @@ export default props => (
                     </div>
                   </div>
                 </div>
-                <div class="col-md-9 col-lap-8 col-lg-7 our-plans-chart">
-                  <div class="plan-details">
-                    <div class="title">
+                <div className="col-md-9 col-lap-8 col-lg-7 our-plans-chart">
+                  <div className="plan-details">
+                    <div className="title">
                       <h3>Silver Plan</h3>
                       <p>The Starter Package</p>
                     </div>
-                    <div class="stripe" />
-                    <div class="details">
+                    <div className="stripe" />
+                    <div className="details">
                       <h4>20+</h4>
                       <p>New Patients</p>
                     </div>
                   </div>
-                  <div class="plan-details">
-                    <div class="title">
+                  <div className="plan-details">
+                    <div className="title">
                       <h3>Gold Plan</h3>
                       <p>Boost Your Online Presence</p>
                     </div>
-                    <div class="stripe" />
-                    <div class="details">
+                    <div className="stripe" />
+                    <div className="details">
                       <h4>35+</h4>
                       <p>New Patients</p>
                     </div>
                   </div>
-                  <div class="plan-details">
-                    <div class="title">
+                  <div className="plan-details">
+                    <div className="title">
                       <h3>Platinum Plan</h3>
                       <p>Maximize Your Pratice Potential</p>
                     </div>
-                    <div class="stripe" />
-                    <div class="details">
+                    <div className="stripe" />
+                    <div className="details">
                       <h4>45+</h4>
                       <p>New Patients</p>
                     </div>
                   </div>
-                  <p class="fine-print">
+                  <p className="fine-print">
                     *Estimated new patients vary by industry, location, and
                     population.
                   </p>
@@ -137,46 +137,54 @@ export default props => (
           <div className="row padded short-top">
             <div className="col-lg-1" />
             <div className="col-sm-12 col-md-10 col-lg-12">
-              <div class="review">
-                <div class="author">
-                  <img class="portrait" src={Dennis} alt="Review Author" />
+              <div className="review">
+                <div className="author">
+                  <img
+                    className="portrait"
+                    src={Dennis}
+                    alt="Marketing Review Dennis Baik"
+                  />
                   <p>
                     Dennis
                     <br />
                     Baik
                   </p>
                 </div>
-                <div class="body">
-                  <div class="mobile-review-head row">
-                    <div class="col-sm-2 portrait-container">
-                      <img class="portrait" src={Dennis} alt="Review Author" />
+                <div className="body">
+                  <div className="mobile-review-head row">
+                    <div className="col-sm-2 portrait-container">
+                      <img
+                        className="portrait"
+                        src={Dennis}
+                        alt="Marketing Review Dennis Baik"
+                      />
                     </div>
-                    <div class="col-sm-9 bio-container">
-                      <p class="mobile-name">Dennis Baik</p>
-                      <div class="mobile-stars">
+                    <div className="col-sm-9 bio-container">
+                      <p className="mobile-name">Dennis Baik</p>
+                      <div className="mobile-stars">
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                       </div>
-                      <div class="mobile-date">
+                      <div className="mobile-date">
                         <p>11 Months Ago</p>
                       </div>
                     </div>
                   </div>
 
-                  <div class="stars">
+                  <div className="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                   </div>
-                  <div class="date">
+                  <div className="date">
                     <p>11 Months Ago</p>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       Dr. Genius and its team delivers what they promise. It has
                       been about two years since I signed up with their Silver
@@ -210,44 +218,52 @@ export default props => (
           <div className="row padded short-top">
             <div className="col-lg-1" />
             <div className="col-sm-12 col-md-10 col-lg-12">
-              <div class="review">
-                <div class="author">
-                  <img class="portrait" src={Taylor} alt="Review Author" />
+              <div className="review">
+                <div className="author">
+                  <img
+                    className="portrait"
+                    src={Taylor}
+                    alt="Marketing Review Taylor Dental Care"
+                  />
                   <p>
                     Taylor <br />
                     Dental Care
                   </p>
                 </div>
-                <div class="body">
-                  <div class="mobile-review-head row">
-                    <div class="col-sm-2 portrait-container">
-                      <img class="portrait" src={Taylor} alt="Review Author" />
+                <div className="body">
+                  <div className="mobile-review-head row">
+                    <div className="col-sm-2 portrait-container">
+                      <img
+                        className="portrait"
+                        src={Taylor}
+                        alt="Marketing Review Taylor Dental Care"
+                      />
                     </div>
-                    <div class="col-sm-9 bio-container">
-                      <p class="mobile-name">Taylor Dental Care</p>
-                      <div class="mobile-stars">
+                    <div className="col-sm-9 bio-container">
+                      <p className="mobile-name">Taylor Dental Care</p>
+                      <div className="mobile-stars">
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                       </div>
-                      <div class="mobile-date">
+                      <div className="mobile-date">
                         <p>2 Months Ago</p>
                       </div>
                     </div>
                   </div>
-                  <div class="stars">
+                  <div className="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                   </div>
-                  <div class="date">
+                  <div className="date">
                     <p>2 Months Ago</p>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       I have worked with Francesco at 3 separate dental offices
                       over the course of 8 years. If that doesn't tell you that
@@ -292,44 +308,52 @@ export default props => (
           <div className="row padded short-top">
             <div className="col-lg-1" />
             <div className="col-sm-12 col-md-10 col-lg-12">
-              <div class="review">
-                <div class="author">
-                  <img class="portrait" src={Daniel} alt="Review Author" />
+              <div className="review">
+                <div className="author">
+                  <img
+                    className="portrait"
+                    src={Daniel}
+                    alt="Marketing Review Daniel Savarino"
+                  />
                   <p>
                     Daniel <br />
                     Savarino
                   </p>
                 </div>
-                <div class="body">
-                  <div class="mobile-review-head row">
-                    <div class="col-sm-2 portrait-container">
-                      <img class="portrait" src={Daniel} alt="Review Author" />
+                <div className="body">
+                  <div className="mobile-review-head row">
+                    <div className="col-sm-2 portrait-container">
+                      <img
+                        className="portrait"
+                        src={Daniel}
+                        alt="Marketing Review Daniel Savarino"
+                      />
                     </div>
-                    <div class="col-sm-9 bio-container">
-                      <p class="mobile-name">Daniel Savarino</p>
-                      <div class="mobile-stars">
+                    <div className="col-sm-9 bio-container">
+                      <p className="mobile-name">Daniel Savarino</p>
+                      <div className="mobile-stars">
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                       </div>
-                      <div class="mobile-date">
+                      <div className="mobile-date">
                         <p>6 Months Ago</p>
                       </div>
                     </div>
                   </div>
-                  <div class="stars">
+                  <div className="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                   </div>
-                  <div class="date">
+                  <div className="date">
                     <p>6 months ago</p>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       I have been working with doctor genius for about 6 months.
                       I opened my sports medicine practice back in July. I found
@@ -359,48 +383,52 @@ export default props => (
           <div className="row padded short-top">
             <div className="col-lg-1" />
             <div className="col-sm-12 col-md-10 col-lg-12">
-              <div class="review">
-                <div class="author">
-                  <img class="portrait" src={Christina} alt="Review Author" />
+              <div className="review">
+                <div className="author">
+                  <img
+                    className="portrait"
+                    src={Christina}
+                    alt="Marketing Review Christina Guilin"
+                  />
                   <p>
                     Christina
                     <br /> Guilin
                   </p>
                 </div>
-                <div class="body">
-                  <div class="mobile-review-head row">
-                    <div class="col-sm-2 portrait-container">
+                <div className="body">
+                  <div className="mobile-review-head row">
+                    <div className="col-sm-2 portrait-container">
                       <img
-                        class="portrait"
+                        className="portrait"
                         src={Christina}
-                        alt="Review Author"
+                        alt="Marketing Review Christina Guilin"
                       />
                     </div>
-                    <div class="col-sm-9 bio-container">
-                      <p class="mobile-name">Christina Guilin</p>
-                      <div class="mobile-stars">
+                    <div className="col-sm-9 bio-container">
+                      <p className="mobile-name">Christina Guilin</p>
+                      <div className="mobile-stars">
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                       </div>
-                      <div class="mobile-date">
+                      <div className="mobile-date">
                         <p>2 Months Ago</p>
                       </div>
                     </div>
                   </div>
-                  <div class="stars">
+                  <div className="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                   </div>
-                  <div class="date">
+                  <div className="date">
                     <p>2 Months Ago</p>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       I have just recently started working with Doctor Genius,
                       specifically with Dartangnan Johnson and my experience so
@@ -424,44 +452,52 @@ export default props => (
           <div className="row padded short-top">
             <div className="col-lg-1" />
             <div className="col-sm-12 col-md-10 col-lg-12">
-              <div class="review">
-                <div class="author">
-                  <img class="portrait" src={Erika} alt="Review Author" />
+              <div className="review">
+                <div className="author">
+                  <img
+                    className="portrait"
+                    src={Erika}
+                    alt="Marketing Review Erika Rodriguez"
+                  />
                   <p>
                     Erika
                     <br /> Rodriguez
                   </p>
                 </div>
-                <div class="body">
-                  <div class="mobile-review-head row">
-                    <div class="col-sm-2 portrait-container">
-                      <img class="portrait" src={Erika} alt="Review Author" />
+                <div className="body">
+                  <div className="mobile-review-head row">
+                    <div className="col-sm-2 portrait-container">
+                      <img
+                        className="portrait"
+                        src={Erika}
+                        alt="Marketing Review Erika Rodriguez"
+                      />
                     </div>
-                    <div class="col-sm-9 bio-container">
-                      <p class="mobile-name">Erika Rodriguez</p>
-                      <div class="mobile-stars">
+                    <div className="col-sm-9 bio-container">
+                      <p className="mobile-name">Erika Rodriguez</p>
+                      <div className="mobile-stars">
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                       </div>
-                      <div class="mobile-date">
+                      <div className="mobile-date">
                         <p>3 Weeks Ago</p>
                       </div>
                     </div>
                   </div>
-                  <div class="stars">
+                  <div className="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                   </div>
-                  <div class="date">
+                  <div className="date">
                     <p>3 Weeks Ago</p>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       I have been working with Doctor Genius for sometime now
                       and can honestly say this is by far, the BEST team to have
@@ -483,45 +519,53 @@ export default props => (
           <div className="row padded short-top">
             <div className="col-lg-1" />
             <div className="col-sm-12 col-md-10 col-lg-12">
-              <div class="review">
-                <div class="author">
-                  <img class="portrait" src={Roberto} alt="Review Author" />
+              <div className="review">
+                <div className="author">
+                  <img
+                    className="portrait"
+                    src={Roberto}
+                    alt="Marketing Review Roberto Bellegarrigue"
+                  />
                   <p>
                     Roberto
                     <br />
                     Bellegarrigue
                   </p>
                 </div>
-                <div class="body">
-                  <div class="mobile-review-head row">
-                    <div class="col-sm-2 portrait-container">
-                      <img class="portrait" src={Roberto} alt="Review Author" />
+                <div className="body">
+                  <div className="mobile-review-head row">
+                    <div className="col-sm-2 portrait-container">
+                      <img
+                        className="portrait"
+                        src={Roberto}
+                        alt="Marketing Review Roberto Bellegarrigue"
+                      />
                     </div>
-                    <div class="col-sm-9 bio-container">
-                      <p class="mobile-name">Roberto Bellegarrigue</p>
-                      <div class="mobile-stars">
+                    <div className="col-sm-9 bio-container">
+                      <p className="mobile-name">Roberto Bellegarrigue</p>
+                      <div className="mobile-stars">
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                       </div>
-                      <div class="mobile-date">
+                      <div className="mobile-date">
                         <p>2 Months Ago</p>
                       </div>
                     </div>
                   </div>
-                  <div class="stars">
+                  <div className="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                   </div>
-                  <div class="date">
+                  <div className="date">
                     <p>2 Months Ago</p>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       Been working with them for 2 years now. My web visibility
                       has increased and my new patients have doubled as a
@@ -539,45 +583,53 @@ export default props => (
           <div className="row padded short-top">
             <div className="col-lg-1" />
             <div className="col-sm-12 col-md-10 col-lg-12">
-              <div class="review">
-                <div class="author">
-                  <img class="portrait" src={Justine} alt="Review Author" />
+              <div className="review">
+                <div className="author">
+                  <img
+                    className="portrait"
+                    src={Justine}
+                    alt="Marketing Review Justine Schepis"
+                  />
                   <p>
                     Justine
                     <br />
                     Schepis
                   </p>
                 </div>
-                <div class="body">
-                  <div class="mobile-review-head row">
-                    <div class="col-sm-2 portrait-container">
-                      <img class="portrait" src={Justine} alt="Review Author" />
+                <div className="body">
+                  <div className="mobile-review-head row">
+                    <div className="col-sm-2 portrait-container">
+                      <img
+                        className="portrait"
+                        src={Justine}
+                        alt="Marketing Review Justine Schepis"
+                      />
                     </div>
-                    <div class="col-sm-9 bio-container">
-                      <p class="mobile-name">Justine Schepis</p>
-                      <div class="mobile-stars">
+                    <div className="col-sm-9 bio-container">
+                      <p className="mobile-name">Justine Schepis</p>
+                      <div className="mobile-stars">
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                       </div>
-                      <div class="mobile-date">
+                      <div className="mobile-date">
                         <p>10 Months Ago</p>
                       </div>
                     </div>
                   </div>
-                  <div class="stars">
+                  <div className="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                   </div>
-                  <div class="date">
+                  <div className="date">
                     <p>10 Months Ago</p>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       I started using Doctor Genius to improve my google
                       presence and increase my monthly number of new patients.
@@ -607,49 +659,53 @@ export default props => (
           <div className="row padded short-top">
             <div className="col-lg-1" />
             <div className="col-sm-12 col-md-10 col-lg-12">
-              <div class="review">
-                <div class="author">
-                  <img class="portrait" src={Alexandra} alt="Review Author" />
+              <div className="review">
+                <div className="author">
+                  <img
+                    className="portrait"
+                    src={Alexandra}
+                    alt="Marketing Review Alexandra Ramsahai D.M.D"
+                  />
                   <p>
                     Alexandra
                     <br />
                     Ramsahai D.M.D
                   </p>
                 </div>
-                <div class="body">
-                  <div class="mobile-review-head row">
-                    <div class="col-sm-2 portrait-container">
+                <div className="body">
+                  <div className="mobile-review-head row">
+                    <div className="col-sm-2 portrait-container">
                       <img
-                        class="portrait"
+                        className="portrait"
                         src={Alexandra}
-                        alt="Review Author"
+                        alt="Marketing Review Alexandra Ramsahai D.M.D"
                       />
                     </div>
-                    <div class="col-sm-9 bio-container">
-                      <p class="mobile-name">Alexandra Ramsahai D.M.D</p>
-                      <div class="mobile-stars">
+                    <div className="col-sm-9 bio-container">
+                      <p className="mobile-name">Alexandra Ramsahai D.M.D</p>
+                      <div className="mobile-stars">
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                       </div>
-                      <div class="mobile-date">
+                      <div className="mobile-date">
                         <p>5 Months Ago</p>
                       </div>
                     </div>
                   </div>
-                  <div class="stars">
+                  <div className="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                   </div>
-                  <div class="date">
+                  <div className="date">
                     <p>5 Months Ago</p>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       The customer service is awesome! We have had a great start
                       and we continue to grow and develop. Thanks francesco and
@@ -664,44 +720,52 @@ export default props => (
           <div className="row padded short-top">
             <div className="col-lg-1" />
             <div className="col-sm-12 col-md-10 col-lg-12">
-              <div class="review">
-                <div class="author">
-                  <img class="portrait" src={Diamond} alt="Review Author" />
+              <div className="review">
+                <div className="author">
+                  <img
+                    className="portrait"
+                    src={Diamond}
+                    alt="Marketing Review Diamond Head Dental Care"
+                  />
                   <p>
                     Diamond Head <br />
                     Dental Care
                   </p>
                 </div>
-                <div class="body">
-                  <div class="mobile-review-head row">
-                    <div class="col-sm-2 portrait-container">
-                      <img class="portrait" src={Diamond} alt="Review Author" />
+                <div className="body">
+                  <div className="mobile-review-head row">
+                    <div className="col-sm-2 portrait-container">
+                      <img
+                        className="portrait"
+                        src={Diamond}
+                        alt="Marketing Review Diamond Head Dental Care"
+                      />
                     </div>
-                    <div class="col-sm-9 bio-container">
-                      <p class="mobile-name">Diamond Head Dental Care</p>
-                      <div class="mobile-stars">
+                    <div className="col-sm-9 bio-container">
+                      <p className="mobile-name">Diamond Head Dental Care</p>
+                      <div className="mobile-stars">
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                         <img src={star} alt="Star" />
                       </div>
-                      <div class="mobile-date">
+                      <div className="mobile-date">
                         <p>11 Months Ago</p>
                       </div>
                     </div>
                   </div>
-                  <div class="stars">
+                  <div className="stars">
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                     <img src={star} alt="Star" />
                   </div>
-                  <div class="date">
+                  <div className="date">
                     <p>11 Months Ago</p>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       Doctor Genius was a game changer for our office, we saw a
                       SIGNIFICANT increase in new patient counts and online

@@ -15,16 +15,16 @@
       }
       & {
         .navbar-toggler .navbar-toggler-icon {
-          background-image: url("../../static/icon/nav-toggler-blue.svg");
+          background-image: url("../img/icon/nav-toggler-blue.svg");
           @include media("<laptop") {
-            background-image: url("../../static/icon/nav-toggler.svg");
+            background-image: url("../img/icon/nav-toggler.svg");
           }
         }
         .logo a {
           .logo-holder {
-            background-image: url(/icon/logo-blue.svg);
+            background-image: url("../img/icon/logo-blue.svg");
             @include media("<laptop") {
-              background-image: url("../../static/icon/logo-white.svg");
+              background-image: url("../img/icon/logo-white.svg");
             }
           }
         }
@@ -33,29 +33,29 @@
           color: $primary;
           .phone-holder {
             /* phone holder and image holder should be refactored to operate the same way/same markup */
-            background-image: url(/icon/phone-blue.svg);
+            background-image: url("../img/icon/phone-blue.svg");
             @include media(">=laptop") {
-              background-image: url(/icon/phone-white.svg);
+              background-image: url("../img/icon/phone-white.svg");
             }
           }
         }
       }
       @include media("<laptop") {
         .navbar-toggler .navbar-toggler-icon {
-          background-image: url("../../static/icon/nav-toggler-blue.svg");
+          background-image: url("../img/icon/nav-toggler-blue.svg");
         }
         .logo a {
           .logo-holder {
-            background-image: url(/icon/logo-blue.svg);
+            background-image: url("../img/icon/logo-blue.svg");
           }
         }
         &.main-navbar-stuck {
           .navbar-toggler .navbar-toggler-icon {
-            background-image: url("../../static/icon/nav-toggler.svg");
+            background-image: url("../img/icon/nav-toggler.svg");
           }
           .logo a {
             .logo-holder {
-              background-image: url(/icon/logo-white.svg);
+              background-image: url("../img/icon/logo-white.svg");
             }
           }
         }

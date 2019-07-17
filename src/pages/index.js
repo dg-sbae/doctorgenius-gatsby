@@ -9,19 +9,17 @@ import Container from "../components/Container"
 
 import "../styles/homepage.scss"
 
-import medal from "../img/medal.png"
-import money from "../img/money.png"
+import medal from "../img/google-first-page.png"
+import money from "../img/increase-in-revenue.png"
 import stars from "../img/stars.png"
-import groupChat from "../img/group-chat.png"
+import groupChat from "../img/increase-in-new-patient-calls.png"
 import thinArrowRight from "../img/right-arrow.svg"
-import homepageMobileMockup from "../img/homepage-mobile-mockup.png"
-// import fullBleedBackgroundSlanted from "../img/full-bleed-bg-slanted.png"
-import newPatientAcquisitions from "../img/home-new-patient-acquisitions.png"
-import dgDifferent from "../img/home-dg-different.png"
-import dgClientSatisfaction from "../img/home-dg-client-satisfaction.png"
+import newPatientAcquisitions from "../img/new-patient-acquisitions.png"
+import dgDifferent from "../img/what-makes-doctorgenius-different.png"
+import dgClientSatisfaction from "../img/client-satisfaction.png"
 import SEO from "../components/seo.js"
-import homepageMarketingDashboard from "../img/homepage-marketing-dashboard.jpg"
-import homepageMarketingDashboardMobile from "../img/homepage-marketing-dashboard-mobile.jpg"
+import homepageMarketingDashboard from "../img/marketing-dashboard.jpg"
+import homepageMarketingDashboardMobile from "../img/marketing-dashboard-mobile.jpg"
 
 export default ({ data }, props) => (
   <DefaultPageLayout location={props["*"]}>
@@ -86,7 +84,11 @@ export default ({ data }, props) => (
             <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div className="icon-wrapper">
-                  <img className="img-icon" src={medal} alt="Icon of a medal" />
+                  <img
+                    className="img-icon"
+                    src={medal}
+                    alt="Increase in Google First-Page Results"
+                  />
                 </div>
                 <p className="panel-heading">1,125%</p>
                 <p className="panel-body">
@@ -97,7 +99,11 @@ export default ({ data }, props) => (
             <div className="col-sm-6 col-md-3">
               <div className="panel">
                 <div className="icon-wrapper">
-                  <img className="img-icon" src={money} alt="Icon of money" />
+                  <img
+                    className="img-icon"
+                    src={money}
+                    alt="Increase in Revenue"
+                  />
                 </div>
                 <p className="panel-heading">100%</p>
                 <p className="panel-body">Increase in Revenue!</p>
@@ -109,7 +115,7 @@ export default ({ data }, props) => (
                   <img
                     className="img-icon"
                     src={groupChat}
-                    alt="Icon of a Groupchat"
+                    alt="Increase in New Patient Calls"
                   />
                 </div>
                 <p className="panel-heading">88%</p>
@@ -127,6 +133,7 @@ export default ({ data }, props) => (
                   <a
                     href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Google reviews
                   </a>
@@ -195,7 +202,7 @@ export default ({ data }, props) => (
               <img
                 className="img-responsive blur-bleed"
                 src={newPatientAcquisitions}
-                alt=""
+                alt="New Patient Acquisitions"
               />
             </div>
             <div className="col-sm-9 col-md-5">
@@ -232,7 +239,7 @@ export default ({ data }, props) => (
               <img
                 className="img-responsive blur-bleed"
                 src={dgDifferent}
-                alt=""
+                alt="What makes Doctor Genius different?"
               />
             </div>
           </div>
@@ -241,7 +248,7 @@ export default ({ data }, props) => (
               <img
                 className="img-responsive blur-bleed"
                 src={dgClientSatisfaction}
-                alt=""
+                alt="Client Satisfaction"
               />
             </div>
             <div className="col-sm-9 col-md-5">
@@ -257,6 +264,7 @@ export default ({ data }, props) => (
                       <a
                         href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         reviews here.
                       </a>

@@ -7,7 +7,7 @@
     }
   }
   .hero {
-    background-image: url("/hero/the-study.jpg");
+    background-image: url("../img/hero/the-study.jpg");
     .hero-content {
       @include media(">=tablet") {
         width: 465px;
@@ -231,9 +231,7 @@
       }
     }
   }
-  .newsletter.row {
-    display: none;
-  }
+
   .newsletter-signup {
     margin-top: 40px;
     margin-bottom: 30px;
@@ -249,6 +247,7 @@
     .newsletter-heading {
       color: #031453;
       margin-bottom: 10px;
+      font-size: 24px;
     }
     p {
       text-align: center;
@@ -264,6 +263,17 @@
       color: white;
       text-transform: uppercase;
       font-weight: $font-weight-semibold;
+      border: none;
+      margin-top: 15px;
+    }
+
+    .newsletter-form {
+      text-align: center;
+      margin: auto;
+    }
+
+    .submitted {
+      margin-top: 26.5px;
     }
   }
 
@@ -318,6 +328,61 @@
           background-color: $button-hover-green;
         }
       }
+    }
+  }
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #cef;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
     }
   }
 }
