@@ -44,6 +44,13 @@ class ContactForm extends React.Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
   }
 
+  focusWithoutScrolling() {
+    var x = window.scrollX,
+      y = window.scrollY
+    $("#input-name").focus()
+    window.scrollTo(x, y)
+  }
+
   handleFormSubmit(ev) {
     // trigger ajax loading spiner
     function ajaxLoaderDisplay() {
@@ -200,7 +207,11 @@ class ContactForm extends React.Component {
   render() {
     return (
       <div className="form-wrapper">
-        <form onSubmit={this.handleFormSubmit} className="row">
+        <form
+          onLoad={this.focusWithoutScrolling}
+          onSubmit={this.handleFormSubmit}
+          className="row"
+        >
           <div className="form-group col-sm-11 col-md-9">
             <label htmlFor="input-name">First and Last name</label>
             <input
@@ -211,7 +222,6 @@ class ContactForm extends React.Component {
               className="form-control"
               id="input-name"
               required
-              autoFocus
             />
           </div>
           <div className="form-group col-sm-11 col-md-9">
