@@ -5,22 +5,28 @@ import { Helmet } from "react-helmet"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-// import InnerTitle from "../components/inner-title.js"
+import ContactForm from "../components/contact-form.js"
 
 import "../styles/contact.scss"
 
-import thinArrowRight from "../img/right-arrow.svg"
 import newPatientAcquisitions from "../img/new-patient-acquisitions.png"
 import dgDifferent from "../img/what-makes-doctorgenius-different.png"
 import dgClientSatisfaction from "../img/client-satisfaction.png"
 import homepageMarketingDashboard from "../img/marketing-dashboard.jpg"
 import homepageMarketingDashboardMobile from "../img/marketing-dashboard-mobile.jpg"
 
+import thinArrowRight from "../img/right-arrow.svg"
+
 export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
-      <title>Contact Us - Doctor Genius</title>
-      <meta name="description" content="We are located in Irvine, CA." />
+      <title>
+        Contact the Doctor Genius Team in Irvine, California | Doctor Genius
+      </title>
+      <meta
+        name="description"
+        content="Need help? Have questions? The live support team at Doctor Genius is here to help. Give us a call, send us an email, connect on social media, or get our address."
+      />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
@@ -31,7 +37,7 @@ export default props => (
               <div className="header inner-title center">
                 <h1>Contact Us</h1>
                 <h3 className="strapline">Have a question? Need help?</h3>
-                <p className="form-desc">
+                <p className="muted-text">
                   Fill the form below to get directly in contact with our
                   support staff.
                 </p>
@@ -39,19 +45,7 @@ export default props => (
             </div>
 
             <div className="row panel-row contact-form">
-              <div
-                style={{
-                  height: "600px",
-                  width: "800px",
-                  border: "2px solid steelblue",
-                }}
-              >
-                <h1 className="text-center valign-wrapper">
-                  FORM <br />
-                  GOES <br />
-                  HERE
-                </h1>
-              </div>
+              <ContactForm />
             </div>
 
             <div className="row full-bleed-img-john">
