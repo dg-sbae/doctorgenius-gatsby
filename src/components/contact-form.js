@@ -161,7 +161,7 @@ class ContactForm extends React.Component {
     }) */
 
     // Generate a request to the email server
-    /* fetch("https://nodetest.dgplex.com/upload", {
+    fetch("https://nodetest.dgplex.com/upload", {
       method: "POST",
       body: stringData,
       headers: {
@@ -177,10 +177,10 @@ class ContactForm extends React.Component {
           message: body.message,
         })
       })
-    }) */
+    })
 
     // Additional testing endpoint:
-    fetch("https://en7rq2paapae3.x.pipedream.net", {
+    /*fetch("https://en95o1efs05as.x.pipedream.net", {
       method: "POST",
       body: stringData,
       headers: {
@@ -191,7 +191,7 @@ class ContactForm extends React.Component {
       response.json().then(body => {
         console.log("requestbin body:", body)
       })
-    })
+    }) */
 
     //Trigger form clearing upon completion of all API calls
     //clearFormFields();
@@ -201,8 +201,8 @@ class ContactForm extends React.Component {
     return (
       <div className="form-wrapper">
         <form onSubmit={this.handleFormSubmit} className="row">
-          <div className="form-group col-sm-10 col-md-9">
-            <label for="input-name">First and Last name</label>
+          <div className="form-group col-sm-11 col-md-9">
+            <label htmlFor="input-name">First and Last name</label>
             <input
               ref={ref => {
                 this.name = ref
@@ -210,10 +210,12 @@ class ContactForm extends React.Component {
               type="text"
               className="form-control"
               id="input-name"
+              required
+              autoFocus
             />
           </div>
-          <div className="form-group col-sm-10 col-md-9">
-            <label for="input-phone">Phone Number</label>
+          <div className="form-group col-sm-11 col-md-9">
+            <label htmlFor="input-phone">Phone Number</label>
             <input
               ref={ref => {
                 this.phone = ref
@@ -221,10 +223,11 @@ class ContactForm extends React.Component {
               type="tel"
               className="form-control"
               id="input-phone"
+              required
             />
           </div>
-          <div className="form-group col-sm-10 col-md-9">
-            <label for="input-email">Email</label>
+          <div className="form-group col-sm-11 col-md-9">
+            <label htmlFor="input-email">Email</label>
             <input
               ref={ref => {
                 this.email = ref
@@ -232,10 +235,11 @@ class ContactForm extends React.Component {
               type="email"
               className="form-control"
               id="input-email"
+              required
             />
           </div>
-          <div className="form-group col-sm-10 col-md-9">
-            <label for="input-name">Message:</label>
+          <div className="form-group col-sm-11 col-md-9">
+            <label htmlFor="input-name">Message:</label>
             <input
               ref={ref => {
                 this.message = ref
@@ -243,9 +247,10 @@ class ContactForm extends React.Component {
               type="textarea"
               className="form-control"
               id="input-message"
+              required
             />
           </div>
-          <div className="form-group col-sm-6 col-md-4">
+          <div className="form-group col-sm-8 col-md-4">
             <button type="submit" className="button btn flat submit-contact">
               Contact Us
             </button>

@@ -149,7 +149,7 @@
     h1 {
       font-size: 87px;
       line-height: 1;
-      font-weight: 400;
+      font-weight: $font-weight-normal;
     }
     .inner-title h3.strapline {
       font-size: 33px;
@@ -217,7 +217,7 @@
     h1 {
       font-size: 87px;
       line-height: 1;
-      font-weight: 400;
+      font-weight: $font-weight-normal;
     }
     .inner-title h3.strapline {
       font-size: 33px;
@@ -243,8 +243,8 @@
     }
     .hero {
       background: top/350px repeat-x url("../img/background-texture.png"),
-        center 54%/300px repeat-x url("../img/background-texture-flipped.png"),
-        center calc(54% + 300px) / 300px repeat-x
+        center 51%/300px repeat-x url("../img/background-texture-flipped.png"),
+        center calc(51% + 300px) / 300px repeat-x
           url("../img/background-texture.png");
     }
   }
@@ -276,15 +276,15 @@
     }
     .hero {
       background: top/350px repeat-x url("../img/background-texture.png"),
-        center 55%/300px repeat-x url("../img/background-texture-flipped.png"),
-        center calc(55% + 300px) / 300px repeat-x
+        center 51%/300px repeat-x url("../img/background-texture-flipped.png"),
+        center calc(51% + 300px) / 300px repeat-x
           url("../img/background-texture.png");
     }
 
     h1 {
       font-size: 49px;
       line-height: 1;
-      font-weight: 400;
+      font-weight: $font-weight-normal;
     }
     .inner-title h3.strapline {
       font-size: 24px;
@@ -292,6 +292,12 @@
     .muted-text {
       font-size: 21px;
       color: $mute;
+    }
+  }
+
+  @include media("<phone") {
+    .form-group {
+      padding: 0 $m1;
     }
   }
 }
