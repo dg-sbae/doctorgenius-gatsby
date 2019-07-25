@@ -94,11 +94,11 @@ class ContactForm extends React.Component {
     data.append("Message", this.message.value)
 
     // Add required, internal fields for our Admin connection
-    /* data.append("Status", "New")
+    data.append("Status", "New")
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
-    data.append("Description", "Form: Contact Form")
-    data.append("LeadSource", "(New) Main Website Organic") */
+    data.append("Description", "Form: Contact Us Form")
+    data.append("LeadSource", "(New) Main Website Organic")
 
     /* Debug:
     alert(
@@ -156,7 +156,7 @@ class ContactForm extends React.Component {
     // console.log("Stringified form data:", stringData)
 
     // Generate a request to our Admin portal (connects to SalesForce)
-    /* fetch("https://portal.doctorgenius.com/api/dglead", {
+    fetch("https://portal.doctorgenius.com/api/dglead", {
       method: "POST",
       body: stringData,
       headers: {
@@ -167,10 +167,10 @@ class ContactForm extends React.Component {
       response.json().then(body => {
         console.log("dgleads body:", body)
       })
-    }) */
+    })
 
     // Generate a request to the email server
-    fetch("https://nodetest.dgplex.com/upload", {
+    fetch("https://nodetest.dgplex.com/contact-us", {
       method: "POST",
       body: stringData,
       headers: {
