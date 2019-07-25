@@ -1,41 +1,46 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import { Link } from "gatsby"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Container from "../components/Container"
-import ContactForm from "../components/contact-form.js"
 
-import "../styles/contact.scss"
+import "../styles/confirmation.scss"
 
 export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
-      <title>
-        Contact the Doctor Genius Team in Irvine, California | Doctor Genius
-      </title>
-      <meta
-        name="description"
-        content="Need help? Have questions? The live support team at Doctor Genius is here to help. Give us a call, send us an email, connect on social media, or get our address."
-      />
+      <title>Thank you for Contacting Doctor Genius | Doctor Genius</title>
     </Helmet>
     <div className={props["*"]}>
       <div className="hero">
         {/* Hero will be a layout component */}
         <Container>
-          <div className="row padded panel-row title-and-desc">
+          <div className="row panel-row title-and-desc">
             <div className="col-sm-12">
               <div className="header inner-title center">
-                <h1>Contact Us</h1>
-                <h3 className="strapline">Have a question? Need help?</h3>
+                <h1>
+                  Thank you for <br className="line-break-header" /> your
+                  submission!
+                </h1>
                 <p className="muted-text">
-                  Fill the form below to get directly in contact with our
-                  support staff.
+                  You’ll receive an email confirmation shortly. In the meantime,
+                  feel free to check out
+                  <br className="line-break-desc" />
+                  our new blog,{" "}
+                  <span className="strapline">
+                    <Link to="/the-study/">The Study</Link>
+                  </span>
+                  , to find out about our latest services and technology.
                 </p>
+                <div className="row">
+                  <div className="col-sm-8 col-md-4">
+                    <button className="button nav-button return-home">
+                      <Link to="/">Return Home</Link>
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div className="row panel-row contact-form">
-              <ContactForm />
             </div>
           </div>
         </Container>

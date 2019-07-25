@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "gatsby"
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 import $ from "jquery"
@@ -45,7 +46,7 @@ class ContactForm extends React.Component {
   }
 
   focusWithoutScrolling() {
-    var x = window.scrollX,
+    let x = window.scrollX,
       y = window.scrollY
     $("#input-name").focus()
     window.scrollTo(x, y)
@@ -62,6 +63,7 @@ class ContactForm extends React.Component {
       setTimeout(() => $(".lds-ellipsis").hide(), 3000)
       setTimeout(() => $(".positive-response").show(), 3000)
       setTimeout(() => clearFormFields(), 3000)
+      setTimeout(() => navigate("/confirmation"), 4500)
     }
 
     /* function submissionFail() {
