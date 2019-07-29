@@ -1,0 +1,193 @@
+@import "_site-variables.scss";
+
+.event-test {
+  .hero {
+    background-color: lightgrey;
+  }
+  .hero-padding {
+    width: 100%;
+    height: 90px;
+  }
+  .continue-edu-class {
+    text-transform: initial;
+  }
+  .hero a {
+    font-size: 15px;
+  }
+  .hero h1 {
+    font-size: 71px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+  .hero h2 {
+    font-size: 42px;
+    font-weight: 400;
+    margin-top: 0 !important;
+  }
+  .register-now-btn {
+    background-color: $demo-button-green;
+  }
+
+  /*header {
+    nav {
+      box-shadow: 0 1px 1px $grid-border;
+      background-color: #fff;
+      .nav-button {
+        color: $primary;
+        border-color: $primary;
+      }
+      & {
+        .navbar-toggler .navbar-toggler-icon {
+          background-image: url("../img/icon/nav-toggler-blue.svg");
+          @include media("<laptop") {
+            background-image: url("../img/icon/nav-toggler.svg");
+          }
+        }
+        .logo a {
+          .logo-holder {
+            background-image: url("../img/icon/logo-blue.svg");
+            @include media("<laptop") {
+              background-image: url("../img/icon/logo-white.svg");
+            }
+          }
+        }
+        .phone > a {
+          display: block;
+          color: $primary;
+          .phone-holder {
+            //phone holder and image holder should be refactored to operate the same way/same markup
+            background-image: url("../img/icon/phone-blue.svg");
+            @include media(">=laptop") {
+              background-image: url("../img/icon/phone-white.svg");
+            }
+          }
+        }
+      }
+      @include media("<laptop") {
+        .navbar-toggler .navbar-toggler-icon {
+          background-image: url("../img/icon/nav-toggler-blue.svg");
+        }
+        .logo a {
+          .logo-holder {
+            background-image: url("../img/icon/logo-blue.svg");
+          }
+        }
+        &.main-navbar-stuck {
+          .navbar-toggler .navbar-toggler-icon {
+            background-image: url("../img/icon/nav-toggler.svg");
+          }
+          .logo a {
+            .logo-holder {
+              background-image: url("../img/icon/logo-white.svg");
+            }
+          }
+        }
+      }
+
+      li > a {
+        color: $demo-body-text;
+        .active {
+          color: $primary;
+        }
+      }
+
+      .nav-button {
+        border-color: $primary;
+      }
+
+      .contact-links {
+        a {
+          color: $primary;
+        }
+      }
+      &.main-navbar-stuck {
+        .dropdown-menu {
+          a {
+            color: $primary-text;
+          }
+        }
+      }
+      .dropdown-menu {
+        &:after {
+          border-bottom: 9px solid #285c94;
+        }
+      }
+    }
+  } */
+
+  @include media("<desktop") {
+    .latest-post .label,
+    .popular-post .label,
+    .share-icons {
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+    .blog-header .title {
+      max-width: 80%;
+    }
+    .blog-header .share-icons {
+      max-width: 100%;
+      justify-content: flex-end !important;
+      & > a {
+        margin: 0 10px;
+        @include media("<500px") {
+          margin: 0 2.5%;
+        }
+      }
+    }
+    .label p {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 15px;
+    }
+  }
+
+  .blog-content p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+  .featured-image {
+    width: 125%;
+    margin-left: 50%;
+    transform: translateX(
+      -50%
+    ); /* I dont think this will pass muster with real images */
+    margin-top: 10px;
+    margin-bottom: 30px;
+    @include media("<desktop") {
+      width: 100%;
+      margin-left: 0%;
+      transform: translateX(0%);
+    }
+  }
+  .events {
+    display: none;
+  }
+  .events-section img {
+    max-width: 100%;
+  }
+  .grey-background {
+    background: #f4f4f4;
+    height: 535px;
+  }
+
+  .mobile-image-row {
+    display: none;
+    @include media("<desktop") {
+      display: block;
+    }
+  }
+  .featured-image {
+    display: block;
+    @include media("<desktop") {
+      display: none;
+    }
+  }
+  img[class*="wp-image"] {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
