@@ -24,6 +24,7 @@ import marketingSolutions from "../img/icon/statistics.svg"
 import ourClients from "../img/icon/our-clients.svg"
 import plans from "../img/icon/pricing.svg"
 import company from "../img/icon/hotel.svg"
+import contactUs from "../img/icon/contact-us-white.svg"
 import resources from "../img/icon/resources.svg"
 import freeDemo from "../img/icon/video-options.svg"
 import contact from "../img/icon/email.svg"
@@ -716,6 +717,31 @@ const CompanyListLink = props => (
               </Link>
             </div>
           </div>
+          <div class="row dropdown-row">
+            <div className="col-sm-6 ">
+              <Link className="" to="/contact">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <img
+                      className="image-icon"
+                      src={contactUs}
+                      alt="Contact Us Icon"
+                    />
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">Contact Us</span>
+                    <p>Have a question? Send us a message</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-sm-6">
+              <div className="dropdown-content-block">
+                <Link className="" to={props.to} />
+                <p />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1086,7 +1112,7 @@ class Navigation extends Component {
               iconSubnav={contact}
               // data-toggle="collapse"
               // aria-expanded="false"
-              to="/demo"
+              to="/contact"
             >
               Contact
             </SideNavListLink>
