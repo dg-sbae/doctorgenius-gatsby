@@ -1,5 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
+import thinArrowRight from "../img/right-arrow.svg"
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 import $ from "jquery"
@@ -31,31 +31,24 @@ import $ from "jquery"
   }
 } */
 
-class ContactForm extends React.Component {
+class DemoForm extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
       name: "",
-      phone: "",
       email: "",
-      message: "",
+      company: "",
+      phone: "",
     }
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
   }
 
-  focusWithoutScrolling() {
-    let x = window.scrollX,
-      y = window.scrollY
-    $("#input-name").focus()
-    window.scrollTo(x, y)
-  }
-
   handleFormSubmit(ev) {
     // trigger ajax loading spiner
     function ajaxLoaderDisplay() {
-      $(".submit-contact").hide()
+      $(".request-demo").hide()
       $(".lds-ellipsis").show()
     }
 
@@ -63,7 +56,6 @@ class ContactForm extends React.Component {
       setTimeout(() => $(".lds-ellipsis").hide(), 3000)
       setTimeout(() => $(".positive-response").show(), 3000)
       setTimeout(() => clearFormFields(), 3000)
-      setTimeout(() => navigate("/confirmation"), 4500)
     }
 
     /* function submissionFail() {
@@ -74,8 +66,7 @@ class ContactForm extends React.Component {
     function clearFormFields() {
       $('input[type="text"]').val("")
       $('input[type="email"]').val("")
-      $('input[type="tel"]').val("")
-      $('input[type="textarea"]').val("")
+      $('input[type="phone"]').val("")
     }
 
     ajaxLoaderDisplay()
@@ -91,13 +82,13 @@ class ContactForm extends React.Component {
     data.append("FullName", this.name.value)
     data.append("PhoneNumber", this.phone.value)
     data.append("EmailAddress", this.email.value)
-    data.append("Message", this.message.value)
+    data.append("CompanyName", this.company.value)
 
     // Add required, internal fields for our Admin connection
     data.append("Status", "New")
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
-    data.append("Description", "Form: Contact Us Form")
+    data.append("Description", "Form: Request Demo")
     data.append("LeadSource", "(New) Main Website Organic")
 
     /* Debug:
@@ -108,12 +99,12 @@ class ContactForm extends React.Component {
         "Readable format:" +
         "\nname: " +
         this.name.value +
-        "\nphone: " +
-        this.phone.value +
+        "\ncompany: " +
+        this.company.value +
         "\nemail: " +
         this.email.value +
-        "\nmessage: " +
-        this.message.value
+        "\nphone: " +
+        this.phone.value
     )
     */
 
@@ -131,7 +122,7 @@ class ContactForm extends React.Component {
     //Name:    [FullName]
     //Phone:   [PhoneNumber]
     //Email:   [EmailAddress]
-    //Message: [Message]
+    //Company: [CompanyName]
 
     //stringData holds the stringified, encoded form data
     let stringData = ""
@@ -170,7 +161,7 @@ class ContactForm extends React.Component {
     })
 
     // Generate a request to the email server
-    fetch("https://nodetest.dgplex.com/contact-us", {
+    fetch("https://nodetest.dgplex.com/upload", {
       method: "POST",
       body: stringData,
       headers: {
@@ -182,14 +173,14 @@ class ContactForm extends React.Component {
         this.setState({
           name: body.name,
           phone: body.phone,
+          company: body.company,
           email: body.email,
-          message: body.message,
         })
       })
     })
 
-    // Additional testing endpoint:
-    /*fetch("https://en95o1efs05as.x.pipedream.net", {
+    /* Additional testing endpoint:
+    fetch("https://enh4puletkcmw.x.pipedream.net", {
       method: "POST",
       body: stringData,
       headers: {
@@ -200,7 +191,8 @@ class ContactForm extends React.Component {
       response.json().then(body => {
         console.log("requestbin body:", body)
       })
-    }) */
+    })
+    */
 
     //Trigger form clearing upon completion of all API calls
     //clearFormFields();
@@ -209,87 +201,62 @@ class ContactForm extends React.Component {
   render() {
     return (
       <div className="form-wrapper">
-        <form
-          onLoad={this.focusWithoutScrolling}
-          onSubmit={this.handleFormSubmit}
-          className="row"
-        >
-          <div className="form-group col-sm-11 col-md-9">
-            <label htmlFor="input-name">First and Last name</label>
+        <form onSubmit={this.handleFormSubmit}>
+          <div>
             <input
               ref={ref => {
                 this.name = ref
               }}
               type="text"
-              className="form-control"
-              id="input-name"
-              required
+              placeholder="First & Last name"
             />
-          </div>
-          <div className="form-group col-sm-11 col-md-9">
-            <label htmlFor="input-phone">Phone Number</label>
             <input
               ref={ref => {
-                this.phone = ref
+                this.company = ref
               }}
-              type="tel"
-              className="form-control"
-              id="input-phone"
-              required
+              type="text"
+              placeholder="Practice Name ( ex. Dental Spa)"
             />
-          </div>
-          <div className="form-group col-sm-11 col-md-9">
-            <label htmlFor="input-email">Email</label>
             <input
               ref={ref => {
                 this.email = ref
               }}
               type="email"
-              className="form-control"
-              id="input-email"
-              required
+              placeholder="Email Address"
             />
-          </div>
-          <div className="form-group col-sm-11 col-md-9">
-            <label htmlFor="input-name">Message:</label>
             <input
               ref={ref => {
-                this.message = ref
+                this.phone = ref
               }}
-              type="textarea"
-              className="form-control"
-              id="input-message"
-              required
+              type="phone"
+              placeholder="Phone Number"
             />
           </div>
-          <div className="form-group col-sm-8 col-md-4">
-            <button type="submit" className="button btn flat submit-contact">
-              Contact Us
+          <div>
+            <button type="submit" className="button btn flat request-demo">
+              Request Demo <img src={thinArrowRight} alt="Arrow Right" />
             </button>
-            <div>
-              <div style={{ display: "none" }} className="lds-ellipsis">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <div
-                className="positive-response"
-                style={{ display: "none", margin: "10px" }}
-              >
-                <img src={checkSuccess} alt="Message Sent!" />
-                <p className="muted-text">Message Sent!</p>
-              </div>
-              <div
-                className="negative-response"
-                style={{ display: "none", margin: "10px" }}
-              >
-                <img src={xFail} alt="Message Failed" />
-                <p className="muted-text">Message Failed</p>
-              </div>
+            <div style={{ display: "none" }} className="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div
+              className="positive-response"
+              style={{ display: "none", margin: "10px" }}
+            >
+              <img src={checkSuccess} alt="Message Sent!" />
+              <p>Message Sent!</p>
+            </div>
+            <div
+              className="negative-response"
+              style={{ display: "none", margin: "10px" }}
+            >
+              <img src={xFail} alt="Message Failed" />
+              <p>Message Failed</p>
             </div>
           </div>
-
           {/*
           <FormResponse
             name={this.state.name}
@@ -303,4 +270,4 @@ class ContactForm extends React.Component {
   }
 }
 
-export default ContactForm
+export default DemoForm
