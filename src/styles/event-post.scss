@@ -3,6 +3,8 @@
 .event-test {
   .hero {
     background-color: lightgrey;
+    background-image: url("../img/hero/plans.jpg");
+    background-position: center 18%;
   }
   .hero-padding {
     width: 100%;
@@ -10,24 +12,183 @@
   }
   .continue-edu-class {
     text-transform: initial;
-  }
-  .hero a {
+    display: inline-block;
     font-size: 15px;
-  }
-  .hero h1 {
-    font-size: 71px;
-    font-weight: 500;
-    margin-top: 0;
-  }
-  .hero h2 {
-    font-size: 42px;
-    font-weight: 400;
-    margin-top: 0 !important;
   }
   .register-now-btn {
     background-color: $demo-button-green;
   }
+  .event-details h3 {
+    color: $primary;
+    font-size: 45px;
+    font-weight: $font-weight-medium;
+  }
+  .event-details p {
+    font-family: $font-family-body-text;
+    font-size: 18px;
+  }
+  .event-date p {
+    font-size: 23px;
+    font-family: $font-family-body-text;
+    color: #fff;
+  }
+  .event-date .card {
+    width: 482px;
+    height: 185px;
+    background-color: #0074cf;
+  }
+  .card-body {
+    margin-top: $pad / 2;
+  }
+  .card-body p {
+    margin-top: $pad / 2;
+  }
+  .listed-items {
+    align-items: start;
+  }
+  .listed-items h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: $font-weight-medium;
+  }
+  .listed-items h2:nth-of-type(2) {
+    margin-top: $m1 * 2.5;
+  }
+  .listed-items ul {
+    padding-left: 10px;
+  }
+  .listed-items li {
+    font-size: 18px;
+    font-weight: $font-weight-normal;
+    font-family: $font-family-body-text;
+    margin: $pad * 1.2;
+  }
+  .listed-items .content-image img {
+    float: right;
+  }
+  .listed-items h2 {
+    margin-bottom: $pad * 1.5;
+  }
 
+  @include media(">=laptop") {
+    .hero a {
+      font-size: 15px;
+    }
+    .hero h1 {
+      font-size: 71px;
+      font-weight: $font-weight-medium;
+      margin-top: 0;
+    }
+    .hero h2 {
+      font-size: 42px;
+      font-weight: $font-weight-normal;
+      margin-top: 0 !important;
+    }
+    .hero .titles {
+      margin: 10px 0 $m1 * 1.5 0;
+    }
+    .event-date .card {
+      margin: auto;
+    }
+    .hero .container-fluid > .row {
+      justify-content: flex-start;
+    }
+  }
+
+  @include media("<laptop", ">=tablet") {
+    .hero h1 {
+      font-size: 54px;
+      font-weight: $font-weight-medium;
+      margin-top: 0 !important;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 31px;
+      font-weight: $font-weight-normal;
+      margin-top: 0 !important;
+      text-align: center;
+    }
+    .register-now-btn-holder,
+    .continue-edu-class-holder {
+      text-align: center;
+      margin: $pad 0;
+    }
+    .event-details h3,
+    .event-details p {
+      text-align: center;
+    }
+    .event-date {
+      margin-top: $pad * 2;
+    }
+    .listed-items h2:nth-of-type(2) {
+      margin-top: $m1 * 1.5;
+    }
+  }
+
+  @include media("<tablet") {
+    .hero h1 {
+      font-size: 33px;
+      font-weight: $font-weight-medium;
+      margin-top: 0 !important;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 20px;
+      font-weight: $font-weight-normal;
+      margin-top: 0 !important;
+      text-align: center;
+    }
+    .register-now-btn-holder,
+    .continue-edu-class-holder {
+      text-align: center;
+      margin: $pad * 2 0;
+    }
+    .event-details h3,
+    .event-details p {
+      text-align: center;
+    }
+    .event-details p {
+      font-size: 16px;
+    }
+    .event-date .card {
+      width: 311px;
+      height: 121px;
+      margin-top: $pad;
+    }
+    .event-date p {
+      font-size: 16px;
+    }
+    .card-body {
+      margin-top: 0;
+    }
+    .card-body p {
+      margin: $pad / 2;
+    }
+    .listed-items h2 {
+      font-size: 24px;
+    }
+    .listed-items li {
+      font-size: 16px;
+    }
+    .listed-items h2:nth-of-type(2) {
+      margin-top: $m1 * 1.2;
+    }
+  }
+
+  @include media("<phone") {
+    .card-text {
+      text-align: center;
+    }
+    .event-date .card {
+      width: 100vw;
+    }
+  }
+  @media (min-width: 425px) and (max-width: 425px) {
+    .event-date .card {
+      width: initial;
+      height: initial;
+    }
+  }
   /*header {
     nav {
       box-shadow: 0 1px 1px $grid-border;
