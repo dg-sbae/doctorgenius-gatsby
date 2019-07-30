@@ -1,0 +1,241 @@
+@import "_site-variables.scss";
+
+.confirmation {
+  /* Global styles - to this page */
+  .hero {
+    height: auto;
+    padding-top: 80px;
+    background: top/300px repeat-x url("../img/background-texture.png"),
+      center 68%/300px repeat-x url("../img/background-texture-flipped.png"),
+      center calc(68% + 300px) / 300px repeat-x
+        url("../img/background-texture.png");
+  }
+
+  .phone-number a {
+    font-size: $m1;
+    color: #000;
+    text-decoration: none;
+    font-family: $font-family-body-text;
+  }
+
+  .contact-address,
+  .contact-hours {
+    font-size: 22px;
+    font-family: $font-family-body-text;
+  }
+
+  .dg-map {
+    border: none;
+  }
+
+  .get-directions {
+    color: $primary;
+    border-color: $primary;
+  }
+
+  .get-directions:hover {
+    color: $secondary;
+    border-color: $secondary;
+  }
+
+  .get-directions a:hover {
+    text-decoration: none;
+  }
+
+  button.nav-button.return-home {
+    margin: 30px auto;
+    display: block;
+    width: 177px;
+    height: 41px;
+    font-weight: $font-weight-semibold;
+    background: $secondary;
+    color: white;
+    line-height: 0.5;
+    &:hover {
+      background-color: $primary;
+    }
+    text-transform: initial;
+  }
+
+  button.nav-button.return-home a {
+    color: #fff;
+    font-size: 17px;
+  }
+
+  button.nav-button.return-home a:hover {
+    text-decoration: none;
+  }
+
+  /* Styling for laptops and above - 991px*/
+  @include media(">=laptop") {
+    .title-and-desc {
+      padding: $m1 * 5 0;
+    }
+
+    h1 {
+      font-size: 54px;
+      line-height: 1;
+      font-weight: $font-weight-normal;
+      margin-bottom: $m1;
+    }
+    .muted-text {
+      font-size: 28px;
+      color: $mute;
+    }
+    .line-break-header {
+      display: none;
+    }
+    .line-break-desc {
+      display: block;
+    }
+    header .logo a .logo-holder {
+      background-image: url("../img/icon/logo-blue.svg");
+    }
+    nav .main-links a,
+    nav .contact-links a,
+    header nav.navbar.main-navbar-stuck a {
+      color: $primary;
+    }
+    header .phone > a .phone-holder {
+      background-image: url("../img/phone-blue.svg");
+    }
+    .button.nav-button {
+      border: 1px solid $primary;
+    }
+    nav.main-navbar-stuck .free-demo-button a {
+      color: #fff !important;
+    }
+    nav.main-navbar-stuck .free-demo-button {
+      background-color: $primary;
+    }
+    header .dropdown-row a {
+      color: $primary-text !important;
+    }
+
+    nav.main-navbar-stuck .button.nav-button.free-demo-button:hover {
+      color: $primary !important;
+      background-color: $primary-text !important;
+    }
+
+    nav.main-navbar-stuck .button.nav-button.free-demo-button a:hover {
+      color: $primary !important;
+    }
+    .button.nav-button.free-demo-button:hover {
+      background-color: $primary !important;
+      border-color: $primary !important;
+    }
+    .button.nav-button.free-demo-button:hover a {
+      color: #fff !important;
+    }
+
+    .company-info {
+      text-align: right;
+    }
+    .info-and-map {
+      padding-bottom: $m1 * 3;
+    }
+  }
+
+  /* Styling for Tablets: 768 - 991 */
+  @include media("<=laptop", ">=tablet") {
+    .title-and-desc {
+      padding: $m1 * 3 0;
+    }
+    .navigation-wrapper {
+      background-color: $primary;
+    }
+    header .logo a .logo-holder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
+    .line-break-header {
+      display: block;
+    }
+    .line-break-desc {
+      display: none;
+    }
+    h1 {
+      font-size: 45px;
+      line-height: 1;
+      font-weight: $font-weight-normal;
+      margin-bottom: $m1;
+    }
+    .muted-text {
+      font-size: 24px;
+      color: $mute;
+    }
+    .company-info {
+      text-align: center;
+      margin-bottom: $m1;
+    }
+    .dg-map {
+      width: 100%;
+    }
+    .info-and-map {
+      padding-bottom: 0;
+    }
+    .map-holder {
+      padding: 20px 0 0 0;
+      line-height: 1;
+      margin-bottom: -5px;
+    }
+    .hero {
+      background: top/350px repeat-x url("../img/background-texture.png"),
+        center 47%/300px repeat-x url("../img/background-texture-flipped.png"),
+        center calc(47% + 300px) / 300px repeat-x
+          url("../img/background-texture.png");
+    }
+  }
+
+  /* Styling for phones - 767 and below */
+  @include media("<tablet") {
+    .title-and-desc {
+      padding: $m1 * 2 0 $m1/2 0;
+    }
+    .navigation-wrapper {
+      background-color: $primary;
+    }
+    header .logo a .logo-holder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
+    .company-info {
+      text-align: center;
+    }
+    .muted-text {
+      font-size: 24px;
+    }
+    .dg-map {
+      width: 100%;
+    }
+    .info-and-map {
+      padding-bottom: 0;
+    }
+    .map-holder {
+      padding: 20px 0 0 0;
+      line-height: 1;
+      margin-bottom: -5px;
+    }
+    .hero {
+      background: top/350px repeat-x url("../img/background-texture.png"),
+        center 42%/300px repeat-x url("../img/background-texture-flipped.png"),
+        center calc(42% + 300px) / 300px repeat-x
+          url("../img/background-texture.png");
+    }
+
+    h1 {
+      font-size: 39px;
+      line-height: 1;
+      font-weight: $font-weight-normal;
+      margin-bottom: $m1;
+    }
+    .line-break-header {
+      display: block;
+    }
+    .line-break-desc {
+      display: none;
+    }
+    .muted-text {
+      font-size: 24px;
+      color: $mute;
+    }
+  }
+}

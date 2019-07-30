@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-import ContactForm from "../components/contact-form.js"
+import DemoForm from "../components/demo-form.js"
 import star from "../img/star.svg"
 import sslBadge from "../img/ssl-logo.png"
 
@@ -53,7 +53,7 @@ export default props => (
                   <h3>Contact us now for a FREE Consultation</h3>
                 </div>
                 <div className="form-body">
-                  <ContactForm />
+                  <DemoForm />
                   <p className="fine-print">
                     *By registering I confirm that I have read and agree to the{" "}
                     <Link to="/privacy-policy" target="_blank">

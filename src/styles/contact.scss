@@ -1,0 +1,298 @@
+@import "_site-variables.scss";
+
+.contact {
+  /* Global styles - to this page */
+  .hero {
+    height: auto;
+    padding-top: 80px;
+    background: top/300px repeat-x url("../img/background-texture.png"),
+      center 74%/300px repeat-x url("../img/background-texture-flipped.png"),
+      center calc(74% + 300px) / 300px repeat-x
+        url("../img/background-texture.png");
+  }
+
+  .contact-form {
+    padding: $pad;
+  }
+  .phone-number a {
+    font-size: $m1;
+    color: #000;
+    text-decoration: none;
+    font-family: $font-family-body-text;
+  }
+
+  .contact-address,
+  .contact-hours {
+    font-size: 22px;
+    font-family: $font-family-body-text;
+  }
+
+  .dg-map {
+    border: none;
+  }
+
+  .get-directions {
+    color: $primary;
+    border-color: $primary;
+  }
+
+  .get-directions:hover {
+    color: $secondary;
+    border-color: $secondary;
+  }
+
+  .get-directions a:hover {
+    text-decoration: none;
+  }
+
+  button[type="submit"] {
+    margin: 30px auto;
+    display: block;
+    width: 177px;
+    height: 41px;
+    font-weight: $font-weight-semibold;
+    font-size: 17px;
+    background: $demo-button-green;
+    color: white;
+    line-height: 0.5;
+    &:hover {
+      background-color: $button-hover-green;
+    }
+    text-transform: initial;
+  }
+
+  .form-group input {
+    border: none;
+    border-bottom: 2px solid $mute;
+    border-radius: 0;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+    border-bottom: 2px solid $primary;
+  }
+
+  /* Loading ellipsis CSS */
+  .lds-ellipsis {
+    display: block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: auto;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #cef;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .positive-response img,
+  .positive-response p,
+  .negative-response img,
+  .positive-response p {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }
+
+  /* Styling for laptops and above - 991px*/
+  @include media(">=laptop") {
+    h1 {
+      font-size: 87px;
+      line-height: 1;
+      font-weight: $font-weight-normal;
+    }
+    .inner-title h3.strapline {
+      font-size: 33px;
+    }
+    .muted-text {
+      font-size: 28px;
+      color: $mute;
+    }
+    header .logo a .logo-holder {
+      background-image: url("../img/icon/logo-blue.svg");
+    }
+    nav .main-links a,
+    nav .contact-links a,
+    header nav.navbar.main-navbar-stuck a {
+      color: $primary;
+    }
+    header .phone > a .phone-holder {
+      background-image: url("../img/phone-blue.svg");
+    }
+    .button.nav-button {
+      border: 1px solid $primary;
+    }
+    nav.main-navbar-stuck .free-demo-button a {
+      color: #fff !important;
+    }
+    nav.main-navbar-stuck .free-demo-button {
+      background-color: $primary;
+    }
+    header .dropdown-row a {
+      color: $primary-text !important;
+    }
+
+    nav.main-navbar-stuck .button.nav-button.free-demo-button:hover {
+      color: $primary !important;
+      background-color: $primary-text !important;
+    }
+
+    nav.main-navbar-stuck .button.nav-button.free-demo-button a:hover {
+      color: $primary !important;
+    }
+    .button.nav-button.free-demo-button:hover {
+      background-color: $primary !important;
+      border-color: $primary !important;
+    }
+    .button.nav-button.free-demo-button:hover a {
+      color: #fff !important;
+    }
+
+    .company-info {
+      text-align: right;
+    }
+    .info-and-map {
+      padding-bottom: $m1 * 3;
+    }
+  }
+
+  /* Styling for Tablets: 768 - 991 */
+  @include media("<=laptop", ">=tablet") {
+    .navigation-wrapper {
+      background-color: $primary;
+    }
+    header .logo a .logo-holder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
+    h1 {
+      font-size: 87px;
+      line-height: 1;
+      font-weight: $font-weight-normal;
+    }
+    .inner-title h3.strapline {
+      font-size: 33px;
+    }
+    .muted-text {
+      font-size: 21px;
+      color: $mute;
+    }
+    .company-info {
+      text-align: center;
+      margin-bottom: $m1;
+    }
+    .dg-map {
+      width: 100%;
+    }
+    .info-and-map {
+      padding-bottom: 0;
+    }
+    .map-holder {
+      padding: 20px 0 0 0;
+      line-height: 1;
+      margin-bottom: -5px;
+    }
+    .hero {
+      background: top/350px repeat-x url("../img/background-texture.png"),
+        center 51%/300px repeat-x url("../img/background-texture-flipped.png"),
+        center calc(51% + 300px) / 300px repeat-x
+          url("../img/background-texture.png");
+    }
+  }
+
+  /* Styling for phones - 767 and below */
+  @include media("<tablet") {
+    .navigation-wrapper {
+      background-color: $primary;
+    }
+    header .logo a .logo-holder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
+    .company-info {
+      text-align: center;
+    }
+    .muted-text {
+      font-size: 18px;
+    }
+    .dg-map {
+      width: 100%;
+    }
+    .info-and-map {
+      padding-bottom: 0;
+    }
+    .map-holder {
+      padding: 20px 0 0 0;
+      line-height: 1;
+      margin-bottom: -5px;
+    }
+    .hero {
+      background: top/350px repeat-x url("../img/background-texture.png"),
+        center 51%/300px repeat-x url("../img/background-texture-flipped.png"),
+        center calc(51% + 300px) / 300px repeat-x
+          url("../img/background-texture.png");
+    }
+
+    h1 {
+      font-size: 49px;
+      line-height: 1;
+      font-weight: $font-weight-normal;
+    }
+    .inner-title h3.strapline {
+      font-size: 24px;
+    }
+    .muted-text {
+      font-size: 21px;
+      color: $mute;
+    }
+  }
+
+  @include media("<phone") {
+    .form-group {
+      padding: 0 $m1;
+    }
+  }
+}
