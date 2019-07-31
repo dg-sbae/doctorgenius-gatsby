@@ -46,7 +46,10 @@
   .listed-items {
     align-items: start;
   }
-  .listed-items h2 {
+  .listed-items h2,
+  .speaker-details h2,
+  .speaker-details h3,
+  .dg-marketing-solutions h2 {
     font-size: 36px;
     line-height: 1.2;
     font-weight: $font-weight-medium;
@@ -65,9 +68,45 @@
   }
   .listed-items .content-image img {
     float: right;
+    max-width: 100%;
   }
   .listed-items h2 {
     margin-bottom: $pad * 1.5;
+  }
+  .speaker-profiles {
+    justify-content: start;
+  }
+  .speaker-profiles p {
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+    text-align: center;
+    margin-top: $pad;
+  }
+  .speaker-profiles img {
+    width: 146px;
+  }
+  .dg-marketing-solutions h2 {
+    text-align: center;
+  }
+  .dg-dictionary {
+    padding-top: $m1;
+  }
+  .dg-dictionary h4 {
+    font-size: 23px;
+    color: $primary;
+    font-weight: $font-weight-medium;
+    margin-bottom: 0;
+  }
+  .dg-dictionary p {
+    font-size: 18px;
+    font-family: $font-family-body-text;
+    margin-bottom: $pad;
+  }
+  .request-demo-footer .button {
+    background-color: #0074cf;
+  }
+  .request-demo-footer .button:hover {
+    background-color: $secondary;
   }
 
   @include media(">=laptop") {
@@ -92,6 +131,15 @@
     }
     .hero .container-fluid > .row {
       justify-content: flex-start;
+    }
+    .dg-dictionary .col-lap-6:last-child {
+      padding-left: $m1 * 2.5;
+    }
+    .request-demo-footer {
+      padding-bottom: 60px;
+    }
+    .request-demo-footer .content-block p {
+      font-size: 17px;
     }
   }
 
@@ -122,6 +170,24 @@
     }
     .listed-items h2:nth-of-type(2) {
       margin-top: $m1 * 1.5;
+    }
+    .speaker-details h2,
+    .speaker-details h3 {
+      text-align: center;
+    }
+    .speaker-details h3 {
+      margin-bottom: $m1;
+    }
+    .col-sm-12.col-md-6.col-lap-3 {
+      margin-bottom: $m1 * 1.5;
+    }
+    .request-demo-footer .content-block h2 {
+      font-size: 45px;
+      text-align: center;
+    }
+    .request-demo-footer .content-block p {
+      font-size: 17px;
+      font-family: $font-family-body-text;
     }
   }
 
@@ -173,6 +239,27 @@
     .listed-items h2:nth-of-type(2) {
       margin-top: $m1 * 1.2;
     }
+    .speaker-details h2,
+    .speaker-details h3 {
+      text-align: center;
+    }
+    .speaker-details h3 {
+      margin-bottom: $pad * 1.5;
+    }
+    .col-sm-12.col-md-6.col-lap-3:not(:last-child) {
+      margin-bottom: $m1;
+    }
+    .col-sm-12.col-md-6.col-lap-3:last-child {
+      margin-bottom: $m1 / 2;
+    }
+    .request-demo-footer .content-block h2 {
+      font-size: 30px;
+      text-align: center;
+    }
+    .request-demo-footer .content-block p {
+      font-size: 17px;
+      font-family: $font-family-body-text;
+    }
   }
 
   @include media("<phone") {
@@ -181,6 +268,11 @@
     }
     .event-date .card {
       width: 100vw;
+    }
+  }
+  @include media(">laptop", "<desktop") {
+    .speaker-profiles img {
+      width: 110px;
     }
   }
   @media (min-width: 425px) and (max-width: 425px) {

@@ -47,17 +47,23 @@ const dummy_data = {
   information_h2_li_4: "5 in 6 connect to businesses via Social Media",
   include_marketing: "",
   information_image: "1688",
+  information_image_url:
+    "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/img-course-description-02.png",
   include_speakers: "",
-  speaker_section_title: "",
-  speaker_section_subtitle: "",
+  speaker_section_title: "Digital Marketing",
+  speaker_section_subtitle: "Mastermind Speakers",
   speaker_items: {
-    "1": {
-      speaker_name: "J-Bot",
+    1: {
+      speaker_name: "Kylie Montoya",
       speaker_position: "1",
+      speaker_profile_image_url:
+        "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-montoya.jpg",
     },
-    "2": {
-      speaker_name: "B-Rob",
-      speaker_position: "1",
+    2: {
+      speaker_name: "Shawn Stiffler",
+      speaker_position: "2",
+      speaker_profile_image_url:
+        "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-stiffler.jpg",
     },
   },
 }
@@ -135,8 +141,8 @@ export default props => (
 
           <div className="spacer solid"></div>
 
-          <div className="row content-block listed-items padded">
-            <div className="col-sm-11 col-lap-6">
+          <div className="row content-block padded listed-items">
+            <div className="col-sm-11 col-md-9 col-lap-6">
               <h2>{dummy_data.information_heading1}</h2>
               <ul>
                 <li>{dummy_data.information_h1_li_1}</li>
@@ -153,17 +159,197 @@ export default props => (
               </ul>
             </div>
             <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
-              <img src={shakingHands} />
+              <img src={dummy_data.information_image_url} alt="" />
             </div>
           </div>
 
           <div className="spacer solid"></div>
 
-          <div className="row content-block padded">
-            <div className="col-sm-12">
-              <h2>HELLOTHERES</h2>
+          <div className="row content-block padded speaker-details">
+            <div className="col-sm-12 col-lap-4">
+              <h2>{dummy_data.speaker_section_title}:</h2>
+              <h3>{dummy_data.speaker_section_subtitle}</h3>
+            </div>
+            <div className="col-sm-12 col-md-8 col-lap-8">
+              <div className="row speaker-profiles">
+                <div className="col-sm-12 col-md-6 col-lap-3">
+                  <div className="speaker-img-wrapper">
+                    <img
+                      className="mx-auto d-block"
+                      src={
+                        dummy_data.speaker_items[1].speaker_profile_image_url
+                      }
+                      alt="Speaker Profile"
+                    />
+                  </div>
+                  <p>{dummy_data.speaker_items[1].speaker_name}</p>
+                </div>
+                <div className="col-sm-12 col-md-6 col-lap-3">
+                  <div className="speaker-img-wrapper">
+                    <img
+                      className="mx-auto d-block"
+                      src={
+                        dummy_data.speaker_items[2].speaker_profile_image_url
+                      }
+                      alt="Speaker Profile"
+                    />
+                  </div>
+                  <p>{dummy_data.speaker_items[2].speaker_name}</p>
+                </div>
+                <div className="col-sm-12 col-md-6 col-lap-3">
+                  <div className="speaker-img-wrapper">
+                    <img
+                      className="mx-auto d-block"
+                      src={
+                        dummy_data.speaker_items[1].speaker_profile_image_url
+                      }
+                      alt="Speaker Profile"
+                    />
+                  </div>
+                  <p>{dummy_data.speaker_items[1].speaker_name}</p>
+                </div>
+                <div className="col-sm-12 col-md-6 col-lap-3">
+                  <div className="speaker-img-wrapper">
+                    <img
+                      className="mx-auto d-block"
+                      src={
+                        dummy_data.speaker_items[2].speaker_profile_image_url
+                      }
+                      alt="Speaker Profile"
+                    />
+                  </div>
+                  <p>{dummy_data.speaker_items[2].speaker_name}</p>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div className="spacer solid"></div>
+
+          <div className="row content-block padded dg-marketing-solutions">
+            <div className="col-sm-11 col-md-9 col-lap-12">
+              <h2>
+                Doctor Genius
+                <br />
+                Marketing Solutions
+              </h2>
+              <div className="row dg-dictionary">
+                <div className="col-lap-6">
+                  <h4>Website</h4>
+                  <p>
+                    Our websites are power-packed with fresh and unique content
+                    tailored to your practice and services
+                  </p>
+                  <h4>Branding</h4>
+                  <p>
+                    Delivering effective brand strategies that gives practices a
+                    major edge in competitive markets
+                  </p>
+                  <h4>Social Media</h4>
+                  <p>
+                    Original patient education content is posted to your social
+                    media profiles to generate general interest in your medical
+                    treatments and services
+                  </p>
+                  <h4>Search Marketing</h4>
+                  <p>
+                    Narrow down your successful keywords, who is clicking on
+                    them, and which keywords yield the highest number of new
+                    patient inquiries
+                  </p>
+                  <h4>Hyper-Local Targeting</h4>
+                  <p>
+                    We increase the focus of who we are targeting to a small
+                    geographic region near your practice
+                  </p>
+                  <h4>Lead Tracking</h4>
+                  <p>
+                    Get a detailed breakdown of your patient inquiries and their
+                    disposition. Determine new or returning patients to better
+                    track your Return On Investment (ROI)
+                  </p>
+                  <h4>Security</h4>
+                  <p>
+                    We are always first in line when it comes to running the
+                    latest technology. In addition to our servers being in the
+                    best location possible, we are also using the best software
+                    available
+                  </p>
+                </div>
+                <div className="col-lap-6">
+                  <h4>Genius Portal</h4>
+                  <p>
+                    Get the information you need about your website and
+                    performance in one easy-to-use dashboard
+                  </p>
+                  <h4>Rank Report</h4>
+                  <p>
+                    We provide reporting and analytics to keep you up-to-date on
+                    your first page placement for targeted keywords
+                  </p>
+                  <h4>Review Management</h4>
+                  <p>
+                    9 out of 10 customers read reviews before making a
+                    purchasing decision. Stay informed of what patients are
+                    saying about your practice
+                  </p>
+                  <h4>HOSTING</h4>
+                  <p>
+                    Get reviews from your existing patients fast with our
+                    streamlined SMS and email services
+                  </p>
+                  <h4>Practice Promoter</h4>
+                  <p>
+                    Get reviews from existing patients fast with your
+                    streamlined SMS and e-mail services
+                  </p>
+                  <h4>Recall</h4>
+                  <p>
+                    We have knowledge of each practice, which involves the clear
+                    understanding of their industry and answering the questions
+                    of their patient needs
+                  </p>
+                  <h4>Retention</h4>
+                  <p>
+                    Our goal is to help health practices retain as many
+                    customers as possible, often through customer loyalty and
+                    brand loyalty initiatives
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="spacer solid"></div>
+
+          {/* Begin Demo Footer */}
+          <div className="row padded tall-top request-demo-footer">
+            <div className="col-sm-11 col-md-9 col-lap-5">
+              <div className="content-block">
+                <div className="inner-title">
+                  <h2>
+                    Start your <span>success</span> with Doctor Genius today!
+                  </h2>
+                  <div className="accented-paragraph">
+                    <p>
+                      The Genius platform makes every part of your company
+                      process more efficient. Our support team is very excited
+                      to help you and get your company on the right path of
+                      success.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-10 col-md-5 col-lap-5">
+              <div className="center">
+                <a href="/demo" className="button flat white-text">
+                  Request Demo <img src={thinArrowRight} alt="Arrow Right" />
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* End Demo Footer */}
         </Container>
       </Main>
     </div>
