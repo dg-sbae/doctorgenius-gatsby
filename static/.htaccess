@@ -43,7 +43,6 @@ Redirect 301 /portal /
 Redirect 301 /confirmation /
 Redirect 301 /thank-you /
 Redirect 301 /ce /
-Redirect 302 /contact /demo
 Redirect 301 /category/digital-marketing /the-study/digital-marketing
 Redirect 301 /category/practice-management /the-study/practice-management
 Redirect 301 /category/genius-lab /the-study/genius-lab
