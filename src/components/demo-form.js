@@ -195,6 +195,7 @@ class DemoForm extends React.Component {
               }}
               type="text"
               placeholder="First & Last name"
+              required
             />
             <input
               ref={ref => {
@@ -202,6 +203,7 @@ class DemoForm extends React.Component {
               }}
               type="text"
               placeholder="Practice Name ( ex. Dental Spa)"
+              required
             />
             <input
               ref={ref => {
@@ -209,6 +211,7 @@ class DemoForm extends React.Component {
               }}
               type="email"
               placeholder="Email Address"
+              required
             />
             <input
               ref={ref => {
@@ -216,6 +219,7 @@ class DemoForm extends React.Component {
               }}
               type="phone"
               placeholder="Phone Number"
+              required
             />
           </div>
           <div>
