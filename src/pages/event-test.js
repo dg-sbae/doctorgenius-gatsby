@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import he from "he"
 import Img from "gatsby-image"
-import shakingHands from "../img/shakingHands.jpg"
+import $ from "jquery"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -32,6 +32,8 @@ const dummy_data = {
   event_city: "Los Angeles",
   event_state: "CA",
   event_zip: "92345",
+  hero_bg_image_url:
+    "https://doctorgenius-wordpress.dgd3v.com/wp-content/uploads/2019/08/partnerships-hero.jpg",
   information_heading1:
     "3 Spring Cleaning Tips to Clean Up Your Accounts Receivable",
   information_h1_li_1:
@@ -48,24 +50,101 @@ const dummy_data = {
   include_marketing: "",
   information_image: "1688",
   information_image_url:
-    "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/img-course-description-02.png",
-  include_speakers: "",
+    "https://doctorgenius-wordpress.dgd3v.com/wp-content/uploads/2019/08/information-image-test.jpg",
+  include_speakers: "1",
   speaker_section_title: "Digital Marketing",
   speaker_section_subtitle: "Mastermind Speakers",
-  speaker_items: {
-    1: {
-      speaker_name: "Kylie Montoya",
-      speaker_position: "1",
+  speakers: [
+    {
+      speaker_name: "Kylie",
+      speaker_order: "4",
       speaker_profile_image_url:
         "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-montoya.jpg",
     },
-    2: {
-      speaker_name: "Shawn Stiffler",
-      speaker_position: "2",
+    {
+      speaker_name: "Shawn",
+      speaker_order: "1",
       speaker_profile_image_url:
         "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-stiffler.jpg",
     },
-  },
+    {
+      speaker_name: "Kylie Jr",
+      speaker_order: "2",
+      speaker_profile_image_url:
+        "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-montoya.jpg",
+    },
+    {
+      speaker_name: "Shawn Jr",
+      speaker_order: "3",
+      speaker_profile_image_url:
+        "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-stiffler.jpg",
+    },
+  ],
+}
+
+const mapOrder = (arr, order, key) => {
+  arr.sort((a, b) => {
+    let A = a[key]
+    let B = b[key]
+    if (order.indexOf(A) > order.indexOf(B)) {
+      return 1
+    } else {
+      return -1
+    }
+  })
+  return arr
+}
+
+const sortSpeakers = arr => {
+  let current_order_array = []
+  let speaker_order = []
+
+  dummy_data.speakers.map(speaker => {
+    let number = speaker.speaker_order
+    current_order_array.push(number)
+  })
+
+  speaker_order = current_order_array.sort()
+  let speakers_sorted = mapOrder(arr, speaker_order, "speaker_order")
+  return arr
+}
+
+const speakers = sortSpeakers(dummy_data.speakers)
+
+const styleBackgroundImage = {
+  backgroundImage: "url(" + dummy_data.hero_bg_image_url + ")",
+}
+
+const speaker_holder = speakers.map(function(speaker) {
+  return (
+    <div className="col-sm-12 col-md-6 col-lap-3" key={speaker.speaker_name}>
+      <div className="speaker-img-wrapper">
+        <img
+          className="mx-auto d-block"
+          src={speaker.speaker_profile_image_url}
+          alt="Speaker Profile"
+        />
+      </div>
+      <p>{speaker.speaker_name}</p>
+    </div>
+  )
+})
+
+const display_speakers = () => {
+  if (dummy_data.include_speakers) {
+    $(".speaker-top-border").show()
+    return (
+      <div className="row content-block padded speaker-details">
+        <div className="col-sm-12 col-lap-4">
+          <h2>{dummy_data.speaker_section_title}:</h2>
+          <h3>{dummy_data.speaker_section_subtitle}</h3>
+        </div>
+        <div className="col-sm-12 col-md-8 col-lap-8">
+          <div className="row speaker-profiles">{speaker_holder}</div>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default props => (
@@ -78,32 +157,34 @@ export default props => (
       />
     </Helmet>
     <div className={props["*"]}>
-      <div className="hero">
-        {/* Hero will be a layout component */}
+      <div className="hero" style={styleBackgroundImage}>
+        <div className="hero-overlay">
+          {/* Hero will be a layout component */}
 
-        <Container>
-          <div className="row">
-            <div className="col-sm-12 col-md-9 col-lap-8">
-              <div className="continue-edu-class-holder">
-                <span className="button flat white-text continue-edu-class">
-                  {dummy_data.event_subtitle}
-                </span>
-              </div>
-              <div className="titles">
-                <h1>{dummy_data.event_title}</h1>
-                <h2>{dummy_data.event_strapline}</h2>
-              </div>
-              <div className="register-now-btn-holder">
-                <a
-                  className="button flat white-text register-now-btn"
-                  href={dummy_data.register_url}
-                >
-                  Register Now
-                </a>
+          <Container>
+            <div className="row">
+              <div className="col-sm-12 col-md-9 col-lap-8">
+                <div className="continue-edu-class-holder">
+                  <span className="button flat white-text continue-edu-class">
+                    {dummy_data.event_subtitle}
+                  </span>
+                </div>
+                <div className="titles">
+                  <h1>{dummy_data.event_title}</h1>
+                  <h2>{dummy_data.event_strapline}</h2>
+                </div>
+                <div className="register-now-btn-holder">
+                  <a
+                    className="button flat white-text register-now-btn"
+                    href={dummy_data.register_url}
+                  >
+                    Register Now
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </div>
       <Main>
         <Container>
@@ -124,12 +205,15 @@ export default props => (
                           Date: {dummy_data.event_date}
                         </p>
                         <p className="card-text">
-                          Location: {dummy_data.event_venue},{" "}
+                          Time: {dummy_data.start_time},{" "}
                           {dummy_data.event_state}
                         </p>
                         <p className="card-text">
-                          Time: {dummy_data.start_time} {" to "}{" "}
-                          {dummy_data.end_time}
+                          <span>Location: </span>
+                          <span>
+                            {dummy_data.event_street_address},{" "}
+                            {dummy_data.event_city} {dummy_data.event_state}
+                          </span>
                         </p>
                       </div>
                     </div>
@@ -162,67 +246,9 @@ export default props => (
               <img src={dummy_data.information_image_url} alt="" />
             </div>
           </div>
+          <div className="spacer solid speaker-top-border"></div>
 
-          <div className="spacer solid"></div>
-
-          <div className="row content-block padded speaker-details">
-            <div className="col-sm-12 col-lap-4">
-              <h2>{dummy_data.speaker_section_title}:</h2>
-              <h3>{dummy_data.speaker_section_subtitle}</h3>
-            </div>
-            <div className="col-sm-12 col-md-8 col-lap-8">
-              <div className="row speaker-profiles">
-                <div className="col-sm-12 col-md-6 col-lap-3">
-                  <div className="speaker-img-wrapper">
-                    <img
-                      className="mx-auto d-block"
-                      src={
-                        dummy_data.speaker_items[1].speaker_profile_image_url
-                      }
-                      alt="Speaker Profile"
-                    />
-                  </div>
-                  <p>{dummy_data.speaker_items[1].speaker_name}</p>
-                </div>
-                <div className="col-sm-12 col-md-6 col-lap-3">
-                  <div className="speaker-img-wrapper">
-                    <img
-                      className="mx-auto d-block"
-                      src={
-                        dummy_data.speaker_items[2].speaker_profile_image_url
-                      }
-                      alt="Speaker Profile"
-                    />
-                  </div>
-                  <p>{dummy_data.speaker_items[2].speaker_name}</p>
-                </div>
-                <div className="col-sm-12 col-md-6 col-lap-3">
-                  <div className="speaker-img-wrapper">
-                    <img
-                      className="mx-auto d-block"
-                      src={
-                        dummy_data.speaker_items[1].speaker_profile_image_url
-                      }
-                      alt="Speaker Profile"
-                    />
-                  </div>
-                  <p>{dummy_data.speaker_items[1].speaker_name}</p>
-                </div>
-                <div className="col-sm-12 col-md-6 col-lap-3">
-                  <div className="speaker-img-wrapper">
-                    <img
-                      className="mx-auto d-block"
-                      src={
-                        dummy_data.speaker_items[2].speaker_profile_image_url
-                      }
-                      alt="Speaker Profile"
-                    />
-                  </div>
-                  <p>{dummy_data.speaker_items[2].speaker_name}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {display_speakers()}
 
           <div className="spacer solid"></div>
 

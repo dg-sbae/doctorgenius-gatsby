@@ -2,8 +2,6 @@
 
 .event-test {
   .hero {
-    background-color: lightgrey;
-    background-image: url("../img/hero/plans.jpg");
     background-position: center 18%;
   }
   .hero-padding {
@@ -38,7 +36,7 @@
     background-color: #0074cf;
   }
   .card-body {
-    margin-top: $pad / 2;
+    margin-top: -$pad / 2;
   }
   .card-body p {
     margin-top: $pad / 2;
@@ -140,6 +138,9 @@
     }
     .request-demo-footer .content-block p {
       font-size: 17px;
+    }
+    .speaker-top-border {
+      display: none;
     }
   }
 
