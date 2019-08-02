@@ -81,7 +81,7 @@ const dummy_data = {
   ],
 }
 
-// Generic function to sort array based off a object's name(key)
+// Generic function to sort array based off an object's name(key)
 const mapOrder = (arr, order, key) => {
   arr.sort((a, b) => {
     let A = a[key]
@@ -150,6 +150,7 @@ const speaker_holder = speakers.map(function(speaker) {
   )
 })
 
+// Page content
 export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>

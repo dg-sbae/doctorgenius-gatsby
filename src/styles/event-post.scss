@@ -4,6 +4,20 @@
   .hero {
     background-position: center 18%;
   }
+  .hero-overlay {
+    height: 690px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 55% 70%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: relative;
+  }
   .hero-padding {
     width: 100%;
     height: 90px;
@@ -142,6 +156,56 @@
     .request-demo-footer {
       padding-bottom: 60px;
     }
+    header .logo a .logo-holder {
+      background-image: url("../img/icon/logo-blue.svg");
+    }
+    nav .main-links a,
+    nav .contact-links a,
+    header nav.navbar.main-navbar-stuck a {
+      color: $primary;
+    }
+    header .phone > a .phone-holder {
+      background-image: url("../img/phone-blue.svg");
+    }
+    .button.nav-button {
+      border: 1px solid $primary;
+    }
+    nav.main-navbar-stuck .free-demo-button a {
+      color: #fff !important;
+    }
+    nav.main-navbar-stuck .free-demo-button {
+      background-color: $primary;
+    }
+    header .dropdown-row a {
+      color: $primary-text !important;
+    }
+
+    nav.main-navbar-stuck .button.nav-button.free-demo-button:hover {
+      color: $primary !important;
+      background-color: $primary-text !important;
+    }
+
+    nav.main-navbar-stuck .button.nav-button.free-demo-button a:hover {
+      color: $primary !important;
+    }
+    .button.nav-button.free-demo-button:hover {
+      background-color: $primary !important;
+      border-color: $primary !important;
+    }
+    .button.nav-button.free-demo-button:hover a {
+      color: #fff !important;
+    }
+    .hero-overlay {
+      background-image: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.2) 0,
+        #fff 65%
+      );
+    }
+    .main-content {
+      background: top/300px repeat-x url("../img/background-texture.png"),
+        center 100%/300px repeat-x url("../img/background-texture-flipped.png");
+    }
   }
 
   @include media(">laptop", "<desktop") {
@@ -162,6 +226,12 @@
       font-weight: $font-weight-normal;
       margin-top: 0 !important;
       text-align: center;
+    }
+    .navigation-wrapper {
+      background-color: $primary;
+    }
+    header .logo a .logo-holder {
+      background-image: url("../img/icon/logo-white.svg");
     }
     .register-now-btn-holder,
     .continue-edu-class-holder {
@@ -196,6 +266,9 @@
       font-size: 17px;
       font-family: $font-family-body-text;
     }
+    .hero-overlay {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
   }
 
   @include media("<tablet") {
@@ -210,6 +283,12 @@
       font-weight: $font-weight-normal;
       margin-top: 0 !important;
       text-align: center;
+    }
+    .navigation-wrapper {
+      background-color: $primary;
+    }
+    header .logo a .logo-holder {
+      background-image: url("../img/icon/logo-white.svg");
     }
     .register-now-btn-holder,
     .continue-edu-class-holder {
@@ -266,6 +345,9 @@
     .request-demo-footer .content-block p {
       font-size: 17px;
       font-family: $font-family-body-text;
+    }
+    .hero-overlay {
+      background-color: rgba(255, 255, 255, 0.5);
     }
   }
 
