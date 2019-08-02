@@ -1,8 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import he from "he"
-import Img from "gatsby-image"
 import $ from "jquery"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
@@ -13,6 +11,7 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/event-post.scss"
 
+// Temporary data, will be replaced with Custom Event Data from Wordpress
 const dummy_data = {
   featured_event: "1",
   event_title: "Nickerson Consulting:",
@@ -57,7 +56,7 @@ const dummy_data = {
   speakers: [
     {
       speaker_name: "Kylie",
-      speaker_order: "4",
+      speaker_order: "2",
       speaker_profile_image_url:
         "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-montoya.jpg",
     },
@@ -69,7 +68,7 @@ const dummy_data = {
     },
     {
       speaker_name: "Kylie Jr",
-      speaker_order: "2",
+      speaker_order: "4",
       speaker_profile_image_url:
         "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-montoya.jpg",
     },
@@ -82,6 +81,7 @@ const dummy_data = {
   ],
 }
 
+// Generic function to sort array based off a object's name(key)
 const mapOrder = (arr, order, key) => {
   arr.sort((a, b) => {
     let A = a[key]
@@ -95,41 +95,28 @@ const mapOrder = (arr, order, key) => {
   return arr
 }
 
+// Function to sort speaker array based off speaker_position
 const sortSpeakers = arr => {
   let current_order_array = []
   let speaker_order = []
 
-  dummy_data.speakers.map(speaker => {
+  arr.map(speaker => {
     let number = speaker.speaker_order
     current_order_array.push(number)
   })
 
   speaker_order = current_order_array.sort()
-  let speakers_sorted = mapOrder(arr, speaker_order, "speaker_order")
+  arr = mapOrder(arr, speaker_order, "speaker_order")
   return arr
 }
-
 const speakers = sortSpeakers(dummy_data.speakers)
 
+//Dynamically add BG image from event data
 const styleBackgroundImage = {
   backgroundImage: "url(" + dummy_data.hero_bg_image_url + ")",
 }
 
-const speaker_holder = speakers.map(function(speaker) {
-  return (
-    <div className="col-sm-12 col-md-6 col-lap-3" key={speaker.speaker_name}>
-      <div className="speaker-img-wrapper">
-        <img
-          className="mx-auto d-block"
-          src={speaker.speaker_profile_image_url}
-          alt="Speaker Profile"
-        />
-      </div>
-      <p>{speaker.speaker_name}</p>
-    </div>
-  )
-})
-
+// Handles displaying speaker section if speakers are present
 const display_speakers = () => {
   if (dummy_data.include_speakers) {
     $(".speaker-top-border").show()
@@ -147,14 +134,27 @@ const display_speakers = () => {
   }
 }
 
+// Handles output of each speaker
+const speaker_holder = speakers.map(function(speaker) {
+  return (
+    <div className="col-sm-12 col-md-6 col-lap-3" key={speaker.speaker_name}>
+      <div className="speaker-img-wrapper">
+        <img
+          className="mx-auto d-block"
+          src={speaker.speaker_profile_image_url}
+          alt="Speaker Profile"
+        />
+      </div>
+      <p>{speaker.speaker_name}</p>
+    </div>
+  )
+})
+
 export default props => (
   <DefaultPageLayout location={props["*"]}>
     <Helmet>
       <title>Event Details | Doctor Genius</title>
-      <meta
-        name="description"
-        content="You wanna see us? We wanna see you. Come to this event."
-      />
+      <meta name="description" content="Doctor Genius | Event." />
     </Helmet>
     <div className={props["*"]}>
       <div className="hero" style={styleBackgroundImage}>
