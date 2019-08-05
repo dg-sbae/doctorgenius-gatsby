@@ -19,6 +19,7 @@ const dummy_data = {
     "3 Spring Cleaning Tips to Clean Up Your Accounts Receivable",
   event_subtitle: "Continuing Education Class",
   register_url: "https://register.gotowebinar.com/register/5575627151713752578",
+  register_button_text: "Register Now",
   featured_image: null,
   event_details_text:
     "We will be showcasing proven marketing methods to attract and return the fastest growing buying group, Millennials.",
