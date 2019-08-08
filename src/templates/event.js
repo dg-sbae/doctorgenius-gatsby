@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import $ from "jquery"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -19,6 +18,7 @@ const dummy_data = {
     "3 Spring Cleaning Tips to Clean Up Your Accounts Receivable",
   event_subtitle: "Continuing Education Class",
   register_url: "https://register.gotowebinar.com/register/5575627151713752578",
+  register_button_text: "Register Now",
   featured_image: null,
   event_details_text:
     "We will be showcasing proven marketing methods to attract and return the fastest growing buying group, Millennials.",
@@ -119,7 +119,6 @@ const styleBackgroundImage = {
 // Handles displaying speaker section if speakers are present
 const display_speakers = () => {
   if (dummy_data.include_speakers) {
-    $(".speaker-top-border").show()
     return (
       <div className="row content-block padded speaker-details">
         <div className="col-sm-12 col-lap-4">
@@ -247,7 +246,10 @@ export default props => (
               <img src={dummy_data.information_image_url} alt="" />
             </div>
           </div>
-          <div className="spacer solid speaker-top-border"></div>
+
+          <div
+            className={dummy_data.include_speakers ? "spacer solid" : "d-none"}
+          ></div>
 
           {display_speakers()}
 
