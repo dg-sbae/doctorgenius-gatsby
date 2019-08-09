@@ -1,6 +1,5 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -102,7 +101,7 @@ const sortSpeakers = arr => {
 
   arr.map(speaker => {
     let number = speaker.speaker_order
-    current_order_array.push(number)
+    return current_order_array.push(number)
   })
 
   speaker_order = current_order_array.sort()

@@ -281,6 +281,65 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     // ==== END POSTS ====
+
+    // ==== EVENTS ====
+
+    graphql(
+      `
+        {
+          allWordpressCategory(filter: { name: { in: "Events" } }) {
+            edges {
+              node {
+                name
+                slug
+              }
+            }
+          }
+          latestEvents: allWordpressWpEvents(
+            sort: { fields: [date], order: [DESC] }
+          ) {
+            edges {
+              previous {
+                slug
+                wordpress_id
+              }
+              next {
+                slug
+                wordpress_id
+              }
+              node {
+                slug
+                wordpress_id
+              }
+            }
+          }
+        }
+      `
+    ).then(result => {
+      if (result.errors) {
+        console.log(result.errors)
+        reject(result.errors)
+      }
+      const eventTemplate = path.resolve("./src/templates/event.js")
+
+      // We want to create a detailed page for each
+      // event node. We'll just use the WordPress Slug for the slug.
+      // The Post ID is prefixed with 'POST_'
+      _.each(result.data.latestEvents.edges, edge => {
+        createPage({
+          path: `/events/${edge.node.slug}/`,
+          component: slash(eventTemplate),
+          context: {
+            currentNode: edge.node,
+            currentID: edge.node.wordpress_id,
+          },
+        })
+      })
+
+      resolve()
+    })
+
+    // ==== END EVENTS ====
   })
 }
 
