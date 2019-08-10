@@ -33,6 +33,15 @@ export const siteFragments = graphql`
     link
   }
   fragment eventPost on wordpress__wp_events {
+    all_image_urls {
+      information_image_url {
+        source_url
+        alt_text
+      }
+      hero_image_url {
+        source_url
+      }
+    }
     end_time
     event_city
     event_date

@@ -112,86 +112,149 @@ const sort_speakers = arr => {
 }
 const speakers = sort_speakers(dummy_data.speakers)
 
-//Dynamically add BG image from event data
-const styleBackgroundImage = {
-  backgroundImage: "url(" + dummy_data.hero_bg_image_url + ")",
-}
-
-// Handles displaying speaker section if speakers are present
-const display_speakers = () => {
-  if (dummy_data.include_speakers) {
-    return (
-      <div className="row content-block padded speaker-details">
-        <div className="col-sm-12 col-lap-4">
-          <h2>{dummy_data.speaker_section_title}:</h2>
-          <h3>{dummy_data.speaker_section_subtitle}</h3>
-        </div>
-        <div className="col-sm-12 col-md-8 col-lap-8">
-          <div className="row speaker-profiles">{speaker_holder}</div>
-        </div>
-      </div>
-    )
-  }
-}
-
-// Handles output of each speaker
-const speaker_holder = speakers.map(function(speaker) {
-  return (
-    <div className="col-sm-12 col-md-6 col-lap-3" key={speaker.speaker_name}>
-      <div className="speaker-img-wrapper">
-        <img
-          className="mx-auto d-block"
-          src={speaker.speaker_profile_image_url}
-          alt="Speaker Profile"
-        />
-      </div>
-      <p>{speaker.speaker_name}</p>
-    </div>
-  )
-})
-
-const format_date = date => {
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ]
-  let string_date = date
-    .toString()
-    .replace(/-0+/g, "-")
-    .split(["-"])
-  const month = months[string_date[1] - 1],
-    day = string_date[2],
-    year = string_date[0]
-  const formatted_date = "" + month + " " + day + ", " + year
-  return formatted_date
-}
-
 const EventPage = ({ pageContext, data, location }) => {
   const event_details = data.focusEvent
-  const event_details_date = format_date(event_details.event_date)
   console.log(event_details)
-  /*
-  const mainCategory = post.categories.find(c =>
-    categoriesPaths.find(d => d.name === c.name)
-  )
 
-  //Create the two necessary parts of the blog post by splitting at the first paragraph
-  const content = post.content.split(/(<p>.*?<\/p>)/)
-  const intro = content.slice(1, 2).join()
-  const remainder = content.slice(2).join("")
+  //Dynamically add BG image from event data
+  const styleBackgroundImage = {
+    backgroundImage:
+      "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
+  }
 
-  let escapedTitle = post.title.replace(/\s/g, "+")
-  let escapedLink = encodeURIComponent(location.href) */
+  const format_date = date => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ]
+    let string_date = date
+      .toString()
+      .replace(/-0+/g, "-")
+      .split(["-"])
+    const month = months[string_date[1] - 1],
+      day = string_date[2],
+      year = string_date[0]
+    const formatted_date = "" + month + " " + day + ", " + year
+    return formatted_date
+  }
+
+  const convert_time = time => {
+    time = time.toString()
+    time = time.split(":")
+
+    let hours = Number(time[0])
+    let minutes = Number(time[1])
+
+    let time_value
+
+    if (hours > 0 && hours <= 12) {
+      time_value = "" + hours
+    } else if (hours > 12) {
+      time_value = "" + (hours - 12)
+    } else if (hours === 0) {
+      time_value = "12"
+    }
+
+    time_value += minutes < 10 ? ":0" + minutes : ":" + minutes
+    time_value += hours >= 12 ? " PM" : " AM"
+    return time_value
+  }
+
+  //Check to see if webinar to adjust card-margin
+  let Webinar = null
+  if (
+    (event_details.event_street_address[0],
+    event_details.event_city[0],
+    event_details.event_state[0] === "")
+  ) {
+    Webinar = true
+  }
+
+  const display_location = (street_address, city, state) => {
+    if ((street_address[0], city[0], state[0] === "")) {
+      return <span>Online - Webinar</span>
+    } else {
+      return (
+        <span>
+          {event_details.event_street_address}, {event_details.event_city}{" "}
+          {event_details.event_state}
+        </span>
+      )
+    }
+  }
+
+  // Handles output of each speaker
+  const speaker_holder = speakers.map(function(speaker) {
+    return (
+      <div className="col-sm-12 col-md-6 col-lap-3" key={speaker.speaker_name}>
+        <div className="speaker-img-wrapper">
+          <img
+            className="mx-auto d-block"
+            src={speaker.speaker_profile_image_url}
+            alt="Speaker Profile"
+          />
+        </div>
+        <p>{speaker.speaker_name}</p>
+      </div>
+    )
+  })
+
+  // Handles displaying speaker section if speakers are present
+  const display_speakers = () => {
+    if (event_details.include_speakers[0] === "1") {
+      return (
+        <div className="row content-block padded speaker-details">
+          <div className="col-sm-12 col-lap-4">
+            <h2>{event_details.speaker_section_title}:</h2>
+            <h3>{event_details.speaker_section_subtitle}</h3>
+          </div>
+          <div className="col-sm-12 col-md-8 col-lap-8">
+            <div className="row speaker-profiles">{speaker_holder}</div>
+          </div>
+        </div>
+      )
+    }
+  }
+
+  /*const display_h1_information = () => {
+    let ul = []
+
+    let arr = []
+    let li_item = "information_h1_li_"
+    let children = []
+    for (let i = 1; i <= 4; i++) {
+      li_item = li_item.concat(i)
+      arr.push(li_item)
+      li_item = "information_h1_li_"
+    }
+    console.log(arr)
+    /*for (let j = 0; j < arr.length; j++) {
+      let temp = arr[j]
+      let event_d = "event_details".replace(/['"]+/g, "")
+      temp.replace(/['"]+/g, "")
+      console.log(temp)
+      children.push("<li key={j}>" + {event_d.${temp} + "</li>")
+    }
+    let full_string = "{event_details."
+    return (
+      <ul>
+        {arr.map(li_item => (
+          <li key={li_item}>{full_string + li_item}}</li>
+        ))}
+      </ul>
+    )
+  }
+  */
 
   return (
     <DefaultPageLayout location="event-post">
@@ -233,6 +296,7 @@ const EventPage = ({ pageContext, data, location }) => {
                       className="button flat white-text register-now-btn"
                       href={event_details.register_url[0]}
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {event_details.register_button_text[0] === ""
                         ? "Register Now"
@@ -258,20 +322,24 @@ const EventPage = ({ pageContext, data, location }) => {
                   <div className="row event-date valign-wrapper">
                     <div className="col-sm-11 col-md-10">
                       <div className="card row">
-                        <div className="card-body col-sm-10 col-lap-12 col-lg-8">
+                        <div
+                          className="card-body col-sm-10 col-lap-12 col-lg-9"
+                          id={Webinar === true ? "webinar-location" : ""}
+                        >
                           <p className="card-text">
-                            Date: {event_details_date}
+                            Date: {format_date(event_details.event_date)}
                           </p>
                           <p className="card-text">
-                            Time: {dummy_data.start_time},{" "}
-                            {dummy_data.event_state}
+                            Time: {convert_time(event_details.start_time)} to{" "}
+                            {convert_time(event_details.end_time)}
                           </p>
                           <p className="card-text">
                             <span>Location: </span>
-                            <span>
-                              {dummy_data.event_street_address},{" "}
-                              {dummy_data.event_city} {dummy_data.event_state}
-                            </span>
+                            {display_location(
+                              event_details.event_street_address,
+                              event_details.event_city,
+                              event_details.event_state
+                            )}
                           </p>
                         </div>
                       </div>
@@ -285,29 +353,72 @@ const EventPage = ({ pageContext, data, location }) => {
 
             <div className="row content-block padded listed-items">
               <div className="col-sm-11 col-md-9 col-lap-6">
-                <h2>{dummy_data.information_heading1}</h2>
+                <h2>{event_details.information_heading1}</h2>
                 <ul>
-                  <li>{dummy_data.information_h1_li_1}</li>
-                  <li>{dummy_data.information_h1_li_2}</li>
-                  <li>{dummy_data.information_h1_li_3}</li>
-                  <li>{dummy_data.information_h1_li_4}</li>
+                  {/* Would like to refactor all this with a loop outputting {children} */}
+                  {event_details.information_h1_li_1[0] !== "" ? (
+                    <li>{event_details.information_h1_li_1}</li>
+                  ) : (
+                    <span></span>
+                  )}
+                  {event_details.information_h1_li_2[0] !== "" ? (
+                    <li>{event_details.information_h1_li_2}</li>
+                  ) : (
+                    <span></span>
+                  )}
+                  {event_details.information_h1_li_3[0] !== "" ? (
+                    <li>{event_details.information_h1_li_3}</li>
+                  ) : (
+                    <span></span>
+                  )}
+                  {event_details.information_h1_li_4[0] !== "" ? (
+                    <li>{event_details.information_h1_li_4}</li>
+                  ) : (
+                    <span></span>
+                  )}
                 </ul>
-                <h2>{dummy_data.information_heading2}</h2>
+                <h2>{event_details.information_heading2}</h2>
                 <ul>
-                  <li>{dummy_data.information_h2_li_1}</li>
-                  <li>{dummy_data.information_h2_li_2}</li>
-                  <li>{dummy_data.information_h2_li_3}</li>
-                  <li>{dummy_data.information_h2_li_4}</li>
+                  {event_details.information_h2_li_1[0] !== "" ? (
+                    <li>{event_details.information_h2_li_1}</li>
+                  ) : (
+                    <span></span>
+                  )}
+                  {event_details.information_h2_li_2[0] !== "" ? (
+                    <li>{event_details.information_h2_li_2}</li>
+                  ) : (
+                    <span></span>
+                  )}
+                  {event_details.information_h2_li_3[0] !== "" ? (
+                    <li>{event_details.information_h2_li_3}</li>
+                  ) : (
+                    <span></span>
+                  )}
+                  {event_details.information_h2_li_4[0] !== "" ? (
+                    <li>{event_details.information_h2_li_4}</li>
+                  ) : (
+                    <span></span>
+                  )}
                 </ul>
               </div>
               <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
-                <img src={dummy_data.information_image_url} alt="" />
+                <img
+                  src={
+                    event_details.all_image_urls.information_image_url
+                      .source_url
+                  }
+                  alt={
+                    event_details.all_image_urls.information_image_url.alt_text
+                  }
+                />
               </div>
             </div>
 
             <div
               className={
-                dummy_data.include_speakers ? "spacer solid" : "d-none"
+                event_details.include_speakers[0] === "1"
+                  ? "spacer solid"
+                  : "d-none"
               }
             ></div>
 

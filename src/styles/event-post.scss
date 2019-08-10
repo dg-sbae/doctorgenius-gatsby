@@ -65,6 +65,9 @@
   .card-body {
     margin-top: -$pad / 2;
   }
+  #webinar-location {
+    margin-top: 0;
+  }
   .card-body p {
     margin-top: $pad / 2;
   }
@@ -354,6 +357,12 @@
     }
     .event-date .card {
       width: 100vw;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1045px) {
+    .card-body {
+      padding-left: 3%;
     }
   }
 
