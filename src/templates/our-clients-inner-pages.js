@@ -276,7 +276,7 @@ export default props => {
             </div>
             {/* End CTA banner */}
             {/* Begin testimonial slider */}
-            <div className="row padded tall-bottom">
+            <div className="row padded">
               <div className="col-sm-12">
                 <div className="inner-title center">
                   <h3 className="strapline">Testimonials</h3>

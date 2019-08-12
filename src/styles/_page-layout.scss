@@ -375,7 +375,7 @@ footer {
     position: fixed;
     top: 80px;
     @include media("<laptop") {
-      top: 76px;
+      top: 65px;
     }
     z-index: 100;
     background-color: #fff;
