@@ -287,9 +287,8 @@ export default props => (
                       </li>
                     </ul>
                     <p>
-                      <b>Service Providers, Business Partners and Others</b>: We
-                      may share your information with service providers and
                       <b>Service Providers, Business Partners and Others</b>:
+                      <br />
                       This site is being monitored by one or more third-party
                       monitoring software(s), and may capture information about
                       your visit that will help us improve the quality of our
@@ -303,7 +302,10 @@ export default props => (
                       >
                         https://pixelid.io/T/unsub.html
                       </a>
-                      . We may share your information with service providers and
+                      .
+                    </p>
+                    <p>
+                      We may share your information with service providers and
                       other third parties who perform services on our behalf,
                       such as infrastructure, analytics, marketing, and
                       advertising services. We provide your payment information
