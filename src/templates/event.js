@@ -10,110 +10,12 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/event-post.scss"
 
-// Temporary data, will be replaced with Custom Event Data from Wordpress
-const dummy_data = {
-  featured_event: "1",
-  event_title: "Nickerson Consulting:",
-  event_strapline:
-    "3 Spring Cleaning Tips to Clean Up Your Accounts Receivable",
-  event_subtitle: "Continuing Education Class",
-  register_url: "https://register.gotowebinar.com/register/5575627151713752578",
-  register_button_text: "Register Now",
-  featured_image: null,
-  event_details_text:
-    "We will be showcasing proven marketing methods to attract and return the fastest growing buying group, Millennials.",
-  event_date: "2018-04-06",
-  start_time: "13:00",
-  end_time: "17:00",
-  include_location: "",
-  event_venue: "Trade Venue",
-  event_street_address: "7384 Alberta St",
-  event_city: "Los Angeles",
-  event_state: "CA",
-  event_zip: "92345",
-  hero_bg_image_url:
-    "https://doctorgenius-wordpress.dgd3v.com/wp-content/uploads/2019/08/partnerships-hero.jpg",
-  information_heading1:
-    "3 Spring Cleaning Tips to Clean Up Your Accounts Receivable",
-  information_h1_li_1:
-    "In 2018, will have the most spending power ($3.39 trillion)",
-  information_h1_li_2: "41% make buying decisions via mobile",
-  information_h1_li_3: "48% rely on word of mouth over ads",
-  information_h1_li_4:
-    "63% have a bachelor's degree (most educated demographic)",
-  information_heading2: "Who is a Millennial?",
-  information_h2_li_1: "Reached adulthood in 2000",
-  information_h2_li_2: "One quarter of the entire US population",
-  information_h2_li_3: "85% use a smartphone",
-  information_h2_li_4: "5 in 6 connect to businesses via Social Media",
-  include_marketing: "",
-  information_image: "1688",
-  information_image_url:
-    "https://doctorgenius-wordpress.dgd3v.com/wp-content/uploads/2019/08/information-image-test.jpg",
-  include_speakers: "1",
-  speaker_section_title: "Digital Marketing",
-  speaker_section_subtitle: "Mastermind Speakers",
-  speakers: [
-    {
-      speaker_name: "Kylie",
-      speaker_order: "2",
-      speaker_profile_image_url:
-        "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-montoya.jpg",
-    },
-    {
-      speaker_name: "Shawn",
-      speaker_order: "1",
-      speaker_profile_image_url:
-        "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-stiffler.jpg",
-    },
-    {
-      speaker_name: "Kylie Jr",
-      speaker_order: "4",
-      speaker_profile_image_url:
-        "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-montoya.jpg",
-    },
-    {
-      speaker_name: "Shawn Jr",
-      speaker_order: "3",
-      speaker_profile_image_url:
-        "https://doctorgenius-wordpress.dgplex.com/wp-content/uploads/2018/09/profile-stiffler.jpg",
-    },
-  ],
-}
-
-// Generic function to sort array based off an object's name(key)
-const map_order = (arr, order, key) => {
-  arr.sort((a, b) => {
-    let A = a[key]
-    let B = b[key]
-    if (order.indexOf(A) > order.indexOf(B)) {
-      return 1
-    } else {
-      return -1
-    }
-  })
-  return arr
-}
-
-// Function to sort speaker array based off speaker_position
-const sort_speakers = arr => {
-  let current_order_array = []
-  let speaker_order = []
-
-  arr.map(speaker => {
-    let number = speaker.speaker_order
-    current_order_array.push(number)
-    return true
-  })
-
-  speaker_order = current_order_array.sort()
-  arr = map_order(arr, speaker_order, "speaker_order")
-  return arr
-}
-const speakers = sort_speakers(dummy_data.speakers)
-
 const EventPage = ({ pageContext, data, location }) => {
-  const event_details = data.focusEvent
+  const event_details = data.focus_event
+  const speaker_details = data.speakers_data.speaker_items
+  console.log("SPEAKER DETAILS")
+  console.log(speaker_details)
+  console.log("EVENT DETAILS")
   console.log(event_details)
 
   //Dynamically add BG image from event data
@@ -193,38 +95,93 @@ const EventPage = ({ pageContext, data, location }) => {
     }
   }
 
-  // Handles output of each speaker
-  const speaker_holder = speakers.map(function(speaker) {
-    return (
-      <div className="col-sm-12 col-md-6 col-lap-3" key={speaker.speaker_name}>
-        <div className="speaker-img-wrapper">
-          <img
-            className="mx-auto d-block"
-            src={speaker.speaker_profile_image_url}
-            alt="Speaker Profile"
-          />
-        </div>
-        <p>{speaker.speaker_name}</p>
-      </div>
-    )
-  })
+  //Create new array with all speaker data intact
+  let speaker_items = []
+  //Loop to go through all speakers and grab only the ones relating to this event post.
+  for (let i = 1; i <= 13; i++) {
+    let temp_path = "wordpress_" + i
+    if (speaker_details[0][temp_path]) {
+      speaker_items.push(speaker_details[0][temp_path])
+    }
+  }
+
+  // Generic function to sort array based off an object's name(key)
+  const map_order = (arr, order, key) => {
+    arr.sort((a, b) => {
+      let A = a[key]
+      let B = b[key]
+      if (order.indexOf(A) > order.indexOf(B)) {
+        return 1
+      } else {
+        return -1
+      }
+    })
+    return arr
+  }
+
+  // Function to sort speaker array based off "order"
+  const sort_speakers = arr => {
+    let current_order_array = []
+    let speaker_order = []
+
+    arr.map(speaker => {
+      let number = speaker.order
+      current_order_array.push(number)
+      return true
+    })
+
+    speaker_order = current_order_array.sort()
+    arr = map_order(arr, speaker_order, "order")
+    return arr
+  }
+
+  const speakers = sort_speakers(speaker_items)
+  console.log("SPEAKERS MANG:")
+  console.log(speakers)
 
   // Handles displaying speaker section if speakers are present
   const display_speakers = () => {
-    if (event_details.include_speakers[0] === "1") {
+    return (
+      <div
+        className={
+          event_details.include_speakers[0] === "1"
+            ? "row content-block padded speaker-details"
+            : "d-none"
+        }
+      >
+        <div className="col-sm-12 col-lap-4">
+          <h2>{event_details.speaker_section_title}:</h2>
+          <h3>{event_details.speaker_section_subtitle}</h3>
+        </div>
+        <div className="col-sm-12 col-md-8 col-lap-8">
+          <div className="row speaker-profiles">{speaker_holder}</div>
+        </div>
+      </div>
+    )
+  }
+
+  // Handles output of each speaker
+  const speaker_holder = speakers.map(function(speaker) {
+    if (speakers.length > 1) {
       return (
-        <div className="row content-block padded speaker-details">
-          <div className="col-sm-12 col-lap-4">
-            <h2>{event_details.speaker_section_title}:</h2>
-            <h3>{event_details.speaker_section_subtitle}</h3>
+        <div
+          className="col-sm-12 col-md-6 col-lap-3"
+          key={speaker.speaker_name}
+        >
+          <div className="speaker-img-wrapper">
+            <img
+              className="mx-auto d-block"
+              src={speaker.speaker_profile_image_url.source_url}
+              alt="Speaker Profile"
+            />
           </div>
-          <div className="col-sm-12 col-md-8 col-lap-8">
-            <div className="row speaker-profiles">{speaker_holder}</div>
-          </div>
+          <p>{speaker.speaker_name}</p>
         </div>
       )
+    } else {
+      return <div key={speaker.order}></div>
     }
-  }
+  })
 
   /*const display_h1_information = () => {
     let ul = []
@@ -561,8 +518,11 @@ export default EventPage
 
 export const pageQuery = graphql`
   query($currentID: Int) {
-    focusEvent: wordpressWpEvents(wordpress_id: { eq: $currentID }) {
+    focus_event: wordpressWpEvents(wordpress_id: { eq: $currentID }) {
       ...eventPost
+    }
+    speakers_data: wordpressWpEvents(wordpress_id: { eq: $currentID }) {
+      ...speakers
     }
   }
 `
