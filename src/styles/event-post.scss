@@ -206,6 +206,20 @@
       background: top/300px repeat-x url("../img/background-texture.png"),
         center 100%/300px repeat-x url("../img/background-texture-flipped.png");
     }
+    .speaker-profiles .col-lap-3:nth-child(5),
+    .speaker-profiles .col-lap-3:nth-child(6),
+    .speaker-profiles .col-lap-3:nth-child(7),
+    .speaker-profiles .col-lap-3:nth-child(8),
+    .speaker-profiles .col-lap-3:nth-child(9),
+    .speaker-profiles .col-lap-3:nth-child(10),
+    .speaker-profiles .col-lap-3:nth-child(11),
+    .speaker-profiles .col-lap-3:nth-child(12),
+    .speaker-profiles .col-lap-3:nth-child(13),
+    .speaker-profiles .col-lap-3:nth-child(14),
+    .speaker-profiles .col-lap-3:nth-child(15),
+    .speaker-profiles .col-lap-3:nth-child(16) {
+      margin-top: 5%;
+    }
   }
 
   @include media(">laptop", "<desktop") {

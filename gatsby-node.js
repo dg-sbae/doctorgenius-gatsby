@@ -299,14 +299,6 @@ exports.createPages = ({ graphql, actions }) => {
             sort: { fields: [date], order: [DESC] }
           ) {
             edges {
-              previous {
-                slug
-                wordpress_id
-              }
-              next {
-                slug
-                wordpress_id
-              }
               node {
                 slug
                 wordpress_id

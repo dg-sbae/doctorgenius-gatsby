@@ -13,10 +13,6 @@ import "../styles/event-post.scss"
 const EventPage = ({ pageContext, data, location }) => {
   const event_details = data.focus_event
   const speaker_details = data.speakers_data.speaker_items
-  console.log("SPEAKER DETAILS")
-  console.log(speaker_details)
-  console.log("EVENT DETAILS")
-  console.log(event_details)
 
   //Dynamically add BG image from event data
   const styleBackgroundImage = {
@@ -24,6 +20,17 @@ const EventPage = ({ pageContext, data, location }) => {
       "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
   }
 
+  //Check to see if webinar to adjust location card-margin
+  let Webinar = null
+  if (
+    (event_details.event_street_address[0],
+    event_details.event_city[0],
+    event_details.event_state[0] === "")
+  ) {
+    Webinar = true
+  }
+
+  //Handles formatting of date from Javascript ISO standard to full month, day, year.
   const format_date = date => {
     const months = [
       "January",
@@ -50,6 +57,7 @@ const EventPage = ({ pageContext, data, location }) => {
     return formatted_date
   }
 
+  //Handles conversion of Military time to standard.
   const convert_time = time => {
     time = time.toString()
     time = time.split(":")
@@ -72,16 +80,7 @@ const EventPage = ({ pageContext, data, location }) => {
     return time_value
   }
 
-  //Check to see if webinar to adjust card-margin
-  let Webinar = null
-  if (
-    (event_details.event_street_address[0],
-    event_details.event_city[0],
-    event_details.event_state[0] === "")
-  ) {
-    Webinar = true
-  }
-
+  //Handles output of address or webinar distinction
   const display_location = (street_address, city, state) => {
     if ((street_address[0], city[0], state[0] === "")) {
       return <span>Online - Webinar</span>
@@ -95,14 +94,57 @@ const EventPage = ({ pageContext, data, location }) => {
     }
   }
 
-  //Create new array with all speaker data intact
-  let speaker_items = []
-  //Loop to go through all speakers and grab only the ones relating to this event post.
-  for (let i = 1; i <= 13; i++) {
-    let temp_path = "wordpress_" + i
-    if (speaker_details[0][temp_path]) {
-      speaker_items.push(speaker_details[0][temp_path])
+  //Handles output of h1 li's
+  const display_h1_information = () => {
+    let h1_lis = []
+    let li_item = "information_h1_li_"
+    for (let i = 1; i <= 4; i++) {
+      li_item = li_item + i
+      if (event_details[li_item][0] !== "") {
+        h1_lis.push(event_details[li_item][0])
+      }
+      li_item = "information_h1_li_"
     }
+    return (
+      <ul>
+        {h1_lis.map(li_item => (
+          <li key={h1_lis.indexOf(li_item)}>{li_item}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  //Handles output of h2 li's
+  const display_h2_information = () => {
+    let h2_lis = []
+    let li_item = "information_h2_li_"
+    for (let i = 1; i <= 4; i++) {
+      li_item = li_item + i
+      if (event_details[li_item][0] !== "") {
+        h2_lis.push(event_details[li_item][0])
+      }
+      li_item = "information_h2_li_"
+    }
+    return (
+      <ul>
+        {h2_lis.map(li_item => (
+          <li key={h2_lis.indexOf(li_item)}>{li_item}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  //Find number of speakers in this event and put into a new array
+  const event_speakers = () => {
+    //Create new array with all speaker data intact
+    let speaker_items = []
+    for (let i = 1; i <= 13; i++) {
+      let temp_path = "wordpress_" + i
+      if (speaker_details[0][temp_path]) {
+        speaker_items.push(speaker_details[0][temp_path])
+      }
+    }
+    return speaker_items
   }
 
   // Generic function to sort array based off an object's name(key)
@@ -135,11 +177,9 @@ const EventPage = ({ pageContext, data, location }) => {
     return arr
   }
 
-  const speakers = sort_speakers(speaker_items)
-  console.log("SPEAKERS MANG:")
-  console.log(speakers)
+  const speakers = sort_speakers(event_speakers())
 
-  // Handles displaying speaker section if speakers are present
+  // Handles displaying of the speaker section if speakers are present
   const display_speakers = () => {
     return (
       <div
@@ -182,36 +222,6 @@ const EventPage = ({ pageContext, data, location }) => {
       return <div key={speaker.order}></div>
     }
   })
-
-  /*const display_h1_information = () => {
-    let ul = []
-
-    let arr = []
-    let li_item = "information_h1_li_"
-    let children = []
-    for (let i = 1; i <= 4; i++) {
-      li_item = li_item.concat(i)
-      arr.push(li_item)
-      li_item = "information_h1_li_"
-    }
-    console.log(arr)
-    /*for (let j = 0; j < arr.length; j++) {
-      let temp = arr[j]
-      let event_d = "event_details".replace(/['"]+/g, "")
-      temp.replace(/['"]+/g, "")
-      console.log(temp)
-      children.push("<li key={j}>" + {event_d.${temp} + "</li>")
-    }
-    let full_string = "{event_details."
-    return (
-      <ul>
-        {arr.map(li_item => (
-          <li key={li_item}>{full_string + li_item}}</li>
-        ))}
-      </ul>
-    )
-  }
-  */
 
   return (
     <DefaultPageLayout location="event-post">
@@ -311,52 +321,9 @@ const EventPage = ({ pageContext, data, location }) => {
             <div className="row content-block padded listed-items">
               <div className="col-sm-11 col-md-9 col-lap-6">
                 <h2>{event_details.information_heading1}</h2>
-                <ul>
-                  {/* Would like to refactor all this with a loop outputting {children} */}
-                  {event_details.information_h1_li_1[0] !== "" ? (
-                    <li>{event_details.information_h1_li_1}</li>
-                  ) : (
-                    <span></span>
-                  )}
-                  {event_details.information_h1_li_2[0] !== "" ? (
-                    <li>{event_details.information_h1_li_2}</li>
-                  ) : (
-                    <span></span>
-                  )}
-                  {event_details.information_h1_li_3[0] !== "" ? (
-                    <li>{event_details.information_h1_li_3}</li>
-                  ) : (
-                    <span></span>
-                  )}
-                  {event_details.information_h1_li_4[0] !== "" ? (
-                    <li>{event_details.information_h1_li_4}</li>
-                  ) : (
-                    <span></span>
-                  )}
-                </ul>
+                {display_h1_information()}
                 <h2>{event_details.information_heading2}</h2>
-                <ul>
-                  {event_details.information_h2_li_1[0] !== "" ? (
-                    <li>{event_details.information_h2_li_1}</li>
-                  ) : (
-                    <span></span>
-                  )}
-                  {event_details.information_h2_li_2[0] !== "" ? (
-                    <li>{event_details.information_h2_li_2}</li>
-                  ) : (
-                    <span></span>
-                  )}
-                  {event_details.information_h2_li_3[0] !== "" ? (
-                    <li>{event_details.information_h2_li_3}</li>
-                  ) : (
-                    <span></span>
-                  )}
-                  {event_details.information_h2_li_4[0] !== "" ? (
-                    <li>{event_details.information_h2_li_4}</li>
-                  ) : (
-                    <span></span>
-                  )}
-                </ul>
+                {display_h2_information()}
               </div>
               <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
                 <img
