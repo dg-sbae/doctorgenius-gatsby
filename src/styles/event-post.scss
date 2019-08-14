@@ -59,7 +59,7 @@
   }
   .event-date .card {
     width: 482px;
-    height: 185px;
+    min-height: 185px;
     background-color: #0074cf;
   }
   .card-body {
@@ -318,7 +318,8 @@
     }
     .event-date .card {
       width: 311px;
-      height: 121px;
+      min-height: 121px;
+      height: auto;
       margin-top: $pad;
     }
     .event-date p {
