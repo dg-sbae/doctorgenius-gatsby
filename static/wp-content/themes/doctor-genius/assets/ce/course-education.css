@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+
+img { max-width:100%; }
+a { color:inherit; }
+b { font-weight:400; }
+.fa { color:#555f9a; }
+.fa:hover { color:#8492e2; }
+
+.container { width:98%; }
+.container .row { margin-left:0;margin-right:0; }
+#GoTop { padding:0; }
+
+#Stripes .row { margin:0;padding:0; }
+#Stripes .row > div { height:5px; }
+
+header { width: 100%;padding:15px 0;background: transparent; /* animation magic */ -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; z-index: 9999;top: 0;position: fixed; }
+.shrink { padding: 0px 0;background-color:rgba(39, 46, 77, 1); }
+header nav { background-color:transparent;box-shadow:none; }
+
+header nav .logo { text-align:left;  }
+header nav .logo img { vertical-align: middle; }
+header nav .call { float:right;margin-top:2px; }
+header nav .call span { font:normal 18px 'Montserrat', sans-serif;padding:8px 20px;display:inline-block;margin-right:10px;  }
+header nav .call:hover a { color:#25a79a;-webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; }
+header nav .register { text-align:right;float:right; }
+header nav .register span { font:normal 16px 'Montserrat', sans-serif;padding:8px 20px;border:2px solid #fff;border-radius:30px;display:inline-block;  }
+header nav .register span:hover { background-color:#25a79a;border-color:#25a79a;-webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; }
+
+#Hero { display: table;width: 100%;height: 100vh;text-align: center;color:#fff;background:linear-gradient(rgba(39, 46, 77, .9), rgba(39, 46, 77, 0.8) ), url('/wp-content/uploads/ce/hero-01-background.jpg');background-position:100% 85%; background-color: black; -webkit-background-size: cover;  -moz-background-size: cover;background-size: cover; -o-background-size: cover; }
+#Hero .hero-container { position:relative;z-index:1;display:table-cell;vertical-align:middle; }
+#Hero .content { text-align:center;margin-bottom:100px }
+#Hero h1 { font:bold 65px 'Montserrat', sans-serif;line-height:55px;letter-spacing:-1px;text-transform:uppercase; }
+#Hero h1 span { font-size:38px;font-weight:300; }
+#Hero h2 { font-family: 'Roboto', sans-serif;font-size:4em;font-weight:400;letter-spacing:-2px;line-height:.8em;margin:40px 0 0 0;color:#ffc400; }
+#Hero h3 { font-family: 'Roboto', sans-serif;font-size:36px;font-weight:200;letter-spacing:-1px;line-height:1.2em; }
+#Hero button { background:#f15454;font:normal 26px 'Montserrat', sans-serif;border:1px;border-radius:40px;padding:10px 30px;margin-top:20px;-webkit-box-shadow: 0 2px 0 1px rgb(191, 43, 43) ;
+  box-shadow: 0 2px 0 1px rgb(191, 43, 43);  }
+#Hero button:hover { background:#d23535; -webkit-box-shadow: 0 2px 0 1px rgb(146, 24, 24); box-shadow: 0 2px 0 1px rgb(191, 43, 43);
+  box-shadow: 0 2px 0 1px rgb(191, 43, 43);  }
+#Hero p { font:normal 2.5em 'Montserrat', sans-serif;margin-top:25px; }
+#Hero .scroll-wrap { position:absolute;z-index:1;bottom:0;left:50.5%;margin-left:-4em;overflow:hidden; }
+#Hero .scroll-wrap p { font-size:15px;margin:0; }
+#Hero .scroll-wrap button { background:#25a79a;width:100px;height:100px;padding:10px 16px;font-size:54px;border-radius:60px;margin-top:10px;margin-bottom:-20px;webkit-box-shadow:none ;
+  box-shadow:none; }
+
+#Sponsor { background:#3b4375;width:100%;padding:15px 0 10px; }
+#Sponsor .row { margin-bottom:0; }
+#Sponsor img { width:100%;max-width:180px; }
+
+#Course { font-family: 'Roboto', sans-serif;letter-spacing:-.5px;padding:5% 0 0; }
+#Course p { font-size:18px;font-weight:300;margin:0;padding:0; }
+#Course h3 { font-size: 30px;font-weight: 300;width:100%;color: #009688;margin: 10px 0 0 0;padding:10px 20px;display: inline-block;border-bottom: 1px solid #ccc; }
+#Course .description { font-size:18px;font-weight:400;color:#5f5e5e;margin:0;padding:20px;line-height:28px; }
+#Course .info-wrap { background:#f6f6f6;color:#616161;display:block;font-weight:300;padding:20px; }
+#Course .location { font-size:18px;margin-top:0;padding:0; }
+#Course .date { font-size:18px;margin:0;padding:0; }
+
+#Millennials { font-family: 'Roboto', sans-serif;color:#fff; }
+#Millennials .teal { background:#25a79a; }
+#Millennials .siren { background:#f15454; }
+#Millennials .content-wrap { padding:3% 10%;height:295px;margin-top:20px; }
+#Millennials h3 { font-size:2.5em;font-weight:300;letter-spacing:-1px; }
+#Millennials ul li { font-size:1.2em;font-weight:300;list-style-type: square;margin-left:25px; }
+
+#CourseCallAction { background:#f6f6f6;padding:2% 2%;margin:2% 0 0 0;letter-spacing:-1px; }
+#CourseCallAction h4 { font-size:3em;line-height:38px;color:#000; }
+#CourseCallAction h4 span { font-size:28px;font-weight:300;color:#7b7b7b; }
+#CourseCallAction button { color:#fff;background:#f15454;font:normal 26px 'Montserrat', sans-serif;border:1px;border-radius:40px;padding:10px 30px;margin-top:10px;-webkit-box-shadow: 0 2px 0 1px rgb(191, 43, 43) ;
+  box-shadow: 0 2px 0 1px rgb(191, 43, 43); }
+#CourseCallAction button:hover { background:#d23535; -webkit-box-shadow: 0 2px 0 1px rgb(146, 24, 24); box-shadow: 0 2px 0 1px rgb(191, 43, 43) }  
+
+#Marketing { background:rgba(39, 46, 77, 1);padding:1% 0;color:#fff;letter-spacing:-1px; }
+#Marketing h3 { font:normal 32px 'Montserrat', sans-serif;line-height:52px;margin-top:68px; }
+#Marketing h3 span { font-family: 'Roboto', sans-serif;font-size:64px;font-weight:100; }
+
+#Solutions ul li { margin-top:7%;padding:0 10%; }
+#Solutions .title { font:bold 20px 'Montserrat', sans-serif;margin:0;padding:0;text-transform:uppercase;color:#4d4d4d; }
+#Solutions p { font-family: 'Roboto Condensed', sans-serif;font-size:18px;margin:0;padding:0;line-height:1.2em;font-weight:300;color:#4d4d4d; }
+
+#Mastermind { background:rgba(39, 46, 77, 1);padding:1% 0;color:#fff;letter-spacing:-1px; }
+#Mastermind h3 { font:normal 32px 'Montserrat', sans-serif;line-height:52px;margin-top:68px; }
+#Mastermind h3 span { font-family: 'Roboto', sans-serif;font-size:64px;font-weight:100; }
+
+#Speakers .speaker-wrap { display:block;width:80%;margin:40px auto 0;border-bottom:1px dotted #ccc;padding-bottom:30px; }
+#Speakers .info-wrap { display:inline-block;vertical-align:middle;margin-left:30px; }
+#Speakers .info-wrap span { font-family: 'Roboto Condensed', sans-serif; }
+#Speakers span.name { font-size:24px;font-family: 'Montserrat', sans-serif;letter-spacing:-1px;color:#25a79a; }
+#Speakers span.position { font-size:18px;margin:0;font-weight:100;color:#3b4375; }
+#Speakers span.company { font-size:16px;padding:0;font-weight:400;color:#535152; }
+#Speakers img { display:inline-block;vertical-align:middle;margin-left:30px;border-radius:100px;border:8px solid #e6e6e6; }
+#Speakers .bio { display:inline-block;font-size:18px;font-weight:300;line-height:24px;margin-top:20px;font-family: 'Roboto Condensed', sans-serif;color:#3b4375;   }
+
+#Credits { display:table;width:100%;height:400px;text-align:center;color:#fff;padding:5% 0;background:linear-gradient(rgba(39, 46, 77, 0.8), rgba(39, 46, 77, 0.8) ), url('/wp-content/uploads/ce/hero-01-background.jpg');background-position:100% 77%; background-color: black; -webkit-background-size: cover;  -moz-background-size: cover;background-size: cover; -o-background-size: cover; }
+#Credits h5 { font:normal 32px 'Montserrat', sans-serif;line-height:48px; }
+#Credits h5 span { font-family: 'Roboto', sans-serif;font-size:64px;font-weight:100;letter-spacing:-1px; }
+#Credits button { color:#fff;background:#f15454;font:normal 26px 'Montserrat', sans-serif;border:1px;border-radius:40px;padding:10px 30px;margin-top:10px;-webkit-box-shadow: 0 2px 0 1px rgb(191, 43, 43) ;
+  box-shadow: 0 2px 0 1px rgb(191, 43, 43); }
+#Credits button:hover { background:#d23535; -webkit-box-shadow: 0 2px 0 1px rgb(146, 24, 24); box-shadow: 0 2px 0 1px rgb(191, 43, 43) }  
+#Credits img { margin-top:30px; }
+#Credits .call { display:block;margin:42px 0; }
+#Credits .call span { font:normal 22px 'Montserrat', sans-serif;padding:10px 18px;border:2px solid #fff;border-radius:30px;  }
+#Credits .call span:hover { background-color:#25a79a;border-color:#25a79a;-webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; }
+
+#Map { background-color:#f15454;color:#fff; }
+#Map .row .col { margin:0;padding:0; }
+#Map .row { margin:0px; }
+#Map .info-wrap { float:right;margin:45px 70px 0 0; }
+#Map .company { font-size:34px; }
+#Map .address { font-size:22px;margin:10px 0;line-height:28px;font-weight:300; }
+#Map .date, #Map .time { font-size:18px; }
+#Map iframe { margin-bottom:-5px; }
+#Map img { width:60%; }
+
+footer { background-color:rgba(39, 46, 77, 1);padding:1% 0 1%;margin:0; }
+footer .copyright { color:#555f9a;font-weight:300;font-size:12px;margin:10px 0 0; }
+footer ul { padding:0;margin:0 0 15px 0; }
+footer ul li { display:inline-block;margin:0 5px;padding:0; }
+
+
+
+@media only screen and (max-width: 1366px) {
+  .container { width:95%; }
+  #Hero .content { margin-bottom:50px;  }
+  #Hero h1 { font-size:5em; }
+  #Hero h1 span { font-size:35px; }
+  #Hero h2 { font-size:3.5em;letter-spacing:-1px;line-height:44px; }
+  #Hero h3 { font-size:2em;letter-spacing:0;font-weight:100; }
+  #Hero button { margin-top:0px; }
+  #Map .info-wrap { margin:50px 80px 0 0; }
+    
+
+}
+
+@media only screen and (max-width: 1270px) {
+  #Speakers .speaker-wrap { display:block;width:90%;margin:40px auto 0; }
+  #Speakers .info-wrap { display:block;text-align:center;margin:10px 0; }
+  #Speakers .info-wrap span { font-family: 'Roboto Condensed', sans-serif; }
+  #Speakers img { display:block;margin:0 auto; }
+  #Speakers .bio { text-align:center;margin:0;  }
+
+}
+
+
+@media only screen and (max-width:993px) {
+  .container { width:98%; }
+  #Hero h1 { font-size:4em; }
+  #Hero h1 span { font-size:24px; }
+  #Hero h2 { font-size:3.2em;font-weight:100;letter-spacing:-1px;line-height:44px; }
+  #Hero h3 { font-size:1.5em;letter-spacing:0;font-weight:100; }     
+
+  #Course h3  { width:90%;display:block;text-align:center;margin:10px auto; }
+  #Course .description { font-size:22px;font-weight:300; }   
+  #Course .location { font-size:22px; }
+  #Course .date { font-size:22px; }
+  #Course p { font-size:22px; }
+  #Millennials ul li { font-size:22px;font-weight:100; }
+  #CourseCallAction .container { padding:0 2%; }
+  #Marketing h3 { margin-top:28px; }
+  #Marketing img { padding:20px 20px 0;width:100%; }
+  #Credits img { margin-top:60px; }
+  #Solutions ul li { padding:0 5%; }
+  #Map .info-wrap { float:right;margin:50px 50px 0 0; }
+}
+
+@media only screen and (max-width: 601px) {
+
+  header nav .logo { text-align:center; }
+  header nav .call { display:none; }
+  header nav .register { display:none; }
+  
+  #Hero { height: 100vh; }
+  #Hero .content { margin-bottom:5px; }
+  #Hero h1 { font-size:44px;line-height:38px;letter-spacing:0;margin:0; }
+  #Hero h1 span { font-size:22px;font-weight:300;font-family: 'Roboto', sans-serif; }
+  #Hero h2 { font-size:44px;font-weight:400;letter-spacing:-1px; }
+  #Hero h3 { font-size:22px;letter-spacing:-1px;font-weight:500; }
+  #Hero .scroll-wrap p { display:none; }
+
+  #Sponsor { display:hidden; }
+
+  #Course h3  { width:90%; }
+  #Course .description { font-size:18px;font-weight:300; }   
+  #Course .location { font-size:16px; }
+  #Course .date { font-size:16px; }
+  #Course p { font-size:16px; }
+
+  #Millennials .content-wrap { height:auto;padding:5% 8%; }
+  #Millennials h3 { font-size:2.2em;font-weight:500;text-align:center; }
+  #Millennials ul li { font-size:18px;font-weight:300; } 
+
+  #CourseCallAction { padding:10% 0; }
+  #CourseCallAction h4 { font-size:32px;line-height:34px;color:#000; }
+  #CourseCallAction h4 span { font-size:24px;font-weight:300; }
+
+  #Marketing { padding:1% 0;color:#fff;letter-spacing:-1px; }
+  #Marketing h3 { font-size:32px;line-height:48px;padding:5% 0 0;margin:0; }
+  #Marketing h3 span { font-size:45px; }
+  #Marketing img { width:100%;margin-top:20px;padding:0; }
+
+  #Solutions ul li { margin-top:7%;padding:0 2%; }
+  #Solutions .title { font:bold 22px 'Montserrat', sans-serif;margin:0;padding:0;text-transform:uppercase;color:#4d4d4d; }
+  #Solutions p { font-family: 'Roboto Condensed', sans-serif;font-size:18px;margin:0;padding:0;line-height:1.2em;font-weight:300;color:#4d4d4d; }
+
+  #Mastermind { padding:1% 0;color:#fff;letter-spacing:-1px; }
+  #Mastermind h3 { font-size:45px;line-height:48px;padding:5%;margin:0; }
+  #Mastermind h3 span { font-size:50px; }
+  #Mastermind img { width:100%;margin-top:20px;padding:0; }
+
+  #Speakers .info-wrap { width:100%; }
+  #Speakers img { margin:0px auto; }
+  #Speakers .bio { width:100%;  }
+ 
+  #Map .info-wrap { float:none;padding:10%;margin:0; }
+  #Map img { width:80%; }
+
+  footer { padding-bottom:20px; }
+  footer ul { margin:10px 0; }
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+  header nav .logo { text-align:center; }
+  header nav .call { display:none; }
+  
+  #Hero { height: 106vh; }
+  #Hero h1 { font-size:1em; }
+  #Hero h2 { font-size:1em; }
+  #Hero h3 { font-size:1em; }
+}
+
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  #Hero  {
+    height: 768px;
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  #Hero {
+    height: 923px;
+  }
+}
+
+
+/* animation */
+.bounce:hover { color:#3b4375;-webkit-transition: all 0.4s ease-in-out }
+.bounce {
+    color: #fff;
+    animation: bounce .5s infinite alternate;
+    -webkit-animation: bounce .5s infinite alternate;
+}
+
+@-moz-keyframes bounce {
+  0% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -moz-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes bounce {
+  0 {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+
+
+
+
+
+

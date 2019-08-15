@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+
+img { max-width:100%; }
+a { color:inherit; }
+b { font-weight:400; }
+.fa { color:#0266a9; }
+.fa:hover { color:#ffffff; }
+
+.container { width:98%; }
+.container .row { margin-left:0;margin-right:0; }
+#GoTop { padding:0; }
+
+#Stripes .row { margin:0;padding:0; }
+#Stripes .row > div { height:5px; }
+.divider { display:block;max-width:50px;border-top:10px dotted #ccc;background:none;margin:0 auto; }
+.divider-02 { display:block;max-width:50px;border-top:5px dotted #ccc;background:none;margin-left:10%;margin-top:20px; }
+
+header { width: 100%;padding:15px 0;background: transparent; /* animation magic */ -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; z-index: 9999;top: 0;position: fixed; }
+.shrink { padding: 0px 0;background-color:rgba(2, 102, 169, 0.79) }
+header nav { background-color:transparent;box-shadow:none; }
+
+header nav .logo { text-align:left;  }
+header nav .logo img { vertical-align: middle;max-width:210px; }
+header nav .call { float:right;margin-top:2px; }
+header nav .call span { font:normal 18px 'Montserrat', sans-serif;padding:8px 20px;display:inline-block;margin-right:10px;  }
+header nav .register { text-align:right;float:right; }
+header nav .register span { font:normal 16px 'Montserrat', sans-serif;padding:8px 20px;border-radius:30px;display:inline-block;background:#ea3c3c;  }
+header nav .register span:hover { background:#ff9709; }
+
+#Hero {display: table;width: 100%;height: 100vh;text-align: center;color:#fff;background: linear-gradient(rgba(0, 96, 160, 0.69), rgba(4, 74, 121, 0.92) ), url(/wp-content/uploads/m2m/hero-02.jpg);background-position:100% 85%;background-color: white;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;}
+#Hero .hero-container { position:relative;z-index:1;display:table-cell;vertical-align:middle; }
+#Hero .content { text-align:center;margin-bottom:100px }
+#Hero h1 { font:bold 65px 'Montserrat', sans-serif;line-height:55px;letter-spacing:-1px;}
+#Hero h1 span { font-size:38px;font-weight:100; }
+#Hero h2 {font-family: 'Roboto', sans-serif;font-size: 36px;font-weight: 400;letter-spacing: 0;line-height:.8em;margin:40px 0 0 0;color:#ffc400; }
+#Hero h3 { font-family: 'Roboto', sans-serif;font-size:28px;font-weight:100;letter-spacing:-1px;line-height:40px; }
+#Hero button { background:#ea3c3c;font:normal 26px 'Montserrat', sans-serif;border:1px;border-radius:40px;padding:10px 30px;margin-top:20px; }
+#Hero button:hover { background:#ff9709; }
+#Hero p { font:normal 2.5em 'Montserrat', sans-serif;margin-top:25px; }
+#Hero .scroll-wrap { position:absolute;z-index:1;bottom:0;left:50.5%;margin-left:-4em;overflow:hidden; }
+#Hero .scroll-wrap p { font-size:15px;margin:0; }
+#Hero .scroll-wrap button { background:#ea3c3c;width:100px;height:100px;padding:10px 16px;font-size:54px;border-radius:60px;margin-top:10px;margin-bottom:-20px; }
+
+#Sponsor { background:#0266a9;width:100%;padding:15px 0 10px; }
+#Sponsor .row { margin-bottom:0; }
+#Sponsor img { width:100%;max-width:180px; }
+
+#Course { font-family: 'Roboto', sans-serif;letter-spacing:0px;padding:2% 0 0;background:url('/wp-content/uploads/m2m/google-maps.png')no-repeat;background-position: -36px -71px;padding-bottom:50px; }
+#Course p { font-size:18px;font-weight:300;margin:0;padding:0; }
+#Course h3 {font-size:50px;font-weight: 300;color: #f24c33;margin: 10px 0 0 0;padding:0px 33px;display: inline-block;letter-spacing: -1px;}
+#Course .description { font-size:18px;font-weight:300;color:#5f5e5e;margin:0;padding:20px 20px;line-height:28px; }
+#Course .info-wrap {background: rgba(255, 69, 69, 0.95);color: #ffffff;display:block;font-weight:300;padding:20px;margin:10px auto;max-width: 600px;border-radius:10px;}
+#Course .location { font-size:18px;margin-top:0;padding:0; }
+#Course .date { font-size:18px;margin:0;padding:0; }
+#Course .info-wrap p  { font-size:16px;margin-top:5px;font-weight:600; }
+
+#Millennials { font-family: 'Roboto', sans-serif;color:#636363; }
+#Millennials .title { font-size:34px;margin-left:10%;line-height:.8em;color:#0266a9; }
+#Millennials .title span { font-size:18px; }
+#Millennials .siren { background:#f15454; }
+#Millennials .content-wrap { padding:0% 10%;/* height:295px */;margin-top:40px; }
+#Millennials h3 { font-size:42px;font-weight:300;letter-spacing:-1px;color:#f24c33; }
+#Millennials ul { margin-bottom:50px; }
+#Millennials ul li { font-size:18px;font-weight:300;list-style-type:disc;margin-left:25px;line-height:2em; }
+#Millennials b { font-weight:500; }
+ 
+#CourseCallAction { background:#f5fbff;padding:2% 2%;margin:2% 0 0 0;margin-top:100px; }
+#CourseCallAction h4 { font-size:40px;line-height:38px;color:#0266a9;font-weight:300; }
+#CourseCallAction h4 span { font-size:24px;font-weight:400;color:#797979;margin-top:20px; }
+#CourseCallAction button { color:#fff;background:#ea3c3c;font:normal 26px 'Montserrat', sans-serif;border:1px;border-radius:40px;padding:10px 30px;margin-top:10px; }
+#CourseCallAction button:hover { background:#ff9709; }
+
+#Marketing { background:#0266a9;padding:1% 0;color:#fff;letter-spacing:-1px;background-image:url('/wp-content/uploads/m2m/img-solution-background.png');background-size:50%; }
+#Marketing h3 { font:normal 32px 'Montserrat', sans-serif;line-height:52px;margin-top:68px; }
+#Marketing h3 span { font-family: 'Roboto', sans-serif;font-size:64px;font-weight:100; }
+
+#Solutions { background-image:url('/wp-content/uploads/m2m/img-solution-background-02.png');background-size:60%;background-repeat: repeat-x;padding-top:90px;margin-top:50px; }
+#Solutions h3 { font-family: 'Montserrat', sans-serif;font-size:42px;font-weight:300;letter-spacing:-1px;color:#0266a9; }
+#Solutions ul li { margin-top:7%;padding:0 10%; }
+#Solutions .title { font:300 18px 'Montserrat', sans-serif;margin:0;padding:0;text-transform:uppercase;color:#f24c33; }
+#Solutions p {font-family: 'Roboto', sans-serif;font-size:16px;margin: 4px 0 0 0;padding:0;line-height: 1.4em;font-weight:300;color:#4d4d4d;}
+
+#Speakers { background-image:url('/wp-content/uploads/m2m/img-solution-background-02.png');background-size:60%;background-repeat: repeat-x;padding-top:90px;margin-top:50px; }
+#Speakers h3 { font-family: 'Montserrat', sans-serif;font-size:42px;font-weight:300;letter-spacing:-1px;color:#0266a9; }
+#Speakers .speaker-wrap { display:block;width:80%;margin:40px auto 0;border-bottom:2px dotted #f1f1f1;padding-bottom:30px; }
+#Speakers .info-wrap { display:inline-block;vertical-align:middle;margin-left:30px; }
+#Speakers .info-wrap span { font-family: 'Roboto', sans-serif; }
+#Speakers span.name { font-size:24px;font-family: 'Montserrat', sans-serif;letter-spacing:-1px;color:#027cbc; }
+#Speakers span.position { font-size:18px;margin:0;font-weight:300;color:#f24c33 }
+#Speakers span.company { font-size:16px;padding:0;font-weight:400;color:#535152; }
+#Speakers img { display:inline-block;vertical-align:middle;margin-left:30px;border-radius:100px;border:8px solid #ffffff; }
+#Speakers .bio { display:inline-block;font-size:16px;font-weight:300;line-height:24px;margin-top:20px;font-family: 'Roboto', sans-serif;color:#7b7b7b;padding:0 50px;   }
+
+#Credits { display:table;width:100%;height:400px;text-align:center;color:#fff;padding:5% 0;background: linear-gradient(rgba(0, 96, 160, 0.69), rgba(4, 74, 121, 0.92) ), url(/wp-content/uploads/m2m/hero-01-background.jpg);background-position:100% 85%;background-position:100% 77%; background-color: black; -webkit-background-size: cover;  -moz-background-size: cover;background-size: cover; -o-background-size: cover; }
+#Credits h5 { font:normal 32px 'Montserrat', sans-serif;line-height:48px; }
+#Credits h5 span { font-family: 'Roboto', sans-serif;font-size:64px;font-weight:100;letter-spacing:-1px; }
+#Credits button { color:#fff;background:#ea3c3c;font:normal 26px 'Montserrat', sans-serif;border:1px;border-radius:40px;padding:10px 30px;margin-top:10px; }
+#Credits button:hover { background:#ff9709; }
+#Credits img { margin-top:30px; }
+#Credits .call { display:block;margin-top:35px; }
+#Credits .call span {font: normal 35px 'Montserrat', sans-serif;padding:8px 20px;/* border:2px solid #fff; *//* border-radius:30px; */}
+
+#Map { background-color:#f15454;color:#fff; }
+#Map .row .col { margin:0;padding:0; }
+#Map .row { margin:0px; }
+#Map .info-wrap { float:right;margin:25px 173px 0 0; }
+#Map .company { font-size:34px; }
+#Map .address { font-size:22px;margin:10px 0;line-height:28px;font-weight:100; }
+#Map .date, #Map .time { font-size:18px; }
+#Map iframe { margin-bottom:-5px; }
+
+
+footer { background-color:#005188;padding:1% 0 1%;margin:0; }
+footer .copyright { color:#0266a9;font-weight:300;font-size:12px;margin:10px 0 0; }
+footer ul { padding:0;margin:0 0 15px 0; }
+footer ul li { display:inline-block;margin:0 5px;padding:0; }
+footer img { max-width:254px; }
+
+@media only screen and (max-width: 1366px) {
+  .container { width:95%; }
+  #Hero .content { margin-bottom:50px;  }
+  #Hero h1 { font-size:5em; }
+  #Hero h1 span { font-size:35px; }
+  #Hero h2 { font-size:3.5em;letter-spacing:-1px;line-height:44px; }
+  #Hero h3 { font-size:2em;letter-spacing:0;font-weight:100; }
+  #Hero button { margin-top:0px; }
+  #Map .info-wrap { margin:50px 80px 0 0; }
+
+}
+
+@media only screen and (max-width: 1270px) {
+  #Speakers .speaker-wrap { display:block;width:90%;margin:40px auto 0; }
+  #Speakers .info-wrap { display:block;text-align:center;margin:10px 0; }
+  #Speakers .info-wrap span { font-family: 'Roboto Condensed', sans-serif; }
+  #Speakers img { display:block;margin:0 auto; }
+  #Speakers .bio { text-align:center;margin:0;  }
+  #Map .info-wrap { float:right;margin:50px 10px 0 0; }
+
+}
+
+@media only screen and (max-width:993px) {
+  .container { width:98%; }
+  #Hero h1 { font-size:4em; }
+  #Hero h1 span { font-size:24px; }
+  #Hero h2 { font-size:3.2em;font-weight:100;letter-spacing:-1px;line-height:44px; }
+  #Hero h3 { font-size:1.5em;letter-spacing:0;font-weight:100; }     
+
+  #Course h3  { width:50%;display:block;text-align:center;margin:10px auto; }
+  #Course .description { font-size:22px;font-weight:300; }   
+  #Course .location { font-size:22px; }
+  #Course .date { font-size:22px; }
+  #Course p { font-size:22px; }
+  #Millennials .row.valign-wrapper { display:block; }
+  #Millennials ul li { font-size:22px;font-weight:100; }
+  #CourseCallAction .container { padding:0 2%; }
+  #Marketing h3 { margin-top:28px; }
+  #Marketing img { padding:20px 20px 0;width:100%; }
+  #Credits img { margin-top:60px; }
+  #Solutions ul li { padding:0 5%; }
+
+}
+@media only screen and (max-width: 601px) {
+
+
+  header nav .logo { text-align:center; }
+  header nav .call { display:none; }
+  header nav .register { display:none; }
+  header nav .logo { max-width: 210px;margin: 0 auto; }
+  
+  #Hero { height: 100vh;background-position:50% 0; }
+  #Hero .content { margin-bottom:5px; }
+  #Hero h1 {font-size: 42px;line-height: 44px;letter-spacing:0;font-weight:300;margin-bottom: 5px;}
+  #Hero h1 span { font-size:24px;font-weight:100;font-family: 'Roboto', sans-serif; }
+  #Hero h2 {font-size: 30px;font-weight: 300;letter-spacing:-1px;line-height: 48px;margin: 0;}
+  #Hero h3 {font-size: 18px;letter-spacing:0;font-weight:100;margin: 0;line-height: 28px;}
+  #Hero .scroll-wrap p { display:none; }
+  #Hero button { background: #ea3c3c;font: normal 20px 'Montserrat', sans-serif;border: 1px;border-radius: 40px;margin-top:20px; }
+  #Hero p { font-size:25px; }  
+ 
+  #Sponsor { display:hidden; }
+
+  #Course { background:none;padding-bottom:20px; }
+  #Course h3  { margin-top:40px;width:100%;font-size:42px; }
+  #Course .description { font-size:18px;font-weight:300; }   
+  #Course .location { font-size:16px; }
+  #Course .date { font-size:16px; }
+  #Course p { font-size:16px; }
+
+  #Millennials .title { font-size:42px;text-align:center;margin:0;line-height:40px; }
+  #Millennials .divider-02 { margin:15px auto; }
+  #Millennials .content-wrap { height:auto;padding:0 10px; }
+  #Millennials h3 { font-size:34px;font-weight:300;text-align:center; }
+  #Millennials ul li { font-size:16px;font-weight:300; }
+  #Millennials img { width:80%;display:block;margin:0 auto; } 
+
+  #CourseCallAction { padding:10% 0; }
+  #CourseCallAction h4 { font-size:34px;line-height:36px; }
+  #CourseCallAction h4 span { font-size:20px;font-weight:300; }
+  #CourseCallAction button { font-size:22px; }
+
+  #Marketing { padding:1% 0;color:#fff;letter-spacing:-1px; }
+  #Marketing h3 { font-size:32px;line-height:48px;padding:5% 0 0;margin:0; }
+  #Marketing h3 span { font-size:45px; }
+  #Marketing img { width:100%;margin-top:20px;padding:0; }
+
+  #Solutions { padding-top:20px;margin:0;background-size:150%; }
+  #Solutions h3 { font-size:28px; }
+  #Solutions ul li { margin-top:20px;padding:0 2%; }
+  #Solutions .title { font:100 18px 'Montserrat', sans-serif;margin:0;padding:0 }
+  #Solutions p { font-size:14px; }
+
+  #Mastermind { padding:1% 0;color:#fff;letter-spacing:-1px; }
+  #Mastermind h3 { font-size:45px;line-height:48px;padding:5%;margin:0; }
+  #Mastermind h3 span { font-size:50px; }
+  #Mastermind img { width:100%;margin-top:20px;padding:0; }
+
+  #Speakers { background-size:100%;padding-top:20px;margin:0; }
+  #Speakers h3 { font-size:36px; }
+  #Speakers .speaker-wrap { width:100%; }
+  #Speakers .info-wrap { width:100%; }
+  #Speakers img { margin:0px auto; }
+  #Speakers .bio { width:100%;padding:0 10px;  }
+  
+  #Credits h5 { line-height:42px; }
+  #Credits h5 span { font-size:40px; }
+  #Credits button { font-size:22px; } 
+  #Credits .call span { font-size:25px; }
+
+  #Map .info-wrap { float:none;padding:10%;margin:0; }
+  #Map img { width:80%; }
+
+  footer { padding-bottom:20px; }
+  footer ul { margin:10px 0; }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+  header nav .logo { text-align:center; }
+  header nav .call { display:none; }
+  
+  #Hero { height: 106vh; }
+  #Hero h1 { font-size:1em; }
+  #Hero h2 { font-size:1em; }
+  #Hero h3 { font-size:1em; }
+}
+
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  #Hero  {
+    height: 768px;
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  #Hero {
+    height: 923px;
+  }
+}
+
+/* animation */
+.bounce:hover { color:#3b4375;-webkit-transition: all 0.4s ease-in-out }
+.bounce {
+    color: #fff;
+    animation: bounce .5s infinite alternate;
+    -webkit-animation: bounce .5s infinite alternate;
+}
+
+@-moz-keyframes bounce {
+  0% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -moz-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes bounce {
+  0 {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+
+
+
+
+
+
