@@ -471,7 +471,7 @@ export default props => (
                 <div className="grid-item">
                   <img src={checkmark} alt="checkmark" />
                 </div>
-                {/* <!-- details section 5 row 2: --> */}
+                {/* <!-- details section 5 row 2: -->
                 <div className="grid-item plans-row-title">
                   2k Branded Business Cards
                 </div>
@@ -480,7 +480,7 @@ export default props => (
                 <div className="grid-item">
                   <img src={checkmark} alt="checkmark" />
                 </div>
-
+                */}
                 {/* <!-- details section 6: --> */}
                 <dt className="spacer-row justify-content-start">
                   <div className="plans-row-title">Call Tracking</div>
