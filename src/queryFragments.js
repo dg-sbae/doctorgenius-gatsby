@@ -152,6 +152,9 @@ export const siteFragments = graphql`
       hero_image_url {
         source_url
       }
+      featured_image_url_large {
+        source_url
+      }
     }
     end_time
     event_city

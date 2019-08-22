@@ -20,53 +20,6 @@ import pulseCheckLogo from "../img/pulsecheckurgentcare.png"
 
 import "../styles/event-listing.scss"
 
-const featured_event = {
-  event_title: "Marketing to Millennials Event",
-  register_url: "https://register.gotowebinar.com/register/5575627151713752578",
-  register_button_text: "Register Now",
-  event_details_text:
-    "This course is for individuals that are interested in either acquiring an existing practice or would like to start a new practice.",
-  hero_bg_image_url:
-    "https://doctorgenius-wordpress.dgd3v.com/wp-content/uploads/2019/08/partnerships-hero.jpg",
-  slug:
-    "https://doctorgenius-wordpress.dgplex.com/events/event-2018-04-06-nickerson-consulting-3-spring-cleaning-tips-to-clean-up-your-accounts-receivable/",
-}
-
-const upcoming_events = {
-  event_1: {
-    title: "DG Event 1",
-    city: "Irvine",
-    state: "CA",
-    date: "2019-12-06",
-    slug:
-      "https://doctorgenius-wordpress.dgplex.com/events/event-2018-04-06-nickerson-consulting-3-spring-cleaning-tips-to-clean-up-your-accounts-receivable/",
-  },
-  event_2: {
-    title: "DG Event 2",
-    city: "Los Alamitos",
-    state: "CA",
-    date: "2019-12-25",
-    slug:
-      "https://doctorgenius-wordpress.dgplex.com/events/event-2018-04-06-nickerson-consulting-3-spring-cleaning-tips-to-clean-up-your-accounts-receivable/",
-  },
-  event_3: {
-    title: "DG Event 3",
-    city: "Green Bay",
-    state: "WI",
-    date: "2019-12-30",
-    slug:
-      "https://doctorgenius-wordpress.dgplex.com/events/event-2018-04-06-nickerson-consulting-3-spring-cleaning-tips-to-clean-up-your-accounts-receivable/",
-  },
-  event_4: {
-    title: "DG Event 4",
-    city: "Las Vegas",
-    state: "NV",
-    date: "2019-12-31",
-    slug:
-      "https://doctorgenius-wordpress.dgplex.com/events/event-2018-04-06-nickerson-consulting-3-spring-cleaning-tips-to-clean-up-your-accounts-receivable/",
-  },
-}
-
 const past_events = {
   event_1: {
     title: "Google Event: Digital Marketing in Healthcare",
@@ -99,23 +52,50 @@ const past_events = {
 }
 
 const EventPage = ({ data }) => {
-  const hero_featured_event = data.featured_event.edges[0].node
+  const featured_event = data.featured_event.edges[0].node
   console.log("FEATURED EVENT:")
-  console.log(hero_featured_event)
+  console.log(featured_event)
 
-  const body_upcoming_events = data.upcoming_events
+  const upcoming_events = data.upcoming_events.edges
   console.log("UPCOMING EVENTS:")
-  console.log(body_upcoming_events)
+  console.log(upcoming_events)
 
   const body_past_events = data.past_events
   console.log("PAST EVENTZ:")
   console.log(body_past_events)
 
   const styleBackgroundImage = {
-    backgroundImage: "url(" + featured_event.hero_bg_image_url + ")",
+    backgroundImage:
+      "url(" + featured_event.all_image_urls.hero_image_url.source_url + ")",
   }
 
-  const format_date = date => {
+  const format_date_short = date => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ]
+    let string_date = date
+      .toString()
+      .replace(/-0+/g, "-")
+      .split(["-"])
+    const month = months[string_date[1] - 1],
+      day = string_date[2],
+      year = string_date[0]
+    const formatted_date = "" + month + " " + day + ", " + year
+    return formatted_date
+  }
+
+  const format_date_long = date => {
     const months = [
       "January",
       "February",
@@ -161,6 +141,39 @@ const EventPage = ({ data }) => {
     return time_value
   }
 
+  const display_upcoming_events = upcoming_events.map(function(event) {
+    if (upcoming_events.length > 1) {
+      return (
+        <div className="col-sm-10 col-md-6 col-lap-3" key={event.node.slug}>
+          <div className="card dg-event">
+            <img
+              className="card-img-top"
+              src={
+                event.node.all_image_urls.featured_image_url_large.source_url
+              }
+              alt="Upcoming Event"
+            />
+            <div className="card-body">
+              <h3 className="card-title">{event.node.event_title}</h3>
+              <p>
+                {event.node.event_city}, {event.node.event_state}
+              </p>
+              <p className="card-event-date">
+                {format_date_long(event.node.event_date)}
+              </p>
+              <a
+                className="button flat transparent event-more-info-btn"
+                href={event.node.slug}
+              >
+                + More Info
+              </a>
+            </div>
+          </div>
+        </div>
+      )
+    }
+  })
+
   return (
     <DefaultPageLayout location="event-listing">
       <Helmet>
@@ -181,23 +194,23 @@ const EventPage = ({ data }) => {
                     </h1>
                   </div>
                   <div className="titles">
-                    <h2>{hero_featured_event.event_title}</h2>
+                    <h2>{featured_event.event_title}</h2>
                     <p className="event-desc">
-                      {hero_featured_event.event_details_text}
+                      {featured_event.event_details_text}
                     </p>
                   </div>
                   <div className="cta-btns">
                     <a
                       className="button flat white-text register-now-btn"
-                      href={hero_featured_event.register_url}
+                      href={featured_event.register_url}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {hero_featured_event.register_button_text}
+                      {featured_event.register_button_text}
                     </a>
                     <a
                       className="button flat transparent hero-more-info-btn"
-                      href={hero_featured_event.slug}
+                      href={featured_event.slug}
                     >
                       + More Info
                     </a>
@@ -225,15 +238,15 @@ const EventPage = ({ data }) => {
                     </div>
                     <div className="col-sm-10">
                       <span className="hero-event-date">
-                        {format_date(hero_featured_event.event_date)}
+                        {format_date_short(featured_event.event_date)}
                       </span>{" "}
                       <span className="dot">&middot;</span>{" "}
                       <span className="event-time">
                         <span className="start-time">
-                          {convert_time(hero_featured_event.start_time)}-
+                          {convert_time(featured_event.start_time)}-
                         </span>
                         <span className="end-time">
-                          {convert_time(hero_featured_event.end_time)}
+                          {convert_time(featured_event.end_time)}
                         </span>
                       </span>
                     </div>
@@ -246,7 +259,7 @@ const EventPage = ({ data }) => {
         <Main>
           <Container>
             <div className="content-main">
-              <div className="row content-block padded upcoming-events">
+              <div className="content-block padded upcoming-events">
                 <div className="row">
                   <div className="col-sm-11 col-md-10 col-lap-9 intro-section">
                     <div className="inner-title center">
@@ -265,116 +278,7 @@ const EventPage = ({ data }) => {
                 </div>
                 <div className="row">
                   <div className="col-sm-11 col-md-9 col-lap-12 event-cards">
-                    <div className="row">
-                      <div className="col-sm-10 col-md-6 col-lap-3">
-                        <div className="card dg-event">
-                          <img
-                            className="card-img-top"
-                            src={eventBuilding1}
-                            alt="Upcoming Event"
-                          />
-                          <div className="card-body">
-                            <h3 className="card-title">
-                              {upcoming_events.event_1.title}
-                            </h3>
-                            <p>
-                              {upcoming_events.event_1.city},{" "}
-                              {upcoming_events.event_1.state}
-                            </p>
-                            <p className="card-event-date">
-                              {upcoming_events.event_1.date}
-                            </p>
-                            <a
-                              className="button flat transparent event-more-info-btn"
-                              href={upcoming_events.event_1.slug}
-                            >
-                              + More Info
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-sm-10 col-md-6 col-lap-3">
-                        <div className="card dg-event">
-                          <img
-                            className="card-img-top"
-                            src={eventBuilding2}
-                            alt="Upcoming Event"
-                          />
-                          <div className="card-body">
-                            <h3 className="card-title">
-                              {upcoming_events.event_2.title}
-                            </h3>
-                            <p>
-                              {upcoming_events.event_2.city},{" "}
-                              {upcoming_events.event_2.state}
-                            </p>
-                            <p className="card-event-date">
-                              {upcoming_events.event_2.date}
-                            </p>
-                            <a
-                              className="button flat transparent event-more-info-btn"
-                              href={upcoming_events.event_2.slug}
-                            >
-                              + More Info
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-sm-10 col-md-6 col-lap-3">
-                        <div className="card dg-event">
-                          <img
-                            className="card-img-top"
-                            src={eventBuilding3}
-                            alt="Upcoming Event"
-                          />
-                          <div className="card-body">
-                            <h3 className="card-title">
-                              {upcoming_events.event_3.title}
-                            </h3>
-                            <p>
-                              {upcoming_events.event_3.city},{" "}
-                              {upcoming_events.event_3.state}
-                            </p>
-                            <p className="card-event-date">
-                              {upcoming_events.event_3.date}
-                            </p>
-                            <a
-                              className="button flat transparent event-more-info-btn"
-                              href={upcoming_events.event_3.slug}
-                            >
-                              + More Info
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-sm-10 col-md-6 col-lap-3">
-                        <div className="card dg-event">
-                          <img
-                            className="card-img-top"
-                            src={eventBuilding4}
-                            alt="Upcoming Event"
-                          />
-                          <div className="card-body">
-                            <h3 className="card-title">
-                              {upcoming_events.event_4.title}
-                            </h3>
-                            <p>
-                              {upcoming_events.event_4.city},{" "}
-                              {upcoming_events.event_4.state}
-                            </p>
-                            <p className="card-event-date">
-                              {upcoming_events.event_4.date}
-                            </p>
-                            <a
-                              className="button flat transparent event-more-info-btn"
-                              href={upcoming_events.event_4.slug}
-                            >
-                              + More Info
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <div className="row">{display_upcoming_events}</div>
                   </div>
                 </div>
               </div>
@@ -593,7 +497,7 @@ export const pageQuery = graphql`
     }
 
     upcoming_events: allWordpressWpEvents(
-      filter: { event_date: { gt: "2019-08-21" }, featured_event: { eq: "1" } }
+      filter: { event_date: { gt: "2019-08-21" }, featured_event: { eq: "0" } }
       limit: 4
     ) {
       edges {
