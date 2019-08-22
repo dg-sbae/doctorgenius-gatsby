@@ -10,14 +10,13 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/event-post.scss"
 
-const EventPage = ({ pageContext, data, location }) => {
+const EventPage = ({ data }) => {
   const event_details = data.focus_event
   const speaker_details = data.speakers_data.speaker_items
 
   //Dynamically add BG image from event data
   const styleBackgroundImage = {
-    backgroundImage:
-      "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
+    backgroundImage: "url(" + event_details.all_image_urls.hero_image_url + ")",
   }
 
   //Check to see if webinar to adjust location card-margin
@@ -211,7 +210,7 @@ const EventPage = ({ pageContext, data, location }) => {
           <div className="speaker-img-wrapper">
             <img
               className="mx-auto d-block"
-              src={speaker.speaker_profile_image_url.source_url}
+              src={speaker.speaker_profile_image_url}
               alt="Speaker Profile"
             />
           </div>
@@ -222,6 +221,10 @@ const EventPage = ({ pageContext, data, location }) => {
       return <div key={speaker.order}></div>
     }
   })
+
+  console.log("BROKEN IMAGES:")
+  console.log(event_details.all_image_urls.information_image_url)
+  console.log(event_details.all_image_urls.hero_image_url)
 
   return (
     <DefaultPageLayout location="event-post">
@@ -327,13 +330,8 @@ const EventPage = ({ pageContext, data, location }) => {
               </div>
               <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
                 <img
-                  src={
-                    event_details.all_image_urls.information_image_url
-                      .source_url
-                  }
-                  alt={
-                    event_details.all_image_urls.information_image_url.alt_text
-                  }
+                  src={event_details.all_image_urls.information_image_url}
+                  alt={event_details.all_image_urls.information_image_url}
                 />
               </div>
             </div>

@@ -98,16 +98,74 @@ const past_events = {
   },
 }
 
-const EventPage = () => {
+const EventPage = ({ data }) => {
+  const hero_featured_event = data.featured_event.edges[0].node
+  console.log("FEATURED EVENT:")
+  console.log(hero_featured_event)
+
+  const body_upcoming_events = data.upcoming_events
+  console.log("UPCOMING EVENTS:")
+  console.log(body_upcoming_events)
+
+  const body_past_events = data.past_events
+  console.log("PAST EVENTZ:")
+  console.log(body_past_events)
+
   const styleBackgroundImage = {
     backgroundImage: "url(" + featured_event.hero_bg_image_url + ")",
+  }
+
+  const format_date = date => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ]
+    let string_date = date
+      .toString()
+      .replace(/-0+/g, "-")
+      .split(["-"])
+    const month = months[string_date[1] - 1],
+      day = string_date[2],
+      year = string_date[0]
+    const formatted_date = "" + month + " " + day + ", " + year
+    return formatted_date
+  }
+
+  const convert_time = time => {
+    time = time.toString()
+    time = time.split(":")
+
+    let hours = Number(time[0])
+
+    let time_value
+
+    if (hours > 0 && hours <= 12) {
+      time_value = "" + hours
+    } else if (hours > 12) {
+      time_value = "" + (hours - 12)
+    } else if (hours === 0) {
+      time_value = "12"
+    }
+
+    time_value += hours >= 12 ? "pm" : "am"
+    return time_value
   }
 
   return (
     <DefaultPageLayout location="event-listing">
       <Helmet>
-        <title>Event Details | Doctor Genius</title>
-        <meta name="description" content="Doctor Genius | Event." />
+        <title>Events | Doctor Genius</title>
+        <meta name="description" content="Doctor Genius | Event" />
       </Helmet>
       <div>
         <div className="hero" style={styleBackgroundImage}>
@@ -123,23 +181,23 @@ const EventPage = () => {
                     </h1>
                   </div>
                   <div className="titles">
-                    <h2>{featured_event.event_title}</h2>
+                    <h2>{hero_featured_event.event_title}</h2>
                     <p className="event-desc">
-                      {featured_event.event_details_text}
+                      {hero_featured_event.event_details_text}
                     </p>
                   </div>
                   <div className="cta-btns">
                     <a
                       className="button flat white-text register-now-btn"
-                      href={featured_event.register_url}
+                      href={hero_featured_event.register_url}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {featured_event.register_button_text}
+                      {hero_featured_event.register_button_text}
                     </a>
                     <a
                       className="button flat transparent hero-more-info-btn"
-                      href={featured_event.slug}
+                      href={hero_featured_event.slug}
                     >
                       + More Info
                     </a>
@@ -166,11 +224,17 @@ const EventPage = () => {
                       <p className="labels">Seconds</p>
                     </div>
                     <div className="col-sm-10">
-                      <span className="hero-event-date">March 21, 2019</span>{" "}
+                      <span className="hero-event-date">
+                        {format_date(hero_featured_event.event_date)}
+                      </span>{" "}
                       <span className="dot">&middot;</span>{" "}
                       <span className="event-time">
-                        <span className="start-time">6pm-</span>
-                        <span className="end-time">9pm</span>
+                        <span className="start-time">
+                          {convert_time(hero_featured_event.start_time)}-
+                        </span>
+                        <span className="end-time">
+                          {convert_time(hero_featured_event.end_time)}
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -516,14 +580,38 @@ const EventPage = () => {
 
 export default EventPage
 
-/*export const pageQuery = graphql`
-  query($currentID: Int) {
-    focus_event: wordpressWpEvents(wordpress_id: { eq: $currentID }) {
-      ...eventPost
+export const pageQuery = graphql`
+  query {
+    featured_event: allWordpressWpEvents(
+      filter: { featured_event: { eq: "1" } }
+    ) {
+      edges {
+        node {
+          ...eventListing
+        }
+      }
     }
-    speakers_data: wordpressWpEvents(wordpress_id: { eq: $currentID }) {
-      ...speakers
+
+    upcoming_events: allWordpressWpEvents(
+      filter: { event_date: { gt: "2019-08-21" }, featured_event: { eq: "1" } }
+      limit: 4
+    ) {
+      edges {
+        node {
+          ...eventListing
+        }
+      }
+    }
+
+    past_events: allWordpressWpEvents(
+      filter: { event_date: { lt: "2019-08-21" } }
+      limit: 4
+    ) {
+      edges {
+        node {
+          ...eventListing
+        }
+      }
     }
   }
 `
-*/

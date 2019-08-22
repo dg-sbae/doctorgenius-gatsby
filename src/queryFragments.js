@@ -32,6 +32,7 @@ export const siteFragments = graphql`
     wordpress_id
     link
   }
+
   fragment eventPost on wordpress__wp_events {
     all_image_urls {
       information_image_url {
@@ -81,94 +82,88 @@ export const siteFragments = graphql`
       wordpress_1 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_2 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_3 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_4 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_5 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_6 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_7 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_8 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_9 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_10 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_11 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_12 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
       wordpress_13 {
         order
         speaker_name
-        speaker_profile_image_url {
-          source_url
-        }
+        speaker_profile_image_url
       }
     }
+  }
+
+  fragment eventListing on wordpress__wp_events {
+    all_image_urls {
+      hero_image_url {
+        source_url
+      }
+    }
+    end_time
+    event_city
+    event_date
+    event_details_text
+    event_state
+    event_title
+    featured_event
+    include_location
+    register_button_text
+    register_url
+    start_time
+    slug
   }
 `
