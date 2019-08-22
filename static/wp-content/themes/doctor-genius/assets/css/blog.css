@@ -1,0 +1,68 @@
+
+/* common */
+body {margin:0;padding:0; }
+#Blog img { width:100%; }
+#Blog .container { max-width:1280px!important; }
+.pad-10 { padding:10px 0; }
+.pad-25 { padding:25px 0; }
+span.grey-icon { font-weight:bold;color:#000;background:#e5e5e5;padding:5px 15px;border-radius:10px;margin:0 0 0 10px; }
+input.center { width:90%; }
+.box-radius { border-radius:10px;border:10px solid #f1f0f0; }
+.tabs a.active { background-color:#3e4161;color:#fff; }
+.tabs .tab a { color:; }
+
+/* base */
+#Hero { margin:10px 0;}
+
+#TrendPost span.grey-icon { font-size:10px;display: inline-block;margin: 5px 0 0 0;padding: 4px 10px;  }
+#TrendPost h2  {font-size:16px;font-weight:500;margin:10px 0;color:#000; }
+#TrendPost a, #RecentPost a { color:#000; }
+
+#RecentPost .post-date { font-size:10px;color:#ccc;}
+#RecentPost .post-tag {font-size:10px;margin:5px 0;}
+#RecentPost .post-title {font-size:18px;width:95%;}
+#RecentPost .post-thumbnail { width:100%;height:;margin:0;padding:0;}
+#RecentPost .post-snippet p { font-size:14px;padding:0; }
+#RecentPost h2 {font-size:16px;font-weight:500;margin:15px 0 10px 0; }
+#RecentPost .post-social ul {  }
+#RecentPost .post-social ul li { display:inline-block;width:22px;height:22px;border-radius:10px;background:#ccc; }
+
+#PopularPost .post-date { font-size:10px;color:#ccc;}
+#PopularPost  .post-tag {font-size:10px;margin:5px 0;}
+#PopularPost  .post-title {font-size:18px;width:95%;}
+#PopularPost  .post-thumbnail { width:100%;height:150px;margin:0;padding:0;background:#e5e5e5; }
+#PopularPost  h2 {font-size:16px;margin:1em 0;}
+#PopularPost  .post-social ul {  }
+#PopularPost  .post-social ul li { display:inline-block;width:20px;height:20px;border-radius:10px;background:#ccc; }
+
+#RightColumn h2 { font-size:18px;margin:12px 0; }
+#RightColumn h3 { font-size:24px;font-weight:500;margin:5px 0; }
+#RightColumn h6 { margin:0;padding:0; }
+#RightColumn .newsletter { border-radius: 20px; }
+#RightColumn .ad-image img { display:block;border:10px solid #f1f0f0;margin:6% 0;}
+#RightColumn .archive ul li { border-bottom:1px dotted #ccc;color:#ccc;font-weight:100;font-size:12px; }
+
+@media only screen and (max-width: 600px) {
+	#Hero { display:none; }
+	#TrendPost { display:none; }
+	#MobileTrendPost .container { width:100%!important; }
+	#MobileTrendPost h3, #MobileTrendPost h5 { text-shadow: -2px 1px 8px #A3A3A3; }
+ 	#RecentPost h2 {font-size:14px;margin:1em 0;}
+	#RecentPost .post-snippet { display:none; }
+	#RightColumn { margin-top:20px; }
+
+
+}
+
+@media only screen and (min-width: 870px) {
+	.tabs { width:50%!important;margin:0; }
+
+
+}
+
+@media only screen and (min-width: 600px) {
+	#MobileTrendPost { display:none; }
+
+
+}
+
