@@ -74,7 +74,7 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
     margin-right: 50px;
     display: grid;
     grid-template-columns: 1fr 260px 260px 260px;
-    grid-template-rows: 275px repeat(43, 50px);
+    grid-template-rows: 275px repeat(41, 50px);
     box-shadow: 0 3px 6px #e1e1e1;
     font-family: $font-family-body-text;
     @include media("<desktop") {
