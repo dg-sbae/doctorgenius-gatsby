@@ -41,7 +41,6 @@
     }
     .hero-more-info-btn {
       color: #535353;
-      margin-left: $m1;
       padding-left: $m1 * 1.4;
       padding-right: $m1 * 1.4;
       border: 1px solid #535353;
@@ -58,6 +57,7 @@
     }
     .register-now-btn {
       background-color: $demo-button-green;
+      margin-right: $m1;
     }
     .event-details h3 {
       color: $primary;
@@ -217,9 +217,9 @@
     .past-event-title-and-desc {
       padding-left: $pad;
     }
-    .event-one {
-      margin-top: 61px;
-      margin-bottom: 140.75px;
+    .singular-event {
+      margin-top: 41px;
+      margin-bottom: 125.75px;
     }
     .past-event-date {
       text-transform: none;
@@ -330,7 +330,7 @@
 
   @include media(">=laptop", "<desktop") {
     .past_events {
-      .event-one {
+      .singular-event {
         margin-top: 48px;
         margin-bottom: 155.75px;
       }
@@ -342,21 +342,21 @@
 
   /* Media specific queries for the past-event rows */
   @media (min-width: 992px) and (max-width: 1000px) {
-    .past-events .event-one {
-      margin-top: 34px;
-      margin-bottom: 95.75px;
+    .past-events .singular-event {
+      margin-top: 30px;
+      margin-bottom: 151.75px;
     }
   }
   @media (min-width: 1001px) and (max-width: 1023px) {
-    .past-events .event-one {
-      margin-top: 34px;
-      margin-bottom: 126.75px;
+    .past-events .singular-event {
+      margin-top: 30px;
+      margin-bottom: 151.75px;
     }
   }
   @media (min-width: 1024px) and (max-width: 1299px) {
-    .past-events .event-one {
-      margin-top: 50px;
-      margin-bottom: 162.75px;
+    .past-events .singular-event {
+      margin-top: 39px;
+      margin-bottom: 144.75px;
     }
   }
 
@@ -366,7 +366,7 @@
   @include media(">=tablet", "<laptop") {
     .hero,
     .hero .hero-overlay {
-      height: 848px;
+      height: auto;
       text-align: center;
     }
     .hero {
@@ -392,7 +392,7 @@
         margin-top: 25px;
       }
       .dg-category {
-        margin-top: 40px;
+        margin-top: 100px;
         margin-bottom: 10px;
       }
       .cta-btns,
@@ -405,6 +405,7 @@
     .upcoming-events {
       .dg-event {
         margin-bottom: 20px;
+        width: 100%;
       }
     }
 
@@ -430,9 +431,9 @@
         float: right;
       }
 
-      .event-one {
-        margin-top: 55px;
-        margin-bottom: 162.75px;
+      .singular-event {
+        margin-top: 33px;
+        margin-bottom: 157.75px;
       }
     }
 
@@ -461,11 +462,12 @@
 
   //START PHONE SPECIFIC STYLING
   @include media("<tablet") {
-    .hero-overlay {
-      background-color: rgba(255, 255, 255, 0.5);
-    }
     .hero {
-      height: 650px;
+      .hero-overlay {
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      height: auto;
       text-align: center;
       h2 {
         font-size: 42px;
@@ -552,11 +554,11 @@
       .past-event-desc {
         font-size: 16px;
       }
-      .event-one {
+      .singular-event {
         margin-top: $m1;
         margin-bottom: $m1 * 2;
       }
-      .event-one:last-child {
+      .singular-event:last-child {
         margin-bottom: $m1;
       }
       .past-events-timeline {

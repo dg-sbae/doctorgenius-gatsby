@@ -8,11 +8,6 @@ import Container from "../components/Container"
 
 import thinArrowRight from "../img/right-arrow.svg"
 
-import eventBuilding1 from "../img/event-building-1.jpg"
-import eventBuilding2 from "../img/event-building-2.jpg"
-import eventBuilding3 from "../img/event-building-3.jpg"
-import eventBuilding4 from "../img/event-building-4.jpg"
-
 import boaLogo from "../img/bankofamerica.png"
 import pattersonLogo from "../img/pattersoncompanies.png"
 import googleLogo from "../img/googlepartner.jpg"
@@ -20,39 +15,38 @@ import pulseCheckLogo from "../img/pulsecheckurgentcare.png"
 
 import "../styles/event-listing.scss"
 
-const past_events = {
-  event_1: {
-    title: "Google Event: Digital Marketing in Healthcare",
-    date: "2019-12-06",
-    featured_image: eventBuilding1,
-    excerpt:
-      "Doctor Genius first marketing event in methods to attract new Millennials",
-  },
-  event_2: {
-    title: "Google Event: Digital Marketing in Healthcare",
-    date: "2019-12-25",
-    featured_image: eventBuilding2,
-    excerpt:
-      "Doctor Genius first marketing event in methods to attract new Millennials",
-  },
-  event_3: {
-    title: "Google Event: Digital Marketing in Healthcare",
-    date: "2019-12-30",
-    featured_image: eventBuilding3,
-    excerpt:
-      "Doctor Genius first marketing event in methods to attract new Millennials",
-  },
-  event_4: {
-    title: "Google Event: Digital Marketing in Healthcare",
-    date: "2019-12-31",
-    featured_image: eventBuilding4,
-    excerpt:
-      "Doctor Genius first marketing event in methods to attract new Millennials",
-  },
-}
-
 const EventPage = ({ data }) => {
-  const featured_event = data.featured_event.edges[0].node
+  console.log("ALL DATA:")
+  console.log(data)
+  let featured_event
+  if (data.featured_event.edges !== []) {
+    console.log("ERROROR")
+    featured_event = data.featured_event.edges[0].node
+    console.log(featured_event)
+  } else {
+    featured_event = {
+      dummy_data: ["True"],
+      all_image_urls: {
+        hero_image_url: {
+          source_url: "/wp-content/uploads/2019/08/plans.jpg",
+        },
+      },
+      end_time: ["23:59"],
+      event_city: ["Irvine"],
+      event_date: ["2019-12-25"],
+      event_details_text: [
+        "Lets not boil the ocean here, strike while the iron is hot and pencil yourself in to this exclusive class in which Jared Parmenter delivers robust techniques to enhance your Web Development Skills.",
+      ],
+      event_state: ["CA"],
+      event_title: ["Full-Stack Web Development Course"],
+      featured_event: ["1"],
+      include_location: ["1"],
+      register_button_text: ["Register Here"],
+      register_url: ["https://www.youtube.com/watch?v=oHg5SJYRHA0"],
+      start_time: ["06:00"],
+      slug: "future-event-test-12-25-19",
+    }
+  }
   console.log("FEATURED EVENT:")
   console.log(featured_event)
 
@@ -60,9 +54,9 @@ const EventPage = ({ data }) => {
   console.log("UPCOMING EVENTS:")
   console.log(upcoming_events)
 
-  const body_past_events = data.past_events
+  const past_events = data.past_events.edges
   console.log("PAST EVENTZ:")
-  console.log(body_past_events)
+  console.log(past_events)
 
   const styleBackgroundImage = {
     backgroundImage:
@@ -89,9 +83,8 @@ const EventPage = ({ data }) => {
       .replace(/-0+/g, "-")
       .split(["-"])
     const month = months[string_date[1] - 1],
-      day = string_date[2],
-      year = string_date[0]
-    const formatted_date = "" + month + " " + day + ", " + year
+      day = string_date[2]
+    const formatted_date = "" + month + " " + day
     return formatted_date
   }
 
@@ -156,7 +149,9 @@ const EventPage = ({ data }) => {
             <div className="card-body">
               <h3 className="card-title">{event.node.event_title}</h3>
               <p>
-                {event.node.event_city}, {event.node.event_state}
+                {event.node.include_location[0] !== ""
+                  ? event.node.event_city + "," + " " + event.node.event_state
+                  : "Webinar - Online"}
               </p>
               <p className="card-event-date">
                 {format_date_long(event.node.event_date)}
@@ -171,8 +166,100 @@ const EventPage = ({ data }) => {
           </div>
         </div>
       )
+    } else {
+      return <span></span>
     }
   })
+
+  const display_past_events = () => {
+    return (
+      <div className="col-lap-10 offset-lap-1 col-md-12">
+        <div className="row singular-event">
+          <div className="col-sm-10 col-md-6 past-event-image">
+            <img
+              src={
+                past_events[0].node.all_image_urls.featured_image_url_large
+                  .source_url
+              }
+              alt="Past Event"
+            />
+          </div>
+          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
+            <span class="button flat white-text past-event-date">
+              {format_date_short(past_events[0].node.event_date)}
+            </span>
+            <p className="pe-title">{past_events[0].node.event_title}</p>
+            <p className="pe-desc">
+              {past_events[0].node.information_heading1}
+            </p>
+          </div>
+        </div>
+
+        <div className="row singular-event">
+          <div className="col-sm-10 col-md-6 past-event-image">
+            <img
+              src={
+                past_events[1].node.all_image_urls.featured_image_url_large
+                  .source_url
+              }
+              alt="Past Event"
+            />
+          </div>
+          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
+            <span class="button flat white-text past-event-date">
+              {format_date_short(past_events[1].node.event_date)}
+            </span>
+            <p className="pe-title">{past_events[1].node.event_title}</p>
+            <p className="pe-desc">
+              {past_events[1].node.information_heading1}
+            </p>
+          </div>
+        </div>
+
+        <div className="row singular-event">
+          <div className="col-sm-10 col-md-6 past-event-image">
+            <img
+              src={
+                past_events[2].node.all_image_urls.featured_image_url_large
+                  .source_url
+              }
+              alt="Past Event"
+            />
+          </div>
+          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
+            <span class="button flat white-text past-event-date">
+              {format_date_short(past_events[2].node.event_date)}
+            </span>
+            <p className="pe-title">{past_events[2].node.event_title}</p>
+            <p className="pe-desc">
+              {past_events[2].node.information_heading1}
+            </p>
+          </div>
+        </div>
+
+        <div className="row singular-event">
+          <div className="col-sm-10 col-md-6 past-event-image">
+            <img
+              src={
+                past_events[3].node.all_image_urls.featured_image_url_large
+                  .source_url
+              }
+              alt="Past Event"
+            />
+          </div>
+          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
+            <span class="button flat white-text past-event-date">
+              {format_date_short(past_events[3].node.event_date)}
+            </span>
+            <p className="pe-title">{past_events[3].node.event_title}</p>
+            <p className="pe-desc">
+              {past_events[3].node.information_heading1}
+            </p>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <DefaultPageLayout location="event-listing">
@@ -200,14 +287,19 @@ const EventPage = ({ data }) => {
                     </p>
                   </div>
                   <div className="cta-btns">
-                    <a
-                      className="button flat white-text register-now-btn"
-                      href={featured_event.register_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {featured_event.register_button_text}
-                    </a>
+                    {featured_event.register_url[0] !== "" && (
+                      <a
+                        className="button flat white-text register-now-btn"
+                        href={featured_event.register_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {featured_event.register_button_text === ""
+                          ? "Register Now"
+                          : featured_event.register_button_text}
+                      </a>
+                    )}
+
                     <a
                       className="button flat transparent hero-more-info-btn"
                       href={featured_event.slug}
@@ -238,16 +330,20 @@ const EventPage = ({ data }) => {
                     </div>
                     <div className="col-sm-10">
                       <span className="hero-event-date">
-                        {format_date_short(featured_event.event_date)}
+                        {format_date_long(featured_event.event_date)}
                       </span>{" "}
                       <span className="dot">&middot;</span>{" "}
                       <span className="event-time">
-                        <span className="start-time">
-                          {convert_time(featured_event.start_time)}-
-                        </span>
-                        <span className="end-time">
-                          {convert_time(featured_event.end_time)}
-                        </span>
+                        {featured_event.start_time !== "" && (
+                          <span className="start-time">
+                            {convert_time(featured_event.start_time)}
+                          </span>
+                        )}
+                        {featured_event.end_time !== "" && (
+                          <span className="end-time">
+                            -{convert_time(featured_event.end_time)}
+                          </span>
+                        )}
                       </span>
                     </div>
                   </div>
@@ -355,89 +451,7 @@ const EventPage = ({ data }) => {
 
                 <div className="row">
                   <div className="col-lap-10 col-lg-9 col-md-11 past-events-timeline">
-                    <div className="row">
-                      <div className="col-lap-10 offset-lap-1 col-md-12">
-                        <div className="row event-one">
-                          <div className="col-sm-10 col-md-6 past-event-image">
-                            <img
-                              src={past_events.event_1.featured_image}
-                              alt="Past Event"
-                            />
-                          </div>
-                          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
-                            <span class="button flat white-text past-event-date">
-                              October 18
-                            </span>
-                            <p className="pe-title">
-                              {past_events.event_1.title}
-                            </p>
-                            <p className="pe-desc">
-                              {past_events.event_1.excerpt}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="row event-one">
-                          <div className="col-sm-10 col-md-6 past-event-image">
-                            <img
-                              src={past_events.event_2.featured_image}
-                              alt="Past Event"
-                            />
-                          </div>
-                          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
-                            <span class="button flat white-text past-event-date">
-                              November 18
-                            </span>
-                            <p className="pe-title">
-                              {past_events.event_2.title}
-                            </p>
-                            <p className="pe-desc">
-                              {past_events.event_2.excerpt}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="row event-one">
-                          <div className="col-sm-10 col-md-6 past-event-image">
-                            <img
-                              src={past_events.event_3.featured_image}
-                              alt="Past Event"
-                            />
-                          </div>
-                          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
-                            <span class="button flat white-text past-event-date">
-                              December 25
-                            </span>
-                            <p className="pe-title">
-                              {past_events.event_3.title}
-                            </p>
-                            <p className="pe-desc">
-                              {past_events.event_3.excerpt}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="row event-one">
-                          <div className="col-sm-10 col-md-6 past-event-image">
-                            <img
-                              src={past_events.event_4.featured_image}
-                              alt="Past Event"
-                            />
-                          </div>
-                          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
-                            <span class="button flat white-text past-event-date">
-                              December 31
-                            </span>
-                            <p className="pe-title">
-                              {past_events.event_4.title}
-                            </p>
-                            <p className="pe-desc">
-                              {past_events.event_4.excerpt}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <div className="row">{display_past_events()}</div>
                   </div>
                 </div>
               </div>
