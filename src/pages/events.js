@@ -8,6 +8,8 @@ import Container from "../components/Container"
 
 import thinArrowRight from "../img/right-arrow.svg"
 
+import standardHeroBg from "../img/hero/plans.jpg"
+
 import boaLogo from "../img/bankofamerica.png"
 import pattersonLogo from "../img/pattersoncompanies.png"
 import googleLogo from "../img/googlepartner.jpg"
@@ -19,32 +21,21 @@ const EventPage = ({ data }) => {
   console.log("ALL DATA:")
   console.log(data)
   let featured_event
-  if (data.featured_event.edges !== []) {
-    console.log("ERROROR")
+  if (data.featured_event.edges.length === 1) {
     featured_event = data.featured_event.edges[0].node
-    console.log(featured_event)
   } else {
     featured_event = {
-      dummy_data: ["True"],
-      all_image_urls: {
-        hero_image_url: {
-          source_url: "/wp-content/uploads/2019/08/plans.jpg",
-        },
-      },
-      end_time: ["23:59"],
-      event_city: ["Irvine"],
-      event_date: ["2019-12-25"],
-      event_details_text: [
-        "Lets not boil the ocean here, strike while the iron is hot and pencil yourself in to this exclusive class in which Jared Parmenter delivers robust techniques to enhance your Web Development Skills.",
-      ],
-      event_state: ["CA"],
-      event_title: ["Full-Stack Web Development Course"],
-      featured_event: ["1"],
-      include_location: ["1"],
-      register_button_text: ["Register Here"],
-      register_url: ["https://www.youtube.com/watch?v=oHg5SJYRHA0"],
-      start_time: ["06:00"],
-      slug: "future-event-test-12-25-19",
+      dummy_data: true,
+      end_time: "",
+      event_city: "",
+      event_date: "",
+      event_details_text:
+        "Keep and eye out for new events hosted by Doctor Genius and our sponsers.",
+      event_title: "Our Events",
+      featured_event: [""],
+      register_url: "",
+      start_time: "",
+      slug: "",
     }
   }
   console.log("FEATURED EVENT:")
@@ -58,9 +49,16 @@ const EventPage = ({ data }) => {
   console.log("PAST EVENTZ:")
   console.log(past_events)
 
-  const styleBackgroundImage = {
-    backgroundImage:
-      "url(" + featured_event.all_image_urls.hero_image_url.source_url + ")",
+  let styleBackgroundImage
+  if (featured_event.dummy_data) {
+    styleBackgroundImage = {
+      backgroundImage: "url(" + standardHeroBg + ")",
+    }
+  } else {
+    styleBackgroundImage = {
+      backgroundImage:
+        "url(" + featured_event.all_image_urls.hero_image_url.source_url + ")",
+    }
   }
 
   const format_date_short = date => {
@@ -135,7 +133,7 @@ const EventPage = ({ data }) => {
   }
 
   const display_upcoming_events = upcoming_events.map(function(event) {
-    if (upcoming_events.length > 1) {
+    if (upcoming_events.length >= 1) {
       return (
         <div className="col-sm-10 col-md-6 col-lap-3" key={event.node.slug}>
           <div className="card dg-event">
@@ -287,67 +285,71 @@ const EventPage = ({ data }) => {
                     </p>
                   </div>
                   <div className="cta-btns">
-                    {featured_event.register_url[0] !== "" && (
+                    {featured_event.register_url !== "" &&
+                      (featured_event.register_url[0] !== "" && (
+                        <a
+                          className="button flat white-text register-now-btn"
+                          href={featured_event.register_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {featured_event.register_button_text === ""
+                            ? "Register Now"
+                            : featured_event.register_button_text}
+                        </a>
+                      ))}
+                    {featured_event.slug !== "" && (
                       <a
-                        className="button flat white-text register-now-btn"
-                        href={featured_event.register_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        className="button flat transparent hero-more-info-btn"
+                        href={featured_event.slug}
                       >
-                        {featured_event.register_button_text === ""
-                          ? "Register Now"
-                          : featured_event.register_button_text}
+                        + More Info
                       </a>
                     )}
-
-                    <a
-                      className="button flat transparent hero-more-info-btn"
-                      href={featured_event.slug}
-                    >
-                      + More Info
-                    </a>
                   </div>
                 </div>
-                <div className="col-sm-11 col-md-9 col-lap-6 event-countdown">
-                  <h3>Next Event Starts:</h3>
-                  <div className="spacer solid"></div>
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <p className="days">03</p>
-                      <p className="labels">Days</p>
-                    </div>
-                    <div className="col-sm-3">
-                      <p className="hours">12</p>
-                      <p className="labels">Hours</p>
-                    </div>
-                    <div className="col-sm-3">
-                      <p className="minutes">45</p>
-                      <p className="labels">Minutes</p>
-                    </div>
-                    <div className="col-sm-3">
-                      <p className="seconds">10</p>
-                      <p className="labels">Seconds</p>
-                    </div>
-                    <div className="col-sm-10">
-                      <span className="hero-event-date">
-                        {format_date_long(featured_event.event_date)}
-                      </span>{" "}
-                      <span className="dot">&middot;</span>{" "}
-                      <span className="event-time">
-                        {featured_event.start_time !== "" && (
-                          <span className="start-time">
-                            {convert_time(featured_event.start_time)}
-                          </span>
-                        )}
-                        {featured_event.end_time !== "" && (
-                          <span className="end-time">
-                            -{convert_time(featured_event.end_time)}
-                          </span>
-                        )}
-                      </span>
+                {featured_event.event_date !== "" && (
+                  <div className="col-sm-11 col-md-9 col-lap-6 event-countdown">
+                    <h3>Next Event Starts:</h3>
+                    <div className="spacer solid"></div>
+                    <div className="row">
+                      <div className="col-sm-3">
+                        <p className="days">03</p>
+                        <p className="labels">Days</p>
+                      </div>
+                      <div className="col-sm-3">
+                        <p className="hours">12</p>
+                        <p className="labels">Hours</p>
+                      </div>
+                      <div className="col-sm-3">
+                        <p className="minutes">45</p>
+                        <p className="labels">Minutes</p>
+                      </div>
+                      <div className="col-sm-3">
+                        <p className="seconds">10</p>
+                        <p className="labels">Seconds</p>
+                      </div>
+                      <div className="col-sm-10">
+                        <span className="hero-event-date">
+                          {format_date_long(featured_event.event_date)}
+                        </span>{" "}
+                        <span className="dot">&middot;</span>{" "}
+                        <span className="event-time">
+                          {featured_event.start_time !== "" && (
+                            <span className="start-time">
+                              {convert_time(featured_event.start_time)}
+                            </span>
+                          )}
+                          {featured_event.end_time !== "" && (
+                            <span className="end-time">
+                              -{convert_time(featured_event.end_time)}
+                            </span>
+                          )}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </Container>
           </div>
