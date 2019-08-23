@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
+import Countdown, { zeroPad } from "react-countdown-now"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -16,6 +17,7 @@ import googleLogo from "../img/googlepartner.jpg"
 import pulseCheckLogo from "../img/pulsecheckurgentcare.png"
 
 import "../styles/event-listing.scss"
+import { array } from "prop-types"
 
 const EventPage = ({ data }) => {
   console.log("ALL DATA:")
@@ -41,7 +43,7 @@ const EventPage = ({ data }) => {
   console.log("FEATURED EVENT:")
   console.log(featured_event)
 
-  const upcoming_events = data.upcoming_events.edges
+  let upcoming_events = data.upcoming_events.edges
   console.log("UPCOMING EVENTS:")
   console.log(upcoming_events)
 
@@ -112,6 +114,26 @@ const EventPage = ({ data }) => {
     return formatted_date
   }
 
+  let date_and_time =
+    featured_event.event_date + " " + featured_event.start_time
+  let countdown_date_and_time = new Date(date_and_time).getTime()
+
+  const day_renderer = ({ days }) => {
+    return <p className="days">{zeroPad(days, 2)}</p>
+  }
+
+  const hours_renderer = ({ hours }) => {
+    return <p className="hours">{zeroPad(hours, 2)}</p>
+  }
+
+  const minutes_renderer = ({ minutes }) => {
+    return <p className="minutes">{zeroPad(minutes, 2)}</p>
+  }
+
+  const seconds_renderer = ({ seconds }) => {
+    return <p className="seconds">{zeroPad(seconds, 2)}</p>
+  }
+
   const convert_time = time => {
     time = time.toString()
     time = time.split(":")
@@ -132,42 +154,45 @@ const EventPage = ({ data }) => {
     return time_value
   }
 
-  const display_upcoming_events = upcoming_events.map(function(event) {
-    if (upcoming_events.length >= 1) {
-      return (
-        <div className="col-sm-10 col-md-6 col-lap-3" key={event.node.slug}>
-          <div className="card dg-event">
-            <img
-              className="card-img-top"
-              src={
-                event.node.all_image_urls.featured_image_url_large.source_url
-              }
-              alt="Upcoming Event"
-            />
-            <div className="card-body">
-              <h3 className="card-title">{event.node.event_title}</h3>
-              <p>
-                {event.node.include_location[0] !== ""
-                  ? event.node.event_city + "," + " " + event.node.event_state
-                  : "Webinar - Online"}
-              </p>
-              <p className="card-event-date">
-                {format_date_long(event.node.event_date)}
-              </p>
-              <a
-                className="button flat transparent event-more-info-btn"
-                href={event.node.slug}
-              >
-                + More Info
-              </a>
+  const display_upcoming_events = upcoming_events
+    .slice(0)
+    .reverse()
+    .map(function(event) {
+      if (upcoming_events.length >= 1) {
+        return (
+          <div className="col-sm-10 col-md-6 col-lap-3" key={event.node.slug}>
+            <div className="card dg-event">
+              <img
+                className="card-img-top"
+                src={
+                  event.node.all_image_urls.featured_image_url_large.source_url
+                }
+                alt="Upcoming Event"
+              />
+              <div className="card-body">
+                <h3 className="card-title">{event.node.event_title}</h3>
+                <p>
+                  {event.node.include_location[0] !== ""
+                    ? event.node.event_city + "," + " " + event.node.event_state
+                    : "Webinar - Online"}
+                </p>
+                <p className="card-event-date">
+                  {format_date_long(event.node.event_date)}
+                </p>
+                <a
+                  className="button flat transparent event-more-info-btn"
+                  href={event.node.slug}
+                >
+                  + More Info
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      )
-    } else {
-      return <span></span>
-    }
-  })
+        )
+      } else {
+        return <span></span>
+      }
+    })
 
   const display_past_events = () => {
     return (
@@ -314,19 +339,31 @@ const EventPage = ({ data }) => {
                     <div className="spacer solid"></div>
                     <div className="row">
                       <div className="col-sm-3">
-                        <p className="days">03</p>
+                        <Countdown
+                          date={countdown_date_and_time}
+                          renderer={day_renderer}
+                        />
                         <p className="labels">Days</p>
                       </div>
                       <div className="col-sm-3">
-                        <p className="hours">12</p>
+                        <Countdown
+                          date={countdown_date_and_time}
+                          renderer={hours_renderer}
+                        />
                         <p className="labels">Hours</p>
                       </div>
                       <div className="col-sm-3">
-                        <p className="minutes">45</p>
+                        <Countdown
+                          date={countdown_date_and_time}
+                          renderer={minutes_renderer}
+                        />
                         <p className="labels">Minutes</p>
                       </div>
                       <div className="col-sm-3">
-                        <p className="seconds">10</p>
+                        <Countdown
+                          date={countdown_date_and_time}
+                          renderer={seconds_renderer}
+                        />
                         <p className="labels">Seconds</p>
                       </div>
                       <div className="col-sm-10">
