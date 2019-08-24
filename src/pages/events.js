@@ -17,12 +17,17 @@ import googleLogo from "../img/googlepartner.jpg"
 import pulseCheckLogo from "../img/pulsecheckurgentcare.png"
 
 import "../styles/event-listing.scss"
-import { array } from "prop-types"
 
 const EventPage = ({ data }) => {
   console.log("ALL DATA:")
   console.log(data)
+  // Globals
+  let upcoming_events = data.upcoming_events.edges
+  const past_events = data.past_events.edges
+  let styleBackgroundImage
   let featured_event
+
+  // Adds data to featured_event if there currently is none
   if (data.featured_event.edges.length === 1) {
     featured_event = data.featured_event.edges[0].node
   } else {
@@ -30,28 +35,22 @@ const EventPage = ({ data }) => {
       dummy_data: true,
       end_time: "",
       event_city: "",
-      event_date: "",
+      event_date: "2026-01-01",
       event_details_text:
         "Keep and eye out for new events hosted by Doctor Genius and our sponsers.",
       event_title: "Our Events",
       featured_event: [""],
       register_url: "",
-      start_time: "",
+      start_time: "00:01",
       slug: "",
     }
   }
-  console.log("FEATURED EVENT:")
-  console.log(featured_event)
 
-  let upcoming_events = data.upcoming_events.edges
-  console.log("UPCOMING EVENTS:")
-  console.log(upcoming_events)
+  let date_and_time =
+    featured_event.event_date + " " + featured_event.start_time
+  let countdown_date_and_time = new Date(date_and_time).getTime()
 
-  const past_events = data.past_events.edges
-  console.log("PAST EVENTZ:")
-  console.log(past_events)
-
-  let styleBackgroundImage
+  // Adds static bg if there is not a featured event
   if (featured_event.dummy_data) {
     styleBackgroundImage = {
       backgroundImage: "url(" + standardHeroBg + ")",
@@ -63,6 +62,7 @@ const EventPage = ({ data }) => {
     }
   }
 
+  // Converts date from YYYY-MM-DD to MM, DD
   const format_date_short = date => {
     const months = [
       "January",
@@ -88,6 +88,7 @@ const EventPage = ({ data }) => {
     return formatted_date
   }
 
+  // Converts date from YYYY-MM-DD to MM DD, YYYY
   const format_date_long = date => {
     const months = [
       "January",
@@ -114,10 +115,7 @@ const EventPage = ({ data }) => {
     return formatted_date
   }
 
-  let date_and_time =
-    featured_event.event_date + " " + featured_event.start_time
-  let countdown_date_and_time = new Date(date_and_time).getTime()
-
+  // Handles output of days/hours/minutes/seconds on Event Countdown section
   const day_renderer = ({ days }) => {
     return <p className="days">{zeroPad(days, 2)}</p>
   }
@@ -134,6 +132,7 @@ const EventPage = ({ data }) => {
     return <p className="seconds">{zeroPad(seconds, 2)}</p>
   }
 
+  // Converts Military time(13:30) to Standard(1:30PM)
   const convert_time = time => {
     time = time.toString()
     time = time.split(":")
@@ -154,6 +153,7 @@ const EventPage = ({ data }) => {
     return time_value
   }
 
+  // Handles output of each upcoming event
   const display_upcoming_events = upcoming_events
     .slice(0)
     .reverse()
@@ -194,6 +194,7 @@ const EventPage = ({ data }) => {
       }
     })
 
+  ///Handles output of the last 4 events prior to todays date
   const display_past_events = () => {
     return (
       <div className="col-lap-10 offset-lap-1 col-md-12">
@@ -333,7 +334,7 @@ const EventPage = ({ data }) => {
                     )}
                   </div>
                 </div>
-                {featured_event.event_date !== "" && (
+                {featured_event.dummy_data !== true && (
                   <div className="col-sm-11 col-md-9 col-lap-6 event-countdown">
                     <h3>Next Event Starts:</h3>
                     <div className="spacer solid"></div>
