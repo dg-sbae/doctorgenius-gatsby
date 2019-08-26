@@ -19,8 +19,6 @@ import pulseCheckLogo from "../img/pulsecheckurgentcare.png"
 import "../styles/event-listing.scss"
 
 const EventPage = ({ data }) => {
-  console.log("ALL DATA:")
-  console.log(data)
   // Globals
   let upcoming_events = data.upcoming_events.edges
   const past_events = data.past_events.edges
@@ -173,7 +171,7 @@ const EventPage = ({ data }) => {
                 <h3 className="card-title">{event.node.event_title}</h3>
                 <p>
                   {event.node.include_location[0] !== ""
-                    ? event.node.event_city + "," + " " + event.node.event_state
+                    ? event.node.event_city + ", " + event.node.event_state
                     : "Webinar - Online"}
                 </p>
                 <p className="card-event-date">
@@ -551,7 +549,7 @@ export const pageQuery = graphql`
     }
 
     upcoming_events: allWordpressWpEvents(
-      filter: { event_date: { gt: "2019-08-21" }, featured_event: { eq: "0" } }
+      filter: { event_date: { gt: "2019-08-26" }, featured_event: { eq: "0" } }
       limit: 4
     ) {
       edges {
@@ -562,7 +560,7 @@ export const pageQuery = graphql`
     }
 
     past_events: allWordpressWpEvents(
-      filter: { event_date: { lt: "2019-08-21" } }
+      filter: { event_date: { lt: "2019-08-26" }, featured_event: { eq: "0" } }
       limit: 4
     ) {
       edges {

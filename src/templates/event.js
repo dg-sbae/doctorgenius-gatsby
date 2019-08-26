@@ -16,7 +16,8 @@ const EventPage = ({ data }) => {
 
   //Dynamically add BG image from event data
   const styleBackgroundImage = {
-    backgroundImage: "url(" + event_details.all_image_urls.hero_image_url + ")",
+    backgroundImage:
+      "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
   }
 
   //Check to see if webinar to adjust location card-margin
@@ -210,7 +211,7 @@ const EventPage = ({ data }) => {
           <div className="speaker-img-wrapper">
             <img
               className="mx-auto d-block"
-              src={speaker.speaker_profile_image_url}
+              src={speaker.speaker_profile_image_url.source_url}
               alt="Speaker Profile"
             />
           </div>
@@ -221,10 +222,6 @@ const EventPage = ({ data }) => {
       return <div key={speaker.order}></div>
     }
   })
-
-  console.log("BROKEN IMAGES:")
-  console.log(event_details.all_image_urls.information_image_url)
-  console.log(event_details.all_image_urls.hero_image_url)
 
   return (
     <DefaultPageLayout location="event-post">
@@ -330,8 +327,13 @@ const EventPage = ({ data }) => {
               </div>
               <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
                 <img
-                  src={event_details.all_image_urls.information_image_url}
-                  alt={event_details.all_image_urls.information_image_url}
+                  src={
+                    event_details.all_image_urls.information_image_url
+                      .source_url
+                  }
+                  alt={
+                    event_details.all_image_urls.information_image_url.alt_text
+                  }
                 />
               </div>
             </div>

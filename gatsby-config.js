@@ -26,7 +26,7 @@ module.exports = {
       options: {
         //The base URL of the WordPress site without the trailingslash and the protocol. This is required.
         //Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
-        baseUrl: `doctorgenius-wordpress.dgd3v.com`,
+        baseUrl: `doctorgenius-wordpress.dgplex.com`,
         // The protocol. This can be http or https.
         protocol: `https`,
         // Indicates whether the site is hosted on wordpress.com.
@@ -38,7 +38,7 @@ module.exports = {
         // This feature is untested for sites hosted on WordPress.com
         useACF: false,
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://doctorgenius-wordpress.dgd3v.com/",
+          sourceUrl: "https://doctorgenius-wordpress.dgplex.com/",
           replacementUrl: "/",
         },
         excludedRoutes: [

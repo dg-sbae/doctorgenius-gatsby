@@ -82,67 +82,93 @@ export const siteFragments = graphql`
       wordpress_1 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_2 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_3 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_4 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_5 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_6 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_7 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_8 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_9 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_10 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_11 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_12 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
       wordpress_13 {
         order
         speaker_name
-        speaker_profile_image_url
+        speaker_profile_image_url {
+          source_url
+        }
       }
     }
   }
