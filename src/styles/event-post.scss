@@ -39,6 +39,7 @@
     text-transform: initial;
     display: inline-block;
     font-size: 15px;
+    font-weight: $font-weight-light;
   }
   .register-now-btn {
     background-color: $demo-button-green;
@@ -50,7 +51,7 @@
   }
   .event-details p {
     font-family: $font-family-body-text;
-    font-size: 18px;
+    font-size: 16px;
   }
   .event-date p {
     font-size: 23px;
@@ -126,7 +127,7 @@
     margin-bottom: 0;
   }
   .dg-dictionary p {
-    font-size: 18px;
+    font-size: 16px;
     font-family: $font-family-body-text;
     margin-bottom: $pad;
   }
@@ -140,7 +141,7 @@
     margin: auto;
   }
   .request-demo-footer .content-block p {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   @include media(">=laptop") {
@@ -277,7 +278,7 @@
       text-align: center;
     }
     .request-demo-footer .content-block p {
-      font-size: 17px;
+      font-size: 16px;
       font-family: $font-family-body-text;
     }
     .hero-overlay {
@@ -358,7 +359,7 @@
       text-align: center;
     }
     .request-demo-footer .content-block p {
-      font-size: 17px;
+      font-size: 16px;
       font-family: $font-family-body-text;
     }
     .hero-overlay {
