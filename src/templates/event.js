@@ -10,7 +10,7 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/event-post.scss"
 
-const EventPage = ({ pageContext, data, location }) => {
+const EventPage = ({ data }) => {
   const event_details = data.focus_event
   const speaker_details = data.speakers_data.speaker_items
 
