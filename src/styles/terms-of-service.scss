@@ -1,6 +1,13 @@
 @import "_site-variables.scss";
 
 .termsofservice {
+  header {
+    .dropdown-content-block {
+      p {
+        color: $primary-text;
+      }
+    }
+  }
   .hero {
     background: url("../img/hero/privacy-policy-hero.jpg");
     .accented-paragraph p {
