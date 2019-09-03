@@ -682,20 +682,6 @@ export default props => (
                   <FAQ
                     question={
                       <p>
-                        Do I immediately own the website after signing up with
-                        you?
-                      </p>
-                    }
-                    answer={
-                      <p>
-                        Yes, you will have full ownership of the website after 6
-                        months of service.
-                      </p>
-                    }
-                  />
-                  <FAQ
-                    question={
-                      <p>
                         Can you use my main line for the call tracking number?
                       </p>
                     }
