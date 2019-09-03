@@ -40,7 +40,7 @@ export default ({ children }) => (
           <ul>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/marketing-solutions">Marketing Solutions</ListLink>
-            <ListLinkNoPrefetch to="/our-clients">
+            <ListLinkNoPrefetch to="/our-clients/dental-practices">
               Our Clients
             </ListLinkNoPrefetch>
             <ListLink to="/plans">Plans</ListLink>

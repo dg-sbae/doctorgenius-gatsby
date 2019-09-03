@@ -155,6 +155,20 @@ class ContactForm extends React.Component {
     // Debug:
     // console.log("Stringified form data:", stringData)
 
+    // Generate a request to our Admin portal (connects to SalesForce)
+    fetch("https://portal.doctorgenius.com/api/dglead", {
+      method: "POST",
+      body: stringData,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    }).then(response => {
+      console.log("dglead response:", response)
+      response.json().then(body => {
+        console.log("dgleads body:", body)
+      })
+    })
+
     // Generate a request to the email server
     fetch("https://nodetest.dgplex.com/contact-us", {
       method: "POST",

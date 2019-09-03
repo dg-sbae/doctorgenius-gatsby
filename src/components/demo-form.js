@@ -146,6 +146,20 @@ class DemoForm extends React.Component {
     // Debug:
     // console.log("Stringified form data:", stringData)
 
+    // Generate a request to our Admin portal (connects to SalesForce)
+    fetch("https://portal.doctorgenius.com/api/dglead", {
+      method: "POST",
+      body: stringData,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    }).then(response => {
+      console.log("dglead response:", response)
+      response.json().then(body => {
+        console.log("dgleads body:", body)
+      })
+    })
+
     // Generate a request to the email server
     fetch("https://nodetest.dgplex.com/upload", {
       method: "POST",
@@ -195,7 +209,6 @@ class DemoForm extends React.Component {
               }}
               type="text"
               placeholder="First & Last name"
-              required
             />
             <input
               ref={ref => {
@@ -203,7 +216,6 @@ class DemoForm extends React.Component {
               }}
               type="text"
               placeholder="Practice Name ( ex. Dental Spa)"
-              required
             />
             <input
               ref={ref => {
@@ -211,7 +223,6 @@ class DemoForm extends React.Component {
               }}
               type="email"
               placeholder="Email Address"
-              required
             />
             <input
               ref={ref => {
@@ -219,7 +230,6 @@ class DemoForm extends React.Component {
               }}
               type="phone"
               placeholder="Phone Number"
-              required
             />
           </div>
           <div>
