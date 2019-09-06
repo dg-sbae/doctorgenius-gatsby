@@ -17,7 +17,7 @@ RewriteRule ^(.*)$ https://doctorgenius.dgd3v.com/$1 [L,R=301]
 
 
 #Direct users to a 404 if attempting to visit the parent Clients page
-RedirectMatch 404 ^/our-clients/?$
+#RedirectMatch 404 ^/our-clients/?$
 
 
 # Ensure the Gatsby error pages are being used by the server
