@@ -40,6 +40,7 @@ class DemoForm extends React.Component {
       email: "",
       company: "",
       phone: "",
+      validationPassed: false,
     }
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
@@ -147,18 +148,7 @@ class DemoForm extends React.Component {
     // console.log("Stringified form data:", stringData)
 
     // Generate a request to our Admin portal (connects to SalesForce)
-    fetch("https://portal.doctorgenius.com/api/dglead", {
-      method: "POST",
-      body: stringData,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    }).then(response => {
-      console.log("dglead response:", response)
-      response.json().then(body => {
-        console.log("dgleads body:", body)
-      })
-    })
+    // Handled on the backend now
 
     // Generate a request to the email server
     fetch("https://nodetest.dgplex.com/upload", {
@@ -175,6 +165,7 @@ class DemoForm extends React.Component {
           phone: body.phone,
           company: body.company,
           email: body.email,
+          validationPassed: body.validationPassed,
         })
       })
     })
@@ -209,6 +200,7 @@ class DemoForm extends React.Component {
               }}
               type="text"
               placeholder="First & Last name"
+              required
             />
             <input
               ref={ref => {
@@ -216,6 +208,7 @@ class DemoForm extends React.Component {
               }}
               type="text"
               placeholder="Practice Name ( ex. Dental Spa)"
+              required
             />
             <input
               ref={ref => {
@@ -223,6 +216,7 @@ class DemoForm extends React.Component {
               }}
               type="email"
               placeholder="Email Address"
+              required
             />
             <input
               ref={ref => {
@@ -230,6 +224,7 @@ class DemoForm extends React.Component {
               }}
               type="phone"
               placeholder="Phone Number"
+              required
             />
           </div>
           <div>
