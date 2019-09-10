@@ -3,6 +3,7 @@ import { navigate } from "gatsby"
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 import $ from "jquery"
+import { string } from "prop-types"
 
 /* class FormResponse extends React.Component {
   render() {
@@ -39,7 +40,7 @@ class ContactForm extends React.Component {
       name: "",
       phone: "",
       email: "",
-      message: "",
+      description: "",
       validationPassed: false,
     }
 
@@ -92,13 +93,13 @@ class ContactForm extends React.Component {
     data.append("FullName", this.name.value)
     data.append("PhoneNumber", this.phone.value)
     data.append("EmailAddress", this.email.value)
-    data.append("Message", this.message.value)
+    data.append("Description", this.description.value)
 
     // Add required, internal fields for our Admin connection
     data.append("Status", "New")
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
-    data.append("Description", "Form: Contact Us Form")
+    // data.append("Description", "Form: Contact Us Form")
     data.append("LeadSource", "(New) Main Website Organic")
 
     /* Debug:
@@ -132,7 +133,7 @@ class ContactForm extends React.Component {
     //Name:    [FullName]
     //Phone:   [PhoneNumber]
     //Email:   [EmailAddress]
-    //Message: [Message]
+    //Description: [Description]
 
     //stringData holds the stringified, encoded form data
     let stringData = ""
@@ -173,7 +174,7 @@ class ContactForm extends React.Component {
           name: body.name,
           phone: body.phone,
           email: body.email,
-          message: body.message,
+          description: body.description,
           validationPassed: body.validationPassed,
         })
       })
@@ -242,14 +243,14 @@ class ContactForm extends React.Component {
             />
           </div>
           <div className="form-group col-sm-11 col-md-9">
-            <label htmlFor="input-name">Message:</label>
+            <label htmlFor="input-name">Description</label>
             <input
               ref={ref => {
-                this.message = ref
+                this.description = ref
               }}
               type="textarea"
               className="form-control"
-              id="input-message"
+              id="input-description"
               required
             />
           </div>
