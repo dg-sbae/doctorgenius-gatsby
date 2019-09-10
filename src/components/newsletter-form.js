@@ -9,6 +9,7 @@ class NewsLetterSignUpForm extends React.Component {
 
     this.state = {
       email: "",
+      validationPassed: false,
     }
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
@@ -88,6 +89,7 @@ class NewsLetterSignUpForm extends React.Component {
       response.json().then(body => {
         this.setState({
           email: body.email,
+          validationPassed: body.validationPassed,
         })
       })
     })
