@@ -158,7 +158,7 @@ class ContactForm extends React.Component {
     // console.log("Stringified form data:", stringData)
 
     // Generate a request to our Admin portal (connects to SalesForce)
-    // Handled on the server now
+    // Handled in the backend server now
 
     // Generate a request to the email server
     fetch("https://nodetest.dgplex.com/contact-us", {
