@@ -29,7 +29,7 @@
     }
     .event-desc {
       font-size: 18px;
-      font-weight: $font-weight-normal;
+      font-weight: $font-weight-light;
       font-family: $font-family-body-text;
       color: #6d6d6d;
       margin-top: $pad;
@@ -48,12 +48,13 @@
     .hero-more-info-btn:hover {
       background-color: $primary;
       color: #fff;
-      border: 1px solid #535353;
+      border: none;
     }
     .dg-category {
       text-transform: initial;
       display: inline-block;
       font-size: 15px;
+      font-weight: $font-weight-light;
     }
     .register-now-btn {
       background-color: $demo-button-green;
@@ -130,7 +131,7 @@
       font-weight: $font-weight-normal;
     }
     .intro-section p {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: $font-weight-light;
       text-align: center;
       font-family: $font-family-body-text;
@@ -151,11 +152,11 @@
         border-bottom: 3px solid #cfcfcf;
       }
       h3 {
-        font-size: 27px;
+        font-size: 24px;
         font-weight: $font-weight-medium;
       }
       p {
-        font-size: 18px;
+        font-size: 16px;
         font-family: $font-family-body-text;
       }
       .card-event-date {
@@ -169,7 +170,7 @@
       .event-more-info-btn:hover {
         background-color: $primary;
         color: #fff;
-        border: 1px solid #535353;
+        border: none;
       }
     }
   }
@@ -183,7 +184,7 @@
       font-weight: $font-weight-normal;
     }
     .img-icon {
-      max-width: 100%;
+      max-width: 70%;
     }
     .logo-partnership-item {
       padding-left: 10px;
@@ -202,7 +203,7 @@
       font-weight: $font-weight-normal;
     }
     .past-event-desc {
-      font-size: 18px;
+      font-size: 16px;
       font-family: $font-family-body-text;
       color: #6d6d6d;
       margin-top: $m1;
@@ -233,13 +234,15 @@
         0 2px 10px 0 rgba(0, 0, 0, 0.12);
     }
     .past-event-title-and-desc .pe-title {
-      font-size: 24px;
+      font-size: 22px;
+      line-height: 26px;
       font-weight: $font-weight-normal;
       margin: 15px 0;
     }
     .past-event-title-and-desc .pe-desc {
       font-family: $font-family-body-text;
-      font-size: 18px;
+      font-size: 16px;
+      line-height: 20px;
       font-weight: $font-weight-normal;
       color: #6d6d6d;
     }
