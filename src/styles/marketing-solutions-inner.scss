@@ -1,6 +1,9 @@
 @import "_site-variables.scss";
 
 .marketing-solutions-inner {
+  img[src='/static/1f0f302834cf259711156fa4b4e73819/c5e16/event-building-3.webp']{
+    display: none;
+  }
   &.content-marketing {
     .hero {
       background-image: url("../img/hero/content-marketing.jpg");
