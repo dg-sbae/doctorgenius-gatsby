@@ -4,11 +4,6 @@ import { graphql, Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 //import Main from "../components/main-content"
 import Container from "../components/Container"
-import FacebookIcon from "../img/facebook-blue.png"
-import TwitterIcon from "../img/twitter-blue.png"
-import InstagramIcon from "../img/instagram-blue.png"
-import LinkedinIcon from "../img/linkedin-blue.png"
-import YoutubeIcon from "../img/youtube-blue.png"
 
 import "../styles/500.scss"
 
@@ -62,27 +57,39 @@ class DG500Page extends React.Component {
                               <div class="col-sm-12 text-center sm-500">
                                 <a href="https://www.facebook.com/DoctorGeniusMarketing">
                                   <img
-                                    src={FacebookIcon}
+                                    src={
+                                      data.facebook.childImageSharp.fixed.src
+                                    }
                                     alt="Facebook Icons"
                                   />
                                 </a>
                                 <a href="https://twitter.com/DoctorGeniusCA">
-                                  <img src={TwitterIcon} alt="Facebook Icons" />
+                                  <img
+                                    src={data.twitter.childImageSharp.fixed.src}
+                                    alt="Twitter Icon"
+                                  />
                                 </a>
                                 <a href="https://www.instagram.com/doctor.genius/">
                                   <img
-                                    src={InstagramIcon}
-                                    alt="Facebook Icons"
+                                    src={
+                                      data.instagram.childImageSharp.fixed.src
+                                    }
+                                    alt="Instagram Icon"
                                   />
                                 </a>
                                 <a href="https://www.linkedin.com/company/doctor-genius">
                                   <img
-                                    src={LinkedinIcon}
-                                    alt="Facebook Icons"
+                                    src={
+                                      data.linkedin.childImageSharp.fixed.src
+                                    }
+                                    alt="Linkedin Icon"
                                   />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
-                                  <img src={YoutubeIcon} alt="Facebook Icons" />
+                                  <img
+                                    src={data.youtube.childImageSharp.fixed.src}
+                                    alt="Youtube Icon"
+                                  />
                                 </a>
                               </div>
                             </div>
@@ -131,12 +138,47 @@ class DG500Page extends React.Component {
 export default DG500Page
 
 export const pagesQuery = graphql`
-  query allPagesQuery500 {
+  query {
     allSitePage(
       filter: { path: { ne: "/dev-404-page", regex: "//*/([^/]*)//" } }
     ) {
       nodes {
         path
+      }
+    }
+    facebook: file(relativePath: { eq: "facebook-blue.png" }) {
+      childImageSharp {
+        fixed(width: 27) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    twitter: file(relativePath: { eq: "twitter-blue.png" }) {
+      childImageSharp {
+        fixed(width: 27) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    instagram: file(relativePath: { eq: "instagram-blue.png" }) {
+      childImageSharp {
+        fixed(width: 27) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    linkedin: file(relativePath: { eq: "linkedin-blue.png" }) {
+      childImageSharp {
+        fixed(width: 27) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    youtube: file(relativePath: { eq: "youtube-blue.png" }) {
+      childImageSharp {
+        fixed(width: 27) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }

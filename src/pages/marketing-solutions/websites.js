@@ -3,13 +3,6 @@ import { graphql } from "gatsby"
 
 import MarketingSolutionsTemplate from "../../templates/marketing-solutions-inner"
 
-import designYourPresenceImage from "../../img/design-your-presence.png"
-import brandIdentityImage from "../../img/brand-identity.png"
-import mobileFirstMarketingImage from "../../img/mobile-first-marketing.png"
-import highSpeedSitesImage from "../../img/high-speed-websites.png"
-import awdaCompliantImage from "../../img/awda-compliant.png"
-import searchResultsPageImage from "../../img/local-business-search-result.png"
-
 import websiteIcon from "../../img/icon/website.svg"
 import fingerprintIcon from "../../img/icon/fingerprint.svg"
 import smartphoneIcon from "../../img/icon/smartphone.svg"
