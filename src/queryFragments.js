@@ -176,7 +176,13 @@ export const siteFragments = graphql`
   fragment eventListing on wordpress__wp_events {
     all_image_urls {
       hero_image_url {
-        source_url
+        localFile {
+          childImageSharp {
+            fluid(maxWidth: 2201) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
       featured_image_url_large {
         source_url
@@ -188,6 +194,15 @@ export const siteFragments = graphql`
     event_details_text
     event_state
     event_title
+    featured_media {
+      localFile {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
     featured_event
     information_heading1
     include_location
