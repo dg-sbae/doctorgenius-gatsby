@@ -7,16 +7,6 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import googleLogo from "../img/google-partner.png"
-import pulseCheckLogo from "../img/digital-marketing-partner-pulsecheck.png"
-import picisLogo from "../img/digital-marketing-partner-picis.png"
-import boaLogo from "../img/digital-marketing-partner-bofa.png"
-import pattersonLogo from "../img/digital-marketing-partner-patterson.png"
-import roiLogo from "../img/digital-marketing-partner-roi-dental.png"
-import hrHealthLogo from "../img/digital-marketing-partner-hrforhealth.png"
-import jllLogo from "../img/digital-marketing-partner-jll.png"
-import digitalMarketingPartnershipImage from "../img/digital-marketing-partnership.png"
-
 import thinArrowRight from "../img/right-arrow.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
@@ -24,7 +14,6 @@ import "../styles/partnerships.scss"
 
 const Partnerships = data => {
   const images = data.data
-  console.log(images)
   return (
     <DefaultPageLayout location="partnerships">
       <Helmet>
@@ -258,10 +247,13 @@ const Partnerships = data => {
                 </div>
               </div>
               <div className="col-sm-10 order-sm-1 col-md-6 offset-md-0 order-md-2">
-                <img
-                  className="img-responsive"
-                  src={digitalMarketingPartnershipImage}
+                <Img
+                  fluid={
+                    images.digitalMarketingPartnershipImage.childImageSharp
+                      .fluid
+                  }
                   alt="Digital Marketing Partnership"
+                  className="img-responsive"
                 />
               </div>
             </div>
@@ -346,20 +338,10 @@ export const ImageQuery = graphql`
       relativePath: { eq: "digital-marketing-partnership.png" }
     ) {
       childImageSharp {
-        fixed(width: 200) {
-          ...GatsbyImageSharpFixed
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
   }
 `
-
-/* import googleLogo from "../img/google-partner.png"
-import pulseCheckLogo from "../img/digital-marketing-partner-pulsecheck.png"
-import picisLogo from "../img/digital-marketing-partner-picis.png"
-import boaLogo from "../img/digital-marketing-partner-bofa.png"
-import pattersonLogo from "../img/digital-marketing-partner-patterson.png"
-import roiLogo from "../img/digital-marketing-partner-roi-dental.png"
-import hrHealthLogo from "../img/digital-marketing-partner-hrforhealth.png"
-import jllLogo from "../img/digital-marketing-partner-jll.png"
-import digitalMarketingPartnershipImage from "../img/digital-marketing-partnership.png" */
