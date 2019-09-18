@@ -3,7 +3,7 @@ import { navigate } from "gatsby"
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 import $ from "jquery"
-import { string } from "prop-types"
+//import { string } from "prop-types"
 
 /* class FormResponse extends React.Component {
   render() {

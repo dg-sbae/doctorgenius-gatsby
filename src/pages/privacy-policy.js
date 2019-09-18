@@ -298,7 +298,7 @@ export default props => (
                       <a
                         href="https://pixelid.io/T/unsub.html"
                         target="_blank"
-                        rel="nofollow noopener"
+                        rel="noopener noreferrer"
                       >
                         https://pixelid.io/T/unsub.html
                       </a>
