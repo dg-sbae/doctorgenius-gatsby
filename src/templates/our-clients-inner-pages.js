@@ -15,7 +15,6 @@ import urgentCare from "../img/icon/urgent-care-nav.svg"
 import chiropractorPractices from "../img/icon/chiropractor-nav.svg"
 import cosmeticSurgeons from "../img/icon/surgeon-nav.svg"
 import healthcareMarketing from "../img/icon/sphygmomanometer-nav.svg"
-import searchResultsPageImage from "../img/local-business-search-result.png"
 
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
@@ -35,7 +34,6 @@ export default props => {
   const contentParagraphBlock = contentRows["contentParagraphBlock"]
   const currentPage = props.page
   const backgroundImage = props.backgroundImage
-  console.log(props)
 
   return (
     <DefaultPageLayout>
