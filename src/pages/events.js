@@ -603,5 +603,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-//import standardHeroBg from "../img/hero/plans.jpg"

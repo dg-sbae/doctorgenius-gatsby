@@ -36,11 +36,23 @@ export const siteFragments = graphql`
   fragment eventPost on wordpress__wp_events {
     all_image_urls {
       information_image_url {
-        source_url
+        localFile {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         alt_text
       }
       hero_image_url {
-        source_url
+        localFile {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     end_time
@@ -83,91 +95,169 @@ export const siteFragments = graphql`
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_2 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_3 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_4 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_5 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_6 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_7 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_8 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_9 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_10 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_11 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_12 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       wordpress_13 {
         order
         speaker_name
         speaker_profile_image_url {
-          source_url
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
     }

@@ -1,5 +1,8 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import Img from "gatsby-image"
+
+import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -24,12 +27,15 @@ export default props => {
   const pageSubtitle = props.pageSubTitle
   const pageIntro = props.pageIntro
   const isCaseStudy = props.caseStudy
+  const caseStudyImage = props.caseStudyImage
   const metaTitle = props.metaTitle
   const metaDescription = props.metaDescription
 
   const contentRows = props.contentRows
   const contentParagraphBlock = contentRows["contentParagraphBlock"]
   const currentPage = props.page
+  const backgroundImage = props.backgroundImage
+  console.log(props)
 
   return (
     <DefaultPageLayout>
@@ -38,23 +44,25 @@ export default props => {
         <meta name="description" content={metaDescription} />
       </Helmet>
       <div className={"our-clients-inner " + currentPage}>
-        <div className="hero">
-          {/* Hero will be a layout component */}
+        <BackgroundImage fluid={backgroundImage}>
+          <div className="hero">
+            {/* Hero will be a layout component */}
 
-          <Container>
-            <div className="valign-wrapper row">
-              <div className="col-sm-12">
-                <div className="hero-content accent-block">
-                  <h1>{pageTitle}</h1>
-                  <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
-                  <div className="accented-paragraph">
-                    <p>{pageIntro}</p>
+            <Container>
+              <div className="valign-wrapper row">
+                <div className="col-sm-12">
+                  <div className="hero-content accent-block">
+                    <h1>{pageTitle}</h1>
+                    <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
+                    <div className="accented-paragraph">
+                      <p>{pageIntro}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Container>
-        </div>
+            </Container>
+          </div>
+        </BackgroundImage>
         <Main>
           <Container>
             {/* Begin secondary nav Component: */}
@@ -231,9 +239,9 @@ export default props => {
                   </div>
                 </div>
                 <div className="col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col">
-                  <img
+                  <Img
+                    fluid={caseStudyImage}
                     className="img-responsive blur-bleed"
-                    src={searchResultsPageImage}
                     alt="Local Business Search Results Page"
                   />
                 </div>
