@@ -16,6 +16,7 @@ const OnlineReputationManagement = data => {
       pageIntro="Delivering effective brand strategies that enable you to have a major edge in competitive markets."
       metaTitle="Online Brand & Reputation Monitoring | Maintain a Positive Online Reputation"
       metaDescription="We put powerful tools in your hands to deliver effective brand strategies that enable you to have a major edge in competitive markets."
+      backgroundImage={images.onlineReputationManagement.childImageSharp.fluid}
       contentRows={[
         {
           content: {
@@ -92,6 +93,15 @@ export const ImageQuery = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    onlineReputationManagement: file(
+      relativePath: { eq: "online-reputation.jpg" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

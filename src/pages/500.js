@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 //import Main from "../components/main-content"
 import Container from "../components/Container"
+import BackgroundImage from "gatsby-background-image"
 
 import "../styles/500.scss"
 
@@ -34,73 +35,82 @@ class DG500Page extends React.Component {
         {pagePaths.length > 0 && (
           <DefaultPageLayout location="the-study-post">
             <div className={`${this.props["*"]} page-500`}>
-              <div className="hero">
-                {/* Hero will be a layout component */}
+              <BackgroundImage
+                fluid={data.heroBg.childImageSharp.fluid}
+                className="gbi-500"
+              >
+                <div className="hero">
+                  {/* Hero will be a layout component */}
 
-                <Container>
-                  <div className="valign-wrapper row">
-                    <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-                      <div>
-                        <div className="row">
-                          <div className="col-sm-12 col-md-12 col-lg-12">
-                            <h1 className="text-center">500</h1>
-                            <h2 className="text-center">
-                              OOPS! INTERNAL SERVICE ERROR
-                            </h2>
-                            <p className="text-center accented-paragraph">
-                              The page you are looking for might have been
-                              removed had its changed or is temporarily
-                              unavailable. &nbsp;
-                              <Link to="/">Return to homepage</Link>
-                            </p>
-                            <div class="row">
-                              <div class="col-sm-12 text-center sm-500">
-                                <a href="https://www.facebook.com/DoctorGeniusMarketing">
-                                  <img
-                                    src={
-                                      data.facebook.childImageSharp.fixed.src
-                                    }
-                                    alt="Facebook Icons"
-                                  />
-                                </a>
-                                <a href="https://twitter.com/DoctorGeniusCA">
-                                  <img
-                                    src={data.twitter.childImageSharp.fixed.src}
-                                    alt="Twitter Icon"
-                                  />
-                                </a>
-                                <a href="https://www.instagram.com/doctor.genius/">
-                                  <img
-                                    src={
-                                      data.instagram.childImageSharp.fixed.src
-                                    }
-                                    alt="Instagram Icon"
-                                  />
-                                </a>
-                                <a href="https://www.linkedin.com/company/doctor-genius">
-                                  <img
-                                    src={
-                                      data.linkedin.childImageSharp.fixed.src
-                                    }
-                                    alt="Linkedin Icon"
-                                  />
-                                </a>
-                                <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
-                                  <img
-                                    src={data.youtube.childImageSharp.fixed.src}
-                                    alt="Youtube Icon"
-                                  />
-                                </a>
+                  <Container>
+                    <div className="valign-wrapper row">
+                      <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                        <div>
+                          <div className="row">
+                            <div className="col-sm-12 col-md-12 col-lg-12">
+                              <h1 className="text-center">500</h1>
+                              <h2 className="text-center">
+                                OOPS! INTERNAL SERVICE ERROR
+                              </h2>
+                              <p className="text-center accented-paragraph">
+                                The page you are looking for might have been
+                                removed had its changed or is temporarily
+                                unavailable. &nbsp;
+                                <Link to="/">Return to homepage</Link>
+                              </p>
+                              <div class="row">
+                                <div class="col-sm-12 text-center sm-500">
+                                  <a href="https://www.facebook.com/DoctorGeniusMarketing">
+                                    <img
+                                      src={
+                                        data.facebook.childImageSharp.fixed.src
+                                      }
+                                      alt="Facebook Icons"
+                                    />
+                                  </a>
+                                  <a href="https://twitter.com/DoctorGeniusCA">
+                                    <img
+                                      src={
+                                        data.twitter.childImageSharp.fixed.src
+                                      }
+                                      alt="Twitter Icon"
+                                    />
+                                  </a>
+                                  <a href="https://www.instagram.com/doctor.genius/">
+                                    <img
+                                      src={
+                                        data.instagram.childImageSharp.fixed.src
+                                      }
+                                      alt="Instagram Icon"
+                                    />
+                                  </a>
+                                  <a href="https://www.linkedin.com/company/doctor-genius">
+                                    <img
+                                      src={
+                                        data.linkedin.childImageSharp.fixed.src
+                                      }
+                                      alt="Linkedin Icon"
+                                    />
+                                  </a>
+                                  <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
+                                    <img
+                                      src={
+                                        data.youtube.childImageSharp.fixed.src
+                                      }
+                                      alt="Youtube Icon"
+                                    />
+                                  </a>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div className="col-sm-6" />
                     </div>
-                    <div className="col-sm-6" />
-                  </div>
-                </Container>
-              </div>
+                  </Container>
+                </div>
+              </BackgroundImage>
               {/*<Main>
                 <Container>
                   <div className="row padded tall-top short-bottom">
@@ -178,6 +188,13 @@ export const pagesQuery = graphql`
       childImageSharp {
         fixed(width: 27) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    heroBg: file(relativePath: { eq: "500-error.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

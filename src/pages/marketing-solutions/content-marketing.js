@@ -16,6 +16,7 @@ const ContentMarketing = data => {
       pageIntro="Our organic content strategy's main objective is to funnel traffic to your website."
       metaTitle="Organic Search Engine Optimized Content | Healthcare Marketing Agency"
       metaDescription="When was the last time your current agency updated your website? Content marketing drives website visibility which in turn drives patients."
+      backgroundImage={images.backgroundImage.childImageSharp.fluid}
       contentRows={[
         {
           content: {
@@ -92,6 +93,13 @@ export const ImageQuery = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    backgroundImage: file(relativePath: { eq: "content-marketing.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -16,6 +16,7 @@ const OurTechnology = data => {
       pageIntro="We provide predictable, performance-driven and sustainable practice growth."
       metaTitle="New Patient Acquisition Marketing Platform | Extend Your Reach"
       metaDescription="Performance, Results, Excellence. Start acquiring the new patients your healthcare practice deserves with a mobile first conversion focused medical website."
+      backgroundImage={images.ourTechnology.childImageSharp.fluid}
       contentRows={[
         {
           content: {
@@ -92,6 +93,13 @@ export const ImageQuery = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    ourTechnology: file(relativePath: { eq: "our-technology.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -2,7 +2,6 @@
 
 .page-500 {
   .hero {
-    background-image: url("../img/hero/500-error.jpg");
     height: 100vh;
   }
 
@@ -27,27 +26,34 @@
     margin: 15px 8px;
   }
 
-  @media only screen and (max-width: 1024px) {
-    .hero {
-      background-image: url("../img/hero/500-error-tablet.jpg");
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .gbi-500:before,
+    .gbi-500:after {
       height: 100vh;
+      background-position: 20% !important;
+      opacity: 0.1 !important;
     }
   }
-  @media only screen and (min-width: 992px) and (max-width: 1024px) {
-    .hero {
-      background-position: 0% 32%;
-    }
-  }
-  @media only screen and (min-width: 1025px) and (max-width: 1299px) {
-    .hero {
-      background-image: none;
+
+  @media only screen and (min-width: 993px) and (max-width: 1024px) {
+    .gbi-500:before,
+    .gbi-500:after {
+      height: 100vh;
+      background-position: 14% !important;
+      opacity: 0.1 !important;
       background-color: #f0f3f4;
-      height: 100vh;
     }
   }
   @media only screen and (max-width: 425px) {
     .hero h1 {
       font-size: 9em;
+    }
+    .gbi-500:before,
+    .gbi-500:after {
+      height: 100vh;
+      background-position: 29% !important;
+      opacity: 0.1 !important;
+      background-color: #f0f3f4;
     }
   }
 }

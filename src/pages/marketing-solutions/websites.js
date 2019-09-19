@@ -20,6 +20,7 @@ const OurWebsites = data => {
       pageIntro="Stun your viewers with exquisitely designed websites & attractive branding. Getting appointments has never been easier."
       metaTitle="Conversion & Mobile First Healthcare Websites | Performance Driven Marketing"
       metaDescription="Start getting the new patients your medical practice deserves. Mobile first results-driven medical websites with performance digital marketing."
+      backgroundImage={images.responsiveWebsites.childImageSharp.fluid}
       contentRows={[
         {
           content: {
@@ -166,6 +167,13 @@ export const ImageQuery = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    responsiveWebsites: file(relativePath: { eq: "responsive-websites.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

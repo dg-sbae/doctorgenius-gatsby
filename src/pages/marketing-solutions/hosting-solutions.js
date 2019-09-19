@@ -16,6 +16,7 @@ const HostingSolutions = data => {
       pageIntro="We’re always first in line when it comes to running the latest technology."
       metaTitle="Enterprise Power for Medical Practice Websites | Secure Website Hosting"
       metaDescription="Many hosting solutions do not meet our high standards of security, speed, updates, and backup. We are sticklers for the little things that radically enhance your visitors experience."
+      backgroundImage={images.hostingSolutions.childImageSharp.fluid}
       contentRows={[
         {
           content: {
@@ -69,6 +70,13 @@ export const ImageQuery = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    hostingSolutions: file(relativePath: { eq: "hosting-solutions.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
