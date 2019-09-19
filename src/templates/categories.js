@@ -17,8 +17,6 @@ import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
-import eventsPlaceholder from "../img/study-archive-events-placeholder-3x2.png"
-
 import "../styles/the-study.scss"
 
 const ResponsivePostsColumnHeader = props => (
@@ -461,7 +459,10 @@ const CategoriesPage = ({ data, pageContext }) => {
                 {data.events.edges.map(({ node }) => (
                   <div className="col-sm-3" key={node.title}>
                     <div className="event-wrapper">
-                      <img src={eventsPlaceholder} alt="Recent Event" />
+                      <Img
+                        fluid={data.eventsPlaceholder.childImageSharp.fluid}
+                        alt="Recent Event"
+                      />
                     </div>
                     <a href={node.link}>
                       <p>{he.decode(node.title)}</p>

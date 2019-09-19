@@ -10,10 +10,6 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import NewsLetterSignUpForm from "../components/newsletter-form.js"
 
-import marketingCategoryImage from "../img/digital-marketing-blog.png"
-import practiceManagementImage from "../img/practice-management-blog.png"
-import geniusLabImage from "../img/doctor-genius-blog.png"
-import eventsPlaceholder from "../img/study-archive-events-placeholder-3x2.png"
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
 import instagramIcon from "../img/instagram.svg"
@@ -104,14 +100,18 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
     {
       name: "Digital Marketing",
       slug: "digital-marketing",
-      image: marketingCategoryImage,
+      image: data.marketingCategoryImage.childImageSharp.fluid.src,
     },
     {
       name: "Practice Management",
       slug: "practice-management",
-      image: practiceManagementImage,
+      image: data.practiceManagementImage.childImageSharp.fluid.src,
     },
-    { name: "Genius Lab", slug: "genius-lab", image: geniusLabImage },
+    {
+      name: "Genius Lab",
+      slug: "genius-lab",
+      image: data.geniusLabImage.childImageSharp.fluid.src,
+    },
   ]
   // Variables for the next/prev button in pagination
   const isFirst = pageContext.currentPage === 1
@@ -430,7 +430,10 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                 {data.events.edges.map(({ node }) => (
                   <div className="col-sm-3" key={node.title}>
                     <div className="event-wrapper">
-                      <img src={eventsPlaceholder} alt="Recent Event" />
+                      <Img
+                        fluid={data.eventsPlaceholder.childImageSharp.fluid}
+                        alt="Recent Event"
+                      />
                     </div>
                     <a href={node.link}>
                       <p>{he.decode(node.title)}</p>
@@ -524,6 +527,40 @@ export const pageQuery = graphql`
         node {
           name
           slug
+        }
+      }
+    }
+    marketingCategoryImage: file(
+      relativePath: { eq: "digital-marketing-blog.png" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    practiceManagementImage: file(
+      relativePath: { eq: "practice-management-blog.png" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    geniusLabImage: file(relativePath: { eq: "doctor-genius-blog.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    eventsPlaceholder: file(
+      relativePath: { eq: "study-archive-events-placeholder-3x2.png" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
