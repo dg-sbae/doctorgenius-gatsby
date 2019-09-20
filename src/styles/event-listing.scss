@@ -214,8 +214,7 @@
     .past-events-timeline {
       width: 858px;
       height: 1394px;
-      background: url("../img/event-timeline-bg.png");
-      background-repeat: no-repeat;
+      background-repeat: no-repeat !important;
     }
     .past-event-title-and-desc {
       padding-left: $pad;
@@ -276,10 +275,6 @@
         rgba(255, 255, 255, 0.2) 0,
         #fff 65%
       );
-    }
-    .main-content {
-      background: top/300px repeat-x url("../img/background-texture.png"),
-        center 100%/300px repeat-x url("../img/background-texture-flipped.png");
     }
 
     header .logo a .logo-holder {
@@ -567,7 +562,7 @@
         margin-bottom: $m1;
       }
       .past-events-timeline {
-        background: none;
+        background: none !important;
         width: initial;
         height: initial;
       }

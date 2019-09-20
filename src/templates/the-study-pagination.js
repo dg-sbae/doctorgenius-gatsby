@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import he from "he"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -149,29 +150,31 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
         />
       </Helmet>
       <div className="the-study">
-        <div className="hero">
-          {/* Hero will be a layout component */}
+        <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
+          <div className="hero">
+            {/* Hero will be a layout component */}
 
-          <Container>
-            <div className="valign-wrapper row">
-              <div className="col-sm-12">
-                <div className="hero-content accent-block">
-                  <h1>Resources</h1>
-                  <h2>
-                    <span>The</span> Study
-                  </h2>
-                  <div className="accented-paragraph">
-                    <p>
-                      Providing news and education on all things regarding
-                      Practice Management and Digital Marketing to help
-                      jumpstart your Practice.
-                    </p>
+            <Container>
+              <div className="valign-wrapper row">
+                <div className="col-sm-12">
+                  <div className="hero-content accent-block">
+                    <h1>Resources</h1>
+                    <h2>
+                      <span>The</span> Study
+                    </h2>
+                    <div className="accented-paragraph">
+                      <p>
+                        Providing news and education on all things regarding
+                        Practice Management and Digital Marketing to help
+                        jumpstart your Practice.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Container>
-        </div>
+            </Container>
+          </div>
+        </BackgroundImage>
         <Main>
           <Container>
             <div className="row padded category">
@@ -561,6 +564,13 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    heroBg: file(relativePath: { eq: "the-study.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

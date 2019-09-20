@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -26,31 +27,34 @@ const Partnerships = data => {
         />
       </Helmet>
       <div className="partnerships">
-        <div className="hero">
-          {/* Hero will be a layout component */}
+        <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
+          <div className="hero">
+            {/* Hero will be a layout component */}
 
-          <Container>
-            <div className="valign-wrapper row">
-              <div className="col-sm-12">
-                <div className="hero-content">
-                  <div className="hero-content accent-block">
-                    <h1>Partnerships</h1>
-                    <h2>
-                      <span>Being Partners With Us </span>makes it more possible
-                    </h2>
-                    <div className="accented-paragraph">
-                      <p>
-                        Explore opportunities to establish a value-added
-                        partnership with an organization whose central focus is
-                        success.
-                      </p>
+            <Container>
+              <div className="valign-wrapper row">
+                <div className="col-sm-12">
+                  <div className="hero-content">
+                    <div className="hero-content accent-block">
+                      <h1>Partnerships</h1>
+                      <h2>
+                        <span>Being Partners With Us </span>makes it more
+                        possible
+                      </h2>
+                      <div className="accented-paragraph">
+                        <p>
+                          Explore opportunities to establish a value-added
+                          partnership with an organization whose central focus
+                          is success.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Container>
-        </div>
+            </Container>
+          </div>
+        </BackgroundImage>
         <Main>
           <Container>
             <div className="row padded">
@@ -337,6 +341,13 @@ export const ImageQuery = graphql`
     digitalMarketingPartnershipImage: file(
       relativePath: { eq: "digital-marketing-partnership.png" }
     ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    heroBg: file(relativePath: { eq: "partnerships-hero.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

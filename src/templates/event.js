@@ -17,7 +17,6 @@ const EventPage = ({ data }) => {
   const event_details = data.focus_event
   const speaker_details = data.speakers_data.speaker_items
   let styleBackgroundImage = null
-  console.log(event_details)
   //Dynamically add BG image from event data
   if (
     event_details.all_image_urls.hero_image_url.localFile.childImageSharp.fluid

@@ -16,6 +16,9 @@ const DentalPracticeInnerPage = data => {
       metaTitle="Dental Patient Engagement, Acquisition, Retention | Predictable Practice Growth Solution"
       metaDescription="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Start getting the new patients your dental practice deserves."
       backgroundImage={images.backgroundImage.childImageSharp.fluid}
+      fullBleedBackgroundImage={
+        images.fullBleedBackgroundImage.childImageSharp.fluid.src
+      }
       contentRows={{
         contentParagraphBlock: {
           heading: {
@@ -98,6 +101,15 @@ export const ImageQuery = graphql`
     ) {
       childImageSharp {
         fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fullBleedBackgroundImage: file(
+      relativePath: { eq: "our-clients-fullbleed-image.png" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 2201) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -15,6 +15,9 @@ const ChiropractorInnerPage = data => {
       metaTitle="Marketing for Chiropractors | Chiropractic Website Development & Marketing"
       metaDescription="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Start getting the new patients your chiropractic practice deserves."
       backgroundImage={images.backgroundImage.childImageSharp.fluid}
+      fullBleedBackgroundImage={
+        images.fullBleedBackgroundImage.childImageSharp.fluid.src
+      }
       contentRows={{
         contentParagraphBlock: {
           heading: {
@@ -76,6 +79,15 @@ export default ChiropractorInnerPage
 export const ImageQuery = graphql`
   query ChiropractorImages {
     backgroundImage: file(relativePath: { eq: "chiropractor-practices.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2201) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fullBleedBackgroundImage: file(
+      relativePath: { eq: "our-clients-fullbleed-image.png" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 2201) {
           ...GatsbyImageSharpFluid

@@ -13,6 +13,11 @@ import "../styles/demo.scss"
 
 const DemoPage = data => {
   const images = data.data
+  const pixelMap = images.pixelMap.childImageSharp.fluid.src
+  const heroStyle = {
+    background: "url(" + pixelMap + ")",
+  }
+
   return (
     <DefaultPageLayout location="demo">
       <Helmet>
@@ -26,7 +31,7 @@ const DemoPage = data => {
         />
       </Helmet>
       <div className="demo">
-        <div className="hero">
+        <div className="hero" style={heroStyle}>
           {/* Hero will be a layout component */}
           <Container>
             <div className="valign-wrapper row">
@@ -875,6 +880,13 @@ export const ImageQuery = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    pixelMap: file(relativePath: { eq: "pixel-map.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1707) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

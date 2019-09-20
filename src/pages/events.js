@@ -21,6 +21,12 @@ const EventPage = ({ data }) => {
   let featured_event
   const images = data
 
+  const eventTimeLineBg = images.eventTimelineBg.childImageSharp.fluid.src
+  const eventTimeLineStyles = {
+    backgroundImage: "url(" + eventTimeLineBg + ")",
+    backgroundRepeat: "no-repeat",
+  }
+
   // Adds data to featured_event if there currently is none
   if (data.featured_event.edges.length === 1) {
     featured_event = data.featured_event.edges[0].node
@@ -485,7 +491,10 @@ const EventPage = ({ data }) => {
                 </div>
 
                 <div className="row">
-                  <div className="col-lap-10 col-lg-9 col-md-11 past-events-timeline">
+                  <div
+                    className="col-lap-10 col-lg-9 col-md-11 past-events-timeline"
+                    style={eventTimeLineStyles}
+                  >
                     <div className="row">{display_past_events()}</div>
                   </div>
                 </div>
@@ -597,6 +606,13 @@ export const pageQuery = graphql`
     standardHeroBg: file(relativePath: { eq: "partnerships-hero.jpg" }) {
       childImageSharp {
         fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    eventTimelineBg: file(relativePath: { eq: "event-timeline-bg.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 858) {
           ...GatsbyImageSharpFluid
         }
       }

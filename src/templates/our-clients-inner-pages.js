@@ -34,6 +34,11 @@ export default props => {
   const contentParagraphBlock = contentRows["contentParagraphBlock"]
   const currentPage = props.page
   const backgroundImage = props.backgroundImage
+  const fullBleedBackgroundImage = props.fullBleedBackgroundImage
+
+  const fullBleedBgStyle = {
+    background: "url(" + fullBleedBackgroundImage + ") no-repeat",
+  }
 
   return (
     <DefaultPageLayout>
@@ -249,7 +254,10 @@ export default props => {
             {/* End split page content */}
             {/* Begin CTA banner */}
             <div className="full-bleed-wrapper pad-md">
-              <div className="full-bleed check-plans-background-image" />
+              <div
+                className="full-bleed check-plans-background-image"
+                style={fullBleedBgStyle}
+              />
               <div className="full-bleed-content-wrapper">
                 <div className="row">
                   <div className="col-sm-4 col-md-6 col-lg-7" />

@@ -15,6 +15,9 @@ const CosmeticSurgeonInnerPage = data => {
       metaTitle="Cosmetic Surgeon Website Development & Marketing | Increase Your Patient Base"
       metaDescription="Is your current website and marketing underperforming? Curious about a strong performance driven marketing platform? Start getting the new patients your practice deserves."
       backgroundImage={images.backgroundImage.childImageSharp.fluid}
+      fullBleedBackgroundImage={
+        images.fullBleedBackgroundImage.childImageSharp.fluid.src
+      }
       contentRows={{
         contentParagraphBlock: {
           heading: {
@@ -76,6 +79,15 @@ export default CosmeticSurgeonInnerPage
 export const ImageQuery = graphql`
   query CosmeticSurgeonImages {
     backgroundImage: file(relativePath: { eq: "cosmetic-surgeons.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2201) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fullBleedBackgroundImage: file(
+      relativePath: { eq: "our-clients-fullbleed-image.png" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 2201) {
           ...GatsbyImageSharpFluid
