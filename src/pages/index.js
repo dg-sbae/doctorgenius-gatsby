@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import SEO from "../components/seo.js"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -15,7 +16,6 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 export default ({ data }, props) => {
   const images = data
-
   return (
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
@@ -30,44 +30,46 @@ export default ({ data }, props) => {
       </Helmet>
       <SEO page="homepage" />
       <div className={"homepage"}>
-        <div className="hero">
-          {/* Hero will be a layout component */}
-          <Container>
-            <div className="row">
-              <div className="col-sm-12">
-                <div className="hero-content">
-                  <div className="accent-block">
-                    <div className="border-horizontal border-top-left" />
-                    <div className="border-horizontal border-top-right" />
-                    <div className="border-horizontal border-bottom-left" />
-                    <div className="border-horizontal border-bottom-right" />
-                    <div className="border-vertical border-left-top" />
-                    <div className="border-vertical border-right-top" />
-                    <div className="border-vertical border-left-bottom" />
-                    <div className="border-vertical border-right-bottom" />
-                    <h1>
-                      <span>The Leader in</span> New Patient Acquisitions
-                    </h1>
-                    <div className="accented-paragraph">
-                      <p>
-                        Doctor Genius offers high-end web marketing services to
-                        health care professionals throughout the United States.
-                        Learn how we funnel traffic to converted patients
-                        directly to your practice.
-                      </p>
+        <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
+          <div className="hero">
+            {/* Hero will be a layout component */}
+            <Container>
+              <div className="row">
+                <div className="col-sm-12">
+                  <div className="hero-content">
+                    <div className="accent-block">
+                      <div className="border-horizontal border-top-left" />
+                      <div className="border-horizontal border-top-right" />
+                      <div className="border-horizontal border-bottom-left" />
+                      <div className="border-horizontal border-bottom-right" />
+                      <div className="border-vertical border-left-top" />
+                      <div className="border-vertical border-right-top" />
+                      <div className="border-vertical border-left-bottom" />
+                      <div className="border-vertical border-right-bottom" />
+                      <h1>
+                        <span>The Leader in</span> New Patient Acquisitions
+                      </h1>
+                      <div className="accented-paragraph">
+                        <p>
+                          Doctor Genius offers high-end web marketing services
+                          to health care professionals throughout the United
+                          States. Learn how we funnel traffic to converted
+                          patients directly to your practice.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="demo-cta">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
+                    <div className="demo-cta">
+                      <a href="/demo" className="button flat white-text">
+                        Request Demo{" "}
+                        <img src={thinArrowRight} alt="Arrow Right" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Container>
-        </div>
+            </Container>
+          </div>
+        </BackgroundImage>
         <Main>
           <Container>
             <div className="row padded panel-row">
@@ -393,6 +395,13 @@ export const ImageQuery = graphql`
       childImageSharp {
         fixed(width: 375) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    heroBg: file(relativePath: { eq: "homepage-option-1.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

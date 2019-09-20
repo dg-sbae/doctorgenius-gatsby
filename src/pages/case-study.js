@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -15,7 +16,7 @@ import marketingSolutionsIcon from "../img/icon/marketing-solutions-suite.svg"
 import liveSupportIcon from "../img/icon/live-support-concierge.svg"
 import performanceCampaignIcon from "../img/icon/performance-driven-campaigns.svg"
 
-const CaseStudy = (data, props) => {
+const CaseStudy = data => {
   const images = data.data
   return (
     <DefaultPageLayout location="case-study">
@@ -30,30 +31,33 @@ const CaseStudy = (data, props) => {
         />
       </Helmet>
       <div>
-        <div className="hero">
-          {/* Hero will be a layout component */}
+        <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
+          <div className="hero">
+            {/* Hero will be a layout component */}
 
-          <Container>
-            <div className="valign-wrapper row">
-              <div className="col-sm-12">
-                <div className="hero-content">
-                  <div className="hero-content accent-block">
-                    <h1>Case Study</h1>
-                    <h2>
-                      <span>Challenge</span> Accepted
-                    </h2>
-                    <div className="accented-paragraph">
-                      <p>
-                        The problem, the answer, and the outcome. Doctor Genius’
-                        performance driven marketing platform in action.
-                      </p>
+            <Container>
+              <div className="valign-wrapper row">
+                <div className="col-sm-12">
+                  <div className="hero-content">
+                    <div className="hero-content accent-block">
+                      <h1>Case Study</h1>
+                      <h2>
+                        <span>Challenge</span> Accepted
+                      </h2>
+                      <div className="accented-paragraph">
+                        <p>
+                          The problem, the answer, and the outcome. Doctor
+                          Genius’ performance driven marketing platform in
+                          action.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Container>
-        </div>
+            </Container>
+          </div>
+        </BackgroundImage>
         <Main>
           <Container>
             <div className="row padded panel-row">
@@ -372,6 +376,13 @@ export const ImageQuery = graphql`
     searchResultsPage: file(
       relativePath: { eq: "local-business-search-result.png" }
     ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    heroBg: file(relativePath: { eq: "case-study.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

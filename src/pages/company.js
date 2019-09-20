@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -81,31 +82,33 @@ const Company = data => {
         />
       </Helmet>
       <div className="company">
-        <div className="hero">
-          {/* Hero will be a layout component */}
+        <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
+          <div className="hero">
+            {/* Hero will be a layout component */}
 
-          <Container>
-            <div className="valign-wrapper row">
-              <div className="col-sm-12">
-                <div className="hero-content">
-                  <div className="hero-content accent-block">
-                    <h1>Doctor Genius</h1>
-                    <h2>
-                      <span>What </span>we are about
-                    </h2>
-                    <div className="accented-paragraph">
-                      <p>
-                        Doctor Genius establishes and boosts your brand online
-                        using innovative digital marketing and search engine
-                        optimization strategies.
-                      </p>
+            <Container>
+              <div className="valign-wrapper row">
+                <div className="col-sm-12">
+                  <div className="hero-content">
+                    <div className="hero-content accent-block">
+                      <h1>Doctor Genius</h1>
+                      <h2>
+                        <span>What </span>we are about
+                      </h2>
+                      <div className="accented-paragraph">
+                        <p>
+                          Doctor Genius establishes and boosts your brand online
+                          using innovative digital marketing and search engine
+                          optimization strategies.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Container>
-        </div>
+            </Container>
+          </div>
+        </BackgroundImage>
         <Main>
           <Container>
             <div className="row padded tall-top">
@@ -365,6 +368,13 @@ export const ImageQuery = graphql`
     digitalMarketingPartnerShip: file(
       relativePath: { eq: "digital-marketing-partnership.png" }
     ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    heroBg: file(relativePath: { eq: "about-us-hero.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

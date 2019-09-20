@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -34,28 +35,30 @@ const MarketingSolutions = data => {
         />
       </Helmet>
       <div className="marketing-solutions">
-        <div className="hero">
-          {/* Hero will be a layout component */}
+        <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
+          <div className="hero">
+            {/* Hero will be a layout component */}
 
-          <Container>
-            <div className="valign-wrapper row">
-              <div className="col-sm-12">
-                <div className="hero-content accent-block">
-                  <h1>Marketing Solutions</h1>
-                  <h2>
-                    <span>Predictable</span> Practice Growth Solution
-                  </h2>
-                  <div className="accented-paragraph">
-                    <p>
-                      Proven and innovative solutions to move your business
-                      forward.
-                    </p>
+            <Container>
+              <div className="valign-wrapper row">
+                <div className="col-sm-12">
+                  <div className="hero-content accent-block">
+                    <h1>Marketing Solutions</h1>
+                    <h2>
+                      <span>Predictable</span> Practice Growth Solution
+                    </h2>
+                    <div className="accented-paragraph">
+                      <p>
+                        Proven and innovative solutions to move your business
+                        forward.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Container>
-        </div>
+            </Container>
+          </div>
+        </BackgroundImage>
         <Main>
           <Container>
             {/* Begin secondary nav Component: */}
@@ -223,7 +226,10 @@ const MarketingSolutions = data => {
             {/* End Split Row of image and content */}
             {/* Begin Full bleed content row (reversed) */}
             <div className="full-bleed-wrapper pad-md">
-              <div className="full-bleed check-plans-background-image flipped" />
+              <BackgroundImage
+                fluid={images.OurClientsFullBleed.childImageSharp.fluid}
+                className="full-bleed check-plans-background-image flipped"
+              ></BackgroundImage>
               <div className="full-bleed-content-wrapper">
                 <div className="row">
                   <div className="col-sm-8 col-md-5">
@@ -302,6 +308,22 @@ export const ImageQuery = graphql`
       }
     }
     portalDashboard: file(relativePath: { eq: "portal-dashboard.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    heroBg: file(relativePath: { eq: "marketing-solutions.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    OurClientsFullBleed: file(
+      relativePath: { eq: "our-clients-fullbleed-image.png" }
+    ) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
