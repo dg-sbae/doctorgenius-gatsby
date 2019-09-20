@@ -25,7 +25,7 @@
       font-size: 60px;
       font-weight: $font-weight-medium;
       margin-top: 20px;
-      line-height: .9em;
+      line-height: 0.9em;
     }
     .event-desc {
       font-size: 18px;
@@ -240,6 +240,7 @@
       line-height: 26px;
       font-weight: $font-weight-normal;
       margin: 15px 0;
+      color: #212529;
     }
     .past-event-title-and-desc .pe-desc {
       font-family: $font-family-body-text;
@@ -247,6 +248,10 @@
       line-height: 20px;
       font-weight: $font-weight-normal;
       color: #6d6d6d;
+    }
+    .past-event-title-and-desc .past-event-image:hover,
+    .past-event-title-and-desc .pe-title:hover {
+      cursor: pointer;
     }
   }
 
