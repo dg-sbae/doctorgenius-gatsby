@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Countdown, { zeroPad } from "react-countdown-now"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
@@ -198,19 +198,23 @@ const EventPage = ({ data }) => {
       <div className="col-lap-10 offset-lap-1 col-md-12">
         <div className="row singular-event">
           <div className="col-sm-10 col-md-6 past-event-image">
-            <img
-              src={
-                past_events[0].node.all_image_urls.featured_image_url_large
-                  .source_url
-              }
-              alt="Past Event"
-            />
+            <Link to={"/events/" + past_events[0].node.slug}>
+              <img
+                src={
+                  past_events[0].node.all_image_urls.featured_image_url_large
+                    .source_url
+                }
+                alt="Past Event"
+              />
+            </Link>
           </div>
           <div className="col-sm-10 col-md-6 past-event-title-and-desc">
             <span class="button flat white-text past-event-date">
               {format_date_short(past_events[0].node.event_date)}
             </span>
-            <p className="pe-title">{past_events[0].node.event_title}</p>
+            <Link to={"/events/" + past_events[0].node.slug}>
+              <p className="pe-title">{past_events[0].node.event_title}</p>
+            </Link>
             <p className="pe-desc">
               {past_events[0].node.information_heading1}
             </p>
@@ -219,19 +223,23 @@ const EventPage = ({ data }) => {
 
         <div className="row singular-event">
           <div className="col-sm-10 col-md-6 past-event-image">
-            <img
-              src={
-                past_events[1].node.all_image_urls.featured_image_url_large
-                  .source_url
-              }
-              alt="Past Event"
-            />
+            <Link to={"/events/" + past_events[1].node.slug}>
+              <img
+                src={
+                  past_events[1].node.all_image_urls.featured_image_url_large
+                    .source_url
+                }
+                alt="Past Event"
+              />
+            </Link>
           </div>
           <div className="col-sm-10 col-md-6 past-event-title-and-desc">
             <span class="button flat white-text past-event-date">
               {format_date_short(past_events[1].node.event_date)}
             </span>
-            <p className="pe-title">{past_events[1].node.event_title}</p>
+            <Link to={"/events/" + past_events[1].node.slug}>
+              <p className="pe-title">{past_events[1].node.event_title}</p>
+            </Link>
             <p className="pe-desc">
               {past_events[1].node.information_heading1}
             </p>
@@ -240,19 +248,23 @@ const EventPage = ({ data }) => {
 
         <div className="row singular-event">
           <div className="col-sm-10 col-md-6 past-event-image">
-            <img
-              src={
-                past_events[2].node.all_image_urls.featured_image_url_large
-                  .source_url
-              }
-              alt="Past Event"
-            />
+            <Link to={"/events/" + past_events[2].node.slug}>
+              <img
+                src={
+                  past_events[2].node.all_image_urls.featured_image_url_large
+                    .source_url
+                }
+                alt="Past Event"
+              />
+            </Link>
           </div>
           <div className="col-sm-10 col-md-6 past-event-title-and-desc">
             <span class="button flat white-text past-event-date">
               {format_date_short(past_events[2].node.event_date)}
             </span>
-            <p className="pe-title">{past_events[2].node.event_title}</p>
+            <Link to={"/events/" + past_events[2].node.slug}>
+              <p className="pe-title">{past_events[2].node.event_title}</p>
+            </Link>
             <p className="pe-desc">
               {past_events[2].node.information_heading1}
             </p>
@@ -261,19 +273,23 @@ const EventPage = ({ data }) => {
 
         <div className="row singular-event">
           <div className="col-sm-10 col-md-6 past-event-image">
-            <img
-              src={
-                past_events[3].node.all_image_urls.featured_image_url_large
-                  .source_url
-              }
-              alt="Past Event"
-            />
+            <Link to={"/events/" + past_events[3].node.slug}>
+              <img
+                src={
+                  past_events[3].node.all_image_urls.featured_image_url_large
+                    .source_url
+                }
+                alt="Past Event"
+              />
+            </Link>
           </div>
           <div className="col-sm-10 col-md-6 past-event-title-and-desc">
             <span class="button flat white-text past-event-date">
               {format_date_short(past_events[3].node.event_date)}
             </span>
-            <p className="pe-title">{past_events[3].node.event_title}</p>
+            <Link to={"/events/" + past_events[3].node.slug}>
+              <p className="pe-title">{past_events[3].node.event_title}</p>
+            </Link>
             <p className="pe-desc">
               {past_events[3].node.information_heading1}
             </p>
