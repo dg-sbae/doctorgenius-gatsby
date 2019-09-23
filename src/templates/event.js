@@ -223,6 +223,46 @@ const EventPage = ({ data }) => {
     }
   })
 
+  // Determines whether the information image is present and handles displaying/hiding it
+  const display_information_section = () => {
+    if (event_details.all_image_urls.information_image_url != null) {
+      if (event_details.all_image_urls.information_image_url.source_url != "") {
+        return (
+          <div className="row content-block padded listed-items">
+            <div className="col-sm-11 col-md-9 col-lap-6">
+              <h2>{event_details.information_heading1}</h2>
+              {display_h1_information()}
+              <h2>{event_details.information_heading2}</h2>
+              {display_h2_information()}
+            </div>
+            <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
+              <img
+                src={
+                  event_details.all_image_urls.information_image_url.source_url
+                }
+                alt={
+                  event_details.all_image_urls.information_image_url.alt_text
+                }
+              />
+            </div>
+          </div>
+        )
+      }
+    } else {
+      return (
+        <div className="row content-block padded listed-items">
+          <div className="col-sm-11 col-md-9 col-lap-7">
+            <h2>{event_details.information_heading1}</h2>
+            {display_h1_information()}
+            <h2>{event_details.information_heading2}</h2>
+            {display_h2_information()}
+          </div>
+          <div class="d-none"></div>
+        </div>
+      )
+    }
+  }
+
   return (
     <DefaultPageLayout location="event-post">
       <Helmet>
@@ -318,25 +358,7 @@ const EventPage = ({ data }) => {
 
             <div className="spacer solid"></div>
 
-            <div className="row content-block padded listed-items">
-              <div className="col-sm-11 col-md-9 col-lap-6">
-                <h2>{event_details.information_heading1}</h2>
-                {display_h1_information()}
-                <h2>{event_details.information_heading2}</h2>
-                {display_h2_information()}
-              </div>
-              <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
-                <img
-                  src={
-                    event_details.all_image_urls.information_image_url
-                      .source_url
-                  }
-                  alt={
-                    event_details.all_image_urls.information_image_url.alt_text
-                  }
-                />
-              </div>
-            </div>
+            {display_information_section()}
 
             <div
               className={
