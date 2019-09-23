@@ -215,9 +215,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[0].node.slug}>
               <p className="pe-title">{past_events[0].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[0].node.information_heading1}
-            </p>
+            {past_events[0].node.event_subtitle != "" && (
+              <p className="pe-desc">{past_events[0].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
@@ -240,9 +240,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[1].node.slug}>
               <p className="pe-title">{past_events[1].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[1].node.information_heading1}
-            </p>
+            {past_events[1].node.event_subtitle != "" && (
+              <p className="pe-desc">{past_events[1].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
@@ -265,9 +265,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[2].node.slug}>
               <p className="pe-title">{past_events[2].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[2].node.information_heading1}
-            </p>
+            {past_events[2].node.event_subtitle != "" && (
+              <p className="pe-desc">{past_events[2].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
@@ -290,9 +290,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[3].node.slug}>
               <p className="pe-title">{past_events[3].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[3].node.information_heading1}
-            </p>
+            {past_events[3].node.event_subtitle != "" && (
+              <p className="pe-desc">{past_events[3].node.event_subtitle}</p>
+            )}
           </div>
         </div>
       </div>

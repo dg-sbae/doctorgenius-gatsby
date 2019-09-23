@@ -184,6 +184,7 @@ export const siteFragments = graphql`
     event_details_text
     event_state
     event_title
+    event_subtitle
     featured_event
     information_heading1
     include_location
