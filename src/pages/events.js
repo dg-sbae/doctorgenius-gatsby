@@ -15,6 +15,7 @@ import boaLogo from "../img/bankofamerica.png"
 import pattersonLogo from "../img/pattersoncompanies.png"
 import googleLogo from "../img/googlepartner.jpg"
 import pulseCheckLogo from "../img/pulsecheckurgentcare.png"
+import defaultUpcomingEventImage from "../img/event-building-1.jpg"
 
 import "../styles/event-listing.scss"
 
@@ -163,7 +164,10 @@ const EventPage = ({ data }) => {
               <img
                 className="card-img-top"
                 src={
-                  event.node.all_image_urls.featured_image_url_large.source_url
+                  event.node.all_image_urls.featured_image_url_large != null
+                    ? event.node.all_image_urls.featured_image_url_large
+                        .source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Upcoming Event"
               />
@@ -201,8 +205,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[0].node.slug}>
               <img
                 src={
-                  past_events[0].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[0].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[0].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -226,8 +233,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[1].node.slug}>
               <img
                 src={
-                  past_events[1].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[1].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[1].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -251,8 +261,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[2].node.slug}>
               <img
                 src={
-                  past_events[2].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[2].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[2].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -276,8 +289,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[3].node.slug}>
               <img
                 src={
-                  past_events[3].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[3].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[3].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
