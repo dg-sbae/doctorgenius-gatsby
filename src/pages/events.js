@@ -15,6 +15,7 @@ import boaLogo from "../img/bankofamerica.png"
 import pattersonLogo from "../img/pattersoncompanies.png"
 import googleLogo from "../img/googlepartner.jpg"
 import pulseCheckLogo from "../img/pulsecheckurgentcare.png"
+// import defaultUpcomingEventImage from "../img/event-building-1.jpg"
 
 import "../styles/event-listing.scss"
 
@@ -151,6 +152,9 @@ const EventPage = ({ data }) => {
     return time_value
   }
 
+  const defaultUpcomingEventImage =
+    data.defaultUpcomingImg.childImageSharp.fluid.src
+
   // Handles output of each upcoming event
   const display_upcoming_events = upcoming_events
     .slice(0)
@@ -163,7 +167,10 @@ const EventPage = ({ data }) => {
               <img
                 className="card-img-top"
                 src={
-                  event.node.all_image_urls.featured_image_url_large.source_url
+                  event.node.all_image_urls.featured_image_url_large != null
+                    ? event.node.all_image_urls.featured_image_url_large
+                        .source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Upcoming Event"
               />
@@ -201,8 +208,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[0].node.slug}>
               <img
                 src={
-                  past_events[0].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[0].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[0].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -215,9 +225,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[0].node.slug}>
               <p className="pe-title">{past_events[0].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[0].node.information_heading1}
-            </p>
+            {past_events[0].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[0].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
@@ -226,8 +236,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[1].node.slug}>
               <img
                 src={
-                  past_events[1].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[1].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[1].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -240,9 +253,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[1].node.slug}>
               <p className="pe-title">{past_events[1].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[1].node.information_heading1}
-            </p>
+            {past_events[1].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[1].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
@@ -251,8 +264,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[2].node.slug}>
               <img
                 src={
-                  past_events[2].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[2].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[2].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -265,9 +281,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[2].node.slug}>
               <p className="pe-title">{past_events[2].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[2].node.information_heading1}
-            </p>
+            {past_events[2].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[2].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
@@ -276,8 +292,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[3].node.slug}>
               <img
                 src={
-                  past_events[3].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[3].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[3].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -290,9 +309,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[3].node.slug}>
               <p className="pe-title">{past_events[3].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[3].node.information_heading1}
-            </p>
+            {past_events[3].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[3].node.event_subtitle}</p>
+            )}
           </div>
         </div>
       </div>
@@ -582,6 +601,14 @@ export const pageQuery = graphql`
       edges {
         node {
           ...eventListing
+        }
+      }
+    }
+
+    defaultUpcomingImg: file(relativePath: { eq: "default-upcoming-img.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
