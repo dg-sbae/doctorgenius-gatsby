@@ -77,7 +77,7 @@ export const ImageQuery = graphql`
   query DentalPracticeImages {
     backgroundImage: file(relativePath: { eq: "our-clients.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2201) {
+        fluid(maxWidth: 2201, quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -109,7 +109,7 @@ export const ImageQuery = graphql`
       relativePath: { eq: "our-clients-fullbleed-image.png" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 2201) {
+        fluid(maxWidth: 2201, quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }

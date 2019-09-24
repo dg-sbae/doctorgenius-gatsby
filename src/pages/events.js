@@ -639,7 +639,7 @@ export const pageQuery = graphql`
     }
     standardHeroBg: file(relativePath: { eq: "partnerships-hero.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -98,7 +98,7 @@ export const ImageQuery = graphql`
     }
     ourTechnology: file(relativePath: { eq: "our-technology.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }

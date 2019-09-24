@@ -384,7 +384,7 @@ export const ImageQuery = graphql`
     }
     heroBg: file(relativePath: { eq: "case-study.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }

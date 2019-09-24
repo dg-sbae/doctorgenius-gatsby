@@ -172,7 +172,7 @@ export const ImageQuery = graphql`
     }
     responsiveWebsites: file(relativePath: { eq: "responsive-websites.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }

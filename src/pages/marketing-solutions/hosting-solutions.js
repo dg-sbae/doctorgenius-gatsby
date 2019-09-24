@@ -75,7 +75,7 @@ export const ImageQuery = graphql`
     }
     hostingSolutions: file(relativePath: { eq: "hosting-solutions.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -75,7 +75,7 @@ export const ImageQuery = graphql`
     }
     digitalAdvertising: file(relativePath: { eq: "digital-advertising.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }

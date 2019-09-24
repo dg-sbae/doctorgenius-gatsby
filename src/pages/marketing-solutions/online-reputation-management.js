@@ -100,7 +100,7 @@ export const ImageQuery = graphql`
       relativePath: { eq: "online-reputation.jpg" }
     ) {
       childImageSharp {
-        fluid {
+        fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }

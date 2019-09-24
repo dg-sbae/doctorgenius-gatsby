@@ -98,7 +98,7 @@ export const ImageQuery = graphql`
     }
     backgroundImage: file(relativePath: { eq: "content-marketing.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }
