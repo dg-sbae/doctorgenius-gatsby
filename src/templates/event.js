@@ -15,9 +15,16 @@ const EventPage = ({ data }) => {
   const speaker_details = data.speakers_data.speaker_items
 
   //Dynamically add BG image from event data
-  const styleBackgroundImage = {
-    backgroundImage:
-      "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
+  const heroDefaultBg = data.heroDefaultBg.childImageSharp.fluid.src
+  let styleBackgroundImage = {
+    backgroundImage: "url(" + heroDefaultBg + ")",
+  }
+  // If there is a hero bg image selected then set that instead
+  if (event_details.all_image_urls.hero_image_url != null) {
+    styleBackgroundImage = {
+      backgroundImage:
+        "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
+    }
   }
 
   //Check to see if webinar to adjust location card-margin
@@ -226,7 +233,9 @@ const EventPage = ({ data }) => {
   // Determines whether the information image is present and handles displaying/hiding it
   const display_information_section = () => {
     if (event_details.all_image_urls.information_image_url != null) {
-      if (event_details.all_image_urls.information_image_url.source_url != "") {
+      if (
+        event_details.all_image_urls.information_image_url.source_url !== ""
+      ) {
         return (
           <div className="row content-block padded listed-items">
             <div className="col-sm-11 col-md-9 col-lap-6">
@@ -512,6 +521,13 @@ export const pageQuery = graphql`
     }
     speakers_data: wordpressWpEvents(wordpress_id: { eq: $currentID }) {
       ...speakers
+    }
+    heroDefaultBg: file(relativePath: { eq: "marketing-solutions.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `
