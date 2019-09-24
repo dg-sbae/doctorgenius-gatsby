@@ -170,27 +170,17 @@ const CaseStudy = data => {
                       </div>
                     </div>
 
-                  <div className="panel-quad-text-block">
-                    <h4>
-                      New Patient
-                      <br />
-                      Opportunity
-                    </h4>
-                    <p>
-                      The goal is to reach every patient wherever they are. In
-                      the 6 months we were able to increase new quality patient
-                      call volume with extending with our program.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-sm-12 col-md-6 panel-quad-item">
-                  <div class="panel">
-                    <div className="icon-wrapper">
-                      <img
-                        className="img-icon"
-                        src={marketingSolutionsIcon}
-                        alt="Webpage icon"
-                      />
+                    <div className="panel-quad-text-block">
+                      <h4>
+                        New Patient
+                        <br />
+                        Opportunity
+                      </h4>
+                      <p>
+                        The goal is to reach every patient wherever they are. In
+                        the 6 months we were able to increase new quality
+                        patient call volume with extending with our program.
+                      </p>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 panel-quad-item">
@@ -204,44 +194,19 @@ const CaseStudy = data => {
                       </div>
                     </div>
 
-                  <div className="panel-quad-text-block">
-                    <h4>
-                      Marketing
-                      <br />
-                      Solutions Suite
-                    </h4>
-                    <p>
-                      Our exclusive all-in-one marketing solution keeps our
-                      clients digital marketing ahead of there industry. We are
-                      proud to have all our product inhouse for our client's
-                      needs.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-12 col-md-6 panel-quad-item">
-                  <div class="panel">
-                    <div className="icon-wrapper">
-                      <img
-                        className="img-icon"
-                        src={liveSupportIcon}
-                        alt="People chat icon"
-                      />
+                    <div className="panel-quad-text-block">
+                      <h4>
+                        Marketing
+                        <br />
+                        Solutions Suite
+                      </h4>
+                      <p>
+                        Our exclusive all-in-one marketing solution keeps our
+                        clients digital marketing ahead of there industry. We
+                        are proud to have all our product inhouse for our
+                        client's needs.
+                      </p>
                     </div>
-                  </div>
-                  <div className="panel-quad-text-block">
-                    <h4>
-                      Live Support
-                      <br />
-                      Concierge
-                    </h4>
-                    <p>
-                      It's our duty in making sure the client and his customers
-                      are happy. We provide seamless support by taking the time
-                      to understand our clients concerns in areas they need
-                      help.
-                    </p>
                   </div>
                 </div>
                 <div className="row">
@@ -269,18 +234,29 @@ const CaseStudy = data => {
                       </p>
                     </div>
                   </div>
-                  <div className="panel-quad-text-block">
-                    <h4>
-                      Performance Driven
-                      <br />
-                      Campaigns
-                    </h4>
-                    <p>
-                      We are driven to improve our client's marketing
-                      performance in all areas. Our technology has proven for
-                      the first 6 months we are guaranteed our clients 200% new
-                      patients inquire.
-                    </p>
+                  <div className="col-sm-12 col-md-6 panel-quad-item">
+                    <div class="panel">
+                      <div className="icon-wrapper">
+                        <img
+                          className="img-icon"
+                          src={performanceCampaignIcon}
+                          alt="Newspaper icon"
+                        />
+                      </div>
+                    </div>
+                    <div className="panel-quad-text-block">
+                      <h4>
+                        Performance Driven
+                        <br />
+                        Campaigns
+                      </h4>
+                      <p>
+                        We are driven to improve our client's marketing
+                        performance in all areas. Our technology has proven for
+                        the first 6 months we are guaranteed our clients 200%
+                        new patients inquire.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
