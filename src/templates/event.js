@@ -237,36 +237,43 @@ const EventPage = ({ data }) => {
         event_details.all_image_urls.information_image_url.source_url !== ""
       ) {
         return (
-          <div className="row content-block padded listed-items">
-            <div className="col-sm-11 col-md-9 col-lap-6">
-              <h2>{event_details.information_heading1}</h2>
-              {display_h1_information()}
-              <h2>{event_details.information_heading2}</h2>
-              {display_h2_information()}
-            </div>
-            <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
-              <img
-                src={
-                  event_details.all_image_urls.information_image_url.source_url
-                }
-                alt={
-                  event_details.all_image_urls.information_image_url.alt_text
-                }
-              />
+          <div>
+            <div className="spacer solid"></div>
+            <div className="row content-block padded listed-items">
+              <div className="col-sm-11 col-md-9 col-lap-6">
+                <h2>{event_details.information_heading1}</h2>
+                {display_h1_information()}
+                <h2>{event_details.information_heading2}</h2>
+                {display_h2_information()}
+              </div>
+              <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
+                <img
+                  src={
+                    event_details.all_image_urls.information_image_url
+                      .source_url
+                  }
+                  alt={
+                    event_details.all_image_urls.information_image_url.alt_text
+                  }
+                />
+              </div>
             </div>
           </div>
         )
       }
     } else {
       return (
-        <div className="row content-block padded listed-items">
-          <div className="col-sm-11 col-md-9 col-lap-7">
-            <h2>{event_details.information_heading1}</h2>
-            {display_h1_information()}
-            <h2>{event_details.information_heading2}</h2>
-            {display_h2_information()}
+        <div>
+          <div className="spacer solid"></div>
+          <div className="row content-block padded listed-items">
+            <div className="col-sm-11 col-md-9 col-lap-7">
+              <h2>{event_details.information_heading1}</h2>
+              {display_h1_information()}
+              <h2>{event_details.information_heading2}</h2>
+              {display_h2_information()}
+            </div>
+            <div class="d-none"></div>
           </div>
-          <div class="d-none"></div>
         </div>
       )
     }
@@ -365,9 +372,8 @@ const EventPage = ({ data }) => {
               </div>
             </div>
 
-            <div className="spacer solid"></div>
-
-            {display_information_section()}
+            {event_details.include_information[0] === "1" &&
+              display_information_section()}
 
             <div
               className={

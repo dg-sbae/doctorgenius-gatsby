@@ -56,6 +56,7 @@ export const siteFragments = graphql`
     hero_bg_image
     include_location
     include_speakers
+    include_information
     information_h1_li_1
     information_h1_li_2
     information_h1_li_3
