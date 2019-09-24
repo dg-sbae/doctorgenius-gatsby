@@ -175,7 +175,7 @@ export default props => (
                     </h4>
                     <p>
                       The goal is to reach every patient wherever they are. In
-                      the 6 months we were able to increased new quality patient
+                      the 6 months we were able to increase new quality patient
                       call volume with extending with our program.
                     </p>
                   </div>
@@ -198,9 +198,9 @@ export default props => (
                       Solutions Suite
                     </h4>
                     <p>
-                      Our exculsive all-in-one marketing solution keeps our
-                      clients digital marketing ahead of there industry. We our
-                      proud to have all our product inhouse for our clients
+                      Our exclusive all-in-one marketing solution keeps our
+                      clients digital marketing ahead of there industry. We are
+                      proud to have all our product inhouse for our client's
                       needs.
                     </p>
                   </div>
@@ -224,7 +224,7 @@ export default props => (
                       Concierge
                     </h4>
                     <p>
-                      Its our duty in making sure the client and his customers
+                      It's our duty in making sure the client and his customers
                       are happy. We provide seamless support by taking the time
                       to understand our clients concerns in areas they need
                       help.
@@ -248,10 +248,10 @@ export default props => (
                       Campaigns
                     </h4>
                     <p>
-                      We are driven to improve our clients marketing preformance
-                      in all areas. Our technology has proven for the first 6
-                      months we are guranteed our clients 200% new patients
-                      inquire.
+                      We are driven to improve our client's marketing
+                      performance in all areas. Our technology has proven for
+                      the first 6 months we are guaranteed our clients 200% new
+                      patients inquire.
                     </p>
                   </div>
                 </div>
