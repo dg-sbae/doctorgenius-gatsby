@@ -15,7 +15,7 @@ import boaLogo from "../img/bankofamerica.png"
 import pattersonLogo from "../img/pattersoncompanies.png"
 import googleLogo from "../img/googlepartner.jpg"
 import pulseCheckLogo from "../img/pulsecheckurgentcare.png"
-import defaultUpcomingEventImage from "../img/event-building-1.jpg"
+// import defaultUpcomingEventImage from "../img/event-building-1.jpg"
 
 import "../styles/event-listing.scss"
 
@@ -151,6 +151,9 @@ const EventPage = ({ data }) => {
     time_value += hours >= 12 ? "pm" : "am"
     return time_value
   }
+
+  const defaultUpcomingEventImage =
+    data.defaultUpcomingImg.childImageSharp.fluid.src
 
   // Handles output of each upcoming event
   const display_upcoming_events = upcoming_events
@@ -598,6 +601,14 @@ export const pageQuery = graphql`
       edges {
         node {
           ...eventListing
+        }
+      }
+    }
+
+    defaultUpcomingImg: file(relativePath: { eq: "default-upcoming-img.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
