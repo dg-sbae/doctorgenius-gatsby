@@ -25,6 +25,7 @@ export const siteFragments = graphql`
       }
       id
     }
+    _yoast_wpseo_metadesc
   }
   fragment recentEvent on wordpress__wp_events {
     title
