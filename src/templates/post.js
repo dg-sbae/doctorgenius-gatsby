@@ -81,7 +81,7 @@ function PostPage({ pageContext, data, location }) {
   const intro = testIntro
   const remainder = content.slice(2).join("")
 
-  
+
   */
 
   return (
@@ -92,7 +92,10 @@ function PostPage({ pageContext, data, location }) {
           <title>Genius Lab Archives - Doctor Genius | Doctor Genius</title>
           <meta
             name="description"
-            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+            content={
+              post._yoast_wpseo_metadesc ||
+              "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+            }
           />
         </Helmet>
       )}
@@ -104,7 +107,10 @@ function PostPage({ pageContext, data, location }) {
           </title>
           <meta
             name="description"
-            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+            content={
+              post._yoast_wpseo_metadesc ||
+              "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+            }
           />
         </Helmet>
       )}

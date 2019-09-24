@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Countdown, { zeroPad } from "react-countdown-now"
 
 import BackgroundImage from "gatsby-background-image"
@@ -150,6 +150,9 @@ const EventPage = ({ data }) => {
     return time_value
   }
 
+  const defaultUpcomingEventImage =
+    data.defaultUpcomingImg.childImageSharp.fluid.src
+
   // Handles output of each upcoming event
   const display_upcoming_events = upcoming_events
     .slice(0)
@@ -162,7 +165,10 @@ const EventPage = ({ data }) => {
               <img
                 className="card-img-top"
                 src={
-                  event.node.featured_media.localFile.childImageSharp.fluid.src
+                  event.node.all_image_urls.featured_image_url_large != null
+                    ? event.node.all_image_urls.featured_image_url_large
+                        .source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Upcoming Event"
               />
@@ -197,85 +203,113 @@ const EventPage = ({ data }) => {
       <div className="col-lap-10 offset-lap-1 col-md-12">
         <div className="row singular-event">
           <div className="col-sm-10 col-md-6 past-event-image">
-            <img
-              src={
-                past_events[0].node.featured_media.localFile.childImageSharp
-                  .fluid.src
-              }
-              alt="Past Event"
-            />
+            <Link to={"/events/" + past_events[0].node.slug}>
+              <img
+                src={
+                  past_events[0].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[0].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
+                }
+                alt="Past Event"
+              />
+            </Link>
           </div>
           <div className="col-sm-10 col-md-6 past-event-title-and-desc">
             <span class="button flat white-text past-event-date">
               {format_date_short(past_events[0].node.event_date)}
             </span>
-            <p className="pe-title">{past_events[0].node.event_title}</p>
-            <p className="pe-desc">
-              {past_events[0].node.information_heading1}
-            </p>
+            <Link to={"/events/" + past_events[0].node.slug}>
+              <p className="pe-title">{past_events[0].node.event_title}</p>
+            </Link>
+            {past_events[0].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[0].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
         <div className="row singular-event">
           <div className="col-sm-10 col-md-6 past-event-image">
-            <img
-              src={
-                past_events[1].node.featured_media.localFile.childImageSharp
-                  .fluid.src
-              }
-              alt="Past Event"
-            />
+            <Link to={"/events/" + past_events[1].node.slug}>
+              <img
+                src={
+                  past_events[1].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[1].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
+                }
+                alt="Past Event"
+              />
+            </Link>
           </div>
           <div className="col-sm-10 col-md-6 past-event-title-and-desc">
             <span class="button flat white-text past-event-date">
               {format_date_short(past_events[1].node.event_date)}
             </span>
-            <p className="pe-title">{past_events[1].node.event_title}</p>
-            <p className="pe-desc">
-              {past_events[1].node.information_heading1}
-            </p>
+            <Link to={"/events/" + past_events[1].node.slug}>
+              <p className="pe-title">{past_events[1].node.event_title}</p>
+            </Link>
+            {past_events[1].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[1].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
         <div className="row singular-event">
           <div className="col-sm-10 col-md-6 past-event-image">
-            <img
-              src={
-                past_events[2].node.featured_media.localFile.childImageSharp
-                  .fluid.src
-              }
-              alt="Past Event"
-            />
+            <Link to={"/events/" + past_events[2].node.slug}>
+              <img
+                src={
+                  past_events[2].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[2].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
+                }
+                alt="Past Event"
+              />
+            </Link>
           </div>
           <div className="col-sm-10 col-md-6 past-event-title-and-desc">
             <span class="button flat white-text past-event-date">
               {format_date_short(past_events[2].node.event_date)}
             </span>
-            <p className="pe-title">{past_events[2].node.event_title}</p>
-            <p className="pe-desc">
-              {past_events[2].node.information_heading1}
-            </p>
+            <Link to={"/events/" + past_events[2].node.slug}>
+              <p className="pe-title">{past_events[2].node.event_title}</p>
+            </Link>
+            {past_events[2].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[2].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
         <div className="row singular-event">
           <div className="col-sm-10 col-md-6 past-event-image">
-            <img
-              src={
-                past_events[3].node.featured_media.localFile.childImageSharp
-                  .fluid.src
-              }
-              alt="Past Event"
-            />
+            <Link to={"/events/" + past_events[3].node.slug}>
+              <img
+                src={
+                  past_events[3].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[3].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
+                }
+                alt="Past Event"
+              />
+            </Link>
           </div>
           <div className="col-sm-10 col-md-6 past-event-title-and-desc">
             <span class="button flat white-text past-event-date">
               {format_date_short(past_events[3].node.event_date)}
             </span>
-            <p className="pe-title">{past_events[3].node.event_title}</p>
-            <p className="pe-desc">
-              {past_events[3].node.information_heading1}
-            </p>
+            <Link to={"/events/" + past_events[3].node.slug}>
+              <p className="pe-title">{past_events[3].node.event_title}</p>
+            </Link>
+            {past_events[3].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[3].node.event_subtitle}</p>
+            )}
           </div>
         </div>
       </div>
@@ -613,6 +647,13 @@ export const pageQuery = graphql`
     eventTimelineBg: file(relativePath: { eq: "event-timeline-bg.png" }) {
       childImageSharp {
         fluid(maxWidth: 858) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    defaultUpcomingImg: file(relativePath: { eq: "default-upcoming-img.jpg" }) {
+      childImageSharp {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }

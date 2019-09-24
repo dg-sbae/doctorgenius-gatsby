@@ -16,20 +16,18 @@ import "../styles/event-post.scss"
 const EventPage = ({ data }) => {
   const event_details = data.focus_event
   const speaker_details = data.speakers_data.speaker_items
-  let styleBackgroundImage = null
   //Dynamically add BG image from event data
-  if (
-    event_details.all_image_urls.hero_image_url.localFile.childImageSharp.fluid
-      .src
-  ) {
-    styleBackgroundImage =
-      event_details.all_image_urls.hero_image_url.localFile.childImageSharp
-        .fluid
-  } else {
-    styleBackgroundImage = data.standardHeroBg.childImageSharp.fluid
+  const heroDefaultBg = data.heroDefaultBg.childImageSharp.fluid.src
+  let styleBackgroundImage = {
+    backgroundImage: "url(" + heroDefaultBg + ")",
   }
-
-  console.log(styleBackgroundImage)
+  // If there is a hero bg image selected then set that instead
+  if (event_details.all_image_urls.hero_image_url != null) {
+    styleBackgroundImage = {
+      backgroundImage:
+        "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
+    }
+  }
 
   //Check to see if webinar to adjust location card-margin
   let Webinar = null
@@ -237,6 +235,55 @@ const EventPage = ({ data }) => {
     }
   })
 
+  // Determines whether the information image is present and handles displaying/hiding it
+  const display_information_section = () => {
+    if (event_details.all_image_urls.information_image_url != null) {
+      if (
+        event_details.all_image_urls.information_image_url.source_url !== ""
+      ) {
+        return (
+          <div>
+            <div className="spacer solid"></div>
+            <div className="row content-block padded listed-items">
+              <div className="col-sm-11 col-md-9 col-lap-6">
+                <h2>{event_details.information_heading1}</h2>
+                {display_h1_information()}
+                <h2>{event_details.information_heading2}</h2>
+                {display_h2_information()}
+              </div>
+              <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
+                <img
+                  src={
+                    event_details.all_image_urls.information_image_url
+                      .source_url
+                  }
+                  alt={
+                    event_details.all_image_urls.information_image_url.alt_text
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        )
+      }
+    } else {
+      return (
+        <div>
+          <div className="spacer solid"></div>
+          <div className="row content-block padded listed-items">
+            <div className="col-sm-11 col-md-9 col-lap-7">
+              <h2>{event_details.information_heading1}</h2>
+              {display_h1_information()}
+              <h2>{event_details.information_heading2}</h2>
+              {display_h2_information()}
+            </div>
+            <div class="d-none"></div>
+          </div>
+        </div>
+      )
+    }
+  }
+
   return (
     <DefaultPageLayout location="event-post">
       <Helmet>
@@ -244,7 +291,7 @@ const EventPage = ({ data }) => {
         <meta name="description" content="Doctor Genius | Event." />
       </Helmet>
       <div>
-        <BackgroundImage fluid={styleBackgroundImage}>
+        <BackgroundImage>
           <div className="hero" style={styleBackgroundImage}>
             <div className="hero-overlay">
               {/* Hero will be a layout component */}
@@ -332,27 +379,8 @@ const EventPage = ({ data }) => {
               </div>
             </div>
 
-            <div className="spacer solid"></div>
-
-            <div className="row content-block padded listed-items">
-              <div className="col-sm-11 col-md-9 col-lap-6">
-                <h2>{event_details.information_heading1}</h2>
-                {display_h1_information()}
-                <h2>{event_details.information_heading2}</h2>
-                {display_h2_information()}
-              </div>
-              <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
-                <Img
-                  fluid={
-                    event_details.all_image_urls.information_image_url.localFile
-                      .childImageSharp.fluid
-                  }
-                  alt={
-                    event_details.all_image_urls.information_image_url.alt_text
-                  }
-                />
-              </div>
-            </div>
+            {event_details.include_information[0] === "1" &&
+              display_information_section()}
 
             <div
               className={
@@ -507,7 +535,7 @@ export const pageQuery = graphql`
     speakers_data: wordpressWpEvents(wordpress_id: { eq: $currentID }) {
       ...speakers
     }
-    standardHeroBg: file(relativePath: { eq: "partnerships-hero.jpg" }) {
+    heroDefaultBg: file(relativePath: { eq: "marketing-solutions.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
