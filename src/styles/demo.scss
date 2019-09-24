@@ -93,7 +93,6 @@
     }
 
     padding-bottom: 50px;
-    background: url("../img/pixel-map.png");
     &:before {
       position: absolute;
       content: " ";
@@ -318,8 +317,6 @@
     }
   }
   .main-content {
-    background: url("../img/squares-background.png");
-    background-size: 4px;
     padding-bottom: 5%;
   }
   .review {

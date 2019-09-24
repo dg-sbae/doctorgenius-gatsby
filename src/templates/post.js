@@ -8,7 +8,6 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import eventsPlaceholder from "../img/study-archive-events-placeholder-3x2.png"
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
 //import instagramIcon from "../img/instagram.svg"
@@ -260,7 +259,10 @@ function PostPage({ pageContext, data, location }) {
                     {data.events.edges.map(({ node }) => (
                       <div className="col-lg-3">
                         <div className="event-wrapper">
-                          <img src={eventsPlaceholder} alt="Recent Event" />
+                          <Img
+                            fluid={data.eventsPlaceholder.childImageSharp.fluid}
+                            alt="Recent Event"
+                          />
                         </div>
                         <a href={node.link}>
                           <p>{he.decode(node.title)}</p>
@@ -330,6 +332,15 @@ export const pageQuery = graphql`
       edges {
         node {
           ...recentEvent
+        }
+      }
+    }
+    eventsPlaceholder: file(
+      relativePath: { eq: "study-archive-events-placeholder-3x2.png" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

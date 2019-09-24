@@ -214,8 +214,7 @@
     .past-events-timeline {
       width: 858px;
       height: 1394px;
-      background: url("../img/event-timeline-bg.png");
-      background-repeat: no-repeat;
+      background-repeat: no-repeat !important;
     }
     .past-event-title-and-desc {
       padding-left: $pad;
@@ -281,10 +280,6 @@
         rgba(255, 255, 255, 0.2) 0,
         #fff 65%
       );
-    }
-    .main-content {
-      background: top/300px repeat-x url("../img/background-texture.png"),
-        center 100%/300px repeat-x url("../img/background-texture-flipped.png");
     }
 
     header .logo a .logo-holder {
@@ -353,20 +348,20 @@
   /* Media specific queries for the past-event rows */
   @media (min-width: 992px) and (max-width: 1000px) {
     .past-events .singular-event {
-      margin-top: 30px;
-      margin-bottom: 151.75px;
+      margin-top: 48px;
+      margin-bottom: 156.75px;
     }
   }
   @media (min-width: 1001px) and (max-width: 1023px) {
     .past-events .singular-event {
-      margin-top: 30px;
-      margin-bottom: 151.75px;
+      margin-top: 45px;
+      margin-bottom: 157.75px;
     }
   }
   @media (min-width: 1024px) and (max-width: 1299px) {
     .past-events .singular-event {
-      margin-top: 39px;
-      margin-bottom: 144.75px;
+      margin-top: 43px;
+      margin-bottom: 151.75px;
     }
   }
 
@@ -442,8 +437,8 @@
       }
 
       .singular-event {
-        margin-top: 33px;
-        margin-bottom: 157.75px;
+        margin-top: 54px;
+        margin-bottom: 167.75px;
       }
     }
 
@@ -572,7 +567,7 @@
         margin-bottom: $m1;
       }
       .past-events-timeline {
-        background: none;
+        background: none !important;
         width: initial;
         height: initial;
       }

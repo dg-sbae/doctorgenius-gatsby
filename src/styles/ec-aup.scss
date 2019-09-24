@@ -1,8 +1,11 @@
 @import "_site-variables.scss";
 
 .ec-aup {
+  .gbi-ecaup:before,
+  .gbi-ecaup:after {
+    background-position: initial !important;
+  }
   .hero {
-    background: url("../img/hero/privacy-policy-hero.jpg");
     .accented-paragraph p {
       color: white;
     }

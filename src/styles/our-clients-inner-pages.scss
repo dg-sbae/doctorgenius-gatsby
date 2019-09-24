@@ -1,34 +1,7 @@
 @import "_site-variables.scss";
 
 .our-clients-inner {
-  &.dental-practices {
-    .hero {
-      background-image: url("../img/hero/our-clients.jpg");
-    }
-  }
-  &.chiropractor-practices {
-    .hero {
-      background-image: url("../img/hero/chiropractor-practices.jpg");
-    }
-  }
-  &.cosmetic-surgeons {
-    .hero {
-      background-image: url("../img/hero/cosmetic-surgeons.jpg");
-    }
-  }
-  &.healthcare-marketing {
-    .hero {
-      background-image: url("../img/hero/healthcare-marketing.jpg");
-    }
-  }
-  &.urgent-care-clinics {
-    .hero {
-      background-image: url("../img/hero/urgent-care-clinics.jpg");
-    }
-  }
-
   .hero {
-    // background-image: url("../img/hero/our-clients.png");
     .accented-paragraph {
       width: 84%;
     }
@@ -156,7 +129,6 @@
   }
   .check-plans-background-image {
     height: 475px;
-    background: url("../img/our-clients-fullbleed-image.png") no-repeat;
     background-position: 40%;
     @include media("<tablet") {
       background-position: 48%;
