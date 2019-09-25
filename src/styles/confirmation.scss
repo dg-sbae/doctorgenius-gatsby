@@ -5,10 +5,6 @@
   .hero {
     height: auto;
     padding-top: 80px;
-    background: top/300px repeat-x url("../img/background-texture.png"),
-      center 68%/300px repeat-x url("../img/background-texture-flipped.png"),
-      center calc(68% + 300px) / 300px repeat-x
-        url("../img/background-texture.png");
   }
 
   .phone-number a {
@@ -178,12 +174,6 @@
       line-height: 1;
       margin-bottom: -5px;
     }
-    .hero {
-      background: top/350px repeat-x url("../img/background-texture.png"),
-        center 47%/300px repeat-x url("../img/background-texture-flipped.png"),
-        center calc(47% + 300px) / 300px repeat-x
-          url("../img/background-texture.png");
-    }
   }
 
   /* Styling for phones - 767 and below */
@@ -213,12 +203,6 @@
       padding: 20px 0 0 0;
       line-height: 1;
       margin-bottom: -5px;
-    }
-    .hero {
-      background: top/350px repeat-x url("../img/background-texture.png"),
-        center 42%/300px repeat-x url("../img/background-texture-flipped.png"),
-        center calc(42% + 300px) / 300px repeat-x
-          url("../img/background-texture.png");
     }
 
     h1 {

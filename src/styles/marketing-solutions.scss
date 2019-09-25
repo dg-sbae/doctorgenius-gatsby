@@ -2,7 +2,6 @@
 
 .marketing-solutions {
   .hero {
-    background-image: url("../img/hero/marketing-solutions.jpg");
     @include media("<=tablet") {
       background-position: 84% 50%;
     }
@@ -18,7 +17,6 @@
   }
   .check-plans-background-image {
     height: 475px;
-    background: url("../img/our-clients-fullbleed-image.png") no-repeat;
     background-position: 40%;
     @include media("<laptop") {
       background-position: 45%;

@@ -3,18 +3,13 @@ import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import Countdown, { zeroPad } from "react-countdown-now"
 
+import BackgroundImage from "gatsby-background-image"
+
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
 import thinArrowRight from "../img/right-arrow.svg"
-
-import standardHeroBg from "../img/hero/plans.jpg"
-
-import boaLogo from "../img/bankofamerica.png"
-import pattersonLogo from "../img/pattersoncompanies.png"
-import googleLogo from "../img/googlepartner.jpg"
-import pulseCheckLogo from "../img/pulsecheckurgentcare.png"
 
 import "../styles/event-listing.scss"
 
@@ -24,6 +19,13 @@ const EventPage = ({ data }) => {
   const past_events = data.past_events.edges
   let styleBackgroundImage
   let featured_event
+  const images = data
+
+  const eventTimeLineBg = images.eventTimelineBg.childImageSharp.fluid.src
+  const eventTimeLineStyles = {
+    backgroundImage: "url(" + eventTimeLineBg + ")",
+    backgroundRepeat: "no-repeat",
+  }
 
   // Adds data to featured_event if there currently is none
   if (data.featured_event.edges.length === 1) {
@@ -50,14 +52,11 @@ const EventPage = ({ data }) => {
 
   // Adds static bg if there is not a featured event
   if (featured_event.dummy_data) {
-    styleBackgroundImage = {
-      backgroundImage: "url(" + standardHeroBg + ")",
-    }
+    styleBackgroundImage = images.standardHeroBg.childImageSharp.fluid
   } else {
-    styleBackgroundImage = {
-      backgroundImage:
-        "url(" + featured_event.all_image_urls.hero_image_url.source_url + ")",
-    }
+    styleBackgroundImage =
+      featured_event.all_image_urls.hero_image_url.localFile.childImageSharp
+        .fluid
   }
 
   // Converts date from YYYY-MM-DD to MM, DD
@@ -151,6 +150,9 @@ const EventPage = ({ data }) => {
     return time_value
   }
 
+  const defaultUpcomingEventImage =
+    data.defaultUpcomingImg.childImageSharp.fluid.src
+
   // Handles output of each upcoming event
   const display_upcoming_events = upcoming_events
     .slice(0)
@@ -163,7 +165,10 @@ const EventPage = ({ data }) => {
               <img
                 className="card-img-top"
                 src={
-                  event.node.all_image_urls.featured_image_url_large.source_url
+                  event.node.all_image_urls.featured_image_url_large != null
+                    ? event.node.all_image_urls.featured_image_url_large
+                        .source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Upcoming Event"
               />
@@ -201,8 +206,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[0].node.slug}>
               <img
                 src={
-                  past_events[0].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[0].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[0].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -215,9 +223,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[0].node.slug}>
               <p className="pe-title">{past_events[0].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[0].node.information_heading1}
-            </p>
+            {past_events[0].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[0].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
@@ -226,8 +234,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[1].node.slug}>
               <img
                 src={
-                  past_events[1].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[1].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[1].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -240,9 +251,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[1].node.slug}>
               <p className="pe-title">{past_events[1].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[1].node.information_heading1}
-            </p>
+            {past_events[1].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[1].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
@@ -251,8 +262,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[2].node.slug}>
               <img
                 src={
-                  past_events[2].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[2].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[2].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -265,9 +279,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[2].node.slug}>
               <p className="pe-title">{past_events[2].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[2].node.information_heading1}
-            </p>
+            {past_events[2].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[2].node.event_subtitle}</p>
+            )}
           </div>
         </div>
 
@@ -276,8 +290,11 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[3].node.slug}>
               <img
                 src={
-                  past_events[3].node.all_image_urls.featured_image_url_large
-                    .source_url
+                  past_events[3].node.all_image_urls.featured_image_url_large !=
+                  null
+                    ? past_events[3].node.all_image_urls
+                        .featured_image_url_large.source_url
+                    : defaultUpcomingEventImage
                 }
                 alt="Past Event"
               />
@@ -290,9 +307,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[3].node.slug}>
               <p className="pe-title">{past_events[3].node.event_title}</p>
             </Link>
-            <p className="pe-desc">
-              {past_events[3].node.information_heading1}
-            </p>
+            {past_events[3].node.event_subtitle !== "" && (
+              <p className="pe-desc">{past_events[3].node.event_subtitle}</p>
+            )}
           </div>
         </div>
       </div>
@@ -306,106 +323,108 @@ const EventPage = ({ data }) => {
         <meta name="description" content="Doctor Genius | Event" />
       </Helmet>
       <div>
-        <div className="hero" style={styleBackgroundImage}>
-          <div className="hero-overlay">
-            {/* Hero will be a layout component */}
+        <BackgroundImage fluid={styleBackgroundImage}>
+          <div className="hero">
+            <div className="hero-overlay">
+              {/* Hero will be a layout component */}
 
-            <Container>
-              <div className="row">
-                <div className="col-sm-11 col-md-9 col-lap-6">
-                  <div className="dg-category-holder">
-                    <h1 className="button flat white-text dg-category">
-                      Doctor Genius Events
-                    </h1>
-                  </div>
-                  <div className="titles">
-                    <h2>{featured_event.event_title}</h2>
-                    <p className="event-desc">
-                      {featured_event.event_details_text}
-                    </p>
-                  </div>
-                  <div className="cta-btns">
-                    {featured_event.register_url !== "" &&
-                      (featured_event.register_url[0] !== "" && (
+              <Container>
+                <div className="row">
+                  <div className="col-sm-11 col-md-9 col-lap-6">
+                    <div className="dg-category-holder">
+                      <h1 className="button flat white-text dg-category">
+                        Doctor Genius Events
+                      </h1>
+                    </div>
+                    <div className="titles">
+                      <h2>{featured_event.event_title}</h2>
+                      <p className="event-desc">
+                        {featured_event.event_details_text}
+                      </p>
+                    </div>
+                    <div className="cta-btns">
+                      {featured_event.register_url !== "" &&
+                        (featured_event.register_url[0] !== "" && (
+                          <a
+                            className="button flat white-text register-now-btn"
+                            href={featured_event.register_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {featured_event.register_button_text === ""
+                              ? "Register Now"
+                              : featured_event.register_button_text}
+                          </a>
+                        ))}
+                      {featured_event.slug !== "" && (
                         <a
-                          className="button flat white-text register-now-btn"
-                          href={featured_event.register_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          className="button flat transparent hero-more-info-btn"
+                          href={featured_event.slug}
                         >
-                          {featured_event.register_button_text === ""
-                            ? "Register Now"
-                            : featured_event.register_button_text}
+                          + More Info
                         </a>
-                      ))}
-                    {featured_event.slug !== "" && (
-                      <a
-                        className="button flat transparent hero-more-info-btn"
-                        href={featured_event.slug}
-                      >
-                        + More Info
-                      </a>
-                    )}
-                  </div>
-                </div>
-                {featured_event.dummy_data !== true && (
-                  <div className="col-sm-11 col-md-9 col-lap-6 event-countdown">
-                    <h3>Next Event Starts:</h3>
-                    <div className="spacer solid"></div>
-                    <div className="row">
-                      <div className="col-sm-3">
-                        <Countdown
-                          date={countdown_date_and_time}
-                          renderer={day_renderer}
-                        />
-                        <p className="labels">Days</p>
-                      </div>
-                      <div className="col-sm-3">
-                        <Countdown
-                          date={countdown_date_and_time}
-                          renderer={hours_renderer}
-                        />
-                        <p className="labels">Hours</p>
-                      </div>
-                      <div className="col-sm-3">
-                        <Countdown
-                          date={countdown_date_and_time}
-                          renderer={minutes_renderer}
-                        />
-                        <p className="labels">Minutes</p>
-                      </div>
-                      <div className="col-sm-3">
-                        <Countdown
-                          date={countdown_date_and_time}
-                          renderer={seconds_renderer}
-                        />
-                        <p className="labels">Seconds</p>
-                      </div>
-                      <div className="col-sm-10">
-                        <span className="hero-event-date">
-                          {format_date_long(featured_event.event_date)}
-                        </span>{" "}
-                        <span className="dot">&middot;</span>{" "}
-                        <span className="event-time">
-                          {featured_event.start_time !== "" && (
-                            <span className="start-time">
-                              {convert_time(featured_event.start_time)}
-                            </span>
-                          )}
-                          {featured_event.end_time !== "" && (
-                            <span className="end-time">
-                              -{convert_time(featured_event.end_time)}
-                            </span>
-                          )}
-                        </span>
-                      </div>
+                      )}
                     </div>
                   </div>
-                )}
-              </div>
-            </Container>
+                  {featured_event.dummy_data !== true && (
+                    <div className="col-sm-11 col-md-9 col-lap-6 event-countdown">
+                      <h3>Next Event Starts:</h3>
+                      <div className="spacer solid"></div>
+                      <div className="row">
+                        <div className="col-sm-3">
+                          <Countdown
+                            date={countdown_date_and_time}
+                            renderer={day_renderer}
+                          />
+                          <p className="labels">Days</p>
+                        </div>
+                        <div className="col-sm-3">
+                          <Countdown
+                            date={countdown_date_and_time}
+                            renderer={hours_renderer}
+                          />
+                          <p className="labels">Hours</p>
+                        </div>
+                        <div className="col-sm-3">
+                          <Countdown
+                            date={countdown_date_and_time}
+                            renderer={minutes_renderer}
+                          />
+                          <p className="labels">Minutes</p>
+                        </div>
+                        <div className="col-sm-3">
+                          <Countdown
+                            date={countdown_date_and_time}
+                            renderer={seconds_renderer}
+                          />
+                          <p className="labels">Seconds</p>
+                        </div>
+                        <div className="col-sm-10">
+                          <span className="hero-event-date">
+                            {format_date_long(featured_event.event_date)}
+                          </span>{" "}
+                          <span className="dot">&middot;</span>{" "}
+                          <span className="event-time">
+                            {featured_event.start_time !== "" && (
+                              <span className="start-time">
+                                {convert_time(featured_event.start_time)}
+                              </span>
+                            )}
+                            {featured_event.end_time !== "" && (
+                              <span className="end-time">
+                                -{convert_time(featured_event.end_time)}
+                              </span>
+                            )}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </Container>
+            </div>
           </div>
-        </div>
+        </BackgroundImage>
         <Main>
           <Container>
             <div className="content-main">
@@ -450,7 +469,7 @@ const EventPage = ({ data }) => {
                         <div className="icon-wrapper">
                           <img
                             className="img-icon"
-                            src={boaLogo}
+                            src={images.boaLogo.childImageSharp.fluid.src}
                             alt="Digital Marketing Partner Bank of America"
                           />
                         </div>
@@ -459,7 +478,7 @@ const EventPage = ({ data }) => {
                         <div className="icon-wrapper">
                           <img
                             className="img-icon"
-                            src={pattersonLogo}
+                            src={images.pattersonLogo.childImageSharp.fluid.src}
                             alt="Digital Marketing Partner Patterson Companies, Inc."
                           />
                         </div>
@@ -468,7 +487,9 @@ const EventPage = ({ data }) => {
                         <div className="icon-wrapper">
                           <img
                             className="img-icon"
-                            src={pulseCheckLogo}
+                            src={
+                              images.pulseCheckLogo.childImageSharp.fluid.src
+                            }
                             alt="Digital Marketing Partner PulseCheck"
                           />
                         </div>
@@ -477,7 +498,7 @@ const EventPage = ({ data }) => {
                         <div className="icon-wrapper">
                           <img
                             className="img-icon google-partner-icon"
-                            src={googleLogo}
+                            src={images.googleLogo.childImageSharp.fluid.src}
                             alt="Google Partner"
                           />
                         </div>
@@ -504,7 +525,10 @@ const EventPage = ({ data }) => {
                 </div>
 
                 <div className="row">
-                  <div className="col-lap-10 col-lg-9 col-md-11 past-events-timeline">
+                  <div
+                    className="col-lap-10 col-lg-9 col-md-11 past-events-timeline"
+                    style={eventTimeLineStyles}
+                  >
                     <div className="row">{display_past_events()}</div>
                   </div>
                 </div>
@@ -582,6 +606,55 @@ export const pageQuery = graphql`
       edges {
         node {
           ...eventListing
+        }
+      }
+    }
+    boaLogo: file(relativePath: { eq: "bankofamerica.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    pattersonLogo: file(relativePath: { eq: "pattersoncompanies.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    googleLogo: file(relativePath: { eq: "googlepartner.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    pulseCheckLogo: file(relativePath: { eq: "pulsecheckurgentcare.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    standardHeroBg: file(relativePath: { eq: "partnerships-hero.jpg" }) {
+      childImageSharp {
+        fluid(quality: 70) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    eventTimelineBg: file(relativePath: { eq: "event-timeline-bg.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 858) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    defaultUpcomingImg: file(relativePath: { eq: "default-upcoming-img.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -1,6 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
+
+import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -13,11 +16,17 @@ import "../styles/event-post.scss"
 const EventPage = ({ data }) => {
   const event_details = data.focus_event
   const speaker_details = data.speakers_data.speaker_items
-
   //Dynamically add BG image from event data
-  const styleBackgroundImage = {
-    backgroundImage:
-      "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
+  const heroDefaultBg = data.heroDefaultBg.childImageSharp.fluid.src
+  let styleBackgroundImage = {
+    backgroundImage: "url(" + heroDefaultBg + ")",
+  }
+  // If there is a hero bg image selected then set that instead
+  if (event_details.all_image_urls.hero_image_url != null) {
+    styleBackgroundImage = {
+      backgroundImage:
+        "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
+    }
   }
 
   //Check to see if webinar to adjust location card-margin
@@ -209,9 +218,12 @@ const EventPage = ({ data }) => {
           key={speaker.speaker_name}
         >
           <div className="speaker-img-wrapper">
-            <img
+            <Img
+              fluid={
+                speaker.speaker_profile_image_url.localFile.childImageSharp
+                  .fluid
+              }
               className="mx-auto d-block"
-              src={speaker.speaker_profile_image_url.source_url}
               alt="Speaker Profile"
             />
           </div>
@@ -223,6 +235,55 @@ const EventPage = ({ data }) => {
     }
   })
 
+  // Determines whether the information image is present and handles displaying/hiding it
+  const display_information_section = () => {
+    if (event_details.all_image_urls.information_image_url != null) {
+      if (
+        event_details.all_image_urls.information_image_url.source_url !== ""
+      ) {
+        return (
+          <div>
+            <div className="spacer solid"></div>
+            <div className="row content-block padded listed-items">
+              <div className="col-sm-11 col-md-9 col-lap-6">
+                <h2>{event_details.information_heading1}</h2>
+                {display_h1_information()}
+                <h2>{event_details.information_heading2}</h2>
+                {display_h2_information()}
+              </div>
+              <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
+                <img
+                  src={
+                    event_details.all_image_urls.information_image_url
+                      .source_url
+                  }
+                  alt={
+                    event_details.all_image_urls.information_image_url.alt_text
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        )
+      }
+    } else {
+      return (
+        <div>
+          <div className="spacer solid"></div>
+          <div className="row content-block padded listed-items">
+            <div className="col-sm-11 col-md-9 col-lap-7">
+              <h2>{event_details.information_heading1}</h2>
+              {display_h1_information()}
+              <h2>{event_details.information_heading2}</h2>
+              {display_h2_information()}
+            </div>
+            <div class="d-none"></div>
+          </div>
+        </div>
+      )
+    }
+  }
+
   return (
     <DefaultPageLayout location="event-post">
       <Helmet>
@@ -230,51 +291,53 @@ const EventPage = ({ data }) => {
         <meta name="description" content="Doctor Genius | Event." />
       </Helmet>
       <div>
-        <div className="hero" style={styleBackgroundImage}>
-          <div className="hero-overlay">
-            {/* Hero will be a layout component */}
+        <BackgroundImage>
+          <div className="hero" style={styleBackgroundImage}>
+            <div className="hero-overlay">
+              {/* Hero will be a layout component */}
 
-            <Container>
-              <div className="row">
-                <div className="col-sm-12 col-md-9 col-lap-8">
-                  <div
-                    className={
-                      event_details.event_strapline[0] !== ""
-                        ? "continue-edu-class-holder"
-                        : "d-none"
-                    }
-                  >
-                    <span className="button flat white-text continue-edu-class">
-                      {event_details.event_strapline}
-                    </span>
-                  </div>
-                  <div className="titles">
-                    <h1>{event_details.event_title}</h1>
-                    <h2>{event_details.event_subtitle}</h2>
-                  </div>
-                  <div
-                    className={
-                      event_details.register_url[0] !== ""
-                        ? "register-now-btn-holder"
-                        : "d-none"
-                    }
-                  >
-                    <a
-                      className="button flat white-text register-now-btn"
-                      href={event_details.register_url[0]}
-                      target="_blank"
-                      rel="noopener noreferrer"
+              <Container>
+                <div className="row">
+                  <div className="col-sm-12 col-md-9 col-lap-8">
+                    <div
+                      className={
+                        event_details.event_strapline[0] !== ""
+                          ? "continue-edu-class-holder"
+                          : "d-none"
+                      }
                     >
-                      {event_details.register_button_text[0] === ""
-                        ? "Register Now"
-                        : event_details.register_button_text[0]}
-                    </a>
+                      <span className="button flat white-text continue-edu-class">
+                        {event_details.event_strapline}
+                      </span>
+                    </div>
+                    <div className="titles">
+                      <h1>{event_details.event_title}</h1>
+                      <h2>{event_details.event_subtitle}</h2>
+                    </div>
+                    <div
+                      className={
+                        event_details.register_url[0] !== ""
+                          ? "register-now-btn-holder"
+                          : "d-none"
+                      }
+                    >
+                      <a
+                        className="button flat white-text register-now-btn"
+                        href={event_details.register_url[0]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {event_details.register_button_text[0] === ""
+                          ? "Register Now"
+                          : event_details.register_button_text[0]}
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Container>
+              </Container>
+            </div>
           </div>
-        </div>
+        </BackgroundImage>
         <Main>
           <Container>
             <div className="main-content">
@@ -316,27 +379,8 @@ const EventPage = ({ data }) => {
               </div>
             </div>
 
-            <div className="spacer solid"></div>
-
-            <div className="row content-block padded listed-items">
-              <div className="col-sm-11 col-md-9 col-lap-6">
-                <h2>{event_details.information_heading1}</h2>
-                {display_h1_information()}
-                <h2>{event_details.information_heading2}</h2>
-                {display_h2_information()}
-              </div>
-              <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
-                <img
-                  src={
-                    event_details.all_image_urls.information_image_url
-                      .source_url
-                  }
-                  alt={
-                    event_details.all_image_urls.information_image_url.alt_text
-                  }
-                />
-              </div>
-            </div>
+            {event_details.include_information[0] === "1" &&
+              display_information_section()}
 
             <div
               className={
@@ -490,6 +534,13 @@ export const pageQuery = graphql`
     }
     speakers_data: wordpressWpEvents(wordpress_id: { eq: $currentID }) {
       ...speakers
+    }
+    heroDefaultBg: file(relativePath: { eq: "marketing-solutions.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `

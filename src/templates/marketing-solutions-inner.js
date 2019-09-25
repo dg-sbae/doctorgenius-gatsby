@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
@@ -24,6 +25,7 @@ export default props => {
   const metaDescription = props.metaDescription
   const contentRows = props.contentRows
   const currentPage = props.page
+  const heroBackgroundImage = props.backgroundImage
 
   return (
     <DefaultPageLayout>
@@ -32,23 +34,25 @@ export default props => {
         <meta name="description" content={metaDescription} />
       </Helmet>
       <div className={props.page + " marketing-solutions-inner"}>
-        <div className="hero">
-          {/* Hero will be a layout component */}
+        <BackgroundImage fluid={heroBackgroundImage}>
+          <div className="hero">
+            {/* Hero will be a layout component */}
 
-          <Container>
-            <div className="valign-wrapper row">
-              <div className="col-sm-12">
-                <div className="hero-content accent-block">
-                  <h1>{pageTitle}</h1>
-                  <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
-                  <div className="accented-paragraph">
-                    <p>{pageIntro}</p>
+            <Container>
+              <div className="valign-wrapper row">
+                <div className="col-sm-12">
+                  <div className="hero-content accent-block">
+                    <h1>{pageTitle}</h1>
+                    <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
+                    <div className="accented-paragraph">
+                      <p>{pageIntro}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Container>
-        </div>
+            </Container>
+          </div>
+        </BackgroundImage>
         <Main>
           <Container>
             {/* Begin secondary nav Component: */}

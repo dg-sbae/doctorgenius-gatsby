@@ -14,7 +14,6 @@ $homepage-h1-font-size: $font-size-base * 4.881;
     @include media("<=phone") {
       height: 500px;
     }
-    background-image: url("../img/hero/homepage-option-1.jpg");
     @include media(">=desktop") {
       &:after {
         height: 12px;

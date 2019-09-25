@@ -2,7 +2,6 @@
 
 .page-404 {
   .hero {
-    background-image: url("../img/hero/404-error.jpg");
     height: 100vh;
   }
 
@@ -27,18 +26,16 @@
     margin: 15px 8px;
   }
 
-  @media only screen and (max-width: 1024px) {
-    .hero {
-      background-image: url("../img/hero/404-error-tablet.jpg");
-    }
-  }
   @media only screen and (min-width: 992px) and (max-width: 1024px) {
-    .hero {
+    .gbi-404 {
       background-position: 0% 32%;
     }
   }
 
   @media only screen and (max-width: 425px) {
+    .gbi-404 {
+      background: none;
+    }
     .hero {
       background-image: url("../img/hero/404-error-mobile.jpg");
     }
