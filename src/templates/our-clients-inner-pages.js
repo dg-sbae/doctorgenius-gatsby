@@ -38,6 +38,7 @@ export default props => {
 
   const fullBleedBgStyle = {
     background: "url(" + fullBleedBackgroundImage + ") no-repeat",
+    backgroundPosition: "40%",
   }
 
   return (
