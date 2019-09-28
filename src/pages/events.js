@@ -21,6 +21,8 @@ const EventPage = ({ data }) => {
   let featured_event
   const images = data
 
+  console.log(data)
+
   const eventTimeLineBg = images.eventTimelineBg.childImageSharp.fluid.src
   const eventTimeLineStyles = {
     backgroundImage: "url(" + eventTimeLineBg + ")",
@@ -206,10 +208,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[0].node.slug}>
               <img
                 src={
-                  past_events[0].node.all_image_urls.featured_image_url_large !=
-                  null
-                    ? past_events[0].node.all_image_urls
-                        .featured_image_url_large.source_url
+                  past_events[0].node.featured_media != null
+                    ? past_events[0].node.featured_media.localFile
+                        .childImageSharp.fluid.src
                     : defaultUpcomingEventImage
                 }
                 alt="Past Event"
@@ -234,10 +235,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[1].node.slug}>
               <img
                 src={
-                  past_events[1].node.all_image_urls.featured_image_url_large !=
-                  null
-                    ? past_events[1].node.all_image_urls
-                        .featured_image_url_large.source_url
+                  past_events[1].node.featured_media != null
+                    ? past_events[1].node.featured_media.localFile
+                        .childImageSharp.fluid.src
                     : defaultUpcomingEventImage
                 }
                 alt="Past Event"
@@ -262,10 +262,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[2].node.slug}>
               <img
                 src={
-                  past_events[2].node.all_image_urls.featured_image_url_large !=
-                  null
-                    ? past_events[2].node.all_image_urls
-                        .featured_image_url_large.source_url
+                  past_events[2].node.featured_media != null
+                    ? past_events[2].node.featured_media.localFile
+                        .childImageSharp.fluid.src
                     : defaultUpcomingEventImage
                 }
                 alt="Past Event"
@@ -290,10 +289,9 @@ const EventPage = ({ data }) => {
             <Link to={"/events/" + past_events[3].node.slug}>
               <img
                 src={
-                  past_events[3].node.all_image_urls.featured_image_url_large !=
-                  null
-                    ? past_events[3].node.all_image_urls
-                        .featured_image_url_large.source_url
+                  past_events[3].node.featured_media != null
+                    ? past_events[3].node.featured_media.localFile
+                        .childImageSharp.fluid.src
                     : defaultUpcomingEventImage
                 }
                 alt="Past Event"
