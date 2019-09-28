@@ -71,7 +71,9 @@ image-project-files-work-folder/
 
 #Releases
 releases/
-static/wp-content/uploads/wp-migrate-db/index.php
-static/wp-content/uploads/wp-migrate-db/.htaccess
+
+#Static Assets from old doctorgenius.com
 static/wp-content/uploads/ithemes-security/index.php
 static/wp-content/uploads/ithemes-security/backups/index.php
+static/wp-content/uploads/wp-migrate-db/.htaccess
+static/wp-content/uploads/wp-migrate-db/index.php

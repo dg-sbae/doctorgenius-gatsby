@@ -717,7 +717,7 @@ const CompanyListLink = props => (
               </Link>
             </div>
           </div>
-          <div class="row dropdown-row">
+          <div className="row dropdown-row">
             <div className="col-sm-6 ">
               <Link className="" to="/contact">
                 <div className="dropdown-item-block">

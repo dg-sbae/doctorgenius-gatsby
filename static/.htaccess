@@ -17,7 +17,7 @@ RewriteRule ^(.*)$ https://doctorgenius.dgd3v.com/$1 [L,R=301]
 
 
 #Direct users to a 404 if attempting to visit the parent Clients page
-RedirectMatch 404 ^/our-clients/?$
+#RedirectMatch 404 ^/our-clients/?$
 
 
 # Ensure the Gatsby error pages are being used by the server
@@ -26,19 +26,19 @@ ErrorDocument 404 /404/index.html
 
 
 # Old 301s from the WP doctorgenius.com
-Redirect 301 /events/business-dentistry-2017-08-04/ /
-Redirect 301 /events/ce/ /
-Redirect 301 /events/google-partners-healthcare-marketing-091817/ /
-Redirect 301 /events/google-partners-mobile-marketing-111517/ /
-Redirect 301 /events/marketing-millennials-03152018/ /
-Redirect 301 /events/webinar-04062018/ /
+#Redirect 301 /events/business-dentistry-2017-08-04/ /
+#Redirect 301 /events/ce/ /
+#Redirect 301 /events/google-partners-healthcare-marketing-091817/ /
+#Redirect 301 /events/google-partners-mobile-marketing-111517/ /
+#Redirect 301 /events/marketing-millennials-03152018/ /
+#Redirect 301 /events/webinar-04062018/ /
 Redirect 301 /privacy-policy/ /
 Redirect 301 /CDA/ /
 Redirect 301 /cda/ /
 
 
 #New 301s to support old content from WP dg.com
-Redirect 302 /events /
+#Redirect 302 /events /
 Redirect 301 /portal /
 Redirect 301 /confirmation /
 Redirect 301 /thank-you /

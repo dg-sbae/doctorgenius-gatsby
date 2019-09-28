@@ -1,8 +1,18 @@
 @import "_site-variables.scss";
 
 .termsofservice {
+  .gbi-tos:before,
+  .gbi-tos:after {
+    background-position: initial !important;
+  }
+  header {
+    .dropdown-content-block {
+      p {
+        color: $primary-text;
+      }
+    }
+  }
   .hero {
-    background: url("../img/hero/privacy-policy-hero.jpg");
     .accented-paragraph p {
       color: white;
     }
