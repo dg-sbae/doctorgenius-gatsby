@@ -21,11 +21,16 @@ const EventPage = ({ data }) => {
   let styleBackgroundImage = {
     backgroundImage: "url(" + heroDefaultBg + ")",
   }
+
+  console.log(data, styleBackgroundImage)
   // If there is a hero bg image selected then set that instead
   if (event_details.all_image_urls.hero_image_url != null) {
     styleBackgroundImage = {
       backgroundImage:
-        "url(" + event_details.all_image_urls.hero_image_url.source_url + ")",
+        "url(" +
+        event_details.all_image_urls.hero_image_url.localFile.childImageSharp
+          .fluid.src +
+        ")",
     }
   }
 
@@ -254,8 +259,8 @@ const EventPage = ({ data }) => {
               <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
                 <img
                   src={
-                    event_details.all_image_urls.information_image_url
-                      .source_url
+                    event_details.all_image_urls.information_image_url.localFile
+                      .childImageSharp.fluid.src
                   }
                   alt={
                     event_details.all_image_urls.information_image_url.alt_text
@@ -291,53 +296,51 @@ const EventPage = ({ data }) => {
         <meta name="description" content="Doctor Genius | Event." />
       </Helmet>
       <div>
-        <BackgroundImage>
-          <div className="hero" style={styleBackgroundImage}>
-            <div className="hero-overlay">
-              {/* Hero will be a layout component */}
+        <div className="hero" style={styleBackgroundImage}>
+          <div className="hero-overlay">
+            {/* Hero will be a layout component */}
 
-              <Container>
-                <div className="row">
-                  <div className="col-sm-12 col-md-9 col-lap-8">
-                    <div
-                      className={
-                        event_details.event_strapline[0] !== ""
-                          ? "continue-edu-class-holder"
-                          : "d-none"
-                      }
+            <Container>
+              <div className="row">
+                <div className="col-sm-12 col-md-9 col-lap-8">
+                  <div
+                    className={
+                      event_details.event_strapline[0] !== ""
+                        ? "continue-edu-class-holder"
+                        : "d-none"
+                    }
+                  >
+                    <span className="button flat white-text continue-edu-class">
+                      {event_details.event_strapline}
+                    </span>
+                  </div>
+                  <div className="titles">
+                    <h1>{event_details.event_title}</h1>
+                    <h2>{event_details.event_subtitle}</h2>
+                  </div>
+                  <div
+                    className={
+                      event_details.register_url[0] !== ""
+                        ? "register-now-btn-holder"
+                        : "d-none"
+                    }
+                  >
+                    <a
+                      className="button flat white-text register-now-btn"
+                      href={event_details.register_url[0]}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <span className="button flat white-text continue-edu-class">
-                        {event_details.event_strapline}
-                      </span>
-                    </div>
-                    <div className="titles">
-                      <h1>{event_details.event_title}</h1>
-                      <h2>{event_details.event_subtitle}</h2>
-                    </div>
-                    <div
-                      className={
-                        event_details.register_url[0] !== ""
-                          ? "register-now-btn-holder"
-                          : "d-none"
-                      }
-                    >
-                      <a
-                        className="button flat white-text register-now-btn"
-                        href={event_details.register_url[0]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {event_details.register_button_text[0] === ""
-                          ? "Register Now"
-                          : event_details.register_button_text[0]}
-                      </a>
-                    </div>
+                      {event_details.register_button_text[0] === ""
+                        ? "Register Now"
+                        : event_details.register_button_text[0]}
+                    </a>
                   </div>
                 </div>
-              </Container>
-            </div>
+              </div>
+            </Container>
           </div>
-        </BackgroundImage>
+        </div>
         <Main>
           <Container>
             <div className="main-content">
