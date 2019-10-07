@@ -27,12 +27,8 @@
   border-bottom: 2px solid $primary;
 }
 
-/* Loading ellipsis CSS */
 .ldsEllipsis {
   display: block;
-  position: relative;
-  width: 64px;
-  height: 64px;
   margin: auto;
 }
 
@@ -53,11 +49,9 @@
 
 /* Common to both contact forms: */
 .ldsEllipsis {
-  display: block;
   position: relative;
   width: 64px;
   height: 64px;
-  margin: auto;
 }
 .ldsEllipsis div {
   position: absolute;
