@@ -8,31 +8,19 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Container from "../components/Container"
 
 import "../styles/404.scss"
+import PageStyles from "./404.module.scss"
 
 class DG404Page extends React.Component {
   static propTypes = {
     data: PropTypes.object,
   }
 
-  /*constructor(props) {
-    super(props)
-  } */
-
   render() {
-    //const { pathname } = this.props.location
     const { data } = this.props
     const pagePaths = data.allSitePage.nodes.map(node => node.path)
-    /*let newFilePath
-    if (pathname === `/`) {
-      newFilePath = `src/pages/index.js`
-    } else if (pathname.slice(-1) === `/`) {
-      newFilePath = `src/pages${pathname.slice(0, -1)}.js`
-    } else {
-      newFilePath = `src/pages${pathname}.js`
-    } */
 
     return (
-      <div>
+      <div className={PageStyles.fourZeroFourPage}>
         {pagePaths.length > 0 && (
           <DefaultPageLayout location="the-study-post">
             <div className={`${this.props["*"]} page-404`}>

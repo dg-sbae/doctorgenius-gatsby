@@ -9,7 +9,7 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 
 import "../styles/case-study.scss"
-import CaseStudyStyles from "./case-study.module.scss"
+import PageStyles from "./case-study.module.scss"
 
 import thinArrowRight from "../img/right-arrow.svg"
 import newPatientOppIcon from "../img/icon/new-patient-opportunity.svg"
@@ -20,7 +20,7 @@ import performanceCampaignIcon from "../img/icon/performance-driven-campaigns.sv
 const CaseStudy = data => {
   const images = data.data
   return (
-    <div className={CaseStudyStyles.caseStudyPage}>
+    <div className={PageStyles.caseStudyPage}>
       <DefaultPageLayout location="case-study">
         <Helmet>
           <title>
@@ -34,7 +34,7 @@ const CaseStudy = data => {
         </Helmet>
         <div>
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className={CaseStudyStyles.hero + " hero"}>
+            <div className={PageStyles.hero + " hero"}>
               {/* Hero will be a layout component */}
 
               <Container>
@@ -43,8 +43,7 @@ const CaseStudy = data => {
                     <div className="hero-content">
                       <div
                         className={
-                          CaseStudyStyles.accentBlock +
-                          " hero-content accent-block"
+                          PageStyles.accentBlock + " hero-content accent-block"
                         }
                       >
                         <h1>Case Study</h1>
@@ -71,7 +70,7 @@ const CaseStudy = data => {
                 <div className="col-sm-12">
                   <div
                     className={
-                      CaseStudyStyles.innerTitle + " header inner-title center"
+                      PageStyles.innerTitle + " header inner-title center"
                     }
                   >
                     <h2 className="underline">The Client</h2>
@@ -81,14 +80,12 @@ const CaseStudy = data => {
               <div className="row padded short-top">
                 <div
                   className={
-                    CaseStudyStyles.logoBlock +
+                    PageStyles.logoBlock +
                     " col-sm-8 col-md-6 col-lap-6 col-lg-6 logo-block"
                   }
                 >
                   <img
-                    className={
-                      CaseStudyStyles.imgResponsive + " img-responsive"
-                    }
+                    className={PageStyles.imgResponsive + " img-responsive"}
                     src={images.titanDentalLogo.childImageSharp.fixed.src}
                     alt="Titan Dental Care - Digital Marketing Client"
                   />
@@ -109,20 +106,14 @@ const CaseStudy = data => {
                   </div>
                   <div
                     className={
-                      CaseStudyStyles.clientQuoteBlock + " client-quote-block"
+                      PageStyles.clientQuoteBlock + " client-quote-block"
                     }
                   >
-                    <p
-                      className={CaseStudyStyles.clientQuote + " client-quote"}
-                    >
+                    <p className={PageStyles.clientQuote + " client-quote"}>
                       "Over the past 12 months, the office has doubled in
                       revenue due to proper marketing methods!"
                     </p>
-                    <p
-                      className={
-                        CaseStudyStyles.clientAuthor + " client-author"
-                      }
-                    >
+                    <p className={PageStyles.clientAuthor + " client-author"}>
                       - Rami Tahhan, D.D.S.
                     </p>
                   </div>
@@ -132,7 +123,7 @@ const CaseStudy = data => {
                 <div className="col-sm-12">
                   <div
                     className={
-                      CaseStudyStyles.innerTitle + " header inner-title center"
+                      PageStyles.innerTitle + " header inner-title center"
                     }
                   >
                     <h2 className="underline">The Challenge</h2>
@@ -162,37 +153,31 @@ const CaseStudy = data => {
                   </div>
                   <div
                     className={
-                      CaseStudyStyles.clientQuoteBlock + " client-quote-block"
+                      PageStyles.clientQuoteBlock + " client-quote-block"
                     }
                   >
                     <p
                       className={
-                        CaseStudyStyles.clientQuote + " client-quote s-thin"
+                        PageStyles.clientQuote + " client-quote s-thin"
                       }
                     >
                       "I can sleep well knowing marketing dollars are being well
                       spent."
                     </p>
-                    <p
-                      className={
-                        CaseStudyStyles.clientAuthor + " client-author"
-                      }
-                    >
+                    <p className={PageStyles.clientAuthor + " client-author"}>
                       - Rami Tahhan, D.D.S.
                     </p>
                   </div>
                 </div>
                 <div
                   className={
-                    CaseStudyStyles.imgContainer +
+                    PageStyles.imgContainer +
                     " col-sm-12 col-md-10 order-1 col-lap-6 order-lap-2 col-lg-6 order-lg-2 img-container"
                   }
                 >
                   <Img
                     fluid={images.theChallengeImage.childImageSharp.fluid}
-                    className={
-                      CaseStudyStyles.imgResponsive + " img-responsive"
-                    }
+                    className={PageStyles.imgResponsive + " img-responsive"}
                     alt="Dental Office"
                   />
                 </div>
@@ -202,7 +187,7 @@ const CaseStudy = data => {
                 <div className="col-sm-12">
                   <div
                     className={
-                      CaseStudyStyles.innerTitle + " header inner-title center"
+                      PageStyles.innerTitle + " header inner-title center"
                     }
                   >
                     <h2 className="underline">The Solutions</h2>
@@ -212,14 +197,13 @@ const CaseStudy = data => {
               <div className="row padded short-top">
                 <div
                   className={
-                    CaseStudyStyles.OurPlansIMGContainer +
+                    PageStyles.OurPlansIMGContainer +
                     " col-md-12 col-lap-7 col-lg-7 our-plans-img-container"
                   }
                 >
                   <img
                     className={
-                      CaseStudyStyles.imgResponsive +
-                      " img-responsive blur-bleed"
+                      PageStyles.imgResponsive + " img-responsive blur-bleed"
                     }
                     src={images.theSolutionsImage.childImageSharp.fixed.src}
                     alt="Acquire New Patients"
@@ -227,22 +211,20 @@ const CaseStudy = data => {
                 </div>
                 <div
                   className={
-                    CaseStudyStyles.PanelQuadrant +
+                    PageStyles.PanelQuadrant +
                     " col-sm-10 col-md-10 col-lap-5 col-lg-5 panel-quadrant"
                   }
                 >
-                  <div className={CaseStudyStyles.row + " row"}>
+                  <div className={PageStyles.row + " row"}>
                     <div
                       className={
-                        CaseStudyStyles.PanelQuadItem +
+                        PageStyles.PanelQuadItem +
                         " col-sm-12 col-md-6 panel-quad-item"
                       }
                     >
-                      <div className={CaseStudyStyles.Panel + " panel"}>
+                      <div className={PageStyles.Panel + " panel"}>
                         <div
-                          className={
-                            CaseStudyStyles.iconWrapper + " icon-wrapper"
-                          }
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
                         >
                           <img
                             className="img-icon"
@@ -254,7 +236,7 @@ const CaseStudy = data => {
 
                       <div
                         className={
-                          CaseStudyStyles.PanelQuadTextBlock +
+                          PageStyles.PanelQuadTextBlock +
                           " panel-quad-text-block"
                         }
                       >
@@ -272,11 +254,11 @@ const CaseStudy = data => {
                     </div>
                     <div
                       className={
-                        CaseStudyStyles.PanelQuadItem +
+                        PageStyles.PanelQuadItem +
                         " col-sm-12 col-md-6 panel-quad-item"
                       }
                     >
-                      <div className={CaseStudyStyles.Panel + " panel"}>
+                      <div className={PageStyles.Panel + " panel"}>
                         <div className="icon-wrapper">
                           <img
                             className="img-icon"
@@ -288,7 +270,7 @@ const CaseStudy = data => {
 
                       <div
                         className={
-                          CaseStudyStyles.PanelQuadTextBlock +
+                          PageStyles.PanelQuadTextBlock +
                           " panel-quad-text-block"
                         }
                       >
@@ -306,14 +288,14 @@ const CaseStudy = data => {
                       </div>
                     </div>
                   </div>
-                  <div className={CaseStudyStyles.row + " row"}>
+                  <div className={PageStyles.row + " row"}>
                     <div
                       className={
-                        CaseStudyStyles.PanelQuadItem +
+                        PageStyles.PanelQuadItem +
                         " col-sm-12 col-md-6 panel-quad-item"
                       }
                     >
-                      <div className={CaseStudyStyles.Panel + " panel"}>
+                      <div className={PageStyles.Panel + " panel"}>
                         <div className="icon-wrapper">
                           <img
                             className="img-icon"
@@ -324,7 +306,7 @@ const CaseStudy = data => {
                       </div>
                       <div
                         className={
-                          CaseStudyStyles.PanelQuadTextBlock +
+                          PageStyles.PanelQuadTextBlock +
                           " panel-quad-text-block"
                         }
                       >
@@ -343,11 +325,11 @@ const CaseStudy = data => {
                     </div>
                     <div
                       className={
-                        CaseStudyStyles.PanelQuadItem +
+                        PageStyles.PanelQuadItem +
                         " col-sm-12 col-md-6 panel-quad-item"
                       }
                     >
-                      <div className={CaseStudyStyles.Panel + " panel"}>
+                      <div className={PageStyles.Panel + " panel"}>
                         <div className="icon-wrapper">
                           <img
                             className="img-icon"
@@ -358,7 +340,7 @@ const CaseStudy = data => {
                       </div>
                       <div
                         className={
-                          CaseStudyStyles.PanelQuadTextBlock +
+                          PageStyles.PanelQuadTextBlock +
                           " panel-quad-text-block"
                         }
                       >
@@ -382,7 +364,7 @@ const CaseStudy = data => {
                 <div className="col-sm-12">
                   <div
                     className={
-                      CaseStudyStyles.innerTitle + " header inner-title center"
+                      PageStyles.innerTitle + " header inner-title center"
                     }
                   >
                     <h2 className="underline">The Results</h2>
@@ -390,85 +372,55 @@ const CaseStudy = data => {
                 </div>
                 <div
                   className={
-                    CaseStudyStyles.caseStudyContainer +
+                    PageStyles.caseStudyContainer +
                     " col-md-7 col-lap-7 col-lg-7 case-study-container"
                   }
                 >
                   <div
-                    className={
-                      CaseStudyStyles.innerTitle + " inner-title center"
-                    }
+                    className={PageStyles.innerTitle + " inner-title center"}
                   >
                     <h3 className="m-0">Case Study: Titan Dental</h3>
-                    <div
-                      className={CaseStudyStyles.subtitle + " subtitle muted"}
-                    >
+                    <div className={PageStyles.subtitle + " subtitle muted"}>
                       The first 6 months
                     </div>
                   </div>
                   <div
-                    className={
-                      CaseStudyStyles.caseStudyTable + " case-study-table"
-                    }
+                    className={PageStyles.caseStudyTable + " case-study-table"}
                   >
                     <div
-                      className={
-                        CaseStudyStyles.caseStudyItem + " case-study-item"
-                      }
+                      className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={CaseStudyStyles.callout + " callout"}>
-                        1,125%
-                      </p>
+                      <p className={PageStyles.callout + " callout"}>1,125%</p>
                       <p>Increase in Google First-Page Revenue</p>
                     </div>
                     <div
-                      className={
-                        CaseStudyStyles.caseStudyItem + " case-study-item"
-                      }
+                      className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={CaseStudyStyles.callout + " callout"}>
-                        100%
-                      </p>
+                      <p className={PageStyles.callout + " callout"}>100%</p>
                       <p>Increase in Revenue</p>
                     </div>
                     <div
-                      className={
-                        CaseStudyStyles.caseStudyItem + " case-study-item"
-                      }
+                      className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={CaseStudyStyles.callout + " callout"}>
-                        60%
-                      </p>
+                      <p className={PageStyles.callout + " callout"}>60%</p>
                       <p>Growth in organic Search Traffic</p>
                     </div>
                     <div
-                      className={
-                        CaseStudyStyles.caseStudyItem + " case-study-item"
-                      }
+                      className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={CaseStudyStyles.callout + " callout"}>
-                        500%
-                      </p>
+                      <p className={PageStyles.callout + " callout"}>500%</p>
                       <p>Growth in Reviews Across the Web</p>
                     </div>
                     <div
-                      className={
-                        CaseStudyStyles.caseStudyItem + " case-study-item"
-                      }
+                      className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={CaseStudyStyles.callout + " callout"}>
-                        200%
-                      </p>
+                      <p className={PageStyles.callout + " callout"}>200%</p>
                       <p>New Patient Appointments</p>
                     </div>
                     <div
-                      className={
-                        CaseStudyStyles.caseStudyItem + " case-study-item"
-                      }
+                      className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={CaseStudyStyles.callout + " callout"}>
-                        88%
-                      </p>
+                      <p className={PageStyles.callout + " callout"}>88%</p>
                       <p>Increase in New Patient Calls!</p>
                     </div>
                   </div>
@@ -477,8 +429,7 @@ const CaseStudy = data => {
                   <Img
                     fluid={images.searchResultsPage.childImageSharp.fluid}
                     className={
-                      CaseStudyStyles.imgResponsive +
-                      " img-responsive blur-bleed"
+                      PageStyles.imgResponsive + " img-responsive blur-bleed"
                     }
                     alt="Local Business Search Results Page"
                   />
@@ -486,16 +437,14 @@ const CaseStudy = data => {
               </div>
               <div
                 className={
-                  CaseStudyStyles.requestDemoFooter +
+                  PageStyles.requestDemoFooter +
                   " row padded tall-top request-demo-footer"
                 }
               >
                 <div className="col-lg-1" />
                 <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
                   <div className="content-block">
-                    <div
-                      className={CaseStudyStyles.innerTitle + " inner-title"}
-                    >
+                    <div className={PageStyles.innerTitle + " inner-title"}>
                       <h2>
                         Start your
                         <span className="font-weight-semibold"> success </span>
