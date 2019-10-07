@@ -9,7 +9,7 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 
 import "../styles/case-study.scss"
-import CaseStudyStyles from "../components/case-study.module.scss"
+import CaseStudyStyles from "./case-study.module.scss"
 
 import thinArrowRight from "../img/right-arrow.svg"
 import newPatientOppIcon from "../img/icon/new-patient-opportunity.svg"
@@ -20,8 +20,8 @@ import performanceCampaignIcon from "../img/icon/performance-driven-campaigns.sv
 const CaseStudy = data => {
   const images = data.data
   return (
-    <DefaultPageLayout location="case-study">
-      <div className={CaseStudyStyles.caseStudy}>
+    <div className={CaseStudyStyles.caseStudyPage}>
+      <DefaultPageLayout location="case-study">
         <Helmet>
           <title>
             In-Depth Healthcare Marketing Case Study | New Patient Acquisition
@@ -525,8 +525,8 @@ const CaseStudy = data => {
             </Container>
           </Main>
         </div>
-      </div>
-    </DefaultPageLayout>
+      </DefaultPageLayout>
+    </div>
   )
 }
 
