@@ -1,35 +1,12 @@
 import React from "react"
+
 import thinArrowRight from "../img/right-arrow.svg"
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
-import $ from "jquery"
 
-/* class FormResponse extends React.Component {
-  render() {
-    return (
-      <div className="form-response">
-        <h3>Debug:</h3>
-        <p>Form data received from server:</p>
-        <ul>
-          <li>
-            {this.props.name !== "" ? this.props.name : "No Data Received"}
-          </li>
-          <li>
-            {this.props.phone !== "" ? this.props.phone : "No Data Received"}
-          </li>
-          <li>
-            {this.props.email !== "" ? this.props.email : "No Data Received"}
-          </li>
-          <li>
-            {this.props.company !== ""
-              ? this.props.company
-              : "No Data Received"}
-          </li>
-        </ul>
-      </div>
-    )
-  }
-} */
+import DemoFormStyles from "./demo-form.module.scss"
+
+import $ from "jquery"
 
 class DemoForm extends React.Component {
   constructor(props) {
@@ -92,44 +69,8 @@ class DemoForm extends React.Component {
     data.append("Description", "Form: Request Demo")
     data.append("LeadSource", "(New) Main Website Organic")
 
-    /* Debug:
-    alert(
-      "Debug -- Data sent to server:\n" +
-        data +
-        "\n\n" +
-        "Readable format:" +
-        "\nname: " +
-        this.name.value +
-        "\ncompany: " +
-        this.company.value +
-        "\nemail: " +
-        this.email.value +
-        "\nphone: " +
-        this.phone.value
-    )
-    */
-
-    //NodeTest server
-    //fetch("http://nodetest.dgd3v.com/upload", {
-
-    //Salesforce integration:
-    //https://portal.doctorgenius.com/api/dglead
-    //tracking key: a803bcbe-f32d-41b9-81a8-62a4cd6cd446
-
-    //Email to the support team
-    //inboundleads@doctorgenius.com, alexis@doctorgenius.com
-    //[FullName] <noreply@doctorgenius.com>
-    //Doctor Genius "Request Demo"
-    //Name:    [FullName]
-    //Phone:   [PhoneNumber]
-    //Email:   [EmailAddress]
-    //Company: [CompanyName]
-
     //stringData holds the stringified, encoded form data
     let stringData = ""
-
-    // Debug
-    // console.log(Object.fromEntries(data))
 
     // Turn the form body into a string by iterating over the form
     // entries and encoding them as URI components
@@ -143,12 +84,6 @@ class DemoForm extends React.Component {
 
     // Remove the trailing '&' since there's no additional parameter
     stringData = stringData.replace(/&$/, "")
-
-    // Debug:
-    // console.log("Stringified form data:", stringData)
-
-    // Generate a request to our Admin portal (connects to SalesForce)
-    // Handled on the backend now
 
     // Generate a request to the email server
     fetch("https://nodetest.dgplex.com/upload", {
@@ -191,7 +126,7 @@ class DemoForm extends React.Component {
 
   render() {
     return (
-      <div className="form-wrapper">
+      <div className={DemoFormStyles.formWrapper + " form-wrapper"}>
         <form onSubmit={this.handleFormSubmit}>
           <div>
             <input
@@ -228,10 +163,18 @@ class DemoForm extends React.Component {
             />
           </div>
           <div>
-            <button type="submit" className="button btn flat request-demo">
+            <button
+              type="submit"
+              className={
+                DemoFormStyles.submitButton + " button btn flat request-demo"
+              }
+            >
               Request Demo <img src={thinArrowRight} alt="Arrow Right" />
             </button>
-            <div style={{ display: "none" }} className="lds-ellipsis">
+            <div
+              style={{ display: "none" }}
+              className={DemoFormStyles.ldsEllipsis + " lds-ellipsis"}
+            >
               <div></div>
               <div></div>
               <div></div>
