@@ -7,6 +7,7 @@ import Container from "../components/Container"
 import BackgroundImage from "gatsby-background-image"
 
 import "../styles/500.scss"
+import PageStyles from "./505.module.scss"
 
 class DG500Page extends React.Component {
   static propTypes = {
@@ -18,20 +19,11 @@ class DG500Page extends React.Component {
   } */
 
   render() {
-    //const { pathname } = this.props.location
     const { data } = this.props
     const pagePaths = data.allSitePage.nodes.map(node => node.path)
-    /*let newFilePath
-    if (pathname === `/`) {
-      newFilePath = `src/pages/index.js`
-    } else if (pathname.slice(-1) === `/`) {
-      newFilePath = `src/pages${pathname.slice(0, -1)}.js`
-    } else {
-      newFilePath = `src/pages${pathname}.js`
-    } */
 
     return (
-      <div>
+      <div className={PageStyles.fiveZeroFivePage}>
         {pagePaths.length > 0 && (
           <DefaultPageLayout location="the-study-post">
             <div className={`${this.props["*"]} page-500`}>

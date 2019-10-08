@@ -4,7 +4,6 @@ import { graphql, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
-//import Main from "../components/main-content"
 import Container from "../components/Container"
 
 import "../styles/404.scss"

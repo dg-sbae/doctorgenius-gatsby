@@ -12,6 +12,7 @@ import Container from "../components/Container"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/event-listing.scss"
+import PageStyles from "./events.module.scss"
 
 const EventPage = ({ data }) => {
   // Globals
@@ -315,260 +316,265 @@ const EventPage = ({ data }) => {
   }
 
   return (
-    <DefaultPageLayout location="event-listing">
-      <Helmet>
-        <title>Events | Doctor Genius</title>
-        <meta name="description" content="Doctor Genius | Event" />
-      </Helmet>
-      <div>
-        <BackgroundImage fluid={styleBackgroundImage}>
-          <div className="hero">
-            <div className="hero-overlay">
-              {/* Hero will be a layout component */}
+    <div className={PageStyles.eventsPage}>
+      <DefaultPageLayout location="event-listing">
+        <Helmet>
+          <title>Events | Doctor Genius</title>
+          <meta name="description" content="Doctor Genius | Event" />
+        </Helmet>
+        <div>
+          <BackgroundImage fluid={styleBackgroundImage}>
+            <div className="hero">
+              <div className="hero-overlay">
+                {/* Hero will be a layout component */}
 
-              <Container>
-                <div className="row">
-                  <div className="col-sm-11 col-md-9 col-lap-6">
-                    <div className="dg-category-holder">
-                      <h1 className="button flat white-text dg-category">
-                        Doctor Genius Events
-                      </h1>
-                    </div>
-                    <div className="titles">
-                      <h2>{featured_event.event_title}</h2>
-                      <p className="event-desc">
-                        {featured_event.event_details_text}
-                      </p>
-                    </div>
-                    <div className="cta-btns">
-                      {featured_event.register_url !== "" &&
-                        (featured_event.register_url[0] !== "" && (
-                          <a
-                            className="button flat white-text register-now-btn"
-                            href={featured_event.register_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {featured_event.register_button_text === ""
-                              ? "Register Now"
-                              : featured_event.register_button_text}
-                          </a>
-                        ))}
-                      {featured_event.slug !== "" && (
-                        <a
-                          className="button flat transparent hero-more-info-btn"
-                          href={featured_event.slug}
-                        >
-                          + More Info
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                  {featured_event.dummy_data !== true && (
-                    <div className="col-sm-11 col-md-9 col-lap-6 event-countdown">
-                      <h3>Next Event Starts:</h3>
-                      <div className="spacer solid"></div>
-                      <div className="row">
-                        <div className="col-sm-3">
-                          <Countdown
-                            date={countdown_date_and_time}
-                            renderer={day_renderer}
-                          />
-                          <p className="labels">Days</p>
-                        </div>
-                        <div className="col-sm-3">
-                          <Countdown
-                            date={countdown_date_and_time}
-                            renderer={hours_renderer}
-                          />
-                          <p className="labels">Hours</p>
-                        </div>
-                        <div className="col-sm-3">
-                          <Countdown
-                            date={countdown_date_and_time}
-                            renderer={minutes_renderer}
-                          />
-                          <p className="labels">Minutes</p>
-                        </div>
-                        <div className="col-sm-3">
-                          <Countdown
-                            date={countdown_date_and_time}
-                            renderer={seconds_renderer}
-                          />
-                          <p className="labels">Seconds</p>
-                        </div>
-                        <div className="col-sm-10">
-                          <span className="hero-event-date">
-                            {format_date_long(featured_event.event_date)}
-                          </span>{" "}
-                          <span className="dot">&middot;</span>{" "}
-                          <span className="event-time">
-                            {featured_event.start_time !== "" && (
-                              <span className="start-time">
-                                {convert_time(featured_event.start_time)}
-                              </span>
-                            )}
-                            {featured_event.end_time !== "" && (
-                              <span className="end-time">
-                                -{convert_time(featured_event.end_time)}
-                              </span>
-                            )}
-                          </span>
-                        </div>
+                <Container>
+                  <div className="row">
+                    <div className="col-sm-11 col-md-9 col-lap-6">
+                      <div className="dg-category-holder">
+                        <h1 className="button flat white-text dg-category">
+                          Doctor Genius Events
+                        </h1>
                       </div>
-                    </div>
-                  )}
-                </div>
-              </Container>
-            </div>
-          </div>
-        </BackgroundImage>
-        <Main>
-          <Container>
-            <div className="content-main">
-              <div className="content-block padded upcoming-events">
-                <div className="row">
-                  <div className="col-sm-11 col-md-10 col-lap-9 intro-section">
-                    <div className="inner-title center">
-                      <h2>Upcoming Events</h2>
-                    </div>
-
-                    <p>
-                      Below is information on our upcoming events that can cover
-                      a variety of topics about benefiting a private practice
-                      through online marketing. Each conference will have a
-                      unique focus and purpose, teaming up with successful
-                      professionals within the industry. For more information,
-                      follow the link to register.
-                    </p>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-sm-11 col-md-9 col-lap-12 event-cards">
-                    <div className="row">{display_upcoming_events}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="spacer solid"></div>
-
-              <div className="row panel-row featured-partners-row">
-                <div className="col-sm-12">
-                  <div className="content-block">
-                    <div className="inner-title center thin-heading">
-                      <h2>Featured Sponsers</h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-sm-10 col-md-10 col-lap-10 col-lg-11">
-                    <div className="row">
-                      <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
-                        <div className="icon-wrapper">
-                          <img
-                            className="img-icon"
-                            src={images.boaLogo.childImageSharp.fluid.src}
-                            alt="Digital Marketing Partner Bank of America"
-                          />
-                        </div>
-                      </div>
-                      <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
-                        <div className="icon-wrapper">
-                          <img
-                            className="img-icon"
-                            src={images.pattersonLogo.childImageSharp.fluid.src}
-                            alt="Digital Marketing Partner Patterson Companies, Inc."
-                          />
-                        </div>
-                      </div>
-                      <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
-                        <div className="icon-wrapper">
-                          <img
-                            className="img-icon"
-                            src={
-                              images.pulseCheckLogo.childImageSharp.fluid.src
-                            }
-                            alt="Digital Marketing Partner PulseCheck"
-                          />
-                        </div>
-                      </div>
-                      <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
-                        <div className="icon-wrapper">
-                          <img
-                            className="img-icon google-partner-icon"
-                            src={images.googleLogo.childImageSharp.fluid.src}
-                            alt="Google Partner"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="spacer solid"></div>
-
-              <div className="past-events">
-                <div className="row">
-                  <div className="col-sm-11 col-md-11 col-lap-9 center">
-                    <h2>Past Events</h2>
-                    <p className="past-event-desc">
-                      At Doctor Genius, we understand that the digital marketing
-                      platform is always changing and therefore, offer events
-                      collaborating with other professionals in specific fields.
-                      Here is a timeline of past events that we have hosted on
-                      various topics pertaining to private practices.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="row">
-                  <div
-                    className="col-lap-10 col-lg-9 col-md-11 past-events-timeline"
-                    style={eventTimeLineStyles}
-                  >
-                    <div className="row">{display_past_events()}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="spacer solid"></div>
-
-              {/* Begin Demo Footer */}
-              <div className="row padded tall-top request-demo-footer">
-                <div className="col-sm-11 col-md-9 col-lap-5">
-                  <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
+                      <div className="titles">
+                        <h2>{featured_event.event_title}</h2>
+                        <p className="event-desc">
+                          {featured_event.event_details_text}
                         </p>
                       </div>
+                      <div className="cta-btns">
+                        {featured_event.register_url !== "" &&
+                          (featured_event.register_url[0] !== "" && (
+                            <a
+                              className="button flat white-text register-now-btn"
+                              href={featured_event.register_url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {featured_event.register_button_text === ""
+                                ? "Register Now"
+                                : featured_event.register_button_text}
+                            </a>
+                          ))}
+                        {featured_event.slug !== "" && (
+                          <a
+                            className="button flat transparent hero-more-info-btn"
+                            href={featured_event.slug}
+                          >
+                            + More Info
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                    {featured_event.dummy_data !== true && (
+                      <div className="col-sm-11 col-md-9 col-lap-6 event-countdown">
+                        <h3>Next Event Starts:</h3>
+                        <div className="spacer solid"></div>
+                        <div className="row">
+                          <div className="col-sm-3">
+                            <Countdown
+                              date={countdown_date_and_time}
+                              renderer={day_renderer}
+                            />
+                            <p className="labels">Days</p>
+                          </div>
+                          <div className="col-sm-3">
+                            <Countdown
+                              date={countdown_date_and_time}
+                              renderer={hours_renderer}
+                            />
+                            <p className="labels">Hours</p>
+                          </div>
+                          <div className="col-sm-3">
+                            <Countdown
+                              date={countdown_date_and_time}
+                              renderer={minutes_renderer}
+                            />
+                            <p className="labels">Minutes</p>
+                          </div>
+                          <div className="col-sm-3">
+                            <Countdown
+                              date={countdown_date_and_time}
+                              renderer={seconds_renderer}
+                            />
+                            <p className="labels">Seconds</p>
+                          </div>
+                          <div className="col-sm-10">
+                            <span className="hero-event-date">
+                              {format_date_long(featured_event.event_date)}
+                            </span>{" "}
+                            <span className="dot">&middot;</span>{" "}
+                            <span className="event-time">
+                              {featured_event.start_time !== "" && (
+                                <span className="start-time">
+                                  {convert_time(featured_event.start_time)}
+                                </span>
+                              )}
+                              {featured_event.end_time !== "" && (
+                                <span className="end-time">
+                                  -{convert_time(featured_event.end_time)}
+                                </span>
+                              )}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </Container>
+              </div>
+            </div>
+          </BackgroundImage>
+          <Main>
+            <Container>
+              <div className="content-main">
+                <div className="content-block padded upcoming-events">
+                  <div className="row">
+                    <div className="col-sm-11 col-md-10 col-lap-9 intro-section">
+                      <div className="inner-title center">
+                        <h2>Upcoming Events</h2>
+                      </div>
+
+                      <p>
+                        Below is information on our upcoming events that can
+                        cover a variety of topics about benefiting a private
+                        practice through online marketing. Each conference will
+                        have a unique focus and purpose, teaming up with
+                        successful professionals within the industry. For more
+                        information, follow the link to register.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-sm-11 col-md-9 col-lap-12 event-cards">
+                      <div className="row">{display_upcoming_events}</div>
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-10 col-md-5 col-lap-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
+
+                <div className="spacer solid"></div>
+
+                <div className="row panel-row featured-partners-row">
+                  <div className="col-sm-12">
+                    <div className="content-block">
+                      <div className="inner-title center thin-heading">
+                        <h2>Featured Sponsers</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-sm-10 col-md-10 col-lap-10 col-lg-11">
+                      <div className="row">
+                        <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
+                          <div className="icon-wrapper">
+                            <img
+                              className="img-icon"
+                              src={images.boaLogo.childImageSharp.fluid.src}
+                              alt="Digital Marketing Partner Bank of America"
+                            />
+                          </div>
+                        </div>
+                        <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
+                          <div className="icon-wrapper">
+                            <img
+                              className="img-icon"
+                              src={
+                                images.pattersonLogo.childImageSharp.fluid.src
+                              }
+                              alt="Digital Marketing Partner Patterson Companies, Inc."
+                            />
+                          </div>
+                        </div>
+                        <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
+                          <div className="icon-wrapper">
+                            <img
+                              className="img-icon"
+                              src={
+                                images.pulseCheckLogo.childImageSharp.fluid.src
+                              }
+                              alt="Digital Marketing Partner PulseCheck"
+                            />
+                          </div>
+                        </div>
+                        <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
+                          <div className="icon-wrapper">
+                            <img
+                              className="img-icon google-partner-icon"
+                              src={images.googleLogo.childImageSharp.fluid.src}
+                              alt="Google Partner"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
+                <div className="spacer solid"></div>
+
+                <div className="past-events">
+                  <div className="row">
+                    <div className="col-sm-11 col-md-11 col-lap-9 center">
+                      <h2>Past Events</h2>
+                      <p className="past-event-desc">
+                        At Doctor Genius, we understand that the digital
+                        marketing platform is always changing and therefore,
+                        offer events collaborating with other professionals in
+                        specific fields. Here is a timeline of past events that
+                        we have hosted on various topics pertaining to private
+                        practices.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="row">
+                    <div
+                      className="col-lap-10 col-lg-9 col-md-11 past-events-timeline"
+                      style={eventTimeLineStyles}
+                    >
+                      <div className="row">{display_past_events()}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="spacer solid"></div>
+
+                {/* Begin Demo Footer */}
+                <div className="row padded tall-top request-demo-footer">
+                  <div className="col-sm-11 col-md-9 col-lap-5">
+                    <div className="content-block">
+                      <div className="inner-title">
+                        <h2>
+                          Start your <span>success</span> with Doctor Genius
+                          today!
+                        </h2>
+                        <div className="accented-paragraph">
+                          <p>
+                            The Genius platform makes every part of your company
+                            process more efficient. Our support team is very
+                            excited to help you and get your company on the
+                            right path of success.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-10 col-md-5 col-lap-5">
+                    <div className="center">
+                      <a href="/demo" className="button flat white-text">
+                        Request Demo{" "}
+                        <img src={thinArrowRight} alt="Arrow Right" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {/* End Demo Footer */}
               </div>
-              {/* End Demo Footer */}
-            </div>
-          </Container>
-        </Main>
-      </div>
-    </DefaultPageLayout>
+            </Container>
+          </Main>
+        </div>
+      </DefaultPageLayout>
+    </div>
   )
 }
 

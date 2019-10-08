@@ -9,19 +9,19 @@ import Container from "../components/Container"
 import { Link } from "gatsby"
 
 import "../styles/baa.scss"
+import PageStyles from "./baa.module.scss"
 
 const Baa = data => {
   return (
-    <DefaultPageLayout location="baa">
-      <Helmet>
-        <title>Standard Business Associate Agreement | Doctor Genius</title>
-      </Helmet>
-      <div className="baa">
-        <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className="gbi-baa">
-        <div className="hero">
-          {/* Hero will be a layout component */}
-  
-          <Container>
+    <div className={PageStyles.baaPage}>
+      <DefaultPageLayout location="baa">
+        <Helmet>
+          <title>Standard Business Associate Agreement | Doctor Genius</title>
+        </Helmet>
+        <div className="baa">
+          <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className="gbi-baa">
+            <div className="hero">
+              <Container>
             <div className="valign-wrapper row">
               <div className="col-sm-12">
                 <div className="hero-content">
@@ -43,10 +43,10 @@ const Baa = data => {
               <div className="col-sm-6" />
             </div>
           </Container>
-        </div>
-        </BackgroundImage>
-        <Main>
-          <Container>
+            </div>
+          </BackgroundImage>
+          <Main>
+            <Container>
             <div className="row padded tall-top short-bottom">
               <div class="col-sm-12 col-md-8">
                 <p>
@@ -710,9 +710,10 @@ const Baa = data => {
               </div>
             </div>
           </Container>
-        </Main>
-      </div>
-    </DefaultPageLayout>
+          </Main>
+        </div>
+      </DefaultPageLayout>
+    </div>
   )
 }
 
