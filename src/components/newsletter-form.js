@@ -1,6 +1,10 @@
 import React from "react"
+
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
+
+import FormStyles from "./newsletter-form.module.scss"
+
 import $ from "jquery"
 
 class NewsLetterSignUpForm extends React.Component {

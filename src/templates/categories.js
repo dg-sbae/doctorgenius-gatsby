@@ -19,6 +19,7 @@ import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
+import PageStyles from "./categories.module.scss"
 
 const ResponsivePostsColumnHeader = props => (
   <div className="col-sm-12 d-lg-none responsive-tab-trigger">

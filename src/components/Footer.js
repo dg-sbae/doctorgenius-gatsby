@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+
 import Container from "../components/Container"
 import logoWhite from "../img/icon/logo-white.svg"
 import ringingPhoneIcon from "../img/icon/ringing-phone.svg"
@@ -10,6 +11,8 @@ import twitterIcon from "../img/icon/twitter-circle.svg"
 import instagramIcon from "../img/icon/instagram-circle.svg"
 import linkedinIcon from "../img/icon/linkedin-circle.svg"
 import youtubeIcon from "../img/icon/youtube-circle.svg"
+
+import FooterStyles from "./Footer.module.scss"
 
 const ListLink = props => (
   <li>

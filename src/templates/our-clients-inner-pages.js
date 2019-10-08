@@ -19,6 +19,7 @@ import healthcareMarketing from "../img/icon/sphygmomanometer-nav.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/our-clients-inner-pages.scss"
+import PageStyles from "./our-clients-inner-pages.module.scss"
 
 export default props => {
   /* These will likely need to be dynamic props */

@@ -12,6 +12,7 @@ import Container from "../components/Container"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/event-post.scss"
+import PageStyles from "./event.module.scss"
 
 const EventPage = ({ data }) => {
   const event_details = data.focus_event

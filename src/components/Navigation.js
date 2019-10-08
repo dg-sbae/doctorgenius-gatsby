@@ -2,10 +2,7 @@ import React from "react"
 import { Component } from "react"
 import { Link } from "gatsby"
 import Container from "../components/Container"
-import $ from "jquery"
 
-//import logo from "../img/logo-white.svg"
-//import phone from "../img/phone-white.svg"
 import ourTech from "../img/icon/our-technology-white.svg"
 import responsiveWebsites from "../img/icon/website-white.svg"
 import contentMarketing from "../img/icon/contract-white.svg"
@@ -17,7 +14,6 @@ import cosmeticSurgeons from "../img/icon/surgeon.svg"
 import urgentCare from "../img/icon/urgent-care.svg"
 import healthcareMarketing from "../img/icon/sphygmomanometer.svg"
 import caseStudy from "../img/icon/briefcase.svg"
-//import webinars from "../img/icon/television.svg"
 import theStudy from "../img/icon/the-study-white.svg"
 import house from "../img/icon/house.svg"
 import marketingSolutions from "../img/icon/statistics.svg"
@@ -39,6 +35,9 @@ import loginPortalIcon from "../../public/icon/icon-portal.svg"
 
 import "bootstrap/dist/js/bootstrap.min.js"
 // import "../../static/scripts/navigationFunctionality.js"
+import NavStyles from "./Navigation.module.scss"
+
+import $ from "jquery"
 
 const ListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>

@@ -6,9 +6,10 @@ https://github.com/akiran/react-slick
 
 import React from "react"
 import Slider from "react-slick"
-import styles from "./testimonials-slider.module.scss"
+
 import quoteMark from "../img/quote-mark.svg"
-//import jQuery from "jquery"
+
+import styles from "./testimonials-slider.module.scss"
 
 class Card extends React.Component {
   constructor(props) {

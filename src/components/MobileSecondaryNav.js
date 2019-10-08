@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import $ from "jquery"
 
-import styles from "./mobile-secondary-nav.module.scss"
 import downArrow from "../img/icon/down-arrow.svg"
+
+import styles from "./MobileSecondaryNav.module.scss"
+
+import $ from "jquery"
 
 const mobileSubNavLinks = {
   marketingSolutions: [

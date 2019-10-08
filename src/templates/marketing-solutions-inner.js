@@ -15,6 +15,7 @@ import ourTechnologyIcon from "../img/our-technology.svg"
 import hostingSolutionsIcon from "../img/hosting-solutions.svg"
 
 import "../styles/marketing-solutions-inner.scss"
+import PageStyles from "./marketing-solutions-inner.module.scss"
 
 export default props => {
   /* These will likely need to be dynamic props */

@@ -10,13 +10,12 @@ import Container from "../components/Container"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
-//import instagramIcon from "../img/instagram.svg"
-//import youtubeIcon from "../img/youtube.svg"
 import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study-post.scss"
+import PageStyles from "./post.module.scss"
 
 function PostPage({ pageContext, data, location }) {
   const categoriesPaths = [
