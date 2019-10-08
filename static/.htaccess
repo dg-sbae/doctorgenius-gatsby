@@ -48,3 +48,20 @@ Redirect 301 /category/practice-management /the-study/practice-management
 Redirect 301 /category/genius-lab /the-study/genius-lab
 Redirect 301 /healthcare-marketing-presentation https://presentation.doctorgenius.com/healthcare-marketing-presentation/
 Redirect 301 /client-success-presentation https://presentation.doctorgenius.com/client-success-presentation
+
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
+  <Filesmatch "\.(html|json)">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </Filesmatch>
+  <Filesmatch "\.(jpg|png|svg|css)">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </Filesmatch>
+  #Match any.js file that is not sw.js
+  <Filesmatch "^(?!sw).*\.js$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </Filesmatch>
+  <Filesmatch "sw.js">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </Filesmatch>
+</IfModule>
