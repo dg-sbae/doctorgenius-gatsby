@@ -230,9 +230,9 @@ const TagsPage = ({ data, pageContext }) => {
                   {data.tagPosts.edges.map(({ node }) => {
                     // This combs the list of categories attached to a post and returns the first one matching our selected Categories
                     // The deprecated categories on dg.com like "DoctorGenius" were causing an error
-                    // const mainCategory = node.categories.find(c =>
-                    //   categoriesPaths.find(d => d.name === c.name)
-                    // )
+                    const mainCategory = node.categories.find(c =>
+                      categoriesPaths.find(d => d.name === c.name)
+                    )
                     //console.log(mainCategory)
                     return (
                       <div className="latest-post" key={node.title}>
@@ -254,10 +254,13 @@ const TagsPage = ({ data, pageContext }) => {
                               <a
                                 href={
                                   // This selects the slug from the categories array matching the mainCategory found above
-                                  postsPath
+                                  postsPath +
+                                  categoriesPaths.find(
+                                    i => i.name === mainCategory.name
+                                  ).slug
                                 }
                               >
-                                Need URL
+                                {mainCategory.name}
                               </a>
                             </p>
                           </div>
