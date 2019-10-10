@@ -233,7 +233,6 @@ const TagsPage = ({ data, pageContext }) => {
                     const mainCategory = node.categories.find(c =>
                       categoriesPaths.find(d => d.name === c.name)
                     )
-                    //console.log(mainCategory)
                     return (
                       <div className="latest-post" key={node.title}>
                         <div className="featured-image-holder">

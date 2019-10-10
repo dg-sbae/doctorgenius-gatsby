@@ -306,39 +306,12 @@ exports.createPages = ({ graphql, actions }) => {
       const tagTemplate = path.resolve("./src/templates/tags.js")
 
       // Create the variables for the pagination pages
-
-      // const numPosts = result.data.allTags.edges.length
-      // const numCategories = result.data.allWordpressCategory.edges.length
-      // const numDigitalMarketingPosts =
-      //   result.data.allCategoryPostsDigitalMarketing.totalCount
-      // const numPracticeManagementPosts =
-      //   result.data.allCategoryPostsPracticeManagement.totalCount
-      // const numGeniusLabPosts =
-      //   result.data.allCategoryPostsGeniusLab.totalCount
       const postsPerPage = 5
-      // const numPages = Math.ceil(numPosts / postsPerPage)
-      // const numCategoryPages = {
-      //   digitalMarketing: Math.ceil(
-      //     numDigitalMarketingPosts / postsPerPage
-      //   ),
-      //   geniusLab: Math.ceil(numGeniusLabPosts / postsPerPage),
-      //   practiceManagement: Math.ceil(
-      //     numPracticeManagementPosts / postsPerPage
-      //   ),
-      // }
-
-      // const numPaginationLinksAll = numPages <= 5 ? numPages : 5
-      // const numPaginationLinksDigitalMarketing =
-      //   numCategoryPages.digitalMarketing <= 5
-      //     ? numCategoryPages.digitalMarketing
-      //     : 5
 
       // We want to create a detailed page for each
       // post node. We'll just use the WordPress Slug for the slug.
       // The Post ID is prefixed with 'POST_'
-      // Create the pagination pages for The Study archive
-
-      // let index = 0
+      // Create the pagination pages for The Study Tag Pages
       _.each(result.data.allTags.edges, edge => {
         let numPosts = edge.node.count
         let numPages = Math.ceil(numPosts / postsPerPage)
@@ -363,8 +336,6 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
-        // console.log(index)
-        // index++
       })
 
       resolve()
