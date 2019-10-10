@@ -292,6 +292,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
                 wordpress_id
                 count
+                name
               }
             }
           }
@@ -358,6 +359,7 @@ exports.createPages = ({ graphql, actions }) => {
               numPaginationLinks: numPaginationLinks,
               currentPage: i + 1,
               slug: edge.node.slug,
+              name: edge.node.name,
             },
           })
         })

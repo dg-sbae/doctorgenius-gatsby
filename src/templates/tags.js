@@ -227,7 +227,7 @@ const TagsPage = ({ data, pageContext }) => {
                     {pageContext.name} Posts
                   </h3>
                   <div className="d-sm-none spacer small solid" />
-                  {data.tag.edges.map(({ node }) => {
+                  {data.tagPosts.edges.map(({ node }) => {
                     // This combs the list of categories attached to a post and returns the first one matching our selected Categories
                     // The deprecated categories on dg.com like "DoctorGenius" were causing an error
                     // const mainCategory = node.categories.find(c =>
@@ -509,7 +509,7 @@ export default TagsPage
 // Note: The graphQL variable here is automagically passed from gatsby-node.js in context
 export const pageQuery = graphql`
   query tagsPageQuery($slug: String, $skip: Int!, $limit: Int!) {
-    tag: allWordpressPost(
+    tagPosts: allWordpressPost(
       filter: { tags: { elemMatch: { slug: { eq: $slug } } } }
       sort: { fields: [date], order: [DESC] }
       limit: $limit
