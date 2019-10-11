@@ -174,11 +174,6 @@ const CategoriesPage = ({ data, pageContext }) => {
         </Helmet>
       )}
 
-      <meta
-        name="description"
-        content="Privacy policy of Doctor Genius located in in Irvine, CA 92606."
-      />
-
       <div className="the-study">
         <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
           <div className="hero">
