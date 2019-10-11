@@ -45,7 +45,7 @@ export default ({ children }) => (
             </ListLinkNoPrefetch>
             <ListLink to="/plans">Plans</ListLink>
             <ListLink to="/company">Company</ListLink>
-            <ListLink to="/the-study">Resources</ListLink>
+            <ListLink to="/blog">Resources</ListLink>
             <ListLink to="/demo">Free Demo</ListLink>
             <ListLinkNoPrefetch to="/contact">Contact</ListLinkNoPrefetch>
             <ExternalLink to="https://portal.doctorgenius.com/login">

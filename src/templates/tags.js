@@ -96,7 +96,7 @@ const TagsPage = ({ data, pageContext }) => {
   const images = data
   //Isolate the blog and categories routes
   //This should be located globally, or the categories and archive page combined
-  const postsPath = "/the-study/"
+  const postsPath = "/blog/"
   const categoriesPaths = [
     {
       name: "Digital Marketing",
@@ -120,16 +120,13 @@ const TagsPage = ({ data, pageContext }) => {
   const isLast = pageContext.currentPage === pageContext.numPages
   const prevPage =
     pageContext.currentPage - 1 === 1
-      ? "/the-study/" + pageContext.slug
-      : "/the-study/" +
+      ? "/blog/" + pageContext.slug
+      : "/blog/" +
         pageContext.slug +
         "/" +
         (pageContext.currentPage - 1).toString()
   const nextPage =
-    "/the-study/" +
-    pageContext.slug +
-    "/" +
-    (pageContext.currentPage + 1).toString()
+    "/blog/" + pageContext.slug + "/" + (pageContext.currentPage + 1).toString()
 
   // Variables used in the pagination loop
   const currentPage = pageContext.currentPage
@@ -260,7 +257,7 @@ const TagsPage = ({ data, pageContext }) => {
                             dangerouslySetInnerHTML={{
                               __html: node.excerpt.replace(
                                 /https:\/\/doctorgenius.com/,
-                                "/the-study"
+                                "/blog"
                               ),
                             }}
                           />
@@ -285,7 +282,7 @@ const TagsPage = ({ data, pageContext }) => {
                         (_, i) => (
                           <Link
                             key={`pagination-number${i + start}`}
-                            to={`/the-study/${pageContext.slug}/${
+                            to={`/blog/${pageContext.slug}/${
                               i + start - 1 === 0 ? "" : "/" + (i + start)
                             }`}
                           >
@@ -363,7 +360,7 @@ const TagsPage = ({ data, pageContext }) => {
                     <div className="row">
                       <div className="col-sm-12">
                         {data.popular.edges.map(({ node }) => (
-                          <a href={`/the-study/${node.slug}`} key={node.title}>
+                          <a href={`/blog/${node.slug}`} key={node.title}>
                             <div className="popular-post">
                               <div className="featured-image-holder">
                                 {
@@ -391,7 +388,7 @@ const TagsPage = ({ data, pageContext }) => {
                                   dangerouslySetInnerHTML={{
                                     __html: node.excerpt.replace(
                                       /https:\/\/doctorgenius.com/,
-                                      "/the-study"
+                                      "/blog"
                                     ),
                                   }}
                                 />

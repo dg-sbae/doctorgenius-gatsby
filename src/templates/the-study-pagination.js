@@ -96,7 +96,7 @@ class ResponsivePostsColumn extends Component {
 const TheStudyPaginationPage = ({ data, pageContext }) => {
   //Isolate the blog and categories routes
   //This should be located globally, or the categories and archive page combined
-  const postsPath = "/the-study/"
+  const postsPath = "/blog/"
   const categoriesPaths = [
     {
       name: "Digital Marketing",
@@ -119,9 +119,9 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
   const isLast = pageContext.currentPage === pageContext.numPages
   const prevPage =
     pageContext.currentPage - 1 === 1
-      ? "/the-study"
-      : "/the-study/" + (pageContext.currentPage - 1).toString()
-  const nextPage = "/the-study/" + (pageContext.currentPage + 1).toString()
+      ? "/blog"
+      : "/blog/" + (pageContext.currentPage - 1).toString()
+  const nextPage = "/blog/" + (pageContext.currentPage + 1).toString()
 
   // Variables used in the pagination loop
   const currentPage = pageContext.currentPage
@@ -280,7 +280,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                       (_, i) => (
                         <Link
                           key={`pagination-number${i + start}`}
-                          to={`/the-study${
+                          to={`/blog${
                             i + start - 1 === 0 ? "" : "/" + (i + start)
                           }`}
                         >
@@ -357,7 +357,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                     <div className="row">
                       <div className="col-sm-12">
                         {data.popular.edges.map(({ node }) => (
-                          <a href={`/the-study/${node.slug}`} key={node.title}>
+                          <a href={`/blog/${node.slug}`} key={node.title}>
                             <div className="popular-post">
                               <div className="featured-image-holder">
                                 {/*console.log(node)*/}
@@ -383,7 +383,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                   dangerouslySetInnerHTML={{
                                     __html: node.excerpt.replace(
                                       /^\//,
-                                      "/the-study"
+                                      "/blog"
                                     ),
                                   }}
                                 />
