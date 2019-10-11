@@ -92,7 +92,7 @@ class ResponsivePostsColumn extends Component {
   }
 }
 
-const CategoriesPage = ({ data, pageContext }) => {
+const TagsPage = ({ data, pageContext }) => {
   const images = data
   //Isolate the blog and categories routes
   //This should be located globally, or the categories and archive page combined
@@ -150,29 +150,13 @@ const CategoriesPage = ({ data, pageContext }) => {
 
   return (
     <DefaultPageLayout>
-      {// Meta description for Genius Lab category
-      pageContext.slug === "genius-lab" && (
+      {
+        // Meta description for Genius Lab category
         <Helmet>
-          <title>Genius Lab Archives - Doctor Genius | Doctor Genius</title>
-          <meta
-            name="description"
-            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-          />
+          <title>{`${pageContext.name}`} - Doctor Genius | Doctor Genius</title>
+          <meta name="description" content="" />
         </Helmet>
-      )}
-
-      {// Meta description for all of ther categories blog pages
-      pageContext.slug !== "genius-lab" && (
-        <Helmet>
-          <title>
-            Practice Management & Digital Marketing Blog | The Study
-          </title>
-          <meta
-            name="description"
-            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-          />
-        </Helmet>
-      )}
+      }
 
       <div className="the-study">
         <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
@@ -227,13 +211,12 @@ const CategoriesPage = ({ data, pageContext }) => {
                     {pageContext.name} Posts
                   </h3>
                   <div className="d-sm-none spacer small solid" />
-                  {data.category.edges.map(({ node }) => {
-                    // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
+                  {data.tagPosts.edges.map(({ node }) => {
+                    // This combs the list of categories attached to a post and returns the first one matching our selected Categories
                     // The deprecated categories on dg.com like "DoctorGenius" were causing an error
                     const mainCategory = node.categories.find(c =>
                       categoriesPaths.find(d => d.name === c.name)
                     )
-                    //console.log(mainCategory)
                     return (
                       <div className="latest-post" key={node.title}>
                         <div className="featured-image-holder">
@@ -296,27 +279,28 @@ const CategoriesPage = ({ data, pageContext }) => {
                     {}
                     {// Loop to create pagination links based on numOfPages
 
-                    Array.from(
-                      { length: pageContext.numPaginationLinks },
-                      (_, i) => (
-                        <Link
-                          key={`pagination-number${i + start}`}
-                          to={`/the-study/${pageContext.slug}/${
-                            i + start - 1 === 0 ? "" : "/" + (i + start)
-                          }`}
-                        >
-                          <p
-                            className={
-                              pageContext.currentPage === i + start
-                                ? "active"
-                                : ""
-                            }
+                    pageContext.numPaginationLinks > 1 &&
+                      Array.from(
+                        { length: pageContext.numPaginationLinks },
+                        (_, i) => (
+                          <Link
+                            key={`pagination-number${i + start}`}
+                            to={`/the-study/${pageContext.slug}/${
+                              i + start - 1 === 0 ? "" : "/" + (i + start)
+                            }`}
                           >
-                            {i + start}
-                          </p>
-                        </Link>
-                      )
-                    )}
+                            <p
+                              className={
+                                pageContext.currentPage === i + start
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              {i + start}
+                            </p>
+                          </Link>
+                        )
+                      )}
                     {// Controls the next button
                     !isLast && (
                       <Link to={nextPage} rel="next">
@@ -507,13 +491,13 @@ const CategoriesPage = ({ data, pageContext }) => {
   )
 }
 
-export default CategoriesPage
+export default TagsPage
 
 // Note: The graphQL variable here is automagically passed from gatsby-node.js in context
 export const pageQuery = graphql`
-  query categoryPageQuery($name: String, $skip: Int!, $limit: Int!) {
-    category: allWordpressPost(
-      filter: { categories: { elemMatch: { name: { eq: $name } } } }
+  query tagsPageQuery($slug: String, $skip: Int!, $limit: Int!) {
+    tagPosts: allWordpressPost(
+      filter: { tags: { elemMatch: { slug: { eq: $slug } } } }
       sort: { fields: [date], order: [DESC] }
       limit: $limit
       skip: $skip
