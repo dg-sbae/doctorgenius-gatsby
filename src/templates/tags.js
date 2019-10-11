@@ -153,9 +153,7 @@ const TagsPage = ({ data, pageContext }) => {
       {
         // Meta description for Genius Lab category
         <Helmet>
-          <title>
-            {`${pageContext.name} Blogs`} - Doctor Genius | Doctor Genius
-          </title>
+          <title>{`${pageContext.name}`} - Doctor Genius | Doctor Genius</title>
           <meta name="description" content="" />
         </Helmet>
       }
