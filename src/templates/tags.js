@@ -281,27 +281,28 @@ const TagsPage = ({ data, pageContext }) => {
                     {}
                     {// Loop to create pagination links based on numOfPages
 
-                    Array.from(
-                      { length: pageContext.numPaginationLinks },
-                      (_, i) => (
-                        <Link
-                          key={`pagination-number${i + start}`}
-                          to={`/the-study/${pageContext.slug}/${
-                            i + start - 1 === 0 ? "" : "/" + (i + start)
-                          }`}
-                        >
-                          <p
-                            className={
-                              pageContext.currentPage === i + start
-                                ? "active"
-                                : ""
-                            }
+                    pageContext.numPaginationLinks > 1 &&
+                      Array.from(
+                        { length: pageContext.numPaginationLinks },
+                        (_, i) => (
+                          <Link
+                            key={`pagination-number${i + start}`}
+                            to={`/the-study/${pageContext.slug}/${
+                              i + start - 1 === 0 ? "" : "/" + (i + start)
+                            }`}
                           >
-                            {i + start}
-                          </p>
-                        </Link>
-                      )
-                    )}
+                            <p
+                              className={
+                                pageContext.currentPage === i + start
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              {i + start}
+                            </p>
+                          </Link>
+                        )
+                      )}
                     {// Controls the next button
                     !isLast && (
                       <Link to={nextPage} rel="next">
