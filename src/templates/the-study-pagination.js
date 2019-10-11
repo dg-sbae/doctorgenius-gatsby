@@ -180,7 +180,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
             <div className="row padded category">
               {categoriesPaths.map(category => (
                 <div className="col-sm-4" key={category.name}>
-                  <a href={postsPath + category.slug}>
+                  <a href={postsPath + category.slug} rel="nofollow">
                     <div className="category-image">
                       <img
                         src={category.image}
@@ -234,6 +234,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                     i => i.name === mainCategory.name
                                   ).slug
                                 }
+                                rel="nofollow"
                               >
                                 {mainCategory.name}
                               </a>
@@ -403,6 +404,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                           <a
                             href={postsPath + category.slug}
                             key={category.name}
+                            rel="nofollow"
                           >
                             <span className="label primary">
                               <p>{category.name}</p>
