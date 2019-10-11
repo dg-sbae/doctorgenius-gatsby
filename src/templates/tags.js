@@ -150,29 +150,15 @@ const TagsPage = ({ data, pageContext }) => {
 
   return (
     <DefaultPageLayout>
-      {// Meta description for Genius Lab category
-      pageContext.slug === "genius-lab" && (
-        <Helmet>
-          <title>Genius Lab Archives - Doctor Genius | Doctor Genius</title>
-          <meta
-            name="description"
-            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-          />
-        </Helmet>
-      )}
-
-      {// Meta description for all of ther categories blog pages
-      pageContext.slug !== "genius-lab" && (
+      {
+        // Meta description for Genius Lab category
         <Helmet>
           <title>
-            Practice Management & Digital Marketing Blog | The Study
+            {`${pageContext.name} Blogs`} - Doctor Genius | Doctor Genius
           </title>
-          <meta
-            name="description"
-            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-          />
+          <meta name="description" content="" />
         </Helmet>
-      )}
+      }
 
       <div className="the-study">
         <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
