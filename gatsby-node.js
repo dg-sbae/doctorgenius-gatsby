@@ -308,16 +308,16 @@ exports.createPages = ({ graphql, actions }) => {
       // Create the variables for the pagination pages
       const postsPerPage = 5
 
-      // We want to create a detailed page for each
-      // post node. We'll just use the WordPress Slug for the slug.
-      // The Post ID is prefixed with 'POST_'
-      // Create the pagination pages for The Study Tag Pages
+      // We want to create a archive page for each tag
+      // The first loop loops through all of the tags
+      // present in WP
       _.each(result.data.allTags.edges, edge => {
         let numPosts = edge.node.count
         let numPages = Math.ceil(numPosts / postsPerPage)
         let numPaginationLinks =
           numPages <= postsPerPage ? numPages : postsPerPage
-
+        // This second loop creates a page for the total number of
+        // pagination pages that are required
         Array.from({ length: numPages }).forEach((_, i) => {
           createPage({
             path:
