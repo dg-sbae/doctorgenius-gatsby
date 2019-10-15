@@ -2,6 +2,13 @@
 
 .termsOfServicePage {
   /* Styles unique to this page component */
+  .gbiTos:before {
+    background-position: initial !important;
+  }
+  .gbiTos:after {
+    background-position: initial !important;
+  }
+
   .hero {
     .accentedParagraph {
       p {
