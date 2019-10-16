@@ -22,38 +22,66 @@ export default props => (
       </Helmet>
       <div className={props["*"]}>
         <div className="main-content">
-          <div className="hero">
+          <div className={PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}
             <Container>
               <div className="row padded panel-row title-and-desc">
                 <div className="col-sm-12">
-                  <div className="header inner-title center">
+                  <div
+                    className={
+                      PageStyles.innerTitle + " header inner-title center"
+                    }
+                  >
                     <h1>Contact Us</h1>
-                    <h3 className="strapline">Have a question? Need help?</h3>
-                    <p className="muted-text">
+                    <h3 className={PageStyles.strapline + " strapline"}>
+                      Have a question? Need help?
+                    </h3>
+                    <p className={PageStyles.mutedText + " muted-text"}>
                       Fill the form below to get directly in contact with our
                       support staff.
                     </p>
                   </div>
                 </div>
 
-                <div className="row panel-row contact-form">
+                <div
+                  className={
+                    PageStyles.contactForm + " row panel-row contact-form"
+                  }
+                >
                   <ContactForm />
                 </div>
               </div>
             </Container>
 
             <Container>
-              <div className="row panel-row info-and-map">
-                <div className="col-sm-12 col-md-12 col-lap-4 company-info valign-wrapper">
-                  <p className="phone-number">
+              <div
+                className={
+                  PageStyles.infoAndMap + " row panel-row info-and-map"
+                }
+              >
+                <div
+                  className={
+                    PageStyles.companyInfo +
+                    " col-sm-12 col-md-12 col-lap-4 company-info valign-wrapper"
+                  }
+                >
+                  <p className={PageStyles.phoneNumber + " phone-number"}>
                     <a href="tel:877-477-2311">(877) 477-2311</a>
                   </p>
-                  <p className="mt-4 contact-address">
+                  <p
+                    className={
+                      PageStyles.contactAddress + " mt-4 contact-address"
+                    }
+                  >
                     2121 Alton Pkwy, Suite 150 <br />
                     Irvine, CA 92606
                   </p>
-                  <button className="mt-4 button nav-button transparent get-directions">
+                  <button
+                    className={
+                      PageStyles.getDirections +
+                      " mt-4 button nav-button transparent get-directions"
+                    }
+                  >
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -62,13 +90,22 @@ export default props => (
                       Get Directions
                     </a>
                   </button>
-                  <p className="mt-4 mb-4 contact-hours">
+                  <p
+                    className={
+                      PageStyles.contactHours + " mt-4 mb-4 contact-hours"
+                    }
+                  >
                     Monday to Friday <br />8 AM to 5 PM PST
                   </p>
                 </div>
-                <div className="col-sm-12 col-md-12 col-lap-7 map-holder">
+                <div
+                  className={
+                    PageStyles.mapHolder +
+                    " col-sm-12 col-md-12 col-lap-7 map-holder"
+                  }
+                >
                   <iframe
-                    className="dg-map"
+                    className={PageStyles.dgMap + " dg-map"}
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d37557.65712271714!2d-117.83748222010603!3d33.69188625008202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9660a06c68c4bd1!2sDoctor+Genius!5e0!3m2!1sen!2sus!4v1563921417170!5m2!1sen!2sus"
                     allowFullScreen
                     height="340"
