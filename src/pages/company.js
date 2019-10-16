@@ -87,14 +87,18 @@ const Company = data => {
         </Helmet>
         <div className="company">
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className="hero">
+            <div className={PageStyles.hero + " hero"}>
               {/* Hero will be a layout component */}
 
               <Container>
                 <div className="valign-wrapper row">
                   <div className="col-sm-12">
-                    <div className="hero-content">
-                      <div className="hero-content accent-block">
+                    <div className={PageStyles.heroContent + " hero-content"}>
+                      <div
+                        className={
+                          PageStyles.heroContent + " hero-content accent-block"
+                        }
+                      >
                         <h1>Doctor Genius</h1>
                         <h2>
                           <span>What </span>we are about
@@ -157,8 +161,8 @@ const Company = data => {
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className="panel">
-                    <div className="icon-wrapper">
+                  <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                       <img
                         className="img-icon"
                         src={webIcon}
@@ -173,8 +177,8 @@ const Company = data => {
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className="panel">
-                    <div className="icon-wrapper">
+                  <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                       <img
                         className="img-icon"
                         src={searchEngineIcon}
@@ -189,8 +193,8 @@ const Company = data => {
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className="panel">
-                    <div className="icon-wrapper">
+                  <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                       <img
                         className="img-icon"
                         src={doctorsIcon}
@@ -205,8 +209,8 @@ const Company = data => {
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className="panel">
-                    <div className="icon-wrapper">
+                  <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                       <img
                         className="img-icon"
                         src={starsIcon}
@@ -296,7 +300,12 @@ const Company = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded tall-top request-demo-footer">
+              <div
+                className={
+                  PageStyles.letsTalkPartnership +
+                  " row padded tall-top lets-talk-partnership"
+                }
+              >
                 <div className="col-sm-10 offset-sm-1  offset-md-0 col-md-6 order-sm-2 order-md-1">
                   <div className="content-block">
                     <div className="innerTitle">
@@ -381,7 +390,7 @@ export const ImageQuery = graphql`
     }
     heroBg: file(relativePath: { eq: "about-us-hero.jpg" }) {
       childImageSharp {
-        fluid(quality: 70) {
+        fluid(quality: 80) {
           ...GatsbyImageSharpFluid
         }
       }
