@@ -30,20 +30,28 @@ const Partnerships = data => {
         </Helmet>
         <div className="partnerships">
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className="hero">
+            <div className={PageStyles.hero + " hero"}>
               {/* Hero will be a layout component */}
 
               <Container>
                 <div className="valign-wrapper row">
                   <div className="col-sm-12">
-                    <div className="hero-content">
-                      <div className="hero-content accent-block">
+                    <div className={PageStyles.heroContent + " hero-content"}>
+                      <div
+                        className={
+                          PageStyles.heroContent + " hero-content accent-block"
+                        }
+                      >
                         <h1>Partnerships</h1>
                         <h2>
                           <span>Being Partners With Us </span>makes it more
                           possible
                         </h2>
-                        <div className="accented-paragraph">
+                        <div
+                          className={
+                            PageStyles.accentedParagraph + " accented-paragraph"
+                          }
+                        >
                           <p>
                             Explore opportunities to establish a value-added
                             partnership with an organization whose central focus
@@ -61,8 +69,13 @@ const Partnerships = data => {
             <Container>
               <div className="row padded">
                 <div className="col-sm-12 col-md-8 col-lg-8">
-                  <div className="content-block">
-                    <div className="inner-title center thin-heading">
+                  <div className={PageStyles.contentBlock + " content-block"}>
+                    <div
+                      className={
+                        PageStyles.thinHeading +
+                        " inner-title center thin-heading"
+                      }
+                    >
                       <h3 className="strapline">Partnerships</h3>
                       <h2 className="underline">
                         <span>
@@ -71,7 +84,11 @@ const Partnerships = data => {
                         </span>
                       </h2>
                     </div>
-                    <div className="accented-paragraph">
+                    <div
+                      className={
+                        PageStyles.accentedParagraph + " accented-paragraph"
+                      }
+                    >
                       <p>
                         By investing in Doctor Genius, you are investing in a
                         partnership with a company in the forefront of the
@@ -85,55 +102,87 @@ const Partnerships = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded panel-row featured-partners-row">
+              <div
+                className={
+                  PageStyles.panelRow +
+                  " " +
+                  PageStyles.featuredPartnersRow +
+                  " row padded panel-row featured-partners-row"
+                }
+              >
                 <div className="col-sm-12">
-                  <div className="content-block">
-                    <div className="inner-title center thin-heading">
+                  <div className={PageStyles.contentBlock + " content-block"}>
+                    <div
+                      className={
+                        PageStyles.thinHeading +
+                        " inner-title center thin-heading"
+                      }
+                    >
                       <h2 className="underline">
                         <b>Featured Partners</b>
                       </h2>
                     </div>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="logo-partnership-item col-sm-6 col-lap-3">
-                    <div className="panel">
-                      <div className="icon-wrapper">
+                <div className={PageStyles.row + " row"}>
+                  <div
+                    className={
+                      PageStyles.logoPartnershipItem +
+                      " logo-partnership-item col-sm-6 col-lap-3"
+                    }
+                  >
+                    <div className={PageStyles.panel + " panel"}>
+                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                         <img
-                          className="img-icon"
+                          className={PageStyles.imgIcon + " img-icon"}
                           src={images.googleLogo.childImageSharp.fixed.src}
                           alt="Google Partner"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="logo-partnership-item col-sm-6 col-lap-3">
-                    <div className="panel">
-                      <div className="icon-wrapper">
+                  <div
+                    className={
+                      PageStyles.logoPartnershipItem +
+                      " logo-partnership-item col-sm-6 col-lap-3"
+                    }
+                  >
+                    <div className={PageStyles.panel + " panel"}>
+                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                         <img
-                          className="img-icon"
+                          className={PageStyles.imgIcon + " img-icon"}
                           src={images.pulseCheckLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner PulseCheck"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="logo-partnership-item col-sm-6 col-lap-3">
-                    <div className="panel">
-                      <div className="icon-wrapper">
+                  <div
+                    className={
+                      PageStyles.logoPartnershipItem +
+                      " logo-partnership-item col-sm-6 col-lap-3"
+                    }
+                  >
+                    <div className={PageStyles.panel + " panel"}>
+                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                         <img
-                          className="img-icon"
+                          className={PageStyles.imgIcon + " img-icon"}
                           src={images.picisLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner Picis"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="logo-partnership-item col-sm-6 col-lap-3">
-                    <div className="panel">
-                      <div className="icon-wrapper">
+                  <div
+                    className={
+                      PageStyles.logoPartnershipItem +
+                      " logo-partnership-item col-sm-6 col-lap-3"
+                    }
+                  >
+                    <div className={PageStyles.panel + " panel"}>
+                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                         <img
-                          className="img-icon"
+                          className={PageStyles.imgIcon + " img-icon"}
                           src={images.boaLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner Bank of America"
                         />
@@ -141,45 +190,65 @@ const Partnerships = data => {
                     </div>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="logo-partnership-item col-sm-6 col-lap-3">
-                    <div className="panel">
-                      <div className="icon-wrapper">
+                <div className={PageStyles.row + " row"}>
+                  <div
+                    className={
+                      PageStyles.logoPartnershipItem +
+                      " logo-partnership-item col-sm-6 col-lap-3"
+                    }
+                  >
+                    <div className={PageStyles.panel + " panel"}>
+                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                         <img
-                          className="img-icon"
+                          className={PageStyles.imgIcon + " img-icon"}
                           src={images.pattersonLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner Patterson Companies, Inc."
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="logo-partnership-item col-sm-6 col-lap-3">
-                    <div className="panel">
-                      <div className="icon-wrapper">
+                  <div
+                    className={
+                      PageStyles.logoPartnershipItem +
+                      " logo-partnership-item col-sm-6 col-lap-3"
+                    }
+                  >
+                    <div className={PageStyles.panel + " panel"}>
+                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                         <img
-                          className="img-icon"
+                          className={PageStyles.imgIcon + " img-icon"}
                           src={images.roiLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner Roi Dental Coaching"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="logo-partnership-item col-sm-6 col-lap-3">
-                    <div className="panel">
-                      <div className="icon-wrapper">
+                  <div
+                    className={
+                      PageStyles.logoPartnershipItem +
+                      " logo-partnership-item col-sm-6 col-lap-3"
+                    }
+                  >
+                    <div className={PageStyles.panel + " panel"}>
+                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                         <img
-                          className="img-icon"
+                          className={PageStyles.imgIcon + " img-icon"}
                           src={images.hrHealthLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner HR for Health"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="logo-partnership-item col-sm-6 col-lap-3">
-                    <div className="panel">
-                      <div className="icon-wrapper">
+                  <div
+                    className={
+                      PageStyles.logoPartnershipItem +
+                      " logo-partnership-item col-sm-6 col-lap-3"
+                    }
+                  >
+                    <div className={PageStyles.panel + " panel"}>
+                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
                         <img
-                          className="img-icon"
+                          className={PageStyles.imgIcon + " img-icon"}
                           src={images.jllLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner JLL"
                         />
@@ -190,16 +259,25 @@ const Partnerships = data => {
               </div>
 
               {/* Begin Demo Footer */}
-              <div className="row padded tall-top request-demo-footer">
+              <div
+                className={
+                  PageStyles.requestDemoFooter +
+                  " row padded tall-top request-demo-footer"
+                }
+              >
                 <div className="col-md-1" />
                 <div className="col-sm-9 col-md-5">
-                  <div className="content-block">
+                  <div className={PageStyles.contentBlock + " content-block"}>
                     <div className="inner-title">
                       <h2>
                         Start your <span>success</span> with Doctor Genius
                         today!
                       </h2>
-                      <div className="accented-paragraph">
+                      <div
+                        className={
+                          PageStyles.accentedParagraph + " accented-paragraph"
+                        }
+                      >
                         <p>
                           The Genius platform makes every part of your company
                           process more efficient. Our support team is very
@@ -221,9 +299,14 @@ const Partnerships = data => {
               </div>
               {/* End Demo Footer */}
 
-              <div className="row padded tall-top request-demo-footer">
+              <div
+                className={
+                  PageStyles.requestDemoFooter +
+                  " row padded tall-top request-demo-footer"
+                }
+              >
                 <div className="col-sm-8  order-sm-2 col-md-6 offset-md-0 order-md-1">
-                  <div className="content-block">
+                  <div className={PageStyles.contentBlock + " content-block"}>
                     <div className="innerTitle">
                       <h2 className="font-weight-normal">
                         Let's{" "}
@@ -231,7 +314,11 @@ const Partnerships = data => {
                           Talk Partnership
                         </span>
                       </h2>
-                      <div className="accented-paragraph">
+                      <div
+                        className={
+                          PageStyles.accentedParagraph + " accented-paragraph"
+                        }
+                      >
                         <p>
                           We are based in Irvine, California, USA. Dental Genius
                           has consistent 5 Star Ratings on Google. We employ and

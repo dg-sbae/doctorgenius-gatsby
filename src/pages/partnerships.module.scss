@@ -2,4 +2,84 @@
 
 .partnershipsPage {
   /* Styles unique to this page component */
+  .hero {
+    h2 {
+      margin-bottom: 20px;
+    }
+    .heroContent {
+      @include media(">=tablet") {
+        width: 490px;
+        height: 300px;
+      }
+    }
+  }
+  .panelRow {
+    .row {
+      .logoPartnershipItem:nth-child(odd) {
+        .panel {
+          @include media("<=laptop") {
+            align-items: flex-end;
+          }
+          @include media("<=phone") {
+            align-items: center;
+          }
+        }
+      }
+      .logoPartnershipItem:nth-child(even) {
+        .panel {
+          @include media("<=laptop") {
+            align-items: flex-start;
+          }
+          @include media("<=phone") {
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  .panel {
+    margin: 0 0 20px 0;
+
+    .iconWrapper {
+      height: 150px;
+      max-width: 200px;
+      width: 100%;
+      // margin-bottom: 30px;
+      .imgIcon {
+        max-width: 100%;
+      }
+    }
+  }
+  .thinHeading {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  .contentBlock .accentedParagraph p {
+    margin-bottom: 2rem;
+  }
+  .contentBlock {
+    .thinHeading {
+      @include media("<=tablet") {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+      @include media("<=phone") {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+  }
+  .requestDemoFooter {
+    > div {
+      @include media("<=tablet") {
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  .featuredPartnersRow {
+    .row {
+      width: 100%;
+    }
+  }
 }
