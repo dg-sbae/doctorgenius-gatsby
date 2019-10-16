@@ -23,21 +23,29 @@ const EcAup = data => {
         <div className="ec-aup">
           <BackgroundImage
             fluid={data.data.heroBg.childImageSharp.fluid}
-            className="gbi-ecaup"
+            className={PageStyles.gbiEcaup + " gbi-ecaup"}
           >
-            <div className="hero">
+            <div className={PageStyles.hero + " hero"}>
               {/* Hero will be a layout component */}
               <Container>
                 <div className="valign-wrapper row">
                   <div className="col-sm-12">
                     <div className="hero-content">
-                      <div className="hero-content accent-block">
+                      <div
+                        className={
+                          PageStyles.accentBlock + " hero-content accent-block"
+                        }
+                      >
                         <h1>EC AUP</h1>
                         <h2>
                           <span>Electronic Communications and</span> Acceptable
                           Use Policy
                         </h2>
-                        <div className="accented-paragraph">
+                        <div
+                          className={
+                            PageStyles.accentedParagraph + " accented-paragraph"
+                          }
+                        >
                           <p>
                             Effective Date:
                             <br /> October 26, 2018
@@ -105,7 +113,7 @@ const EcAup = data => {
                           consent of such Users, in writing (where “we” and
                           “our” and “us” means Customer):
                         </p>
-                        <ol className="alpha-list">
+                        <ol className={PageStyles.alphaList + " alpha-list"}>
                           <li>
                             To receive electronically, by email or text message,
                             communications (collectively, ”Communications”) that
