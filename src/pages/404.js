@@ -25,12 +25,12 @@ class DG404Page extends React.Component {
             <div className={`${this.props["*"]} page-404`}>
               <BackgroundImage
                 fluid={data.heroBg.childImageSharp.fluid}
-                className="gbi-404"
+                className={PageStyles.gbi404 + " gbi-404"}
               >
-                <div className="hero">
+                <div className={PageStyles.hero + " hero"}>
                   {/* Hero will be a layout component */}
 
-                  <Container>
+                  <div className={PageStyles.riseUp + " container-fluid"}>
                     <div className="valign-wrapper row">
                       <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                         <div className="row">
@@ -46,7 +46,12 @@ class DG404Page extends React.Component {
                               <Link to="/">Return to homepage</Link>
                             </p>
                             <div class="row">
-                              <div class="col-sm-12 text-center sm-404">
+                              <div
+                                class={
+                                  PageStyles.sm404 +
+                                  " col-sm-12 text-center sm-404"
+                                }
+                              >
                                 <a href="https://www.facebook.com/DoctorGeniusMarketing">
                                   <img
                                     src={
@@ -90,7 +95,7 @@ class DG404Page extends React.Component {
                       </div>
                       <div className="col-sm-6" />
                     </div>
-                  </Container>
+                  </div>
                 </div>
               </BackgroundImage>
               {/*<Main>
