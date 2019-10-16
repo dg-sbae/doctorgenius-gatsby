@@ -12,27 +12,27 @@ import PageStyles from "./termsofservice.module.scss"
 
 const TermsOfService = data => {
   return (
-    <div className={PageStyles.TermsOfServicePage}>
+    <div className={PageStyles.termsOfServicePage}>
       <DefaultPageLayout location="termsofservice">
         <Helmet>
           <title>
           Terms Of Service Doctor Genius in Irvine, CA 92606
           </title>
-          <meta name="description" content="Terms Of Service of Doctor Genius located in in Irvine, CA 92606." />
+          <meta name="description" content="Terms Of Service of Doctor Genius located in Irvine, CA 92606." />
         </Helmet>
         <div className="termsofservice">
-          <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className="gbi-tos">
-          <div className="hero">
+          <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiTos + " gbi-tos"}>
+          <div className={PageStyles.hero + " hero"}>
             <Container>
               <div className="valign-wrapper row">
                 <div className="col-sm-12">
-                  <div className="hero-content">
-                    <div className="hero-content accent-block">
+                  <div className={PageStyles.heroContent + " hero-content"}>
+                    <div className={PageStyles.heroContent + " hero-content accent-block"}>
                       <h1>Terms Of Service</h1>
                       <h2>
                         <span>Terms </span>Of Service
                       </h2>
-                      <div className="accented-paragraph">
+                      <div className={PageStyles.accentedParagraph + " accented-paragraph"}>
                         <p>
                           Effective Date:
                           <br /> October 26, 2018
@@ -84,7 +84,7 @@ const TermsOfService = data => {
 
                     <ol>
                       <li>
-                        <h4><span class="terms-blue">DEFINITIONS</span> - The following capitalized
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>DEFINITIONS</span> - The following capitalized
                         terms will have the following meanings whenever used in this Agreement.</h4>
                         <p>
                           <b>1.1 “<u>BAA</u>”</b> means the Business Associate Agreement posted at&nbsp;
@@ -140,12 +140,12 @@ const TermsOfService = data => {
 
                       <li>
                         <h4>
-                          <span class="terms-blue">THE SERVICE</span>
+                          <span class={PageStyles.termsBlue + " terms-blue"}>THE SERVICE</span>
                         </h4>
                         <p>
                           <b>2.1 <u>General</u>:</b> During the Term, Company will use commercially
                           reasonable efforts to provide Customer the Services pursuant to:
-                          <ol class="terms-list-alpha">
+                          <ol class={PageStyles.termsListAlpha + " terms-list-alpha"}>
                             <li>the terms of any outstanding Order.</li>
                             <li>these Terms of Service, including the terms of any policy and agreement
                               referenced herein, as the same may be updated from time to time as provided
@@ -167,7 +167,7 @@ const TermsOfService = data => {
                           for your review within a reasonable time after you approve of the following
                           elements, which we will discuss with your designated representative prior
                           to and during development:
-                          <ol class="terms-list-alpha">
+                          <ol class={PageStyles.termsListAlpha + " terms-list-alpha"}>
                             <li>Conceptual Framework Elements</li>
                             <li>Keywords</li>
                             <li>Domain Name</li>
@@ -234,7 +234,7 @@ const TermsOfService = data => {
                           at any time, to deny or prevent use of any Customer Data if and to the extent
                           the same fails to meet the Uniform Advertising Specifications of Doctor Genius.
                           “Uniform Advertising Specifications” means, with respect to Customer Data, it:
-                          <ol class="terms-list-alpha">
+                          <ol class={PageStyles.termsListAlpha + " terms-list-alpha"}>
                             <li>conforms to the technical requirements of Doctor Genius</li>
                             <li>is legal, true and not misleading and harmful or offensive because it is
                               defamatory, obscene, prurient, abusive, invasive of privacy, or otherwise is
@@ -253,7 +253,7 @@ const TermsOfService = data => {
                           Genius then in effect. Access requires that Customer establish password which Customer
                           agrees to safeguard against unauthorized use. Customer may authorize its employees or
                           subcontractors to use the Dashboard on its behalf provided:
-                          <ol class="terms-list-alpha">
+                          <ol class={PageStyles.termsListAlpha + " terms-list-alpha"}>
                             <li>Customer is and hereby agrees to be responsible for the actions of persons to
                               whom it provides the password and authorizes to access the Dashboard and</li>
                             <li>each such person agrees to be bound all restrictions contained or referenced
@@ -304,7 +304,7 @@ const TermsOfService = data => {
                       </li>
 
                       <li>
-                        <h4><span class="terms-blue">CUSTOMER DATA & PRIVACY</span></h4>
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>CUSTOMER DATA & PRIVACY</span></h4>
                         <p>
                           <b>3.1 <u>Use of Customer Data</u>:</b> Unless it receives Customer’s prior written
                           consent, Company: (a) will not access, process, or otherwise use the Services or
@@ -354,7 +354,7 @@ const TermsOfService = data => {
                       </li>
 
                       <li>
-                        <h4><span class="terms-blue">CUSTOMER’S OBLIGATIONS & RESTRICTIONS </span></h4>
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>CUSTOMER’S OBLIGATIONS & RESTRICTIONS </span></h4>
                         <p>
                           <b>4.1 <u>Timely Cooperation</u>: </b> Receipt end enjoyment of the full benefits
                           of the Service requires your cooperation, approval, transfer of DNS, adherence
@@ -399,7 +399,7 @@ const TermsOfService = data => {
                       </li>
 
                       <li>
-                        <h4><span class="terms-blue">IP RIGHTS & FEEDBACK</span></h4>
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>IP RIGHTS & FEEDBACK</span></h4>
 
                         <p>
                           <b>5.1 <u>Company’s IP Rights</u>:</b> Company retains all right, title, and interest
@@ -443,7 +443,7 @@ const TermsOfService = data => {
                       </li>
 
                       <li>
-                        <h4><span class="terms-blue">CONFIDENTIAL INFORMATION:</span></h4>
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>CONFIDENTIAL INFORMATION:</span></h4>
                           <p>“Confidential Information” refers
                           to the following items either party discloses to the other: (a) any document either party marks
                           “Confidential”; (b) any information either party orally designates as “Confidential” at the
@@ -501,7 +501,7 @@ const TermsOfService = data => {
                             <b>6.5 <u>Exception & Immunity</u>:</b> Pursuant to the Defend Trade Secrets Act of 2016,
                             18 USC Section 1833(b), both parties acknowledge that, notwithstanding the foregoing or
                             any other provision of this Agreement:
-                            <ol class="terms-list-alpha">
+                            <ol class={PageStyles.termsListAlpha + " terms-list-alpha"}>
                               <li><b>Immunity:</b> An individual shall not be held civilly liable under any Federal or
                               State trade secret law for the disclosure of a trade secret that: (A) is made (i) in confidence
                               to a Federal, State, or local government official, either directly or indirectly, or to an
@@ -518,7 +518,7 @@ const TermsOfService = data => {
                       </li>
 
                       <li>
-                        <h4><span class="terms-blue">REPRESENTATIONS & WARRANTIES</span></h4>
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>REPRESENTATIONS & WARRANTIES</span></h4>
 
                         <p>
                           <b>7.1 <u>From Company</u>:</b> Company represents and warrants that it is the owner Company IP or
@@ -572,7 +572,7 @@ const TermsOfService = data => {
                       </li>
 
                       <li>
-                        <h4><span class="terms-blue">INDEMNIFICATION:</span></h4>
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>INDEMNIFICATION:</span></h4>
                         <p>Customer will defend, indemnify, and hold harmless Company
                           and the Company Associates (as defined below) against any <b>“Indemnified Claim,”</b> meaning any third party claim,
                           suit, or proceeding arising out of or related to Customer’s alleged or actual use of, misuse of, or failure to
@@ -593,7 +593,7 @@ const TermsOfService = data => {
                       </li>
 
                       <li>
-                        <h4><span class="terms-blue">LIMITATION OF LIABILITY</span></h4>
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>LIMITATION OF LIABILITY</span></h4>
 
                         <p>
                           <b>9.1 <u>Exclusion of Consequential Damages</u>:</b> IN NO EVENT WILL COMPANY BE LIABLE TO CUSTOMER FOR ANY
@@ -614,7 +614,7 @@ const TermsOfService = data => {
                       </li>
 
                       <li>
-                        <h4><span class="terms-blue">Term & Termination</span></h4>
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>Term & Termination</span></h4>
 
                         <p>
                           <b>10.1 <u>Term</u>:</b> The Term of Service commence on the Effective Date (as defined in the Order) and continue
@@ -646,7 +646,7 @@ const TermsOfService = data => {
                       </li>
 
                       <li>
-                        <h4><span class="terms-blue">MISCELLANEOUS</span></h4>
+                        <h4><span class={PageStyles.termsBlue + " terms-blue"}>MISCELLANEOUS</span></h4>
                         <p>
                           <b>11.1 <u>Independent Contractors</u>:</b> The parties are independent contractors and will so represent
                           themselves in all regards. Neither party is the agent of the other, and neither may make commitments on
