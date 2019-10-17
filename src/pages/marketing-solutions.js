@@ -38,13 +38,17 @@ const MarketingSolutions = data => {
         </Helmet>
         <div className="marketing-solutions">
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className="hero">
+            <div className={PageStyles.hero + " hero"}>
               {/* Hero will be a layout component */}
 
               <Container>
                 <div className="valign-wrapper row">
                   <div className="col-sm-12">
-                    <div className="hero-content accent-block">
+                    <div
+                      className={
+                        PageStyles.heroContent + " hero-content accent-block"
+                      }
+                    >
                       <h1>Marketing Solutions</h1>
                       <h2>
                         <span>Predictable</span> Practice Growth Solution
@@ -186,7 +190,10 @@ const MarketingSolutions = data => {
                         .fluid
                     }
                     alt="Ligthhouse Page Speed Score"
-                    className="img-responsive blur-bleed lighthouse-image"
+                    className={
+                      PageStyles.lighthouseImage +
+                      " img-responsive blur-bleed lighthouse-image"
+                    }
                   />
                 </div>
               </div>
@@ -232,7 +239,10 @@ const MarketingSolutions = data => {
               <div className="full-bleed-wrapper pad-md">
                 <BackgroundImage
                   fluid={images.OurClientsFullBleed.childImageSharp.fluid}
-                  className="full-bleed check-plans-background-image flipped"
+                  className={
+                    PageStyles.checkPlansBackgroundImage +
+                    " full-bleed check-plans-background-image flipped"
+                  }
                 ></BackgroundImage>
                 <div className="full-bleed-content-wrapper">
                   <div className="row">
