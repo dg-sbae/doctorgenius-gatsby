@@ -17,20 +17,33 @@ export default props => (
       </Helmet>
       <Main>
         <div className={props["*"]}>
-          <div className="hero">
+          <div className={PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}
             <Container>
-              <div className="row panel-row title-and-desc">
+              <div
+                className={
+                  PageStyles.titleAndDesc + " row panel-row title-and-desc"
+                }
+              >
                 <div className="col-sm-12">
                   <div className="header inner-title center">
                     <h1>
-                      Thank you for <br className="line-break-header" /> your
-                      submission!
+                      Thank you for{" "}
+                      <br
+                        className={
+                          PageStyles.lineBreakHeader + " line-break-header"
+                        }
+                      />{" "}
+                      your submission!
                     </h1>
-                    <p className="muted-text">
+                    <p className={PageStyles.mutedText + " muted-text"}>
                       You’ll receive an email confirmation shortly. In the
                       meantime, feel free to check out
-                      <br className="line-break-desc" />
+                      <br
+                        className={
+                          PageStyles.lineBreakDesc + " line-break-desc"
+                        }
+                      />
                       our new blog,{" "}
                       <span className="strapline">
                         <Link to="/the-study/">The Study</Link>
@@ -39,7 +52,12 @@ export default props => (
                     </p>
                     <div className="row">
                       <div className="col-sm-8 col-md-4">
-                        <button className="button nav-button return-home">
+                        <button
+                          className={
+                            PageStyles.returnHome +
+                            " button nav-button return-home"
+                          }
+                        >
                           <Link to="/">Return Home</Link>
                         </button>
                       </div>
@@ -49,16 +67,34 @@ export default props => (
               </div>
             </Container>
             <Container>
-              <div className="row panel-row info-and-map">
-                <div className="col-sm-12 col-md-12 col-lap-4 company-info valign-wrapper">
-                  <p className="phone-number">
+              <div
+                className={
+                  PageStyles.infoAndMap + " row panel-row info-and-map"
+                }
+              >
+                <div
+                  className={
+                    PageStyles.companyInfo +
+                    " col-sm-12 col-md-12 col-lap-4 company-info valign-wrapper"
+                  }
+                >
+                  <p className={PageStyles.phoneNumber + " phone-number"}>
                     <a href="tel:877-477-2311">(877) 477-2311</a>
                   </p>
-                  <p className="mt-4 contact-address">
+                  <p
+                    className={
+                      PageStyles.contactAddress + " mt-4 contact-address"
+                    }
+                  >
                     2121 Alton Pkwy, Suite 150 <br />
                     Irvine, CA 92606
                   </p>
-                  <button className="mt-4 button nav-button transparent get-directions">
+                  <button
+                    className={
+                      PageStyles.getDirections +
+                      " mt-4 button nav-button transparent get-directions"
+                    }
+                  >
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -67,13 +103,22 @@ export default props => (
                       Get Directions
                     </a>
                   </button>
-                  <p className="mt-4 mb-4 contact-hours">
+                  <p
+                    className={
+                      PageStyles.contactHours + " mt-4 mb-4 contact-hours"
+                    }
+                  >
                     Monday to Friday <br />8 AM to 5 PM PST
                   </p>
                 </div>
-                <div className="col-sm-12 col-md-12 col-lap-7 map-holder">
+                <div
+                  className={
+                    PageStyles.mapHolder +
+                    " col-sm-12 col-md-12 col-lap-7 map-holder"
+                  }
+                >
                   <iframe
-                    className="dg-map"
+                    className={PageStyles.dgMap + " dg-map"}
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d37557.65712271714!2d-117.83748222010603!3d33.69188625008202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9660a06c68c4bd1!2sDoctor+Genius!5e0!3m2!1sen!2sus!4v1563921417170!5m2!1sen!2sus"
                     allowFullScreen
                     height="340"

@@ -40,7 +40,6 @@ Redirect 301 /cda/ /
 #New 301s to support old content from WP dg.com
 #Redirect 302 /events /
 Redirect 301 /portal /
-Redirect 301 /confirmation /
 Redirect 301 /thank-you /
 Redirect 301 /ce /
 Redirect 301 /category/digital-marketing /the-study/digital-marketing
