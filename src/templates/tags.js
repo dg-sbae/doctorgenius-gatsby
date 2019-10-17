@@ -152,6 +152,7 @@ const TagsPage = ({ data, pageContext }) => {
         <Helmet>
           <title>{`${pageContext.name}`} - Doctor Genius | Doctor Genius</title>
           <meta name="description" content="" />
+          <meta name="robots" content="noindex,nofollow" />
         </Helmet>
       }
 

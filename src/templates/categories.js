@@ -155,6 +155,7 @@ const CategoriesPage = ({ data, pageContext }) => {
             name="description"
             content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
           />
+          <meta name="robots" content="noindex,nofollow" />
         </Helmet>
       )}
 
