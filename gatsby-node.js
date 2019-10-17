@@ -158,7 +158,7 @@ exports.createPages = ({ graphql, actions }) => {
       // The Post ID is prefixed with 'POST_'
       _.each(result.data.latestPosts.edges, edge => {
         createPage({
-          path: `/the-study/${edge.node.slug}/`,
+          path: `/blog/${edge.node.slug}/`,
           component: slash(postTemplate),
           context: {
             currentNode: edge.node,
@@ -174,7 +174,7 @@ exports.createPages = ({ graphql, actions }) => {
       // Create the pagination pages for The Study archive
       Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
-          path: i === 0 ? `/the-study` : `/the-study/${i + 1}`,
+          path: i === 0 ? `/blog` : `/blog/${i + 1}`,
           component: slash(latestPaginationTemplate),
           context: {
             limit: postsPerPage,
@@ -189,7 +189,7 @@ exports.createPages = ({ graphql, actions }) => {
       // Create Category Pages
       // _.each(result.data.allWordpressCategory.edges, edge => {
       //   createPage({
-      //     path: `/the-study/${edge.node.slug}`,
+      //     path: `/blog/${edge.node.slug}`,
       //     component: slash(categoryTemplate),
       //     context: edge.node,
       //   })
@@ -201,8 +201,8 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path:
               i === 0
-                ? `/the-study/digital-marketing`
-                : `/the-study/digital-marketing/${i + 1}`,
+                ? `/blog/digital-marketing`
+                : `/blog/digital-marketing/${i + 1}`,
             component: slash(categoryTemplate),
             context: {
               limit: postsPerPage,
@@ -220,10 +220,7 @@ exports.createPages = ({ graphql, actions }) => {
       // Create all of the pagination pages for Genius Lab Category
       Array.from({ length: numCategoryPages.geniusLab }).forEach((_, i) => {
         createPage({
-          path:
-            i === 0
-              ? `/the-study/genius-lab`
-              : `/the-study/genius-lab/${i + 1}`,
+          path: i === 0 ? `/blog/genius-lab` : `/blog/genius-lab/${i + 1}`,
           component: slash(categoryTemplate),
           context: {
             limit: postsPerPage,
@@ -243,8 +240,8 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path:
               i === 0
-                ? `/the-study/practice-management`
-                : `/the-study/practice-management/${i + 1}`,
+                ? `/blog/practice-management`
+                : `/blog/practice-management/${i + 1}`,
             component: slash(categoryTemplate),
             context: {
               limit: postsPerPage,
@@ -263,8 +260,8 @@ exports.createPages = ({ graphql, actions }) => {
       //   createPage({
       //     path:
       //       i === 0
-      //         ? `/the-study/${edge.node.slug}`
-      //         : `/the-study/${edge.node.slug}/${i + 1}`,
+      //         ? `/blog/${edge.node.slug}`
+      //         : `/blog/${edge.node.slug}/${i + 1}`,
       //     component: slash(categoryTemplate),
       //     context: {
       //       edgeNode: edge.node,
@@ -322,8 +319,8 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path:
               i === 0
-                ? `/the-study/${edge.node.slug}`
-                : `/the-study/${edge.node.slug}/${i + 1}`,
+                ? `/blog/${edge.node.slug}`
+                : `/blog/${edge.node.slug}/${i + 1}`,
             component: slash(tagTemplate),
             context: {
               limit: postsPerPage,
