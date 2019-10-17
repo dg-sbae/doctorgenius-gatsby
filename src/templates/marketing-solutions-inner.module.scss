@@ -1,4 +1,31 @@
 @import "../styles/_site-variables.scss";
 
 .marketingSolutionsInnerPage {
+  .heroContent {
+    @include media(">=tablet") {
+      width: 492px;
+      height: 330px;
+      p {
+        width: 90%;
+      }
+    }
+  }
+
+  .iconStrapline {
+    img {
+      max-width: 25px;
+    }
+    p {
+      color: $primary;
+      display: inline;
+    }
+    & + .innerTitle {
+      h2 {
+        margin-bottom: 10px;
+      }
+      & + .accentedParagraph p {
+        color: #797979;
+      }
+    }
+  }
 }

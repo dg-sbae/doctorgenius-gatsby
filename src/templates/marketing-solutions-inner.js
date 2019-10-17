@@ -43,7 +43,11 @@ export default props => {
               <Container>
                 <div className="valign-wrapper row">
                   <div className="col-sm-12">
-                    <div className="hero-content accent-block">
+                    <div
+                      className={
+                        PageStyles.heroContent + " hero-content accent-block"
+                      }
+                    >
                       <h1>{pageTitle}</h1>
                       <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
                       <div className="accented-paragraph">
@@ -201,7 +205,9 @@ export default props => {
                     }
                   >
                     <div className="content-block">
-                      <div className="icon-strapline">
+                      <div
+                        className={PageStyles.iconStrapline + " icon-strapline"}
+                      >
                         <img
                           src={row.content.icon.url}
                           className="link-icon"
@@ -213,14 +219,18 @@ export default props => {
                           }}
                         />
                       </div>
-                      <div className="inner-title">
+                      <div className={PageStyles.innerTitle + " inner-title"}>
                         <h2
                           dangerouslySetInnerHTML={{
                             __html: row.content.innerTitle,
                           }}
                         />
                       </div>
-                      <div className="accented-paragraph">
+                      <div
+                        className={
+                          PageStyles.accentedParagraph + " accented-paragraph"
+                        }
+                      >
                         <p
                           className="s-thin"
                           dangerouslySetInnerHTML={{
