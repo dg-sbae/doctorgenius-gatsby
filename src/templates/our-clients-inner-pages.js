@@ -51,16 +51,24 @@ export default props => {
         </Helmet>
         <div className={"our-clients-inner " + currentPage}>
           <BackgroundImage fluid={backgroundImage}>
-            <div className="hero">
+            <div className={PageStyles.hero + " hero"}>
               {/* Hero will be a layout component */}
 
               <Container>
                 <div className="valign-wrapper row">
                   <div className="col-sm-12">
-                    <div className="hero-content accent-block">
+                    <div
+                      className={
+                        PageStyles.heroContent + " hero-content accent-block"
+                      }
+                    >
                       <h1>{pageTitle}</h1>
                       <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
-                      <div className="accented-paragraph">
+                      <div
+                        className={
+                          PageStyles.accentedParagraph + " accented-paragraph"
+                        }
+                      >
                         <p>{pageIntro}</p>
                       </div>
                     </div>
@@ -83,7 +91,9 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/our-clients/dental-practices">
                             <img
                               className="img-icon"
@@ -101,7 +111,9 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/our-clients/urgent-care-clinics">
                             <img
                               className="img-icon"
@@ -119,7 +131,9 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/our-clients/chiropractor-practices">
                             <img
                               className="img-icon"
@@ -137,7 +151,9 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/our-clients/cosmetic-surgeons">
                             <img
                               className="img-icon"
@@ -155,7 +171,9 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/our-clients/healthcare-marketing">
                             <img
                               className="img-icon"
@@ -181,8 +199,13 @@ export default props => {
               {/* Begin main block of text */}
               <div className="row padded">
                 <div className="col-sm-12 col-md-10 col-lg-10">
-                  <div className="content-block">
-                    <div className="inner-title center thin-heading">
+                  <div className={PageStyles.contentBlock + " content-block"}>
+                    <div
+                      className={
+                        PageStyles.thinHeading +
+                        " inner-title center thin-heading"
+                      }
+                    >
                       <h3 className="strapline">
                         {contentParagraphBlock.heading.strapline}
                       </h3>
@@ -194,7 +217,9 @@ export default props => {
                       />
                     </div>
                     <div
-                      className="accented-paragraph"
+                      className={
+                        PageStyles.accentedParagraph + " accented-paragraph"
+                      }
                       dangerouslySetInnerHTML={{
                         __html: contentParagraphBlock.paragraphBlock,
                       }}
@@ -207,38 +232,77 @@ export default props => {
               {isCaseStudy && <div className="spacer solid trim" />}
               {isCaseStudy && (
                 <div className="row padded short-top">
-                  <div className="col-sm-12 col-md-7 col-lg-7 order-sm-2 order-md-1 case-study-container">
-                    <div className="inner-title center">
+                  <div
+                    className={
+                      PageStyles.caseStudyContainer +
+                      " col-sm-12 col-md-7 col-lg-7 order-sm-2 order-md-1 case-study-container"
+                    }
+                  >
+                    <div
+                      className={PageStyles.innerTitle + " inner-title center"}
+                    >
                       <h3 className="m-0">Case Study: Titan Dental</h3>
-                      <div className="subtitle muted">The first 6 months</div>
+                      <div className={PageStyles.subtitle + " subtitle muted"}>
+                        The first 6 months
+                      </div>
                     </div>
-                    <div className="case-study-table">
-                      <div className="case-study-item">
-                        <p className="callout">1,125%</p>
+                    <div
+                      className={
+                        PageStyles.caseStudyTable + " case-study-table"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout + " callout"}>
+                          1,125%
+                        </p>
                         <p>Increase in Google First-Page Revenue</p>
                       </div>
-                      <div className="case-study-item">
-                        <p className="callout">100%</p>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout + " callout"}>100%</p>
                         <p>Increase in Revenue</p>
                       </div>
-                      <div className="case-study-item">
-                        <p className="callout">60%</p>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout + " callout"}>60%</p>
                         <p>Growth in organic Search Traffic</p>
                       </div>
-                      <div className="case-study-item">
-                        <p className="callout">500%</p>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout + " callout"}>500%</p>
                         <p>Growth in Reviews Across the Web</p>
                       </div>
-                      <div className="case-study-item">
-                        <p className="callout">200%</p>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout + " callout"}>200%</p>
                         <p>New Patient Appointments</p>
                       </div>
-                      <div className="case-study-item">
-                        <p className="callout">88%</p>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout + " callout"}>88%</p>
                         <p>Increase in New Patient Calls!</p>
                       </div>
                     </div>
-                    <div className="center pad-md">
+                    <div className={PageStyles.padMd + " center pad-md"}>
                       <a href="/case-study" className="link-with-icon">
                         <img
                           src={rightArrowBlue}
@@ -249,7 +313,12 @@ export default props => {
                       </a>
                     </div>
                   </div>
-                  <div className="col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col">
+                  <div
+                    className={
+                      PageStyles.imgCol +
+                      " col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col"
+                    }
+                  >
                     <Img
                       fluid={caseStudyImage}
                       className="img-responsive blur-bleed"
@@ -261,20 +330,30 @@ export default props => {
 
               {/* End split page content */}
               {/* Begin CTA banner */}
-              <div className="full-bleed-wrapper pad-md">
+              <div className={PageStyles.padMd + " full-bleed-wrapper pad-md"}>
                 <div
-                  className="full-bleed check-plans-background-image"
+                  className={
+                    PageStyles.checkPlansBackgroundImage +
+                    " full-bleed check-plans-background-image"
+                  }
                   style={fullBleedBgStyle}
                 />
                 <div className="full-bleed-content-wrapper">
                   <div className="row">
                     <div className="col-sm-4 col-md-6 col-lg-7" />
                     <div className="col-sm-8 col-md-6 col-lg-5">
-                      <div className="content-block">
+                      <div
+                        className={PageStyles.contentBlock + " content-block"}
+                      >
                         <div className="inner-title">
                           <h2>Check which plan works for your practice</h2>
                         </div>
-                        <div className="accented-paragraph medium-width">
+                        <div
+                          className={
+                            PageStyles.accentedParagraph +
+                            " accented-paragraph medium-width"
+                          }
+                        >
                           <p>
                             Get access to all we have to offer: Genius Framework
                             Website, Strategic Content Writing, Search Engine
