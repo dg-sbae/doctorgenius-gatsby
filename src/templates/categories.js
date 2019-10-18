@@ -22,12 +22,22 @@ import "../styles/the-study.scss"
 import PageStyles from "./categories.module.scss"
 
 const ResponsivePostsColumnHeader = props => (
-  <div className="col-sm-12 d-lg-none responsive-tab-trigger">
+  <div
+    className={
+      PageStyles.responsiveTabTrigger +
+      " col-sm-12 d-lg-none responsive-tab-trigger"
+    }
+  >
     <h3
       onClick={props.onClick}
       data-column="latest"
       className={
-        (props.currentColumn === "latest" ? "active" : "") + " blog-heading"
+        (props.currentColumn === "latest"
+          ? `${PageStyles.active} active`
+          : "") +
+        " " +
+        PageStyles.blogHeading +
+        " blog-heading"
       }
     >
       Latest Posts
@@ -36,19 +46,25 @@ const ResponsivePostsColumnHeader = props => (
       onClick={props.onClick}
       data-column="popular"
       className={
-        (props.currentColumn === "popular" ? "active" : "") + " blog-heading"
+        (props.currentColumn === "popular"
+          ? `${PageStyles.active} active`
+          : "") +
+        " " +
+        PageStyles.blogHeading +
+        " blog-heading"
       }
     >
       Popular Posts
     </h3>
-    <div className="spacer small solid" />
+    <div className={PageStyles.spacer + " spacer small solid"} />
   </div>
 )
 const LatestPostsColumn = props => (
   <div
     className={
-      (props.currentColumn === "latest" ? "active" : "hidden") +
-      " col-sm-12 col-lg-8 latest-posts"
+      (props.currentColumn === "latest"
+        ? `${PageStyles.active} active`
+        : `${PageStyles.hidden} hidden`) + " col-sm-12 col-lg-8 latest-posts"
     }
   >
     {props.children}
@@ -57,7 +73,9 @@ const LatestPostsColumn = props => (
 const PopularPostsColumn = props => (
   <div
     className={
-      (props.currentColumn === "popular" ? "active" : "hidden") +
+      (props.currentColumn === "popular"
+        ? `${PageStyles.active} active`
+        : `${PageStyles.hidden} hidden`) +
       " col-sm-12 col-md-12 col-lg-4 sidebar"
     }
   >
@@ -183,13 +201,17 @@ const CategoriesPage = ({ data, pageContext }) => {
 
         <div className="the-study">
           <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
-            <div className="hero">
+            <div className={PageStyles.hero + " hero"}>
               {/* Hero will be a layout component */}
 
               <Container>
                 <div className="valign-wrapper row">
                   <div className="col-sm-12">
-                    <div className="hero-content accent-block">
+                    <div
+                      className={
+                        PageStyles.heroContent + " hero-content accent-block"
+                      }
+                    >
                       <h1>Resources</h1>
                       <h2>
                         <span>The</span> Study
@@ -209,17 +231,26 @@ const CategoriesPage = ({ data, pageContext }) => {
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded category">
+              <div
+                className={
+                  PageStyles.row +
+                  " " +
+                  PageStyles.category +
+                  " row padded category"
+                }
+              >
                 {categoriesPaths.map(category => (
                   <div className="col-sm-4" key={category.name}>
                     <a href={postsPath + category.slug}>
-                      <div className="category-image">
+                      <div
+                        className={PageStyles.categoryImage + " category-image"}
+                      >
                         <img
                           src={category.image}
                           alt={category.name}
                           className="img-responsive"
                         />
-                        <div className="label primary">
+                        <div className={PageStyles.label + " label primary"}>
                           <p>{category.name}</p>
                         </div>
                       </div>
@@ -227,13 +258,26 @@ const CategoriesPage = ({ data, pageContext }) => {
                   </div>
                 ))}
               </div>
-              <div className="row padded align-items-start short-top">
+              <div
+                className={
+                  PageStyles.row + " row padded align-items-start short-top"
+                }
+              >
                 <ResponsivePostsColumn>
                   <LatestPostsColumn>
-                    <h3 className="blog-heading d-sm-none d-lg-block">
+                    <h3
+                      className={
+                        PageStyles.blogHeading +
+                        " blog-heading d-sm-none d-lg-block"
+                      }
+                    >
                       {pageContext.name} Posts
                     </h3>
-                    <div className="d-sm-none spacer small solid" />
+                    <div
+                      className={
+                        PageStyles.spacer + " d-sm-none spacer small solid"
+                      }
+                    />
                     {data.category.edges.map(({ node }) => {
                       // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
                       // The deprecated categories on dg.com like "DoctorGenius" were causing an error
@@ -242,8 +286,16 @@ const CategoriesPage = ({ data, pageContext }) => {
                       )
                       //console.log(mainCategory)
                       return (
-                        <div className="latest-post" key={node.title}>
-                          <div className="featured-image-holder">
+                        <div
+                          className={PageStyles.latestPost + " latest-post"}
+                          key={node.title}
+                        >
+                          <div
+                            className={
+                              PageStyles.featuredImageHolder +
+                              " featured-image-holder"
+                            }
+                          >
                             <a href={postsPath + node.slug}>
                               <Img
                                 fluid={
@@ -254,10 +306,16 @@ const CategoriesPage = ({ data, pageContext }) => {
                             </a>
                           </div>
 
-                          <div className="content-holder">
-                            <div className="details">
-                              <p className="date">{node.date}</p>
-                              <p className="label mute">
+                          <div
+                            className={
+                              PageStyles.contentHolder + " content-holder"
+                            }
+                          >
+                            <div className={PageStyles.details + " details"}>
+                              <p className={PageStyles.date + " date"}>
+                                {node.date}
+                              </p>
+                              <p className={PageStyles.label + " label mute"}>
                                 <a
                                   href={
                                     // This selects the slug from the categories array matching the mainCategory found above
@@ -280,7 +338,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                               </a>
                             </h4>
                             <p
-                              className="excerpt"
+                              className={PageStyles.excerpt + " excerpt"}
                               dangerouslySetInnerHTML={{
                                 __html: node.excerpt.replace(
                                   /https:\/\/doctorgenius.com/,
@@ -293,7 +351,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                       )
                     })}
 
-                    <div className="pagination">
+                    <div className={PageStyles.pagination + " pagination"}>
                       {// Controls the prev button
                       !isFirst && (
                         <Link to={prevPage} rel="prev">
@@ -315,7 +373,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                             <p
                               className={
                                 pageContext.currentPage === i + start
-                                  ? "active"
+                                  ? `${PageStyles.active} active`
                                   : ""
                               }
                             >
@@ -334,42 +392,92 @@ const CategoriesPage = ({ data, pageContext }) => {
                   </LatestPostsColumn>
 
                   <PopularPostsColumn>
-                    <div className="stay-connected">
-                      <div className="row">
+                    <div
+                      className={PageStyles.stayConnected + " stay-connected"}
+                    >
+                      <div className={PageStyles.row + " row"}>
                         <div className="col-sm-12">
-                          <h3 className="blog-heading ">Stay Connected</h3>
-                          <div className="spacer small solid" />
+                          <h3
+                            className={
+                              PageStyles.blogHeading + " blog-heading "
+                            }
+                          >
+                            Stay Connected
+                          </h3>
+                          <div
+                            className={
+                              PageStyles.spacer + " spacer small solid"
+                            }
+                          />
                         </div>
                       </div>
-                      <div className="row">
+                      <div className={PageStyles.row + " row"}>
                         <div className="col-sm-12">
-                          <div className="social-icons-wrapper">
-                            <div className="social-icon-detail">
+                          <div
+                            className={
+                              PageStyles.socialIconsWrapper +
+                              " social-icons-wrapper"
+                            }
+                          >
+                            <div
+                              className={
+                                PageStyles.socialIconDetail +
+                                " social-icon-detail"
+                              }
+                            >
                               <img
                                 src={facebookIcon}
                                 className="social-icon"
                                 alt="Facebook"
                               />
                               <p>25k</p>
-                              <p className="social-unit">Likes</p>
+                              <p
+                                className={
+                                  PageStyles.socialUnit + " social-unit"
+                                }
+                              >
+                                Likes
+                              </p>
                             </div>
-                            <div className="social-icon-detail">
+                            <div
+                              className={
+                                PageStyles.socialIconDetail +
+                                " social-icon-detail"
+                              }
+                            >
                               <img
                                 src={twitterIcon}
                                 className="social-icon"
                                 alt="Twitter"
                               />
                               <p>231k</p>
-                              <p className="social-unit">Followers</p>
+                              <p
+                                className={
+                                  PageStyles.socialUnit + " social-unit"
+                                }
+                              >
+                                Followers
+                              </p>
                             </div>
-                            <div className="social-icon-detail">
+                            <div
+                              className={
+                                PageStyles.socialIconDetail +
+                                " social-icon-detail"
+                              }
+                            >
                               <img
                                 src={instagramIcon}
                                 className="social-icon"
                                 alt="Instagram"
                               />
                               <p>80k</p>
-                              <p className="social-unit">Followers</p>
+                              <p
+                                className={
+                                  PageStyles.socialUnit + " social-unit"
+                                }
+                              >
+                                Followers
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -377,21 +485,46 @@ const CategoriesPage = ({ data, pageContext }) => {
                       <NewsLetterSignUpForm />
                     </div>
                     <div className="most-popular">
-                      <div className="row d-sm-none d-lg-block padded short-top short-bottom">
+                      <div
+                        className={
+                          PageStyles.row +
+                          " row d-sm-none d-lg-block padded short-top short-bottom"
+                        }
+                      >
                         <div className="col-sm-12">
-                          <h4 className="blog-heading ">Most Popular</h4>
-                          <div className="d-md-none spacer small solid" />
+                          <h4
+                            className={
+                              PageStyles.blogHeading + " blog-heading "
+                            }
+                          >
+                            Most Popular
+                          </h4>
+                          <div
+                            className={
+                              PageStyles.spacer +
+                              " d-md-none spacer small solid"
+                            }
+                          />
                         </div>
                       </div>
-                      <div className="row">
+                      <div className={PageStyles.row + " row"}>
                         <div className="col-sm-12">
                           {data.popular.edges.map(({ node }) => (
                             <a
                               href={`/the-study/${node.slug}`}
                               key={node.title}
                             >
-                              <div className="popular-post">
-                                <div className="featured-image-holder">
+                              <div
+                                className={
+                                  PageStyles.popularPost + " popular-post"
+                                }
+                              >
+                                <div
+                                  className={
+                                    PageStyles.featuredImageHolder +
+                                    " featured-image-holder"
+                                  }
+                                >
                                   {
                                     //console.log(node)}
                                     <Img
@@ -402,18 +535,39 @@ const CategoriesPage = ({ data, pageContext }) => {
                                     />
                                   }
                                 </div>
-                                <div className="content-holder">
-                                  <p className="d-md-block d-lg-none details date">
+                                <div
+                                  className={
+                                    PageStyles.contentHolder + " content-holder"
+                                  }
+                                >
+                                  <p
+                                    className={
+                                      PageStyles.details +
+                                      " " +
+                                      PageStyles.date +
+                                      " d-md-block d-lg-none details date"
+                                    }
+                                  >
                                     {node.date}
                                   </p>
-                                  <h5 className="title">
+                                  <h5 className={PageStyles.title + " title"}>
                                     {he.decode(node.title)}
                                   </h5>
-                                  <p className="d-md-none d-lg-block details date">
+                                  <p
+                                    className={
+                                      PageStyles.details +
+                                      " " +
+                                      PageStyles.date +
+                                      " d-md-none d-lg-block details date"
+                                    }
+                                  >
                                     {node.date}
                                   </p>
                                   <p
-                                    className="excerpt d-md-block d-lg-none"
+                                    className={
+                                      PageStyles.excerpt +
+                                      " excerpt d-md-block d-lg-none"
+                                    }
                                     dangerouslySetInnerHTML={{
                                       __html: node.excerpt.replace(
                                         /https:\/\/doctorgenius.com/,
@@ -428,17 +582,33 @@ const CategoriesPage = ({ data, pageContext }) => {
                         </div>
                       </div>
                     </div>
-                    <div className="category-section">
-                      <div className="row">
+                    <div
+                      className={
+                        PageStyles.categorySection + " category-section"
+                      }
+                    >
+                      <div className={PageStyles.row + " row"}>
                         <div className="col-sm-12">
-                          <h4 className="blog-heading ">Category</h4>
-                          <div className="spacer small solid" />
+                          <h4
+                            className={
+                              PageStyles.blogHeading + " blog-heading "
+                            }
+                          >
+                            Category
+                          </h4>
+                          <div
+                            className={
+                              PageStyles.spacer + " spacer small solid"
+                            }
+                          />
                           {categoriesPaths.map(category => (
                             <a
                               href={postsPath + category.slug}
                               key={category.name}
                             >
-                              <span className="label primary">
+                              <span
+                                className={PageStyles.label + " label primary"}
+                              >
                                 <p>{category.name}</p>
                               </span>
                             </a>
@@ -451,10 +621,12 @@ const CategoriesPage = ({ data, pageContext }) => {
               </div>
               {/* Begin Events component */}
               <div className="events-section">
-                <div className="row padded tall-top">
+                <div className={PageStyles.row + " row padded tall-top"}>
                   <div className="col-sm-12">
                     <div className="title-holder">
-                      <h4 className="blog-heading">Webinars & Events</h4>
+                      <h4 className={PageStyles.blogHeading + " blog-heading"}>
+                        Webinars & Events
+                      </h4>
                       <div className="more-events">
                         <a href="/intentional-404/MoreEvents">
                           View More
@@ -462,7 +634,9 @@ const CategoriesPage = ({ data, pageContext }) => {
                         </a>
                       </div>
                     </div>
-                    <div className="spacer solid small" />
+                    <div
+                      className={PageStyles.spacer + " spacer solid small"}
+                    />
                   </div>
                   {data.events.edges.map(({ node }) => (
                     <div className="col-sm-3" key={node.title}>
@@ -480,7 +654,14 @@ const CategoriesPage = ({ data, pageContext }) => {
                 </div>
               </div>
               {/* End Events component */}
-              <div className="row padded tall-top request-demo-footer">
+              <div
+                className={
+                  PageStyles.row +
+                  " " +
+                  PageStyles.requestDemoFooter +
+                  " row padded tall-top request-demo-footer"
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
                   <div className="content-block">
@@ -503,7 +684,10 @@ const CategoriesPage = ({ data, pageContext }) => {
                 </div>
                 <div className="col-sm-11 col-md-5 col-lg-5">
                   <div className="center">
-                    <a href="/demo" className="button flat white-text">
+                    <a
+                      href="/demo"
+                      className={PageStyles.button + " button flat white-text"}
+                    >
                       Request Demo{" "}
                       <img src={thinArrowRight} alt="Arrow Right" />
                     </a>
