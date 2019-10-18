@@ -66,6 +66,14 @@ module.exports = {
         path: `${__dirname}/src/img/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [`Montserrat:400,700`, `Roboto:300,400,500&display=swap`],
+        },
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",

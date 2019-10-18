@@ -115,7 +115,7 @@ const CategoriesPage = ({ data, pageContext }) => {
   const images = data
   //Isolate the blog and categories routes
   //This should be located globally, or the categories and archive page combined
-  const postsPath = "/the-study/"
+  const postsPath = "/blog/"
   const categoriesPaths = [
     {
       name: "Digital Marketing",
@@ -139,16 +139,13 @@ const CategoriesPage = ({ data, pageContext }) => {
   const isLast = pageContext.currentPage === pageContext.numPages
   const prevPage =
     pageContext.currentPage - 1 === 1
-      ? "/the-study/" + pageContext.slug
-      : "/the-study/" +
+      ? "/blog/" + pageContext.slug
+      : "/blog/" +
         pageContext.slug +
         "/" +
         (pageContext.currentPage - 1).toString()
   const nextPage =
-    "/the-study/" +
-    pageContext.slug +
-    "/" +
-    (pageContext.currentPage + 1).toString()
+    "/blog/" + pageContext.slug + "/" + (pageContext.currentPage + 1).toString()
 
   // Variables used in the pagination loop
   const currentPage = pageContext.currentPage
@@ -178,6 +175,7 @@ const CategoriesPage = ({ data, pageContext }) => {
               name="description"
               content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
             />
+            <meta name="robots" content="noindex,nofollow" />
           </Helmet>
         )}
 
@@ -193,11 +191,6 @@ const CategoriesPage = ({ data, pageContext }) => {
             />
           </Helmet>
         )}
-
-        <meta
-          name="description"
-          content="Privacy policy of Doctor Genius located in in Irvine, CA 92606."
-        />
 
         <div className="the-study">
           <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
@@ -342,7 +335,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                               dangerouslySetInnerHTML={{
                                 __html: node.excerpt.replace(
                                   /https:\/\/doctorgenius.com/,
-                                  "/the-study"
+                                  "/blog"
                                 ),
                               }}
                             />
@@ -366,7 +359,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                         (_, i) => (
                           <Link
                             key={`pagination-number${i + start}`}
-                            to={`/the-study/${pageContext.slug}/${
+                            to={`/blog/${pageContext.slug}/${
                               i + start - 1 === 0 ? "" : "/" + (i + start)
                             }`}
                           >
@@ -510,10 +503,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                       <div className={PageStyles.row + " row"}>
                         <div className="col-sm-12">
                           {data.popular.edges.map(({ node }) => (
-                            <a
-                              href={`/the-study/${node.slug}`}
-                              key={node.title}
-                            >
+                            <a href={`/blog/${node.slug}`} key={node.title}>
                               <div
                                 className={
                                   PageStyles.popularPost + " popular-post"
@@ -571,7 +561,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                                     dangerouslySetInnerHTML={{
                                       __html: node.excerpt.replace(
                                         /https:\/\/doctorgenius.com/,
-                                        "/the-study"
+                                        "/blog"
                                       ),
                                     }}
                                   />

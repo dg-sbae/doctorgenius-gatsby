@@ -302,11 +302,7 @@ const ResourcesSideNavListLink = props => (
         </span>
       </div>
       <ul>
-        <ListLink
-          to="/the-study"
-          activeClassName="active"
-          partiallyActive={true}
-        >
+        <ListLink to="/blog" activeClassName="active" partiallyActive={true}>
           The Study
         </ListLink>
         {/* Hidden until the content for page is finalized */}
@@ -764,7 +760,7 @@ const StudySingleListLink = props => (
         <div className="col-sm-12">
           <div className="row dropdown-row">
             <div className="col-sm-6">
-              <Link className="" to="/the-study">
+              <Link className="" to="/blog">
                 <div className="dropdown-item-block">
                   <div className="nav-icon-wrapper">
                     <img
@@ -1091,7 +1087,7 @@ class Navigation extends Component {
               iconSubnav={resources}
               // data-toggle="collapse"
               // aria-expanded="false"
-              to="/the-study"
+              to="/blog"
             >
               Resources
             </ResourcesSideNavListLink>
@@ -1209,7 +1205,7 @@ class Navigation extends Component {
                 <StudySingleListLink
                   className="nav-item dropdown resources-dropdown"
                   dataToggle="dropdown"
-                  to="/the-study"
+                  to="/blog"
                 >
                   Resources
                 </StudySingleListLink>

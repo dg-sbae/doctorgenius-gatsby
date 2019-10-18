@@ -22,8 +22,6 @@ const EventPage = ({ data }) => {
   let featured_event
   const images = data
 
-  console.log(data)
-
   const eventTimeLineBg = images.eventTimelineBg.childImageSharp.fluid.src
   const eventTimeLineStyles = {
     backgroundImage: "url(" + eventTimeLineBg + ")",

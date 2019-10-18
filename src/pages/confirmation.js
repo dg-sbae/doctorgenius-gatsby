@@ -46,7 +46,7 @@ export default props => (
                       />
                       our new blog,{" "}
                       <span className="strapline">
-                        <Link to="/the-study/">The Study</Link>
+                        <Link to="/blog/">The Study</Link>
                       </span>
                       , to find out about our latest services and technology.
                     </p>

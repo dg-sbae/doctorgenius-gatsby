@@ -57,10 +57,10 @@ function PostPage({ pageContext, data, location }) {
   // console.log()
   // let previousPost = (typeof(pageContext.prevNode) !== 'undefined' || pageContext.prevNode != null) ?
   const previousPost = pageContext.prevNode
-    ? "/the-study/" + pageContext.prevNode.slug
+    ? "/blog/" + pageContext.prevNode.slug
     : null
   const nextPost = pageContext.nextNode
-    ? "/the-study/" + pageContext.nextNode.slug
+    ? "/blog/" + pageContext.nextNode.slug
     : null
   /*
   let testIntro = content.slice(1, 2)
