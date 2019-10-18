@@ -62,7 +62,7 @@ const LatestPostsColumn = props => (
     className={
       (props.currentColumn === "latest"
         ? `${PageStyles.active} active`
-        : PageStyles.hidden) + " col-sm-12 col-lg-8 latest-posts"
+        : `${PageStyles.hidden} hidden`) + " col-sm-12 col-lg-8 latest-posts"
     }
   >
     {props.children}
@@ -73,7 +73,8 @@ const PopularPostsColumn = props => (
     className={
       (props.currentColumn === "popular"
         ? `${PageStyles.active} active`
-        : PageStyles.hidden) + " col-sm-12 col-md-12 col-lg-4 sidebar"
+        : `${PageStyles.hidden} hidden`) +
+      " col-sm-12 col-md-12 col-lg-4 sidebar"
     }
   >
     {props.children}
