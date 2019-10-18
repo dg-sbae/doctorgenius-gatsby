@@ -1,8 +1,8 @@
 @import "../styles/_site-variables.scss";
 
 .theStudyPaginationPage {
-  @include media("<desktop") {
-    .hidden {
+  .hidden {
+    @include media("<desktop") {
       display: none;
     }
   }
