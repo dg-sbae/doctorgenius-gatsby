@@ -301,7 +301,7 @@ const TagsPage = ({ data, pageContext }) => {
                                 </a>
                               </p>
                             </div>
-                            <h4 className="truncate">
+                            <h4 className={PageStyles.title + " title"}>
                               <a
                                 className="not-a-link"
                                 href={postsPath + node.slug}
@@ -526,7 +526,7 @@ const TagsPage = ({ data, pageContext }) => {
                                       PageStyles.details +
                                       " " +
                                       PageStyles.date +
-                                      " d-md-none d-lg-block details date"
+                                      " d-none d-lg-block details date"
                                     }
                                   >
                                     {node.date}
@@ -538,8 +538,11 @@ const TagsPage = ({ data, pageContext }) => {
                                     }
                                     dangerouslySetInnerHTML={{
                                       __html: node.excerpt.replace(
-                                        /^\//,
-                                        "/blog"
+                                        /<a.*?moretag.*?<\/a>/,
+                                        '... <a href="' +
+                                          postsPath +
+                                          node.slug +
+                                          '" target="_blank">[ Read More ]</a>'
                                       ),
                                     }}
                                   />
