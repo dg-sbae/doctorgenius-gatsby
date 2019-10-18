@@ -236,7 +236,6 @@
       }
     }
 
-    // .contentHolder {
     .title {
       color: #031453;
       font-size: 18px;
@@ -255,7 +254,6 @@
       color: $blog-page-excerpt-text-color;
       line-height: 1.4em;
     }
-    // }
   }
   .row.category {
     @include media("<desktop") {

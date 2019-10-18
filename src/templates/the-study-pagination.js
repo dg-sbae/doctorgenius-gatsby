@@ -517,7 +517,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                       PageStyles.details +
                                       " " +
                                       PageStyles.date +
-                                      " d-md-none d-lg-block details date"
+                                      " d-none d-lg-block details date"
                                     }
                                   >
                                     {node.date}
@@ -529,8 +529,11 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                     }
                                     dangerouslySetInnerHTML={{
                                       __html: node.excerpt.replace(
-                                        /^\//,
-                                        "/blog"
+                                        /<a.*?moretag.*?<\/a>/,
+                                        '... <a href="' +
+                                          postsPath +
+                                          node.slug +
+                                          '" target="_blank">[ Read More ]</a>'
                                       ),
                                     }}
                                   />
