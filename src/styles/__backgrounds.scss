@@ -2,8 +2,7 @@
 .accented-paragraph p:before {
   background-color: $primary;
 }
-.accent-block,
-footer {
+.accent-block {
   background: linear-gradient(
     45deg,
     rgba(#0b97c1, 0.95) 0%,
