@@ -322,7 +322,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                                 </a>
                               </p>
                             </div>
-                            <h4 className="truncate">
+                            <h4 className={PageStyles.title + " title"}>
                               <a
                                 className="not-a-link"
                                 href={postsPath + node.slug}
@@ -334,8 +334,11 @@ const CategoriesPage = ({ data, pageContext }) => {
                               className={PageStyles.excerpt + " excerpt"}
                               dangerouslySetInnerHTML={{
                                 __html: node.excerpt.replace(
-                                  /https:\/\/doctorgenius.com/,
-                                  "/blog"
+                                  /<a.*?moretag.*?<\/a>/,
+                                  '... <a href="' +
+                                    postsPath +
+                                    node.slug +
+                                    '" target="_blank">[ Read More ]</a>'
                                 ),
                               }}
                             />
@@ -548,7 +551,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                                       PageStyles.details +
                                       " " +
                                       PageStyles.date +
-                                      " d-md-none d-lg-block details date"
+                                      " d-none d-lg-block details date"
                                     }
                                   >
                                     {node.date}
@@ -560,8 +563,11 @@ const CategoriesPage = ({ data, pageContext }) => {
                                     }
                                     dangerouslySetInnerHTML={{
                                       __html: node.excerpt.replace(
-                                        /https:\/\/doctorgenius.com/,
-                                        "/blog"
+                                        /<a.*?moretag.*?<\/a>/,
+                                        '... <a href="' +
+                                          postsPath +
+                                          node.slug +
+                                          '" target="_blank">[ Read More ]</a>'
                                       ),
                                     }}
                                   />

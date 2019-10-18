@@ -226,16 +226,33 @@
     align-items: center;
     justify-content: center;
 
+    @include media("<desktop") {
+      align-items: flex-start;
+    }
+
+    .contentHolder {
+      p {
+        font-family: Roboto, sans-serif;
+      }
+    }
+
     .title {
       color: #031453;
       font-size: 18px;
       margin-bottom: 0;
       line-height: 1;
+      @include media("<desktop") {
+        margin: 15px 0 10px;
+      }
     }
     .date {
       color: #b9b9b9;
       font-size: 14px;
       margin-bottom: 0;
+    }
+    .excerpt {
+      color: $blog-page-excerpt-text-color;
+      line-height: 1.4em;
     }
   }
   .row.category {
