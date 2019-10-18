@@ -1,59 +1,6 @@
 @import "_site-variables.scss";
 
 .privacy-policy {
-  .gbi-privacy-policy:before,
-  .gbi-privacy-policy:after {
-    background-position: initial !important;
-  }
-  .hero {
-    .accented-paragraph p {
-      color: white;
-    }
-  }
-  .policy-table {
-    background: lighten($mute, 30%);
-    li {
-      padding: 15px;
-      border-bottom: 1px dotted rgba(50, 50, 50, 0.25);
-      &:last-of-type {
-        border-bottom: none;
-      }
-    }
-  }
-  p {
-    margin-bottom: 1.5rem;
-    color: rgba(75, 75, 75, 1);
-    b {
-      color: black;
-    }
-  }
-  address {
-    margin-left: 2rem;
-    color: $primary;
-  }
-  .inner-title {
-    text-align: center;
-  }
-  ol {
-    padding-inline-start: 0;
-    & > li {
-      font-size: 1.5rem;
-      p,
-      li {
-        font-size: 1rem;
-      }
-    }
-  }
-  h4 {
-    font-size: 1.5rem;
-  }
-  ul {
-    margin-bottom: 15px;
-  }
-  li {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
   .dropdown-content-block {
     p {
       color: inherit;

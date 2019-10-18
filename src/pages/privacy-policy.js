@@ -24,9 +24,8 @@ const PrivacyPolicy = data => {
         <div className="privacy-policy">
           <BackgroundImage
             fluid={data.data.heroBg.childImageSharp.fluid}
-            className="gbi-privacy-policy"
+            className={PageStyles.gbiPrivacyPolicy + ` gbi-privacy-policy`}
           >
-
             <div className="hero">
               <Container>
                 <div className="valign-wrapper row">
@@ -37,7 +36,11 @@ const PrivacyPolicy = data => {
                         <h2>
                           <span>Our Privacy </span>Policy
                         </h2>
-                        <div className="accented-paragraph">
+                        <div
+                          className={
+                            PageStyles.accentedParagraph + " accented-paragraph"
+                          }
+                        >
                           <p>
                             Effective Date:
                             <br /> October 26, 2018
@@ -50,7 +53,6 @@ const PrivacyPolicy = data => {
                 </div>
               </Container>
             </div>
-
           </BackgroundImage>
           <Main>
             <Container>
@@ -67,7 +69,7 @@ const PrivacyPolicy = data => {
               <div className="row padded short-top short-bottom">
                 <div className="col-sm-8">
                   <div className="content-block">
-                    <div className="inner-title">
+                    <div className={PageStyles.innerTitle + " inner-title"}>
                       <h2 className="underline">
                         Our Privacy Policy Explains:
                       </h2>
@@ -90,7 +92,7 @@ const PrivacyPolicy = data => {
               <div className="row padded short-top short-bottom">
                 <div className="col-sm-8">
                   <div className="content-block">
-                    <div className="policy-table">
+                    <div className={PageStyles.policyTable + " policy-table"}>
                       <ul>
                         <li>
                           What information we collect and why we collect it.
@@ -140,7 +142,7 @@ const PrivacyPolicy = data => {
               <div className="row padded short-top short-bottom">
                 <div className="col-sm-8">
                   <div className="content-block">
-                    <div className="inner-title">
+                    <div className={PageStyles.innerTitle + " inner-title"}>
                       <h2 className="underline">Information We Collect:</h2>
                     </div>
                     <ol>

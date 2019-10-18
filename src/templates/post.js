@@ -116,13 +116,13 @@ function PostPage({ pageContext, data, location }) {
         )}
 
         <div className="page-wrapper">
-          <div class="hero-padding" />
+          <div class={PageStyles.heroPadding + " hero-padding"} />
           <Main>
             <Container>
               <div className="row padded short-bottom">
                 <div className="col-lg-1" />
                 <div className="col-lg-8">
-                  <div className="pagination">
+                  <div className={PageStyles.pagination + " pagination"}>
                     {previousPost != null ? (
                       <a href={previousPost}>
                         <img src={leftChevron} alt="Navigate to Previous" />
@@ -143,11 +143,15 @@ function PostPage({ pageContext, data, location }) {
                 </div>
                 <div className="col-lg-1" />
               </div>
-              <div className="blog-header">
+              <div className={PageStyles.blogHeader + " blog-header"}>
                 <div className="row">
                   <div className="col-lg-2" />
                   <div className="col-lg-9">
-                    <div className="row mobile-image-row">
+                    <div
+                      className={
+                        PageStyles.mobileImageRow + " row mobile-image-row"
+                      }
+                    >
                       <div className="col-xs-12">
                         <Img
                           fluid={
@@ -156,24 +160,28 @@ function PostPage({ pageContext, data, location }) {
                         />
                       </div>
                     </div>
-                    <div className="row upper-row">
+                    <div className={PageStyles.upperRow + " row upper-row"}>
                       <div class="col-lg-9 order-lg-1 order-sm-3">
-                        <h1 className="title">{he.decode(post.title)}</h1>
+                        <h1 className={PageStyles.title + " title"}>
+                          {he.decode(post.title)}
+                        </h1>
                       </div>
                       <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
-                        <div className="label primary">
+                        <div className={PageStyles.label + " label primary"}>
                           <p>{mainCategory.name}</p>
                         </div>
                       </div>
 
                       <div className="col-sm-12 col-lg-4 order-sm-4 order-lg-3">
-                        <div className="byline">
-                          <p className="date">{post.date}</p>
+                        <div className={PageStyles.byLine + " byline"}>
+                          <p className={PageStyles.date + " date"}>
+                            {post.date}
+                          </p>
                           <p className="author">{post.author.name}</p>
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
-                        <div className="share-icons">
+                        <div className={PageStyles.shareIcons + " share-icons"}>
                           <p>Share:</p>
                           <a href={facebookShareLink}>
                             {/* https://www.facebook.com/DoctorGeniusMarketing*/}
@@ -216,13 +224,15 @@ function PostPage({ pageContext, data, location }) {
               <div className="row">
                 <div className="col-lg-1" />
                 <div className="col-lg-8">
-                  <div className="blog-content">
+                  <div className={PageStyles.blogContent + " blog-content"}>
                     <div
                       className="intro"
                       dangerouslySetInnerHTML={{ __html: intro }}
                     />
 
-                    <div className="featured-image">
+                    <div
+                      className={PageStyles.featuredImage + " featured-image"}
+                    >
                       <Img
                         fluid={
                           post.featured_media.localFile.childImageSharp.fluid
@@ -238,11 +248,19 @@ function PostPage({ pageContext, data, location }) {
                 <div className="col-lg-1" />
               </div>
 
-              <div className="full-bleed-wrapper pad-md events">
-                <div className="full-bleed grey-background" />
+              <div
+                className={
+                  PageStyles.events + " full-bleed-wrapper pad-md events"
+                }
+              >
+                <div
+                  className={
+                    PageStyles.greyBackground + " full-bleed grey-background"
+                  }
+                />
                 <div className="full-bleed-content-wrapper">
                   {/* Begin Events component */}
-                  <div className="events-section">
+                  <div className={PageStyles.eventsSection + " events-section"}>
                     <div className="row padded tall-top">
                       <div className="col-lg-12">
                         <div className="title-holder">

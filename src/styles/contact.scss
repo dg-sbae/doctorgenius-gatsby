@@ -1,64 +1,8 @@
 @import "_site-variables.scss";
 
 .contact {
-  /* Global styles - to this page */
-  .hero {
-    height: auto;
-    padding-top: 80px;
-    background: top/300px repeat-x url("../img/background-texture.png"),
-      center 74%/300px repeat-x url("../img/background-texture-flipped.png"),
-      center calc(74% + 300px) / 300px repeat-x
-        url("../img/background-texture.png");
-  }
-
-  .contact-form {
-    padding: $pad;
-  }
-  .phone-number a {
-    font-size: $m1;
-    color: #000;
-    text-decoration: none;
-    font-family: $font-family-body-text;
-  }
-
-  .contact-address,
-  .contact-hours {
-    font-size: 22px;
-    font-family: $font-family-body-text;
-  }
-
-  .dg-map {
-    border: none;
-  }
-
-  .get-directions {
-    color: $primary;
-    border-color: $primary;
-  }
-
-  .get-directions:hover {
-    color: $secondary;
-    border-color: $secondary;
-  }
-
-  .get-directions a:hover {
-    text-decoration: none;
-  }
-
-  /* Styling for laptops and above - 991px*/
   @include media(">=laptop") {
-    h1 {
-      font-size: 87px;
-      line-height: 1;
-      font-weight: $font-weight-normal;
-    }
-    .inner-title h3.strapline {
-      font-size: 33px;
-    }
-    .muted-text {
-      font-size: 28px;
-      color: $mute;
-    }
+    // ----------- NAVIGATION STYLING (DESKTOP) -----------
     header .logo a .logo-holder {
       background-image: url("../img/icon/logo-blue.svg");
     }
@@ -98,101 +42,28 @@
     .button.nav-button.free-demo-button:hover a {
       color: #fff !important;
     }
-
-    .company-info {
-      text-align: right;
-    }
-    .info-and-map {
-      padding-bottom: $m1 * 3;
-    }
+    // ----------- END NAVIGATION STYLING (DESKTOP) -----------
   }
 
-  /* Styling for Tablets: 768 - 991 */
   @include media("<=laptop", ">=tablet") {
+    // ----------- NAVIGATION STYLING (TABLET) -----------
     .navigation-wrapper {
       background-color: $primary;
     }
     header .logo a .logo-holder {
       background-image: url("../img/icon/logo-white.svg");
     }
-    h1 {
-      font-size: 87px;
-      line-height: 1;
-      font-weight: $font-weight-normal;
-    }
-    .inner-title h3.strapline {
-      font-size: 33px;
-    }
-    .muted-text {
-      font-size: 21px;
-      color: $mute;
-    }
-    .company-info {
-      text-align: center;
-      margin-bottom: $m1;
-    }
-    .dg-map {
-      width: 100%;
-    }
-    .info-and-map {
-      padding-bottom: 0;
-    }
-    .map-holder {
-      padding: 20px 0 0 0;
-      line-height: 1;
-      margin-bottom: -5px;
-    }
-    .hero {
-      background: top/350px repeat-x url("../img/background-texture.png"),
-        center 51%/300px repeat-x url("../img/background-texture-flipped.png"),
-        center calc(51% + 300px) / 300px repeat-x
-          url("../img/background-texture.png");
-    }
+    // ----------- END NAVIGATION STYLING (TABLET) -----------
   }
 
-  /* Styling for phones - 767 and below */
   @include media("<tablet") {
+    // ----------- NAVIGATION STYLING (MOBILE) -----------
     .navigation-wrapper {
       background-color: $primary;
     }
     header .logo a .logo-holder {
       background-image: url("../img/icon/logo-white.svg");
     }
-    .company-info {
-      text-align: center;
-    }
-    .muted-text {
-      font-size: 18px;
-    }
-    .dg-map {
-      width: 100%;
-    }
-    .info-and-map {
-      padding-bottom: 0;
-    }
-    .map-holder {
-      padding: 20px 0 0 0;
-      line-height: 1;
-      margin-bottom: -5px;
-    }
-    .hero {
-      background: top/350px repeat-x url("../img/background-texture.png"),
-        center 51%/300px repeat-x url("../img/background-texture-flipped.png"),
-        center calc(51% + 300px) / 300px repeat-x
-          url("../img/background-texture.png");
-    }
-
-    h1 {
-      font-size: 49px;
-      line-height: 1;
-      font-weight: $font-weight-normal;
-    }
-    .inner-title h3.strapline {
-      font-size: 24px;
-    }
-    .muted-text {
-      font-size: 21px;
-      color: $mute;
-    }
+    // ----------- END NAVIGATION STYLING (MOBILE) -----------
   }
 }

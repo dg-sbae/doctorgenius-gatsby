@@ -19,19 +19,19 @@ const Baa = data => {
           <title>Standard Business Associate Agreement | Doctor Genius</title>
         </Helmet>
         <div className="baa">
-          <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className="gbi-baa">
-            <div className="hero">
+          <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiBaa + " gbi-baa"}>
+            <div className={PageStyles.hero + " hero"}>
               <Container>
             <div className="valign-wrapper row">
               <div className="col-sm-12">
                 <div className="hero-content">
-                  <div className="hero-content accent-block">
+                  <div className={PageStyles.accentBlock + " hero-content accent-block"}>
                     <h1>BAA</h1>
                     <h2>
                       <span>Standard Business </span>
                       Associate Agreement
                     </h2>
-                    <div className="accented-paragraph">
+                    <div className={PageStyles.accentedParagraph + " accented-paragraph"}>
                       <p>
                         Effective Date:
                         <br /> October 26, 2018
@@ -48,7 +48,7 @@ const Baa = data => {
           <Main>
             <Container>
             <div className="row padded tall-top short-bottom">
-              <div class="col-sm-12 col-md-8">
+              <div className="col-sm-12 col-md-8">
                 <p>
                   This Standard Business Associate Agreement (or “BAA”) is entered
                   into between Company (referred to herein as “Business Associate”
@@ -86,23 +86,23 @@ const Baa = data => {
                 </p>
               </div>
             </div>
-            <div class="row padded short-top short-bottom">
-              <div class="col-sm-11 col-md-8">
-                <div class="content-block">
+            <div className="row padded short-top short-bottom">
+              <div className="col-sm-11 col-md-8">
+                <div className="content-block">
                   <ol>
                     <li>
                       <h4>Definitions</h4>
-                      <ol className="alpha-list">
+                      <ol className={PageStyles.alphaList + " alpha-list"}>
                         <li>
                           <p>
-                            "<b class="underlined">Breach</b>" shall have the
+                            "<b className={PageStyles.underlined + " underlined"}>Breach</b>" shall have the
                             meaning given to such term under the HITECH Act [42
                             U.S.C. Section 17921].
                           </p>
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Business Associate</b>" shall
+                            "<b className={PageStyles.underlined + " underlined"}>Business Associate</b>" shall
                             have the meaning given to such term under the Data
                             Breach Notification Rule, the Privacy Rule, the
                             Security Rule, and the HITECH Act, including but not
@@ -112,7 +112,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Covered Entity</b>" shall have
+                            "<b className={PageStyles.underlined + " underlined"}>Covered Entity</b>" shall have
                             the meaning given to such term under the Privacy Rule
                             and the Security Rule, including, but not limited to,
                             45 C.F.R. Section 160.103.
@@ -120,7 +120,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Data Aggregation</b>" shall
+                            "<b className={PageStyles.underlined + " underlined"}>Data Aggregation</b>" shall
                             have the meaning given to such term under the Privacy
                             Rule, including, but not limited to, 45 C.F.R. Section
                             164.501.
@@ -128,7 +128,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Designated Record Set</b>"
+                            "<b className={PageStyles.underlined + " underlined"}>Designated Record Set</b>"
                             shall have the meaning given to such term under the
                             Privacy Rule, including, but not limited to, 45 C.F.R.
                             Section 164.501.
@@ -137,7 +137,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Electronic Protected Health Information
                             </b>
                             " means Protected Health Information that is
@@ -146,7 +146,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Electronic Health Record</b>"
+                            "<b className={PageStyles.underlined + " underlined"}>Electronic Health Record</b>"
                             shall have the meaning given to such term in the
                             HITECH Act, including, but not limited to, 42 U.S.C.
                             Section 17921.
@@ -154,7 +154,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Health Care Operations</b>"
+                            "<b className={PageStyles.underlined + " underlined"}>Health Care Operations</b>"
                             shall have the meaning given to such term under the
                             Privacy Rule, including, but not limited to, 45 C.F.R.
                             Section 164.501.
@@ -163,8 +163,8 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">Protected Health Information</b>
-                            " or "<b class="underlined">PHI</b>" means any
+                            <b className={PageStyles.underlined + " underlined"}>Protected Health Information</b>
+                            " or "<b className={PageStyles.underlined + " underlined"}>PHI</b>" means any
                             information, whether oral or recorded in any form or
                             medium: (i) that relates to the past, present or
                             future physical or mental condition of an individual;
@@ -183,14 +183,14 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Protected Information</b>"
+                            "<b className={PageStyles.underlined + " underlined"}>Protected Information</b>"
                             shall mean PHI provided by CE to BA or created or
                             received by BA on CE’s behalf.
                           </p>
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Subcontractor</b>" means a
+                            "<b className={PageStyles.underlined + " underlined"}>Subcontractor</b>" means a
                             person to whom a business associate delegates a
                             function, activity, or service, other than in the
                             capacity of a member of the workforce of such business
@@ -199,7 +199,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Unsecured PHI</b>" shall have
+                            "<b className={PageStyles.underlined + " underlined"}>Unsecured PHI</b>" shall have
                             the meaning given to such term under the HITECH Act
                             and any guidance issued pursuant to such Act
                             including, but not limited to, 42 U.S.C. Section
@@ -210,10 +210,10 @@ const Baa = data => {
                     </li>
                     <li>
                       <h4>Obligations of Business Associate</h4>
-                      <ol className="alpha-list">
+                      <ol className={PageStyles.alphaList + " alpha-list"}>
                         <li>
                           <p>
-                            "<b class="underlined">Permitted Uses</b>" – BA shall
+                            "<b className={PageStyles.underlined + " underlined"}>Permitted Uses</b>" – BA shall
                             not use Protected Information except for the purpose
                             of performing BA’s obligations of CE as a healthcare
                             provider and as permitted under this BAA. Further, BA
@@ -230,7 +230,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Permitted Disclosures</b>" – BA
+                            "<b className={PageStyles.underlined + " underlined"}>Permitted Disclosures</b>" – BA
                             shall not disclose Protected Information except for
                             the purpose of performing BA’s obligations as a
                             healthcare provider and as permitted under this BAA.
@@ -260,7 +260,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Prohibited Uses and Disclosures
                             </b>
                             " – BA shall not use or disclose Protected Information
@@ -283,7 +283,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">Compliance with Privacy Rule</b>
+                            <b className={PageStyles.underlined + " underlined"}>Compliance with Privacy Rule</b>
                             " – To the extent that BA carries out CE’s obligations
                             under the Privacy Rule, BA shall comply with the
                             requirements of the Privacy Rule that apply to CE in
@@ -293,7 +293,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Appropriate Safeguards</b>" –
+                            "<b className={PageStyles.underlined + " underlined"}>Appropriate Safeguards</b>" –
                             BA Shall implement appropriate safeguards as are
                             necessary to prevent the use or disclosure of
                             Protected Information otherwise than as permitted by
@@ -312,7 +312,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Reporting of Improper Access, Use or Disclosure
                             </b>
                             " – BA shall report to CE in writing of any access,
@@ -327,7 +327,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Business Associate’s Agents</b>
+                            "<b className={PageStyles.underlined + " underlined"}>Business Associate’s Agents</b>
                             " – BA shall ensure that any agents, including
                             Subcontractors, that create, receive, maintain, or
                             transmit Protected Health Information on behalf of the
@@ -347,7 +347,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Access to Protected Information
                             </b>
                             " – [This applies only if the BA maintains a
@@ -368,7 +368,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Amendment of PHI</b>" – [This
+                            "<b className={PageStyles.underlined + " underlined"}>Amendment of PHI</b>" – [This
                             applies only of if the BA maintains a designated
                             record set on behalf of the CE]: Within ten (10) days
                             of receipt of a request from CE for an amendment of
@@ -391,7 +391,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Accounting Rights</b>" –
+                            "<b className={PageStyles.underlined + " underlined"}>Accounting Rights</b>" –
                             Promptly after notice by CE of a request for an
                             accounting of disclosures of Protected Information, BA
                             and its agents or Subcontractors shall make available
@@ -434,7 +434,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Governmental Access to Records
                             </b>
                             " – BA shall make its internal practices, books and
@@ -451,7 +451,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Minimum Necessary</b>" – BA
+                            "<b className={PageStyles.underlined + " underlined"}>Minimum Necessary</b>" – BA
                             (and its agents or Subcontractors) shall request, use
                             and disclose only the minimum amount of Protected
                             Information necessary to accomplish the purpose of the
@@ -469,7 +469,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Data Ownership</b>" – BA
+                            "<b className={PageStyles.underlined + " underlined"}>Data Ownership</b>" – BA
                             acknowledges that BA has no ownership rights with
                             respect to the Protected Information.
                           </p>
@@ -477,7 +477,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Business Associate’s Insurance
                             </b>
                             " – CE shall obtain and maintain and during the term
@@ -495,7 +495,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Notification of Breach</b>" –
+                            "<b className={PageStyles.underlined + " underlined"}>Notification of Breach</b>" –
                             During the term of the business relationship, BA shall
                             notify CE of any suspected or actual breach of
                             security, intrusion or unauthorized use or disclosure
@@ -511,7 +511,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Breach Pattern or Practice by Covered Entity
                             </b>
                             " – Pursuant to 42 U.S.C. Section 17934(b), if the BA
@@ -535,7 +535,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Audits, Inspection and Enforcement
                             </b>
                             " – Within a reasonable time after a written request
@@ -572,10 +572,10 @@ const Baa = data => {
                     </li>
                     <li>
                       <h4>Termination</h4>
-                      <ol className="alpha-list">
+                      <ol className={PageStyles.alphaList + " alpha-list"}>
                         <li>
                           <p>
-                            "<b class="underlined">Material Breach</b>" – A breach
+                            "<b className={PageStyles.underlined + " underlined"}>Material Breach</b>" – A breach
                             by BA of any provision of this BAA, as determined by
                             CE, shall constitute a material breach and shall
                             provide grounds for immediate termination of the
@@ -595,7 +595,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Judicial or Administrative Proceedings
                             </b>
                             " – CE may terminate the Contract, effective
@@ -612,7 +612,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Effect of Termination</b>" –
+                            "<b className={PageStyles.underlined + " underlined"}>Effect of Termination</b>" –
                             Upon termination of the business relationship for any
                             reason, BA shall, at the option of CE, return or
                             destroy all Protected Information that BA or its
@@ -633,10 +633,10 @@ const Baa = data => {
                     </li>
                     <li>
                       <h4>Miscellaneous</h4>
-                      <ol className="alpha-list">
+                      <ol className={PageStyles.alphaList + " alpha-list"}>
                         <li>
                           <p>
-                            "<b class="underlined">Amendment</b>" – The parties
+                            "<b className={PageStyles.underlined + " underlined"}>Amendment</b>" – The parties
                             agree to take such action to amend this BAA from time
                             to time as is necessary to comply with the
                             requirements of HIPAA.
@@ -644,7 +644,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Disclaimer</b>" – BA makes no
+                            "<b className={PageStyles.underlined + " underlined"}>Disclaimer</b>" – BA makes no
                             warranty or representation that compliance by BA with
                             this BAA, HIPAA, the HITECH Act, or the HIPAA
                             Regulations will be adequate or satisfactory for CE’s
@@ -655,7 +655,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Conflicting Terms</b>" – In the
+                            "<b className={PageStyles.underlined + " underlined"}>Conflicting Terms</b>" – In the
                             event any terms of this BAA directly conflict with any
                             terms of the Agreement, the terms of this BAA shall
                             govern and control.
@@ -664,7 +664,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">
+                            <b className={PageStyles.underlined + " underlined"}>
                               Assistance in Litigation of Administrative
                               Proceedings
                             </b>
@@ -686,7 +686,7 @@ const Baa = data => {
                         <li>
                           <p>
                             "
-                            <b class="underlined">No Third-Party Beneficiaries</b>
+                            <b className={PageStyles.underlined + " underlined"}>No Third-Party Beneficiaries</b>
                             " – Nothing express or implied in the BAA is intended
                             to confer, nor shall anything herein confer, upon any
                             person other than CE, BA and their respective
@@ -696,7 +696,7 @@ const Baa = data => {
                         </li>
                         <li>
                           <p>
-                            "<b class="underlined">Interpretation</b>" – This BAA
+                            "<b className={PageStyles.underlined + " underlined"}>Interpretation</b>" – This BAA
                             shall be interpreted as broadly as necessary to
                             implement and comply with HIPAA, the HITECH Act, the
                             Data Breach Notification Rule, the Privacy Rule and

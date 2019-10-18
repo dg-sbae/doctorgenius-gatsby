@@ -29,9 +29,9 @@ class DG500Page extends React.Component {
             <div className={`${this.props["*"]} page-500`}>
               <BackgroundImage
                 fluid={data.heroBg.childImageSharp.fluid}
-                className="gbi-500"
+                className={PageStyles.gbi500 + " gbi-500"}
               >
-                <div className="hero">
+                <div className={PageStyles.hero + " hero"}>
                   {/* Hero will be a layout component */}
 
                   <Container>
@@ -51,7 +51,12 @@ class DG500Page extends React.Component {
                                 <Link to="/">Return to homepage</Link>
                               </p>
                               <div class="row">
-                                <div class="col-sm-12 text-center sm-500">
+                                <div
+                                  class={
+                                    PageStyles.sm500 +
+                                    " col-sm-12 text-center sm-500"
+                                  }
+                                >
                                   <a href="https://www.facebook.com/DoctorGeniusMarketing">
                                     <img
                                       src={

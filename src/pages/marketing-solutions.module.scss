@@ -1,7 +1,35 @@
 @import "../styles/_site-variables.scss";
 
 .marketingSolutionsPage {
-/* Styles unique to this page component */
+  /* Styles unique to this page component */
+  .hero {
+    @include media("<=tablet") {
+      background-position: 84% 50%;
+    }
+    .heroContent {
+      @include media(">=tablet") {
+        width: 490px;
+        height: 295px;
+        p {
+          width: 90%;
+        }
+      }
+    }
+  }
 
+  .checkPlansBackgroundImage {
+    height: 475px;
+    background-position: 40%;
+    @include media("<laptop") {
+      background-position: 45%;
+    }
+  }
 
+  .lighthouseImage {
+    width: 110%;
+    max-width: 110%;
+    @include media("<laptop") {
+      width: 100%;
+    }
+  }
 }

@@ -117,19 +117,23 @@ const EventPage = ({ data }) => {
 
   // Handles output of days/hours/minutes/seconds on Event Countdown section
   const day_renderer = ({ days }) => {
-    return <p className="days">{zeroPad(days, 2)}</p>
+    return <p className={PageStyles.days + " days"}>{zeroPad(days, 2)}</p>
   }
 
   const hours_renderer = ({ hours }) => {
-    return <p className="hours">{zeroPad(hours, 2)}</p>
+    return <p className={PageStyles.hours + " hours"}>{zeroPad(hours, 2)}</p>
   }
 
   const minutes_renderer = ({ minutes }) => {
-    return <p className="minutes">{zeroPad(minutes, 2)}</p>
+    return (
+      <p className={PageStyles.minutes + " minutes"}>{zeroPad(minutes, 2)}</p>
+    )
   }
 
   const seconds_renderer = ({ seconds }) => {
-    return <p className="seconds">{zeroPad(seconds, 2)}</p>
+    return (
+      <p className={PageStyles.seconds + " seconds"}>{zeroPad(seconds, 2)}</p>
+    )
   }
 
   // Converts Military time(13:30) to Standard(1:30PM)
@@ -163,8 +167,14 @@ const EventPage = ({ data }) => {
     .map(function(event) {
       if (upcoming_events.length >= 1) {
         return (
-          <div className="col-sm-10 col-md-6 col-lap-3" key={event.node.slug}>
-            <div className="card dg-event">
+          <div
+            className={
+              PageStyles.dgEventHolder +
+              " col-sm-10 col-md-6 col-lap-3 dg-event-holder"
+            }
+            key={event.node.slug}
+          >
+            <div className={PageStyles.dgEvent + " card dg-event"}>
               <img
                 className="card-img-top"
                 src={
@@ -182,11 +192,14 @@ const EventPage = ({ data }) => {
                     ? event.node.event_city + ", " + event.node.event_state
                     : "Webinar - Online"}
                 </p>
-                <p className="card-event-date">
+                <p className={PageStyles.cardEventDate + " card-event-date"}>
                   {format_date_long(event.node.event_date)}
                 </p>
                 <a
-                  className="button flat transparent event-more-info-btn"
+                  className={
+                    PageStyles.eventMoreInfoBtn +
+                    " button flat transparent event-more-info-btn"
+                  }
                   href={event.node.slug}
                 >
                   + More Info
@@ -204,7 +217,7 @@ const EventPage = ({ data }) => {
   const display_past_events = () => {
     return (
       <div className="col-lap-10 offset-lap-1 col-md-12">
-        <div className="row singular-event">
+        <div className={PageStyles.singularEvent + " row singular-event"}>
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[0].node.slug}>
               <img
@@ -218,20 +231,34 @@ const EventPage = ({ data }) => {
               />
             </Link>
           </div>
-          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
-            <span class="button flat white-text past-event-date">
+          <div
+            className={
+              PageStyles.pastEventTitleAndDesc +
+              " col-sm-10 col-md-6 past-event-title-and-desc"
+            }
+          >
+            <span
+              className={
+                PageStyles.pastEventDate +
+                " button flat white-text past-event-date"
+              }
+            >
               {format_date_short(past_events[0].node.event_date)}
             </span>
             <Link to={"/events/" + past_events[0].node.slug}>
-              <p className="pe-title">{past_events[0].node.event_title}</p>
+              <p className={PageStyles.peTitle + " pe-title"}>
+                {past_events[0].node.event_title}
+              </p>
             </Link>
             {past_events[0].node.event_subtitle !== "" && (
-              <p className="pe-desc">{past_events[0].node.event_subtitle}</p>
+              <p className={PageStyles.peDesc + " pe-desc"}>
+                {past_events[0].node.event_subtitle}
+              </p>
             )}
           </div>
         </div>
 
-        <div className="row singular-event">
+        <div className={PageStyles.singularEvent + " row singular-event"}>
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[1].node.slug}>
               <img
@@ -245,20 +272,34 @@ const EventPage = ({ data }) => {
               />
             </Link>
           </div>
-          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
-            <span class="button flat white-text past-event-date">
+          <div
+            className={
+              PageStyles.pastEventTitleAndDesc +
+              " col-sm-10 col-md-6 past-event-title-and-desc"
+            }
+          >
+            <span
+              className={
+                PageStyles.pastEventDate +
+                " button flat white-text past-event-date"
+              }
+            >
               {format_date_short(past_events[1].node.event_date)}
             </span>
             <Link to={"/events/" + past_events[1].node.slug}>
-              <p className="pe-title">{past_events[1].node.event_title}</p>
+              <p className={PageStyles.peTitle + " pe-title"}>
+                {past_events[1].node.event_title}
+              </p>
             </Link>
             {past_events[1].node.event_subtitle !== "" && (
-              <p className="pe-desc">{past_events[1].node.event_subtitle}</p>
+              <p className={PageStyles.peDesc + " pe-desc"}>
+                {past_events[1].node.event_subtitle}
+              </p>
             )}
           </div>
         </div>
 
-        <div className="row singular-event">
+        <div className={PageStyles.singularEvent + " row singular-event"}>
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[2].node.slug}>
               <img
@@ -272,20 +313,34 @@ const EventPage = ({ data }) => {
               />
             </Link>
           </div>
-          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
-            <span class="button flat white-text past-event-date">
+          <div
+            className={
+              PageStyles.pastEventTitleAndDesc +
+              " col-sm-10 col-md-6 past-event-title-and-desc"
+            }
+          >
+            <span
+              className={
+                PageStyles.pastEventDate +
+                " button flat white-text past-event-date"
+              }
+            >
               {format_date_short(past_events[2].node.event_date)}
             </span>
             <Link to={"/events/" + past_events[2].node.slug}>
-              <p className="pe-title">{past_events[2].node.event_title}</p>
+              <p className={PageStyles.peTitle + " pe-title"}>
+                {past_events[2].node.event_title}
+              </p>
             </Link>
             {past_events[2].node.event_subtitle !== "" && (
-              <p className="pe-desc">{past_events[2].node.event_subtitle}</p>
+              <p className={PageStyles.peDesc + " pe-desc"}>
+                {past_events[2].node.event_subtitle}
+              </p>
             )}
           </div>
         </div>
 
-        <div className="row singular-event">
+        <div className={PageStyles.singularEvent + " row singular-event"}>
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[3].node.slug}>
               <img
@@ -299,15 +354,29 @@ const EventPage = ({ data }) => {
               />
             </Link>
           </div>
-          <div className="col-sm-10 col-md-6 past-event-title-and-desc">
-            <span class="button flat white-text past-event-date">
+          <div
+            className={
+              PageStyles.pastEventTitleAndDesc +
+              " col-sm-10 col-md-6 past-event-title-and-desc"
+            }
+          >
+            <span
+              className={
+                PageStyles.pastEventDate +
+                " button flat white-text past-event-date"
+              }
+            >
               {format_date_short(past_events[3].node.event_date)}
             </span>
             <Link to={"/events/" + past_events[3].node.slug}>
-              <p className="pe-title">{past_events[3].node.event_title}</p>
+              <p className={PageStyles.peTitle + " pe-title"}>
+                {past_events[3].node.event_title}
+              </p>
             </Link>
             {past_events[3].node.event_subtitle !== "" && (
-              <p className="pe-desc">{past_events[3].node.event_subtitle}</p>
+              <p className={PageStyles.peDesc + " pe-desc"}>
+                {past_events[3].node.event_subtitle}
+              </p>
             )}
           </div>
         </div>
@@ -324,29 +393,41 @@ const EventPage = ({ data }) => {
         </Helmet>
         <div>
           <BackgroundImage fluid={styleBackgroundImage}>
-            <div className="hero">
-              <div className="hero-overlay">
+            <div className={PageStyles.hero + " hero"}>
+              <div className={PageStyles.heroOverlay + " hero-overlay"}>
                 {/* Hero will be a layout component */}
 
                 <Container>
                   <div className="row">
                     <div className="col-sm-11 col-md-9 col-lap-6">
-                      <div className="dg-category-holder">
-                        <h1 className="button flat white-text dg-category">
+                      <div
+                        className={
+                          PageStyles.dgCategoryHolder + " dg-category-holder"
+                        }
+                      >
+                        <h1
+                          className={
+                            PageStyles.dgCategory +
+                            " button flat white-text dg-category"
+                          }
+                        >
                           Doctor Genius Events
                         </h1>
                       </div>
-                      <div className="titles">
+                      <div className={PageStyles.titles + " titles"}>
                         <h2>{featured_event.event_title}</h2>
-                        <p className="event-desc">
+                        <p className={PageStyles.eventDesc + " event-desc"}>
                           {featured_event.event_details_text}
                         </p>
                       </div>
-                      <div className="cta-btns">
+                      <div className={PageStyles.ctaBtns + " cta-btns"}>
                         {featured_event.register_url !== "" &&
                           (featured_event.register_url[0] !== "" && (
                             <a
-                              className="button flat white-text register-now-btn"
+                              className={
+                                PageStyles.registerNowBtn +
+                                " button flat white-text register-now-btn"
+                              }
                               href={featured_event.register_url}
                               target="_blank"
                               rel="noopener noreferrer"
@@ -358,7 +439,10 @@ const EventPage = ({ data }) => {
                           ))}
                         {featured_event.slug !== "" && (
                           <a
-                            className="button flat transparent hero-more-info-btn"
+                            className={
+                              PageStyles.heroMoreInfoBtn +
+                              " button flat transparent hero-more-info-btn"
+                            }
                             href={featured_event.slug}
                           >
                             + More Info
@@ -367,43 +451,81 @@ const EventPage = ({ data }) => {
                       </div>
                     </div>
                     {featured_event.dummy_data !== true && (
-                      <div className="col-sm-11 col-md-9 col-lap-6 event-countdown">
+                      <div
+                        className={
+                          PageStyles.eventCountdown +
+                          " col-sm-11 col-md-9 col-lap-6 event-countdown"
+                        }
+                      >
                         <h3>Next Event Starts:</h3>
-                        <div className="spacer solid"></div>
+                        <div
+                          className={PageStyles.spacer + " spacer solid"}
+                        ></div>
                         <div className="row">
-                          <div className="col-sm-3">
+                          <div
+                            className={
+                              PageStyles.timeHolder + " col-sm-3 time-holder"
+                            }
+                          >
                             <Countdown
                               date={countdown_date_and_time}
                               renderer={day_renderer}
                             />
-                            <p className="labels">Days</p>
+                            <p className={PageStyles.labels + " labels"}>
+                              Days
+                            </p>
                           </div>
-                          <div className="col-sm-3">
+                          <div
+                            className={
+                              PageStyles.timeHolder + " col-sm-3 time-holder"
+                            }
+                          >
                             <Countdown
                               date={countdown_date_and_time}
                               renderer={hours_renderer}
                             />
-                            <p className="labels">Hours</p>
+                            <p className={PageStyles.labels + " labels"}>
+                              Hours
+                            </p>
                           </div>
-                          <div className="col-sm-3">
+                          <div
+                            className={
+                              PageStyles.timeHolder + " col-sm-3 time-holder"
+                            }
+                          >
                             <Countdown
                               date={countdown_date_and_time}
                               renderer={minutes_renderer}
                             />
-                            <p className="labels">Minutes</p>
+                            <p className={PageStyles.labels + " labels"}>
+                              Minutes
+                            </p>
                           </div>
-                          <div className="col-sm-3">
+                          <div
+                            className={
+                              PageStyles.timeHolder + " col-sm-3 time-holder"
+                            }
+                          >
                             <Countdown
                               date={countdown_date_and_time}
                               renderer={seconds_renderer}
                             />
-                            <p className="labels">Seconds</p>
+                            <p className={PageStyles.labels + " labels"}>
+                              Seconds
+                            </p>
                           </div>
-                          <div className="col-sm-10">
-                            <span className="hero-event-date">
+                          <div
+                            className={
+                              PageStyles.heroDateAndTime +
+                              " col-sm-10 hero-date-and-time"
+                            }
+                          >
+                            <span>
                               {format_date_long(featured_event.event_date)}
                             </span>{" "}
-                            <span className="dot">&middot;</span>{" "}
+                            <span className={PageStyles.dot + " dot"}>
+                              &middot;
+                            </span>{" "}
                             <span className="event-time">
                               {featured_event.start_time !== "" && (
                                 <span className="start-time">
@@ -428,9 +550,19 @@ const EventPage = ({ data }) => {
           <Main>
             <Container>
               <div className="content-main">
-                <div className="content-block padded upcoming-events">
+                <div
+                  className={
+                    PageStyles.upcomingEvents +
+                    " content-block padded upcoming-events"
+                  }
+                >
                   <div className="row">
-                    <div className="col-sm-11 col-md-10 col-lap-9 intro-section">
+                    <div
+                      className={
+                        PageStyles.introSection +
+                        " col-sm-11 col-md-10 col-lap-9 intro-section"
+                      }
+                    >
                       <div className="inner-title center">
                         <h2>Upcoming Events</h2>
                       </div>
@@ -446,7 +578,12 @@ const EventPage = ({ data }) => {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-sm-11 col-md-9 col-lap-12 event-cards">
+                    <div
+                      className={
+                        PageStyles.eventCards +
+                        " col-sm-11 col-md-9 col-lap-12 event-cards"
+                      }
+                    >
                       <div className="row">{display_upcoming_events}</div>
                     </div>
                   </div>
@@ -454,7 +591,12 @@ const EventPage = ({ data }) => {
 
                 <div className="spacer solid"></div>
 
-                <div className="row panel-row featured-partners-row">
+                <div
+                  className={
+                    PageStyles.featuredPartnersRow +
+                    " row panel-row featured-partners-row"
+                  }
+                >
                   <div className="col-sm-12">
                     <div className="content-block">
                       <div className="inner-title center thin-heading">
@@ -465,19 +607,29 @@ const EventPage = ({ data }) => {
                   <div className="row">
                     <div className="col-sm-10 col-md-10 col-lap-10 col-lg-11">
                       <div className="row">
-                        <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
+                        <div
+                          className={
+                            PageStyles.logoPartnershipItem +
+                            " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
+                          }
+                        >
                           <div className="icon-wrapper">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={images.boaLogo.childImageSharp.fluid.src}
                               alt="Digital Marketing Partner Bank of America"
                             />
                           </div>
                         </div>
-                        <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
+                        <div
+                          className={
+                            PageStyles.logoPartnershipItem +
+                            " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
+                          }
+                        >
                           <div className="icon-wrapper">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={
                                 images.pattersonLogo.childImageSharp.fluid.src
                               }
@@ -485,10 +637,15 @@ const EventPage = ({ data }) => {
                             />
                           </div>
                         </div>
-                        <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
+                        <div
+                          className={
+                            PageStyles.logoPartnershipItem +
+                            " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
+                          }
+                        >
                           <div className="icon-wrapper">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={
                                 images.pulseCheckLogo.childImageSharp.fluid.src
                               }
@@ -496,10 +653,20 @@ const EventPage = ({ data }) => {
                             />
                           </div>
                         </div>
-                        <div className="logo-partnership-item col-sm-10 col-md-6 col-lap-3">
+                        <div
+                          className={
+                            PageStyles.logoPartnershipItem +
+                            " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
+                          }
+                        >
                           <div className="icon-wrapper">
                             <img
-                              className="img-icon google-partner-icon"
+                              className={
+                                PageStyles.imgIcon +
+                                " " +
+                                PageStyles.googlePartnerIcon +
+                                " img-icon google-partner-icon"
+                              }
                               src={images.googleLogo.childImageSharp.fluid.src}
                               alt="Google Partner"
                             />
@@ -512,11 +679,15 @@ const EventPage = ({ data }) => {
 
                 <div className="spacer solid"></div>
 
-                <div className="past-events">
+                <div className={PageStyles.pastEvents + " past-events"}>
                   <div className="row">
                     <div className="col-sm-11 col-md-11 col-lap-9 center">
                       <h2>Past Events</h2>
-                      <p className="past-event-desc">
+                      <p
+                        className={
+                          PageStyles.pastEventDesc + " past-event-desc"
+                        }
+                      >
                         At Doctor Genius, we understand that the digital
                         marketing platform is always changing and therefore,
                         offer events collaborating with other professionals in
@@ -529,7 +700,10 @@ const EventPage = ({ data }) => {
 
                   <div className="row">
                     <div
-                      className="col-lap-10 col-lg-9 col-md-11 past-events-timeline"
+                      className={
+                        PageStyles.pastEventsTimeline +
+                        " col-lap-10 col-lg-9 col-md-11 past-events-timeline"
+                      }
                       style={eventTimeLineStyles}
                     >
                       <div className="row">{display_past_events()}</div>
@@ -540,9 +714,14 @@ const EventPage = ({ data }) => {
                 <div className="spacer solid"></div>
 
                 {/* Begin Demo Footer */}
-                <div className="row padded tall-top request-demo-footer">
+                <div
+                  className={
+                    PageStyles.requestDemoFooter +
+                    " row padded tall-top request-demo-footer"
+                  }
+                >
                   <div className="col-sm-11 col-md-9 col-lap-5">
-                    <div className="content-block">
+                    <div className={PageStyles.contentBlock + " content-block"}>
                       <div className="inner-title">
                         <h2>
                           Start your <span>success</span> with Doctor Genius
@@ -561,7 +740,12 @@ const EventPage = ({ data }) => {
                   </div>
                   <div className="col-sm-10 col-md-5 col-lap-5">
                     <div className="center">
-                      <a href="/demo" className="button flat white-text">
+                      <a
+                        href="/demo"
+                        className={
+                          PageStyles.button + " button flat white-text"
+                        }
+                      >
                         Request Demo{" "}
                         <img src={thinArrowRight} alt="Arrow Right" />
                       </a>
