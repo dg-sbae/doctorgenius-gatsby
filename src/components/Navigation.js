@@ -620,20 +620,13 @@ class Navigation extends Component {
         event.preventDefault()
       })
       // END - Disable the title icon for the dropdown menu
-
-      $(".dismiss, .overlay").on("click", function() {
-        // hide sidebar
-        $("#sidebar").removeClass("active")
-        // hide overlay
-        $(".overlay").removeClass("active")
-      })
     })
   }
   render() {
     return (
       <div className="navigation-wrapper">
         <Sidebar />
-        <div className="overlay" />
+
         <nav className="navbar navbar-default navbar-expand-lap fixed-top">
           <Container>
             {/*<button type="button" id="sidebarCollapse" className="btn btn-info">

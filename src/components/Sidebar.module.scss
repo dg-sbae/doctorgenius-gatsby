@@ -128,3 +128,45 @@
 .sidebar.active {
   right: 0;
 }
+
+.overlay {
+  display: none;
+  position: fixed;
+  /* full screen */
+  width: 100vw;
+  height: 100vh;
+  /* transparent black */
+  background: rgba(74, 74, 74, 0.9);
+  /* middle layer, i.e. appears below the sidebar */
+  z-index: 2000;
+  opacity: 0;
+  /* animate the transition */
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+  display: block;
+  opacity: 1;
+  z-index: 1040;
+}
+
+.dismiss {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  z-index: 2040;
+  /* top right corner of the sidebar */
+  top: 15px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+
+  .dismiss-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+  }
+}

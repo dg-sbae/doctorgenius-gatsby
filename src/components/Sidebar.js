@@ -454,138 +454,145 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <nav className={SidebarStyles.sidebar + " sidebar"}>
-        <button
-          className="dismiss"
-          id=""
-          type="button"
-          data-toggle=""
-          aria-label=""
-        >
-          <img className="dismiss-icon" src={dismissIcon} alt="Dismiss Icon" />
-        </button>
+      <div>
+        <nav className={SidebarStyles.sidebar + " sidebar"}>
+          <button
+            className={SidebarStyles.dismiss + " dismiss"}
+            id=""
+            type="button"
+            data-toggle=""
+            aria-label=""
+          >
+            <img
+              className={SidebarStyles.dismissIcon + " dismiss-icon"}
+              src={dismissIcon}
+              alt="Dismiss Icon"
+            />
+          </button>
 
-        <ul className={SidebarStyles.navbarNav + " navbar-nav"}>
-          <SideNavListLink
-            className={SidebarStyles.navItem + " nav-item"}
-            dataToggle=""
-            iconSubnav={house}
-            // data-toggle="collapse"
-            // aria-expanded="false"
-            to="/"
-          >
-            Home
-          </SideNavListLink>
-          <MarketingSolutionsSideNavListLink
-            className={SidebarStyles.navItem + " nav-item"}
-            dataToggle="dropdown"
-            iconSubnav={marketingSolutions}
-            // data-toggle="collapse"
-            // aria-expanded="false"
-            to="/marketing-solutions"
-          >
-            Marketing Solutions
-          </MarketingSolutionsSideNavListLink>
-          <WhoWeServeSideNavListLink
-            className={SidebarStyles.navItem + " nav-item"}
-            dataToggle="dropdown"
-            iconSubnav={ourClients}
-            // data-toggle="collapse"
-            // aria-expanded="false"
-            to="/our-clients/dental-practices"
-          >
-            Our Clients
-          </WhoWeServeSideNavListLink>
-          <SideNavListLink
-            className={SidebarStyles.navItem + " nav-item"}
-            dataToggle="dropdown"
-            iconSubnav={plans}
-            // data-toggle="collapse"
-            // aria-expanded="false"
-            to="/plans"
-          >
-            Plans
-          </SideNavListLink>
-          <CompanySideNavListLink
-            className={SidebarStyles.navItem + " nav-item"}
-            dataToggle="dropdown"
-            iconSubnav={company}
-            // data-toggle="collapse"
-            // aria-expanded="false"
-            to="/company"
-          >
-            Company
-          </CompanySideNavListLink>
-          <ResourcesSideNavListLink
-            className={SidebarStyles.navItem + " nav-item"}
-            dataToggle="dropdown"
-            iconSubnav={resources}
-            // data-toggle="collapse"
-            // aria-expanded="false"
-            to="/blog"
-          >
-            Resources
-          </ResourcesSideNavListLink>
-          <SideNavListLink
-            className={SidebarStyles.navItem + " nav-item"}
-            dataToggle="dropdown"
-            iconSubnav={freeDemo}
-            // data-toggle="collapse"
-            // aria-expanded="false"
-            to="/demo"
-          >
-            Free Demo
-          </SideNavListLink>
-          <SideNavListLink
-            className={SidebarStyles.navItem + " nav-item"}
-            dataToggle="dropdown"
-            iconSubnav={contact}
-            // data-toggle="collapse"
-            // aria-expanded="false"
-            to="/contact"
-          >
-            Contact
-          </SideNavListLink>
-        </ul>
-        <div
-          className={
-            SidebarStyles.socialMediaContainer + " social-media-container"
-          }
-        >
-          <ul className={SidebarStyles.socialMedia + " social-media"}>
-            <ExternalLink
-              to="https://www.facebook.com/DoctorGeniusMarketing"
-              source={facebook}
-              alt="Facebook logo icon"
-              className="social-link-container"
-            />
-            <ExternalLink
-              to="https://twitter.com/DoctorGeniusCA"
-              source={twitter}
-              alt="Twitter logo icon"
-              className="social-link-container"
-            />
-            <ExternalLink
-              to="https://www.instagram.com/doctor.genius/"
-              source={instagram}
-              alt="Instagram logo icon"
-              className="social-link-container"
-            />
-            <ExternalLink
-              to="https://www.linkedin.com/company/doctor-genius"
-              source={linkedin}
-              alt="LinkedIn logo icon"
-              className="social-link-container"
-            />
-            <ExternalLink
-              to="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos"
-              source={youtube}
-              alt="Youtube logo icon"
-              className="social-link-container"
-            />
+          <ul className={SidebarStyles.navbarNav + " navbar-nav"}>
+            <SideNavListLink
+              className={SidebarStyles.navItem + " nav-item"}
+              dataToggle=""
+              iconSubnav={house}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/"
+            >
+              Home
+            </SideNavListLink>
+            <MarketingSolutionsSideNavListLink
+              className={SidebarStyles.navItem + " nav-item"}
+              dataToggle="dropdown"
+              iconSubnav={marketingSolutions}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/marketing-solutions"
+            >
+              Marketing Solutions
+            </MarketingSolutionsSideNavListLink>
+            <WhoWeServeSideNavListLink
+              className={SidebarStyles.navItem + " nav-item"}
+              dataToggle="dropdown"
+              iconSubnav={ourClients}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/our-clients/dental-practices"
+            >
+              Our Clients
+            </WhoWeServeSideNavListLink>
+            <SideNavListLink
+              className={SidebarStyles.navItem + " nav-item"}
+              dataToggle="dropdown"
+              iconSubnav={plans}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/plans"
+            >
+              Plans
+            </SideNavListLink>
+            <CompanySideNavListLink
+              className={SidebarStyles.navItem + " nav-item"}
+              dataToggle="dropdown"
+              iconSubnav={company}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/company"
+            >
+              Company
+            </CompanySideNavListLink>
+            <ResourcesSideNavListLink
+              className={SidebarStyles.navItem + " nav-item"}
+              dataToggle="dropdown"
+              iconSubnav={resources}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/blog"
+            >
+              Resources
+            </ResourcesSideNavListLink>
+            <SideNavListLink
+              className={SidebarStyles.navItem + " nav-item"}
+              dataToggle="dropdown"
+              iconSubnav={freeDemo}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/demo"
+            >
+              Free Demo
+            </SideNavListLink>
+            <SideNavListLink
+              className={SidebarStyles.navItem + " nav-item"}
+              dataToggle="dropdown"
+              iconSubnav={contact}
+              // data-toggle="collapse"
+              // aria-expanded="false"
+              to="/contact"
+            >
+              Contact
+            </SideNavListLink>
           </ul>
-        </div>
-      </nav>
+          <div
+            className={
+              SidebarStyles.socialMediaContainer + " social-media-container"
+            }
+          >
+            <ul className={SidebarStyles.socialMedia + " social-media"}>
+              <ExternalLink
+                to="https://www.facebook.com/DoctorGeniusMarketing"
+                source={facebook}
+                alt="Facebook logo icon"
+                className="social-link-container"
+              />
+              <ExternalLink
+                to="https://twitter.com/DoctorGeniusCA"
+                source={twitter}
+                alt="Twitter logo icon"
+                className="social-link-container"
+              />
+              <ExternalLink
+                to="https://www.instagram.com/doctor.genius/"
+                source={instagram}
+                alt="Instagram logo icon"
+                className="social-link-container"
+              />
+              <ExternalLink
+                to="https://www.linkedin.com/company/doctor-genius"
+                source={linkedin}
+                alt="LinkedIn logo icon"
+                className="social-link-container"
+              />
+              <ExternalLink
+                to="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos"
+                source={youtube}
+                alt="Youtube logo icon"
+                className="social-link-container"
+              />
+            </ul>
+          </div>
+        </nav>
+        <div className={SidebarStyles.overlay + " overlay"} />
+      </div>
     )
   }
 }
