@@ -34,18 +34,18 @@ const ListLink = props => (
 
 const SideNavListLink = props => (
   <li className={props.className}>
-    <div className="nav-icon-wrapper">
-      <div className="icon-wrapper">
+    <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           <img
-            className="image-icon"
+            className={SidebarStyles.imageIcon + " image-icon"}
             src={props.iconSubnav}
             alt="Navigation Icon"
           />
         </Link>
       </div>
     </div>
-    <div className="dropdown-links">
+    <div className={SidebarStyles.dropdownLinks + " dropdown-links"}>
       <Link to={props.to} activeClassName="active" partiallyActive={true}>
         {props.children}
       </Link>
@@ -56,24 +56,30 @@ const SideNavListLink = props => (
 
 const MarketingSolutionsSideNavListLink = props => (
   <li className={props.className}>
-    <div className="nav-icon-wrapper">
-      <div className="icon-wrapper">
+    <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           <img
-            className="image-icon"
+            className={SidebarStyles.imageIcon + " image-icon"}
             src={props.iconSubnav}
             alt="Marketing Solutions Icon"
           />
         </Link>
       </div>
     </div>
-    <div className="dropdown-links">
+    <div className={SidebarStyles.dropdownLinks + " dropdown-links"}>
       <div>
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           {props.children}
         </Link>
-        <span className="down-arrow-container">
-          <img className="down-arrow" src={downArrow} alt="Down Arrow Icon" />
+        <span
+          className={SidebarStyles.downArrowContainer + " down-arrow-container"}
+        >
+          <img
+            className={SidebarStyles.downArrow + " down-arrow"}
+            src={downArrow}
+            alt="Down Arrow Icon"
+          />
         </span>
       </div>
       <ul>
@@ -126,8 +132,8 @@ const MarketingSolutionsSideNavListLink = props => (
 
 const WhoWeServeSideNavListLink = props => (
   <li className={props.className}>
-    <div className="nav-icon-wrapper">
-      <div className="icon-wrapper">
+    <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
         <Link
           to={props.to}
           className=""
@@ -135,14 +141,14 @@ const WhoWeServeSideNavListLink = props => (
           partiallyActive={true}
         >
           <img
-            className="image-icon"
+            className={SidebarStyles.imageIcon + " image-icon"}
             src={props.iconSubnav}
             alt="Who We Serve Icon"
           />
         </Link>
       </div>
     </div>
-    <div className="dropdown-links">
+    <div className={SidebarStyles.dropdownLinks + " dropdown-links"}>
       <div>
         <Link
           to={props.to}
@@ -152,8 +158,14 @@ const WhoWeServeSideNavListLink = props => (
         >
           {props.children}
         </Link>
-        <span className="down-arrow-container">
-          <img className="down-arrow" src={downArrow} alt="Down Arrow Icon" />
+        <span
+          className={SidebarStyles.downArrowContainer + " down-arrow-container"}
+        >
+          <img
+            className={SidebarStyles.downArrow + " down-arrow"}
+            src={downArrow}
+            alt="Down Arrow Icon"
+          />
         </span>
       </div>
       <ul>
@@ -199,8 +211,8 @@ const WhoWeServeSideNavListLink = props => (
 
 const CompanySideNavListLink = props => (
   <li className={props.className}>
-    <div className="nav-icon-wrapper">
-      <div className="icon-wrapper">
+    <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
         <Link
           to={props.to}
           className="nav-disable-link-open-dropdown-icon"
@@ -208,14 +220,14 @@ const CompanySideNavListLink = props => (
           partiallyActive={true}
         >
           <img
-            className="image-icon"
+            className={SidebarStyles.imageIcon + " image-icon"}
             src={props.iconSubnav}
             alt="Company Icon"
           />
         </Link>
       </div>
     </div>
-    <div className="dropdown-links">
+    <div className={SidebarStyles.dropdownLinks + " dropdown-links"}>
       <div>
         <Link
           to={props.to}
@@ -225,8 +237,14 @@ const CompanySideNavListLink = props => (
         >
           {props.children}
         </Link>
-        <span className="down-arrow-container">
-          <img className="down-arrow" src={downArrow} alt="Down Arrow Icon" />
+        <span
+          className={SidebarStyles.downArrowContainer + " down-arrow-container"}
+        >
+          <img
+            className={SidebarStyles.downArrow + " down-arrow"}
+            src={downArrow}
+            alt="Down Arrow Icon"
+          />
         </span>
       </div>
       <ul>
@@ -248,24 +266,30 @@ const CompanySideNavListLink = props => (
 
 const ResourcesSideNavListLink = props => (
   <li className={props.className}>
-    <div className="nav-icon-wrapper">
-      <div className="icon-wrapper">
+    <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           <img
-            className="image-icon"
+            className={SidebarStyles.imageIcon + " image-icon"}
             src={props.iconSubnav}
             alt="Resources Icon"
           />
         </Link>
       </div>
     </div>
-    <div className="dropdown-links">
+    <div className={SidebarStyles.dropdownLinks + " dropdown-links"}>
       <div>
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           {props.children}
         </Link>
-        <span className="down-arrow-container">
-          <img className="down-arrow" src={downArrow} alt="Down Arrow Icon" />
+        <span
+          className={SidebarStyles.downArrowContainer + " down-arrow-container"}
+        >
+          <img
+            className={SidebarStyles.downArrow + " down-arrow"}
+            src={downArrow}
+            alt="Down Arrow Icon"
+          />
         </span>
       </div>
       <ul>
@@ -317,7 +341,7 @@ const ResourcesSideNavListLink = props => (
 const ExternalLink = props => (
   <li className={props.className}>
     <a href={props.to} target="_blank" rel="noreferrer noopener">
-      <div className="icon-wrapper">
+      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
         <img className="img-icon" src={props.source} alt={props.alt} />
       </div>
     </a>
@@ -359,7 +383,7 @@ class Sidebar extends Component {
           thisDropdownTitle.removeClass("show")
           thisDropdownList.slideUp(500)
         } else {
-          $("#sidebar .dropdown-links ul")
+          $(".sidebar .dropdown-links ul")
             .not(thisDropdownList)
             .slideUp(500)
           thisDropdownTitle.addClass("show")
@@ -376,7 +400,7 @@ class Sidebar extends Component {
           thisDropdownTitle.removeClass("show")
           thisDropdownList.slideUp(500)
         } else {
-          $("#sidebar .dropdown-links ul")
+          $(".sidebar .dropdown-links ul")
             .not(thisDropdownList)
             .slideUp(500)
           thisDropdownTitle.addClass("show")
@@ -385,31 +409,31 @@ class Sidebar extends Component {
       })
       // END - Disable the title icon for the dropdown menu
 
-      $("#dismiss, .overlay").on("click", function() {
+      $(".dismiss, .overlay").on("click", function() {
         // hide sidebar
-        $("#sidebar").removeClass("active")
+        $(".sidebar").removeClass(`${SidebarStyles.active} active`)
         // hide overlay
-        $(".overlay").removeClass("active")
+        $(".overlay").removeClass(`${SidebarStyles.active} active`)
       })
 
       $("#sidenav-trigger").on("click", function() {
         // open sidebar
-        $("#sidebar").addClass("active")
+        $(".sidebar").addClass(`${SidebarStyles.active} active`)
         // fade in the overlay
-        $(".overlay").addClass("active")
+        $(".overlay").addClass(`${SidebarStyles.active} active`)
         $(".collapse.in").toggleClass("in")
         $("a[aria-expanded=true]").attr("aria-expanded", "false")
       })
 
       // Controls toggling the dropdown items on dropdown arrow click
-      $("#sidebar .dropdown-links .down-arrow-container").on(
+      $(".sidebar .dropdown-links .down-arrow-container").on(
         "click",
         function() {
           var thisDropdownList = $(this)
             .parent()
             .siblings("ul")
           var thisDropdownTitle = $(this).parents(".nav-item")
-          $("#sidebar .dropdown-links ul")
+          $(".sidebar .dropdown-links ul")
             .not(thisDropdownList)
             .slideUp(500)
           if (thisDropdownTitle.hasClass("show")) {
@@ -418,7 +442,7 @@ class Sidebar extends Component {
           } else {
             thisDropdownList.slideDown(500)
             thisDropdownTitle.addClass("show")
-            $("#sidebar .dropdown-links ul")
+            $(".sidebar .dropdown-links ul")
               .not(thisDropdownList)
               .parents(".nav-item")
               .removeClass("show")
@@ -430,10 +454,10 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <nav id="sidebar">
+      <nav className={SidebarStyles.sidebar + " sidebar"}>
         <button
-          className=""
-          id="dismiss"
+          className="dismiss"
+          id=""
           type="button"
           data-toggle=""
           aria-label=""
@@ -441,9 +465,9 @@ class Sidebar extends Component {
           <img className="dismiss-icon" src={dismissIcon} alt="Dismiss Icon" />
         </button>
 
-        <ul className="navbar-nav">
+        <ul className={SidebarStyles.navbarNav + " navbar-nav"}>
           <SideNavListLink
-            className="nav-item"
+            className={SidebarStyles.navItem + " nav-item"}
             dataToggle=""
             iconSubnav={house}
             // data-toggle="collapse"
@@ -453,7 +477,7 @@ class Sidebar extends Component {
             Home
           </SideNavListLink>
           <MarketingSolutionsSideNavListLink
-            className="nav-item"
+            className={SidebarStyles.navItem + " nav-item"}
             dataToggle="dropdown"
             iconSubnav={marketingSolutions}
             // data-toggle="collapse"
@@ -463,7 +487,7 @@ class Sidebar extends Component {
             Marketing Solutions
           </MarketingSolutionsSideNavListLink>
           <WhoWeServeSideNavListLink
-            className="nav-item"
+            className={SidebarStyles.navItem + " nav-item"}
             dataToggle="dropdown"
             iconSubnav={ourClients}
             // data-toggle="collapse"
@@ -473,7 +497,7 @@ class Sidebar extends Component {
             Our Clients
           </WhoWeServeSideNavListLink>
           <SideNavListLink
-            className="nav-item"
+            className={SidebarStyles.navItem + " nav-item"}
             dataToggle="dropdown"
             iconSubnav={plans}
             // data-toggle="collapse"
@@ -483,7 +507,7 @@ class Sidebar extends Component {
             Plans
           </SideNavListLink>
           <CompanySideNavListLink
-            className="nav-item"
+            className={SidebarStyles.navItem + " nav-item"}
             dataToggle="dropdown"
             iconSubnav={company}
             // data-toggle="collapse"
@@ -493,7 +517,7 @@ class Sidebar extends Component {
             Company
           </CompanySideNavListLink>
           <ResourcesSideNavListLink
-            className="nav-item"
+            className={SidebarStyles.navItem + " nav-item"}
             dataToggle="dropdown"
             iconSubnav={resources}
             // data-toggle="collapse"
@@ -503,7 +527,7 @@ class Sidebar extends Component {
             Resources
           </ResourcesSideNavListLink>
           <SideNavListLink
-            className="nav-item"
+            className={SidebarStyles.navItem + " nav-item"}
             dataToggle="dropdown"
             iconSubnav={freeDemo}
             // data-toggle="collapse"
@@ -513,7 +537,7 @@ class Sidebar extends Component {
             Free Demo
           </SideNavListLink>
           <SideNavListLink
-            className="nav-item"
+            className={SidebarStyles.navItem + " nav-item"}
             dataToggle="dropdown"
             iconSubnav={contact}
             // data-toggle="collapse"
@@ -523,8 +547,12 @@ class Sidebar extends Component {
             Contact
           </SideNavListLink>
         </ul>
-        <div className="social-media-container">
-          <ul className="social-media">
+        <div
+          className={
+            SidebarStyles.socialMediaContainer + " social-media-container"
+          }
+        >
+          <ul className={SidebarStyles.socialMedia + " social-media"}>
             <ExternalLink
               to="https://www.facebook.com/DoctorGeniusMarketing"
               source={facebook}

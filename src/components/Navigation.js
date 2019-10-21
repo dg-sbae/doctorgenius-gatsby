@@ -621,7 +621,7 @@ class Navigation extends Component {
       })
       // END - Disable the title icon for the dropdown menu
 
-      $("#dismiss, .overlay").on("click", function() {
+      $(".dismiss, .overlay").on("click", function() {
         // hide sidebar
         $("#sidebar").removeClass("active")
         // hide overlay
