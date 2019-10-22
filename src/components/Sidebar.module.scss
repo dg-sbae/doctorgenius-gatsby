@@ -49,6 +49,13 @@
       // font-size: 18px;
       font-weight: 600;
       line-height: 1.1;
+      @include fluid-type(16px, 20px, $phone, $laptop);
+
+      ul {
+        li {
+          @include fluid-type(12px, 16px, $phone, $laptop);
+        }
+      }
 
       .dropdownLinks {
         display: inline-block;
