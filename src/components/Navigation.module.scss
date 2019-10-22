@@ -1,1 +1,81 @@
 @import "../styles/_site-variables.scss";
+
+nav {
+  height: 120px;
+  display: flex;
+  transition: all 0.3s;
+  @include media("<laptop") {
+    height: 75px;
+  }
+  .navButton {
+    border-color: white;
+  }
+  a {
+    transition: all 0.3s;
+  }
+  ul {
+    &.navbarNav {
+      position: relative;
+    }
+  }
+  &.navbar {
+    position: relative;
+    @include media("<=laptop") {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .navbarToggler {
+      right: 24px;
+      padding: 0;
+      border: none;
+      position: absolute;
+      margin-top: -5px;
+      .navbarTogglerIcon {
+        background-image: url("../img/icon/nav-toggler.svg");
+        height: 15px;
+        width: 21px;
+      }
+    }
+    .contactLinks {
+      @include media("<=laptop") {
+        display: none;
+      }
+    }
+    .dropdown {
+      display: inline-block;
+      position: static;
+    }
+    .dropdownMenu {
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 150;
+      left: -85px;
+      // right: 30%;
+      transition: opacity 0.5s;
+      top: 40px;
+      position: absolute;
+      border: none;
+      // transform: translateX(-50%);
+      // margin-right: auto;
+      // margin-left: auto;
+      .dropdownRow {
+        margin-bottom: 35px;
+      }
+      .dropdownRow:last-child {
+        margin-bottom: 0px;
+      }
+      .navIconWrapper {
+        display: inline-block;
+        width: 38px;
+        .imageIcon {
+          width: 32px;
+          height: 39px;
+        }
+      }
+      .dropdownContentBlock {
+        margin-left: 18px;
+      }
+    }
+  }
+}

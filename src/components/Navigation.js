@@ -36,7 +36,7 @@ const ListLink = props => (
 )
 
 const OurClientsListLink = props => (
-  <li className={props.dataToggle}>
+  <li className={NavStyles.dropdown + " " + props.dataToggle}>
     <Link
       className="dropdown-heading"
       to={props.to}
@@ -46,23 +46,33 @@ const OurClientsListLink = props => (
     >
       {props.children}
     </Link>
-    <div className="dropdown-menu caret who-we-serve-dropdown">
+    <div
+      className={
+        NavStyles.dropdownMenu + " dropdown-menu caret who-we-serve-dropdown"
+      }
+    >
       <div className="row">
         <div className="col-sm-12">
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/our-clients/dental-practices">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={dentalPractices}
                         alt="Dental Practices Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Dental Practices
                     </span>
@@ -74,16 +84,22 @@ const OurClientsListLink = props => (
             <div className="col-sm-6">
               <Link to="/our-clients/cosmetic-surgeons">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={cosmeticSurgeons}
                         alt="Cosmetic Surgeons Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Cosmetic Surgeons
                     </span>
@@ -93,20 +109,26 @@ const OurClientsListLink = props => (
               </Link>
             </div>
           </div>
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/our-clients/urgent-care-clinics">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={urgentCare}
                         alt="Urgent Care Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Urgent Care Clinics
                     </span>
@@ -121,16 +143,22 @@ const OurClientsListLink = props => (
             <div className="col-sm-6">
               <Link className="" to="/our-clients/healthcare-marketing">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={healthcareMarketing}
                         alt="Healthcare Marketing Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Healthcare Marketing
                     </span>
@@ -142,20 +170,26 @@ const OurClientsListLink = props => (
               </Link>
             </div>
           </div>
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/our-clients/chiropractor-practices">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={ourTech}
                         alt="Chiropractic Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Chiropractor Practices
                     </span>
@@ -168,7 +202,11 @@ const OurClientsListLink = props => (
               </Link>
             </div>
             <div className="col-sm-6">
-              <div className="dropdown-content-block">
+              <div
+                className={
+                  NavStyles.dropdownContentBlock + " dropdown-content-block"
+                }
+              >
                 <Link className="" to={props.to} />
                 <p />
               </div>
@@ -182,7 +220,7 @@ const OurClientsListLink = props => (
 )
 
 const MarketingSolutionsListLink = props => (
-  <li className={props.dataToggle}>
+  <li className={NavStyles.dropdown + " " + props.dataToggle}>
     <Link
       className="dropdown-heading"
       to={props.to}
@@ -192,23 +230,34 @@ const MarketingSolutionsListLink = props => (
     >
       {props.children}
     </Link>
-    <div className="dropdown-menu caret marketing-solutions-dropdown">
+    <div
+      className={
+        NavStyles.dropdownMenu +
+        " dropdown-menu caret marketing-solutions-dropdown"
+      }
+    >
       <div className="row">
         <div className="col-sm-12">
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/websites">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={responsiveWebsites}
                         alt="Marketing Solutions Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Responsive Websites
                     </span>
@@ -223,16 +272,22 @@ const MarketingSolutionsListLink = props => (
                 to="/marketing-solutions/online-reputation-management"
               >
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={onlineReputation}
                         alt="Online Reputation Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Online Reputation
                     </span>
@@ -245,20 +300,26 @@ const MarketingSolutionsListLink = props => (
               </Link>
             </div>
           </div>
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/content-marketing">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={contentMarketing}
                         alt="Content Marketing Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span
                       className="dropdown-content-title"
                       to="/marketing-solutions/content-marketing"
@@ -273,16 +334,22 @@ const MarketingSolutionsListLink = props => (
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/our-technology">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={ourTech}
                         alt="Our Technology Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Our Technology
                     </span>
@@ -292,20 +359,26 @@ const MarketingSolutionsListLink = props => (
               </Link>
             </div>
           </div>
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/digital-advertising">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={digitalAdvertising}
                         alt="Digital Advertising Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Digital Advertising
                     </span>
@@ -319,16 +392,22 @@ const MarketingSolutionsListLink = props => (
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/hosting-solutions">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={hostingSolutions}
                         alt="Hosting Solutions Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">
                       Hosting Solutions
                     </span>
@@ -346,7 +425,7 @@ const MarketingSolutionsListLink = props => (
 )
 
 const CompanyListLink = props => (
-  <li className={props.dataToggle}>
+  <li className={NavStyles.dropdown + " " + props.dataToggle}>
     <Link
       className="dropdown-heading disable-link"
       to={props.to}
@@ -356,21 +435,31 @@ const CompanyListLink = props => (
     >
       {props.children}
     </Link>
-    <div className="dropdown-menu caret resources-dropdown">
+    <div
+      className={
+        NavStyles.dropdownMenu + " dropdown-menu caret resources-dropdown"
+      }
+    >
       <div className="row">
         <div className="col-sm-12">
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/company">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <img
-                      className="image-icon"
+                      className={NavStyles.imageIcon + " image-icon"}
                       src={company}
                       alt="Company Icon"
                     />
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">About</span>
                     <p>
                       Offering high-end marketing services to health
@@ -383,16 +472,22 @@ const CompanyListLink = props => (
             <div className="col-sm-6">
               <Link className="" to="/partnerships">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={caseStudy}
                         alt="Case Studies Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">Partnerships</span>
                     <p>Establishing value-added partnerships</p>
                   </div>
@@ -400,18 +495,24 @@ const CompanyListLink = props => (
               </Link>
             </div>
           </div>
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6 ">
               <Link className="" to="/contact">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <img
-                      className="image-icon"
+                      className={NavStyles.imageIcon + " image-icon"}
                       src={contactUs}
                       alt="Contact Us Icon"
                     />
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">Contact Us</span>
                     <p>Have a question? Send us a message</p>
                   </div>
@@ -419,7 +520,11 @@ const CompanyListLink = props => (
               </Link>
             </div>
             <div className="col-sm-6">
-              <div className="dropdown-content-block">
+              <div
+                className={
+                  NavStyles.dropdownContentBlock + " dropdown-content-block"
+                }
+              >
                 <Link className="" to={props.to} />
                 <p />
               </div>
@@ -433,7 +538,7 @@ const CompanyListLink = props => (
 )
 
 const StudySingleListLink = props => (
-  <li className={props.dataToggle}>
+  <li className={NavStyles.dropdown + " " + props.dataToggle}>
     <Link
       className="dropdown-heading"
       to={props.to}
@@ -443,21 +548,31 @@ const StudySingleListLink = props => (
     >
       {props.children}
     </Link>
-    <div className="dropdown-menu caret resources-dropdown">
+    <div
+      className={
+        NavStyles.dropdownMenu + " dropdown-menu caret resources-dropdown"
+      }
+    >
       <div className="row">
         <div className="col-sm-12">
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/blog">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <img
-                      className="image-icon"
+                      className={NavStyles.imageIcon + " image-icon"}
                       src={theStudy}
                       alt="The Study Icon"
                     />
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">The Study</span>
                     <p>
                       Education on all things digital marketing and practice
@@ -470,16 +585,22 @@ const StudySingleListLink = props => (
             <div className="col-sm-6">
               <Link className="" to="/case-study">
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={caseStudy}
                         alt="Case Study Icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">Case Studies</span>
                     <p>
                       See Doctor Genius Action Plan to address one doctor’s
@@ -508,7 +629,7 @@ const StudySingleListLink = props => (
               </div>
             </div>*/}
           </div>
-          <div className="row dropdown-row">
+          <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             {/* Hidden until the content for page is finalized */}
             {/*<div className="col-sm-6">
               <div className="nav-icon-wrapper">
@@ -571,16 +692,22 @@ const StudySingleListLink = props => (
                 rel="noreferrer noopener"
               >
                 <div className="dropdown-item-block">
-                  <div className="nav-icon-wrapper">
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
                     <div className="icon-wrapper">
                       <img
-                        className="image-icon"
+                        className={NavStyles.imageIcon + " image-icon"}
                         src={loginPortalIcon}
                         alt="Client portal icon"
                       />
                     </div>
                   </div>
-                  <div className="dropdown-content-block">
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
                     <span className="dropdown-content-title">Portal Login</span>
                     <p>
                       Login for clients to our performance based marketing
@@ -591,7 +718,11 @@ const StudySingleListLink = props => (
               </a>
             </div>
             <div className="col-sm-6">
-              <div className="dropdown-content-block">
+              <div
+                className={
+                  NavStyles.dropdownContentBlock + " dropdown-content-block"
+                }
+              >
                 <Link className="" to={props.to} />
                 <p />
               </div>
@@ -627,14 +758,19 @@ class Navigation extends Component {
       <div className="navigation-wrapper">
         <Sidebar />
 
-        <nav className="navbar navbar-default navbar-expand-lap fixed-top">
+        <nav
+          className={
+            NavStyles.navbar +
+            " navbar navbar-default navbar-expand-lap fixed-top"
+          }
+        >
           <Container>
             {/*<button type="button" id="sidebarCollapse" className="btn btn-info">
               <i className="fas fa-align-left" />
               <span>Toggle Sidebar</span>
     </button>*/}
             <button
-              className="navbar-toggler"
+              className={NavStyles.navbarToggler + " navbar-toggler"}
               id="sidenav-trigger"
               type="button"
               data-toggle="collapse"
@@ -643,7 +779,9 @@ class Navigation extends Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon" />
+              <span
+                className={NavStyles.navbarTogglerIcon + " navbar-toggler-icon"}
+              />
             </button>
             <div className="logo">
               <Link to="/">
@@ -655,16 +793,22 @@ class Navigation extends Component {
               className="main-links collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav">
+              <ul className={NavStyles.navbarNav + " navbar-nav"}>
                 <MarketingSolutionsListLink
-                  className="nav-item dropdown marketing-solutions-dropdown"
+                  className={
+                    NavStyles.dropdown +
+                    " nav-item dropdown marketing-solutions-dropdown"
+                  }
                   dataToggle="dropdown"
                   to="/marketing-solutions"
                 >
                   Marketing Solutions
                 </MarketingSolutionsListLink>
                 <OurClientsListLink
-                  className="nav-item dropdown who-we-serve-dropdown"
+                  className={
+                    NavStyles.dropdown +
+                    " nav-item dropdown who-we-serve-dropdown"
+                  }
                   dataToggle="dropdown"
                   to="/our-clients/dental-practices"
                 >
@@ -675,14 +819,18 @@ class Navigation extends Component {
                   Plans
                 </ListLink>
                 <CompanyListLink
-                  className="nav-item dropdown company-dropdown"
+                  className={
+                    NavStyles.dropdown + " nav-item dropdown company-dropdown"
+                  }
                   dataToggle="dropdown"
                   to="/company"
                 >
                   Company
                 </CompanyListLink>
                 <StudySingleListLink
-                  className="nav-item dropdown resources-dropdown"
+                  className={
+                    NavStyles.dropdown + " nav-item dropdown resources-dropdown"
+                  }
                   dataToggle="dropdown"
                   to="/blog"
                 >
@@ -690,7 +838,7 @@ class Navigation extends Component {
                 </StudySingleListLink>
               </ul>
             </div>
-            <div className="contact-links">
+            <div className={NavStyles.contactLinks + " contact-links"}>
               <ul className="main-contact-links">
                 <li className="phone">
                   <a href="tel:877-477-2311">
@@ -700,7 +848,10 @@ class Navigation extends Component {
                 </li>
                 <ListLink
                   to="/demo"
-                  className="button nav-button transparent free-demo-button"
+                  className={
+                    NavStyles.navButton +
+                    " button nav-button transparent free-demo-button"
+                  }
                 >
                   Free Demo
                 </ListLink>
