@@ -4,12 +4,7 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
-.container,
-.container-fluid {
-  @include media(">=desktop") {
-    max-width: 1248px;
-  }
-}
+
 header {
   position: fixed;
   top: 0;
