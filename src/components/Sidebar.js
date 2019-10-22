@@ -409,18 +409,25 @@ class Sidebar extends Component {
       })
       // END - Disable the title icon for the dropdown menu
 
-      $(".dismiss, .overlay").on("click", function() {
-        // hide sidebar
-        $(".sidebar").removeClass(`${SidebarStyles.active} active`)
-        // hide overlay
-        $(".overlay").removeClass(`${SidebarStyles.active} active`)
-      })
+      $(`.${SidebarStyles.dismiss}, .${SidebarStyles.overlay}`).on(
+        "click",
+        function() {
+          // hide sidebar
+          $(".sidebar").removeClass(`${SidebarStyles.active} active`)
+          // hide overlay
+          $(`.${SidebarStyles.overlay}`).removeClass(
+            `${SidebarStyles.active} active`
+          )
+        }
+      )
 
       $("#sidenav-trigger").on("click", function() {
         // open sidebar
         $(".sidebar").addClass(`${SidebarStyles.active} active`)
         // fade in the overlay
-        $(".overlay").addClass(`${SidebarStyles.active} active`)
+        $(`.${SidebarStyles.overlay}`).addClass(
+          `${SidebarStyles.active} active`
+        )
         $(".collapse.in").toggleClass("in")
         $("a[aria-expanded=true]").attr("aria-expanded", "false")
       })
