@@ -738,10 +738,58 @@ const StudySingleListLink = props => (
 class Navigation extends Component {
   componentDidMount() {
     $(document).ready(function() {
+      window.addEventListener("scroll", event => {
+        // console.log("this is scrolling")
+        const winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop
+
+        if (winScroll > 0 && winScroll < 100) {
+          document
+            .querySelector("nav.navbar")
+            .classList.add("main-navbar-stuck")
+          document.querySelector("nav.navbar").classList.add("stuck-midway")
+          document.querySelector("nav.navbar").classList.remove("stuck-fully")
+        } else if (winScroll >= 100) {
+          document
+            .querySelector("nav.navbar")
+            .classList.add("main-navbar-stuck")
+          document.querySelector("nav.navbar").classList.add("stuck-fully")
+          document.querySelector("nav.navbar").classList.remove("stuck-midway")
+        } else {
+          document
+            .querySelector("nav.navbar")
+            .classList.remove("main-navbar-stuck")
+          document.querySelector("nav.navbar").classList.remove("stuck-midway")
+        }
+      })
       // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
       // let vh = window.innerHeight * 0.01
       // Then we set the value in the --vh custom property to the root of the document
       // document.getElementById("sidebar").style.setProperty("--vh", `${vh}px`)
+
+      $(document).ready(function() {
+        function toggleDropdown(e) {
+          const _d = $(e.target).closest(".dropdown"),
+            _m = $(".dropdown-menu", _d)
+          setTimeout(
+            function() {
+              const shouldOpen = e.type !== "click" && _d.is(":hover")
+              _m.toggleClass("show", shouldOpen)
+              _d.toggleClass("show", shouldOpen)
+              $('[data-toggle="dropdown"]', _d).attr(
+                "aria-expanded",
+                shouldOpen
+              )
+            },
+            e.type === "mouseleave" ? 100 : 0
+          )
+        }
+
+        $("body")
+          .on("mouseenter mouseleave", ".dropdown", toggleDropdown)
+          .on("click", ".dropdown-menu a", toggleDropdown)
+      })
+
       $(".dropdown-heading").click(function(event) {
         event.stopPropagation()
       })
@@ -753,6 +801,7 @@ class Navigation extends Component {
       // END - Disable the title icon for the dropdown menu
     })
   }
+
   render() {
     return (
       <div className="navigation-wrapper">
