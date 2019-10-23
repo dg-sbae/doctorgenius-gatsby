@@ -366,11 +366,6 @@ class Sidebar extends Component {
         event.stopPropagation()
       })
 
-      // START - Disable the title icon for the dropdown menu
-      $(".disable-link").click(function(event) {
-        event.preventDefault()
-      })
-
       $(".nav-disable-link-open-dropdown-icon").click(function(event) {
         event.preventDefault()
         var thisDropdownList = $(this)
