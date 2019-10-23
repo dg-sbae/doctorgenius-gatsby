@@ -1,4 +1,7 @@
 @import "../styles/_site-variables.scss";
 
 .container {
+  @include media(">=desktop") {
+    max-width: 1248px;
+  }
 }
