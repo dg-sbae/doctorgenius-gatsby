@@ -31,7 +31,7 @@ export default props => (
                     <br className="line-break-desc" />
                     our new blog,{" "}
                     <span className="strapline">
-                      <Link to="/the-study/">The Study</Link>
+                      <Link to="/blog/">The Study</Link>
                     </span>
                     , to find out about our latest services and technology.
                   </p>

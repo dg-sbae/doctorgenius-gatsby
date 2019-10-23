@@ -19,7 +19,6 @@ import rightChevron from "../img/right-chevron.svg"
 import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
-//import { isContext } from "vm"
 
 const ResponsivePostsColumnHeader = props => (
   <div className="col-sm-12 d-lg-none responsive-tab-trigger">
@@ -93,7 +92,8 @@ class ResponsivePostsColumn extends Component {
   }
 }
 
-const TheStudyPaginationPage = ({ data, pageContext }) => {
+const TagsPage = ({ data, pageContext }) => {
+  const images = data
   //Isolate the blog and categories routes
   //This should be located globally, or the categories and archive page combined
   const postsPath = "/blog/"
@@ -101,27 +101,32 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
     {
       name: "Digital Marketing",
       slug: "digital-marketing",
-      image: data.marketingCategoryImage.childImageSharp.fluid.src,
+      image: images.marketingCategoryImage.childImageSharp.fluid.src,
     },
     {
       name: "Practice Management",
       slug: "practice-management",
-      image: data.practiceManagementImage.childImageSharp.fluid.src,
+      image: images.practiceManagementImage.childImageSharp.fluid.src,
     },
     {
       name: "Genius Lab",
       slug: "genius-lab",
-      image: data.geniusLabImage.childImageSharp.fluid.src,
+      image: images.geniusLabImage.childImageSharp.fluid.src,
     },
   ]
+
   // Variables for the next/prev button in pagination
   const isFirst = pageContext.currentPage === 1
   const isLast = pageContext.currentPage === pageContext.numPages
   const prevPage =
     pageContext.currentPage - 1 === 1
-      ? "/blog"
-      : "/blog/" + (pageContext.currentPage - 1).toString()
-  const nextPage = "/blog/" + (pageContext.currentPage + 1).toString()
+      ? "/blog/" + pageContext.slug
+      : "/blog/" +
+        pageContext.slug +
+        "/" +
+        (pageContext.currentPage - 1).toString()
+  const nextPage =
+    "/blog/" + pageContext.slug + "/" + (pageContext.currentPage + 1).toString()
 
   // Variables used in the pagination loop
   const currentPage = pageContext.currentPage
@@ -142,13 +147,15 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
 
   return (
     <DefaultPageLayout>
-      <Helmet>
-        <title>Practice Management & Digital Marketing Blog | The Study</title>
-        <meta
-          name="description"
-          content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-        />
-      </Helmet>
+      {
+        // Meta description for Genius Lab category
+        <Helmet>
+          <title>{`${pageContext.name}`} - Doctor Genius | Doctor Genius</title>
+          <meta name="description" content="" />
+          <meta name="robots" content="noindex,nofollow" />
+        </Helmet>
+      }
+
       <div className="the-study">
         <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
           <div className="hero">
@@ -180,7 +187,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
             <div className="row padded category">
               {categoriesPaths.map(category => (
                 <div className="col-sm-4" key={category.name}>
-                  <a href={postsPath + category.slug} rel="nofollow">
+                  <a href={postsPath + category.slug}>
                     <div className="category-image">
                       <img
                         src={category.image}
@@ -199,17 +206,15 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
               <ResponsivePostsColumn>
                 <LatestPostsColumn>
                   <h3 className="blog-heading d-sm-none d-lg-block">
-                    Latest Posts
+                    {pageContext.name} Posts
                   </h3>
-                  <div className=" d-sm-none spacer small solid" />
-
-                  {data.latest.edges.map(({ node }) => {
-                    // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
+                  <div className="d-sm-none spacer small solid" />
+                  {data.tagPosts.edges.map(({ node }) => {
+                    // This combs the list of categories attached to a post and returns the first one matching our selected Categories
                     // The deprecated categories on dg.com like "DoctorGenius" were causing an error
                     const mainCategory = node.categories.find(c =>
                       categoriesPaths.find(d => d.name === c.name)
                     )
-                    // console.log(mainCategory)
                     return (
                       <div className="latest-post" key={node.title}>
                         <div className="featured-image-holder">
@@ -222,6 +227,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                             />
                           </a>
                         </div>
+
                         <div className="content-holder">
                           <div className="details">
                             <p className="date">{node.date}</p>
@@ -234,13 +240,12 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                     i => i.name === mainCategory.name
                                   ).slug
                                 }
-                                rel="nofollow"
                               >
                                 {mainCategory.name}
                               </a>
                             </p>
                           </div>
-                          <h4 className="title">
+                          <h4 className="truncate">
                             <a
                               className="not-a-link"
                               href={postsPath + node.slug}
@@ -252,15 +257,11 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                             className="excerpt"
                             dangerouslySetInnerHTML={{
                               __html: node.excerpt.replace(
-                                /<a.*?moretag.*?<\/a>/,
-                                '... <a href="' +
-                                  postsPath +
-                                  node.slug +
-                                  '" target="_blank">[ Read More ]</a>'
+                                /https:\/\/doctorgenius.com/,
+                                "/blog"
                               ),
                             }}
                           />
-                          <p className="readmore-link"></p>
                         </div>
                       </div>
                     )
@@ -276,27 +277,28 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                     {}
                     {// Loop to create pagination links based on numOfPages
 
-                    Array.from(
-                      { length: pageContext.numPaginationLinks },
-                      (_, i) => (
-                        <Link
-                          key={`pagination-number${i + start}`}
-                          to={`/blog${
-                            i + start - 1 === 0 ? "" : "/" + (i + start)
-                          }`}
-                        >
-                          <p
-                            className={
-                              pageContext.currentPage === i + start
-                                ? "active"
-                                : ""
-                            }
+                    pageContext.numPaginationLinks > 1 &&
+                      Array.from(
+                        { length: pageContext.numPaginationLinks },
+                        (_, i) => (
+                          <Link
+                            key={`pagination-number${i + start}`}
+                            to={`/blog/${pageContext.slug}/${
+                              i + start - 1 === 0 ? "" : "/" + (i + start)
+                            }`}
                           >
-                            {i + start}
-                          </p>
-                        </Link>
-                      )
-                    )}
+                            <p
+                              className={
+                                pageContext.currentPage === i + start
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              {i + start}
+                            </p>
+                          </Link>
+                        )
+                      )}
                     {// Controls the next button
                     !isLast && (
                       <Link to={nextPage} rel="next">
@@ -305,6 +307,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                     )}
                   </div>
                 </LatestPostsColumn>
+
                 <PopularPostsColumn>
                   <div className="stay-connected">
                     <div className="row">
@@ -361,13 +364,15 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                           <a href={`/blog/${node.slug}`} key={node.title}>
                             <div className="popular-post">
                               <div className="featured-image-holder">
-                                {/*console.log(node)*/}
-                                <Img
-                                  fluid={
-                                    node.featured_media.localFile
-                                      .childImageSharp.fluid
-                                  }
-                                />
+                                {
+                                  //console.log(node)}
+                                  <Img
+                                    fluid={
+                                      node.featured_media.localFile
+                                        .childImageSharp.fluid
+                                    }
+                                  />
+                                }
                               </div>
                               <div className="content-holder">
                                 <p className="d-md-block d-lg-none details date">
@@ -383,7 +388,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                   className="excerpt d-md-block d-lg-none"
                                   dangerouslySetInnerHTML={{
                                     __html: node.excerpt.replace(
-                                      /^\//,
+                                      /https:\/\/doctorgenius.com/,
                                       "/blog"
                                     ),
                                   }}
@@ -404,7 +409,6 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                           <a
                             href={postsPath + category.slug}
                             key={category.name}
-                            rel="nofollow"
                           >
                             <span className="label primary">
                               <p>{category.name}</p>
@@ -485,12 +489,13 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
   )
 }
 
-export default TheStudyPaginationPage
+export default TagsPage
 
 // Note: The graphQL variable here is automagically passed from gatsby-node.js in context
 export const pageQuery = graphql`
-  query blogPageQuery($skip: Int!, $limit: Int!) {
-    latest: allWordpressPost(
+  query tagsPageQuery($slug: String, $skip: Int!, $limit: Int!) {
+    tagPosts: allWordpressPost(
+      filter: { tags: { elemMatch: { slug: { eq: $slug } } } }
       sort: { fields: [date], order: [DESC] }
       limit: $limit
       skip: $skip
@@ -503,7 +508,6 @@ export const pageQuery = graphql`
       }
     }
     popular: allWordpressPost(
-      filter: { categories: { elemMatch: { name: { eq: "Popular" } } } }
       sort: { fields: [date], order: [DESC] }
       limit: 4
     ) {
