@@ -129,6 +129,16 @@
         height: auto;
       }
     }
+    .socialLinkContainer {
+      border: transparent solid 1px;
+      border-radius: 50%;
+      height: 28px;
+      width: 28px;
+    }
+    .socialLinkContainer:hover {
+      border: #0289e0 solid 1px;
+      background-color: #0289e0;
+    }
   }
 }
 

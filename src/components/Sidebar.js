@@ -569,31 +569,41 @@ class Sidebar extends Component {
                 to="https://www.facebook.com/DoctorGeniusMarketing"
                 source={facebook}
                 alt="Facebook logo icon"
-                className="social-link-container"
+                className={
+                  SidebarStyles.socialLinkContainer + " social-link-container"
+                }
               />
               <ExternalLink
                 to="https://twitter.com/DoctorGeniusCA"
                 source={twitter}
                 alt="Twitter logo icon"
-                className="social-link-container"
+                className={
+                  SidebarStyles.socialLinkContainer + " social-link-container"
+                }
               />
               <ExternalLink
                 to="https://www.instagram.com/doctor.genius/"
                 source={instagram}
                 alt="Instagram logo icon"
-                className="social-link-container"
+                className={
+                  SidebarStyles.socialLinkContainer + " social-link-container"
+                }
               />
               <ExternalLink
                 to="https://www.linkedin.com/company/doctor-genius"
                 source={linkedin}
                 alt="LinkedIn logo icon"
-                className="social-link-container"
+                className={
+                  SidebarStyles.socialLinkContainer + " social-link-container"
+                }
               />
               <ExternalLink
                 to="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos"
                 source={youtube}
                 alt="Youtube logo icon"
-                className="social-link-container"
+                className={
+                  SidebarStyles.socialLinkContainer + " social-link-container"
+                }
               />
             </ul>
           </div>
