@@ -13,9 +13,14 @@ nav {
   a {
     transition: all 0.3s;
   }
-  ul {
-    &.navbarNav {
-      position: relative;
+  ul.navbarNav {
+    position: relative;
+    li a {
+      transition: text-shadow 0.3s;
+      &:hover,
+      &.active:hover {
+        text-shadow: 0 0 0.65px #fff, 0 0 0.65px #fff;
+      }
     }
   }
   &.navbar {
@@ -40,10 +45,41 @@ nav {
       @include media("<=laptop") {
         display: none;
       }
+      .mainContactLinks {
+        .freeDemoButton {
+          padding-left: 0;
+          padding-right: 0;
+          width: auto;
+        }
+        a {
+          padding: 10px 21px;
+        }
+      }
     }
     .dropdown {
       display: inline-block;
       position: static;
+      a.dropdownHeading:after {
+        content: "";
+        transition: opacity 0.5s;
+        opacity: 0;
+      }
+    }
+    .dropdown.show {
+      a.dropdownHeading {
+        position: relative;
+      }
+      a.dropdownHeading:after {
+        // content: "";
+        opacity: 1;
+        position: absolute;
+        top: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 9px solid #285c94;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+      }
     }
     .dropdownMenu {
       display: block;
@@ -76,6 +112,138 @@ nav {
       .dropdownContentBlock {
         margin-left: 18px;
       }
+    }
+    .dropdownMenu.show {
+      visibility: visible;
+      opacity: 1;
+      padding: 50px;
+      .dropdownRow {
+        width: 700px;
+        justify-content: space-around;
+        .dropdownItemBlock:hover {
+          .dropdownContentTitle {
+            text-shadow: 0 0 0.65px #8bd2ff, 0 0 0.65px #8bd2ff;
+            color: #8bd2ff;
+          }
+        }
+        img {
+          padding-top: 7px;
+        }
+        .dropdownContentBlock {
+          display: inline-block;
+          margin-left: 15px;
+          width: 80%;
+          vertical-align: top;
+          .dropdownContentTitle {
+            font-size: 14px;
+            font-weight: $font-weight-medium;
+            // letter-spacing: 0.1em;
+            transition: text-shadow 0.3s, color 0.3s;
+          }
+          p {
+            font-size: 12px;
+            font-weight: $font-weight-light;
+            margin-top: 5px;
+          }
+        }
+      }
+      .dropdownRow:last-child {
+        .dropdownContentBlock p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &.navbar.mainNavbarStuck {
+    box-shadow: 0 1px 1px $grid-border;
+    background-color: #fff;
+    @include media("<=laptop") {
+      //background-color: $primary;
+      background: linear-gradient(
+        45deg,
+        rgba(#0074cf, 0.95) 0%,
+        rgba(#0074cf, 0.95) 55%,
+        rgba(#0b97c1, 0.95) 100%
+      );
+    }
+    &.stuckMidway {
+      height: 100px;
+      @include media("<laptop") {
+        height: 70px;
+      }
+      .dropdownMenu {
+        top: 58px;
+      }
+    }
+    &.stuckFully {
+      height: 80px;
+      @include media("<laptop") {
+        height: 65px;
+      }
+      .dropdownMenu {
+        top: 48px;
+      }
+      .dropdown.show {
+        a.dropdownHeading:after {
+          top: 40px;
+        }
+      }
+    }
+    a {
+      color: $demo-body-text;
+    }
+    .logoHolder {
+      background-image: url("../img/icon/logo-blue.svg");
+      @include media("<=laptop") {
+        background-image: url("../img/icon/logo-white.svg");
+        background-position: initial;
+      }
+    }
+    .phoneHolder {
+      background-image: url("../img/icon/phone-blue.svg");
+    }
+    .navButton {
+      border-color: $primary;
+    }
+    .active {
+      color: $primary;
+    }
+    .contactLinks {
+      a {
+        color: $primary;
+      }
+    }
+    .dropdownMenu {
+      a {
+        color: $primary-text;
+      }
+    }
+    .navbarNav {
+      li a:hover {
+        text-shadow: 0 0 0.65px rgb(84, 84, 84) !important;
+      }
+      li a.active:hover {
+        text-shadow: 0 0 0.65px $primary !important;
+      }
+    }
+    .dropdown.show {
+      a.dropdownHeading:after {
+        top: 50px;
+      }
+    }
+    .freeDemoButton {
+      background-color: $demo-button-green;
+      border: $demo-button-green;
+      // background-color: red !important;
+      transition: 0.3s background-color, 0.3s border-color;
+      a {
+        color: $primary-text !important;
+        transition: 0.3s color;
+      }
+    }
+    .freeDemoButton:hover {
+      background-color: $button-hover-green !important;
+      border-color: $button-hover-green !important;
     }
   }
 }

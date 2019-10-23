@@ -28,7 +28,11 @@ import $ from "jquery"
 
 const ListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
-    <Link to={props.to} activeClassName="active" partiallyActive={true}>
+    <Link
+      to={props.to}
+      activeClassName={NavStyles.active + " active"}
+      partiallyActive={true}
+    >
       {props.children}
     </Link>
     {}
@@ -38,9 +42,9 @@ const ListLink = props => (
 const OurClientsListLink = props => (
   <li className={NavStyles.dropdown + " " + props.dataToggle}>
     <Link
-      className="dropdown-heading"
+      className={NavStyles.dropdownHeading + " dropdown-heading"}
       to={props.to}
-      activeClassName="active"
+      activeClassName={NavStyles.active + " active"}
       partiallyActive={true}
       data-toggle={props.dataToggle}
     >
@@ -56,7 +60,11 @@ const OurClientsListLink = props => (
           <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/our-clients/dental-practices">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -73,7 +81,12 @@ const OurClientsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Dental Practices
                     </span>
                     <p>Bringing in new dental patients every day</p>
@@ -83,7 +96,11 @@ const OurClientsListLink = props => (
             </div>
             <div className="col-sm-6">
               <Link to="/our-clients/cosmetic-surgeons">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -100,7 +117,12 @@ const OurClientsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Cosmetic Surgeons
                     </span>
                     <p>Attract new patients to your office</p>
@@ -112,7 +134,11 @@ const OurClientsListLink = props => (
           <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/our-clients/urgent-care-clinics">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -129,7 +155,12 @@ const OurClientsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Urgent Care Clinics
                     </span>
                     <p>
@@ -142,7 +173,11 @@ const OurClientsListLink = props => (
             </div>
             <div className="col-sm-6">
               <Link className="" to="/our-clients/healthcare-marketing">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -159,7 +194,12 @@ const OurClientsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Healthcare Marketing
                     </span>
                     <p>
@@ -173,7 +213,11 @@ const OurClientsListLink = props => (
           <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/our-clients/chiropractor-practices">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -190,7 +234,12 @@ const OurClientsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Chiropractor Practices
                     </span>
                     <p>
@@ -222,9 +271,9 @@ const OurClientsListLink = props => (
 const MarketingSolutionsListLink = props => (
   <li className={NavStyles.dropdown + " " + props.dataToggle}>
     <Link
-      className="dropdown-heading"
+      className={NavStyles.dropdownHeading + " dropdown-heading"}
       to={props.to}
-      activeClassName="active"
+      activeClassName={NavStyles.active + " active"}
       partiallyActive={true}
       data-toggle={props.dataToggle}
     >
@@ -241,7 +290,11 @@ const MarketingSolutionsListLink = props => (
           <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/websites">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -258,7 +311,12 @@ const MarketingSolutionsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Responsive Websites
                     </span>
                     <p>Beautiful, High Performing Websites Built to Convert</p>
@@ -271,7 +329,11 @@ const MarketingSolutionsListLink = props => (
                 className=""
                 to="/marketing-solutions/online-reputation-management"
               >
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -288,7 +350,12 @@ const MarketingSolutionsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Online Reputation
                     </span>
                     <p>
@@ -303,7 +370,11 @@ const MarketingSolutionsListLink = props => (
           <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/content-marketing">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -321,7 +392,10 @@ const MarketingSolutionsListLink = props => (
                     }
                   >
                     <span
-                      className="dropdown-content-title"
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
                       to="/marketing-solutions/content-marketing"
                     >
                       Content Marketing
@@ -333,7 +407,11 @@ const MarketingSolutionsListLink = props => (
             </div>
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/our-technology">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -350,7 +428,12 @@ const MarketingSolutionsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Our Technology
                     </span>
                     <p>Experience our performance based marketing program</p>
@@ -362,7 +445,11 @@ const MarketingSolutionsListLink = props => (
           <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/digital-advertising">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -379,7 +466,12 @@ const MarketingSolutionsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Digital Advertising
                     </span>
                     <p>
@@ -391,7 +483,11 @@ const MarketingSolutionsListLink = props => (
             </div>
             <div className="col-sm-6">
               <Link className="" to="/marketing-solutions/hosting-solutions">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -408,7 +504,12 @@ const MarketingSolutionsListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
                       Hosting Solutions
                     </span>
                     <p>Enterprise Power for Medical Practice Websites</p>
@@ -427,9 +528,9 @@ const MarketingSolutionsListLink = props => (
 const CompanyListLink = props => (
   <li className={NavStyles.dropdown + " " + props.dataToggle}>
     <Link
-      className="dropdown-heading disable-link"
+      className={NavStyles.dropdownHeading + " dropdown-heading disable-link"}
       to={props.to}
-      activeClassName="active"
+      activeClassName={NavStyles.active + " active"}
       partiallyActive={true}
       data-toggle={props.dataToggle}
     >
@@ -445,7 +546,11 @@ const CompanyListLink = props => (
           <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/company">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -460,7 +565,14 @@ const CompanyListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">About</span>
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
+                      About
+                    </span>
                     <p>
                       Offering high-end marketing services to health
                       professionals
@@ -471,7 +583,11 @@ const CompanyListLink = props => (
             </div>
             <div className="col-sm-6">
               <Link className="" to="/partnerships">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -488,7 +604,14 @@ const CompanyListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">Partnerships</span>
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
+                      Partnerships
+                    </span>
                     <p>Establishing value-added partnerships</p>
                   </div>
                 </div>
@@ -498,7 +621,11 @@ const CompanyListLink = props => (
           <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6 ">
               <Link className="" to="/contact">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -513,7 +640,14 @@ const CompanyListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">Contact Us</span>
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
+                      Contact Us
+                    </span>
                     <p>Have a question? Send us a message</p>
                   </div>
                 </div>
@@ -540,9 +674,9 @@ const CompanyListLink = props => (
 const StudySingleListLink = props => (
   <li className={NavStyles.dropdown + " " + props.dataToggle}>
     <Link
-      className="dropdown-heading"
+      className={NavStyles.dropdownHeading + " dropdown-heading"}
       to={props.to}
-      activeClassName="active"
+      activeClassName={NavStyles.active + " active"}
       partiallyActive={true}
       data-toggle={props.dataToggle}
     >
@@ -558,7 +692,11 @@ const StudySingleListLink = props => (
           <div className={NavStyles.dropdownRow + " row dropdown-row"}>
             <div className="col-sm-6">
               <Link className="" to="/blog">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -573,7 +711,14 @@ const StudySingleListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">The Study</span>
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
+                      The Study
+                    </span>
                     <p>
                       Education on all things digital marketing and practice
                       management
@@ -584,7 +729,11 @@ const StudySingleListLink = props => (
             </div>
             <div className="col-sm-6">
               <Link className="" to="/case-study">
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -601,7 +750,14 @@ const StudySingleListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">Case Studies</span>
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
+                      Case Studies
+                    </span>
                     <p>
                       See Doctor Genius Action Plan to address one doctor’s
                       needs
@@ -691,7 +847,11 @@ const StudySingleListLink = props => (
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <div className="dropdown-item-block">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
                   <div
                     className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
                   >
@@ -708,7 +868,14 @@ const StudySingleListLink = props => (
                       NavStyles.dropdownContentBlock + " dropdown-content-block"
                     }
                   >
-                    <span className="dropdown-content-title">Portal Login</span>
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
+                      Portal Login
+                    </span>
                     <p>
                       Login for clients to our performance based marketing
                       program
@@ -739,27 +906,36 @@ class Navigation extends Component {
   componentDidMount() {
     $(document).ready(function() {
       window.addEventListener("scroll", event => {
-        // console.log("this is scrolling")
         const winScroll =
           document.body.scrollTop || document.documentElement.scrollTop
 
         if (winScroll > 0 && winScroll < 100) {
           document
-            .querySelector("nav.navbar")
-            .classList.add("main-navbar-stuck")
-          document.querySelector("nav.navbar").classList.add("stuck-midway")
-          document.querySelector("nav.navbar").classList.remove("stuck-fully")
+            .querySelector(`nav.${NavStyles.navbar}`)
+            .classList.add(`${NavStyles.mainNavbarStuck}`)
+          document
+            .querySelector(`nav.${NavStyles.navbar}`)
+            .classList.add(`${NavStyles.stuckMidway}`)
+          document
+            .querySelector(`nav.${NavStyles.navbar}`)
+            .classList.remove(`${NavStyles.stuckFully}`)
         } else if (winScroll >= 100) {
           document
-            .querySelector("nav.navbar")
-            .classList.add("main-navbar-stuck")
-          document.querySelector("nav.navbar").classList.add("stuck-fully")
-          document.querySelector("nav.navbar").classList.remove("stuck-midway")
+            .querySelector(`nav.${NavStyles.navbar}`)
+            .classList.add(`${NavStyles.mainNavbarStuck}`)
+          document
+            .querySelector(`nav.${NavStyles.navbar}`)
+            .classList.add(`${NavStyles.stuckFully}`)
+          document
+            .querySelector(`nav.${NavStyles.navbar}`)
+            .classList.remove(`${NavStyles.stuckMidway}`)
         } else {
           document
-            .querySelector("nav.navbar")
-            .classList.remove("main-navbar-stuck")
-          document.querySelector("nav.navbar").classList.remove("stuck-midway")
+            .querySelector(`nav.${NavStyles.navbar}`)
+            .classList.remove(`${NavStyles.mainNavbarStuck}`)
+          document
+            .querySelector(`nav.${NavStyles.navbar}`)
+            .classList.remove(`${NavStyles.stuckMidway}`)
         }
       })
       // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -769,13 +945,13 @@ class Navigation extends Component {
 
       $(document).ready(function() {
         function toggleDropdown(e) {
-          const _d = $(e.target).closest(".dropdown"),
-            _m = $(".dropdown-menu", _d)
+          const _d = $(e.target).closest(`.${NavStyles.dropdown}`),
+            _m = $(`.${NavStyles.dropdownMenu}`, _d)
           setTimeout(
             function() {
               const shouldOpen = e.type !== "click" && _d.is(":hover")
-              _m.toggleClass("show", shouldOpen)
-              _d.toggleClass("show", shouldOpen)
+              _m.toggleClass(`${NavStyles.show}`, shouldOpen)
+              _d.toggleClass(`${NavStyles.show}`, shouldOpen)
               $('[data-toggle="dropdown"]', _d).attr(
                 "aria-expanded",
                 shouldOpen
@@ -786,11 +962,11 @@ class Navigation extends Component {
         }
 
         $("body")
-          .on("mouseenter mouseleave", ".dropdown", toggleDropdown)
-          .on("click", ".dropdown-menu a", toggleDropdown)
+          .on("mouseenter mouseleave", `.${NavStyles.dropdown}`, toggleDropdown)
+          .on("click", `.${NavStyles.dropdownMenu} a`, toggleDropdown)
       })
 
-      $(".dropdown-heading").click(function(event) {
+      $(`.${NavStyles.dropdownHeading}`).click(function(event) {
         event.stopPropagation()
       })
 
@@ -834,7 +1010,9 @@ class Navigation extends Component {
             </button>
             <div className="logo">
               <Link to="/">
-                <div className="navbar-brand logo-holder" />
+                <div
+                  className={NavStyles.logoHolder + " navbar-brand logo-holder"}
+                />
               </Link>
             </div>
 
@@ -888,10 +1066,14 @@ class Navigation extends Component {
               </ul>
             </div>
             <div className={NavStyles.contactLinks + " contact-links"}>
-              <ul className="main-contact-links">
+              <ul
+                className={NavStyles.mainContactLinks + " main-contact-links"}
+              >
                 <li className="phone">
                   <a href="tel:877-477-2311">
-                    <div className="phone phone-holder" />
+                    <div
+                      className={NavStyles.phoneHolder + " phone phone-holder"}
+                    />
                     877.477.2311
                   </a>
                 </li>
@@ -899,6 +1081,8 @@ class Navigation extends Component {
                   to="/demo"
                   className={
                     NavStyles.navButton +
+                    " " +
+                    NavStyles.freeDemoButton +
                     " button nav-button transparent free-demo-button"
                   }
                 >
@@ -909,7 +1093,12 @@ class Navigation extends Component {
                 <li className="call">Call For Demo!</li>
                 <a
                   href="tel:877-477-2311"
-                  className="button nav-button transparent free-demo-button"
+                  className={
+                    NavStyles.navButton +
+                    " " +
+                    NavStyles.freeDemoButton +
+                    " button nav-button transparent free-demo-button"
+                  }
                 >
                   877.477.2311
                 </a>
