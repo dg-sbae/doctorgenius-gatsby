@@ -7,6 +7,9 @@ nav {
   @include media("<laptop") {
     height: 75px;
   }
+  ul li {
+    list-style-type: none;
+  }
   .navButton {
     border-color: white;
   }
@@ -15,6 +18,10 @@ nav {
   }
   ul.navbarNav {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0;
     li a {
       transition: text-shadow 0.3s;
       &:hover,
@@ -23,11 +30,25 @@ nav {
       }
     }
   }
+
   &.navbar {
     position: relative;
     @include media("<=laptop") {
       padding-left: 24px;
       padding-right: 24px;
+    }
+    .logo {
+      flex-basis: 20%;
+      @include media("<laptop") {
+        flex-basis: 75%;
+      }
+    }
+    .mainLinks {
+      flex-basis: 47%;
+
+      &.navbarCollapse {
+        flex-grow: 0;
+      }
     }
     .navbarToggler {
       right: 24px;
@@ -42,9 +63,20 @@ nav {
       }
     }
     .contactLinks {
+      flex-basis: 26%;
+      position: relative;
       @include media("<=laptop") {
         display: none;
       }
+      @include media(">=desktop") {
+        flex-basis: 23%;
+      }
+      img.phone {
+        /* this should probably be yet another flexbox */
+        // transform: scale(1.25);
+        // vertical-align: text-bottom;
+      }
+
       .mainContactLinks {
         .freeDemoButton {
           padding-left: 0;
@@ -55,6 +87,14 @@ nav {
           }
         }
       }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 0;
+      width: 100%;
+      padding-left: 0;
     }
     .dropdown {
       display: inline-block;

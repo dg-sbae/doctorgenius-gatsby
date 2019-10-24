@@ -63,54 +63,11 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .logo {
-        flex-basis: 20%;
-        @include media("<laptop") {
-          flex-basis: 75%;
-        }
-      }
-      .main-links {
-        flex-basis: 47%;
-
-        &.navbar-collapse {
-          flex-grow: 0;
-        }
-      }
-      .contact-links {
-        flex-basis: 26%;
-        @include media(">=desktop") {
-          flex-basis: 23%;
-        }
-        position: relative;
-        img.phone {
-          /* this should probably be yet another flexbox */
-          transform: scale(1.25);
-          vertical-align: text-bottom;
-        }
-      }
-      ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin-bottom: 0;
-        width: 100%;
-        padding-left: 0;
-
-        &.navbar-nav {
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-          margin-bottom: 0;
-        }
-        li {
-          list-style-type: none;
-        }
-      }
     }
   }
-
+  // Doesn't seem like we use this
   &.scrolled {
-    height: 80px;
+    // height: 80px;
   }
 }
 .request-demo-footer {

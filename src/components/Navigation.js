@@ -982,7 +982,6 @@ class Navigation extends Component {
     return (
       <div className="navigation-wrapper">
         <Sidebar />
-
         <nav
           className={
             NavStyles.navbar +
@@ -1008,7 +1007,7 @@ class Navigation extends Component {
                 className={NavStyles.navbarTogglerIcon + " navbar-toggler-icon"}
               />
             </button>
-            <div className="logo">
+            <div className={NavStyles.logo + " logo"}>
               <Link to="/">
                 <div
                   className={NavStyles.logoHolder + " navbar-brand logo-holder"}
@@ -1017,7 +1016,12 @@ class Navigation extends Component {
             </div>
 
             <div
-              className="main-links collapse navbar-collapse"
+              className={
+                NavStyles.mainLinks +
+                " " +
+                NavStyles.navbarCollapse +
+                " main-links collapse navbar-collapse"
+              }
               id="navbarSupportedContent"
             >
               <ul className={NavStyles.navbarNav + " navbar-nav"}>
@@ -1069,10 +1073,15 @@ class Navigation extends Component {
               <ul
                 className={NavStyles.mainContactLinks + " main-contact-links"}
               >
-                <li className="phone">
+                <li className={NavStyles.phone + " phone"}>
                   <a href="tel:877-477-2311">
                     <div
-                      className={NavStyles.phoneHolder + " phone phone-holder"}
+                      className={
+                        NavStyles.phoneHolder +
+                        " " +
+                        NavStyles.phone +
+                        " phone phone-holder"
+                      }
                     />
                     877.477.2311
                   </a>
