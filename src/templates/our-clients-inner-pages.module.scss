@@ -3,10 +3,14 @@
 .ourClientsInnerPage {
   .hero {
     .heroContent {
-      @include media(">=tablet") {
+      @include media(">tablet") {
         margin-top: 50px;
         width: 630px;
         height: 330px;
+      }
+      @include media("<=tablet") {
+        width: 400px;
+        height: auto;
       }
     }
     h1 {

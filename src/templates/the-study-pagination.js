@@ -20,6 +20,7 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
 import PageStyles from "./the-study-pagination.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const ResponsivePostsColumnHeader = props => (
   <div
@@ -157,7 +158,9 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
   }
 
   return (
-    <div className={PageStyles.theStudyPaginationPage}>
+    <div
+      className={PageStyles.theStudyPaginationPage + " " + RowStyles.rowStyling}
+    >
       <DefaultPageLayout>
         <Helmet>
           <title>
@@ -174,7 +177,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div
                       className={
@@ -202,10 +205,12 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
             <Container>
               <div
                 className={
-                  PageStyles.row +
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
                   " " +
                   PageStyles.category +
-                  " row padded category"
+                  " category"
                 }
               >
                 {categoriesPaths.map(category => (
@@ -227,7 +232,16 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                   </div>
                 ))}
               </div>
-              <div className="row padded align-items-start short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " align-items-start"
+                }
+              >
                 <ResponsivePostsColumn>
                   <LatestPostsColumn>
                     <h3
@@ -364,7 +378,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                     <div
                       className={PageStyles.stayConnected + " stay-connected"}
                     >
-                      <div className="row">
+                      <div className={RowStyles.row}>
                         <div className="col-sm-12">
                           <h3
                             className={
@@ -380,7 +394,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                           />
                         </div>
                       </div>
-                      <div className="row">
+                      <div className={RowStyles.row}>
                         <div className="col-sm-12">
                           <div
                             className={
@@ -454,7 +468,18 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                       <NewsLetterSignUpForm />
                     </div>
                     <div className="most-popular">
-                      <div className="row d-sm-none d-lg-block padded short-top short-bottom">
+                      <div
+                        className={
+                          RowStyles.row +
+                          " " +
+                          RowStyles.padded +
+                          " " +
+                          RowStyles.shortTop +
+                          " " +
+                          RowStyles.shortBottom +
+                          " d-sm-none d-lg-block"
+                        }
+                      >
                         <div className="col-sm-12">
                           <h4
                             className={
@@ -471,7 +496,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                           />
                         </div>
                       </div>
-                      <div className="row">
+                      <div className={RowStyles.row}>
                         <div className="col-sm-12">
                           {data.popular.edges.map(({ node }) => (
                             <a href={`/blog/${node.slug}`} key={node.title}>
@@ -549,7 +574,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                         PageStyles.categorySection + " category-section"
                       }
                     >
-                      <div className="row">
+                      <div className={RowStyles.row}>
                         <div className="col-sm-12">
                           <h4
                             className={
@@ -584,7 +609,15 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
               </div>
               {/* Begin Events component */}
               <div className="events-section">
-                <div className="row padded tall-top">
+                <div
+                  className={
+                    RowStyles.row +
+                    " " +
+                    RowStyles.padded +
+                    " " +
+                    RowStyles.tallTop
+                  }
+                >
                   <div className="col-sm-12">
                     <div className="title-holder">
                       <h4 className={PageStyles.blogHeading + " blog-heading"}>
@@ -619,8 +652,14 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
               {/* End Events component */}
               <div
                 className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
                   PageStyles.requestDemoFooter +
-                  " row padded tall-top request-demo-footer"
+                  " request-demo-footer"
                 }
               >
                 <div className="col-lg-1" />

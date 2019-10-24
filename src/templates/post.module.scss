@@ -145,5 +145,16 @@
         font-size: 15px;
       }
     }
+    .imgHolder {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+  }
+
+  @include media("<=phone") {
+    .imgHolder {
+      padding-right: 35px;
+      padding-left: 35px;
+    }
   }
 }

@@ -20,6 +20,7 @@ import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/our-clients-inner-pages.scss"
 import PageStyles from "./our-clients-inner-pages.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 export default props => {
   /* These will likely need to be dynamic props */
@@ -43,7 +44,9 @@ export default props => {
   }
 
   return (
-    <div className={PageStyles.ourClientsInnerPage}>
+    <div
+      className={PageStyles.ourClientsInnerPage + " " + RowStyles.rowStyling}
+    >
       <DefaultPageLayout>
         <Helmet>
           <title>{metaTitle}</title>
@@ -55,7 +58,7 @@ export default props => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div
                       className={
@@ -80,7 +83,7 @@ export default props => {
           <Main>
             <Container>
               {/* Begin secondary nav Component: */}
-              <div className="row">
+              <div className={RowStyles.row}>
                 <div className="col-sm-12 panel-row">
                   <div className="secondary-nav-target">
                     <div className="secondary-nav">
@@ -197,7 +200,7 @@ export default props => {
               />
               {/* End mobile secondary navigation component */}
               {/* Begin main block of text */}
-              <div className="row padded">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12 col-md-10 col-lg-10">
                   <div className={PageStyles.contentBlock + " content-block"}>
                     <div
@@ -231,7 +234,15 @@ export default props => {
               {/* Begin split page content - conditional render using short circuit */}
               {isCaseStudy && <div className="spacer solid trim" />}
               {isCaseStudy && (
-                <div className="row padded short-top">
+                <div
+                  className={
+                    RowStyles.row +
+                    " " +
+                    RowStyles.padded +
+                    " " +
+                    RowStyles.shortTop
+                  }
+                >
                   <div
                     className={
                       PageStyles.caseStudyContainer +
@@ -339,7 +350,7 @@ export default props => {
                   style={fullBleedBgStyle}
                 />
                 <div className="full-bleed-content-wrapper">
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div className="col-sm-4 col-md-6 col-lg-7" />
                     <div className="col-sm-8 col-md-6 col-lg-5">
                       <div
@@ -377,7 +388,7 @@ export default props => {
               </div>
               {/* End CTA banner */}
               {/* Begin testimonial slider */}
-              <div className="row padded">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
                   <div className="inner-title center">
                     <h3 className="strapline">Testimonials</h3>

@@ -16,6 +16,7 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study-post.scss"
 import PageStyles from "./post.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 function PostPage({ pageContext, data, location }) {
   const categoriesPaths = [
@@ -84,7 +85,7 @@ function PostPage({ pageContext, data, location }) {
   */
 
   return (
-    <div className={PageStyles.blogPostPage}>
+    <div className={PageStyles.blogPostPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="the-study-post">
         {// Meta description for Genius Lab category post
         mainCategory.name === "Genius Lab" && (
@@ -119,8 +120,15 @@ function PostPage({ pageContext, data, location }) {
           <div class={PageStyles.heroPadding + " hero-padding"} />
           <Main>
             <Container>
-              <div className="row padded short-bottom">
-                <div className="col-lg-1" />
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-lg-8">
                   <div className={PageStyles.pagination + " pagination"}>
                     {previousPost != null ? (
@@ -141,18 +149,19 @@ function PostPage({ pageContext, data, location }) {
                     )}
                   </div>
                 </div>
-                <div className="col-lg-1" />
               </div>
               <div className={PageStyles.blogHeader + " blog-header"}>
-                <div className="row">
-                  <div className="col-lg-2" />
-                  <div className="col-lg-9">
+                <div className={RowStyles.row}>
+                  <div className="col-lg-9 offset-lg-2">
                     <div
                       className={
-                        PageStyles.mobileImageRow + " row mobile-image-row"
+                        RowStyles.row +
+                        " " +
+                        PageStyles.mobileImageRow +
+                        " mobile-image-row"
                       }
                     >
-                      <div className="col-xs-12">
+                      <div className={PageStyles.imgHolder + " col-xs-12"}>
                         <Img
                           fluid={
                             post.featured_media.localFile.childImageSharp.fluid
@@ -160,7 +169,11 @@ function PostPage({ pageContext, data, location }) {
                         />
                       </div>
                     </div>
-                    <div className={PageStyles.upperRow + " row upper-row"}>
+                    <div
+                      className={
+                        RowStyles.row + " " + PageStyles.upperRow + " upper-row"
+                      }
+                    >
                       <div class="col-lg-9 order-lg-1 order-sm-3">
                         <h1 className={PageStyles.title + " title"}>
                           {he.decode(post.title)}
@@ -214,15 +227,14 @@ function PostPage({ pageContext, data, location }) {
                   <div className="col-lg-1" />
                 </div>
               </div>
-              <div className="row">
+              <div className={RowStyles.row}>
                 <div className="col-lg-1" />
                 <div className="col-lg-10">
                   <div className="spacer solid" />
                 </div>
                 <div className="col-lg-1" />
               </div>
-              <div className="row">
-                <div className="col-lg-1" />
+              <div className={RowStyles.row}>
                 <div className="col-lg-8">
                   <div className={PageStyles.blogContent + " blog-content"}>
                     <div
@@ -245,7 +257,6 @@ function PostPage({ pageContext, data, location }) {
                     />
                   </div>
                 </div>
-                <div className="col-lg-1" />
               </div>
 
               <div
@@ -261,7 +272,15 @@ function PostPage({ pageContext, data, location }) {
                 <div className="full-bleed-content-wrapper">
                   {/* Begin Events component */}
                   <div className={PageStyles.eventsSection + " events-section"}>
-                    <div className="row padded tall-top">
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        RowStyles.padded +
+                        " " +
+                        RowStyles.tallTop
+                      }
+                    >
                       <div className="col-lg-12">
                         <div className="title-holder">
                           <h4 className="blog-heading">Webinars & Events</h4>
@@ -295,7 +314,16 @@ function PostPage({ pageContext, data, location }) {
                 </div>
               </div>
               {/* Begin Demo Footer */}
-              <div className="row padded tall-top request-demo-footer">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " request-demo-footer"
+                }
+              >
                 <div className="col-md-1" />
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">

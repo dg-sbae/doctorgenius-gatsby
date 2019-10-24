@@ -5,6 +5,7 @@ import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 
 import ContactFormStyles from "./contact-form.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 import $ from "jquery"
 
@@ -134,11 +135,11 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="form-wrapper">
+      <div className={RowStyles.rowStyling + " form-wrapper"}>
         <form
           onLoad={this.focusWithoutScrolling}
           onSubmit={this.handleFormSubmit}
-          className="row"
+          className={RowStyles.row}
         >
           <div
             className={
