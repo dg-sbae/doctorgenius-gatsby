@@ -14,25 +14,23 @@
     }
   }
   .panelRow {
-    .row {
-      .logoPartnershipItem:nth-child(odd) {
-        .panel {
-          @include media("<=laptop") {
-            align-items: flex-end;
-          }
-          @include media("<=phone") {
-            align-items: center;
-          }
+    .logoPartnershipItem:nth-child(odd) {
+      .panel {
+        @include media("<=laptop") {
+          align-items: flex-end;
+        }
+        @include media("<=phone") {
+          align-items: center;
         }
       }
-      .logoPartnershipItem:nth-child(even) {
-        .panel {
-          @include media("<=laptop") {
-            align-items: flex-start;
-          }
-          @include media("<=phone") {
-            align-items: center;
-          }
+    }
+    .logoPartnershipItem:nth-child(even) {
+      .panel {
+        @include media("<=laptop") {
+          align-items: flex-start;
+        }
+        @include media("<=phone") {
+          align-items: center;
         }
       }
     }
@@ -78,7 +76,7 @@
   }
 
   .featuredPartnersRow {
-    .row {
+    .fullWidthRow {
       width: 100%;
     }
   }

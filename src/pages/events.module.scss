@@ -406,8 +406,8 @@
         margin-right: 8.5px;
       }
       .heroMoreInfoBtn {
-        padding-left: $m1;
-        padding-right: $m1;
+        padding-left: $m1 / 2;
+        padding-right: $m1 / 2;
       }
       .ctaBtns,
       .dgCategoryHolder {
@@ -490,6 +490,7 @@
       }
       .pastEventTitleAndDesc {
         margin-top: $m1;
+        padding-right: 15px;
       }
     }
 

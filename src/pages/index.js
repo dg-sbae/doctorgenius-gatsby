@@ -12,13 +12,14 @@ import Container from "../components/Container"
 
 import "../styles/homepage.scss"
 import PageStyles from "./index.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 import thinArrowRight from "../img/right-arrow.svg"
 
 export default ({ data }, props) => {
   const images = data
   return (
-    <div className={PageStyles.indexPage}>
+    <div className={PageStyles.indexPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location={props["*"]}>
         <Helmet>
           <title>
@@ -36,7 +37,7 @@ export default ({ data }, props) => {
             <div className={PageStyles.hero + " hero"}>
               {/* Hero will be a layout component */}
               <Container>
-                <div className="row">
+                <div className={RowStyles.row}>
                   <div className="col-sm-12">
                     <div className={PageStyles.heroContent + " hero-content"}>
                       <div className={PageStyles.accentBlock + " accent-block"}>
@@ -134,7 +135,11 @@ export default ({ data }, props) => {
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded panel-row">
+              <div
+                className={
+                  RowStyles.row + " " + RowStyles.padded + " panel-row"
+                }
+              >
                 <div className="col-sm-10">
                   <div className="header inner-title center">
                     <h3 className="strapline">
@@ -216,7 +221,7 @@ export default ({ data }, props) => {
                 </div>
               </div>
 
-              <div className="row padded">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-10">
                   <div className="inner-title center">
                     <h3 className="strapline">Built for Success</h3>
@@ -243,7 +248,7 @@ export default ({ data }, props) => {
               </div>
             </Container>
 
-            <div className="row">
+            <div className={RowStyles.row}>
               <div className="col-12">
                 <center>
                   <img
@@ -273,7 +278,17 @@ export default ({ data }, props) => {
             </div>
 
             <Container>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-12">
                   <div className="inner-title center">
                     <h3 className="strapline">
@@ -314,9 +329,18 @@ export default ({ data }, props) => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
                   <div className="content-block">
                     <div className="inner-title">
                       <h2>What makes Doctor Genius different?</h2>
@@ -340,7 +364,17 @@ export default ({ data }, props) => {
                   />
                 </div>
               </div>
-              <div className="row padded short-top tall-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.tallBottom
+                }
+              >
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.dgClientSatisfaction.childImageSharp.fluid}
@@ -374,7 +408,16 @@ export default ({ data }, props) => {
                 </div>
               </div>
               {/* Begin Demo Footer */}
-              <div className="row padded tall-top request-demo-footer">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " request-demo-footer"
+                }
+              >
                 <div className="col-md-1" />
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">

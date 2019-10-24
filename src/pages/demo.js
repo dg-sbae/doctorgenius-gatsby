@@ -11,6 +11,7 @@ import star from "../img/star.svg"
 
 import "../styles/demo.scss"
 import DemoPageStyles from "./demo.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const DemoPage = data => {
   const images = data.data
@@ -20,7 +21,7 @@ const DemoPage = data => {
   }
 
   return (
-    <div className={DemoPageStyles.demoPage}>
+    <div className={DemoPageStyles.demoPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="demo">
         <Helmet>
           <title>
@@ -36,7 +37,14 @@ const DemoPage = data => {
           <div className={DemoPageStyles.hero + " hero"} style={heroStyle}>
             {/* Hero will be a layout component */}
             <Container>
-              <div className={DemoPageStyles.heroRow + " valign-wrapper row"}>
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  DemoPageStyles.heroRow +
+                  " valign-wrapper"
+                }
+              >
                 <div className="col-md-10 order-md-1 col-lg-8 order-lg-1 float-lg-left">
                   <h1>Experience The Solution for Optimal Practice Growth</h1>
                   <p className={DemoPageStyles.disappear + " disappear"}>
@@ -80,7 +88,7 @@ const DemoPage = data => {
                     " col-md-9 order-md-3 col-lg-8 order-lg-3 float-lg-left demo-plans-row"
                   }
                 >
-                  <div className="valign-wrapper row">
+                  <div className={RowStyles.row + " valign-wrapper"}>
                     <div
                       className={
                         DemoPageStyles.ourPlansText +
@@ -180,7 +188,7 @@ const DemoPage = data => {
           </div>
           <Main>
             <Container>
-              <div className="row padded">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-10">
                   <div
                     className={
@@ -192,7 +200,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -211,8 +227,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -304,7 +322,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -322,8 +348,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -424,7 +452,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -442,8 +478,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -530,7 +568,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -548,8 +594,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -630,7 +678,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -648,8 +704,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -728,7 +786,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -747,8 +813,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -822,7 +890,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -841,8 +917,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -930,7 +1008,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -949,8 +1035,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -1022,7 +1110,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -1040,8 +1136,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div

@@ -10,10 +10,11 @@ import { Link } from "gatsby"
 
 import "../styles/ec-aup.scss"
 import PageStyles from "./ec-aup.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const EcAup = data => {
   return (
-    <div className={PageStyles.ecaupPage}>
+    <div className={PageStyles.ecaupPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="ec-aup">
         <Helmet>
           <title>
@@ -28,7 +29,7 @@ const EcAup = data => {
             <div className={PageStyles.hero + " hero"}>
               {/* Hero will be a layout component */}
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div className="hero-content">
                       <div
@@ -61,8 +62,18 @@ const EcAup = data => {
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded tall-top short-bottom">
-                <div class="col-sm-12 col-md-8">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="col-sm-12 col-md-8">
                   <p>
                     This Electronic Communications and Acceptable User Policy
                     (this “Policy”) applies to the use of all Practice AI
@@ -100,9 +111,19 @@ const EcAup = data => {
                   </p>
                 </div>
               </div>
-              <div class="row padded short-top short-bottom">
-                <div class="col-sm-11 col-md-8">
-                  <div class="content-block">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="col-sm-11 col-md-8">
+                  <div className="content-block">
                     <ol>
                       <li>
                         <h4>Required User Consent</h4>

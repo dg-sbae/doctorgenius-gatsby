@@ -13,6 +13,7 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/event-post.scss"
 import PageStyles from "./event.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const EventPage = ({ data }) => {
   const event_details = data.focus_event
@@ -200,8 +201,12 @@ const EventPage = ({ data }) => {
       <div
         className={
           event_details.include_speakers[0] === "1"
-            ? PageStyles.speakerDetails +
-              " row content-block padded speaker-details"
+            ? RowStyles.row +
+              " " +
+              RowStyles.padded +
+              " " +
+              PageStyles.speakerDetails +
+              " content-block speaker-details"
             : "d-none"
         }
       >
@@ -210,7 +215,14 @@ const EventPage = ({ data }) => {
           <h3>{event_details.speaker_section_subtitle}</h3>
         </div>
         <div className="col-sm-7 col-md-8 col-lap-8">
-          <div className={PageStyles.speakerProfiles + " row speaker-profiles"}>
+          <div
+            className={
+              RowStyles.row +
+              " " +
+              PageStyles.speakerProfiles +
+              " speaker-profiles"
+            }
+          >
             {speaker_holder}
           </div>
         </div>
@@ -258,8 +270,12 @@ const EventPage = ({ data }) => {
             <div className="spacer solid"></div>
             <div
               className={
+                RowStyles.row +
+                " " +
+                RowStyles.padded +
+                " " +
                 PageStyles.listedItems +
-                " row content-block padded listed-items"
+                " content-block listed-items"
               }
             >
               <div className="col-sm-11 col-md-9 col-lap-6">
@@ -292,7 +308,14 @@ const EventPage = ({ data }) => {
       return (
         <div>
           <div className="spacer solid"></div>
-          <div className="row content-block padded listed-items">
+          <div
+            className={
+              RowStyles.row +
+              " " +
+              RowStyles.padded +
+              " content-block listed-items"
+            }
+          >
             <div className="col-sm-11 col-md-9 col-lap-7">
               <h2>{event_details.information_heading1}</h2>
               {display_h1_information()}
@@ -307,7 +330,7 @@ const EventPage = ({ data }) => {
   }
 
   return (
-    <div className={PageStyles.eventDetailPage}>
+    <div className={PageStyles.eventDetailPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="event-post">
         <Helmet>
           <title>Event Details | Doctor Genius</title>
@@ -322,7 +345,11 @@ const EventPage = ({ data }) => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className={PageStyles.heroRow + " row hero-row"}>
+                <div
+                  className={
+                    RowStyles.row + " " + PageStyles.heroRow + " hero-row"
+                  }
+                >
                   <div className="col-sm-12 col-md-9 col-lap-8">
                     <div
                       className={
@@ -375,7 +402,7 @@ const EventPage = ({ data }) => {
           <Main>
             <Container>
               <div className="main-content">
-                <div className="row padded">
+                <div className={RowStyles.row + " " + RowStyles.padded}>
                   <div className="col-sm-11 col-md-9 col-lap-6">
                     <div
                       className={
@@ -389,13 +416,20 @@ const EventPage = ({ data }) => {
                   <div className="col-sm-11 col-md-9 col-lap-6">
                     <div
                       className={
-                        PageStyles.eventDate + " row event-date valign-wrapper"
+                        RowStyles.row +
+                        " " +
+                        PageStyles.eventDate +
+                        " event-date valign-wrapper"
                       }
                     >
                       <div
                         className={PageStyles.date320 + " col-sm-12 col-md-10"}
                       >
-                        <div className={PageStyles.card + " card row"}>
+                        <div
+                          className={
+                            RowStyles.row + " " + PageStyles.card + " card"
+                          }
+                        >
                           <div
                             className={
                               PageStyles.cardBody +
@@ -448,8 +482,12 @@ const EventPage = ({ data }) => {
 
               <div
                 className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
                   PageStyles.dgMarketingSolutions +
-                  " row content-block padded dg-marketing-solutions"
+                  " content-block dg-marketing-solutions"
                 }
               >
                 <div className="col-sm-11 col-md-9 col-lap-12">
@@ -459,7 +497,12 @@ const EventPage = ({ data }) => {
                     Marketing Solutions
                   </h2>
                   <div
-                    className={PageStyles.dgDictionary + " row dg-dictionary"}
+                    className={
+                      RowStyles.row +
+                      " " +
+                      PageStyles.dgDictionary +
+                      " dg-dictionary"
+                    }
                   >
                     <div
                       className={
@@ -561,8 +604,14 @@ const EventPage = ({ data }) => {
               {/* Begin Demo Footer */}
               <div
                 className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
                   PageStyles.requestDemoFooter +
-                  " row padded tall-top request-demo-footer"
+                  " request-demo-footer"
                 }
               >
                 <div className="col-sm-11 col-md-9 col-lap-5">

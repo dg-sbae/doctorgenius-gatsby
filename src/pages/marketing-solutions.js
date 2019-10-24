@@ -20,11 +20,14 @@ import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/marketing-solutions.scss"
 import PageStyles from "./marketing-solutions.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const MarketingSolutions = data => {
   const images = data.data
   return (
-    <div className={PageStyles.marketingSolutionsPage}>
+    <div
+      className={PageStyles.marketingSolutionsPage + " " + RowStyles.rowStyling}
+    >
       <DefaultPageLayout location="marketing-solutions">
         <Helmet>
           <title>
@@ -42,7 +45,7 @@ const MarketingSolutions = data => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div
                       className={
@@ -68,7 +71,7 @@ const MarketingSolutions = data => {
           <Main>
             <Container>
               {/* Begin secondary nav Component: */}
-              <div className="row">
+              <div className={RowStyles.row}>
                 <div className="col-sm-12 panel-row">
                   <div className="secondary-nav-target">
                     <div className="secondary-nav">
@@ -156,9 +159,19 @@ const MarketingSolutions = data => {
               />
               {/* End mobile secondary navigation component */}
               {/* Begin Split Row of content and image */}
-              <div className="row padded short-top short-bottom odd-row proven-results-row">
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom +
+                  " odd-row proven-results-row"
+                }
+              >
+                <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
                   <div className="content-block">
                     <div className="inner-title">
                       <h2>
@@ -199,7 +212,18 @@ const MarketingSolutions = data => {
               </div>
               {/* End Split Row of content and image */}
               {/* Begin Split Row of image and content */}
-              <div className="row padded short-top tall-bottom even-row dashboard-row">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.tallBottom +
+                  " even-row dashboard-row"
+                }
+              >
                 <div className="col-sm-10 col-md-6">
                   <Img
                     fluid={images.portalDashboard.childImageSharp.fluid}
@@ -207,7 +231,7 @@ const MarketingSolutions = data => {
                     alt="Our Client Dashboard"
                   />
                 </div>
-                <div className="col-sm-9 col-md-5">
+                <div className={PageStyles.toolsYouNeed + " col-sm-9 col-md-5"}>
                   <div className="content-block">
                     <div className="inner-title">
                       <h2>All the tools you'll need to be in control. </h2>
@@ -245,8 +269,12 @@ const MarketingSolutions = data => {
                   }
                 ></BackgroundImage>
                 <div className="full-bleed-content-wrapper">
-                  <div className="row">
-                    <div className="col-sm-8 col-md-5">
+                  <div className={RowStyles.row}>
+                    <div
+                      className={
+                        PageStyles.fullBleedContent + " col-sm-8 col-md-5"
+                      }
+                    >
                       <div className="content-block">
                         <div className="inner-title">
                           <h2>Check which plan works for your practice</h2>
@@ -273,7 +301,16 @@ const MarketingSolutions = data => {
               </div>
               {/* End Full bleed content row (reversed)*/}
               {/* Begin Demo Footer */}
-              <div className="row padded tall-top request-demo-footer">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " request-demo-footer"
+                }
+              >
                 <div className="col-md-1" />
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">

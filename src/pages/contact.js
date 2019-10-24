@@ -7,9 +7,10 @@ import ContactForm from "../components/contact-form.js"
 
 import "../styles/contact.scss"
 import PageStyles from "./contact.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 export default props => (
-  <div className={PageStyles.contactPage}>
+  <div className={PageStyles.contactPage + " " + RowStyles.rowStyling}>
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
         <title>
@@ -25,7 +26,7 @@ export default props => (
           <div className={PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}
             <Container>
-              <div className="row padded panel-row title-and-desc">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
                   <div
                     className={
@@ -45,7 +46,10 @@ export default props => (
 
                 <div
                   className={
-                    PageStyles.contactForm + " row panel-row contact-form"
+                    RowStyles.row +
+                    " " +
+                    PageStyles.contactForm +
+                    " panel-row contact-form"
                   }
                 >
                   <ContactForm />
@@ -56,7 +60,10 @@ export default props => (
             <Container>
               <div
                 className={
-                  PageStyles.infoAndMap + " row panel-row info-and-map"
+                  RowStyles.row +
+                  " " +
+                  PageStyles.infoAndMap +
+                  " panel-row info-and-map"
                 }
               >
                 <div

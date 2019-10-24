@@ -255,7 +255,7 @@
       line-height: 1.4em;
     }
   }
-  .row.category {
+  .category {
     @include media("<desktop") {
       display: none;
     }

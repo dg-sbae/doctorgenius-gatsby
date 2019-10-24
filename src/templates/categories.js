@@ -20,6 +20,7 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
 import PageStyles from "./categories.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const ResponsivePostsColumnHeader = props => (
   <div
@@ -165,7 +166,7 @@ const CategoriesPage = ({ data, pageContext }) => {
   }
 
   return (
-    <div className={PageStyles.categoriesPage}>
+    <div className={PageStyles.categoriesPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout>
         {// Meta description for Genius Lab category
         pageContext.slug === "genius-lab" && (
@@ -198,7 +199,7 @@ const CategoriesPage = ({ data, pageContext }) => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div
                       className={
@@ -226,10 +227,12 @@ const CategoriesPage = ({ data, pageContext }) => {
             <Container>
               <div
                 className={
-                  PageStyles.row +
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
                   " " +
                   PageStyles.category +
-                  " row padded category"
+                  " category"
                 }
               >
                 {categoriesPaths.map(category => (
@@ -253,7 +256,10 @@ const CategoriesPage = ({ data, pageContext }) => {
               </div>
               <div
                 className={
-                  PageStyles.row + " row padded align-items-start short-top"
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " align-items-start short-top"
                 }
               >
                 <ResponsivePostsColumn>
@@ -391,7 +397,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                     <div
                       className={PageStyles.stayConnected + " stay-connected"}
                     >
-                      <div className={PageStyles.row + " row"}>
+                      <div className={RowStyles.row}>
                         <div className="col-sm-12">
                           <h3
                             className={
@@ -407,7 +413,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                           />
                         </div>
                       </div>
-                      <div className={PageStyles.row + " row"}>
+                      <div className={RowStyles.row}>
                         <div className="col-sm-12">
                           <div
                             className={
@@ -483,8 +489,14 @@ const CategoriesPage = ({ data, pageContext }) => {
                     <div className="most-popular">
                       <div
                         className={
-                          PageStyles.row +
-                          " row d-sm-none d-lg-block padded short-top short-bottom"
+                          RowStyles.row +
+                          " " +
+                          RowStyles.padded +
+                          " " +
+                          RowStyles.shortTop +
+                          " " +
+                          RowStyles.shortBottom +
+                          " d-sm-none d-lg-block"
                         }
                       >
                         <div className="col-sm-12">
@@ -503,7 +515,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                           />
                         </div>
                       </div>
-                      <div className={PageStyles.row + " row"}>
+                      <div className={RowStyles.row}>
                         <div className="col-sm-12">
                           {data.popular.edges.map(({ node }) => (
                             <a href={`/blog/${node.slug}`} key={node.title}>
@@ -583,7 +595,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                         PageStyles.categorySection + " category-section"
                       }
                     >
-                      <div className={PageStyles.row + " row"}>
+                      <div className={RowStyles.row}>
                         <div className="col-sm-12">
                           <h4
                             className={
@@ -617,7 +629,15 @@ const CategoriesPage = ({ data, pageContext }) => {
               </div>
               {/* Begin Events component */}
               <div className="events-section">
-                <div className={PageStyles.row + " row padded tall-top"}>
+                <div
+                  className={
+                    RowStyles.row +
+                    " " +
+                    RowStyles.padded +
+                    " " +
+                    RowStyles.tallTop
+                  }
+                >
                   <div className="col-sm-12">
                     <div className="title-holder">
                       <h4 className={PageStyles.blogHeading + " blog-heading"}>
@@ -652,10 +672,14 @@ const CategoriesPage = ({ data, pageContext }) => {
               {/* End Events component */}
               <div
                 className={
-                  PageStyles.row +
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
                   " " +
                   PageStyles.requestDemoFooter +
-                  " row padded tall-top request-demo-footer"
+                  " request-demo-footer"
                 }
               >
                 <div className="col-lg-1" />

@@ -10,10 +10,11 @@ import { Link } from "gatsby"
 
 import "../styles/baa.scss"
 import PageStyles from "./baa.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const Baa = data => {
   return (
-    <div className={PageStyles.baaPage}>
+    <div className={PageStyles.baaPage + RowStyles.rowStyling}>
       <DefaultPageLayout location="baa">
         <Helmet>
           <title>Standard Business Associate Agreement | Doctor Genius</title>
@@ -22,7 +23,7 @@ const Baa = data => {
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiBaa + " gbi-baa"}>
             <div className={PageStyles.hero + " hero"}>
               <Container>
-            <div className="valign-wrapper row">
+            <div className={RowStyles.row + " valign-wrapper"}>
               <div className="col-sm-12">
                 <div className="hero-content">
                   <div className={PageStyles.accentBlock + " hero-content accent-block"}>
@@ -47,7 +48,7 @@ const Baa = data => {
           </BackgroundImage>
           <Main>
             <Container>
-            <div className="row padded tall-top short-bottom">
+            <div className={RowStyles.row + " " + RowStyles.padding + " " + RowStyles.tallTop + " " + RowStyles.shortBottom}>
               <div className="col-sm-12 col-md-8">
                 <p>
                   This Standard Business Associate Agreement (or “BAA”) is entered
@@ -86,7 +87,7 @@ const Baa = data => {
                 </p>
               </div>
             </div>
-            <div className="row padded short-top short-bottom">
+            <div className={RowStyles.row + " " + RowStyles.padding + " " + RowStyles.shortTop + " " + RowStyles.shortBottom}>
               <div className="col-sm-11 col-md-8">
                 <div className="content-block">
                   <ol>

@@ -13,10 +13,11 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/plans.scss"
 import PageStyles from "./plans.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const Plans = data => {
   return (
-    <div className={PageStyles.plansPage}>
+    <div className={PageStyles.plansPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="plans">
         <Helmet>
           <title>
@@ -33,7 +34,7 @@ const Plans = data => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div
                       className={
@@ -59,7 +60,11 @@ const Plans = data => {
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded sm-pad-none">
+              <div
+                className={
+                  RowStyles.row + " " + RowStyles.padded + " sm-pad-none"
+                }
+              >
                 <div className="col-sm-12 sm-pad-none">
                   <div className={PageStyles.plansTable + " plans-table"}>
                     {/* <!-- image-row --> */}
@@ -1005,17 +1010,18 @@ const Plans = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded">
-                <div className="col-sm-3 col-md-1" />
-                <div className="col-sm-6 col-md-10">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
+                <div className="col-sm-6 offset-sm-3 col-md-10 offset-md-1">
                   <div className="inner-title center">
                     <h2>Commonly Asked Questions</h2>
                   </div>
                 </div>
-                <div className="col-sm-3 col-md-1" />
               </div>
-              <div className="row padded sm-pad-none">
-                <div className="col-md-1" />
+              <div
+                className={
+                  RowStyles.row + " " + RowStyles.padded + " sm-pad-none"
+                }
+              >
                 <div className="col-sm-12 col-md-10">
                   <div className="faq-table lg-pad">
                     <FAQAccordion>
@@ -1221,9 +1227,17 @@ const Plans = data => {
                     </FAQAccordion>
                   </div>
                 </div>
-                <div className="col-md-1" />
               </div>
-              <div className="row padded tall-top request-demo-footer">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " request-demo-footer"
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
                   <div className="content-block">

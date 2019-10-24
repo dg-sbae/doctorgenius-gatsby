@@ -9,10 +9,11 @@ import Container from "../components/Container"
 
 import "../styles/privacy-policy.scss"
 import PageStyles from "./privacy-policy.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const PrivacyPolicy = data => {
   return (
-    <div className={PageStyles.privacyPolicyPage}>
+    <div className={PageStyles.privacyPolicyPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="privacy-policy">
         <Helmet>
           <title>Privacy Policy Doctor Genius in Irvine, CA 92606</title>
@@ -28,7 +29,7 @@ const PrivacyPolicy = data => {
           >
             <div className="hero">
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-6">
                     <div className="hero-content">
                       <div className="hero-content accent-block">
@@ -56,7 +57,17 @@ const PrivacyPolicy = data => {
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded tall-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <p>
                     Your privacy is important to our Company (or “we”, “us” or
@@ -66,7 +77,17 @@ const PrivacyPolicy = data => {
                   </p>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <div className="content-block">
                     <div className={PageStyles.innerTitle + " inner-title"}>
@@ -89,7 +110,17 @@ const PrivacyPolicy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <div className="content-block">
                     <div className={PageStyles.policyTable + " policy-table"}>
@@ -107,7 +138,17 @@ const PrivacyPolicy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <div className="content-block">
                     <p>
@@ -139,7 +180,17 @@ const PrivacyPolicy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <div className="content-block">
                     <div className={PageStyles.innerTitle + " inner-title"}>

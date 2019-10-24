@@ -32,4 +32,17 @@
       width: 100%;
     }
   }
+
+  .toolsYouNeed {
+    @include media("<laptop") {
+      margin: 20px auto;
+    }
+  }
+
+  .fullBleedContent {
+    @include media(">phone", "<=tablet") {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+  }
 }

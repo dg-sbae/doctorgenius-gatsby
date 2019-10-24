@@ -13,11 +13,12 @@ import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/partnerships.scss"
 import PageStyles from "./partnerships.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const Partnerships = data => {
   const images = data.data
   return (
-    <div className={PageStyles.partnershipsPage}>
+    <div className={PageStyles.partnershipsPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="partnerships">
         <Helmet>
           <title>
@@ -34,7 +35,7 @@ const Partnerships = data => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div className={PageStyles.heroContent + " hero-content"}>
                       <div
@@ -67,7 +68,7 @@ const Partnerships = data => {
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12 col-md-8 col-lg-8">
                   <div className={PageStyles.contentBlock + " content-block"}>
                     <div
@@ -104,10 +105,14 @@ const Partnerships = data => {
               </div>
               <div
                 className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
                   PageStyles.panelRow +
                   " " +
                   PageStyles.featuredPartnersRow +
-                  " row padded panel-row featured-partners-row"
+                  " panel-row featured-partners-row"
                 }
               >
                 <div className="col-sm-12">
@@ -124,7 +129,7 @@ const Partnerships = data => {
                     </div>
                   </div>
                 </div>
-                <div className={PageStyles.row + " row"}>
+                <div className={RowStyles.row + " " + PageStyles.fullWidthRow}>
                   <div
                     className={
                       PageStyles.logoPartnershipItem +
@@ -190,7 +195,7 @@ const Partnerships = data => {
                     </div>
                   </div>
                 </div>
-                <div className={PageStyles.row + " row"}>
+                <div className={RowStyles.row + " " + PageStyles.fullWidthRow}>
                   <div
                     className={
                       PageStyles.logoPartnershipItem +
@@ -261,8 +266,14 @@ const Partnerships = data => {
               {/* Begin Demo Footer */}
               <div
                 className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
                   PageStyles.requestDemoFooter +
-                  " row padded tall-top request-demo-footer"
+                  " request-demo-footer"
                 }
               >
                 <div className="col-md-1" />
@@ -301,8 +312,14 @@ const Partnerships = data => {
 
               <div
                 className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
                   PageStyles.requestDemoFooter +
-                  " row padded tall-top request-demo-footer"
+                  " request-demo-footer"
                 }
               >
                 <div className="col-sm-8  order-sm-2 col-md-6 offset-md-0 order-md-1">

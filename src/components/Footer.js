@@ -13,6 +13,7 @@ import linkedinIcon from "../img/icon/linkedin-circle.svg"
 import youtubeIcon from "../img/icon/youtube-circle.svg"
 
 import FooterStyles from "./Footer.module.scss"
+import RowStyles from "./Row.module.scss"
 
 const ListLink = props => (
   <li>
@@ -33,14 +34,19 @@ const ExternalLink = props => (
 )
 
 export default ({ children }) => (
-  <footer className={FooterStyles.FooterStyling}>
+  <footer className={FooterStyles.FooterStyling + " " + RowStyles.rowStyling}>
     <Container>
       <div
         className={
+          RowStyles.row +
+          " " +
+          RowStyles.padded +
+          " " +
+          RowStyles.tallTop +
+          " " +
           FooterStyles.paddedFooterRow +
           " " +
-          FooterStyles.footerRow +
-          " row padded tall-top footer-row"
+          FooterStyles.footerRow
         }
       >
         <div className="col-sm-12 col-lg-4">
@@ -180,7 +186,11 @@ export default ({ children }) => (
           </div>
         </div>
       </div>
-      <div className="row padded short-top">
+      <div
+        className={
+          RowStyles.row + " " + RowStyles.padded + " " + RowStyles.shortTop
+        }
+      >
         <div className="col-sm-12">
           <div className={FooterStyles.footerSubrow + " footer-subrow"}>
             <div className="copyright-section">

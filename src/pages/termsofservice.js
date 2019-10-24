@@ -9,10 +9,11 @@ import Container from "../components/Container"
 
 import "../styles/terms-of-service.scss"
 import PageStyles from "./termsofservice.module.scss"
+import RowStyles from '../components/Row.module.scss'
 
 const TermsOfService = data => {
   return (
-    <div className={PageStyles.termsOfServicePage}>
+    <div className={PageStyles.termsOfServicePage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="termsofservice">
         <Helmet>
           <title>
@@ -24,7 +25,7 @@ const TermsOfService = data => {
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiTos + " gbi-tos"}>
           <div className={PageStyles.hero + " hero"}>
             <Container>
-              <div className="valign-wrapper row">
+              <div className={RowStyles.row + " valign-wrapper"}>
                 <div className="col-sm-12">
                   <div className={PageStyles.heroContent + " hero-content"}>
                     <div className={PageStyles.heroContent + " hero-content accent-block"}>
@@ -47,7 +48,15 @@ const TermsOfService = data => {
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded tall-top short-bottom">
+              <div className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
+                  RowStyles.shortBottom
+                }>
                 <div class="col-sm-8">
                   <p>
                   These Terms of Service are part of the Marketing Plan Agreement between Company
@@ -78,7 +87,15 @@ const TermsOfService = data => {
                 </div>
               </div>
 
-              <div class="row padded short-top short-bottom">
+              <div className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }>
                 <div class="col-sm-8">
                   <div class="content-block">
 

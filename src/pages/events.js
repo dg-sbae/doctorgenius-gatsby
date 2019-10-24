@@ -13,6 +13,7 @@ import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/event-listing.scss"
 import PageStyles from "./events.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const EventPage = ({ data }) => {
   // Globals
@@ -215,7 +216,11 @@ const EventPage = ({ data }) => {
   const display_past_events = () => {
     return (
       <div className="col-lap-10 offset-lap-1 col-md-12">
-        <div className={PageStyles.singularEvent + " row singular-event"}>
+        <div
+          className={
+            RowStyles.row + " " + PageStyles.singularEvent + " singular-event"
+          }
+        >
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[0].node.slug}>
               <img
@@ -256,7 +261,11 @@ const EventPage = ({ data }) => {
           </div>
         </div>
 
-        <div className={PageStyles.singularEvent + " row singular-event"}>
+        <div
+          className={
+            RowStyles.row + " " + PageStyles.singularEvent + " singular-event"
+          }
+        >
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[1].node.slug}>
               <img
@@ -297,7 +306,11 @@ const EventPage = ({ data }) => {
           </div>
         </div>
 
-        <div className={PageStyles.singularEvent + " row singular-event"}>
+        <div
+          className={
+            RowStyles.row + " " + PageStyles.singularEvent + " singular-event"
+          }
+        >
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[2].node.slug}>
               <img
@@ -338,7 +351,11 @@ const EventPage = ({ data }) => {
           </div>
         </div>
 
-        <div className={PageStyles.singularEvent + " row singular-event"}>
+        <div
+          className={
+            RowStyles.row + " " + PageStyles.singularEvent + " singular-event"
+          }
+        >
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[3].node.slug}>
               <img
@@ -383,7 +400,7 @@ const EventPage = ({ data }) => {
   }
 
   return (
-    <div className={PageStyles.eventsPage}>
+    <div className={PageStyles.eventsPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="event-listing">
         <Helmet>
           <title>Events | Doctor Genius</title>
@@ -396,7 +413,7 @@ const EventPage = ({ data }) => {
                 {/* Hero will be a layout component */}
 
                 <Container>
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div className="col-sm-11 col-md-9 col-lap-6">
                       <div
                         className={
@@ -459,7 +476,7 @@ const EventPage = ({ data }) => {
                         <div
                           className={PageStyles.spacer + " spacer solid"}
                         ></div>
-                        <div className="row">
+                        <div className={RowStyles.row}>
                           <div
                             className={
                               PageStyles.timeHolder + " col-sm-3 time-holder"
@@ -550,11 +567,10 @@ const EventPage = ({ data }) => {
               <div className="content-main">
                 <div
                   className={
-                    PageStyles.upcomingEvents +
-                    " content-block padded upcoming-events"
+                    PageStyles.upcomingEvents + " content-block upcoming-events"
                   }
                 >
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div
                       className={
                         PageStyles.introSection +
@@ -575,14 +591,16 @@ const EventPage = ({ data }) => {
                       </p>
                     </div>
                   </div>
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div
                       className={
                         PageStyles.eventCards +
                         " col-sm-11 col-md-9 col-lap-12 event-cards"
                       }
                     >
-                      <div className="row">{display_upcoming_events}</div>
+                      <div className={RowStyles.row}>
+                        {display_upcoming_events}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -591,8 +609,10 @@ const EventPage = ({ data }) => {
 
                 <div
                   className={
+                    RowStyles.row +
+                    " " +
                     PageStyles.featuredPartnersRow +
-                    " row panel-row featured-partners-row"
+                    " panel-row featured-partners-row"
                   }
                 >
                   <div className="col-sm-12">
@@ -602,9 +622,9 @@ const EventPage = ({ data }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div className="col-sm-10 col-md-10 col-lap-10 col-lg-11">
-                      <div className="row">
+                      <div className={RowStyles.row}>
                         <div
                           className={
                             PageStyles.logoPartnershipItem +
@@ -678,7 +698,7 @@ const EventPage = ({ data }) => {
                 <div className="spacer solid"></div>
 
                 <div className={PageStyles.pastEvents + " past-events"}>
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div className="col-sm-11 col-md-11 col-lap-9 center">
                       <h2>Past Events</h2>
                       <p
@@ -696,7 +716,7 @@ const EventPage = ({ data }) => {
                     </div>
                   </div>
 
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div
                       className={
                         PageStyles.pastEventsTimeline +
@@ -704,7 +724,9 @@ const EventPage = ({ data }) => {
                       }
                       style={eventTimeLineStyles}
                     >
-                      <div className="row">{display_past_events()}</div>
+                      <div className={RowStyles.row}>
+                        {display_past_events()}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -714,8 +736,14 @@ const EventPage = ({ data }) => {
                 {/* Begin Demo Footer */}
                 <div
                   className={
+                    RowStyles.row +
+                    " " +
+                    RowStyles.padded +
+                    " " +
+                    RowStyles.tallTop +
+                    " " +
                     PageStyles.requestDemoFooter +
-                    " row padded tall-top request-demo-footer"
+                    " request-demo-footer"
                   }
                 >
                   <div className="col-sm-11 col-md-9 col-lap-5">

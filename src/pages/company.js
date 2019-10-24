@@ -18,6 +18,7 @@ import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/company-page.scss"
 import PageStyles from "./company.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const Company = data => {
   const images = data.data
@@ -74,7 +75,7 @@ const Company = data => {
   ]
 
   return (
-    <div className={PageStyles.companyPage}>
+    <div className={PageStyles.companyPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="company">
         <Helmet>
           <title>
@@ -91,7 +92,7 @@ const Company = data => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div className={PageStyles.heroContent + " hero-content"}>
                       <div
@@ -119,7 +120,15 @@ const Company = data => {
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded tall-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop
+                }
+              >
                 <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6">
                   <div className="content-block">
                     <div className="innerTitle">
@@ -148,7 +157,11 @@ const Company = data => {
                 </div>
               </div>
 
-              <div className="row padded panel-row">
+              <div
+                className={
+                  RowStyles.row + " " + RowStyles.padded + " panel-row"
+                }
+              >
                 <div className="col-sm-12">
                   <div className="inner-title center">
                     <h2 className="underline font-weight-medium">
@@ -231,7 +244,15 @@ const Company = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded p-sm-0">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.searchResultsPage.childImageSharp.fluid}
@@ -278,7 +299,15 @@ const Company = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded tall-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallBottom
+                }
+              >
                 <div className="col-sm-12">
                   <div className="inner-title center">
                     <h3 className="strapline">Testimonials</h3>
@@ -302,8 +331,14 @@ const Company = data => {
               </div>
               <div
                 className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
                   PageStyles.letsTalkPartnership +
-                  " row padded tall-top lets-talk-partnership"
+                  " lets-talk-partnership"
                 }
               >
                 <div className="col-sm-10 offset-sm-1  offset-md-0 col-md-6 order-sm-2 order-md-1">

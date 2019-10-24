@@ -1,0 +1,59 @@
+@import "../styles/_site-variables.scss";
+
+$top-padding: 60px;
+$bottom-padding: 30px;
+
+$top-padding-md: 30px;
+$bottom-padding-md: 20px;
+
+.rowStyling {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -37.5px;
+    margin-left: -37.5px;
+    justify-content: center;
+    align-items: center;
+    &.padded {
+      padding-top: $top-padding;
+      padding-bottom: $bottom-padding;
+      &.shortTop {
+        padding-top: 60px * 0.5;
+      }
+      &.tallTop {
+        padding-top: $top-padding * 1.5;
+      }
+      &.shortBottom {
+        padding-bottom: $bottom-padding * 0.5;
+      }
+      &.tallBottom {
+        padding-bottom: $bottom-padding * 2;
+      }
+      @include media("<laptop") {
+        padding-top: $top-padding-md;
+        &.shortTop {
+          padding-top: $top-padding-md * 0.5;
+        }
+        &.tallTop {
+          padding-top: $top-padding-md * 1.5;
+        }
+        padding-bottom: $bottom-padding-md;
+        &.shortBottom {
+          padding-bottom: $bottom-padding-md * 0.5;
+        }
+        &.tallBottom {
+          padding-bottom: $bottom-padding-md * 2;
+        }
+        & > .col-md-5 {
+          margin: 20px auto;
+        }
+      }
+    }
+    .img-container {
+      @include media("<=phone") {
+        padding-left: 37.5px !important;
+        padding-right: 37.5px !important;
+      }
+    }
+  }
+}

@@ -16,6 +16,7 @@ import hostingSolutionsIcon from "../img/hosting-solutions.svg"
 
 import "../styles/marketing-solutions-inner.scss"
 import PageStyles from "./marketing-solutions-inner.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 export default props => {
   /* These will likely need to be dynamic props */
@@ -29,7 +30,11 @@ export default props => {
   const heroBackgroundImage = props.backgroundImage
 
   return (
-    <div className={PageStyles.marketingSolutionsInnerPage}>
+    <div
+      className={
+        PageStyles.marketingSolutionsInnerPage + " " + RowStyles.rowStyling
+      }
+    >
       <DefaultPageLayout>
         <Helmet>
           <title>{metaTitle}</title>
@@ -41,7 +46,7 @@ export default props => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div
                       className={
@@ -62,7 +67,7 @@ export default props => {
           <Main>
             <Container>
               {/* Begin secondary nav Component: */}
-              <div className="row">
+              <div className={RowStyles.row}>
                 <div className="col-sm-12 panel-row">
                   <div className="secondary-nav-target">
                     <div className="secondary-nav">
@@ -187,9 +192,15 @@ export default props => {
               {/* Begin Split Row of content and image */}
               {contentRows.map((row, index) => (
                 <div
-                  class={
-                    (index % 2 ? "even-row" : "odd-row") +
-                    " row padded short-top short-bottom"
+                  className={
+                    (index % 2 ? "even-row " : "odd-row ") +
+                    RowStyles.row +
+                    " " +
+                    RowStyles.padded +
+                    " " +
+                    RowStyles.shortTop +
+                    " " +
+                    RowStyles.shortBottom
                   }
                 >
                   <div
@@ -198,7 +209,7 @@ export default props => {
                     }
                   />
                   <div
-                    class={
+                    className={
                       (index % 2
                         ? "order-sm-2 order-md-3"
                         : "order-sm-2 order-md-2") + " col-sm-9 col-md-5"
@@ -241,7 +252,7 @@ export default props => {
                     </div>
                   </div>
                   <div
-                    class={
+                    className={
                       (index % 2
                         ? "order-sm-1 order-md-2"
                         : "order-sm-1 order-md-3") + " col-sm-12 col-md-5"

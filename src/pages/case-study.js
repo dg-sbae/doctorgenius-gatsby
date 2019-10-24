@@ -10,6 +10,7 @@ import Container from "../components/Container"
 
 import "../styles/case-study.scss"
 import PageStyles from "./case-study.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 import thinArrowRight from "../img/right-arrow.svg"
 import newPatientOppIcon from "../img/icon/new-patient-opportunity.svg"
@@ -20,7 +21,7 @@ import performanceCampaignIcon from "../img/icon/performance-driven-campaigns.sv
 const CaseStudy = data => {
   const images = data.data
   return (
-    <div className={PageStyles.caseStudyPage}>
+    <div className={PageStyles.caseStudyPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="case-study">
         <Helmet>
           <title>
@@ -38,7 +39,7 @@ const CaseStudy = data => {
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="valign-wrapper row">
+                <div className={RowStyles.row + " valign-wrapper"}>
                   <div className="col-sm-12">
                     <div className="hero-content">
                       <div
@@ -66,7 +67,7 @@ const CaseStudy = data => {
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded panel-row">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
                   <div
                     className={
@@ -77,7 +78,15 @@ const CaseStudy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div
                   className={
                     PageStyles.logoBlock +
@@ -119,7 +128,7 @@ const CaseStudy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded panel-row">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
                   <div
                     className={
@@ -130,9 +139,17 @@ const CaseStudy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-sm-12 col-md-10 order-2 col-lap-6 order-lap-1 col-lg-6 order-lg-1">
-                  <div className="">
+                  <div>
                     <p>
                       The plan was to rebuild his complete online branding with
                       a new website. Expand his full digital presence across the
@@ -183,7 +200,7 @@ const CaseStudy = data => {
                 </div>
               </div>
 
-              <div className="row padded panel-row">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
                   <div
                     className={
@@ -194,7 +211,15 @@ const CaseStudy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div
                   className={
                     PageStyles.OurPlansIMGContainer +
@@ -215,7 +240,7 @@ const CaseStudy = data => {
                     " col-sm-10 col-md-10 col-lap-5 col-lg-5 panel-quadrant"
                   }
                 >
-                  <div className={PageStyles.row + " row"}>
+                  <div className={RowStyles.row}>
                     <div
                       className={
                         PageStyles.PanelQuadItem +
@@ -288,7 +313,7 @@ const CaseStudy = data => {
                       </div>
                     </div>
                   </div>
-                  <div className={PageStyles.row + " row"}>
+                  <div className={RowStyles.row}>
                     <div
                       className={
                         PageStyles.PanelQuadItem +
@@ -360,7 +385,15 @@ const CaseStudy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-sm-12">
                   <div
                     className={
@@ -438,7 +471,13 @@ const CaseStudy = data => {
               <div
                 className={
                   PageStyles.requestDemoFooter +
-                  " row padded tall-top request-demo-footer"
+                  " " +
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " request-demo-footer"
                 }
               >
                 <div className="col-lg-1" />
