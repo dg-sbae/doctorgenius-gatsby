@@ -17,44 +17,6 @@ header {
   & .container-fluid {
     width: 100%;
   }
-  .demo-only {
-    display: none !important;
-  }
-  .button.nav-button {
-    width: 45%;
-  }
-  .logo a {
-    display: block;
-    .logo-holder {
-      background-image: url("../img/icon/logo-white.svg");
-      background-size: contain;
-      height: 40px;
-      max-height: 100%;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      vertical-align: middle;
-
-      @include media("<=laptop") {
-        margin-left: 8px;
-        background-position: initial;
-      }
-    }
-  }
-  .phone > a {
-    display: block;
-    .phone-holder {
-      /* phone holder and image holder should be refactored to operate the same way/same markup */
-      background-image: url("../img/icon/phone-white.svg");
-      background-size: contain;
-      height: 25px;
-      width: 25px;
-      background-repeat: no-repeat;
-      background-position: center;
-      vertical-align: bottom;
-      display: inline-block;
-    }
-  }
   nav {
     .container,
     .container-fluid {

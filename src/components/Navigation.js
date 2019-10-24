@@ -1092,13 +1092,15 @@ class Navigation extends Component {
                     NavStyles.navButton +
                     " " +
                     NavStyles.freeDemoButton +
+                    " " +
+                    NavStyles.button +
                     " button nav-button transparent free-demo-button"
                   }
                 >
                   Free Demo
                 </ListLink>
               </ul>
-              <ul className="demo-only">
+              <ul className={NavStyles.demoOnly + " demo-only"}>
                 <li className="call">Call For Demo!</li>
                 <a
                   href="tel:877-477-2311"
@@ -1106,6 +1108,8 @@ class Navigation extends Component {
                     NavStyles.navButton +
                     " " +
                     NavStyles.freeDemoButton +
+                    " " +
+                    NavStyles.button +
                     " button nav-button transparent free-demo-button"
                   }
                 >
