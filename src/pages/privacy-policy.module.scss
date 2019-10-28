@@ -1,6 +1,12 @@
 @import "../styles/_site-variables.scss";
 
 .privacyPolicyPage {
+  .privacyPolicy {
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
   /* Styles unique to this page component */
   .gbiPrivacyPolicy:before,
   .gbiPrivacyPolicy:after {
@@ -48,9 +54,5 @@
   }
   ul {
     margin-bottom: 15px;
-  }
-  li {
-    padding-top: 5px;
-    padding-bottom: 5px;
   }
 }

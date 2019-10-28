@@ -2,6 +2,13 @@
 
 .ecaupPage {
   /* Styles unique to this page component */
+  .ecAup {
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
   .gbiEcaup:before,
   .gbiEcaup:after {
     background-position: initial !important;
@@ -46,10 +53,7 @@
   ul {
     margin-bottom: 15px;
   }
-  li {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
+
   a {
     text-decoration: none;
   }

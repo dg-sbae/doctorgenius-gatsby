@@ -19,7 +19,7 @@ const Baa = data => {
         <Helmet>
           <title>Standard Business Associate Agreement | Doctor Genius</title>
         </Helmet>
-        <div className="baa">
+        <div className={PageStyles.baa + " baa"}>
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiBaa + " gbi-baa"}>
             <div className={PageStyles.hero + " hero"}>
               <Container>

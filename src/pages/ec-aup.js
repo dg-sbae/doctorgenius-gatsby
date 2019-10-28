@@ -21,7 +21,7 @@ const EcAup = data => {
             Electronic Communications and Acceptable Use Policy | Doctor Genius
           </title>
         </Helmet>
-        <div className="ec-aup">
+        <div className={PageStyles.ecAup + " ec-aup"}>
           <BackgroundImage
             fluid={data.data.heroBg.childImageSharp.fluid}
             className={PageStyles.gbiEcaup + " gbi-ecaup"}

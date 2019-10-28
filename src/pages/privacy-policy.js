@@ -22,7 +22,7 @@ const PrivacyPolicy = data => {
             content="Privacy policy of Doctor Genius located in in Irvine, CA 92606."
           />
         </Helmet>
-        <div className="privacy-policy">
+        <div className={PageStyles.privacyPolicy + " privacy-policy"}>
           <BackgroundImage
             fluid={data.data.heroBg.childImageSharp.fluid}
             className={PageStyles.gbiPrivacyPolicy + ` gbi-privacy-policy`}
