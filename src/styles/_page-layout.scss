@@ -47,53 +47,9 @@ header {
 
 /* Secondary Header is the large icon navigation which affixes to the top of the main header on scroll */
 .secondary-nav-target {
-  width: 100%;
-  max-width: 100%;
-  height: 190px;
-  transition: height 0.3s, max-width 2s;
-
   .secondary-nav {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    // &.secondary-nav-stuck {
-    //   width: 100%;
-    //   max-width: 1248px;
-    //   left: 0;
-    //   height: 115px;
-    // }
-
     &.scrolled {
       height: 115px;
-    }
-    .icon-wrapper {
-      width: 103px;
-      height: 67px;
-    }
-    // &:after {
-    //   width: 100%;
-    //   border-bottom: 1px solid $mute;
-    //   display: block;
-    //   content: "";
-    //   position: absolute;
-    //   bottom: 0;
-    // }
-    .panel.active {
-      margin-top: 35px;
-
-      &:after {
-        background: url("../img/secondary-nav-indicator.svg");
-        content: "";
-        display: block;
-        background-size: contain;
-        background-position: center;
-        width: 100%;
-        margin-top: 5px;
-        height: 8px;
-        background-repeat: no-repeat;
-      }
     }
   }
 
@@ -126,20 +82,6 @@ header {
         height: 50px;
       }
     }
-  }
-}
-
-.secondary-nav-target:after {
-  border-bottom: 1px solid #dedede;
-  display: block;
-  content: "";
-  position: absolute;
-  width: 96%;
-  bottom: 0;
-  left: 2%;
-  @include media("<laptop") {
-    width: 100%;
-    left: 0;
   }
 }
 

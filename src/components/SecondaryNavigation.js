@@ -111,7 +111,7 @@ class SecondaryNavigation extends Component {
           SecondaryNavStyles.secondaryNavTarget + " secondary-nav-target"
         }
       >
-        <div className="secondary-nav">
+        <div className={SecondaryNavStyles.secondaryNav + " secondary-nav"}>
           {this.navItemsConfiguration[this.props.pageType].map(item => (
             <div
               className={
