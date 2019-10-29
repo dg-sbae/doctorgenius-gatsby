@@ -115,12 +115,20 @@ class SecondaryNavigation extends Component {
           {this.navItemsConfiguration[this.props.pageType].map(item => (
             <div
               className={
-                (item.text === this.props.pageTitle ? "active " : "") + "panel"
+                (item.text === this.props.pageTitle
+                  ? SecondaryNavStyles.active + " active "
+                  : "") +
+                SecondaryNavStyles.panel +
+                " panel"
               }
             >
-              <div className="icon-wrapper">
+              <div className={SecondaryNavStyles.iconWrapper + " icon-wrapper"}>
                 <a href={item.url}>
-                  <img className="img-icon" src={item.source} alt={item.alt} />
+                  <img
+                    className={SecondaryNavStyles.imgIcon + " img-icon"}
+                    src={item.source}
+                    alt={item.alt}
+                  />
                 </a>
               </div>
               <p>{item.text}</p>
