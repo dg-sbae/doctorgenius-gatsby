@@ -14,12 +14,12 @@ import RowStyles from "../components/Row.module.scss"
 
 const Baa = data => {
   return (
-    <div className={PageStyles.baaPage + RowStyles.rowStyling}>
+    <div className={PageStyles.baaPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="baa">
         <Helmet>
           <title>Standard Business Associate Agreement | Doctor Genius</title>
         </Helmet>
-        <div className="baa">
+        <div className={PageStyles.baa + " baa"}>
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiBaa + " gbi-baa"}>
             <div className={PageStyles.hero + " hero"}>
               <Container>
@@ -48,7 +48,7 @@ const Baa = data => {
           </BackgroundImage>
           <Main>
             <Container>
-            <div className={RowStyles.row + " " + RowStyles.padding + " " + RowStyles.tallTop + " " + RowStyles.shortBottom}>
+            <div className={RowStyles.row + " " + RowStyles.padded + " " + RowStyles.tallTop + " " + RowStyles.shortBottom}>
               <div className="col-sm-12 col-md-8">
                 <p>
                   This Standard Business Associate Agreement (or “BAA”) is entered

@@ -21,7 +21,7 @@ const TermsOfService = data => {
           </title>
           <meta name="description" content="Terms Of Service of Doctor Genius located in Irvine, CA 92606." />
         </Helmet>
-        <div className="termsofservice">
+        <div className={PageStyles.termsOfService + " termsofservice"}>
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiTos + " gbi-tos"}>
           <div className={PageStyles.hero + " hero"}>
             <Container>
