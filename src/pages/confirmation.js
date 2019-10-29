@@ -21,14 +21,7 @@ export default props => (
           <div className={PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}
             <Container>
-              <div
-                className={
-                  PageStyles.titleAndDesc +
-                  " " +
-                  RowStyles.row +
-                  " panel-row title-and-desc"
-                }
-              >
+              <div className={RowStyles.row + " " + PageStyles.titleAndDesc}>
                 <div className="col-sm-12">
                   <div className="header inner-title center">
                     <h1>
@@ -71,14 +64,7 @@ export default props => (
               </div>
             </Container>
             <Container>
-              <div
-                className={
-                  PageStyles.infoAndMap +
-                  " " +
-                  RowStyles.row +
-                  " panel-row info-and-map"
-                }
-              >
+              <div className={RowStyles.row + " " + PageStyles.infoAndMap}>
                 <div
                   className={
                     PageStyles.companyInfo +

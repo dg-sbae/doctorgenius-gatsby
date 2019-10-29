@@ -111,8 +111,7 @@ const Partnerships = data => {
                   " " +
                   PageStyles.panelRow +
                   " " +
-                  PageStyles.featuredPartnersRow +
-                  " panel-row featured-partners-row"
+                  PageStyles.featuredPartnersRow
                 }
               >
                 <div className="col-sm-12">
@@ -132,11 +131,10 @@ const Partnerships = data => {
                 <div className={RowStyles.row + " " + PageStyles.fullWidthRow}>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.panel}>
                       <div className={PageStyles.iconWrapper}>
                         <img
                           className={PageStyles.imgIcon}
@@ -148,11 +146,10 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.panel}>
                       <div className={PageStyles.iconWrapper}>
                         <img
                           className={PageStyles.imgIcon}
@@ -164,11 +161,10 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.panel}>
                       <div className={PageStyles.iconWrapper}>
                         <img
                           className={PageStyles.imgIcon}
@@ -180,11 +176,10 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.panel}>
                       <div className={PageStyles.iconWrapper}>
                         <img
                           className={PageStyles.imgIcon}
@@ -198,11 +193,10 @@ const Partnerships = data => {
                 <div className={RowStyles.row + " " + PageStyles.fullWidthRow}>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.panel}>
                       <div className={PageStyles.iconWrapper}>
                         <img
                           className={PageStyles.imgIcon}
@@ -214,11 +208,10 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.panel}>
                       <div className={PageStyles.iconWrapper}>
                         <img
                           className={PageStyles.imgIcon}
@@ -230,11 +223,10 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.panel}>
                       <div className={PageStyles.iconWrapper}>
                         <img
                           className={PageStyles.imgIcon}
@@ -246,11 +238,10 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
+                    <div className={PageStyles.panel}>
                       <div className={PageStyles.iconWrapper}>
                         <img
                           className={PageStyles.imgIcon}

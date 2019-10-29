@@ -72,14 +72,16 @@ const MarketingSolutions = data => {
             <Container>
               {/* Begin secondary nav Component: */}
               <div className={RowStyles.row}>
-                <div className="col-sm-12 panel-row">
+                <div className="col-sm-12">
                   <div className="secondary-nav-target">
                     <div className="secondary-nav">
-                      <div className="panel">
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.panel + " panel"}>
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/websites">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={responsiveWebsitesIcon}
                               alt="Responsive Websites"
                             />
@@ -87,11 +89,13 @@ const MarketingSolutions = data => {
                         </div>
                         <p>Responsive Websites</p>
                       </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.panel + " panel"}>
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/content-marketing">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={contentMarketingIcon}
                               alt="Content Marketing"
                             />
@@ -99,11 +103,13 @@ const MarketingSolutions = data => {
                         </div>
                         <p>Content Marketing</p>
                       </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.panel + " panel"}>
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/digital-advertising">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={digitalAdvertisingIcon}
                               alt="Digital Advertising"
                             />
@@ -111,11 +117,13 @@ const MarketingSolutions = data => {
                         </div>
                         <p>Digital Advertising</p>
                       </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.panel + " panel"}>
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/online-reputation-management">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={onlineReputationIcon}
                               alt="Online Reputation"
                             />
@@ -123,11 +131,13 @@ const MarketingSolutions = data => {
                         </div>
                         <p>Online Reputation</p>
                       </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.panel + " panel"}>
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/our-technology">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={ourTechnologyIcon}
                               alt="Our Technology"
                             />
@@ -135,11 +145,13 @@ const MarketingSolutions = data => {
                         </div>
                         <p>Our Technology</p>
                       </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.panel + " panel"}>
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/hosting-solutions">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={hostingSolutionsIcon}
                               alt="Hosting Solutions"
                             />

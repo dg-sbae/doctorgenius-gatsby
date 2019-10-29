@@ -153,7 +153,7 @@ export default ({ data }, props) => {
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className={PageStyles.panel + " panel"}>
+                  <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.medal.childImageSharp.fixed}
@@ -161,16 +161,14 @@ export default ({ data }, props) => {
                         alt="Increase in Google First-Page Results"
                       />
                     </div>
-                    <p className={PageStyles.panelHeading + " panel-heading"}>
-                      1,125%
-                    </p>
-                    <p className="panel-body">
+                    <p className={PageStyles.panelHeading}>1,125%</p>
+                    <p className={PageStyles.panelBody}>
                       Increase in Google First-Page Results
                     </p>
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className={PageStyles.panel + " panel"}>
+                  <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.money.childImageSharp.fixed}
@@ -178,14 +176,12 @@ export default ({ data }, props) => {
                         alt="Increase in Revenue"
                       />
                     </div>
-                    <p className={PageStyles.panelHeading + " panel-heading"}>
-                      100%
-                    </p>
-                    <p className="panel-body">Increase in Revenue!</p>
+                    <p className={PageStyles.panelHeading}>100%</p>
+                    <p className={PageStyles.panelBody}>Increase in Revenue!</p>
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className={PageStyles.panel + " panel"}>
+                  <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.groupChat.childImageSharp.fixed}
@@ -193,14 +189,14 @@ export default ({ data }, props) => {
                         alt="Increase in New Patient Calls"
                       />
                     </div>
-                    <p className={PageStyles.panelHeading + " panel-heading"}>
-                      88%
+                    <p className={PageStyles.panelHeading}>88%</p>
+                    <p className={PageStyles.panelBody}>
+                      Increase in New Patient Calls!
                     </p>
-                    <p className="panel-body">Increase in New Patient Calls!</p>
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className={PageStyles.panel + " panel"}>
+                  <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.stars.childImageSharp.fixed}
@@ -208,10 +204,8 @@ export default ({ data }, props) => {
                         alt="Icon of Stars"
                       />
                     </div>
-                    <p className={PageStyles.panelHeading + " panel-heading"}>
-                      4+ Stars
-                    </p>
-                    <p className="panel-body">
+                    <p className={PageStyles.panelHeading}>4+ Stars</p>
+                    <p className={PageStyles.panelBody}>
                       We take pride in our{" "}
                       <a
                         href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"

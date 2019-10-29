@@ -236,17 +236,16 @@ const CaseStudy = data => {
                 <div
                   className={
                     PageStyles.PanelQuadrant +
-                    " col-sm-10 col-md-10 col-lap-5 col-lg-5 panel-quadrant"
+                    " col-sm-10 col-md-10 col-lap-5 col-lg-5"
                   }
                 >
                   <div className={RowStyles.row}>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
+                      <div className={PageStyles.Panel}>
                         <div className={PageStyles.iconWrapper}>
                           <img
                             className={PageStyles.imgIcon}
@@ -256,12 +255,7 @@ const CaseStudy = data => {
                         </div>
                       </div>
 
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           New Patient
                           <br />
@@ -276,11 +270,10 @@ const CaseStudy = data => {
                     </div>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
+                      <div className={PageStyles.Panel}>
                         <div className={PageStyles.iconWrapper}>
                           <img
                             className={PageStyles.imgIcon}
@@ -290,12 +283,7 @@ const CaseStudy = data => {
                         </div>
                       </div>
 
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           Marketing
                           <br />
@@ -313,11 +301,10 @@ const CaseStudy = data => {
                   <div className={RowStyles.row}>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
+                      <div className={PageStyles.Panel}>
                         <div className={PageStyles.iconWrapper}>
                           <img
                             className={PageStyles.imgIcon}
@@ -326,12 +313,7 @@ const CaseStudy = data => {
                           />
                         </div>
                       </div>
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           Live Support
                           <br />
@@ -347,11 +329,10 @@ const CaseStudy = data => {
                     </div>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
+                      <div className={PageStyles.Panel}>
                         <div className={PageStyles.iconWrapper}>
                           <img
                             className={PageStyles.imgIcon}
@@ -360,12 +341,7 @@ const CaseStudy = data => {
                           />
                         </div>
                       </div>
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           Performance Driven
                           <br />

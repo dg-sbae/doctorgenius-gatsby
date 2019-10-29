@@ -159,7 +159,11 @@ const Company = data => {
 
               <div
                 className={
-                  RowStyles.row + " " + RowStyles.padded + " panel-row"
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  PageStyles.panelRow
                 }
               >
                 <div className="col-sm-12">
@@ -174,7 +178,7 @@ const Company = data => {
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className={PageStyles.panel + " panel"}>
+                  <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <img
                         className={PageStyles.imgIcon}
@@ -182,15 +186,15 @@ const Company = data => {
                         alt="Icon of a Website"
                       />
                     </div>
-                    <p className="panel-heading">1 million +</p>
-                    <p className="panel-body">
+                    <p className={PageStyles.panelHeading}>1 million +</p>
+                    <p className={PageStyles.panelBody}>
                       Words published to our clients’ website blogs and social
                       profiles
                     </p>
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className={PageStyles.panel + " panel"}>
+                  <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <img
                         className={PageStyles.imgIcon}
@@ -198,15 +202,15 @@ const Company = data => {
                         alt="Icon of a Search Engine Page"
                       />
                     </div>
-                    <p className="panel-heading">1000+</p>
-                    <p className="panel-body">
+                    <p className={PageStyles.panelHeading}>1000+</p>
+                    <p className={PageStyles.panelBody}>
                       Over 1000+ Dental Practices use Doctor Genius Web & SEO
                       services
                     </p>
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className={PageStyles.panel + " panel"}>
+                  <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <img
                         className={PageStyles.imgIcon}
@@ -214,15 +218,15 @@ const Company = data => {
                         alt="Icon of a Group of Doctors"
                       />
                     </div>
-                    <p className="panel-heading">70 +</p>
-                    <p className="panel-body">
+                    <p className={PageStyles.panelHeading}>70 +</p>
+                    <p className={PageStyles.panelBody}>
                       In-House Support, Development, and Writers work for Doctor
                       Genius
                     </p>
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className={PageStyles.panel + " panel"}>
+                  <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <img
                         className={PageStyles.imgIcon}
@@ -230,8 +234,8 @@ const Company = data => {
                         alt="Icon of Stars"
                       />
                     </div>
-                    <p className="panel-heading">4.9 Stars</p>
-                    <p className="panel-body">
+                    <p className={PageStyles.panelHeading}>4.9 Stars</p>
+                    <p className={PageStyles.panelBody}>
                       We take pride in our google reviews. Read our{" "}
                       <a
                         href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"

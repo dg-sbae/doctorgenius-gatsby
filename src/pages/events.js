@@ -609,10 +609,7 @@ const EventPage = ({ data }) => {
 
                 <div
                   className={
-                    RowStyles.row +
-                    " " +
-                    PageStyles.featuredPartnersRow +
-                    " panel-row featured-partners-row"
+                    RowStyles.row + " " + PageStyles.featuredPartnersRow
                   }
                 >
                   <div className="col-sm-12">

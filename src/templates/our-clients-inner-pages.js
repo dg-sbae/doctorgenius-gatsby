@@ -84,14 +84,16 @@ export default props => {
             <Container>
               {/* Begin secondary nav Component: */}
               <div className={RowStyles.row}>
-                <div className="col-sm-12 panel-row">
+                <div className="col-sm-12">
                   <div className="secondary-nav-target">
                     <div className="secondary-nav">
                       <div
                         className={
                           (currentPage === "dental-practices"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
@@ -111,7 +113,9 @@ export default props => {
                         className={
                           (currentPage === "urgent-care-clinics"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
@@ -131,7 +135,9 @@ export default props => {
                         className={
                           (currentPage === "chiropractor-practices"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
@@ -151,7 +157,9 @@ export default props => {
                         className={
                           (currentPage === "cosmetic-surgeons"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
@@ -171,7 +179,9 @@ export default props => {
                         className={
                           (currentPage === "healthcare-marketing"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div

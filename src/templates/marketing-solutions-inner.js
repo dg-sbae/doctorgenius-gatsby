@@ -68,14 +68,16 @@ export default props => {
             <Container>
               {/* Begin secondary nav Component: */}
               <div className={RowStyles.row}>
-                <div className="col-sm-12 panel-row">
+                <div className="col-sm-12">
                   <div className="secondary-nav-target">
                     <div className="secondary-nav">
                       <div
                         className={
                           (currentPage === "responsive-websites"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
@@ -95,7 +97,9 @@ export default props => {
                         className={
                           (currentPage === "content-marketing"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
@@ -115,7 +119,9 @@ export default props => {
                         className={
                           (currentPage === "digital-advertising"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
@@ -135,7 +141,9 @@ export default props => {
                         className={
                           (currentPage === "online-reputation"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
@@ -154,7 +162,8 @@ export default props => {
                       <div
                         className={
                           (currentPage === "our-technology" ? "active " : "") +
-                          "panel"
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
@@ -174,7 +183,9 @@ export default props => {
                         className={
                           (currentPage === "hosting-solutions"
                             ? "active "
-                            : "") + "panel"
+                            : "") +
+                          PageStyles.panel +
+                          " panel"
                         }
                       >
                         <div
