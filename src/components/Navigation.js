@@ -984,6 +984,8 @@ class Navigation extends Component {
         <Sidebar />
         <nav
           className={
+            NavStyles[this.props.navType + "Nav"] +
+            " " +
             NavStyles.navbar +
             " navbar navbar-default navbar-expand-lap fixed-top"
           }

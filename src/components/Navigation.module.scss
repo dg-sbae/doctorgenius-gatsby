@@ -108,11 +108,6 @@ nav {
       @include media(">=desktop") {
         flex-basis: 23%;
       }
-      img.phone {
-        /* this should probably be yet another flexbox */
-        // transform: scale(1.25);
-        // vertical-align: text-bottom;
-      }
 
       .mainContactLinks {
         .freeDemoButton {
@@ -322,5 +317,52 @@ nav {
       background-color: $button-hover-green !important;
       border-color: $button-hover-green !important;
     }
+  }
+}
+
+nav.demoNav {
+  &.navbar {
+    height: 80px !important;
+  }
+  .demoOnly {
+    display: flex !important;
+    .freeDemoButton,
+    .freeDemoButton.navButton {
+      transition: 0.3s background-color, 0.3s border-color;
+      background-color: $demo-button-green;
+      border-color: $demo-button-green !important;
+    }
+    .freeDemoButton:hover,
+    .freeDemoButton.navButton:hover {
+      background-color: $button-hover-green !important;
+      border-color: $button-hover-green !important;
+    }
+  }
+  &.mainNavbarStuck {
+    .freeDemoButton:hover {
+      background-color: $button-hover-green !important;
+      border-color: $button-hover-green !important;
+    }
+    .contactLinks ul.demoOnly li {
+      color: $primary;
+    }
+  }
+  .mainContactLinks {
+    display: none;
+  }
+  .mainLinks .navbarNav {
+    display: none;
+  }
+  a,
+  i {
+    color: $primary-text !important;
+  }
+  .button.navButton {
+    padding: 8px 7.5% !important;
+    border: 1px solid !important;
+    border-radius: 6px !important;
+    letter-spacing: 0.5px !important;
+    display: block;
+    width: 50%;
   }
 }
