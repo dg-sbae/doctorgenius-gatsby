@@ -241,52 +241,6 @@ html .hero {
     }
   }
 }
-
-$top-padding: 60px;
-$bottom-padding: 30px;
-
-$top-padding-md: 30px;
-$bottom-padding-md: 20px;
-
-.row {
-  justify-content: center;
-  align-items: center;
-  &.padded {
-    padding-top: $top-padding;
-    &.short-top {
-      padding-top: $top-padding * 0.5;
-    }
-    &.tall-top {
-      padding-top: $top-padding * 1.5;
-    }
-    padding-bottom: $bottom-padding;
-    &.short-bottom {
-      padding-bottom: $bottom-padding * 0.5;
-    }
-    &.tall-bottom {
-      padding-bottom: $bottom-padding * 2;
-    }
-    @include media("<laptop") {
-      padding-top: $top-padding-md;
-      &.short-top {
-        padding-top: $top-padding-md * 0.5;
-      }
-      &.tall-top {
-        padding-top: $top-padding-md * 1.5;
-      }
-      padding-bottom: $bottom-padding-md;
-      &.short-bottom {
-        padding-bottom: $bottom-padding-md * 0.5;
-      }
-      &.tall-bottom {
-        padding-bottom: $bottom-padding-md * 2;
-      }
-      & > .col-md-5 {
-        margin: 20px auto;
-      }
-    }
-  }
-}
 .inner-title {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -309,12 +263,5 @@ $bottom-padding-md: 20px;
 .full-bleed-wrapper {
   @include media("<laptop") {
     padding: 0 !important;
-  }
-}
-
-.row .img-container {
-  @include media("<=phone") {
-    padding-left: 37.5px !important;
-    padding-right: 37.5px !important;
   }
 }

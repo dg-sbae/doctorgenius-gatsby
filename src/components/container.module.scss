@@ -5,3 +5,23 @@
     max-width: 1248px;
   }
 }
+
+.container,
+.container-fluid {
+  @include media("<=phone") {
+    padding-right: $gutter-xs / 2;
+    padding-left: $gutter-xs / 2;
+  }
+  @include media(">phone", "<=tablet") {
+    padding-right: $gutter-sm / 2;
+    padding-left: $gutter-sm / 2;
+  }
+  @include media(">tablet", "<=laptop") {
+    padding-right: $gutter-md / 2;
+    padding-left: $gutter-md / 2;
+  }
+  @include media(">laptop", "<=desktop") {
+    padding-right: $gutter-lg / 2;
+    padding-left: $gutter-lg / 2;
+  }
+}

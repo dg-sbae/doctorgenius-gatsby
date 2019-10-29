@@ -8,7 +8,6 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import "../styles/case-study.scss"
 import PageStyles from "./case-study.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
@@ -237,34 +236,26 @@ const CaseStudy = data => {
                 <div
                   className={
                     PageStyles.PanelQuadrant +
-                    " col-sm-10 col-md-10 col-lap-5 col-lg-5 panel-quadrant"
+                    " col-sm-10 col-md-10 col-lap-5 col-lg-5"
                   }
                 >
                   <div className={RowStyles.row}>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
+                      <div className={PageStyles.Panel}>
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={newPatientOppIcon}
                             alt="Handshake icon"
                           />
                         </div>
                       </div>
 
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           New Patient
                           <br />
@@ -279,26 +270,20 @@ const CaseStudy = data => {
                     </div>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.Panel}>
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={marketingSolutionsIcon}
                             alt="Webpage icon"
                           />
                         </div>
                       </div>
 
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           Marketing
                           <br />
@@ -316,25 +301,19 @@ const CaseStudy = data => {
                   <div className={RowStyles.row}>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.Panel}>
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={liveSupportIcon}
                             alt="People chat icon"
                           />
                         </div>
                       </div>
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           Live Support
                           <br />
@@ -350,25 +329,19 @@ const CaseStudy = data => {
                     </div>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.Panel}>
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={performanceCampaignIcon}
                             alt="Newspaper icon"
                           />
                         </div>
                       </div>
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           Performance Driven
                           <br />

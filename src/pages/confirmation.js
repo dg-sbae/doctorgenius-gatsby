@@ -8,9 +8,10 @@ import Main from "../components/main-content"
 
 import "../styles/confirmation.scss"
 import PageStyles from "./confirmation.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 export default props => (
-  <div className={PageStyles.confirmationPage}>
+  <div className={PageStyles.confirmationPage + " " + RowStyles.rowStyling}>
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
         <title>Thank you for Contacting Doctor Genius | Doctor Genius</title>
@@ -20,11 +21,7 @@ export default props => (
           <div className={PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}
             <Container>
-              <div
-                className={
-                  PageStyles.titleAndDesc + " row panel-row title-and-desc"
-                }
-              >
+              <div className={RowStyles.row + " " + PageStyles.titleAndDesc}>
                 <div className="col-sm-12">
                   <div className="header inner-title center">
                     <h1>
@@ -50,7 +47,7 @@ export default props => (
                       </span>
                       , to find out about our latest services and technology.
                     </p>
-                    <div className="row">
+                    <div className={RowStyles.row}>
                       <div className="col-sm-8 col-md-4">
                         <button
                           className={
@@ -67,11 +64,7 @@ export default props => (
               </div>
             </Container>
             <Container>
-              <div
-                className={
-                  PageStyles.infoAndMap + " row panel-row info-and-map"
-                }
-              >
+              <div className={RowStyles.row + " " + PageStyles.infoAndMap}>
                 <div
                   className={
                     PageStyles.companyInfo +

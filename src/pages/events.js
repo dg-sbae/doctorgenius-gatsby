@@ -609,10 +609,7 @@ const EventPage = ({ data }) => {
 
                 <div
                   className={
-                    RowStyles.row +
-                    " " +
-                    PageStyles.featuredPartnersRow +
-                    " panel-row featured-partners-row"
+                    RowStyles.row + " " + PageStyles.featuredPartnersRow
                   }
                 >
                   <div className="col-sm-12">
@@ -631,7 +628,7 @@ const EventPage = ({ data }) => {
                             " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
                           }
                         >
-                          <div className="icon-wrapper">
+                          <div className={PageStyles.iconWrapper}>
                             <img
                               className={PageStyles.imgIcon + " img-icon"}
                               src={images.boaLogo.childImageSharp.fluid.src}
@@ -645,7 +642,7 @@ const EventPage = ({ data }) => {
                             " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
                           }
                         >
-                          <div className="icon-wrapper">
+                          <div className={PageStyles.iconWrapper}>
                             <img
                               className={PageStyles.imgIcon + " img-icon"}
                               src={
@@ -661,7 +658,7 @@ const EventPage = ({ data }) => {
                             " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
                           }
                         >
-                          <div className="icon-wrapper">
+                          <div className={PageStyles.iconWrapper}>
                             <img
                               className={PageStyles.imgIcon + " img-icon"}
                               src={
@@ -677,7 +674,7 @@ const EventPage = ({ data }) => {
                             " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
                           }
                         >
-                          <div className="icon-wrapper">
+                          <div className={PageStyles.iconWrapper}>
                             <img
                               className={
                                 PageStyles.imgIcon +

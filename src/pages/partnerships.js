@@ -111,8 +111,7 @@ const Partnerships = data => {
                   " " +
                   PageStyles.panelRow +
                   " " +
-                  PageStyles.featuredPartnersRow +
-                  " panel-row featured-partners-row"
+                  PageStyles.featuredPartnersRow
                 }
               >
                 <div className="col-sm-12">
@@ -132,14 +131,13 @@ const Partnerships = data => {
                 <div className={RowStyles.row + " " + PageStyles.fullWidthRow}>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
-                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.panel}>
+                      <div className={PageStyles.iconWrapper}>
                         <img
-                          className={PageStyles.imgIcon + " img-icon"}
+                          className={PageStyles.imgIcon}
                           src={images.googleLogo.childImageSharp.fixed.src}
                           alt="Google Partner"
                         />
@@ -148,14 +146,13 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
-                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.panel}>
+                      <div className={PageStyles.iconWrapper}>
                         <img
-                          className={PageStyles.imgIcon + " img-icon"}
+                          className={PageStyles.imgIcon}
                           src={images.pulseCheckLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner PulseCheck"
                         />
@@ -164,14 +161,13 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
-                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.panel}>
+                      <div className={PageStyles.iconWrapper}>
                         <img
-                          className={PageStyles.imgIcon + " img-icon"}
+                          className={PageStyles.imgIcon}
                           src={images.picisLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner Picis"
                         />
@@ -180,14 +176,13 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
-                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.panel}>
+                      <div className={PageStyles.iconWrapper}>
                         <img
-                          className={PageStyles.imgIcon + " img-icon"}
+                          className={PageStyles.imgIcon}
                           src={images.boaLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner Bank of America"
                         />
@@ -198,14 +193,13 @@ const Partnerships = data => {
                 <div className={RowStyles.row + " " + PageStyles.fullWidthRow}>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
-                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.panel}>
+                      <div className={PageStyles.iconWrapper}>
                         <img
-                          className={PageStyles.imgIcon + " img-icon"}
+                          className={PageStyles.imgIcon}
                           src={images.pattersonLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner Patterson Companies, Inc."
                         />
@@ -214,14 +208,13 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
-                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.panel}>
+                      <div className={PageStyles.iconWrapper}>
                         <img
-                          className={PageStyles.imgIcon + " img-icon"}
+                          className={PageStyles.imgIcon}
                           src={images.roiLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner Roi Dental Coaching"
                         />
@@ -230,14 +223,13 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
-                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.panel}>
+                      <div className={PageStyles.iconWrapper}>
                         <img
-                          className={PageStyles.imgIcon + " img-icon"}
+                          className={PageStyles.imgIcon}
                           src={images.hrHealthLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner HR for Health"
                         />
@@ -246,14 +238,13 @@ const Partnerships = data => {
                   </div>
                   <div
                     className={
-                      PageStyles.logoPartnershipItem +
-                      " logo-partnership-item col-sm-6 col-lap-3"
+                      PageStyles.logoPartnershipItem + " col-sm-6 col-lap-3"
                     }
                   >
-                    <div className={PageStyles.panel + " panel"}>
-                      <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.panel}>
+                      <div className={PageStyles.iconWrapper}>
                         <img
-                          className={PageStyles.imgIcon + " img-icon"}
+                          className={PageStyles.imgIcon}
                           src={images.jllLogo.childImageSharp.fixed.src}
                           alt="Digital Marketing Partner JLL"
                         />

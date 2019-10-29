@@ -230,32 +230,6 @@ nav {
   }
 }
 
-//Panels
-.panel {
-  .panel-heading {
-    color: $primary;
-    @include fluid-type(
-      $panel-heading-font-size * 0.85,
-      $panel-heading-font-size,
-      $laptop,
-      $desktop
-    );
-    font-family: $font-family-inner-block-headings;
-    font-weight: $font-weight-bold;
-    @include media("<=laptop") {
-      font-size: 24px;
-    }
-  }
-  .panel-body {
-    font-size: $font-size-lg;
-    color: $mute-text-darker;
-    line-height: 1.2;
-    @include media("<=laptop") {
-      font-size: 14px;
-    }
-  }
-}
-
 // Standard Request demo Footer
 
 .request-demo-footer {

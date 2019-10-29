@@ -44,28 +44,14 @@ export default props => (
                   </div>
                 </div>
 
-                <div
-                  className={
-                    RowStyles.row +
-                    " " +
-                    PageStyles.contactForm +
-                    " panel-row contact-form"
-                  }
-                >
+                <div className={RowStyles.row + " " + PageStyles.contactForm}>
                   <ContactForm />
                 </div>
               </div>
             </Container>
 
             <Container>
-              <div
-                className={
-                  RowStyles.row +
-                  " " +
-                  PageStyles.infoAndMap +
-                  " panel-row info-and-map"
-                }
-              >
+              <div className={RowStyles.row + " " + PageStyles.infoAndMap}>
                 <div
                   className={
                     PageStyles.companyInfo +
