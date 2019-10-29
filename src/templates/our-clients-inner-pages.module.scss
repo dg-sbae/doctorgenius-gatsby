@@ -73,6 +73,14 @@
     .iconWrapper {
       height: 67px;
       width: 103px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .imgIcon {
+        max-height: 100%;
+        object-fit: contain;
+      }
     }
     .caseStudyTable {
       padding: 20px;

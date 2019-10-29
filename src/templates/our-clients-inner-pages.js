@@ -99,7 +99,7 @@ export default props => {
                         >
                           <a href="/our-clients/dental-practices">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={dentalPractices}
                               alt="Dental Practices"
                             />
@@ -119,7 +119,7 @@ export default props => {
                         >
                           <a href="/our-clients/urgent-care-clinics">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={urgentCare}
                               alt="Urgent Care Clinics"
                             />
@@ -139,7 +139,7 @@ export default props => {
                         >
                           <a href="/our-clients/chiropractor-practices">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={chiropractorPractices}
                               alt="Chiropractor Practices"
                             />
@@ -159,7 +159,7 @@ export default props => {
                         >
                           <a href="/our-clients/cosmetic-surgeons">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={cosmeticSurgeons}
                               alt="Cosmetic Surgeons"
                             />
@@ -179,7 +179,7 @@ export default props => {
                         >
                           <a href="/our-clients/healthcare-marketing">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={healthcareMarketing}
                               alt="Healthcare Marketing"
                             />

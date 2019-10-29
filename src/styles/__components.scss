@@ -79,17 +79,6 @@
   }
 }
 
-.icon-wrapper {
-  /* dimensions of the icon-wrapper should be set with fixed height and width, in the individual page css */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  .img-icon {
-    max-height: 100%;
-    object-fit: contain;
-  }
-}
 .link-with-icon {
   display: block;
   margin-top: 20px;

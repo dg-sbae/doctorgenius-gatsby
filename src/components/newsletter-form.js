@@ -4,6 +4,7 @@ import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 
 import FormStyles from "./newsletter-form.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 import $ from "jquery"
 
@@ -115,7 +116,7 @@ class NewsLetterSignUpForm extends React.Component {
 
   render() {
     return (
-      <div className="newsletter row">
+      <div className={RowStyles.row + " newsletter"}>
         <div className="col-sm-12">
           <div className="newsletter-signup">
             <h4 className="newsletter-heading">Newsletter</h4>

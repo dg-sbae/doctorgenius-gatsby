@@ -35,7 +35,7 @@ const ListLink = props => (
 const SideNavListLink = props => (
   <li className={props.className}>
     <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
-      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper}>
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           <img
             className={SidebarStyles.imageIcon + " image-icon"}
@@ -57,7 +57,7 @@ const SideNavListLink = props => (
 const MarketingSolutionsSideNavListLink = props => (
   <li className={props.className}>
     <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
-      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper}>
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           <img
             className={SidebarStyles.imageIcon + " image-icon"}
@@ -133,7 +133,7 @@ const MarketingSolutionsSideNavListLink = props => (
 const WhoWeServeSideNavListLink = props => (
   <li className={props.className}>
     <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
-      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper}>
         <Link
           to={props.to}
           className=""
@@ -212,7 +212,7 @@ const WhoWeServeSideNavListLink = props => (
 const CompanySideNavListLink = props => (
   <li className={props.className}>
     <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
-      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper}>
         <Link
           to={props.to}
           className="nav-disable-link-open-dropdown-icon"
@@ -267,7 +267,7 @@ const CompanySideNavListLink = props => (
 const ResourcesSideNavListLink = props => (
   <li className={props.className}>
     <div className={SidebarStyles.navIconWrapper + " nav-icon-wrapper"}>
-      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper}>
         <Link to={props.to} activeClassName="active" partiallyActive={true}>
           <img
             className={SidebarStyles.imageIcon + " image-icon"}
@@ -341,7 +341,7 @@ const ResourcesSideNavListLink = props => (
 const ExternalLink = props => (
   <li className={props.className}>
     <a href={props.to} target="_blank" rel="noreferrer noopener">
-      <div className={SidebarStyles.iconWrapper + " icon-wrapper"}>
+      <div className={SidebarStyles.iconWrapper}>
         <img className="img-icon" src={props.source} alt={props.alt} />
       </div>
     </a>

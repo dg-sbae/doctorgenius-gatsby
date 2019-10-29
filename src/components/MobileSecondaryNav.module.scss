@@ -4,6 +4,11 @@ $secondaryLineItemHeight: 54px;
 $innerItemBackgroundColor: #0082ce;
 $borderColor: #068ad8;
 
+.mobileSecondaryNavHolder {
+  margin-right: -25px !important;
+  margin-left: -25px !important;
+}
+
 .mobileSecondaryNav {
   position: relative;
   height: $secondaryLineItemHeight;

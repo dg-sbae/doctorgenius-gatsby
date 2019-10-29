@@ -98,7 +98,7 @@ const PrivacyPolicy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row">
+              <div className={RowStyles.row}>
                 <div className="col-sm-6">
                   <div className="accented-paragraph">
                     <p>

@@ -28,4 +28,16 @@
       }
     }
   }
+
+  .iconWrapper {
+    /* dimensions of the icon-wrapper should be set with fixed height and width, in the individual page css */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .imgIcon {
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
 }

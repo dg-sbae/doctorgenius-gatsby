@@ -8,7 +8,6 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 
-import "../styles/case-study.scss"
 import PageStyles from "./case-study.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
@@ -248,11 +247,9 @@ const CaseStudy = data => {
                       }
                     >
                       <div className={PageStyles.Panel + " panel"}>
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={newPatientOppIcon}
                             alt="Handshake icon"
                           />
@@ -284,9 +281,9 @@ const CaseStudy = data => {
                       }
                     >
                       <div className={PageStyles.Panel + " panel"}>
-                        <div className="icon-wrapper">
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={marketingSolutionsIcon}
                             alt="Webpage icon"
                           />
@@ -321,9 +318,9 @@ const CaseStudy = data => {
                       }
                     >
                       <div className={PageStyles.Panel + " panel"}>
-                        <div className="icon-wrapper">
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={liveSupportIcon}
                             alt="People chat icon"
                           />
@@ -355,9 +352,9 @@ const CaseStudy = data => {
                       }
                     >
                       <div className={PageStyles.Panel + " panel"}>
-                        <div className="icon-wrapper">
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={performanceCampaignIcon}
                             alt="Newspaper icon"
                           />

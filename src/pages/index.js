@@ -137,7 +137,11 @@ export default ({ data }, props) => {
             <Container>
               <div
                 className={
-                  RowStyles.row + " " + RowStyles.padded + " panel-row"
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  PageStyles.panelRow
                 }
               >
                 <div className="col-sm-10">
@@ -150,10 +154,10 @@ export default ({ data }, props) => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel + " panel"}>
-                    <div className="icon-wrapper">
+                    <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.medal.childImageSharp.fixed}
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         alt="Increase in Google First-Page Results"
                       />
                     </div>
@@ -167,10 +171,10 @@ export default ({ data }, props) => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel + " panel"}>
-                    <div className="icon-wrapper">
+                    <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.money.childImageSharp.fixed}
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         alt="Increase in Revenue"
                       />
                     </div>
@@ -182,10 +186,10 @@ export default ({ data }, props) => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel + " panel"}>
-                    <div className="icon-wrapper">
+                    <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.groupChat.childImageSharp.fixed}
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         alt="Increase in New Patient Calls"
                       />
                     </div>
@@ -197,10 +201,10 @@ export default ({ data }, props) => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel + " panel"}>
-                    <div className="icon-wrapper">
+                    <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.stars.childImageSharp.fixed}
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         alt="Icon of Stars"
                       />
                     </div>

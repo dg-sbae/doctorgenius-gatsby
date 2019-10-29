@@ -78,10 +78,12 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/websites">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={responsiveWebsitesIcon}
                               alt="Responsive Websites"
                             />
@@ -96,10 +98,12 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/content-marketing">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={contentMarketingIcon}
                               alt="Content Marketing"
                             />
@@ -114,10 +118,12 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/digital-advertising">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={digitalAdvertisingIcon}
                               alt="Digital Advertising"
                             />
@@ -132,10 +138,12 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/online-reputation-management">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={onlineReputationIcon}
                               alt="Online Reputation"
                             />
@@ -149,10 +157,12 @@ export default props => {
                           "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/our-technology">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={ourTechnologyIcon}
                               alt="Our Technology"
                             />
@@ -167,10 +177,12 @@ export default props => {
                             : "") + "panel"
                         }
                       >
-                        <div className="icon-wrapper">
+                        <div
+                          className={PageStyles.iconWrapper + " icon-wrapper"}
+                        >
                           <a href="/marketing-solutions/hosting-solutions">
                             <img
-                              className="img-icon"
+                              className={PageStyles.imgIcon + " img-icon"}
                               src={hostingSolutionsIcon}
                               alt="Hosting Solutions"
                             />

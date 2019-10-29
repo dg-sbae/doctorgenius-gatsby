@@ -221,4 +221,19 @@ $homepage-h1-font-size: $font-size-base * 4.881;
       display: none;
     }
   }
+
+  .panelRow {
+    align-items: flex-start;
+  }
+
+  .iconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .imgIcon {
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
 }

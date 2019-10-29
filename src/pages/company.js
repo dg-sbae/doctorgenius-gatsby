@@ -175,9 +175,9 @@ const Company = data => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel + " panel"}>
-                    <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.iconWrapper}>
                       <img
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         src={webIcon}
                         alt="Icon of a Website"
                       />
@@ -191,9 +191,9 @@ const Company = data => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel + " panel"}>
-                    <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.iconWrapper}>
                       <img
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         src={searchEngineIcon}
                         alt="Icon of a Search Engine Page"
                       />
@@ -207,9 +207,9 @@ const Company = data => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel + " panel"}>
-                    <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.iconWrapper}>
                       <img
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         src={doctorsIcon}
                         alt="Icon of a Group of Doctors"
                       />
@@ -223,9 +223,9 @@ const Company = data => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel + " panel"}>
-                    <div className={PageStyles.iconWrapper + " icon-wrapper"}>
+                    <div className={PageStyles.iconWrapper}>
                       <img
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         src={starsIcon}
                         alt="Icon of Stars"
                       />
