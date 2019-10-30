@@ -4,6 +4,7 @@ nav {
   height: 120px;
   display: flex;
   transition: all 0.3s;
+  font-family: $font-family-body-text;
   @include media("<laptop") {
     height: 75px;
   }
@@ -80,6 +81,13 @@ nav {
         }
       }
     }
+    .mainLinks,
+    .contactLinks {
+      a {
+        color: $primary-text;
+        text-decoration: none;
+      }
+    }
     .mainLinks {
       flex-basis: 47%;
 
@@ -154,6 +162,7 @@ nav {
       }
     }
     .dropdownMenu {
+      color: $primary-text;
       display: block;
       visibility: hidden;
       opacity: 0;
@@ -167,6 +176,13 @@ nav {
       // transform: translateX(-50%);
       // margin-right: auto;
       // margin-left: auto;
+      a {
+        color: inherit;
+        &:hover {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
       .dropdownRow {
         margin-bottom: 35px;
       }
@@ -224,6 +240,23 @@ nav {
           margin-bottom: 0;
         }
       }
+    }
+    li {
+      font-weight: $font-weight-normal;
+      .active {
+        color: $primary-text;
+        font-weight: $font-weight-medium;
+      }
+    }
+    .mainLinks {
+      li {
+        font-size: 0.875rem;
+        font-weight: $font-weight-medium;
+      }
+    }
+    .contactLinks {
+      font-size: $font-size-nav-contact-links;
+      font-weight: $font-weight-normal;
     }
   }
   &.navbar.mainNavbarStuck {
