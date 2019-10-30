@@ -100,7 +100,50 @@ class SecondaryNavigation extends Component {
 
   componentDidMount() {
     $(document).ready(function() {
-      // Need to add js from html.js and modularize
+      document.addEventListener("scroll", function(e) {
+        const winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop
+        const height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight
+        const scrolled = winScroll / height
+
+        if (
+          typeof document.querySelector(
+            `.${SecondaryNavStyles.secondaryNav}`
+          ) !== "undefined" &&
+          document.querySelector(`.${SecondaryNavStyles.secondaryNav}`) !== null
+        ) {
+          var navBottom = document
+            .querySelector(`nav.navbar`)
+            .getBoundingClientRect().bottom
+          var secondaryNavTop = document
+            .querySelector(`.${SecondaryNavStyles.secondaryNav}`)
+            .getBoundingClientRect().top
+          var heroBottom = document
+            .querySelector(".hero")
+            .getBoundingClientRect().bottom
+        }
+
+        if (
+          typeof document.querySelector(
+            `.${SecondaryNavStyles.secondaryNav}`
+          ) !== "undefined" &&
+          document.querySelector(`.${SecondaryNavStyles.secondaryNav}`) !== null
+        ) {
+          if (heroBottom <= navBottom) {
+            document
+              .querySelector(`.${SecondaryNavStyles.secondaryNavTarget}`)
+              .classList.add(`${SecondaryNavStyles.secondaryNavStuck}`)
+            document.querySelector(".hero").classList.add("shift-down")
+          } else {
+            document
+              .querySelector(`.${SecondaryNavStyles.secondaryNavTarget}`)
+              .classList.remove(`${SecondaryNavStyles.secondaryNavStuck}`)
+            document.querySelector(".hero").classList.remove("shift-down")
+          }
+        }
+      })
     })
   }
 
