@@ -391,6 +391,7 @@ nav {
   }
 }
 
+// Navigation styling relavant to the Demo Page
 nav.demoNav {
   &.navbar {
     height: 80px !important;
@@ -438,6 +439,7 @@ nav.demoNav {
   }
 }
 
+// Navigation styling relevant to the Contact Page
 nav.contactNav {
   @include media(">=laptop") {
     // ----------- NAVIGATION STYLING (DESKTOP) -----------
