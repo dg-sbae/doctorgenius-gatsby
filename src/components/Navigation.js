@@ -1021,7 +1021,7 @@ class Navigation extends Component {
 
   render() {
     return (
-      <div className="navigation-wrapper">
+      <div className={NavStyles.navigationWrapper + " navigation-wrapper"}>
         <Sidebar />
         <nav
           className={

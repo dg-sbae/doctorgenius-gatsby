@@ -437,3 +437,77 @@ nav.demoNav {
     width: 50%;
   }
 }
+
+nav.contactNav {
+  @include media(">=laptop") {
+    // ----------- NAVIGATION STYLING (DESKTOP) -----------
+    .logo a .logoHolder {
+      background-image: url("../img/icon/logo-blue.svg");
+    }
+    .mainLinks a,
+    .contactLinks a {
+      color: $primary;
+    }
+    &.mainNavbarStuck {
+      a {
+        color: $primary;
+      }
+      .freeDemoButton {
+        background-color: $primary;
+        a {
+          color: #fff !important;
+        }
+      }
+      .button.navButton {
+        &.freeDemoButton:hover {
+          color: $primary !important;
+          background-color: $primary-text !important;
+        }
+        &.freeDemoButton a:hover {
+          color: $primary !important;
+        }
+      }
+    }
+
+    .phone > a .phoneHolder {
+      background-image: url("../img/phone-blue.svg");
+    }
+    .button.navButton {
+      border: 1px solid $primary;
+      &.freeDemoButton:hover {
+        background-color: $primary !important;
+        border-color: $primary !important;
+      }
+      &.freeDemoButton:hover a {
+        color: #fff !important;
+      }
+    }
+    .dropdownRow a {
+      color: $primary-text !important;
+    }
+    // ----------- END NAVIGATION STYLING (DESKTOP) -----------
+  }
+  @include media("<=laptop", ">=tablet") {
+    // ----------- NAVIGATION STYLING (TABLET) -----------
+    .logo a .logoHolder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
+    // ----------- END NAVIGATION STYLING (TABLET) -----------
+  }
+  @include media("<tablet") {
+    // ----------- NAVIGATION STYLING (MOBILE) -----------
+    .logo a .logoHolder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
+    // ----------- END NAVIGATION STYLING (MOBILE) -----------
+  }
+}
+
+.navigationWrapper {
+  @include media("<=laptop", ">=tablet") {
+    background-color: $primary;
+  }
+  @include media("<tablet") {
+    background-color: $primary;
+  }
+}
