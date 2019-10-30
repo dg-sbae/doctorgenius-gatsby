@@ -1033,11 +1033,12 @@ class Navigation extends Component {
             " navbar navbar-default navbar-expand-lap fixed-top"
           }
         >
-          <Container>
-            {/*<button type="button" id="sidebarCollapse" className="btn btn-info">
-              <i className="fas fa-align-left" />
-              <span>Toggle Sidebar</span>
-    </button>*/}
+          {/* Pass the container classname down to the Container Component*/}
+          <Container
+            parentClassNames={
+              NavStyles.container + " " + NavStyles.containerFluid
+            }
+          >
             <button
               className={NavStyles.navbarToggler + " navbar-toggler"}
               id="sidenav-trigger"

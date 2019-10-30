@@ -136,24 +136,6 @@
     color: white;
     border-radius: 20px;
   }
-  &.nav-button {
-    padding: 8px 7.5%;
-    border: 1px solid;
-    border-radius: 6px;
-    letter-spacing: 0.5px;
-    &.free-demo-button {
-      transition: 0.3s background-color, 0.3s border-color;
-
-      &:hover {
-        background-color: #fff;
-        border-color: $primary;
-        a {
-          color: $primary;
-          transition: 0.3s color;
-        }
-      }
-    }
-  }
   &.transparent {
     background: none;
   }

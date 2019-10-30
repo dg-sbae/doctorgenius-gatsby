@@ -3,9 +3,15 @@ import containerStyles from "./container.module.scss"
 
 const bootstrapContainerClassName = "container-fluid"
 
-export default ({ children }) => (
+export default ({ children, parentClassNames }) => (
+  // Receive the className from the parent component if provided
   <div
-    className={containerStyles.container + " " + bootstrapContainerClassName}
+    className={
+      containerStyles.container +
+      " " +
+      bootstrapContainerClassName +
+      (parentClassNames ? " " + parentClassNames : "")
+    }
   >
     {children}
   </div>

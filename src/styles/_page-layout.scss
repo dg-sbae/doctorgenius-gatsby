@@ -5,29 +5,6 @@ body {
   width: 100%;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  height: 120px;
-  @include media("<laptop") {
-    height: 75px;
-  }
-  z-index: 1800;
-  &,
-  & .container-fluid {
-    width: 100%;
-  }
-  nav {
-    .container,
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-}
 .request-demo-footer {
   a.button {
     @include media("<=tablet") {
@@ -152,10 +129,6 @@ html .hero {
   img {
     width: 100%;
   }
-}
-
-.navigation-wrapper {
-  display: block;
 }
 
 .full-bleed-wrapper {
