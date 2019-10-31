@@ -7,7 +7,10 @@
 }
 
 .container,
-.container-fluid {
+.containerFluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   @include media("<=phone") {
     padding-right: $gutter-xs / 2;
     padding-left: $gutter-xs / 2;
