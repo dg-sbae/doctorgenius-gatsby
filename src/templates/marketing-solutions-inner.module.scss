@@ -18,6 +18,9 @@
     p {
       color: $primary;
       display: inline;
+      font-family: "Roboto";
+      font-weight: $font-weight-bold;
+      font-size: $font-size-sm;
     }
     & + .innerTitle {
       h2 {
@@ -48,6 +51,13 @@
     margin: 30px calc(17.5px / 2); /* difference between bootstrap col-4 width and design panel width */
     @include media("<=laptop") {
       margin: 20px auto 40px;
+    }
+  }
+
+  @include media("<tablet") {
+    .evenRow img.imgResponsive,
+    .oddRow img.imgResponsive {
+      margin-bottom: $m1 * 1.5;
     }
   }
 }

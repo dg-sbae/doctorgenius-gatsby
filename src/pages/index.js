@@ -8,7 +8,7 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-// import InnerTitle from "../components/inner-title.js"
+import InnerTitle from "../components/inner-title.js"
 
 import "../styles/homepage.scss"
 import PageStyles from "./index.module.scss"
@@ -145,12 +145,12 @@ export default ({ data }, props) => {
                 }
               >
                 <div className="col-sm-10">
-                  <div className="header inner-title center">
-                    <h3 className="strapline">
-                      Performance, Results, Excellence
-                    </h3>
-                    <h2 className="underline">We Care About Your Success</h2>
-                  </div>
+                  <InnerTitle
+                    title="We Care About Your Success"
+                    underlined
+                    centered
+                    strapline="Performance, Results, Excellence"
+                  />
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel}>
@@ -221,16 +221,14 @@ export default ({ data }, props) => {
 
               <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-10">
-                  <div className="inner-title center">
-                    <h3 className="strapline">Built for Success</h3>
-                    <h2 className="underline font-weight-light">
-                      All-in-One
-                      <span className="font-weight-semibold">
-                        {" "}
-                        Marketing Dashboard
-                      </span>
-                    </h2>
-                  </div>
+                  <InnerTitle
+                    title="All-in-One "
+                    boldText="Marketing Dashboard"
+                    strapline="Built for Success"
+                    underlined
+                    centered
+                    id={PageStyles.lightTextAllInOne}
+                  />
                 </div>
                 <div className="col-sm-11 col-md-8 col-lg-6">
                   <div className="accented-paragraph">
@@ -288,18 +286,14 @@ export default ({ data }, props) => {
                 }
               >
                 <div className="col-sm-12">
-                  <div className="inner-title center">
-                    <h3 className="strapline">
-                      Setting the foundation for success
-                    </h3>
-                    <h2 className="underline font-weight-light">
-                      Why Choose
-                      <span className="font-weight-semibold">
-                        {" "}
-                        Doctor Genius
-                      </span>
-                    </h2>
-                  </div>
+                  <InnerTitle
+                    title="Why Choose "
+                    boldText="Doctor Genius"
+                    strapline="Setting the foundation for success"
+                    centered
+                    underlined
+                    id={PageStyles.lightTextWhyChooseDG}
+                  />
                 </div>
                 <div className="col-sm-12 col-md-6">
                   <Img
@@ -312,10 +306,11 @@ export default ({ data }, props) => {
                 </div>
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Why is Doctor Genius # 1 in new patient acquisitions?
-                      </h2>
+                    <InnerTitle
+                      title="Why is Doctor Genius # 1 in new patient acquisitions?"
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p className="s-thin">
                           When you join the Doctor Genius Family, we are now
@@ -340,8 +335,11 @@ export default ({ data }, props) => {
               >
                 <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>What makes Doctor Genius different?</h2>
+                    <InnerTitle
+                      title="What makes Doctor Genius different?"
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p className="m-thin">
                           We are not a cookie cutter type program. We are a
@@ -384,10 +382,11 @@ export default ({ data }, props) => {
                 </div>
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        How would you rate Doctor Genius' client satisfaction?
-                      </h2>
+                    <InnerTitle
+                      title="How would you rate Doctor Genius' client satisfaction?"
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p className="s-thin">
                           Don't take our word for it, see what our clients say
@@ -419,7 +418,7 @@ export default ({ data }, props) => {
                 <div className="col-md-1" />
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">
-                    <div className="inner-title">
+                    <div>
                       <h2>
                         Start your <span>success</span> with Doctor Genius
                         today!

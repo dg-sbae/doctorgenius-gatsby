@@ -78,7 +78,7 @@ const OurWebsites = data => {
               alt: "A Speedometer",
               title: "Speed",
             },
-            innerTitle: "Websites built to <br/> perform and rank",
+            innerTitle: "Websites built to perform and rank",
             paragraph:
               "Improved site speed is an important signal Google uses in its ranking algorithm. Having a website that loads quickly on both mobile and desktop searches is key to giving your next potential patient the best experience while navigating your website.",
           },

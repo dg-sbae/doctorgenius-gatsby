@@ -28,11 +28,7 @@ export default props => (
             <Container>
               <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
+                  <div className="header center">
                     <h1>Contact Us</h1>
                     <h3 className={PageStyles.strapline + " strapline"}>
                       Have a question? Need help?

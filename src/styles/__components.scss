@@ -1,36 +1,5 @@
 /* Components - Reusable content pieces which will probably be <Components> */
 
-.inner-title {
-  text-align: left;
-  &.center {
-    text-align: center;
-  }
-  a {
-    cursor: pointer;
-  }
-
-  h2.underline {
-    &.short:after {
-      margin-top: 25px;
-    }
-    &.tall:after {
-      margin-top: 42px;
-    }
-    &:not(.short):after {
-      margin-top: 32px;
-    }
-    &:after {
-      background-image: url("../img/underline.svg");
-      content: "";
-      display: block;
-      height: 2px;
-      background-repeat: no-repeat;
-      width: 232px;
-      margin: auto;
-    }
-  }
-}
-
 .accent-block {
   padding: 2rem;
   color: $primary-text;

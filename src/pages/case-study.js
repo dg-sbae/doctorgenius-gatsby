@@ -7,6 +7,7 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import InnerTitle from "../components/inner-title"
 
 import PageStyles from "./case-study.module.scss"
 import RowStyles from "../components/Row.module.scss"
@@ -68,13 +69,7 @@ const CaseStudy = data => {
             <Container>
               <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">The Client</h2>
-                  </div>
+                  <InnerTitle title="The Client" underlined centered />
                 </div>
               </div>
               <div
@@ -129,13 +124,7 @@ const CaseStudy = data => {
               </div>
               <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">The Challenge</h2>
-                  </div>
+                  <InnerTitle title="The Challenge" underlined centered />
                 </div>
               </div>
               <div
@@ -201,13 +190,7 @@ const CaseStudy = data => {
 
               <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">The Solutions</h2>
-                  </div>
+                  <InnerTitle title="The Solutions" underlined centered />
                 </div>
               </div>
               <div
@@ -368,13 +351,7 @@ const CaseStudy = data => {
                 }
               >
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">The Results</h2>
-                  </div>
+                  <InnerTitle title="The Results" underlined centered />
                 </div>
                 <div
                   className={
@@ -382,14 +359,14 @@ const CaseStudy = data => {
                     " col-md-7 col-lap-7 col-lg-7 case-study-container"
                   }
                 >
-                  <div
-                    className={PageStyles.innerTitle + " inner-title center"}
-                  >
-                    <h3 className="m-0">Case Study: Titan Dental</h3>
-                    <div className={PageStyles.subtitle + " subtitle muted"}>
-                      The first 6 months
-                    </div>
-                  </div>
+                  <InnerTitle
+                    title="Case Study: Titan Dental"
+                    inContentBlock
+                    subtitle="The first 6 months"
+                    centered
+                    id={PageStyles.caseStudyHeader}
+                  />
+
                   <div
                     className={PageStyles.caseStudyTable + " case-study-table"}
                   >
@@ -456,7 +433,7 @@ const CaseStudy = data => {
                 <div className="col-lg-1" />
                 <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
                   <div className="content-block">
-                    <div className={PageStyles.innerTitle + " inner-title"}>
+                    <div>
                       <h2>
                         Start your
                         <span className="font-weight-semibold"> success </span>

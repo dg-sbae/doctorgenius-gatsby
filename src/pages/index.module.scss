@@ -190,6 +190,11 @@ $homepage-h1-font-size: $font-size-base * 4.881;
     }
   }
 
+  #lightTextAllInOne,
+  #lightTextWhyChooseDG {
+    font-weight: $font-weight-light;
+  }
+
   .blurBleed {
     /* homepage images are slightly larger, meaning they should bleed slightly less */
     max-width: 120%;

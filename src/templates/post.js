@@ -327,7 +327,7 @@ function PostPage({ pageContext, data, location }) {
                 <div className="col-md-1" />
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">
-                    <div className="inner-title">
+                    <div>
                       <h2>
                         Start your <span>success</span> with Doctor Genius
                         today!

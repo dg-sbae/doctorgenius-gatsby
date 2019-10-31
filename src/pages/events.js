@@ -8,6 +8,7 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import InnerTitle from "../components/inner-title"
 
 import thinArrowRight from "../img/right-arrow.svg"
 
@@ -577,10 +578,7 @@ const EventPage = ({ data }) => {
                         " col-sm-11 col-md-10 col-lap-9 intro-section"
                       }
                     >
-                      <div className="inner-title center">
-                        <h2>Upcoming Events</h2>
-                      </div>
-
+                      <InnerTitle title="Upcoming Events" centered />
                       <p>
                         Below is information on our upcoming events that can
                         cover a variety of topics about benefiting a private
@@ -614,9 +612,7 @@ const EventPage = ({ data }) => {
                 >
                   <div className="col-sm-12">
                     <div className="content-block">
-                      <div className="inner-title center thin-heading">
-                        <h2>Featured Sponsers</h2>
-                      </div>
+                      <InnerTitle title="Featured Sponsers" centered />
                     </div>
                   </div>
                   <div className={RowStyles.row}>
@@ -697,7 +693,11 @@ const EventPage = ({ data }) => {
                 <div className={PageStyles.pastEvents + " past-events"}>
                   <div className={RowStyles.row}>
                     <div className="col-sm-11 col-md-11 col-lap-9 center">
-                      <h2>Past Events</h2>
+                      <InnerTitle
+                        title="Past Events"
+                        centered
+                        id={PageStyles.pastEventsTitle}
+                      />
                       <p
                         className={
                           PageStyles.pastEventDesc + " past-event-desc"
@@ -745,7 +745,7 @@ const EventPage = ({ data }) => {
                 >
                   <div className="col-sm-11 col-md-9 col-lap-5">
                     <div className={PageStyles.contentBlock + " content-block"}>
-                      <div className="inner-title">
+                      <div>
                         <h2>
                           Start your <span>success</span> with Doctor Genius
                           today!

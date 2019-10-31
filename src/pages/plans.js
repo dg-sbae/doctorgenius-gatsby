@@ -7,6 +7,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import FAQAccordion, { FAQ } from "../components/faq-accordion"
+import InnerTitle from "../components/inner-title.js"
 
 import checkmark from "../img/checked.svg"
 import thinArrowRight from "../img/right-arrow.svg"
@@ -1011,10 +1012,8 @@ const Plans = data => {
                 </div>
               </div>
               <div className={RowStyles.row + " " + RowStyles.padded}>
-                <div className="col-sm-6 offset-sm-3 col-md-10 offset-md-1">
-                  <div className="inner-title center">
-                    <h2>Commonly Asked Questions</h2>
-                  </div>
+                <div className="col-sm-6 col-md-10">
+                  <InnerTitle title="Commonly Asked Questions" centered />
                 </div>
               </div>
               <div
@@ -1241,7 +1240,7 @@ const Plans = data => {
                 <div className="col-lg-1" />
                 <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
                   <div className="content-block">
-                    <div className="inner-title">
+                    <div>
                       <h2>
                         Start your
                         <span className="font-weight-semibold"> success </span>

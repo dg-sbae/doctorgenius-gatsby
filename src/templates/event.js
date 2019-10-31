@@ -616,7 +616,7 @@ const EventPage = ({ data }) => {
               >
                 <div className="col-sm-11 col-md-9 col-lap-5">
                   <div className={PageStyles.contentBlock + " content-block"}>
-                    <div className="inner-title">
+                    <div>
                       <h2>
                         Start your <span>success</span> with Doctor Genius
                         today!

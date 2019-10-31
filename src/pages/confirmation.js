@@ -23,7 +23,7 @@ export default props => (
             <Container>
               <div className={RowStyles.row + " " + PageStyles.titleAndDesc}>
                 <div className="col-sm-12">
-                  <div className="header inner-title center">
+                  <div className="header center">
                     <h1>
                       Thank you for{" "}
                       <br

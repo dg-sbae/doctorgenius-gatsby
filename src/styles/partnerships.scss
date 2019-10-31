@@ -1,14 +1,1 @@
 @import "_site-variables.scss";
-.partnerships {
-  .tablet-padded-row {
-    @include media("<=1248px") {
-      padding-left: 6%;
-      padding-right: 6%;
-    }
-  }
-  .inner-title {
-    .subtitle {
-      font-size: 29px;
-    }
-  }
-}

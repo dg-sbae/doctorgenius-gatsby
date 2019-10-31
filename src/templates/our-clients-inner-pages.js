@@ -9,6 +9,7 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
+import InnerTitle from "../components/inner-title.js"
 
 import dentalPractices from "../img/icon/tooth-shine-nav.svg"
 import urgentCare from "../img/icon/urgent-care-nav.svg"
@@ -216,14 +217,17 @@ export default props => {
                     <div
                       className={
                         PageStyles.thinHeading +
-                        " inner-title center thin-heading"
+                        " " +
+                        PageStyles.innerTitle +
+                        " " +
+                        PageStyles.centered
                       }
                     >
-                      <h3 className="strapline">
+                      <h3 className={PageStyles.strapline}>
                         {contentParagraphBlock.heading.strapline}
                       </h3>
                       <h2
-                        className="underline"
+                        className={PageStyles.underline}
                         dangerouslySetInnerHTML={{
                           __html: contentParagraphBlock.heading.title,
                         }}
@@ -259,14 +263,13 @@ export default props => {
                       " col-sm-12 col-md-7 col-lg-7 order-sm-2 order-md-1 case-study-container"
                     }
                   >
-                    <div
-                      className={PageStyles.innerTitle + " inner-title center"}
-                    >
-                      <h3 className="m-0">Case Study: Titan Dental</h3>
-                      <div className={PageStyles.subtitle + " subtitle muted"}>
-                        The first 6 months
-                      </div>
-                    </div>
+                    <InnerTitle
+                      title="Case Study: Titan Dental"
+                      inContentBlock
+                      subtitle="The first 6 months"
+                      centered
+                      id={PageStyles.caseStudyHeader}
+                    />
                     <div
                       className={
                         PageStyles.caseStudyTable + " case-study-table"
@@ -366,9 +369,10 @@ export default props => {
                       <div
                         className={PageStyles.contentBlock + " content-block"}
                       >
-                        <div className="inner-title">
-                          <h2>Check which plan works for your practice</h2>
-                        </div>
+                        <InnerTitle
+                          title="Check which plan works for your practice"
+                          inContentBlock
+                        />
                         <div
                           className={
                             PageStyles.accentedParagraph +
@@ -400,15 +404,13 @@ export default props => {
               {/* Begin testimonial slider */}
               <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
-                  <div className="inner-title center">
-                    <h3 className="strapline">Testimonials</h3>
-                    <h2 className="underline font-weight-normal">
-                      What&nbsp;
-                      <span className="font-weight-semibold">
-                        Clients Are Saying
-                      </span>
-                    </h2>
-                  </div>
+                  <InnerTitle
+                    title="What"
+                    boldText=" Clients Are Saying"
+                    strapline="Testimonials"
+                    underlined
+                    centered
+                  />
                 </div>
                 <div className="col-sm-12">
                   <div className="full-bleed-wrapper">

@@ -126,57 +126,6 @@ nav {
     }
   }
 }
-//Inner Titles
-
-.content-block {
-  .icon-strapline {
-    p {
-      font-family: "Roboto";
-      font-weight: $font-weight-bold;
-      font-size: $font-size-sm;
-    }
-  }
-  .inner-title {
-    h2 {
-      span {
-        font-weight: $font-weight-light;
-      }
-      font-size: $h2-font-size-content-block;
-      /*@include fluid-type(
-        20px,
-        $h2-font-size-content-block,
-        $phone,
-        $tablet
-      ); //; /* See if this is really necessary conflicts with the h2 size below */ //font-size: $h2-font-size-main;
-      @include media("<tablet") {
-        font-weight: $font-weight-semibold;
-        font-size: 20px;
-      }
-      margin-bottom: 25px;
-    }
-  }
-}
-/* inner titles which live outside a content block (like coumn headings) */
-.inner-title {
-  h3 {
-    line-height: 1;
-    &.strapline {
-      font-size: $h3-font-size;
-      color: $primary;
-      font-weight: $font-weight-semibold;
-    }
-  }
-  h2 {
-    line-height: 1;
-    @include fluid-type(
-      $h2-font-size-main * 0.65,
-      $h2-font-size-main,
-      $phone,
-      $tablet
-    ); //font-size: $h2-font-size-main;
-    font-weight: $font-weight-medium;
-  }
-}
 
 /* Link With Icon */
 .link-with-icon {
@@ -237,6 +186,8 @@ nav {
     h2 {
       font-weight: $font-weight-light;
       font-size: 46px;
+      line-height: 1;
+      margin-bottom: $m1;
       span {
         font-weight: $font-weight-semibold;
       }
@@ -310,14 +261,6 @@ a.not-a-link {
 }
 .accent-block {
   color: $primary-text;
-}
-
-.inner-title .strapline {
-  color: $primary;
-}
-
-.inner-title .subtitle.muted {
-  color: $mute-text;
 }
 
 /* Potentially depreceated

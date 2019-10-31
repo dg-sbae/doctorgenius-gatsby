@@ -8,6 +8,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
+import InnerTitle from "../components/inner-title"
 
 import logoBlue from "../img/icon/logo-blue.svg"
 import webIcon from "../img/icon/web.svg"
@@ -129,17 +130,14 @@ const Company = data => {
                   RowStyles.tallTop
                 }
               >
-                <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6">
+                <div className="col-sm-10 offset-md-0 col-md-6">
                   <div className="content-block">
-                    <div className="innerTitle">
-                      <h2 className="font-weight-medium">
-                        The{" "}
-                        <span className="font-weight-semibold">
-                          Doctor Genius{" "}
-                        </span>
-                        Story
-                      </h2>
-                    </div>
+                    <InnerTitle
+                      title="The Doctor Genius"
+                      boldText=" Story"
+                      inContentBlock
+                      smallText
+                    />
                     <div className="accented-paragraph">
                       <p>
                         We are based in Irvine, California, USA. Doctor Genius
@@ -167,15 +165,12 @@ const Company = data => {
                 }
               >
                 <div className="col-sm-12">
-                  <div className="inner-title center">
-                    <h2 className="underline font-weight-medium">
-                      Doctor Genius
-                      <span className="font-weight-semibold">
-                        {" "}
-                        by the numbers
-                      </span>
-                    </h2>
-                  </div>
+                  <InnerTitle
+                    centered
+                    title="Doctor Genius "
+                    underlined
+                    boldText="by the numbers"
+                  />
                 </div>
                 <div className="col-sm-6 col-md-3">
                   <div className={PageStyles.panel}>
@@ -254,7 +249,7 @@ const Company = data => {
                   " " +
                   RowStyles.padded +
                   " " +
-                  RowStyles.shortBottom
+                  RowStyles.tallBottom
                 }
               >
                 <div className="col-sm-12 col-md-6">
@@ -266,14 +261,13 @@ const Company = data => {
                 </div>
                 <div className="col-sm-12 col-md-6">
                   <div className="callout">
-                    <div className="inner-title center">
-                      <h2 className="underline short font-weight-normal">
-                        Our
-                        <span className="font-weight-semibold">
-                          {" "}
-                          Clients Average
-                        </span>
-                      </h2>
+                    <InnerTitle
+                      centered
+                      title="Our "
+                      underlined
+                      boldText="Clients Average"
+                    />
+                    <div className={PageStyles.center}>
                       <div className="callout-heading">
                         <sup>
                           Up
@@ -309,19 +303,17 @@ const Company = data => {
                   " " +
                   RowStyles.padded +
                   " " +
-                  RowStyles.tallBottom
+                  RowStyles.shortBottom
                 }
               >
                 <div className="col-sm-12">
-                  <div className="inner-title center">
-                    <h3 className="strapline">Testimonials</h3>
-                    <h2 className="underline font-weight-normal">
-                      What&nbsp;
-                      <span className="font-weight-semibold">
-                        Clients Are Saying
-                      </span>
-                    </h2>
-                  </div>
+                  <InnerTitle
+                    centered
+                    strapline="Testimonials"
+                    title="What "
+                    underlined
+                    boldText="Clients Are Saying"
+                  />
                 </div>
                 <div className="col-sm-12">
                   <div className="full-bleed-wrapper">
@@ -345,15 +337,14 @@ const Company = data => {
                   " lets-talk-partnership"
                 }
               >
-                <div className="col-sm-10 offset-sm-1  offset-md-0 col-md-6 order-sm-2 order-md-1">
+                <div className="col-sm-10 offset-md-0 col-md-6 order-sm-2 order-md-1">
                   <div className="content-block">
-                    <div className="innerTitle">
-                      <h2 className="font-weight-normal">
-                        Let's{" "}
-                        <span className="font-weight-semibold">
-                          Talk Partnership
-                        </span>
-                      </h2>
+                    <InnerTitle
+                      title="Let's "
+                      boldText="Talk Partnership"
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p>
                           We are based in Irvine, California, USA. Doctor Genius

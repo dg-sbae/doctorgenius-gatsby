@@ -12,6 +12,10 @@
       center calc(74% + 300px) / 300px repeat-x
         url("../img/background-texture.png");
   }
+  .strapline {
+    color: $primary;
+    font-size: 33px;
+  }
   .contactForm {
     padding: $pad;
   }
@@ -49,11 +53,6 @@
       line-height: 1;
       font-weight: $font-weight-normal;
     }
-    .innerTitle {
-      .strapline {
-        font-size: 33px;
-      }
-    }
     .mutedText {
       font-size: 28px;
       color: $mute;
@@ -78,11 +77,6 @@
       font-size: 87px;
       line-height: 1;
       font-weight: $font-weight-normal;
-    }
-    .innerTitle {
-      .strapline {
-        font-size: 33px;
-      }
     }
     .mutedText {
       font-size: 21px;
@@ -118,11 +112,11 @@
       line-height: 1;
       font-weight: $font-weight-normal;
     }
-    .innerTitle {
-      .strapline {
-        font-size: 24px;
-      }
+
+    .strapline {
+      font-size: 24px;
     }
+
     .companyInfo {
       text-align: center;
     }

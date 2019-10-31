@@ -110,12 +110,8 @@
     }
   }
 
-  .innerTitle {
-    @include media("<tablet") {
-      padding-bottom: 0;
-    }
-  }
   .subtitle {
+    color: #a8a8a8;
     font-size: $h2-font-size-main;
     font-style: italic;
     @include fluid-type(
@@ -127,9 +123,12 @@
   }
 
   .caseStudyContainer {
-    h3 {
+    h2 {
       font-size: $h2-font-size-main;
       @include fluid-type(21px, 45px, $tablet, $laptop);
+    }
+    > div {
+      margin-bottom: 0;
     }
   }
 
@@ -244,6 +243,13 @@
           $laptop
         ); /* desktop - 53, tablet - 45, small - 38 */
       }
+    }
+  }
+  #caseStudyHeader {
+    font-size: 45px;
+    font-weight: $font-weight-bold;
+    @include media("<=tablet") {
+      font-size: 21px;
     }
   }
 }

@@ -6,6 +6,7 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import InnerTitle from "../components/inner-title.js"
 
 import "../styles/privacy-policy.scss"
 import PageStyles from "./privacy-policy.module.scss"
@@ -90,11 +91,12 @@ const PrivacyPolicy = data => {
               >
                 <div className="col-sm-8">
                   <div className="content-block">
-                    <div className={PageStyles.innerTitle + " inner-title"}>
-                      <h2 className="underline">
-                        Our Privacy Policy Explains:
-                      </h2>
-                    </div>
+                    <InnerTitle
+                      title="Our Privacy Policy Explains:"
+                      inContentBlock
+                      underlined
+                      centered
+                    />
                   </div>
                 </div>
               </div>
@@ -193,9 +195,12 @@ const PrivacyPolicy = data => {
               >
                 <div className="col-sm-8">
                   <div className="content-block">
-                    <div className={PageStyles.innerTitle + " inner-title"}>
-                      <h2 className="underline">Information We Collect:</h2>
-                    </div>
+                    <InnerTitle
+                      title="Information We Collect:"
+                      inContentBlock
+                      underlined
+                      centered
+                    />
                     <ol>
                       <li>
                         <h4>Information you provide to us</h4>

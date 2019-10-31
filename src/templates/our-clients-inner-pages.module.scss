@@ -54,6 +54,9 @@
       font-size: $h2-font-size-main;
       @include fluid-type(21px, 45px, $tablet, $laptop);
     }
+    > div {
+      margin-bottom: 0;
+    }
     .subtitle {
       @include fluid-type(14px, 29px, $tablet, $laptop);
     }
@@ -161,6 +164,76 @@
     margin: 30px calc(17.5px / 2); /* difference between bootstrap col-4 width and design panel width */
     @include media("<=laptop") {
       margin: 20px auto 40px;
+    }
+  }
+
+  .innerTitle {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: $pad;
+    h2 {
+      font-weight: $font-weight-medium;
+      font-size: $h2-font-size-content-block;
+      line-height: 1;
+      /*@include fluid-type(
+        20px,
+        $h2-font-size-content-block,
+        $phone,
+        $tablet
+      ); //; /* See if this is really necessary conflicts with the h2 size below */ //font-size: $h2-font-size-main;
+      @include media("<tablet") {
+        font-weight: $font-weight-semibold;
+        font-size: 20px;
+      }
+      margin-bottom: 0;
+      span {
+        font-weight: $font-weight-light;
+      }
+    }
+    h2.underline {
+      &.short:after {
+        margin-top: 25px;
+      }
+      &.tall:after {
+        margin-top: 42px;
+      }
+      &:not(.short):after {
+        margin-top: 32px;
+      }
+      &:after {
+        background-image: url("../img/underline.svg");
+        content: "";
+        display: block;
+        height: 2px;
+        background-repeat: no-repeat;
+        width: 232px;
+        margin: auto;
+      }
+    }
+
+    h3 {
+      line-height: 1;
+    }
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  .strapline {
+    font-size: $h3-font-size;
+    color: $primary;
+    font-weight: $font-weight-semibold;
+  }
+
+  #caseStudyHeader {
+    font-size: 45px;
+    font-weight: $font-weight-bold;
+    @include media("<=tablet") {
+      font-size: 21px;
     }
   }
 }

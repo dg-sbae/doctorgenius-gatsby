@@ -669,7 +669,7 @@ const TagsPage = ({ data, pageContext }) => {
                 <div className="col-lg-1" />
                 <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
                   <div className="content-block">
-                    <div className="inner-title">
+                    <div>
                       <h2>
                         Start your{" "}
                         <span className="font-weight-semibold">success </span>

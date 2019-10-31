@@ -5,6 +5,9 @@
   .p10 {
     padding: 10px;
   }
+  #demoTestimonials {
+    font-size: $h2-font-size-main;
+  }
   .hero {
     height: auto;
     padding-top: 165px;
@@ -65,28 +68,21 @@
         font-size: 35px;
       }
     }
-    .innerTitle {
-      h2 {
-        margin-bottom: 10px;
-        font-weight: $font-weight-medium;
-        @include media("<=desktop") {
-          font-size: 45px;
-        }
-        // @include fluid-type(
-        //   $h2-font-size-main * 0.65,
-        //   $h2-font-size-main,
-        //   $phone,
-        //   $tablet
-        // ); //font-size: $h2-font-size-main;
-      }
-      .accentedParagraph p {
+
+    .accentedParagraph {
+      p {
         font-size: 17px;
       }
+      margin-bottom: $m1;
     }
-  }
-  .innerTitle {
-    h2 {
-      @include media("<=desktop") {
+
+    #slimInnerTitle {
+      font-weight: $font-weight-medium;
+      @include media("<desktop") {
+        text-align: center;
+        margin-top: $m1;
+      }
+      @include media("<=425px") {
         font-size: 45px;
       }
     }
@@ -268,18 +264,6 @@
         // padding-left: 50px;
         // padding-right: 50px;
         margin-bottom: 20px;
-      }
-    }
-  }
-
-  .contentBlock {
-    .innerTitle {
-      h2 {
-        @include media("<desktop") {
-          // padding: 0 1%;
-          // font-size: 50px;
-          text-align: center;
-        }
       }
     }
   }

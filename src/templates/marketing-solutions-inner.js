@@ -6,6 +6,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
+import InnerTitle from "../components/inner-title.js"
 
 import contentMarketingIcon from "../img/contract.svg"
 import responsiveWebsitesIcon from "../img/website.svg"
@@ -28,6 +29,8 @@ export default props => {
   const contentRows = props.contentRows
   const currentPage = props.page
   const heroBackgroundImage = props.backgroundImage
+
+  console.log(contentRows)
 
   return (
     <div
@@ -216,7 +219,9 @@ export default props => {
               {contentRows.map((row, index) => (
                 <div
                   className={
-                    (index % 2 ? "even-row " : "odd-row ") +
+                    (index % 2
+                      ? PageStyles.evenRow + " even-row "
+                      : PageStyles.oddRow + " odd-row ") +
                     RowStyles.row +
                     " " +
                     RowStyles.padded +
@@ -253,13 +258,10 @@ export default props => {
                           }}
                         />
                       </div>
-                      <div className={PageStyles.innerTitle + " inner-title"}>
-                        <h2
-                          dangerouslySetInnerHTML={{
-                            __html: row.content.innerTitle,
-                          }}
-                        />
-                      </div>
+                      <InnerTitle
+                        title={row.content.innerTitle}
+                        inContentBlock
+                      />
                       <div
                         className={
                           PageStyles.accentedParagraph + " accented-paragraph"
@@ -282,7 +284,7 @@ export default props => {
                     }
                   >
                     <img
-                      className="img-responsive"
+                      className={PageStyles.imgResponsive + " img-responsive"}
                       src={row.image.url}
                       alt={row.image.alt}
                     />

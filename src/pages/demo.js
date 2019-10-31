@@ -9,6 +9,8 @@ import Container from "../components/Container"
 import DemoForm from "../components/demo-form.js"
 import star from "../img/star.svg"
 
+import InnerTitle from "../components/inner-title"
+
 import "../styles/demo.scss"
 import DemoPageStyles from "./demo.module.scss"
 import RowStyles from "../components/Row.module.scss"
@@ -100,10 +102,12 @@ const DemoPage = data => {
                           DemoPageStyles.contentBlock + " content-block"
                         }
                       >
-                        <div
-                          className={DemoPageStyles.innerTitle + " inner-title"}
-                        >
-                          <h2>Our Plans</h2>
+                        <InnerTitle
+                          title="Our Plans"
+                          id={DemoPageStyles.slimInnerTitle}
+                          inContentBlock
+                        />
+                        <div>
                           <div
                             className={
                               DemoPageStyles.accentedParagraph +
@@ -190,13 +194,12 @@ const DemoPage = data => {
             <Container>
               <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-10">
-                  <div
-                    className={
-                      DemoPageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">What Our Clients Are Saying!</h2>
-                  </div>
+                  <InnerTitle
+                    title="What Our Clients Are Saying!"
+                    underlined
+                    centered
+                    id={DemoPageStyles.demoTestimonials}
+                  />
                 </div>
               </div>
 
@@ -248,7 +251,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -369,7 +372,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -499,7 +502,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -615,7 +618,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -725,7 +728,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -834,7 +837,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -938,7 +941,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -1056,7 +1059,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -1157,7 +1160,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p

@@ -7,6 +7,7 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import InnerTitle from "../components/inner-title.js"
 
 import thinArrowRight from "../img/right-arrow.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
@@ -74,11 +75,14 @@ const Partnerships = data => {
                     <div
                       className={
                         PageStyles.thinHeading +
-                        " inner-title center thin-heading"
+                        " " +
+                        PageStyles.innerTitle +
+                        " " +
+                        PageStyles.centered
                       }
                     >
-                      <h3 className="strapline">Partnerships</h3>
-                      <h2 className="underline">
+                      <h3 className={PageStyles.strapline}>Partnerships</h3>
+                      <h2 className={PageStyles.underline}>
                         <span>
                           <b>Your Success is Our Goal</b> and We're Here to{" "}
                           <b>Help You Achieve It</b>
@@ -116,16 +120,7 @@ const Partnerships = data => {
               >
                 <div className="col-sm-12">
                   <div className={PageStyles.contentBlock + " content-block"}>
-                    <div
-                      className={
-                        PageStyles.thinHeading +
-                        " inner-title center thin-heading"
-                      }
-                    >
-                      <h2 className="underline">
-                        <b>Featured Partners</b>
-                      </h2>
-                    </div>
+                    <InnerTitle title="Featured Partners" underlined centered />
                   </div>
                 </div>
                 <div className={RowStyles.row + " " + PageStyles.fullWidthRow}>
@@ -270,7 +265,7 @@ const Partnerships = data => {
                 <div className="col-md-1" />
                 <div className="col-sm-9 col-md-5">
                   <div className={PageStyles.contentBlock + " content-block"}>
-                    <div className="inner-title">
+                    <div>
                       <h2>
                         Start your <span>success</span> with Doctor Genius
                         today!
@@ -307,21 +302,17 @@ const Partnerships = data => {
                   " " +
                   RowStyles.padded +
                   " " +
-                  RowStyles.tallTop +
-                  " " +
-                  PageStyles.requestDemoFooter +
-                  " request-demo-footer"
+                  RowStyles.tallTop
                 }
               >
                 <div className="col-sm-8  order-sm-2 col-md-6 offset-md-0 order-md-1">
                   <div className={PageStyles.contentBlock + " content-block"}>
-                    <div className="innerTitle">
-                      <h2 className="font-weight-normal">
-                        Let's{" "}
-                        <span className="font-weight-semibold">
-                          Talk Partnership
-                        </span>
-                      </h2>
+                    <InnerTitle
+                      title="Let's "
+                      boldText="Talk Partnership"
+                      inContentBlock
+                    />
+                    <div>
                       <div
                         className={
                           PageStyles.accentedParagraph + " accented-paragraph"

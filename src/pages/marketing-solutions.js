@@ -8,6 +8,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
+import InnerTitle from "../components/inner-title.js"
 
 import thinArrowRight from "../img/right-arrow.svg"
 import contentMarketingIcon from "../img/contract.svg"
@@ -185,10 +186,11 @@ const MarketingSolutions = data => {
               >
                 <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Proven and tested results in every step of the way
-                      </h2>
+                    <InnerTitle
+                      title="Proven and tested results in every step of the way"
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p className="s-thin">
                           Powerful data-driven technology helps you leverage
@@ -245,8 +247,11 @@ const MarketingSolutions = data => {
                 </div>
                 <div className={PageStyles.toolsYouNeed + " col-sm-9 col-md-5"}>
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>All the tools you'll need to be in control. </h2>
+                    <InnerTitle
+                      title="All the tools you'll need to be in control."
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p>
                           In order to for you to thrive online, you must also
@@ -288,9 +293,11 @@ const MarketingSolutions = data => {
                       }
                     >
                       <div className="content-block">
-                        <div className="inner-title">
-                          <h2>Check which plan works for your practice</h2>
-                        </div>
+                        <InnerTitle
+                          title="Check which plan works for your practice"
+                          inContentBlock
+                        />
+
                         <div className="accented-paragraph medium-width">
                           <p>
                             From new patient acquisition to retention, Doctor
@@ -326,7 +333,7 @@ const MarketingSolutions = data => {
                 <div className="col-md-1" />
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">
-                    <div className="inner-title">
+                    <div>
                       <h2>
                         Start your <span>success</span> with Doctor Genius
                         today!
