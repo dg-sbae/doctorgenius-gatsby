@@ -1,0 +1,98 @@
+@import "../styles/_site-variables.scss";
+
+.hero {
+  height: 690px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 55% 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  .accentBlock {
+    h1 {
+      font-size: $h1-font-size;
+      font-weight: $font-weight-medium;
+    }
+    h2 {
+      @include fluid-type(
+        34px,
+        45px,
+        $tablet,
+        $laptop
+      ); /* desktop - 53, tablet - 45, small - 38 */
+      @include heading-font;
+    }
+    p {
+      @include fluid-type(1.0625rem, 1.1875rem, $phone, $tablet); /* 19 - 17 */
+      font-family: "Agenda";
+      line-height: 1.4;
+      font-weight: $font-weight-light;
+      @include media("<laptop") {
+        line-height: 1.1;
+      }
+    }
+  }
+
+  @include media("<laptop") {
+    height: 480px;
+  }
+
+  .heroContent {
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      @include media("<laptop") {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+    @include media(">=tablet") {
+      .accentedParagraph p {
+        &:before {
+          height: 48px;
+          width: 5px;
+          background: #005a91;
+        }
+      }
+    }
+    @include media("<tablet") {
+      margin-top: 5%;
+      .accentedParagraph {
+        margin-left: 0;
+        p {
+          &:before {
+            height: 0;
+          }
+        }
+      }
+    }
+    @include media("<=laptop") {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include media("<=tablet") {
+      width: 400px;
+      height: auto;
+    }
+    @include media("<=425px") {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.hero:after {
+  display: block;
+  content: "";
+  background: #e7ecf1;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  @include media("<laptop") {
+    height: 0;
+  }
+}

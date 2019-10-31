@@ -38,34 +38,6 @@ html {
 
 /* Components */
 
-//Standard Hero
-.hero {
-  .accent-block {
-    h1 {
-      font-size: $h1-font-size;
-      font-weight: $font-weight-medium;
-    }
-    h2 {
-      @include fluid-type(
-        34px,
-        45px,
-        $tablet,
-        $laptop
-      ); /* desktop - 53, tablet - 45, small - 38 */
-      @include heading-font;
-    }
-    p {
-      @include fluid-type(1.0625rem, 1.1875rem, $phone, $tablet); /* 19 - 17 */
-      font-family: "Agenda";
-      line-height: 1.4;
-      font-weight: $font-weight-light;
-      @include media("<laptop") {
-        line-height: 1.1;
-      }
-    }
-  }
-}
-
 /* Link With Icon */
 .link-with-icon {
   color: $primary;

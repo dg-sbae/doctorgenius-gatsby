@@ -22,77 +22,10 @@ body {
   position: relative;
 }
 html .hero {
-  height: 690px;
-
-  @include media("<laptop") {
-    height: 480px;
-  }
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 55% 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
   &.shift-down {
     margin-bottom: 190px;
     @include media("<laptop") {
       margin-bottom: 0;
-    }
-  }
-  &:after {
-    display: block;
-    content: "";
-    background: #e7ecf1;
-    height: 4px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    @include media("<laptop") {
-      height: 0;
-    }
-  }
-  .hero-content {
-    h2 {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      @include media("<laptop") {
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
-    }
-    @include media(">=tablet") {
-      .accented-paragraph p {
-        &:before {
-          height: 48px;
-          width: 5px;
-          background: #005a91;
-        }
-      }
-    }
-    @include media("<tablet") {
-      margin-top: 5%;
-      .accented-paragraph {
-        margin-left: 0;
-        p {
-          &:before {
-            height: 0;
-          }
-        }
-      }
-    }
-    @include media("<=laptop") {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    @include media("<=tablet") {
-      width: 400px;
-      height: auto;
-    }
-    @include media("<=425px") {
-      width: 100%;
-      max-width: 100%;
     }
   }
 }

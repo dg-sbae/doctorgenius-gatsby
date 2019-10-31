@@ -10,6 +10,7 @@ import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import InnerTitle from "../components/inner-title.js"
 import SecondaryNavigation from "../components/SecondaryNavigation"
+import Hero from "../components/Hero"
 
 import thinArrowRight from "../img/right-arrow.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
@@ -37,32 +38,7 @@ const MarketingSolutions = data => {
         </Helmet>
         <div className="marketing-solutions">
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className={RowStyles.row + " valign-wrapper"}>
-                  <div className="col-sm-12">
-                    <div
-                      className={
-                        PageStyles.heroContent + " hero-content accent-block"
-                      }
-                    >
-                      <h1>Marketing Solutions</h1>
-                      <h2>
-                        <span>Predictable</span> Practice Growth Solution
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          Proven and innovative solutions to move your business
-                          forward.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero />
           </BackgroundImage>
           <Main>
             <Container>
