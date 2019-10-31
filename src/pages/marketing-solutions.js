@@ -9,14 +9,9 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import InnerTitle from "../components/inner-title.js"
+import SecondaryNavigation from "../components/SecondaryNavigation"
 
 import thinArrowRight from "../img/right-arrow.svg"
-import contentMarketingIcon from "../img/contract.svg"
-import responsiveWebsitesIcon from "../img/website.svg"
-import digitalAdvertisingIcon from "../img/digital-advertising.svg"
-import onlineReputationIcon from "../img/online-reputation.svg"
-import ourTechnologyIcon from "../img/our-technology.svg"
-import hostingSolutionsIcon from "../img/hosting-solutions.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/marketing-solutions.scss"
@@ -73,95 +68,11 @@ const MarketingSolutions = data => {
             <Container>
               {/* Begin secondary nav Component: */}
               <div className={RowStyles.row}>
-                <div className="col-sm-12">
-                  <div className="secondary-nav-target">
-                    <div className="secondary-nav">
-                      <div className={PageStyles.panel + " panel"}>
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/marketing-solutions/websites">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={responsiveWebsitesIcon}
-                              alt="Responsive Websites"
-                            />
-                          </a>
-                        </div>
-                        <p>Responsive Websites</p>
-                      </div>
-                      <div className={PageStyles.panel + " panel"}>
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/marketing-solutions/content-marketing">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={contentMarketingIcon}
-                              alt="Content Marketing"
-                            />
-                          </a>
-                        </div>
-                        <p>Content Marketing</p>
-                      </div>
-                      <div className={PageStyles.panel + " panel"}>
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/marketing-solutions/digital-advertising">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={digitalAdvertisingIcon}
-                              alt="Digital Advertising"
-                            />
-                          </a>
-                        </div>
-                        <p>Digital Advertising</p>
-                      </div>
-                      <div className={PageStyles.panel + " panel"}>
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/marketing-solutions/online-reputation-management">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={onlineReputationIcon}
-                              alt="Online Reputation"
-                            />
-                          </a>
-                        </div>
-                        <p>Online Reputation</p>
-                      </div>
-                      <div className={PageStyles.panel + " panel"}>
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/marketing-solutions/our-technology">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={ourTechnologyIcon}
-                              alt="Our Technology"
-                            />
-                          </a>
-                        </div>
-                        <p>Our Technology</p>
-                      </div>
-                      <div className={PageStyles.panel + " panel"}>
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/marketing-solutions/hosting-solutions">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={hostingSolutionsIcon}
-                              alt="Hosting Solutions"
-                            />
-                          </a>
-                        </div>
-                        <p>Hosting Solutions</p>
-                      </div>
-                    </div>
-                  </div>
+                <div className="col-sm-12 panel-row">
+                  <SecondaryNavigation
+                    pageType="marketingSolutions"
+                    currentPage="parent"
+                  />
                 </div>
               </div>
               {/* End secondary nav Component */}

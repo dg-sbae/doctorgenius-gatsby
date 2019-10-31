@@ -11,17 +11,12 @@ import TestimonialsSlider from "../components/testimonials-slider"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import InnerTitle from "../components/inner-title.js"
 
-import dentalPractices from "../img/icon/tooth-shine-nav.svg"
-import urgentCare from "../img/icon/urgent-care-nav.svg"
-import chiropractorPractices from "../img/icon/chiropractor-nav.svg"
-import cosmeticSurgeons from "../img/icon/surgeon-nav.svg"
-import healthcareMarketing from "../img/icon/sphygmomanometer-nav.svg"
-
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/our-clients-inner-pages.scss"
 import PageStyles from "./our-clients-inner-pages.module.scss"
 import RowStyles from "../components/Row.module.scss"
+import SecondaryNavigation from "../components/SecondaryNavigation"
 
 export default props => {
   /* These will likely need to be dynamic props */
@@ -85,121 +80,11 @@ export default props => {
             <Container>
               {/* Begin secondary nav Component: */}
               <div className={RowStyles.row}>
-                <div className="col-sm-12">
-                  <div className="secondary-nav-target">
-                    <div className="secondary-nav">
-                      <div
-                        className={
-                          (currentPage === "dental-practices"
-                            ? "active "
-                            : "") +
-                          PageStyles.panel +
-                          " panel"
-                        }
-                      >
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/our-clients/dental-practices">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={dentalPractices}
-                              alt="Dental Practices"
-                            />
-                          </a>
-                        </div>
-                        <p>Dental Practices</p>
-                      </div>
-                      <div
-                        className={
-                          (currentPage === "urgent-care-clinics"
-                            ? "active "
-                            : "") +
-                          PageStyles.panel +
-                          " panel"
-                        }
-                      >
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/our-clients/urgent-care-clinics">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={urgentCare}
-                              alt="Urgent Care Clinics"
-                            />
-                          </a>
-                        </div>
-                        <p>Urgent Care Clinics</p>
-                      </div>
-                      <div
-                        className={
-                          (currentPage === "chiropractor-practices"
-                            ? "active "
-                            : "") +
-                          PageStyles.panel +
-                          " panel"
-                        }
-                      >
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/our-clients/chiropractor-practices">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={chiropractorPractices}
-                              alt="Chiropractor Practices"
-                            />
-                          </a>
-                        </div>
-                        <p>Chiropractor Practices</p>
-                      </div>
-                      <div
-                        className={
-                          (currentPage === "cosmetic-surgeons"
-                            ? "active "
-                            : "") +
-                          PageStyles.panel +
-                          " panel"
-                        }
-                      >
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/our-clients/cosmetic-surgeons">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={cosmeticSurgeons}
-                              alt="Cosmetic Surgeons"
-                            />
-                          </a>
-                        </div>
-                        <p>Cosmetic Surgeons</p>
-                      </div>
-                      <div
-                        className={
-                          (currentPage === "healthcare-marketing"
-                            ? "active "
-                            : "") +
-                          PageStyles.panel +
-                          " panel"
-                        }
-                      >
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
-                          <a href="/our-clients/healthcare-marketing">
-                            <img
-                              className={PageStyles.imgIcon + " img-icon"}
-                              src={healthcareMarketing}
-                              alt="Healthcare Marketing"
-                            />
-                          </a>
-                        </div>
-                        <p>Healthcare Marketing</p>
-                      </div>
-                    </div>
-                  </div>
+                <div className="col-sm-12 panel-row">
+                  <SecondaryNavigation
+                    pageType="ourClients"
+                    pageTitle={props.pageTitle}
+                  />
                 </div>
               </div>
               {/* End secondary nav Component */}

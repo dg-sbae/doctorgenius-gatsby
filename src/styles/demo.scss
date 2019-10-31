@@ -5,73 +5,12 @@
 
 .demo {
   /* This is all awful and is just a hack */
-  header,
-  nav.navbar {
+  header {
     height: 80px !important;
   }
-  .demo-only {
-    display: flex !important;
-    .free-demo-button,
-    .free-demo-button.nav-button {
-      transition: 0.3s background-color, 0.3s border-color;
-      background-color: $demo-button-green;
-      border-color: $demo-button-green !important;
 
-      &:hover {
-        background-color: $button-hover-green !important;
-        border-color: $button-hover-green !important;
-        a {
-          color: $primary-text !important;
-          transition: 0.3s color;
-        }
-      }
-    }
-  }
-  .main-navbar-stuck {
-    .free-demo-button {
-      a {
-        color: $primary-text !important;
-        transition: 0.3s color;
-      }
-      &:hover {
-        background-color: $button-hover-green !important;
-        border-color: $button-hover-green !important;
-        a {
-          color: $primary-text !important;
-          transition: 0.3s color;
-        }
-      }
-    }
-  }
-  .main-contact-links {
-    display: none;
-  }
   header {
     background: $primary;
     box-shadow: 0 1px 1px #e0e0e0;
-    nav.navbar.main-navbar-stuck {
-      background: $primary;
-    }
-    .main-links .navbar-nav {
-      display: none;
-    }
-    a,
-    i {
-      color: white !important;
-    }
-    .button.nav-button {
-      padding: 8px 7.5% !important;
-      border: 1px solid !important;
-      border-radius: 6px !important;
-      letter-spacing: 0.5px !important;
-      display: block;
-      width: 50%;
-    }
-    .logo a {
-      display: block;
-      .logo-holder {
-        background-image: url("../img/icon/logo-white.svg") !important;
-      }
-    }
   }
 }

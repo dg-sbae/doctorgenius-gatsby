@@ -4,14 +4,41 @@ nav {
   height: 120px;
   display: flex;
   transition: all 0.3s;
+  font-family: $font-family-body-text;
   @include media("<laptop") {
     height: 75px;
+  }
+  // Container module classname gets passed down to Container Component through Navigation.js
+  .container,
+  .containerFluid {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   ul li {
     list-style-type: none;
   }
   .navButton {
     border-color: white;
+    padding: 8px 7.5%;
+    border: 1px solid;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+
+    &.freeDemoButton {
+      transition: 0.3s background-color, 0.3s border-color;
+    }
+    &.freeDemoButton:hover {
+      background-color: #fff;
+      border-color: $primary;
+      a {
+        color: $primary;
+        transition: 0.3s color;
+      }
+    }
   }
   a {
     transition: all 0.3s;
@@ -80,6 +107,13 @@ nav {
         }
       }
     }
+    .mainLinks,
+    .contactLinks {
+      a {
+        color: $primary-text;
+        text-decoration: none;
+      }
+    }
     .mainLinks {
       flex-basis: 47%;
 
@@ -107,11 +141,6 @@ nav {
       }
       @include media(">=desktop") {
         flex-basis: 23%;
-      }
-      img.phone {
-        /* this should probably be yet another flexbox */
-        // transform: scale(1.25);
-        // vertical-align: text-bottom;
       }
 
       .mainContactLinks {
@@ -159,6 +188,8 @@ nav {
       }
     }
     .dropdownMenu {
+      color: $primary-text;
+      background-color: #285c94;
       display: block;
       visibility: hidden;
       opacity: 0;
@@ -172,6 +203,13 @@ nav {
       // transform: translateX(-50%);
       // margin-right: auto;
       // margin-left: auto;
+      a {
+        color: inherit;
+        &:hover {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
       .dropdownRow {
         margin-bottom: 35px;
       }
@@ -229,6 +267,23 @@ nav {
           margin-bottom: 0;
         }
       }
+    }
+    li {
+      font-weight: $font-weight-normal;
+      .active {
+        color: $primary-text;
+        font-weight: $font-weight-medium;
+      }
+    }
+    .mainLinks {
+      li {
+        font-size: 0.875rem;
+        font-weight: $font-weight-medium;
+      }
+    }
+    .contactLinks {
+      font-size: $font-size-nav-contact-links;
+      font-weight: $font-weight-normal;
     }
   }
   &.navbar.mainNavbarStuck {
@@ -333,5 +388,136 @@ nav {
       max-height: 100%;
       object-fit: contain;
     }
+  }
+}
+
+// Navigation styling relavant to the Demo Page
+nav.demoNav {
+  &.navbar {
+    height: 80px !important;
+  }
+  .demoOnly {
+    display: flex !important;
+    .freeDemoButton,
+    .freeDemoButton.navButton {
+      transition: 0.3s background-color, 0.3s border-color;
+      background-color: $demo-button-green;
+      border-color: $demo-button-green !important;
+    }
+    .freeDemoButton:hover,
+    .freeDemoButton.navButton:hover {
+      background-color: $button-hover-green !important;
+      border-color: $button-hover-green !important;
+    }
+    li {
+      color: $primary-text;
+    }
+  }
+  &.mainNavbarStuck {
+    background-color: $primary;
+
+    .logo a .logoHolder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
+    .freeDemoButton:hover {
+      background-color: $button-hover-green !important;
+      border-color: $button-hover-green !important;
+    }
+    .contactLinks ul.demoOnly li {
+      color: $primary-text;
+    }
+  }
+  .mainContactLinks {
+    display: none;
+  }
+  .mainLinks .navbarNav {
+    display: none;
+  }
+  a,
+  i {
+    color: $primary-text !important;
+  }
+  .button.navButton {
+    padding: 8px 7.5% !important;
+    border: 1px solid !important;
+    border-radius: 6px !important;
+    letter-spacing: 0.5px !important;
+    display: block;
+    width: 50%;
+  }
+}
+
+// Navigation styling relevant to the Contact Page
+nav.contactNav {
+  @include media(">=laptop") {
+    // ----------- NAVIGATION STYLING (DESKTOP) -----------
+    .logo a .logoHolder {
+      background-image: url("../img/icon/logo-blue.svg");
+    }
+    .mainLinks a,
+    .contactLinks a {
+      color: $primary;
+    }
+    &.mainNavbarStuck {
+      a {
+        color: $primary;
+      }
+      .freeDemoButton {
+        background-color: $primary;
+        a {
+          color: #fff !important;
+        }
+      }
+      .button.navButton {
+        &.freeDemoButton:hover {
+          color: $primary !important;
+          background-color: $primary-text !important;
+        }
+        &.freeDemoButton a:hover {
+          color: $primary !important;
+        }
+      }
+    }
+
+    .phone > a .phoneHolder {
+      background-image: url("../img/phone-blue.svg");
+    }
+    .button.navButton {
+      border: 1px solid $primary;
+      &.freeDemoButton:hover {
+        background-color: $primary !important;
+        border-color: $primary !important;
+      }
+      &.freeDemoButton:hover a {
+        color: #fff !important;
+      }
+    }
+    .dropdownRow a {
+      color: $primary-text !important;
+    }
+    // ----------- END NAVIGATION STYLING (DESKTOP) -----------
+  }
+  @include media("<=laptop", ">=tablet") {
+    // ----------- NAVIGATION STYLING (TABLET) -----------
+    .logo a .logoHolder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
+    // ----------- END NAVIGATION STYLING (TABLET) -----------
+  }
+  @include media("<tablet") {
+    // ----------- NAVIGATION STYLING (MOBILE) -----------
+    .logo a .logoHolder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
+    // ----------- END NAVIGATION STYLING (MOBILE) -----------
+  }
+}
+
+.navigationWrapper {
+  @include media("<=laptop", ">=tablet") {
+    background-color: $primary;
+  }
+  @include media("<tablet") {
+    background-color: $primary;
   }
 }

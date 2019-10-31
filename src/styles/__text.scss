@@ -26,67 +26,6 @@ html {
   }
 }
 
-/* Navigation Elements */
-nav {
-  font-family: $font-family-body-text;
-  .main-links,
-  .contact-links {
-    a {
-      color: $primary-text;
-      text-decoration: none;
-    }
-  }
-
-  .dropdown-menu {
-    color: $primary-text;
-    a {
-      color: inherit;
-      &:hover {
-        color: inherit;
-        text-decoration: none;
-      }
-    }
-  }
-  li {
-    font-weight: $font-weight-normal;
-    .active {
-      color: $primary-text;
-      font-weight: $font-weight-medium;
-    }
-  }
-  .main-links {
-    li {
-      font-size: 0.875rem;
-      font-weight: $font-weight-medium;
-    }
-  }
-  .contact-links {
-    font-size: $font-size-nav-contact-links;
-    font-weight: $font-weight-normal;
-  }
-}
-.secondary-nav-target {
-  .secondary-nav {
-    font-family: $font-family-body-text;
-    font-size: 14px;
-    color: #787878;
-    .panel {
-      @include media("<laptop", ">=tablet") {
-        margin: 10px auto 20px;
-      }
-      p {
-        @include fluid-type(9.5px, 15px, $tablet, $laptop);
-      }
-    }
-  }
-  @include media("<laptop", ">=tablet") {
-    height: auto;
-  }
-  @include media("<tablet") {
-    display: none;
-  }
-}
-
 /* Headings */
 @for $headingNum from 1 through 6 {
   h#{$headingNum} {
@@ -238,11 +177,6 @@ a.button {
   color: white;
 }
 
-header,
-nav,
-nav ul > li > a {
-  color: white;
-}
 .button {
   color: #fff;
 }
