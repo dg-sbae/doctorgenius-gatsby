@@ -9,7 +9,7 @@ export default ({ children, parentClassNames }) => (
     className={
       containerStyles.container +
       " " +
-      bootstrapContainerClassName +
+      containerStyles.containerFluid +
       (parentClassNames ? " " + parentClassNames : "")
     }
   >
