@@ -409,14 +409,22 @@ nav.demoNav {
       background-color: $button-hover-green !important;
       border-color: $button-hover-green !important;
     }
+    li {
+      color: $primary-text;
+    }
   }
   &.mainNavbarStuck {
+    background-color: $primary;
+
+    .logo a .logoHolder {
+      background-image: url("../img/icon/logo-white.svg");
+    }
     .freeDemoButton:hover {
       background-color: $button-hover-green !important;
       border-color: $button-hover-green !important;
     }
     .contactLinks ul.demoOnly li {
-      color: $primary;
+      color: $primary-text;
     }
   }
   .mainContactLinks {
