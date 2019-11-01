@@ -511,13 +511,12 @@ nav.contactNav {
     }
     // ----------- END NAVIGATION STYLING (MOBILE) -----------
   }
-}
-
-.navigationWrapper {
-  @include media("<=laptop", ">=tablet") {
-    background-color: $primary;
-  }
-  @include media("<tablet") {
-    background-color: $primary;
+  .navigationWrapper {
+    @include media("<=laptop", ">=tablet") {
+      background-color: $primary;
+    }
+    @include media("<tablet") {
+      background-color: $primary;
+    }
   }
 }
