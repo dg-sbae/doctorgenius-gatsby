@@ -53,8 +53,8 @@ export default props => (
                   <a href="tel:877-477-2311">(877) 477-2311</a>
                 </p>
                 <p className="mt-4 contact-address">
-                  2121 Alton Pkwy, Suite 150 <br />
-                  Irvine, CA 92606
+                  2 S Pointe Dr #200 <br />
+                  Lake Forest, CA 92630
                 </p>
                 <button className="mt-4 button nav-button transparent get-directions">
                   <a

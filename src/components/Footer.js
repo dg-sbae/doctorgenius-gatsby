@@ -79,9 +79,9 @@ export default ({ children }) => (
               <img className="img-icon" src={mapPin} alt="Map Icon" />
             </div>
             <address className="footer-contact-details">
-              2121 Alton Parkway
+              2 S Pointe Dr #200
               <br />
-              Irvine, CA 92606
+              Lake Forest, CA 92630
             </address>
           </div>
           <div className="social-media-row">
