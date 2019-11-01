@@ -8,11 +8,11 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import InnerTitle from "../components/inner-title"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import PageStyles from "./case-study.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
-import thinArrowRight from "../img/right-arrow.svg"
 import newPatientOppIcon from "../img/icon/new-patient-opportunity.svg"
 import marketingSolutionsIcon from "../img/icon/marketing-solutions-suite.svg"
 import liveSupportIcon from "../img/icon/live-support-concierge.svg"
@@ -418,48 +418,8 @@ const CaseStudy = data => {
                   />
                 </div>
               </div>
-              <div
-                className={
-                  PageStyles.requestDemoFooter +
-                  " " +
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.tallTop +
-                  " request-demo-footer"
-                }
-              >
-                <div className="col-lg-1" />
-                <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
-                  <div className="content-block">
-                    <div>
-                      <h2>
-                        Start your
-                        <span className="font-weight-semibold"> success </span>
-                        with Doctor Genius today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p className="s-thin">
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-11 col-md-5 col-lg-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-1" />
-              </div>
+
+              <RequestDemoFooter smWidth="11" sThin />
             </Container>
           </Main>
         </div>

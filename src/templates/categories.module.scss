@@ -288,9 +288,9 @@
       }
     }
   }
-  .requestDemoFooter {
-    a.button:hover {
-      background-color: $button-hover-green;
+  #demoHeader {
+    @include media("<=tablet") {
+      margin-bottom: 25px;
     }
   }
 }

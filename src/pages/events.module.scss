@@ -241,18 +241,6 @@
     }
   }
 
-  .requestDemoFooter {
-    .button {
-      background-color: #0074cf;
-    }
-    .button:hover {
-      background-color: $secondary;
-    }
-    .contentBlock p {
-      font-size: 17px;
-    }
-  }
-
   @include media(">=laptop") {
     .hero {
       .titles {
@@ -265,9 +253,6 @@
           #fff 65%
         );
       }
-    }
-    .requestDemoFooter {
-      padding-bottom: 60px;
     }
   }
 
@@ -373,21 +358,6 @@
       .singularEvent {
         margin-top: 48px;
         margin-bottom: 168.75px;
-      }
-    }
-
-    .requestDemoFooter {
-      .contentBlock {
-        h2 {
-          font-size: 45px;
-          text-align: center;
-        }
-      }
-      .contentBlock {
-        p {
-          font-size: 17px;
-          font-family: $font-family-body-text;
-        }
       }
     }
   }
@@ -501,17 +471,6 @@
       .pastEventTitleAndDesc {
         margin-top: $m1;
         padding-right: 15px;
-      }
-    }
-
-    .requestDemoFooter {
-      .contentBlock h2 {
-        font-size: 30px;
-        text-align: center;
-      }
-      .contentBlock p {
-        font-size: 17px;
-        font-family: $font-family-body-text;
       }
     }
   }

@@ -80,13 +80,6 @@
       }
     }
   }
-  .requestDemoFooter {
-    > div {
-      @include media("<=tablet") {
-        padding-bottom: 30px;
-      }
-    }
-  }
 
   .featuredPartnersRow {
     .fullWidthRow {
@@ -150,5 +143,13 @@
     font-size: $h3-font-size;
     color: $primary;
     font-weight: $font-weight-semibold;
+  }
+
+  #demoRow {
+    margin-bottom: $m1 * 1.8;
+  }
+
+  #demoButton {
+    margin-top: $m1 * 2;
   }
 }

@@ -157,4 +157,11 @@
       padding-left: 35px;
     }
   }
+
+  #demoContentBlock {
+    margin-left: $m1;
+    @include media("<=tablet") {
+      margin-left: initial;
+    }
+  }
 }

@@ -118,30 +118,6 @@ html {
   }
 }
 
-// Standard Request demo Footer
-
-.request-demo-footer {
-  .content-block {
-    h2 {
-      font-weight: $font-weight-light;
-      font-size: 46px;
-      line-height: 1;
-      margin-bottom: $m1;
-      span {
-        font-weight: $font-weight-semibold;
-      }
-      @include media("<=laptop") {
-        font-size: 26px;
-      }
-    }
-    p {
-      color: $demo-body-text;
-    }
-    a.button {
-      @include fluid-type(18px, 15px, $phone, $laptop);
-    }
-  }
-}
 // Testimonial Slider
 .card-content-wrapper {
   .card-copy {

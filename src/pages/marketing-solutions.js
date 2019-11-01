@@ -10,8 +10,8 @@ import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import InnerTitle from "../components/inner-title.js"
 import SecondaryNavigation from "../components/SecondaryNavigation"
+import RequestDemoFooter from "../components/request-demo-footer"
 
-import thinArrowRight from "../img/right-arrow.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/marketing-solutions.scss"
@@ -230,45 +230,9 @@ const MarketingSolutions = data => {
                 </div>
               </div>
               {/* End Full bleed content row (reversed)*/}
+
               {/* Begin Demo Footer */}
-              <div
-                className={
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.tallTop +
-                  " request-demo-footer"
-                }
-              >
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5">
-                  <div className="content-block">
-                    <div>
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-9 col-md-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter smWidth="9" />
               {/* End Demo Footer */}
             </Container>
           </Main>

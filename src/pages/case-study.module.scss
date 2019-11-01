@@ -233,18 +233,6 @@
       padding-bottom: 50px;
     }
   }
-  .requestDemoFooter {
-    h2 {
-      @include media("<desktop") {
-        @include fluid-type(
-          26px,
-          45px,
-          $tablet,
-          $laptop
-        ); /* desktop - 53, tablet - 45, small - 38 */
-      }
-    }
-  }
   #caseStudyHeader {
     font-size: 45px;
     font-weight: $font-weight-bold;

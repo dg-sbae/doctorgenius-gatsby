@@ -135,18 +135,6 @@
     }
   }
 
-  .requestDemoFooter {
-    .button {
-      background-color: $primary;
-    }
-    .button:hover {
-      background-color: $secondary;
-    }
-    .contentBlock p {
-      font-size: 16px;
-    }
-  }
-
   .listedItems h2,
   .speakerDetails h2,
   .speakerDetails h3,
@@ -168,9 +156,6 @@
     }
     .dgDictionary .dictionaryCol:last-child {
       padding-left: $m1 * 2.5;
-    }
-    .requestDemoFooter {
-      padding-bottom: 60px;
     }
     .heroOverlay {
       background-image: linear-gradient(
@@ -255,18 +240,6 @@
     .speakerHolder {
       margin-bottom: $m1 * 1.5;
     }
-    .requestDemoFooter {
-      .contentBlock {
-        h2 {
-          font-size: 45px;
-          text-align: center;
-        }
-        p {
-          font-size: 16px;
-          font-family: $font-family-body-text;
-        }
-      }
-    }
   }
 
   /* Styling for Mobile */
@@ -344,18 +317,6 @@
       }
       .speakerHolder:last-child {
         margin-bottom: $m1 / 2;
-      }
-    }
-    .requestDemoFooter {
-      .contentBlock {
-        h2 {
-          font-size: 30px;
-          text-align: center;
-        }
-        p {
-          font-size: 16px;
-          font-family: $font-family-body-text;
-        }
       }
     }
   }
