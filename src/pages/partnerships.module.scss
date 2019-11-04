@@ -152,4 +152,12 @@
   #demoButton {
     margin-top: $m1 * 2;
   }
+
+  .fontWeightSemibold {
+    font-weight: $font-weight-semibold;
+  }
+
+  b {
+    font-weight: $font-weight-semibold;
+  }
 }

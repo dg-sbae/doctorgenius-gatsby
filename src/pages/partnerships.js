@@ -288,7 +288,9 @@ const Partnerships = data => {
                         </p>
                         <a
                           href="/demo"
-                          className="link-with-icon font-weight-semibold"
+                          className={
+                            PageStyles.fontWeightSemibold + " link-with-icon"
+                          }
                         >
                           <img
                             src={rightArrowBlue}

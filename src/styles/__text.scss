@@ -1,22 +1,5 @@
 /* Text - Colors and fonts - font-size, font-family, color */
 /* Helper classes */
-.font-weight-semibold {
-  font-weight: $font-weight-semibold;
-}
-.font-weight-thin {
-  font-weight: $font-weight-thin;
-}
-b {
-  font-weight: $font-weight-semibold !important;
-}
-.truncate {
-  /* Defined space must also have a width defined */
-  display: block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-}
 
 /* Standard font sizes, families, and weights */
 html {
