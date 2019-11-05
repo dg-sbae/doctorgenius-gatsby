@@ -214,7 +214,11 @@ class ContactForm extends React.Component {
               type="submit"
               className={
                 ContactFormStyles.submitButton +
-                " button btn flat submit-contact"
+                " " +
+                ContactFormStyles.button +
+                " " +
+                ContactFormStyles.flat +
+                " btn submit-contact"
               }
             >
               Contact Us

@@ -131,8 +131,15 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
       }
       .recommended {
         background-color: $recommended-green;
+        transition: 0.4s background-color;
+        font-weight: $font-weight-medium;
+        text-align: center;
         text-transform: uppercase;
         justify-self: flex-start;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: white;
+        border-radius: 20px;
         font-size: 10px;
         width: 40%;
         position: absolute;
@@ -143,6 +150,26 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
         @include media("<tablet") {
           display: none;
         }
+      }
+      .button {
+        color: #fff;
+        background-color: $primary;
+        text-align: center;
+        font-size: $font-size-btn;
+        transition: 0.4s background-color;
+        &.rounder {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          width: 80%;
+          color: white;
+          border-radius: 20px;
+        }
+      }
+
+      .button:hover {
+        text-decoration: none;
+        color: $primary-text;
+        background-color: $button-hover-green;
       }
     }
     .gridItem:first-of-type {

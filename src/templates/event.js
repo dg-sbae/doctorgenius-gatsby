@@ -363,7 +363,7 @@ const EventPage = ({ data }) => {
                           PageStyles.continueEduClass +
                           " " +
                           PageStyles.whiteText +
-                          " button flat continue-edu-class"
+                          " continue-edu-class"
                         }
                       >
                         {event_details.event_strapline}
@@ -386,7 +386,7 @@ const EventPage = ({ data }) => {
                           PageStyles.registerNowBtn +
                           " " +
                           PageStyles.whiteText +
-                          " button flat register-now-btn"
+                          " register-now-btn"
                         }
                         href={event_details.register_url[0]}
                         target="_blank"

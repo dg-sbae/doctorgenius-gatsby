@@ -38,6 +38,15 @@
       padding-right: 32px;
     }
     .heroMoreInfoBtn {
+      text-align: center;
+      font-size: $font-size-btn;
+      transition: 0.4s background-color;
+      border-radius: 3px;
+      padding: 0.75rem 1rem;
+      background: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.6px;
       color: #535353;
       padding-left: 20px;
       padding-right: 20px;
@@ -49,15 +58,36 @@
       border: none;
     }
     .dgCategory {
+      border-radius: 3px;
+      letter-spacing: 0.6px;
       text-transform: none;
       display: inline-block;
       font-size: 15px;
       font-weight: $font-weight-light;
       padding: 8px 20px;
     }
+    .dgCategory:hover {
+      background-color: $primary;
+      cursor: arrow;
+    }
     .registerNowBtn {
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-btn;
+      transition: 0.4s background-color;
       background-color: $demo-button-green;
+      border-radius: 3px;
+      letter-spacing: 0.6px;
       margin-right: $m1;
+      font-size: 15px;
+      padding: 0.75rem 1rem;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    .registerNowBtn:hover {
+      text-decoration: none;
     }
   }
 
@@ -246,6 +276,54 @@
       font-weight: $font-weight-normal;
       color: #6d6d6d;
     }
+  }
+
+  .button {
+    color: #fff;
+    background-color: $primary;
+    text-align: center;
+    font-size: $font-size-btn;
+    transition: 0.4s background-color;
+    &.flat {
+      border-radius: 3px;
+      padding: 0.75rem 1rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      &.transparent {
+        border: 1px solid;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+    &.transparent {
+      background: none;
+    }
+  }
+
+  .noHover {
+    border-radius: 3px;
+    letter-spacing: 0.6px;
+    color: #fff;
+    background-color: $primary;
+    text-align: center;
+    font-size: $font-size-btn;
+    transition: 0.4s background-color;
+    text-transform: none;
+    background-color: $primary;
+    font-weight: 500;
+    padding: 10px 30px;
+    .button:hover {
+      text-decoration: none;
+      color: #fff;
+      background-color: $primary;
+    }
+  }
+
+  .button:hover {
+    text-decoration: none;
+    color: $primary-text;
+    background-color: $button-hover-green;
   }
 
   @include media(">=laptop") {

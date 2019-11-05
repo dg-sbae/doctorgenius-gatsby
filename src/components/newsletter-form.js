@@ -135,7 +135,7 @@ class NewsLetterSignUpForm extends React.Component {
               />
               <button
                 type="submit"
-                className="button rounder"
+                className={FormStyles.button + " " + FormStyles.rounder}
                 id="newsletter-signup"
               >
                 Submit

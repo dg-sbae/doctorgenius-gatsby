@@ -32,13 +32,33 @@
       font-size: 15px;
     }
     .continueEduClass {
+      border-radius: 3px;
+      padding: 0.75rem 1rem;
+      letter-spacing: 0.6px;
+
+      color: #fff;
+      background-color: $primary;
+      text-align: center;
+      transition: 0.4s background-color;
+
       text-transform: initial;
       display: inline-block;
       font-size: 15px;
       font-weight: $font-weight-light;
     }
     .registerNowBtn {
+      border-radius: 3px;
+      padding: 0.75rem 1rem;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      color: #fff;
       background-color: $demo-button-green;
+      text-align: center;
+      transition: 0.4s background-color;
+    }
+    .registerNowBtn:hover {
+      text-decoration: none;
     }
   }
 
@@ -366,5 +386,31 @@
 
   .whiteText {
     color: white;
+  }
+
+  .button {
+    color: #fff;
+    background-color: $primary;
+    text-align: center;
+    font-size: $font-size-btn;
+    transition: 0.4s background-color;
+    &.flat {
+      border-radius: 3px;
+      padding: 0.75rem 1rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      &.transparent {
+        border: 1px solid;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .button:hover {
+    text-decoration: none;
+    color: $primary-text;
+    background-color: $button-hover-green;
   }
 }

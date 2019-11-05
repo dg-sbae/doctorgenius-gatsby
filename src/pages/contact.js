@@ -67,8 +67,7 @@ export default props => (
                   </p>
                   <button
                     className={
-                      PageStyles.getDirections +
-                      " mt-4 button nav-button transparent get-directions"
+                      PageStyles.getDirections + " mt-4 get-directions"
                     }
                   >
                     <a

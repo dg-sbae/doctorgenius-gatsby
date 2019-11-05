@@ -98,7 +98,7 @@ const Plans = data => {
                     </p>*/}
                       <a
                         href="/demo"
-                        className={PageStyles.button + " button rounder"}
+                        className={PageStyles.button + " " + PageStyles.rounder}
                       >
                         Sign Up
                       </a>
@@ -114,14 +114,7 @@ const Plans = data => {
                         " grid-item column-signup"
                       }
                     >
-                      <span
-                        className={
-                          PageStyles.button +
-                          " " +
-                          PageStyles.recommended +
-                          " recommended button rounder"
-                        }
-                      >
+                      <span className={PageStyles.recommended}>
                         Recommended
                       </span>
                       <h2>Gold</h2>
@@ -130,7 +123,7 @@ const Plans = data => {
                     </p>*/}
                       <a
                         href="/demo"
-                        className={PageStyles.button + " button rounder"}
+                        className={PageStyles.button + " " + PageStyles.rounder}
                       >
                         Sign Up
                       </a>
@@ -152,7 +145,7 @@ const Plans = data => {
                     </p>*/}
                       <a
                         href="/demo"
-                        className={PageStyles.button + " button rounder"}
+                        className={PageStyles.button + " " + PageStyles.rounder}
                       >
                         Sign Up
                       </a>
@@ -955,7 +948,7 @@ const Plans = data => {
                     >
                       <a
                         href="/demo"
-                        className={PageStyles.button + " button rounder"}
+                        className={PageStyles.button + " " + PageStyles.rounder}
                       >
                         Sign Up
                       </a>
@@ -973,7 +966,7 @@ const Plans = data => {
                     >
                       <a
                         href="/demo"
-                        className={PageStyles.button + " button rounder"}
+                        className={PageStyles.button + " " + PageStyles.rounder}
                       >
                         Sign Up
                       </a>
@@ -991,7 +984,7 @@ const Plans = data => {
                     >
                       <a
                         href="/demo"
-                        className={PageStyles.button + " button rounder"}
+                        className={PageStyles.button + " " + PageStyles.rounder}
                       >
                         Sign Up
                       </a>

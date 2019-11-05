@@ -196,8 +196,14 @@ const EventPage = ({ data }) => {
                 </p>
                 <a
                   className={
+                    PageStyles.button +
+                    " " +
+                    PageStyles.flat +
+                    " " +
+                    PageStyles.transparent +
+                    " " +
                     PageStyles.eventMoreInfoBtn +
-                    " button flat transparent event-more-info-btn"
+                    " event-more-info-btn"
                   }
                   href={event.node.slug}
                 >
@@ -242,10 +248,11 @@ const EventPage = ({ data }) => {
           >
             <span
               className={
+                PageStyles.noHover +
+                " " +
                 PageStyles.pastEventDate +
                 " " +
-                PageStyles.whiteText +
-                " button flat past-event-date"
+                PageStyles.whiteText
               }
             >
               {format_date_short(past_events[0].node.event_date)}
@@ -289,10 +296,11 @@ const EventPage = ({ data }) => {
           >
             <span
               className={
+                PageStyles.noHover +
+                " " +
                 PageStyles.pastEventDate +
                 " " +
-                PageStyles.whiteText +
-                " button flat past-event-date"
+                PageStyles.whiteText
               }
             >
               {format_date_short(past_events[1].node.event_date)}
@@ -336,10 +344,11 @@ const EventPage = ({ data }) => {
           >
             <span
               className={
+                PageStyles.noHover +
+                " " +
                 PageStyles.pastEventDate +
                 " " +
-                PageStyles.whiteText +
-                " button flat past-event-date"
+                PageStyles.whiteText
               }
             >
               {format_date_short(past_events[2].node.event_date)}
@@ -383,10 +392,11 @@ const EventPage = ({ data }) => {
           >
             <span
               className={
+                PageStyles.noHover +
+                " " +
                 PageStyles.pastEventDate +
                 " " +
-                PageStyles.whiteText +
-                " button flat past-event-date"
+                PageStyles.whiteText
               }
             >
               {format_date_short(past_events[3].node.event_date)}
@@ -430,10 +440,11 @@ const EventPage = ({ data }) => {
                       >
                         <h1
                           className={
+                            PageStyles.button +
+                            " " +
                             PageStyles.dgCategory +
                             " " +
-                            PageStyles.whiteText +
-                            " button flat dg-category"
+                            PageStyles.whiteText
                           }
                         >
                           Doctor Genius Events
@@ -452,8 +463,7 @@ const EventPage = ({ data }) => {
                               className={
                                 PageStyles.registerNowBtn +
                                 " " +
-                                PageStyles.whiteText +
-                                " button flat register-now-btn"
+                                PageStyles.whiteText
                               }
                               href={featured_event.register_url}
                               target="_blank"
@@ -467,8 +477,13 @@ const EventPage = ({ data }) => {
                         {featured_event.slug !== "" && (
                           <a
                             className={
-                              PageStyles.heroMoreInfoBtn +
-                              " button flat transparent hero-more-info-btn"
+                              PageStyles.button +
+                              " " +
+                              PageStyles.flat +
+                              " " +
+                              PageStyles.transparent +
+                              " " +
+                              PageStyles.heroMoreInfoBtn
                             }
                             href={featured_event.slug}
                           >

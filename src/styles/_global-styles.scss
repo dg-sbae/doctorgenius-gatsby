@@ -67,14 +67,3 @@ p {
   margin: auto;
   display: block;
 }
-
-a {
-  &.button {
-    transition: 0.4s background-color;
-    &:hover {
-      text-decoration: none;
-      color: $primary-text;
-      background-color: $button-hover-green;
-    }
-  }
-}

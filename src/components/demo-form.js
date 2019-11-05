@@ -166,7 +166,10 @@ class DemoForm extends React.Component {
             <button
               type="submit"
               className={
-                DemoFormStyles.submitButton + " button btn flat request-demo"
+                DemoFormStyles.button +
+                " " +
+                DemoFormStyles.flat +
+                " btn request-demo"
               }
             >
               Request Demo <img src={thinArrowRight} alt="Arrow Right" />

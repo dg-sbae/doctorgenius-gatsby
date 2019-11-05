@@ -1,1 +1,26 @@
 @import "../styles/_site-variables.scss";
+
+.button {
+  color: #fff;
+  background-color: $primary;
+  text-align: center;
+  font-size: $font-size-btn;
+  transition: 0.4s background-color;
+  text-transform: uppercase;
+  border: none;
+  &.rounder {
+    font-weight: bold;
+    padding-top: 5px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    width: 80%;
+    color: white;
+    border-radius: 20px;
+  }
+}
+
+.button:hover {
+  text-decoration: none;
+  color: $primary-text;
+  background-color: $button-hover-green;
+}

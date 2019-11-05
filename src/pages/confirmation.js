@@ -51,8 +51,11 @@ export default props => (
                       <div className="col-sm-8 col-md-4">
                         <button
                           className={
-                            PageStyles.returnHome +
-                            " button nav-button return-home"
+                            PageStyles.button +
+                            " " +
+                            PageStyles.navButton +
+                            " " +
+                            PageStyles.returnHome
                           }
                         >
                           <Link to="/">Return Home</Link>
@@ -84,8 +87,7 @@ export default props => (
                   </p>
                   <button
                     className={
-                      PageStyles.getDirections +
-                      " mt-4 button nav-button transparent get-directions"
+                      PageStyles.getDirections + " mt-4 get-directions"
                     }
                   >
                     <a
