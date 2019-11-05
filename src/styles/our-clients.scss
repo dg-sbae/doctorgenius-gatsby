@@ -58,26 +58,6 @@
       border-bottom: 1px solid #dfdfdf;
     }
   }
-  .case-study-item p:not(.callout) {
-    font-family: Roboto;
-    flex-basis: 150px;
-    font-size: 0.9375rem; /* 15px */
-    margin: 0;
-    padding: 0;
-  }
-  .case-study-item .callout {
-    margin: 0;
-    padding: 0;
-    text-align: right;
-    flex-basis: 150px;
-    letter-spacing: -0.12rem;
-    margin-right: 10px;
-    /* inherit this from somewhere else */
-    color: $primary;
-    font-size: 2.5rem; /* 40px */
-    font-weight: bold;
-    font-family: $font-family-inner-block-headings;
-  }
   .check-plans-background-image {
     height: 475px;
     background-position: 40%;

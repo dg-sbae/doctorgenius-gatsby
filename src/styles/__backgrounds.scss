@@ -10,12 +10,6 @@
   );
 }
 
-.homepage {
-  .accent-block {
-    background-color: transparent;
-  }
-}
-
 .main-content {
   background: top/300px repeat-x url(../img/background-texture.png),
     center 50%/300px repeat-x url(../img/background-texture-flipped.png),
@@ -62,15 +56,4 @@
 
 .button {
   background-color: $primary;
-}
-
-.label {
-  &.mute {
-    background: #f2f2f2;
-    color: $primary;
-  }
-  &.primary {
-    background: $primary;
-    color: white;
-  }
 }

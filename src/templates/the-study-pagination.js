@@ -55,7 +55,11 @@ const ResponsivePostsColumnHeader = props => (
     >
       Popular Posts
     </h3>
-    <div className={PageStyles.spacer + " spacer small solid"} />
+    <div
+      className={
+        PageStyles.spacer + " " + PageStyles.small + " " + PageStyles.solid
+      }
+    />
   </div>
 )
 const LatestPostsColumn = props => (
@@ -224,7 +228,11 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                           alt={category.name}
                           className="img-responsive"
                         />
-                        <div className={PageStyles.label + " label primary"}>
+                        <div
+                          className={
+                            PageStyles.label + " " + PageStyles.primary
+                          }
+                        >
                           <p>{category.name}</p>
                         </div>
                       </div>
@@ -254,7 +262,12 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                     </h3>
                     <div
                       className={
-                        PageStyles.spacer + " d-sm-none spacer small solid"
+                        PageStyles.spacer +
+                        " " +
+                        PageStyles.small +
+                        " " +
+                        PageStyles.solid +
+                        " d-sm-none"
                       }
                     />
 
@@ -294,7 +307,11 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                               <p className={PageStyles.date + " date"}>
                                 {node.date}
                               </p>
-                              <p className={PageStyles.label + " label mute"}>
+                              <p
+                                className={
+                                  PageStyles.label + " " + PageStyles.mute
+                                }
+                              >
                                 <a
                                   href={
                                     // This selects the slug from the categories array matching the mainCategory found above
@@ -389,7 +406,11 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                           </h3>
                           <div
                             className={
-                              PageStyles.spacer + " spacer small solid"
+                              PageStyles.spacer +
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid
                             }
                           />
                         </div>
@@ -491,7 +512,11 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                           <div
                             className={
                               PageStyles.spacer +
-                              " d-md-none spacer small solid"
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid +
+                              " d-md-none"
                             }
                           />
                         </div>
@@ -585,7 +610,11 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                           </h4>
                           <div
                             className={
-                              PageStyles.spacer + " spacer small solid"
+                              PageStyles.spacer +
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid
                             }
                           />
                           {categoriesPaths.map(category => (
@@ -595,7 +624,9 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                               rel="nofollow"
                             >
                               <span
-                                className={PageStyles.label + " label primary"}
+                                className={
+                                  PageStyles.label + " " + PageStyles.primary
+                                }
                               >
                                 <p>{category.name}</p>
                               </span>
@@ -608,7 +639,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                 </ResponsivePostsColumn>
               </div>
               {/* Begin Events component */}
-              <div className="events-section">
+              <div className={PageStyles.eventsSection}>
                 <div
                   className={
                     RowStyles.row +
@@ -631,7 +662,13 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                       </div>
                     </div>
                     <div
-                      className={PageStyles.spacer + " spacer solid small"}
+                      className={
+                        PageStyles.spacer +
+                        " " +
+                        PageStyles.solid +
+                        " " +
+                        PageStyles.small
+                      }
                     />
                   </div>
                   {data.events.edges.map(({ node }) => (

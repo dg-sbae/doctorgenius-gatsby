@@ -46,6 +46,14 @@
       p {
         margin-bottom: 2rem;
       }
+      .linkWithIconInContent {
+        color: $primary;
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        display: block;
+        margin-top: 40px;
+        text-decoration: none;
+      }
     }
   }
 
@@ -67,11 +75,6 @@
     p:not(.callout) {
       font-size: 0.9375rem; /* 15px */
       @include fluid-type(9px, 15px, $phone, $laptop);
-    }
-    @include media("<laptop") {
-      .link-with-icon {
-        margin-top: 0;
-      }
     }
     .iconWrapper {
       height: 67px;
@@ -228,5 +231,37 @@
 
   b {
     font-weight: $font-weight-semibold;
+  }
+
+  .linkWithIcon {
+    color: $primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+  .linkIcon {
+    margin-right: 10px;
+  }
+
+  .spacer {
+    height: 2px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    &.trim {
+      width: 90%;
+      margin-right: 5%; /* needs tweaking */
+      margin-left: 5%; /* needs tweaking */
+    }
+    &.solid {
+      background: $mute;
+      opacity: 0.25;
+    }
+    &.small {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
   }
 }

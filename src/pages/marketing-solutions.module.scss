@@ -49,4 +49,17 @@
   .panelRow {
     align-items: flex-start;
   }
+
+  .linkWithIcon {
+    color: $primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    display: block;
+    margin-top: 40px;
+    text-decoration: none;
+  }
+
+  .linkIcon {
+    margin-right: 10px;
+  }
 }

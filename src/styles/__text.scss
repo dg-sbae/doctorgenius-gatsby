@@ -49,55 +49,12 @@ html {
   }
 }
 
-/* Link With Icon */
-.link-with-icon {
-  color: $primary;
-  font-size: $font-size-base;
-  font-weight: $font-weight-semibold;
-}
-
 //Standard Accented Paragraphs
 .accented-paragraph {
   p {
     @include accented-paragraph-font;
     font-size: 14px;
     //@include fluid-type(14px, 17px, $phone, $tablet);
-  }
-}
-
-//Callouts
-.callout {
-  font-weight: $font-weight-bold;
-
-  .callout-heading {
-    font-size: $callout-heading-font-size;
-    p {
-      font-size: 5.3125rem;
-      font-family: $font-family-inner-block-headings;
-    }
-    sup {
-      text-transform: uppercase;
-      font-size: $font-size-normal-text;
-      line-height: 1.2;
-    }
-  }
-  p {
-    &.text-accent {
-      font-size: 1.6875rem;
-      font-weight: $font-weight-normal;
-      letter-spacing: -0.75px;
-    }
-    &.sub-text-accent {
-      color: $mute;
-      font-size: 1.625rem;
-      font-family: $font-family-inner-block-subtext;
-      font-weight: $font-weight-medium;
-      letter-spacing: -0.25px;
-    }
-  }
-  .callout-link {
-    font-size: 0.8125rem;
-    font-weight: $font-weight-semibold;
   }
 }
 
@@ -144,14 +101,7 @@ a.not-a-link {
   color: inherit;
   text-decoration: none;
 }
-.text-accent,
-.callout-heading,
-.callout-link > a {
-  color: $primary;
-}
-.callout > p {
-  color: $mute;
-}
+
 .accent-block {
   color: $primary-text;
 }

@@ -349,4 +349,18 @@
       }
     }
   }
+
+  .spacer {
+    height: 2px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    &.solid {
+      background: $mute;
+      opacity: 0.25;
+    }
+    &.small {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
 }

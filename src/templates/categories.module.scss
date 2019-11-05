@@ -26,9 +26,6 @@
   .blogHeading.m-2 {
     margin-left: 0;
   }
-  .spacer {
-    margin-bottom: 30px;
-  }
   .categoryImage {
     position: relative;
     .label {
@@ -291,6 +288,71 @@
   #demoHeader {
     @include media("<=tablet") {
       margin-bottom: 25px;
+    }
+  }
+
+  .eventsSection {
+    display: none;
+    .title-holder {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      & > h4 {
+        margin-bottom: 0;
+      }
+    }
+    .more-events {
+      width: 100px;
+      text-transform: uppercase;
+      font-family: Lato;
+      font-size: 12px;
+      a {
+        color: #5a5a5a;
+      }
+
+      img {
+        width: 5px;
+        height: 10px;
+        margin-left: 15px;
+      }
+    }
+    img {
+      width: 100%;
+    }
+    p {
+      font-size: 19px;
+      color: #5a5a5a;
+    }
+  }
+
+  .label {
+    display: flex;
+    justify-content: center;
+    p {
+      margin-bottom: 0;
+    }
+    &.mute {
+      background: #f2f2f2;
+      color: $primary;
+    }
+    &.primary {
+      background: $primary;
+      color: white;
+    }
+  }
+
+  .spacer {
+    height: 2px;
+    margin-top: 1.5rem;
+    margin-bottom: 30px;
+    &.solid {
+      background: $mute;
+      opacity: 0.25;
+    }
+    &.small {
+      margin-top: 1rem;
+      margin-bottom: 30px;
     }
   }
 }

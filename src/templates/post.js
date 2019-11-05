@@ -180,7 +180,11 @@ function PostPage({ pageContext, data, location }) {
                         </h1>
                       </div>
                       <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
-                        <div className={PageStyles.label + " label primary"}>
+                        <div
+                          className={
+                            PageStyles.label + " " + PageStyles.primary
+                          }
+                        >
                           <p>{mainCategory.name}</p>
                         </div>
                       </div>
@@ -230,7 +234,7 @@ function PostPage({ pageContext, data, location }) {
               <div className={RowStyles.row}>
                 <div className="col-lg-1" />
                 <div className="col-lg-10">
-                  <div className="spacer solid" />
+                  <div className={PageStyles.spacer + " " + PageStyles.solid} />
                 </div>
                 <div className="col-lg-1" />
               </div>
@@ -271,7 +275,7 @@ function PostPage({ pageContext, data, location }) {
                 />
                 <div className="full-bleed-content-wrapper">
                   {/* Begin Events component */}
-                  <div className={PageStyles.eventsSection + " events-section"}>
+                  <div className={PageStyles.eventsSection}>
                     <div
                       className={
                         RowStyles.row +
@@ -291,7 +295,15 @@ function PostPage({ pageContext, data, location }) {
                             </a>
                           </div>
                         </div>
-                        <div className="spacer solid small" />
+                        <div
+                          className={
+                            PageStyles.spacer +
+                            " " +
+                            PageStyles.small +
+                            " " +
+                            PageStyles.solid
+                          }
+                        />
                       </div>
                       {data.events.edges.map(({ node }) => (
                         <div className="col-lg-3">

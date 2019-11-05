@@ -227,4 +227,8 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
       }
     }
   }
+  .subtleLink {
+    color: $subtle-link;
+    text-decoration: underline;
+  }
 }

@@ -266,7 +266,7 @@ const EventPage = ({ data }) => {
       ) {
         return (
           <div>
-            <div className="spacer solid"></div>
+            <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
             <div
               className={
                 RowStyles.row +
@@ -306,7 +306,7 @@ const EventPage = ({ data }) => {
     } else {
       return (
         <div>
-          <div className="spacer solid"></div>
+          <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
           <div
             className={
               RowStyles.row +
@@ -470,14 +470,14 @@ const EventPage = ({ data }) => {
               <div
                 className={
                   event_details.include_speakers[0] === "1"
-                    ? "spacer solid"
+                    ? PageStyles.spacer + " " + PageStyles.solid
                     : "d-none"
                 }
               ></div>
 
               {display_speakers()}
 
-              <div className="spacer solid"></div>
+              <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
 
               <div
                 className={
@@ -598,7 +598,7 @@ const EventPage = ({ data }) => {
                 </div>
               </div>
 
-              <div className="spacer solid"></div>
+              <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
 
               {/* Begin Demo Footer */}
               <RequestDemoFooter eventsPage smWidth="11" />

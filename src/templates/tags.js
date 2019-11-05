@@ -55,7 +55,11 @@ const ResponsivePostsColumnHeader = props => (
     >
       Popular Posts
     </h3>
-    <div className={PageStyles.spacer + " spacer small solid"} />
+    <div
+      className={
+        PageStyles.spacer + " " + PageStyles.small + " " + PageStyles.solid
+      }
+    />
   </div>
 )
 const LatestPostsColumn = props => (
@@ -230,7 +234,11 @@ const TagsPage = ({ data, pageContext }) => {
                           alt={category.name}
                           className="img-responsive"
                         />
-                        <div className={PageStyles.label + " label primary"}>
+                        <div
+                          className={
+                            PageStyles.label + " " + PageStyles.primary
+                          }
+                        >
                           <p>{category.name}</p>
                         </div>
                       </div>
@@ -258,7 +266,12 @@ const TagsPage = ({ data, pageContext }) => {
                     </h3>
                     <div
                       className={
-                        PageStyles.spacer + " d-sm-none spacer small solid"
+                        PageStyles.spacer +
+                        " " +
+                        PageStyles.small +
+                        " " +
+                        PageStyles.solid +
+                        " d-sm-none"
                       }
                     />
                     {data.tagPosts.edges.map(({ node }) => {
@@ -297,7 +310,11 @@ const TagsPage = ({ data, pageContext }) => {
                               <p className={PageStyles.date + " date"}>
                                 {node.date}
                               </p>
-                              <p className={PageStyles.label + " label mute"}>
+                              <p
+                                className={
+                                  PageStyles.label + " " + PageStyles.mute
+                                }
+                              >
                                 <a
                                   href={
                                     // This selects the slug from the categories array matching the mainCategory found above
@@ -392,7 +409,11 @@ const TagsPage = ({ data, pageContext }) => {
                           </h3>
                           <div
                             className={
-                              PageStyles.spacer + " spacer small solid"
+                              PageStyles.spacer +
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid
                             }
                           />
                         </div>
@@ -494,7 +515,11 @@ const TagsPage = ({ data, pageContext }) => {
                           <div
                             className={
                               PageStyles.spacer +
-                              " d-md-none spacer small solid"
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid +
+                              " d-md-none"
                             }
                           />
                         </div>
@@ -590,7 +615,11 @@ const TagsPage = ({ data, pageContext }) => {
                           </h4>
                           <div
                             className={
-                              PageStyles.spacer + " spacer small solid"
+                              PageStyles.spacer +
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid
                             }
                           />
                           {categoriesPaths.map(category => (
@@ -599,7 +628,9 @@ const TagsPage = ({ data, pageContext }) => {
                               key={category.name}
                             >
                               <span
-                                className={PageStyles.label + " label primary"}
+                                className={
+                                  PageStyles.label + " " + PageStyles.primary
+                                }
                               >
                                 <p>{category.name}</p>
                               </span>
@@ -612,7 +643,7 @@ const TagsPage = ({ data, pageContext }) => {
                 </ResponsivePostsColumn>
               </div>
               {/* Begin Events component */}
-              <div className="events-section">
+              <div className={PageStyles.eventsSection}>
                 <div
                   className={
                     RowStyles.row +
@@ -635,7 +666,13 @@ const TagsPage = ({ data, pageContext }) => {
                       </div>
                     </div>
                     <div
-                      className={PageStyles.spacer + " spacer solid small"}
+                      className={
+                        PageStyles.spacer +
+                        " " +
+                        PageStyles.solid +
+                        " " +
+                        PageStyles.small
+                      }
                     />
                   </div>
                   {data.events.edges.map(({ node }) => (

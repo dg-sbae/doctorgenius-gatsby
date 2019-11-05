@@ -68,11 +68,6 @@ p {
   display: block;
 }
 
-/* Temporary */
-.events-section {
-  display: none;
-}
-
 a {
   &.button {
     transition: 0.4s background-color;
@@ -81,8 +76,5 @@ a {
       color: $primary-text;
       background-color: $button-hover-green;
     }
-  }
-  &.link-with-icon {
-    text-decoration: none;
   }
 }

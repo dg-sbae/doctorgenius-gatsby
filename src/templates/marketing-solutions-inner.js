@@ -112,7 +112,7 @@ export default props => {
                       >
                         <img
                           src={row.content.icon.url}
-                          className="link-icon"
+                          className={PageStyles.linkIcon}
                           alt={row.content.icon.alt}
                         />
                         <p

@@ -102,7 +102,7 @@ const Plans = data => {
                       >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
@@ -134,7 +134,7 @@ const Plans = data => {
                       >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
@@ -156,7 +156,7 @@ const Plans = data => {
                       >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
@@ -165,8 +165,7 @@ const Plans = data => {
                     {/* <!-- details section 1: --> */}
                     <dt
                       className={
-                        PageStyles.spacerRow +
-                        " spacer-row justify-content-start"
+                        PageStyles.spacerRow + " justify-content-start"
                       }
                     >
                       <div
@@ -281,8 +280,7 @@ const Plans = data => {
                     {/* <!-- details section 2: --> */}
                     <dt
                       className={
-                        PageStyles.spacerRow +
-                        " spacer-row justify-content-start"
+                        PageStyles.spacerRow + " justify-content-start"
                       }
                     >
                       <div
@@ -377,8 +375,7 @@ const Plans = data => {
                     {/* <!-- details section 3: --> */}
                     <dt
                       className={
-                        PageStyles.spacerRow +
-                        " spacer-row justify-content-start"
+                        PageStyles.spacerRow + " justify-content-start"
                       }
                     >
                       <div
@@ -453,8 +450,7 @@ const Plans = data => {
                     {/* <!-- details section 3: --> */}
                     <dt
                       className={
-                        PageStyles.spacerRow +
-                        " spacer-row justify-content-start"
+                        PageStyles.spacerRow + " justify-content-start"
                       }
                     >
                       <div
@@ -609,8 +605,7 @@ const Plans = data => {
                     {/* <!-- details section 4: --> */}
                     <dt
                       className={
-                        PageStyles.spacerRow +
-                        " spacer-row justify-content-start"
+                        PageStyles.spacerRow + " justify-content-start"
                       }
                     >
                       <div
@@ -744,8 +739,7 @@ const Plans = data => {
                     {/* <!-- details section 4 row 7: --> */}
                     <dt
                       className={
-                        PageStyles.spacerRow +
-                        " spacer-row justify-content-start"
+                        PageStyles.spacerRow + " justify-content-start"
                       }
                     >
                       <div
@@ -814,8 +808,7 @@ const Plans = data => {
                     {/* <!-- details section 5: --> */}
                     <dt
                       className={
-                        PageStyles.spacerRow +
-                        " spacer-row justify-content-start"
+                        PageStyles.spacerRow + " justify-content-start"
                       }
                     >
                       <div
@@ -855,8 +848,7 @@ const Plans = data => {
                     {/* <!-- details section 6: --> */}
                     <dt
                       className={
-                        PageStyles.spacerRow +
-                        " spacer-row justify-content-start"
+                        PageStyles.spacerRow + " justify-content-start"
                       }
                     >
                       <div
@@ -911,8 +903,7 @@ const Plans = data => {
                     {/* <!-- details section 7: --> */}
                     <dt
                       className={
-                        PageStyles.spacerRow +
-                        " spacer-row justify-content-start"
+                        PageStyles.spacerRow + " justify-content-start"
                       }
                     >
                       <div
@@ -968,7 +959,7 @@ const Plans = data => {
                       >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
@@ -986,7 +977,7 @@ const Plans = data => {
                       >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
@@ -1004,7 +995,7 @@ const Plans = data => {
                       >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>

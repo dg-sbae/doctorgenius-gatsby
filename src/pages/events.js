@@ -474,7 +474,7 @@ const EventPage = ({ data }) => {
                       >
                         <h3>Next Event Starts:</h3>
                         <div
-                          className={PageStyles.spacer + " spacer solid"}
+                          className={PageStyles.spacer + " " + PageStyles.solid}
                         ></div>
                         <div className={RowStyles.row}>
                           <div
@@ -602,7 +602,9 @@ const EventPage = ({ data }) => {
                   </div>
                 </div>
 
-                <div className="spacer solid"></div>
+                <div
+                  className={PageStyles.spacer + " " + PageStyles.solid}
+                ></div>
 
                 <div
                   className={
@@ -687,7 +689,9 @@ const EventPage = ({ data }) => {
                   </div>
                 </div>
 
-                <div className="spacer solid"></div>
+                <div
+                  className={PageStyles.spacer + " " + PageStyles.solid}
+                ></div>
 
                 <div className={PageStyles.pastEvents + " past-events"}>
                   <div className={RowStyles.row}>
@@ -727,7 +731,9 @@ const EventPage = ({ data }) => {
                   </div>
                 </div>
 
-                <div className="spacer solid"></div>
+                <div
+                  className={PageStyles.spacer + " " + PageStyles.solid}
+                ></div>
 
                 {/* Begin Demo Footer */}
                 <RequestDemoFooter eventsPage smWidth="11" />

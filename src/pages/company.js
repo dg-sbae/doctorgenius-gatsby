@@ -260,7 +260,7 @@ const Company = data => {
                   />
                 </div>
                 <div className="col-sm-12 col-md-6">
-                  <div className="callout">
+                  <div className={PageStyles.callout}>
                     <InnerTitle
                       centered
                       title="Our "
@@ -268,7 +268,7 @@ const Company = data => {
                       boldText="Clients Average"
                     />
                     <div className={PageStyles.center}>
-                      <div className="callout-heading">
+                      <div className={PageStyles.calloutHeading}>
                         <sup>
                           Up
                           <br />
@@ -276,20 +276,24 @@ const Company = data => {
                         </sup>
                         <p>600%</p>
                       </div>
-                      <p className="text-accent">New Patient Inquiries</p>
-                      <p className="text-mute sub-text-accent">
+                      <p className={PageStyles.textAccent}>
+                        New Patient Inquiries
+                      </p>
+                      <p className={PageStyles.subTextAccent}>
                         12 Months Duration
                       </p>
-                      <div className="callout-link">
+                      <div className={PageStyles.calloutLink}>
                         <a
                           href="/our-clients"
                           className={
-                            PageStyles.fontWeightSemibold + " link-with-icon"
+                            PageStyles.fontWeightSemibold +
+                            " " +
+                            PageStyles.linkWithIcon
                           }
                         >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           Learn More
@@ -347,7 +351,11 @@ const Company = data => {
                       inContentBlock
                     />
                     <div>
-                      <div className="accented-paragraph">
+                      <div
+                        className={
+                          PageStyles.accentedParagraph + " accented-paragraph"
+                        }
+                      >
                         <p>
                           We are based in Irvine, California, USA. Doctor Genius
                           has consistent 5 Star Ratings on Google+, and A Rated
@@ -359,12 +367,14 @@ const Company = data => {
                         <a
                           href="/demo"
                           className={
-                            PageStyles.fontWeightSemibold + " link-with-icon"
+                            PageStyles.fontWeightSemibold +
+                            " " +
+                            PageStyles.linkWithIcon
                           }
                         >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           Contact Us

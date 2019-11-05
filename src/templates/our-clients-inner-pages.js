@@ -131,7 +131,17 @@ export default props => {
               </div>
               {/* End main block of text */}
               {/* Begin split page content - conditional render using short circuit */}
-              {isCaseStudy && <div className="spacer solid trim" />}
+              {isCaseStudy && (
+                <div
+                  className={
+                    PageStyles.spacer +
+                    " " +
+                    PageStyles.solid +
+                    " " +
+                    PageStyles.trim
+                  }
+                />
+              )}
               {isCaseStudy && (
                 <div
                   className={
@@ -165,9 +175,7 @@ export default props => {
                           PageStyles.caseStudyItem + " case-study-item"
                         }
                       >
-                        <p className={PageStyles.callout + " callout"}>
-                          1,125%
-                        </p>
+                        <p className={PageStyles.callout}>1,125%</p>
                         <p>Increase in Google First-Page Revenue</p>
                       </div>
                       <div
@@ -175,7 +183,7 @@ export default props => {
                           PageStyles.caseStudyItem + " case-study-item"
                         }
                       >
-                        <p className={PageStyles.callout + " callout"}>100%</p>
+                        <p className={PageStyles.callout}>100%</p>
                         <p>Increase in Revenue</p>
                       </div>
                       <div
@@ -183,7 +191,7 @@ export default props => {
                           PageStyles.caseStudyItem + " case-study-item"
                         }
                       >
-                        <p className={PageStyles.callout + " callout"}>60%</p>
+                        <p className={PageStyles.callout}>60%</p>
                         <p>Growth in organic Search Traffic</p>
                       </div>
                       <div
@@ -191,7 +199,7 @@ export default props => {
                           PageStyles.caseStudyItem + " case-study-item"
                         }
                       >
-                        <p className={PageStyles.callout + " callout"}>500%</p>
+                        <p className={PageStyles.callout}>500%</p>
                         <p>Growth in Reviews Across the Web</p>
                       </div>
                       <div
@@ -199,7 +207,7 @@ export default props => {
                           PageStyles.caseStudyItem + " case-study-item"
                         }
                       >
-                        <p className={PageStyles.callout + " callout"}>200%</p>
+                        <p className={PageStyles.callout}>200%</p>
                         <p>New Patient Appointments</p>
                       </div>
                       <div
@@ -207,15 +215,15 @@ export default props => {
                           PageStyles.caseStudyItem + " case-study-item"
                         }
                       >
-                        <p className={PageStyles.callout + " callout"}>88%</p>
+                        <p className={PageStyles.callout}>88%</p>
                         <p>Increase in New Patient Calls!</p>
                       </div>
                     </div>
                     <div className={PageStyles.padMd + " center pad-md"}>
-                      <a href="/case-study" className="link-with-icon">
+                      <a href="/case-study" className={PageStyles.linkWithIcon}>
                         <img
                           src={rightArrowBlue}
-                          className="link-icon"
+                          className={PageStyles.linkIcon}
                           alt="Icon of a Right Arrow"
                         />
                         View Case Study
@@ -271,10 +279,13 @@ export default props => {
                             Performance Reporting, Dedicated Support
                             Representative.
                           </p>
-                          <a href="/plans" className="link-with-icon">
+                          <a
+                            href="/plans"
+                            className={PageStyles.linkWithIconInContent}
+                          >
                             <img
                               src={rightArrowBlue}
-                              className="link-icon"
+                              className={PageStyles.linkIcon}
                               alt="Icon of a Right Arrow"
                             />
                             See Our Plans

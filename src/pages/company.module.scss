@@ -83,4 +83,73 @@
   .fontWeightSemibold {
     font-weight: $font-weight-semibold;
   }
+  /* Link With Icon */
+  .linkWithIcon {
+    color: $primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+  .accentedParagraph {
+    .linkWithIcon {
+      margin-top: 40px;
+    }
+  }
+  .linkIcon {
+    margin-right: 10px;
+  }
+
+  .callout {
+    font-weight: $font-weight-bold;
+    .calloutHeading {
+      color: $primary;
+      font-size: $callout-heading-font-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      sup {
+        line-height: 1;
+        margin-right: 5px;
+      }
+      p {
+        font-size: 5.3125rem;
+        font-family: $font-family-inner-block-headings;
+      }
+    }
+    /*> p {
+        color: $mute;
+      } */
+    p {
+      &.textAccent {
+        font-size: 1.6875rem;
+        font-weight: $font-weight-normal;
+        letter-spacing: -0.75px;
+        color: #047bc7;
+      }
+      &.subTextAccent {
+        color: $mute;
+        font-size: 1.625rem;
+        font-family: $font-family-inner-block-subtext;
+        font-weight: $font-weight-medium;
+        letter-spacing: -0.25px;
+      }
+    }
+    sup {
+      text-transform: uppercase;
+      font-size: $font-size-normal-text;
+      line-height: 1.2;
+    }
+
+    .calloutLink {
+      font-size: 0.8125rem;
+      font-weight: $font-weight-semibold;
+    }
+    .calloutLink > a {
+      color: $primary;
+    }
+  }
 }

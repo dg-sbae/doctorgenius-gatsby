@@ -109,10 +109,13 @@ const MarketingSolutions = data => {
                           performance metrics, make informed business decisions,
                           and improve efficiencies
                         </p>
-                        <a href="/case-study" className="link-with-icon">
+                        <a
+                          href="/case-study"
+                          className={PageStyles.linkWithIcon}
+                        >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           See Case Study
@@ -172,11 +175,11 @@ const MarketingSolutions = data => {
                         </p>
                         <a
                           href="/marketing-solutions/our-technology"
-                          className="link-with-icon"
+                          className={PageStyles.linkWithIcon}
                         >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           Our Technology
@@ -214,10 +217,10 @@ const MarketingSolutions = data => {
                             From new patient acquisition to retention, Doctor
                             Genius has you covered.
                           </p>
-                          <a href="/plans" className="link-with-icon">
+                          <a href="/plans" className={PageStyles.linkWithIcon}>
                             <img
                               src={rightArrowBlue}
-                              className="link-icon"
+                              className={PageStyles.linkIcon}
                               alt="Icon of a Right Arrow"
                             />
                             See Our Plans

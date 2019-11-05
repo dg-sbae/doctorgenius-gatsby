@@ -288,13 +288,11 @@ const Partnerships = data => {
                         </p>
                         <a
                           href="/demo"
-                          className={
-                            PageStyles.fontWeightSemibold + " link-with-icon"
-                          }
+                          className={PageStyles.fontWeightSemibold}
                         >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           Contact Us

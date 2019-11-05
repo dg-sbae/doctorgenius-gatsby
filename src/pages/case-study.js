@@ -373,37 +373,37 @@ const CaseStudy = data => {
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>1,125%</p>
+                      <p className={PageStyles.callout}>1,125%</p>
                       <p>Increase in Google First-Page Revenue</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>100%</p>
+                      <p className={PageStyles.callout}>100%</p>
                       <p>Increase in Revenue</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>60%</p>
+                      <p className={PageStyles.callout}>60%</p>
                       <p>Growth in organic Search Traffic</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>500%</p>
+                      <p className={PageStyles.callout}>500%</p>
                       <p>Growth in Reviews Across the Web</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>200%</p>
+                      <p className={PageStyles.callout}>200%</p>
                       <p>New Patient Appointments</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>88%</p>
+                      <p className={PageStyles.callout}>88%</p>
                       <p>Increase in New Patient Calls!</p>
                     </div>
                   </div>
