@@ -58,22 +58,6 @@ html {
   }
 }
 
-// Testimonial Slider
-.card-content-wrapper {
-  .card-copy {
-    font-size: $font-size-base;
-    color: $mute-text-darker;
-  }
-  .card-author {
-    color: $primary;
-    font-weight: $font-weight-semibold;
-  }
-  .card-location {
-    font-weight: $font-weight-light;
-    color: $mute-text;
-  }
-}
-
 /* Buttons, Links */
 a.button {
   font-size: $font-size-btn;
@@ -89,9 +73,6 @@ a.button {
 
 /* colors */
 // Helpers
-.white-text {
-  color: white;
-}
 
 .button {
   color: #fff;

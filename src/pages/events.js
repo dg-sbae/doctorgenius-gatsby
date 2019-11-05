@@ -243,7 +243,9 @@ const EventPage = ({ data }) => {
             <span
               className={
                 PageStyles.pastEventDate +
-                " button flat white-text past-event-date"
+                " " +
+                PageStyles.whiteText +
+                " button flat past-event-date"
               }
             >
               {format_date_short(past_events[0].node.event_date)}
@@ -288,7 +290,9 @@ const EventPage = ({ data }) => {
             <span
               className={
                 PageStyles.pastEventDate +
-                " button flat white-text past-event-date"
+                " " +
+                PageStyles.whiteText +
+                " button flat past-event-date"
               }
             >
               {format_date_short(past_events[1].node.event_date)}
@@ -333,7 +337,9 @@ const EventPage = ({ data }) => {
             <span
               className={
                 PageStyles.pastEventDate +
-                " button flat white-text past-event-date"
+                " " +
+                PageStyles.whiteText +
+                " button flat past-event-date"
               }
             >
               {format_date_short(past_events[2].node.event_date)}
@@ -378,7 +384,9 @@ const EventPage = ({ data }) => {
             <span
               className={
                 PageStyles.pastEventDate +
-                " button flat white-text past-event-date"
+                " " +
+                PageStyles.whiteText +
+                " button flat past-event-date"
               }
             >
               {format_date_short(past_events[3].node.event_date)}
@@ -423,7 +431,9 @@ const EventPage = ({ data }) => {
                         <h1
                           className={
                             PageStyles.dgCategory +
-                            " button flat white-text dg-category"
+                            " " +
+                            PageStyles.whiteText +
+                            " button flat dg-category"
                           }
                         >
                           Doctor Genius Events
@@ -441,7 +451,9 @@ const EventPage = ({ data }) => {
                             <a
                               className={
                                 PageStyles.registerNowBtn +
-                                " button flat white-text register-now-btn"
+                                " " +
+                                PageStyles.whiteText +
+                                " button flat register-now-btn"
                               }
                               href={featured_event.register_url}
                               target="_blank"

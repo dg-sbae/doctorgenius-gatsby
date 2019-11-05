@@ -123,7 +123,10 @@ export default ({ data }, props) => {
                         </div>
                       </div>
                       <div className={PageStyles.demoCta + " demo-cta"}>
-                        <a href="/demo" className="button flat white-text">
+                        <a
+                          href="/demo"
+                          className={PageStyles.whiteText + " button flat"}
+                        >
                           Request Demo{" "}
                           <img src={thinArrowRight} alt="Arrow Right" />
                         </a>

@@ -330,7 +330,7 @@ const TagsPage = ({ data, pageContext }) => {
                             </div>
                             <h4 className={PageStyles.title + " title"}>
                               <a
-                                className="not-a-link"
+                                className={PageStyles.notALink}
                                 href={postsPath + node.slug}
                               >
                                 {he.decode(node.title)}

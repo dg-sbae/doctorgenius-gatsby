@@ -361,7 +361,9 @@ const EventPage = ({ data }) => {
                       <span
                         className={
                           PageStyles.continueEduClass +
-                          " button flat white-text continue-edu-class"
+                          " " +
+                          PageStyles.whiteText +
+                          " button flat continue-edu-class"
                         }
                       >
                         {event_details.event_strapline}
@@ -382,7 +384,9 @@ const EventPage = ({ data }) => {
                       <a
                         className={
                           PageStyles.registerNowBtn +
-                          " button flat white-text register-now-btn"
+                          " " +
+                          PageStyles.whiteText +
+                          " button flat register-now-btn"
                         }
                         href={event_details.register_url[0]}
                         target="_blank"
