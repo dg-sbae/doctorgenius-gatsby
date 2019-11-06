@@ -8,8 +8,7 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-
-import thinArrowRight from "../img/right-arrow.svg"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import "../styles/event-post.scss"
 import PageStyles from "./event.module.scss"
@@ -267,7 +266,7 @@ const EventPage = ({ data }) => {
       ) {
         return (
           <div>
-            <div className="spacer solid"></div>
+            <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
             <div
               className={
                 RowStyles.row +
@@ -307,7 +306,7 @@ const EventPage = ({ data }) => {
     } else {
       return (
         <div>
-          <div className="spacer solid"></div>
+          <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
           <div
             className={
               RowStyles.row +
@@ -362,7 +361,9 @@ const EventPage = ({ data }) => {
                       <span
                         className={
                           PageStyles.continueEduClass +
-                          " button flat white-text continue-edu-class"
+                          " " +
+                          PageStyles.whiteText +
+                          " continue-edu-class"
                         }
                       >
                         {event_details.event_strapline}
@@ -383,7 +384,9 @@ const EventPage = ({ data }) => {
                       <a
                         className={
                           PageStyles.registerNowBtn +
-                          " button flat white-text register-now-btn"
+                          " " +
+                          PageStyles.whiteText +
+                          " register-now-btn"
                         }
                         href={event_details.register_url[0]}
                         target="_blank"
@@ -471,14 +474,14 @@ const EventPage = ({ data }) => {
               <div
                 className={
                   event_details.include_speakers[0] === "1"
-                    ? "spacer solid"
+                    ? PageStyles.spacer + " " + PageStyles.solid
                     : "d-none"
                 }
               ></div>
 
               {display_speakers()}
 
-              <div className="spacer solid"></div>
+              <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
 
               <div
                 className={
@@ -599,51 +602,10 @@ const EventPage = ({ data }) => {
                 </div>
               </div>
 
-              <div className="spacer solid"></div>
+              <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
 
               {/* Begin Demo Footer */}
-              <div
-                className={
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.tallTop +
-                  " " +
-                  PageStyles.requestDemoFooter +
-                  " request-demo-footer"
-                }
-              >
-                <div className="col-sm-11 col-md-9 col-lap-5">
-                  <div className={PageStyles.contentBlock + " content-block"}>
-                    <div>
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-10 col-md-5 col-lap-5">
-                  <div className="center">
-                    <a
-                      href="/demo"
-                      className={PageStyles.button + " button flat white-text"}
-                    >
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter eventsPage smWidth="11" />
               {/* End Demo Footer */}
             </Container>
           </Main>

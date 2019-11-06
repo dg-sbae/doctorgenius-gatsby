@@ -204,31 +204,36 @@
   }
 
   .imgResponsive {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  /*
+  * Some images from the deisgn have a blurred shadow/background
+  * which makes the actual width larger than the dimensions appear.
+  * This lets them bleed slightly out of their column space to
+  * accomodate. 125% is a just a rough guess
+  */
+  .imgResponsive.blurBleed {
+    width: 90%;
+    transform: translateX(6%);
     @include media("<laptop") {
       width: 100%;
+      transform: translateX(0%);
     }
-    &.blur-bleed {
-      @include media("<laptop") {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-      }
+  }
+  .imgResponsive.blurBleedRight {
+    width: 90%;
+    transform: translateX(-6%);
+    @include media("<laptop") {
+      width: 100%;
+      transform: translateX(0%);
     }
   }
   .imgContainer {
     @include media("<laptop") {
       padding-bottom: 50px;
-    }
-  }
-  .requestDemoFooter {
-    h2 {
-      @include media("<desktop") {
-        @include fluid-type(
-          26px,
-          45px,
-          $tablet,
-          $laptop
-        ); /* desktop - 53, tablet - 45, small - 38 */
-      }
     }
   }
   #caseStudyHeader {

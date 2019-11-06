@@ -10,9 +10,18 @@
     font-weight: $font-weight-light;
   }
 
+  /*
+  * Some images from the deisgn have a blurred shadow/background
+  * which makes the actual width larger than the dimensions appear.
+  * This lets them bleed slightly out of their column space to
+  * accomodate. 125% is a just a rough guess
+  */
   .blurBleed {
     /* homepage images are slightly larger, meaning they should bleed slightly less */
     max-width: 120%;
+    width: 115%;
+    margin: auto;
+    display: block;
     transform: translateX(-10%);
     @include media("<laptop") {
       width: 100%;
@@ -67,13 +76,19 @@
     }
   }
 
-  .marketingDashboardLg {
+  .marketingDashboardLg.imgResponsive {
+    max-width: 100%;
+    margin: auto;
+    display: block;
     @include media("<=phone") {
       display: none;
     }
   }
 
-  .marketingDashboardSm {
+  .marketingDashboardSm.imgResponsive {
+    max-width: 100%;
+    margin: auto;
+    display: block;
     @include media(">phone") {
       display: none;
     }
@@ -92,5 +107,30 @@
       max-height: 100%;
       object-fit: contain;
     }
+  }
+
+  .whiteText {
+    color: white;
+  }
+
+  .button {
+    color: #fff;
+    background-color: $primary;
+    text-align: center;
+    font-size: $font-size-btn;
+    transition: 0.4s background-color;
+    &.flat {
+      border-radius: 3px;
+      padding: 0.75rem 1rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+    }
+  }
+
+  .button:hover {
+    text-decoration: none;
+    color: $primary-text;
+    background-color: $button-hover-green;
   }
 }

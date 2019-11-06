@@ -60,29 +60,3 @@
 p {
   margin-bottom: 0;
 }
-
-/* ~bootstrap? */
-.img-responsive {
-  max-width: 100%;
-  margin: auto;
-  display: block;
-}
-
-/* Temporary */
-.events-section {
-  display: none;
-}
-
-a {
-  &.button {
-    transition: 0.4s background-color;
-    &:hover {
-      text-decoration: none;
-      color: $primary-text;
-      background-color: $button-hover-green;
-    }
-  }
-  &.link-with-icon {
-    text-decoration: none;
-  }
-}

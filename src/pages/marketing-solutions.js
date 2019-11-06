@@ -11,8 +11,8 @@ import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import InnerTitle from "../components/inner-title.js"
 import SecondaryNavigation from "../components/SecondaryNavigation"
 import Hero from "../components/Hero"
+import RequestDemoFooter from "../components/request-demo-footer"
 
-import thinArrowRight from "../img/right-arrow.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/marketing-solutions.scss"
@@ -80,7 +80,8 @@ const MarketingSolutions = data => {
                   RowStyles.shortTop +
                   " " +
                   RowStyles.shortBottom +
-                  " odd-row proven-results-row"
+                  " " +
+                  PageStyles.oddRow
                 }
               >
                 <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
@@ -97,10 +98,13 @@ const MarketingSolutions = data => {
                           performance metrics, make informed business decisions,
                           and improve efficiencies
                         </p>
-                        <a href="/case-study" className="link-with-icon">
+                        <a
+                          href="/case-study"
+                          className={PageStyles.linkWithIcon}
+                        >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           See Case Study
@@ -117,8 +121,7 @@ const MarketingSolutions = data => {
                     }
                     alt="Ligthhouse Page Speed Score"
                     className={
-                      PageStyles.lighthouseImage +
-                      " img-responsive blur-bleed lighthouse-image"
+                      PageStyles.lighthouseImage + " " + PageStyles.blurBleed
                     }
                   />
                 </div>
@@ -134,13 +137,16 @@ const MarketingSolutions = data => {
                   RowStyles.shortTop +
                   " " +
                   RowStyles.tallBottom +
-                  " even-row dashboard-row"
+                  " " +
+                  PageStyles.evenRow
                 }
               >
                 <div className="col-sm-10 col-md-6">
                   <Img
                     fluid={images.portalDashboard.childImageSharp.fluid}
-                    className="img-responsive blur-bleed"
+                    className={
+                      PageStyles.portalDashboard + " " + PageStyles.blurBleed
+                    }
                     alt="Our Client Dashboard"
                   />
                 </div>
@@ -160,11 +166,11 @@ const MarketingSolutions = data => {
                         </p>
                         <a
                           href="/marketing-solutions/our-technology"
-                          className="link-with-icon"
+                          className={PageStyles.linkWithIcon}
                         >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           Our Technology
@@ -202,10 +208,10 @@ const MarketingSolutions = data => {
                             From new patient acquisition to retention, Doctor
                             Genius has you covered.
                           </p>
-                          <a href="/plans" className="link-with-icon">
+                          <a href="/plans" className={PageStyles.linkWithIcon}>
                             <img
                               src={rightArrowBlue}
-                              className="link-icon"
+                              className={PageStyles.linkIcon}
                               alt="Icon of a Right Arrow"
                             />
                             See Our Plans
@@ -218,45 +224,9 @@ const MarketingSolutions = data => {
                 </div>
               </div>
               {/* End Full bleed content row (reversed)*/}
+
               {/* Begin Demo Footer */}
-              <div
-                className={
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.tallTop +
-                  " request-demo-footer"
-                }
-              >
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5">
-                  <div className="content-block">
-                    <div>
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-9 col-md-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter smWidth="9" />
               {/* End Demo Footer */}
             </Container>
           </Main>

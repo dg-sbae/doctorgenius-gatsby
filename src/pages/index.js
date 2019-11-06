@@ -10,6 +10,7 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import InnerTitle from "../components/inner-title.js"
 import HomeHero from "../components/HomeHero"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import "../styles/homepage.scss"
 import PageStyles from "./index.module.scss"
@@ -154,7 +155,8 @@ export default ({ data }, props) => {
                   <img
                     className={
                       PageStyles.marketingDashboardLg +
-                      " img-responsive marketing-dashboard-lg"
+                      " " +
+                      PageStyles.imgResponsive
                     }
                     src={
                       images.homepageMarketingDashboard.childImageSharp.fixed
@@ -169,7 +171,8 @@ export default ({ data }, props) => {
                     }
                     className={
                       PageStyles.marketingDashboardSm +
-                      " img-responsive marketing-dashboard-sm"
+                      " " +
+                      PageStyles.imgResponsive
                     }
                     alt="Digital Marketing Dashboard"
                   />
@@ -202,9 +205,7 @@ export default ({ data }, props) => {
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.newPatientAcquisitions.childImageSharp.fluid}
-                    className={
-                      PageStyles.blurBleed + " img-responsive blur-bleed"
-                    }
+                    className={PageStyles.blurBleed}
                     alt="New Patient Acquisitions"
                   />
                 </div>
@@ -257,9 +258,7 @@ export default ({ data }, props) => {
                 <div className="col-sm-12 col-md-6 order-sm-1 order-md-2">
                   <Img
                     fluid={images.dgDifferent.childImageSharp.fluid}
-                    className={
-                      PageStyles.blurBleed + " img-responsive blur-bleed"
-                    }
+                    className={PageStyles.blurBleed}
                     alt="What makes Doctor Genius different?"
                   />
                 </div>
@@ -278,9 +277,7 @@ export default ({ data }, props) => {
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.dgClientSatisfaction.childImageSharp.fluid}
-                    className={
-                      PageStyles.blurBleed + " img-responsive blur-bleed"
-                    }
+                    className={PageStyles.blurBleed}
                     alt="Client Satisfaction"
                   />
                 </div>
@@ -308,45 +305,9 @@ export default ({ data }, props) => {
                   </div>
                 </div>
               </div>
+
               {/* Begin Demo Footer */}
-              <div
-                className={
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.tallTop +
-                  " request-demo-footer"
-                }
-              >
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5">
-                  <div className="content-block">
-                    <div>
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-9 col-md-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter smWidth="9" />
               {/* End Demo Footer */}
             </Container>
           </Main>

@@ -1140,7 +1140,9 @@ class Navigation extends Component {
                     NavStyles.freeDemoButton +
                     " " +
                     NavStyles.button +
-                    " button nav-button transparent free-demo-button"
+                    " " +
+                    NavStyles.transparent +
+                    " free-demo-button"
                   }
                 >
                   Free Demo
@@ -1156,7 +1158,9 @@ class Navigation extends Component {
                     NavStyles.freeDemoButton +
                     " " +
                     NavStyles.button +
-                    " button nav-button transparent free-demo-button"
+                    " " +
+                    NavStyles.transparent +
+                    " free-demo-button"
                   }
                 >
                   877.477.2311

@@ -103,7 +103,7 @@ export default props => {
                       >
                         <img
                           src={row.content.icon.url}
-                          className="link-icon"
+                          className={PageStyles.linkIcon}
                           alt={row.content.icon.alt}
                         />
                         <p
@@ -138,7 +138,7 @@ export default props => {
                     }
                   >
                     <img
-                      className={PageStyles.imgResponsive + " img-responsive"}
+                      className={PageStyles.imgResponsive}
                       src={row.image.url}
                       alt={row.image.alt}
                     />

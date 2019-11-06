@@ -5,19 +5,6 @@ body {
   width: 100%;
 }
 
-.request-demo-footer {
-  a.button {
-    @include media("<=tablet") {
-      display: inline-block;
-      margin-top: 10px;
-      margin-bottom: 60px;
-      width: 75%;
-      max-width: 300px;
-      text-align: center;
-    }
-  }
-}
-
 .main-content {
   position: relative;
 }
@@ -48,10 +35,6 @@ html .hero {
       filter: FlipH;
     }
   }
-}
-.callout-heading {
-  position: relative;
-  display: inline-block;
 }
 
 .col-xl-6 {

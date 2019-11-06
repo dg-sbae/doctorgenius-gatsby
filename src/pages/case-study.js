@@ -9,11 +9,11 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import InnerTitle from "../components/inner-title"
 import Hero from "../components/Hero"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import PageStyles from "./case-study.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
-import thinArrowRight from "../img/right-arrow.svg"
 import newPatientOppIcon from "../img/icon/new-patient-opportunity.svg"
 import marketingSolutionsIcon from "../img/icon/marketing-solutions-suite.svg"
 import liveSupportIcon from "../img/icon/live-support-concierge.svg"
@@ -73,7 +73,7 @@ const CaseStudy = data => {
                   }
                 >
                   <img
-                    className={PageStyles.imgResponsive + " img-responsive"}
+                    className={PageStyles.imgResponsive}
                     src={images.titanDentalLogo.childImageSharp.fixed.src}
                     alt="Titan Dental Care - Digital Marketing Client"
                   />
@@ -167,7 +167,7 @@ const CaseStudy = data => {
                 >
                   <Img
                     fluid={images.theChallengeImage.childImageSharp.fluid}
-                    className={PageStyles.imgResponsive + " img-responsive"}
+                    className={PageStyles.imgResponsive}
                     alt="Dental Office"
                   />
                 </div>
@@ -195,7 +195,7 @@ const CaseStudy = data => {
                 >
                   <img
                     className={
-                      PageStyles.imgResponsive + " img-responsive blur-bleed"
+                      PageStyles.imgResponsive + " " + PageStyles.blurBleed
                     }
                     src={images.theSolutionsImage.childImageSharp.fixed.src}
                     alt="Acquire New Patients"
@@ -358,37 +358,37 @@ const CaseStudy = data => {
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>1,125%</p>
+                      <p className={PageStyles.callout}>1,125%</p>
                       <p>Increase in Google First-Page Revenue</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>100%</p>
+                      <p className={PageStyles.callout}>100%</p>
                       <p>Increase in Revenue</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>60%</p>
+                      <p className={PageStyles.callout}>60%</p>
                       <p>Growth in organic Search Traffic</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>500%</p>
+                      <p className={PageStyles.callout}>500%</p>
                       <p>Growth in Reviews Across the Web</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>200%</p>
+                      <p className={PageStyles.callout}>200%</p>
                       <p>New Patient Appointments</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>88%</p>
+                      <p className={PageStyles.callout}>88%</p>
                       <p>Increase in New Patient Calls!</p>
                     </div>
                   </div>
@@ -397,54 +397,14 @@ const CaseStudy = data => {
                   <Img
                     fluid={images.searchResultsPage.childImageSharp.fluid}
                     className={
-                      PageStyles.imgResponsive + " img-responsive blur-bleed"
+                      PageStyles.imgResponsive + " " + PageStyles.blurBleedRight
                     }
                     alt="Local Business Search Results Page"
                   />
                 </div>
               </div>
-              <div
-                className={
-                  PageStyles.requestDemoFooter +
-                  " " +
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.tallTop +
-                  " request-demo-footer"
-                }
-              >
-                <div className="col-lg-1" />
-                <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
-                  <div className="content-block">
-                    <div>
-                      <h2>
-                        Start your
-                        <span className="font-weight-semibold"> success </span>
-                        with Doctor Genius today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p className="s-thin">
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-11 col-md-5 col-lg-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-1" />
-              </div>
+
+              <RequestDemoFooter smWidth="11" sThin />
             </Container>
           </Main>
         </div>

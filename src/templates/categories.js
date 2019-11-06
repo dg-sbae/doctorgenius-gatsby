@@ -10,13 +10,13 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import NewsLetterSignUpForm from "../components/newsletter-form.js"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
 import instagramIcon from "../img/instagram.svg"
 import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
-import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
 import PageStyles from "./categories.module.scss"
@@ -57,7 +57,11 @@ const ResponsivePostsColumnHeader = props => (
     >
       Popular Posts
     </h3>
-    <div className={PageStyles.spacer + " spacer small solid"} />
+    <div
+      className={
+        PageStyles.spacer + " " + PageStyles.small + " " + PageStyles.solid
+      }
+    />
   </div>
 )
 const LatestPostsColumn = props => (
@@ -244,9 +248,13 @@ const CategoriesPage = ({ data, pageContext }) => {
                         <img
                           src={category.image}
                           alt={category.name}
-                          className="img-responsive"
+                          className={PageStyles.imgResponsive}
                         />
-                        <div className={PageStyles.label + " label primary"}>
+                        <div
+                          className={
+                            PageStyles.label + " " + PageStyles.primary
+                          }
+                        >
                           <p>{category.name}</p>
                         </div>
                       </div>
@@ -274,7 +282,12 @@ const CategoriesPage = ({ data, pageContext }) => {
                     </h3>
                     <div
                       className={
-                        PageStyles.spacer + " d-sm-none spacer small solid"
+                        PageStyles.spacer +
+                        " " +
+                        PageStyles.small +
+                        " " +
+                        PageStyles.solid +
+                        " d-sm-none"
                       }
                     />
                     {data.category.edges.map(({ node }) => {
@@ -314,7 +327,11 @@ const CategoriesPage = ({ data, pageContext }) => {
                               <p className={PageStyles.date + " date"}>
                                 {node.date}
                               </p>
-                              <p className={PageStyles.label + " label mute"}>
+                              <p
+                                className={
+                                  PageStyles.label + " " + PageStyles.mute
+                                }
+                              >
                                 <a
                                   href={
                                     // This selects the slug from the categories array matching the mainCategory found above
@@ -330,7 +347,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                             </div>
                             <h4 className={PageStyles.title + " title"}>
                               <a
-                                className="not-a-link"
+                                className={PageStyles.notALink}
                                 href={postsPath + node.slug}
                               >
                                 {he.decode(node.title)}
@@ -408,7 +425,11 @@ const CategoriesPage = ({ data, pageContext }) => {
                           </h3>
                           <div
                             className={
-                              PageStyles.spacer + " spacer small solid"
+                              PageStyles.spacer +
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid
                             }
                           />
                         </div>
@@ -510,7 +531,11 @@ const CategoriesPage = ({ data, pageContext }) => {
                           <div
                             className={
                               PageStyles.spacer +
-                              " d-md-none spacer small solid"
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid +
+                              " d-md-none"
                             }
                           />
                         </div>
@@ -606,7 +631,11 @@ const CategoriesPage = ({ data, pageContext }) => {
                           </h4>
                           <div
                             className={
-                              PageStyles.spacer + " spacer small solid"
+                              PageStyles.spacer +
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid
                             }
                           />
                           {categoriesPaths.map(category => (
@@ -615,7 +644,9 @@ const CategoriesPage = ({ data, pageContext }) => {
                               key={category.name}
                             >
                               <span
-                                className={PageStyles.label + " label primary"}
+                                className={
+                                  PageStyles.label + " " + PageStyles.primary
+                                }
                               >
                                 <p>{category.name}</p>
                               </span>
@@ -628,7 +659,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                 </ResponsivePostsColumn>
               </div>
               {/* Begin Events component */}
-              <div className="events-section">
+              <div className={PageStyles.eventsSection}>
                 <div
                   className={
                     RowStyles.row +
@@ -651,7 +682,13 @@ const CategoriesPage = ({ data, pageContext }) => {
                       </div>
                     </div>
                     <div
-                      className={PageStyles.spacer + " spacer solid small"}
+                      className={
+                        PageStyles.spacer +
+                        " " +
+                        PageStyles.solid +
+                        " " +
+                        PageStyles.small
+                      }
                     />
                   </div>
                   {data.events.edges.map(({ node }) => (
@@ -670,51 +707,12 @@ const CategoriesPage = ({ data, pageContext }) => {
                 </div>
               </div>
               {/* End Events component */}
-              <div
-                className={
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.tallTop +
-                  " " +
-                  PageStyles.requestDemoFooter +
-                  " request-demo-footer"
-                }
-              >
-                <div className="col-lg-1" />
-                <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
-                  <div className="content-block">
-                    <div>
-                      <h2>
-                        Start your{" "}
-                        <span className="font-weight-semibold">success </span>
-                        with Doctor Genius today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p className="s-thin">
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-11 col-md-5 col-lg-5">
-                  <div className="center">
-                    <a
-                      href="/demo"
-                      className={PageStyles.button + " button flat white-text"}
-                    >
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-1" />
-              </div>
+
+              <RequestDemoFooter
+                smWidth="11"
+                sThin
+                headerID={PageStyles.demoHeader}
+              />
             </Container>
           </Main>
         </div>

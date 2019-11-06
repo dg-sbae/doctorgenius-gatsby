@@ -241,12 +241,12 @@ const Company = data => {
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.searchResultsPage.childImageSharp.fluid}
-                    className="img-responsive"
+                    className={PageStyles.imgResponsive}
                     alt="Local Business Search Results Page"
                   />
                 </div>
                 <div className="col-sm-12 col-md-6">
-                  <div className="callout">
+                  <div className={PageStyles.callout}>
                     <InnerTitle
                       centered
                       title="Our "
@@ -254,7 +254,7 @@ const Company = data => {
                       boldText="Clients Average"
                     />
                     <div className={PageStyles.center}>
-                      <div className="callout-heading">
+                      <div className={PageStyles.calloutHeading}>
                         <sup>
                           Up
                           <br />
@@ -262,18 +262,24 @@ const Company = data => {
                         </sup>
                         <p>600%</p>
                       </div>
-                      <p className="text-accent">New Patient Inquiries</p>
-                      <p className="text-mute sub-text-accent">
+                      <p className={PageStyles.textAccent}>
+                        New Patient Inquiries
+                      </p>
+                      <p className={PageStyles.subTextAccent}>
                         12 Months Duration
                       </p>
-                      <div className="callout-link">
+                      <div className={PageStyles.calloutLink}>
                         <a
                           href="/our-clients"
-                          className="link-with-icon font-weight-semibold"
+                          className={
+                            PageStyles.fontWeightSemibold +
+                            " " +
+                            PageStyles.linkWithIcon
+                          }
                         >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           Learn More
@@ -331,7 +337,11 @@ const Company = data => {
                       inContentBlock
                     />
                     <div>
-                      <div className="accented-paragraph">
+                      <div
+                        className={
+                          PageStyles.accentedParagraph + " accented-paragraph"
+                        }
+                      >
                         <p>
                           We are based in Irvine, California, USA. Doctor Genius
                           has consistent 5 Star Ratings on Google+, and A Rated
@@ -342,11 +352,15 @@ const Company = data => {
                         </p>
                         <a
                           href="/demo"
-                          className="link-with-icon font-weight-semibold"
+                          className={
+                            PageStyles.fontWeightSemibold +
+                            " " +
+                            PageStyles.linkWithIcon
+                          }
                         >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           Contact Us
@@ -361,7 +375,7 @@ const Company = data => {
                       images.digitalMarketingPartnerShip.childImageSharp.fluid
                     }
                     alt="Digital Marketing Partnership"
-                    className="img-responsive"
+                    className={PageStyles.imgResponsive}
                   />
                 </div>
               </div>

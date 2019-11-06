@@ -7,12 +7,12 @@ import Img from "gatsby-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
 import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
-import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study-post.scss"
 import PageStyles from "./post.module.scss"
@@ -180,7 +180,11 @@ function PostPage({ pageContext, data, location }) {
                         </h1>
                       </div>
                       <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
-                        <div className={PageStyles.label + " label primary"}>
+                        <div
+                          className={
+                            PageStyles.label + " " + PageStyles.primary
+                          }
+                        >
                           <p>{mainCategory.name}</p>
                         </div>
                       </div>
@@ -230,7 +234,7 @@ function PostPage({ pageContext, data, location }) {
               <div className={RowStyles.row}>
                 <div className="col-lg-1" />
                 <div className="col-lg-10">
-                  <div className="spacer solid" />
+                  <div className={PageStyles.spacer + " " + PageStyles.solid} />
                 </div>
                 <div className="col-lg-1" />
               </div>
@@ -271,7 +275,7 @@ function PostPage({ pageContext, data, location }) {
                 />
                 <div className="full-bleed-content-wrapper">
                   {/* Begin Events component */}
-                  <div className={PageStyles.eventsSection + " events-section"}>
+                  <div className={PageStyles.eventsSection}>
                     <div
                       className={
                         RowStyles.row +
@@ -291,7 +295,15 @@ function PostPage({ pageContext, data, location }) {
                             </a>
                           </div>
                         </div>
-                        <div className="spacer solid small" />
+                        <div
+                          className={
+                            PageStyles.spacer +
+                            " " +
+                            PageStyles.small +
+                            " " +
+                            PageStyles.solid
+                          }
+                        />
                       </div>
                       {data.events.edges.map(({ node }) => (
                         <div className="col-lg-3">
@@ -314,44 +326,11 @@ function PostPage({ pageContext, data, location }) {
                 </div>
               </div>
               {/* Begin Demo Footer */}
-              <div
-                className={
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.tallTop +
-                  " request-demo-footer"
-                }
-              >
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5">
-                  <div className="content-block">
-                    <div>
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-9 col-md-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter
+                smWidth="9"
+                mdWidth="5"
+                contentBlockID={PageStyles.demoContentBlock}
+              />
               {/* End Demo Footer */}
             </Container>
           </Main>

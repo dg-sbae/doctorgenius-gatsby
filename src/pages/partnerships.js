@@ -9,8 +9,8 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import InnerTitle from "../components/inner-title.js"
 import Hero from "../components/Hero"
+import RequestDemoFooter from "../components/request-demo-footer"
 
-import thinArrowRight from "../img/right-arrow.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/partnerships.scss"
@@ -231,50 +231,11 @@ const Partnerships = data => {
               </div>
 
               {/* Begin Demo Footer */}
-              <div
-                className={
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.tallTop +
-                  " " +
-                  PageStyles.requestDemoFooter +
-                  " request-demo-footer"
-                }
-              >
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5">
-                  <div className={PageStyles.contentBlock + " content-block"}>
-                    <div>
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div
-                        className={
-                          PageStyles.accentedParagraph + " accented-paragraph"
-                        }
-                      >
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-9 col-md-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter
+                smWidth="9"
+                rowID={PageStyles.demoRow}
+                buttonID={PageStyles.demoButton}
+              />
               {/* End Demo Footer */}
 
               <div
@@ -308,11 +269,11 @@ const Partnerships = data => {
                         </p>
                         <a
                           href="/demo"
-                          className="link-with-icon font-weight-semibold"
+                          className={PageStyles.fontWeightSemibold}
                         >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           Contact Us
@@ -328,7 +289,7 @@ const Partnerships = data => {
                         .fluid
                     }
                     alt="Digital Marketing Partnership"
-                    className="img-responsive"
+                    className={PageStyles.imgResponsive}
                   />
                 </div>
               </div>

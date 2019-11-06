@@ -69,13 +69,6 @@
       }
     }
   }
-  .requestDemoFooter {
-    > div {
-      @include media("<=tablet") {
-        padding-bottom: 30px;
-      }
-    }
-  }
 
   .featuredPartnersRow {
     .fullWidthRow {
@@ -139,5 +132,32 @@
     font-size: $h3-font-size;
     color: $primary;
     font-weight: $font-weight-semibold;
+  }
+
+  #demoRow {
+    margin-bottom: $m1 * 1.8;
+  }
+
+  #demoButton {
+    margin-top: $m1 * 2;
+  }
+
+  .fontWeightSemibold {
+    font-weight: $font-weight-semibold;
+  }
+
+  b {
+    font-weight: $font-weight-semibold;
+  }
+
+  .linkIcon {
+    margin-right: 10px;
+  }
+
+  .imgResponsive {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
   }
 }
