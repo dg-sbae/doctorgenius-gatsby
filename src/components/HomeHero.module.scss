@@ -152,6 +152,60 @@ $homepage-h1-font-size: $font-size-base * 4.881;
         }
       }
       @include media("<=laptop") {
+        .borderHorizontal {
+          width: 12px;
+          position: absolute;
+
+          &.borderTopLeft {
+            border-top: 3px solid #fff;
+            top: 0;
+            left: 0;
+          }
+
+          &.borderTopRight {
+            border-top: 3px solid #fff;
+            top: 0;
+            right: 0;
+          }
+
+          &.borderBottomLeft {
+            border-bottom: 3px solid #fff;
+            bottom: 0;
+            left: 0;
+          }
+
+          &.borderBottomRight {
+            border-bottom: 3px solid #fff;
+            bottom: 0;
+            right: 0;
+          }
+        }
+        .borderVertical {
+          height: 12px;
+          position: absolute;
+          &.borderLeftTop {
+            border-left: 3px solid #fff;
+            top: 0;
+            left: 0;
+          }
+          &.borderRightTop {
+            border-right: 3px solid #fff;
+            top: 0;
+            right: 0;
+          }
+          &.borderLeftBottom {
+            border-left: 3px solid #fff;
+            bottom: 0;
+            left: 0;
+          }
+          &.borderRightBottom {
+            border-right: 3px solid #fff;
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+      @include media("<=laptop") {
         padding: 1rem;
         .accentedParagraph {
           margin-left: 10px;
@@ -174,6 +228,7 @@ $homepage-h1-font-size: $font-size-base * 4.881;
       margin-left: 0;
       text-align: center;
       a {
+        text-decoration: none;
         text-transform: uppercase;
         background: #3dc93d;
         color: $primary-text;
@@ -204,7 +259,7 @@ $homepage-h1-font-size: $font-size-base * 4.881;
       @include media("<=laptop") {
         text-align: center;
         margin-left: auto;
-        margin-top: 10px;
+        margin-top: 30px;
         a {
           font-size: 12px;
         }
@@ -215,11 +270,12 @@ $homepage-h1-font-size: $font-size-base * 4.881;
       height: 350px;
     }
     @include media("<=laptop", ">tablet") {
-      margin-top: 30px;
+      margin-top: 40px;
       width: 400px;
     }
     @include media("<=tablet", ">phone") {
       max-width: 100%;
+      margin-top: 45px;
       width: 400px;
       //width: calc(50% + 100 * ((100vw - 375px) / 768));
       //width: calc(100% - 50 * ((100vw - 375px) / 768));
