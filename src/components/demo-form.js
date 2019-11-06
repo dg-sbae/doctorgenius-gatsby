@@ -126,7 +126,7 @@ class DemoForm extends React.Component {
 
   render() {
     return (
-      <div className={DemoFormStyles.formWrapper + " form-wrapper"}>
+      <div className={DemoFormStyles.formWrapper}>
         <form onSubmit={this.handleFormSubmit}>
           <div>
             <input

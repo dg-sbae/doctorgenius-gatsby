@@ -4,6 +4,13 @@
   /* Styles unique to this page component */
 
   /* Global styles - to this page */
+
+  .mainContent {
+    padding-bottom: 0;
+    @include media("<=425px") {
+      padding-bottom: 4px;
+    }
+  }
   .hero {
     height: auto;
     padding-top: 80px;
@@ -138,7 +145,7 @@
       padding-bottom: 0;
     }
     .mapHolder {
-      padding: 20px 0 0 0;
+      padding: 20px 0 0 0 !important;
       line-height: 1;
       margin-bottom: -5px;
     }
