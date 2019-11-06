@@ -21,7 +21,7 @@ class DG404Page extends React.Component {
     return (
       <div className={PageStyles.fourZeroFourPage + " " + RowStyles.rowStyling}>
         {pagePaths.length > 0 && (
-          <DefaultPageLayout location="the-study-post">
+          <DefaultPageLayout location="layout404">
             <div className={`${this.props["*"]} page-404`}>
               <BackgroundImage
                 fluid={data.heroBg.childImageSharp.fluid}
