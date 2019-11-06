@@ -22,7 +22,7 @@ export default props => (
         />
       </Helmet>
       <div className={props["*"]}>
-        <div className="main-content">
+        <div className={PageStyles.mainContent}>
           <div className={PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}
             <Container>
