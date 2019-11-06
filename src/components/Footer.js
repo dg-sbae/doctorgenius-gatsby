@@ -52,7 +52,7 @@ export default ({ children }) => (
         <div className="col-sm-12 col-lg-4">
           <img
             src={logoWhite}
-            className={FooterStyles.logo + " logo img-responsive"}
+            className={FooterStyles.logo + " " + FooterStyles.imgResponsive}
             alt="Our Logo"
           />
         </div>

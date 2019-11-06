@@ -260,7 +260,8 @@ export default ({ data }, props) => {
                   <img
                     className={
                       PageStyles.marketingDashboardLg +
-                      " img-responsive marketing-dashboard-lg"
+                      " " +
+                      PageStyles.imgResponsive
                     }
                     src={
                       images.homepageMarketingDashboard.childImageSharp.fixed
@@ -275,7 +276,8 @@ export default ({ data }, props) => {
                     }
                     className={
                       PageStyles.marketingDashboardSm +
-                      " img-responsive marketing-dashboard-sm"
+                      " " +
+                      PageStyles.imgResponsive
                     }
                     alt="Digital Marketing Dashboard"
                   />
@@ -308,9 +310,7 @@ export default ({ data }, props) => {
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.newPatientAcquisitions.childImageSharp.fluid}
-                    className={
-                      PageStyles.blurBleed + " img-responsive blur-bleed"
-                    }
+                    className={PageStyles.blurBleed}
                     alt="New Patient Acquisitions"
                   />
                 </div>
@@ -363,9 +363,7 @@ export default ({ data }, props) => {
                 <div className="col-sm-12 col-md-6 order-sm-1 order-md-2">
                   <Img
                     fluid={images.dgDifferent.childImageSharp.fluid}
-                    className={
-                      PageStyles.blurBleed + " img-responsive blur-bleed"
-                    }
+                    className={PageStyles.blurBleed}
                     alt="What makes Doctor Genius different?"
                   />
                 </div>
@@ -384,9 +382,7 @@ export default ({ data }, props) => {
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.dgClientSatisfaction.childImageSharp.fluid}
-                    className={
-                      PageStyles.blurBleed + " img-responsive blur-bleed"
-                    }
+                    className={PageStyles.blurBleed}
                     alt="Client Satisfaction"
                   />
                 </div>

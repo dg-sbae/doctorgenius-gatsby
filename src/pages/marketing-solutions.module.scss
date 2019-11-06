@@ -28,9 +28,17 @@
   .lighthouseImage {
     width: 110%;
     max-width: 110%;
+    margin: auto;
+    display: block;
     @include media("<laptop") {
       width: 100%;
     }
+  }
+
+  .portalDashboard {
+    max-width: 100%;
+    margin: auto;
+    display: block;
   }
 
   .toolsYouNeed {
@@ -61,5 +69,29 @@
 
   .linkIcon {
     margin-right: 10px;
+  }
+
+  /*
+  * Some images from the deisgn have a blurred shadow/background
+  * which makes the actual width larger than the dimensions appear.
+  * This lets them bleed slightly out of their column space to
+  * accomodate. 125% is a just a rough guess
+  */
+  .oddRow {
+    .blurBleed {
+      //transform: translateX(-12.5%);
+      transform: translateX(-6%);
+      @include media("<laptop") {
+        transform: translateX(0%);
+      }
+    }
+  }
+  .evenRow {
+    .blurBleed {
+      transform: translateX(6%);
+      @include media("<laptop") {
+        transform: translateX(0%);
+      }
+    }
   }
 }

@@ -248,7 +248,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                         <img
                           src={category.image}
                           alt={category.name}
-                          className="img-responsive"
+                          className={PageStyles.imgResponsive}
                         />
                         <div
                           className={

@@ -147,7 +147,7 @@ export default props => {
                     }
                   >
                     <img
-                      className={PageStyles.imgResponsive + " img-responsive"}
+                      className={PageStyles.imgResponsive}
                       src={row.image.url}
                       alt={row.image.alt}
                     />

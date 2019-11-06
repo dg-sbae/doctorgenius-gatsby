@@ -42,35 +42,3 @@
     margin-bottom: $content-block-heading-margin;
   }
 }
-
-/*
-* Some images from the deisgn have a blurred shadow/background
-* which makes the actual width larger than the dimensions appear.
-* This lets them bleed slightly out of their column space to
-* accomodate. 125% is a just a rough guess
-*/
-.img-responsive.blur-bleed {
-  width: 115%;
-  transform: translateX(-6%);
-  @include media("<laptop") {
-    width: 100%;
-    transform: translateX(0%);
-  }
-}
-.odd-row {
-  .img-responsive.blur-bleed {
-    //transform: translateX(-12.5%);
-    transform: translateX(-6%);
-    @include media("<laptop") {
-      transform: translateX(0%);
-    }
-  }
-}
-.even-row {
-  .img-responsive.blur-bleed {
-    transform: translateX(6%);
-    @include media("<laptop") {
-      transform: translateX(0%);
-    }
-  }
-}

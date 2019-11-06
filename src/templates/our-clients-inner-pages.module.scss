@@ -264,4 +264,16 @@
       margin-bottom: 1rem;
     }
   }
+
+  .imgResponsive {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    width: 115%;
+    transform: translateX(-6%);
+    @include media("<laptop") {
+      width: 100%;
+      transform: translateX(0%);
+    }
+  }
 }

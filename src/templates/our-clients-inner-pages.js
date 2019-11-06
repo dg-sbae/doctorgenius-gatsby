@@ -238,7 +238,7 @@ export default props => {
                   >
                     <Img
                       fluid={caseStudyImage}
-                      className="img-responsive blur-bleed"
+                      className={PageStyles.imgResponsive}
                       alt="Local Business Search Results Page"
                     />
                   </div>

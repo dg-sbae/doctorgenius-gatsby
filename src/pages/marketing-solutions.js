@@ -92,7 +92,8 @@ const MarketingSolutions = data => {
                   RowStyles.shortTop +
                   " " +
                   RowStyles.shortBottom +
-                  " odd-row proven-results-row"
+                  " " +
+                  PageStyles.oddRow
                 }
               >
                 <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
@@ -132,8 +133,7 @@ const MarketingSolutions = data => {
                     }
                     alt="Ligthhouse Page Speed Score"
                     className={
-                      PageStyles.lighthouseImage +
-                      " img-responsive blur-bleed lighthouse-image"
+                      PageStyles.lighthouseImage + " " + PageStyles.blurBleed
                     }
                   />
                 </div>
@@ -149,13 +149,16 @@ const MarketingSolutions = data => {
                   RowStyles.shortTop +
                   " " +
                   RowStyles.tallBottom +
-                  " even-row dashboard-row"
+                  " " +
+                  PageStyles.evenRow
                 }
               >
                 <div className="col-sm-10 col-md-6">
                   <Img
                     fluid={images.portalDashboard.childImageSharp.fluid}
-                    className="img-responsive blur-bleed"
+                    className={
+                      PageStyles.portalDashboard + " " + PageStyles.blurBleed
+                    }
                     alt="Our Client Dashboard"
                   />
                 </div>

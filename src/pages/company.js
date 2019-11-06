@@ -255,7 +255,7 @@ const Company = data => {
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.searchResultsPage.childImageSharp.fluid}
-                    className="img-responsive"
+                    className={PageStyles.imgResponsive}
                     alt="Local Business Search Results Page"
                   />
                 </div>
@@ -389,7 +389,7 @@ const Company = data => {
                       images.digitalMarketingPartnerShip.childImageSharp.fluid
                     }
                     alt="Digital Marketing Partnership"
-                    className="img-responsive"
+                    className={PageStyles.imgResponsive}
                   />
                 </div>
               </div>

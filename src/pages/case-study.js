@@ -88,7 +88,7 @@ const CaseStudy = data => {
                   }
                 >
                   <img
-                    className={PageStyles.imgResponsive + " img-responsive"}
+                    className={PageStyles.imgResponsive}
                     src={images.titanDentalLogo.childImageSharp.fixed.src}
                     alt="Titan Dental Care - Digital Marketing Client"
                   />
@@ -182,7 +182,7 @@ const CaseStudy = data => {
                 >
                   <Img
                     fluid={images.theChallengeImage.childImageSharp.fluid}
-                    className={PageStyles.imgResponsive + " img-responsive"}
+                    className={PageStyles.imgResponsive}
                     alt="Dental Office"
                   />
                 </div>
@@ -210,7 +210,7 @@ const CaseStudy = data => {
                 >
                   <img
                     className={
-                      PageStyles.imgResponsive + " img-responsive blur-bleed"
+                      PageStyles.imgResponsive + " " + PageStyles.blurBleed
                     }
                     src={images.theSolutionsImage.childImageSharp.fixed.src}
                     alt="Acquire New Patients"
@@ -412,7 +412,7 @@ const CaseStudy = data => {
                   <Img
                     fluid={images.searchResultsPage.childImageSharp.fluid}
                     className={
-                      PageStyles.imgResponsive + " img-responsive blur-bleed"
+                      PageStyles.imgResponsive + " " + PageStyles.blurBleedRight
                     }
                     alt="Local Business Search Results Page"
                   />

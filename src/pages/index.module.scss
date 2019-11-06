@@ -195,9 +195,18 @@ $homepage-h1-font-size: $font-size-base * 4.881;
     font-weight: $font-weight-light;
   }
 
+  /*
+  * Some images from the deisgn have a blurred shadow/background
+  * which makes the actual width larger than the dimensions appear.
+  * This lets them bleed slightly out of their column space to
+  * accomodate. 125% is a just a rough guess
+  */
   .blurBleed {
     /* homepage images are slightly larger, meaning they should bleed slightly less */
     max-width: 120%;
+    width: 115%;
+    margin: auto;
+    display: block;
     transform: translateX(-10%);
     @include media("<laptop") {
       width: 100%;
@@ -252,13 +261,19 @@ $homepage-h1-font-size: $font-size-base * 4.881;
     }
   }
 
-  .marketingDashboardLg {
+  .marketingDashboardLg.imgResponsive {
+    max-width: 100%;
+    margin: auto;
+    display: block;
     @include media("<=phone") {
       display: none;
     }
   }
 
-  .marketingDashboardSm {
+  .marketingDashboardSm.imgResponsive {
+    max-width: 100%;
+    margin: auto;
+    display: block;
     @include media(">phone") {
       display: none;
     }

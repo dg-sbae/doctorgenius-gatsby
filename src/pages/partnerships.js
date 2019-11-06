@@ -308,7 +308,7 @@ const Partnerships = data => {
                         .fluid
                     }
                     alt="Digital Marketing Partnership"
-                    className="img-responsive"
+                    className={PageStyles.imgResponsive}
                   />
                 </div>
               </div>
