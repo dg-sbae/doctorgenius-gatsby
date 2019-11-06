@@ -8,6 +8,7 @@ import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import SecondaryNavigation from "../components/SecondaryNavigation"
 import InnerTitle from "../components/inner-title.js"
+import Hero from "../components/Hero"
 
 import "../styles/marketing-solutions-inner.scss"
 import PageStyles from "./marketing-solutions-inner.module.scss"
@@ -23,7 +24,12 @@ export default props => {
   const contentRows = props.contentRows
   const heroBackgroundImage = props.backgroundImage
 
-  console.log(contentRows)
+  const heroConfig = {
+    pageType: "marketingSolutionsInner",
+    strapline: pageTitle,
+    title: pageSubtitle,
+    content: pageIntro,
+  }
 
   return (
     <div
@@ -38,27 +44,12 @@ export default props => {
         </Helmet>
         <div className={props.page + " marketing-solutions-inner"}>
           <BackgroundImage fluid={heroBackgroundImage}>
-            <div className="hero">
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className={RowStyles.row + " valign-wrapper"}>
-                  <div className="col-sm-12">
-                    <div
-                      className={
-                        PageStyles.heroContent + " hero-content accent-block"
-                      }
-                    >
-                      <h1>{pageTitle}</h1>
-                      <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
-                      <div className="accented-paragraph">
-                        <p>{pageIntro}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

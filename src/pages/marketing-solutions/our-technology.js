@@ -12,7 +12,10 @@ const OurTechnology = data => {
     <MarketingSolutionsTemplate
       page="our-technology" /* this should be dynamic from the page props */
       pageTitle="Our Technology"
-      pageSubtitle="<span>Extending your reach through our</span> marketing solutions"
+      pageSubtitle={[
+        <span>Extending your reach through our</span>,
+        " marketing solutions",
+      ]}
       pageIntro="We provide predictable, performance-driven and sustainable practice growth."
       metaTitle="New Patient Acquisition Marketing Platform | Extend Your Reach"
       metaDescription="Performance, Results, Excellence. Start acquiring the new patients your healthcare practice deserves with a mobile first conversion focused medical website."

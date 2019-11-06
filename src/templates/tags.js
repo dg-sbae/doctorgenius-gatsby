@@ -11,6 +11,7 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import NewsLetterSignUpForm from "../components/newsletter-form.js"
 import RequestDemoFooter from "../components/request-demo-footer"
+import Hero from "../components/Hero"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
@@ -21,6 +22,14 @@ import rightChevron from "../img/right-chevron.svg"
 import "../styles/the-study.scss"
 import PageStyles from "./tags.module.scss"
 import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  pageType: "theStudyPagination",
+  strapline: "Resources",
+  title: [<span>The</span>, " Study"],
+  content:
+    "Providing news and education on all things regarding Practice Management and Digital Marketing to help jumpstart your Practice.",
+}
 
 const ResponsivePostsColumnHeader = props => (
   <div
@@ -183,33 +192,12 @@ const TagsPage = ({ data, pageContext }) => {
 
         <div className="the-study">
           <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className={RowStyles.row + " valign-wrapper"}>
-                  <div className="col-sm-12">
-                    <div
-                      className={
-                        PageStyles.heroContent + " hero-content accent-block"
-                      }
-                    >
-                      <h1>Resources</h1>
-                      <h2>
-                        <span>The</span> Study
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          Providing news and education on all things regarding
-                          Practice Management and Digital Marketing to help
-                          jumpstart your Practice.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

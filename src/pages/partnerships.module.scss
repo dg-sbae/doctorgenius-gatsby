@@ -2,17 +2,6 @@
 
 .partnershipsPage {
   /* Styles unique to this page component */
-  .hero {
-    h2 {
-      margin-bottom: 20px;
-    }
-    .heroContent {
-      @include media(">=tablet") {
-        width: 490px;
-        height: 300px;
-      }
-    }
-  }
   .panelRow {
     .logoPartnershipItem:nth-child(odd) {
       .panel {

@@ -6,10 +6,18 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import Hero from "../components/Hero"
 
 import "../styles/terms-of-service.scss"
 import PageStyles from "./termsofservice.module.scss"
 import RowStyles from '../components/Row.module.scss'
+
+const heroConfig = {
+  pageType: "termsOfService",
+  strapline: "Terms Of Service",
+  title: [<span>Terms </span>, "Of Service"],
+  content: ["Effective Date:", <br />, "October 26, 2018"],
+}
 
 const TermsOfService = data => {
   return (
@@ -23,28 +31,12 @@ const TermsOfService = data => {
         </Helmet>
         <div className={PageStyles.termsOfService + " termsofservice"}>
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiTos + " gbi-tos"}>
-          <div className={PageStyles.hero + " hero"}>
-            <Container>
-              <div className={RowStyles.row + " valign-wrapper"}>
-                <div className="col-sm-12">
-                  <div className={PageStyles.heroContent + " hero-content"}>
-                    <div className={PageStyles.heroContent + " hero-content accent-block"}>
-                      <h1>Terms Of Service</h1>
-                      <h2>
-                        <span>Terms </span>Of Service
-                      </h2>
-                      <div className={PageStyles.accentedParagraph + " accented-paragraph"}>
-                        <p>
-                          Effective Date:
-                          <br /> October 26, 2018
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Container>
-          </div>
+          <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

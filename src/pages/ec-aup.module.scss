@@ -13,20 +13,6 @@
   .gbiEcaup:after {
     background-position: initial !important;
   }
-  .hero {
-    .accentedParagraph {
-      p {
-        color: white;
-      }
-    }
-    .accentBlock {
-      width: 535px;
-      height: 271px;
-      @include media("<=tablet") {
-        width: auto;
-      }
-    }
-  }
   p {
     margin-bottom: 1.5rem;
     color: rgba(75, 75, 75, 1);

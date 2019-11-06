@@ -26,7 +26,7 @@ class DG500Page extends React.Component {
     return (
       <div className={PageStyles.fiveZeroFivePage + " " + RowStyles.rowStyling}>
         {pagePaths.length > 0 && (
-          <DefaultPageLayout location="the-study-post">
+          <DefaultPageLayout location="layout500">
             <div className={`${this.props["*"]} page-500`}>
               <BackgroundImage
                 fluid={data.heroBg.childImageSharp.fluid}

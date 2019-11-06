@@ -3,6 +3,8 @@
 .container {
   @include media(">=desktop") {
     max-width: 1248px;
+    padding-right: 37.5px;
+    padding-left: 37.5px;
   }
 }
 

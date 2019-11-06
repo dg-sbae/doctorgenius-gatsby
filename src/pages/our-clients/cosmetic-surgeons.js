@@ -9,7 +9,11 @@ const CosmeticSurgeonInnerPage = data => {
     <OurClientsInnerPages
       page="cosmetic-surgeons" /* this should be dynamic from the page props */
       pageTitle="Cosmetic Surgeons"
-      pageSubTitle="<span>Attract</span> More Patients <span>From the Internet</span>"
+      pageSubTitle={[
+        <span>Attract</span>,
+        " More Patients ",
+        <span>From the Internet</span>,
+      ]}
       pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
       caseStudy={false}
       metaTitle="Cosmetic Surgeon Website Development & Marketing | Increase Your Patient Base"

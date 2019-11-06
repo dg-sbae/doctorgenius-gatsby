@@ -2,20 +2,6 @@
 
 .marketingSolutionsPage {
   /* Styles unique to this page component */
-  .hero {
-    @include media("<=tablet") {
-      background-position: 84% 50%;
-    }
-    .heroContent {
-      @include media(">=tablet") {
-        width: 490px;
-        height: 295px;
-        p {
-          width: 90%;
-        }
-      }
-    }
-  }
 
   .checkPlansBackgroundImage {
     height: 475px;

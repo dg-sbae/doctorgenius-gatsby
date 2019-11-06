@@ -86,7 +86,7 @@ function PostPage({ pageContext, data, location }) {
 
   return (
     <div className={PageStyles.blogPostPage + " " + RowStyles.rowStyling}>
-      <DefaultPageLayout location="the-study-post">
+      <DefaultPageLayout location="theStudyPost">
         {// Meta description for Genius Lab category post
         mainCategory.name === "Genius Lab" && (
           <Helmet>

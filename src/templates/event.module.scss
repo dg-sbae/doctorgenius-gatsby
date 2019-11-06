@@ -3,6 +3,25 @@
 .eventDetailPage {
   .hero {
     background-position: center 18%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    &:after {
+      display: block;
+      content: "";
+      background: #e7ecf1;
+      height: 4px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      @include media("<laptop") {
+        height: 0;
+      }
+    }
     .heroOverlay {
       height: 690px;
       width: 100%;

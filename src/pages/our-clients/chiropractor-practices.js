@@ -9,7 +9,10 @@ const ChiropractorInnerPage = data => {
     <OurClientsInnerPages
       page="chiropractor-practices" /* this should be dynamic from the page props */
       pageTitle="Chiropractor Practices"
-      pageSubTitle="<span>Stretch Your Online Reach for</span> More Patients to your Practice"
+      pageSubTitle={[
+        <span>Stretch Your Online Reach for</span>,
+        " More Patients to your Practice",
+      ]}
       pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
       caseStudy={false}
       metaTitle="Marketing for Chiropractors | Chiropractic Website Development & Marketing"
