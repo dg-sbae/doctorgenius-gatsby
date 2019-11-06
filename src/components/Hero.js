@@ -14,7 +14,11 @@ class Hero extends React.Component {
 
   render() {
     return (
-      <div className={HeroStyles.hero + " hero"}>
+      <div
+        className={
+          HeroStyles.hero + " " + HeroStyles[this.props.pageType] + " hero"
+        }
+      >
         {/* Hero will be a layout component */}
 
         <Container>
@@ -28,19 +32,14 @@ class Hero extends React.Component {
                   " hero-content accent-block"
                 }
               >
-                <h1>Marketing Solutions</h1>
-                <h2>
-                  <span>Predictable</span> Practice Growth Solution
-                </h2>
+                <h1>{this.props.strapline}</h1>
+                <h2>{this.props.title}</h2>
                 <div
                   className={
                     HeroStyles.accentedParagraph + " accented-paragraph"
                   }
                 >
-                  <p>
-                    Proven and innovative solutions to move your business
-                    forward.
-                  </p>
+                  <p>{this.props.content}</p>
                 </div>
               </div>
             </div>

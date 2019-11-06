@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
+import Container from "../components/Container"
 import "../styles/404.scss"
 import PageStyles from "./404.module.scss"
 import RowStyles from "../components/Row.module.scss"
@@ -29,7 +30,7 @@ class DG404Page extends React.Component {
                 <div className={PageStyles.hero + " hero"}>
                   {/* Hero will be a layout component */}
 
-                  <div className={PageStyles.riseUp + " container-fluid"}>
+                  <Container>
                     <div className={RowStyles.row + " valign-wrapper"}>
                       <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                         <div className={RowStyles.row}>
@@ -45,7 +46,6 @@ class DG404Page extends React.Component {
                               <Link to="/">Return to homepage</Link>
                             </p>
                             <div className={RowStyles.row}>
-                              >
                               <div
                                 className={
                                   PageStyles.sm404 +
@@ -95,7 +95,7 @@ class DG404Page extends React.Component {
                       </div>
                       <div className="col-sm-6" />
                     </div>
-                  </div>
+                  </Container>
                 </div>
               </BackgroundImage>
               {/*<Main>

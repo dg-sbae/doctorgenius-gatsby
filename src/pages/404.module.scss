@@ -3,6 +3,14 @@
 .fourZeroFourPage {
   .hero {
     height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 55% 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
     h1 {
       color: #0086d6;
       font-size: 12em;

@@ -1,20 +1,6 @@
 @import "../styles/_site-variables.scss";
 
 .caseStudyPage {
-  .hero {
-    .accentBlock {
-      @include media(">=tablet") {
-        width: 470px;
-        height: 271px;
-      }
-      h2 {
-        @include fluid-type(38px, 45px, $phone, $desktop);
-        @include media(">=tablet") {
-          margin-top: 20px;
-        }
-      }
-    }
-  }
   .Panel {
     display: flex;
     flex-direction: column;

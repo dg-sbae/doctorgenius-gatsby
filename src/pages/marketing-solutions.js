@@ -19,6 +19,13 @@ import "../styles/marketing-solutions.scss"
 import PageStyles from "./marketing-solutions.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
+const heroConfig = {
+  pageType: "marketingSolutions",
+  strapline: "Marketing Solutions",
+  title: [<span>Predictable </span>, " Practice Growth Solution"],
+  content: "Proven and innovative solutions to move your business forward.",
+}
+
 const MarketingSolutions = data => {
   const images = data.data
   return (
@@ -38,7 +45,12 @@ const MarketingSolutions = data => {
         </Helmet>
         <div className="marketing-solutions">
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <Hero />
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

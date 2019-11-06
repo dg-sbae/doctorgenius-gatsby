@@ -2,19 +2,6 @@
 
 .companyPage {
   /* Styles unique to this page component */
-  .hero {
-    h2 {
-      margin-bottom: 20px;
-    }
-    .heroContent {
-      @include media(">=tablet") {
-        width: 514px;
-        height: 280px;
-        margin-top: 90px;
-      }
-    }
-  }
-
   .letsTalkPartnership > div {
     margin-top: 50px;
   }

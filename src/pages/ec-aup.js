@@ -6,11 +6,19 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import Hero from "../components/Hero"
 import { Link } from "gatsby"
 
 import "../styles/ec-aup.scss"
 import PageStyles from "./ec-aup.module.scss"
 import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  pageType: "ecAup",
+  strapline: "EC AUP",
+  title: [<span>Electronic Communications and</span>, " Acceptable Use Policy"],
+  content: ["Effective Date:", <br />, " October 26, 2018"],
+}
 
 const EcAup = data => {
   return (
@@ -26,39 +34,12 @@ const EcAup = data => {
             fluid={data.data.heroBg.childImageSharp.fluid}
             className={PageStyles.gbiEcaup + " gbi-ecaup"}
           >
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-              <Container>
-                <div className={RowStyles.row + " valign-wrapper"}>
-                  <div className="col-sm-12">
-                    <div className="hero-content">
-                      <div
-                        className={
-                          PageStyles.accentBlock + " hero-content accent-block"
-                        }
-                      >
-                        <h1>EC AUP</h1>
-                        <h2>
-                          <span>Electronic Communications and</span> Acceptable
-                          Use Policy
-                        </h2>
-                        <div
-                          className={
-                            PageStyles.accentedParagraph + " accented-paragraph"
-                          }
-                        >
-                          <p>
-                            Effective Date:
-                            <br /> October 26, 2018
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6" />
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

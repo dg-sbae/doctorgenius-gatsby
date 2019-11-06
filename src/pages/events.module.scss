@@ -4,6 +4,26 @@
   /* Styles unique to this page component */
   .hero {
     background-position: center 18%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 55% 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    &:after {
+      display: block;
+      content: "";
+      background: #e7ecf1;
+      height: 4px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      @include media("<laptop") {
+        height: 0;
+      }
+    }
     .heroOverlay {
       height: 690px;
       width: 100%;
@@ -422,6 +442,9 @@
       .dgCategoryHolder {
         text-align: center;
         margin: $pad * 2 0;
+      }
+      .ctaBtns {
+        margin: 45px 0 30px;
       }
       .dgCategoryHolder {
         margin-top: $m1 * 2.5;

@@ -9,6 +9,7 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
 import InnerTitle from "../components/inner-title"
+import Hero from "../components/Hero"
 
 import logoBlue from "../img/icon/logo-blue.svg"
 import webIcon from "../img/icon/web.svg"
@@ -23,6 +24,14 @@ import RowStyles from "../components/Row.module.scss"
 
 const Company = data => {
   const images = data.data
+
+  const heroConfig = {
+    strapline: "Doctor Genius",
+    title: [<span>What </span>, " we are about"],
+    content:
+      "Doctor Genius establishes and boosts your brand online using innovative digital marketing and search engine optimization strategies.",
+  }
+
   const testimonialContent = [
     {
       cardContent: {
@@ -89,35 +98,12 @@ const Company = data => {
         </Helmet>
         <div className="company">
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className={RowStyles.row + " valign-wrapper"}>
-                  <div className="col-sm-12">
-                    <div className={PageStyles.heroContent + " hero-content"}>
-                      <div
-                        className={
-                          PageStyles.heroContent + " hero-content accent-block"
-                        }
-                      >
-                        <h1>Doctor Genius</h1>
-                        <h2>
-                          <span>What </span>we are about
-                        </h2>
-                        <div className="accented-paragraph">
-                          <p>
-                            Doctor Genius establishes and boosts your brand
-                            online using innovative digital marketing and search
-                            engine optimization strategies.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType="company"
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

@@ -8,6 +8,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import InnerTitle from "../components/inner-title"
+import Hero from "../components/Hero"
 
 import PageStyles from "./case-study.module.scss"
 import RowStyles from "../components/Row.module.scss"
@@ -17,6 +18,13 @@ import newPatientOppIcon from "../img/icon/new-patient-opportunity.svg"
 import marketingSolutionsIcon from "../img/icon/marketing-solutions-suite.svg"
 import liveSupportIcon from "../img/icon/live-support-concierge.svg"
 import performanceCampaignIcon from "../img/icon/performance-driven-campaigns.svg"
+
+const heroConfig = {
+  strapline: "Case Study",
+  title: [<span>Challenge </span>, " Accepted"],
+  content:
+    "The problem, the answer, and the outcome. Doctor Genius’ performance driven marketing platform in action.",
+}
 
 const CaseStudy = data => {
   const images = data.data
@@ -35,35 +43,12 @@ const CaseStudy = data => {
         </Helmet>
         <div>
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className={RowStyles.row + " valign-wrapper"}>
-                  <div className="col-sm-12">
-                    <div className="hero-content">
-                      <div
-                        className={
-                          PageStyles.accentBlock + " hero-content accent-block"
-                        }
-                      >
-                        <h1>Case Study</h1>
-                        <h2>
-                          <span>Challenge</span> Accepted
-                        </h2>
-                        <div className="accented-paragraph">
-                          <p>
-                            The problem, the answer, and the outcome. Doctor
-                            Genius’ performance driven marketing platform in
-                            action.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType="caseStudy"
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

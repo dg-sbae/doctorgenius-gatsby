@@ -10,6 +10,7 @@ import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import InnerTitle from "../components/inner-title.js"
+import Hero from "../components/Hero"
 
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
@@ -39,6 +40,13 @@ export default props => {
     backgroundPosition: "40%",
   }
 
+  const heroConfig = {
+    pageType: "ourClientsInner",
+    strapline: pageTitle,
+    title: pageSubtitle,
+    content: pageIntro,
+  }
+
   return (
     <div
       className={PageStyles.ourClientsInnerPage + " " + RowStyles.rowStyling}
@@ -50,31 +58,12 @@ export default props => {
         </Helmet>
         <div className={"our-clients-inner " + currentPage}>
           <BackgroundImage fluid={backgroundImage}>
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className={RowStyles.row + " valign-wrapper"}>
-                  <div className="col-sm-12">
-                    <div
-                      className={
-                        PageStyles.heroContent + " hero-content accent-block"
-                      }
-                    >
-                      <h1>{pageTitle}</h1>
-                      <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
-                      <div
-                        className={
-                          PageStyles.accentedParagraph + " accented-paragraph"
-                        }
-                      >
-                        <p>{pageIntro}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

@@ -7,10 +7,18 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import InnerTitle from "../components/inner-title.js"
+import Hero from "../components/Hero"
 
 import "../styles/privacy-policy.scss"
 import PageStyles from "./privacy-policy.module.scss"
 import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  pageType: "privacyPolicy",
+  strapline: "Privacy Policy",
+  title: [<span>Our Privacy </span>, "Policy"],
+  content: ["Effective Date:", <br />, "October 26, 2018"],
+}
 
 const PrivacyPolicy = data => {
   return (
@@ -28,33 +36,12 @@ const PrivacyPolicy = data => {
             fluid={data.data.heroBg.childImageSharp.fluid}
             className={PageStyles.gbiPrivacyPolicy + ` gbi-privacy-policy`}
           >
-            <div className="hero">
-              <Container>
-                <div className={RowStyles.row + " valign-wrapper"}>
-                  <div className="col-sm-6">
-                    <div className="hero-content">
-                      <div className="hero-content accent-block">
-                        <h1>Privacy Policy</h1>
-                        <h2>
-                          <span>Our Privacy </span>Policy
-                        </h2>
-                        <div
-                          className={
-                            PageStyles.accentedParagraph + " accented-paragraph"
-                          }
-                        >
-                          <p>
-                            Effective Date:
-                            <br /> October 26, 2018
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6" />
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

@@ -9,6 +9,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import InnerTitle from "../components/inner-title.js"
+import HomeHero from "../components/HomeHero"
 
 import "../styles/homepage.scss"
 import PageStyles from "./index.module.scss"
@@ -34,104 +35,7 @@ export default ({ data }, props) => {
         <SEO page="homepage" />
         <div className={"homepage"}>
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-              <Container>
-                <div className={RowStyles.row}>
-                  <div className="col-sm-12">
-                    <div className={PageStyles.heroContent + " hero-content"}>
-                      <div className={PageStyles.accentBlock + " accent-block"}>
-                        <div
-                          className={
-                            PageStyles.borderHorizontal +
-                            " " +
-                            PageStyles.borderTopLeft +
-                            " border-horizontal border-top-left"
-                          }
-                        />
-                        <div
-                          className={
-                            PageStyles.borderHorizontal +
-                            " " +
-                            PageStyles.borderTopRight +
-                            " border-horizontal border-top-right"
-                          }
-                        />
-                        <div
-                          className={
-                            PageStyles.borderHorizontal +
-                            " " +
-                            PageStyles.borderBottomLeft +
-                            " border-horizontal border-bottom-left"
-                          }
-                        />
-                        <div
-                          className={
-                            PageStyles.borderHorizontal +
-                            " " +
-                            PageStyles.borderBottomRight +
-                            " border-horizontal border-bottom-right"
-                          }
-                        />
-                        <div
-                          className={
-                            PageStyles.borderVertical +
-                            " " +
-                            PageStyles.borderLeftTop +
-                            " border-vertical border-left-top"
-                          }
-                        />
-                        <div
-                          className={
-                            PageStyles.borderVertical +
-                            " " +
-                            PageStyles.borderRightTop +
-                            " border-vertical border-right-top"
-                          }
-                        />
-                        <div
-                          className={
-                            PageStyles.borderVertical +
-                            " " +
-                            PageStyles.borderLeftBottom +
-                            " border-vertical border-left-bottom"
-                          }
-                        />
-                        <div
-                          className={
-                            PageStyles.borderVertical +
-                            " " +
-                            PageStyles.borderRightBottom +
-                            " border-vertical border-right-bottom"
-                          }
-                        />
-                        <h1>
-                          <span>The Leader in</span> New Patient Acquisitions
-                        </h1>
-                        <div
-                          className={
-                            PageStyles.accentedParagraph + " accented-paragraph"
-                          }
-                        >
-                          <p>
-                            Doctor Genius offers high-end web marketing services
-                            to health care professionals throughout the United
-                            States. Learn how we funnel traffic to converted
-                            patients directly to your practice.
-                          </p>
-                        </div>
-                      </div>
-                      <div className={PageStyles.demoCta + " demo-cta"}>
-                        <a href="/demo" className="button flat white-text">
-                          Request Demo{" "}
-                          <img src={thinArrowRight} alt="Arrow Right" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <HomeHero />
           </BackgroundImage>
           <Main>
             <Container>

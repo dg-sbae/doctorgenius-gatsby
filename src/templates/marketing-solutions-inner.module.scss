@@ -1,16 +1,6 @@
 @import "../styles/_site-variables.scss";
 
 .marketingSolutionsInnerPage {
-  .heroContent {
-    @include media(">=tablet") {
-      width: 492px;
-      height: 330px;
-      p {
-        width: 90%;
-      }
-    }
-  }
-
   .iconStrapline {
     img {
       max-width: 25px;

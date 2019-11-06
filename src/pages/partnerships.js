@@ -8,6 +8,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import InnerTitle from "../components/inner-title.js"
+import Hero from "../components/Hero"
 
 import thinArrowRight from "../img/right-arrow.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
@@ -15,6 +16,14 @@ import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 import "../styles/partnerships.scss"
 import PageStyles from "./partnerships.module.scss"
 import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  pageType: "partnerships",
+  strapline: "Partnerships",
+  title: [<span>Being Partners With Us </span>, "makes it more possible"],
+  content:
+    "Explore opportunities to establish a value-added partnership with an organization whose central focus is success.",
+}
 
 const Partnerships = data => {
   const images = data.data
@@ -32,40 +41,12 @@ const Partnerships = data => {
         </Helmet>
         <div className="partnerships">
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className={RowStyles.row + " valign-wrapper"}>
-                  <div className="col-sm-12">
-                    <div className={PageStyles.heroContent + " hero-content"}>
-                      <div
-                        className={
-                          PageStyles.heroContent + " hero-content accent-block"
-                        }
-                      >
-                        <h1>Partnerships</h1>
-                        <h2>
-                          <span>Being Partners With Us </span>makes it more
-                          possible
-                        </h2>
-                        <div
-                          className={
-                            PageStyles.accentedParagraph + " accented-paragraph"
-                          }
-                        >
-                          <p>
-                            Explore opportunities to establish a value-added
-                            partnership with an organization whose central focus
-                            is success.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>

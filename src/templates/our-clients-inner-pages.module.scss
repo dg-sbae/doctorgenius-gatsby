@@ -1,28 +1,6 @@
 @import "../styles/_site-variables.scss";
 
 .ourClientsInnerPage {
-  .hero {
-    .heroContent {
-      @include media(">tablet") {
-        margin-top: 50px;
-        width: 630px;
-        height: 330px;
-      }
-      @include media("<=tablet") {
-        width: 400px;
-        height: auto;
-      }
-    }
-    h1 {
-      padding: 2px 12px;
-    }
-    h2 {
-      margin-top: 10px;
-    }
-    .accentedParagraph {
-      width: 100%;
-    }
-  }
   .thinHeading {
     padding-left: 20%;
     padding-right: 20%;

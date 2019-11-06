@@ -5,28 +5,6 @@ $font-size-plans-row-heading: $font-size-base * 0.8125;
 
 .plansPage {
   /* Styles unique to this page component */
-  .hero {
-    background-position: center 18%;
-    height: 650px;
-
-    .heroContent {
-      width: 625px;
-      height: 344px;
-      padding: 2.8rem;
-      p {
-        width: 85%;
-      }
-      @include media("<laptop") {
-        width: 400px;
-        height: auto;
-        padding: 1.5rem;
-        p {
-          width: 100%;
-        }
-      }
-    }
-  }
-
   .imageRow {
     .backgroundHolder {
       width: 100%;
