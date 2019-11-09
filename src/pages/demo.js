@@ -108,7 +108,7 @@ const DemoPage = data => {
                     <div className="plan-details">
                       <div className="title">
                         <h3>Platinum Plan</h3>
-                        <p>Maximize Your Pratice Potential</p>
+                        <p>Maximize Your Practice Potential</p>
                       </div>
                       <div className="stripe" />
                       <div className="details">
