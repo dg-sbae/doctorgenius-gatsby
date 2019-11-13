@@ -166,8 +166,8 @@ const EventPage = ({ data }) => {
                 className="card-img-top"
                 src={
                   event.node.all_image_urls.featured_image_url_large != null
-                    ? event.node.all_image_urls.featured_image_url_large
-                        .source_url
+                    ? event.node.featured_media.localFile.childImageSharp.fluid
+                        .src
                     : defaultUpcomingEventImage
                 }
                 alt="Upcoming Event"
@@ -184,7 +184,7 @@ const EventPage = ({ data }) => {
                 </p>
                 <a
                   className="button flat transparent event-more-info-btn"
-                  href={event.node.slug}
+                  href={`/events/` + event.node.slug}
                 >
                   + More Info
                 </a>
@@ -585,7 +585,7 @@ export const pageQuery = graphql`
     }
 
     upcoming_events: allWordpressWpEvents(
-      filter: { event_date: { gt: "2019-08-26" }, featured_event: { eq: "0" } }
+      filter: { event_date: { gt: "2019-11-13" }, featured_event: { eq: "0" } }
       limit: 4
     ) {
       edges {
@@ -596,7 +596,7 @@ export const pageQuery = graphql`
     }
 
     past_events: allWordpressWpEvents(
-      filter: { event_date: { lt: "2019-08-26" }, featured_event: { eq: "0" } }
+      filter: { event_date: { lt: "2019-11-13" }, featured_event: { eq: "0" } }
       limit: 4
     ) {
       edges {

@@ -267,7 +267,7 @@ export const siteFragments = graphql`
         localFile {
           childImageSharp {
             fluid(maxWidth: 2201) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -286,7 +286,7 @@ export const siteFragments = graphql`
       localFile {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
