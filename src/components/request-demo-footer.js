@@ -26,6 +26,8 @@ const requestDemoFooter = ({
           " " +
           RowStyles.tallTop +
           " " +
+          RowStyles.tallBottom +
+          " " +
           requestDemoFooterStyles.requestDemoFooterStyling
         }
       >
