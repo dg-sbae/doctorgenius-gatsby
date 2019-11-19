@@ -182,12 +182,12 @@ const EventPage = ({ data }) => {
                 <p className="card-event-date">
                   {format_date_long(event.node.event_date)}
                 </p>
-                <a
+                <Link
                   className="button flat transparent event-more-info-btn"
-                  href={`/events/` + event.node.slug}
+                  to={`/events/` + event.node.slug}
                 >
                   + More Info
-                </a>
+                </Link>
               </div>
             </div>
           </div>

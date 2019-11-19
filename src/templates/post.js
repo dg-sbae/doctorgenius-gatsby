@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import EventsTeaser from "../components/eventsTeaser"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
@@ -63,26 +64,6 @@ function PostPage({ pageContext, data, location }) {
   const nextPost = pageContext.nextNode
     ? "/blog/" + pageContext.nextNode.slug
     : null
-  /*
-  let testIntro = content.slice(1, 2)
-  console.log(content, testIntro, testIntro)
-  let start = 1
-  let end = 2
-  while (
-    testIntro[start] === "<p></p>" ||
-    testIntro[start] === "<p>&nbsp;</p>" ||
-    testIntro[start] === ""
-  ) {
-    console.log("test intro" + testIntro)
-    start++
-    testIntro = content.slice(start + 1, start + 2)
-  }
-  //const intro = content.slice(1, 2).join()
-  const intro = testIntro
-  const remainder = content.slice(2).join("")
-
-
-  */
 
   return (
     <DefaultPageLayout location="the-study-post">
@@ -241,37 +222,7 @@ function PostPage({ pageContext, data, location }) {
             <div className="full-bleed-wrapper pad-md events">
               <div className="full-bleed grey-background" />
               <div className="full-bleed-content-wrapper">
-                {/* Begin Events component */}
-                <div className="events-section">
-                  <div className="row padded tall-top">
-                    <div className="col-lg-12">
-                      <div className="title-holder">
-                        <h4 className="blog-heading">Webinars & Events</h4>
-                        <div className="more-events">
-                          <a href="/intentional-404/MoreEvents">
-                            View More
-                            <img src={rightChevron} alt="View More Events" />
-                          </a>
-                        </div>
-                      </div>
-                      <div className="spacer solid small" />
-                    </div>
-                    {data.events.edges.map(({ node }) => (
-                      <div className="col-lg-3">
-                        <div className="event-wrapper">
-                          <Img
-                            fluid={data.eventsPlaceholder.childImageSharp.fluid}
-                            alt="Recent Event"
-                          />
-                        </div>
-                        <a href={node.link}>
-                          <p>{he.decode(node.title)}</p>
-                        </a>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                {/* End Events component */}
+                <EventsTeaser />
               </div>
             </div>
             {/* Begin Demo Footer */}
@@ -324,25 +275,6 @@ export const pageQuery = graphql`
     }
     nextPost: wordpressPost(wordpress_id: { eq: $nextID }) {
       ...blogPost
-    }
-    events: allWordpressWpEvents(
-      sort: { fields: [date], order: [DESC] }
-      limit: 4
-    ) {
-      edges {
-        node {
-          ...recentEvent
-        }
-      }
-    }
-    eventsPlaceholder: file(
-      relativePath: { eq: "study-archive-events-placeholder-3x2.png" }
-    ) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
     }
   }
 `

@@ -10,6 +10,7 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import NewsLetterSignUpForm from "../components/newsletter-form.js"
+import EventsTeaser from "../components/eventsTeaser"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
@@ -198,10 +199,10 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
             <div className="row padded align-items-start short-top">
               <ResponsivePostsColumn>
                 <LatestPostsColumn>
-                  <h3 className="blog-heading d-sm-none d-lg-block">
+                  <h3 className="blog-heading d-sm-none d-md-block">
                     Latest Posts
                   </h3>
-                  <div className=" d-sm-none spacer small solid" />
+                  <div className=" d-sm-none d-md-block spacer small solid" />
 
                   {data.latest.edges.map(({ node }) => {
                     // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
@@ -417,37 +418,9 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                 </PopularPostsColumn>
               </ResponsivePostsColumn>
             </div>
-            {/* Begin Events component */}
-            <div className="events-section">
-              <div className="row padded tall-top">
-                <div className="col-sm-12">
-                  <div className="title-holder">
-                    <h4 className="blog-heading">Webinars & Events</h4>
-                    <div className="more-events">
-                      <a href="/intentional-404/MoreEvents">
-                        View More
-                        <img src={rightChevron} alt="View More Events" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="spacer solid small" />
-                </div>
-                {data.events.edges.map(({ node }) => (
-                  <div className="col-sm-3" key={node.title}>
-                    <div className="event-wrapper">
-                      <Img
-                        fluid={data.eventsPlaceholder.childImageSharp.fluid}
-                        alt="Recent Event"
-                      />
-                    </div>
-                    <a href={node.link}>
-                      <p>{he.decode(node.title)}</p>
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* End Events component */}
+
+            <EventsTeaser />
+
             <div className="row padded tall-top request-demo-footer">
               <div className="col-lg-1" />
               <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
