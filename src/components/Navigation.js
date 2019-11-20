@@ -749,7 +749,9 @@ const CompanyListLink = props => (
                   </div>
                   <div className="dropdown-content-block">
                     <span className="dropdown-content-title">Events</span>
-                    <p>Join us for a webinar, tradeshow, or in-person event.</p>
+                    <p>
+                      Stay up to date with Doctor Genius and all future events
+                    </p>
                   </div>
                 </div>
               </Link>

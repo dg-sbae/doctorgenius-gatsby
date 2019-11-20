@@ -353,12 +353,12 @@ const EventPage = ({ data }) => {
                           </a>
                         ))}
                       {featured_event.slug !== "" && (
-                        <a
+                        <Link
                           className="button flat transparent hero-more-info-btn"
-                          href={featured_event.slug}
+                          to={`/events/` + featured_event.slug}
                         >
                           + More Info
-                        </a>
+                        </Link>
                       )}
                     </div>
                   </div>
