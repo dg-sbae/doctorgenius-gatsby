@@ -315,7 +315,9 @@ const EventPage = ({ data }) => {
                     </span>
                   </div>
                   <div className="titles">
-                    <h1>{event_details.event_title}</h1>
+                    <h1 style={{ lineHeight: "1" }}>
+                      {event_details.event_title}
+                    </h1>
                     <h2>{event_details.event_subtitle}</h2>
                   </div>
                   <div

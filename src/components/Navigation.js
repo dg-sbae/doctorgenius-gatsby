@@ -25,6 +25,7 @@ import ourClients from "../img/icon/our-clients.svg"
 import plans from "../img/icon/pricing.svg"
 import company from "../img/icon/hotel.svg"
 import contactUs from "../img/icon/contact-us-white.svg"
+import eventsIcon from "../img/icon/events-icon.svg"
 import resources from "../img/icon/resources.svg"
 import freeDemo from "../img/icon/video-options.svg"
 import contact from "../img/icon/email.svg"
@@ -267,13 +268,18 @@ const CompanySideNavListLink = props => (
         <ListLink to="/company" activeClassName="active" partiallyActive={true}>
           About
         </ListLink>
-        {/* Hidden until the content for page is finalized */}
         <ListLink
           to="/partnerships"
           activeClassName="active"
           partiallyActive={true}
         >
           Partnerships
+        </ListLink>
+        <ListLink to="/contact" activeClassName="active" partiallyActive={true}>
+          Contact Us
+        </ListLink>
+        <ListLink to="/events" activeClassName="active" partiallyActive={true}>
+          Events
         </ListLink>
       </ul>
     </div>
@@ -731,11 +737,24 @@ const CompanyListLink = props => (
                 </div>
               </Link>
             </div>
-            <div className="col-sm-6">
-              <div className="dropdown-content-block">
-                <Link className="" to={props.to} />
-                <p />
-              </div>
+            <div className="col-sm-6 ">
+              <Link className="" to="/events">
+                <div className="dropdown-item-block">
+                  <div className="nav-icon-wrapper">
+                    <img
+                      className="image-icon"
+                      src={eventsIcon}
+                      alt="Events Page Icon"
+                    />
+                  </div>
+                  <div className="dropdown-content-block">
+                    <span className="dropdown-content-title">Events</span>
+                    <p>
+                      Stay up to date with Doctor Genius and all future events
+                    </p>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

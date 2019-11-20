@@ -74,6 +74,20 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-brotli`,
+      options: {
+        extensions: [`css`, `html`, `js`, `svg`],
+        path: "brotli",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-zopfli",
+      options: {
+        extensions: ["css", "html", "js", "svg"],
+        path: "gzip-zopfli",
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",

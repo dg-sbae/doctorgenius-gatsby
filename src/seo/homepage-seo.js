@@ -28,6 +28,8 @@ export default [
     '"ethicsPolicy": "Doctor Genius takes customer satisfaction very seriously, and our goal is to provide them with top-quality services and support. If we\'ve made a mistake, we own up to it, and do our best to rectify the issue. We offer what we believe to be fair prices, sustainable for practices both small and large, to help clients convert more patients and dominate their local competitive space. Get the tools you need to show patients why you should be their new go-to local practice.",' +
     '"alternateName": "Lake Forest, CA Local Business Search Optimization Solutions, Doctor Genius",' +
     '"url": "https://doctorgenius.com",' +
+    '"image": "https://doctorgenius.com/logo.png",' +
+    '"logo": "https://doctorgenius.com/logo.png",' +
     '"sameAs": [' +
     '"https://en.wikipedia.org/wiki/Local_search_engine_optimisation",' +
     '"https://goo.gl/maps/LFzTP3xHGTVy6xSb7",' +
@@ -68,6 +70,8 @@ export default [
     '"name": "Local Search Optimization Solutions",' +
     '"alternateName": "Lake Forest, CA Local Search Optimization Solutions, Doctor Genius",' +
     '"url": "https://doctorgenius.com",' +
+    '"image": "https://doctorgenius.com/logo.png",' +
+    '"logo": "https://doctorgenius.com/logo.png",' +
     '"priceRange": "$$",' +
     '"description": "At Doctor Genius, we strive to give our clients the best local business search solutions in the nation. We go the extra mile for our clients by keeping up with new data trends that other competitors may be neglecting. Structured data (like this) has become a hot topic in the search world, and we\'ve decided to pursue it to give our clients an edge on their local competitors, who may not have adopted this crucial digital asset. This is just one part of our strategy for you to convert more patients and dominate your local competitive space. Speak with one of our sales representatives to find out more about our services and why we think we should be your choice for local business search solutions.",' +
     '"hasMap": "https://goo.gl/maps/LFzTP3xHGTVy6xSb7",' +
