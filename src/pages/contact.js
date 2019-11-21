@@ -56,7 +56,7 @@ export default props => (
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.google.com/maps/dir//Doctor+Genius,+2121+Alton+Pkwy+%23150,+Irvine,+CA+92606/@33.6944898,-117.8412595,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80dcde9f23745717:0x9660a06c68c4bd1!2m2!1d-117.839795!2d33.69453!3e0"
+                    href="https://www.google.com/maps/place/Doctor+Genius/@33.6597509,-117.7001599,15.96z/data=!4m5!3m4!1s0x0:0x9660a06c68c4bd1!8m2!3d33.6595484!4d-117.6983904"
                   >
                     Get Directions
                   </a>
