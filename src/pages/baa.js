@@ -6,48 +6,34 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import Hero from "../components/Hero"
 import { Link } from "gatsby"
 
 import "../styles/baa.scss"
 import PageStyles from "./baa.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  strapline: "BAA",
+  title: [<span>Standard Business </span>, " Associate Agreement"],
+  content: ["Effective Date:", <br />, " October 26, 2018"]
+}
 
 const Baa = data => {
   return (
-    <div className={PageStyles.baaPage}>
+    <div className={PageStyles.baaPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="baa">
         <Helmet>
           <title>Standard Business Associate Agreement | Doctor Genius</title>
         </Helmet>
-        <div className="baa">
+        <div className={PageStyles.baa + " baa"}>
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiBaa + " gbi-baa"}>
-            <div className={PageStyles.hero + " hero"}>
-              <Container>
-            <div className="valign-wrapper row">
-              <div className="col-sm-12">
-                <div className="hero-content">
-                  <div className={PageStyles.accentBlock + " hero-content accent-block"}>
-                    <h1>BAA</h1>
-                    <h2>
-                      <span>Standard Business </span>
-                      Associate Agreement
-                    </h2>
-                    <div className={PageStyles.accentedParagraph + " accented-paragraph"}>
-                      <p>
-                        Effective Date:
-                        <br /> October 26, 2018
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-6" />
-            </div>
-          </Container>
-            </div>
+            <Hero pageType="baa" strapline={heroConfig.strapline} 
+            title={heroConfig.title} content={heroConfig.content} />
           </BackgroundImage>
           <Main>
             <Container>
-            <div className="row padded tall-top short-bottom">
+            <div className={RowStyles.row + " " + RowStyles.padded + " " + RowStyles.tallTop + " " + RowStyles.shortBottom}>
               <div className="col-sm-12 col-md-8">
                 <p>
                   This Standard Business Associate Agreement (or “BAA”) is entered
@@ -86,7 +72,7 @@ const Baa = data => {
                 </p>
               </div>
             </div>
-            <div className="row padded short-top short-bottom">
+            <div className={RowStyles.row + " " + RowStyles.padding + " " + RowStyles.shortTop + " " + RowStyles.shortBottom}>
               <div className="col-sm-11 col-md-8">
                 <div className="content-block">
                   <ol>

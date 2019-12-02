@@ -2,24 +2,16 @@
 
 .baaPage {
   /* Styles unique to this page component */
+  .baa {
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
   .gbiBaa:before,
   .gbiBaa:after {
     background-position: initial !important;
-  }
-
-  .hero {
-    .accentedParagraph {
-      p {
-        color: white;
-      }
-    }
-    .accentBlock {
-      width: 470px;
-      height: 271px;
-      @include media("<=tablet") {
-        width: auto;
-      }
-    }
   }
 
   p {
@@ -46,11 +38,6 @@
 
   h4 {
     font-size: 1.5rem;
-  }
-
-  li {
-    padding-top: 5px;
-    padding-bottom: 5px;
   }
 
   .underlined {

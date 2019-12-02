@@ -8,17 +8,20 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-// import InnerTitle from "../components/inner-title.js"
+import InnerTitle from "../components/inner-title.js"
+import HomeHero from "../components/HomeHero"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import "../styles/homepage.scss"
 import PageStyles from "./index.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 import thinArrowRight from "../img/right-arrow.svg"
 
 export default ({ data }, props) => {
   const images = data
   return (
-    <div className={PageStyles.indexPage}>
+    <div className={PageStyles.indexPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location={props["*"]}>
         <Helmet>
           <title>
@@ -33,108 +36,81 @@ export default ({ data }, props) => {
         <SEO page="homepage" />
         <div className={"homepage"}>
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className="hero">
-              {/* Hero will be a layout component */}
-              <Container>
-                <div className="row">
-                  <div className="col-sm-12">
-                    <div className="hero-content">
-                      <div className="accent-block">
-                        <div className="border-horizontal border-top-left" />
-                        <div className="border-horizontal border-top-right" />
-                        <div className="border-horizontal border-bottom-left" />
-                        <div className="border-horizontal border-bottom-right" />
-                        <div className="border-vertical border-left-top" />
-                        <div className="border-vertical border-right-top" />
-                        <div className="border-vertical border-left-bottom" />
-                        <div className="border-vertical border-right-bottom" />
-                        <h1>
-                          <span>The Leader in</span> New Patient Acquisitions
-                        </h1>
-                        <div className="accented-paragraph">
-                          <p>
-                            Doctor Genius offers high-end web marketing services
-                            to health care professionals throughout the United
-                            States. Learn how we funnel traffic to converted
-                            patients directly to your practice.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="demo-cta">
-                        <a href="/demo" className="button flat white-text">
-                          Request Demo{" "}
-                          <img src={thinArrowRight} alt="Arrow Right" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <HomeHero />
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded panel-row">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  PageStyles.panelRow
+                }
+              >
                 <div className="col-sm-10">
-                  <div className="header inner-title center">
-                    <h3 className="strapline">
-                      Performance, Results, Excellence
-                    </h3>
-                    <h2 className="underline">We Care About Your Success</h2>
-                  </div>
+                  <InnerTitle
+                    title="We Care About Your Success"
+                    underlined
+                    centered
+                    strapline="Performance, Results, Excellence"
+                  />
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className="panel">
-                    <div className="icon-wrapper">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.medal.childImageSharp.fixed}
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         alt="Increase in Google First-Page Results"
                       />
                     </div>
-                    <p className="panel-heading">1,125%</p>
-                    <p className="panel-body">
+                    <p className={PageStyles.panelHeading}>1,125%</p>
+                    <p className={PageStyles.panelBody}>
                       Increase in Google First-Page Results
                     </p>
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className="panel">
-                    <div className="icon-wrapper">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.money.childImageSharp.fixed}
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         alt="Increase in Revenue"
                       />
                     </div>
-                    <p className="panel-heading">100%</p>
-                    <p className="panel-body">Increase in Revenue!</p>
+                    <p className={PageStyles.panelHeading}>100%</p>
+                    <p className={PageStyles.panelBody}>Increase in Revenue!</p>
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className="panel">
-                    <div className="icon-wrapper">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.groupChat.childImageSharp.fixed}
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         alt="Increase in New Patient Calls"
                       />
                     </div>
-                    <p className="panel-heading">88%</p>
-                    <p className="panel-body">Increase in New Patient Calls!</p>
+                    <p className={PageStyles.panelHeading}>88%</p>
+                    <p className={PageStyles.panelBody}>
+                      Increase in New Patient Calls!
+                    </p>
                   </div>
                 </div>
                 <div className="col-sm-6 col-md-3">
-                  <div className="panel">
-                    <div className="icon-wrapper">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
                       <Img
                         fixed={images.stars.childImageSharp.fixed}
-                        className="img-icon"
+                        className={PageStyles.imgIcon}
                         alt="Icon of Stars"
                       />
                     </div>
-                    <p className="panel-heading">4+ Stars</p>
-                    <p className="panel-body">
+                    <p className={PageStyles.panelHeading}>4+ Stars</p>
+                    <p className={PageStyles.panelBody}>
                       We take pride in our{" "}
                       <a
                         href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
@@ -148,18 +124,16 @@ export default ({ data }, props) => {
                 </div>
               </div>
 
-              <div className="row padded">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-10">
-                  <div className="inner-title center">
-                    <h3 className="strapline">Built for Success</h3>
-                    <h2 className="underline font-weight-light">
-                      All-in-One
-                      <span className="font-weight-semibold">
-                        {" "}
-                        Marketing Dashboard
-                      </span>
-                    </h2>
-                  </div>
+                  <InnerTitle
+                    title="All-in-One "
+                    boldText="Marketing Dashboard"
+                    strapline="Built for Success"
+                    underlined
+                    centered
+                    id={PageStyles.lightTextAllInOne}
+                  />
                 </div>
                 <div className="col-sm-11 col-md-8 col-lg-6">
                   <div className="accented-paragraph">
@@ -175,11 +149,15 @@ export default ({ data }, props) => {
               </div>
             </Container>
 
-            <div className="row">
+            <div className={RowStyles.row}>
               <div className="col-12">
                 <center>
                   <img
-                    className="img-responsive marketing-dashboard-lg"
+                    className={
+                      PageStyles.marketingDashboardLg +
+                      " " +
+                      PageStyles.imgResponsive
+                    }
                     src={
                       images.homepageMarketingDashboard.childImageSharp.fixed
                         .src
@@ -191,7 +169,11 @@ export default ({ data }, props) => {
                       images.homepageMarketingDashboardMobile.childImageSharp
                         .fixed.src
                     }
-                    className="img-responsive marketing-dashboard-sm"
+                    className={
+                      PageStyles.marketingDashboardSm +
+                      " " +
+                      PageStyles.imgResponsive
+                    }
                     alt="Digital Marketing Dashboard"
                   />
                 </center>
@@ -199,34 +181,41 @@ export default ({ data }, props) => {
             </div>
 
             <Container>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-12">
-                  <div className="inner-title center">
-                    <h3 className="strapline">
-                      Setting the foundation for success
-                    </h3>
-                    <h2 className="underline font-weight-light">
-                      Why Choose
-                      <span className="font-weight-semibold">
-                        {" "}
-                        Doctor Genius
-                      </span>
-                    </h2>
-                  </div>
+                  <InnerTitle
+                    title="Why Choose "
+                    boldText="Doctor Genius"
+                    strapline="Setting the foundation for success"
+                    centered
+                    underlined
+                    id={PageStyles.lightTextWhyChooseDG}
+                  />
                 </div>
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.newPatientAcquisitions.childImageSharp.fluid}
-                    className="img-responsive blur-bleed"
+                    className={PageStyles.blurBleed}
                     alt="New Patient Acquisitions"
                   />
                 </div>
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Why is Doctor Genius # 1 in new patient acquisitions?
-                      </h2>
+                    <InnerTitle
+                      title="Why is Doctor Genius # 1 in new patient acquisitions?"
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p className="s-thin">
                           When you join the Doctor Genius Family, we are now
@@ -238,12 +227,24 @@ export default ({ data }, props) => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>What makes Doctor Genius different?</h2>
+                    <InnerTitle
+                      title="What makes Doctor Genius different?"
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p className="m-thin">
                           We are not a cookie cutter type program. We are a
@@ -257,25 +258,36 @@ export default ({ data }, props) => {
                 <div className="col-sm-12 col-md-6 order-sm-1 order-md-2">
                   <Img
                     fluid={images.dgDifferent.childImageSharp.fluid}
-                    className="img-responsive blur-bleed"
+                    className={PageStyles.blurBleed}
                     alt="What makes Doctor Genius different?"
                   />
                 </div>
               </div>
-              <div className="row padded short-top tall-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.tallBottom
+                }
+              >
                 <div className="col-sm-12 col-md-6">
                   <Img
                     fluid={images.dgClientSatisfaction.childImageSharp.fluid}
-                    className="img-responsive blur-bleed"
+                    className={PageStyles.blurBleed}
                     alt="Client Satisfaction"
                   />
                 </div>
                 <div className="col-sm-9 col-md-5">
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        How would you rate Doctor Genius' client satisfaction?
-                      </h2>
+                    <InnerTitle
+                      title="How would you rate Doctor Genius' client satisfaction?"
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p className="s-thin">
                           Don't take our word for it, see what our clients say
@@ -293,36 +305,9 @@ export default ({ data }, props) => {
                   </div>
                 </div>
               </div>
+
               {/* Begin Demo Footer */}
-              <div className="row padded tall-top request-demo-footer">
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5">
-                  <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-9 col-md-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter smWidth="9" />
               {/* End Demo Footer */}
             </Container>
           </Main>

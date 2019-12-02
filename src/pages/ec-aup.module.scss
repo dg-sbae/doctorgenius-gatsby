@@ -2,23 +2,16 @@
 
 .ecaupPage {
   /* Styles unique to this page component */
+  .ecAup {
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
   .gbiEcaup:before,
   .gbiEcaup:after {
     background-position: initial !important;
-  }
-  .hero {
-    .accentedParagraph {
-      p {
-        color: white;
-      }
-    }
-    .accentBlock {
-      width: 535px;
-      height: 271px;
-      @include media("<=tablet") {
-        width: auto;
-      }
-    }
   }
   p {
     margin-bottom: 1.5rem;
@@ -46,10 +39,7 @@
   ul {
     margin-bottom: 15px;
   }
-  li {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
+
   a {
     text-decoration: none;
   }

@@ -8,11 +8,12 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-
-import thinArrowRight from "../img/right-arrow.svg"
+import InnerTitle from "../components/inner-title"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import "../styles/event-listing.scss"
 import PageStyles from "./events.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const EventPage = ({ data }) => {
   // Globals
@@ -21,8 +22,6 @@ const EventPage = ({ data }) => {
   let styleBackgroundImage
   let featured_event
   const images = data
-
-  console.log(data)
 
   const eventTimeLineBg = images.eventTimelineBg.childImageSharp.fluid.src
   const eventTimeLineStyles = {
@@ -197,8 +196,14 @@ const EventPage = ({ data }) => {
                 </p>
                 <a
                   className={
+                    PageStyles.button +
+                    " " +
+                    PageStyles.flat +
+                    " " +
+                    PageStyles.transparent +
+                    " " +
                     PageStyles.eventMoreInfoBtn +
-                    " button flat transparent event-more-info-btn"
+                    " event-more-info-btn"
                   }
                   href={event.node.slug}
                 >
@@ -217,7 +222,11 @@ const EventPage = ({ data }) => {
   const display_past_events = () => {
     return (
       <div className="col-lap-10 offset-lap-1 col-md-12">
-        <div className={PageStyles.singularEvent + " row singular-event"}>
+        <div
+          className={
+            RowStyles.row + " " + PageStyles.singularEvent + " singular-event"
+          }
+        >
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[0].node.slug}>
               <img
@@ -239,8 +248,11 @@ const EventPage = ({ data }) => {
           >
             <span
               className={
+                PageStyles.noHover +
+                " " +
                 PageStyles.pastEventDate +
-                " button flat white-text past-event-date"
+                " " +
+                PageStyles.whiteText
               }
             >
               {format_date_short(past_events[0].node.event_date)}
@@ -258,7 +270,11 @@ const EventPage = ({ data }) => {
           </div>
         </div>
 
-        <div className={PageStyles.singularEvent + " row singular-event"}>
+        <div
+          className={
+            RowStyles.row + " " + PageStyles.singularEvent + " singular-event"
+          }
+        >
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[1].node.slug}>
               <img
@@ -280,8 +296,11 @@ const EventPage = ({ data }) => {
           >
             <span
               className={
+                PageStyles.noHover +
+                " " +
                 PageStyles.pastEventDate +
-                " button flat white-text past-event-date"
+                " " +
+                PageStyles.whiteText
               }
             >
               {format_date_short(past_events[1].node.event_date)}
@@ -299,7 +318,11 @@ const EventPage = ({ data }) => {
           </div>
         </div>
 
-        <div className={PageStyles.singularEvent + " row singular-event"}>
+        <div
+          className={
+            RowStyles.row + " " + PageStyles.singularEvent + " singular-event"
+          }
+        >
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[2].node.slug}>
               <img
@@ -321,8 +344,11 @@ const EventPage = ({ data }) => {
           >
             <span
               className={
+                PageStyles.noHover +
+                " " +
                 PageStyles.pastEventDate +
-                " button flat white-text past-event-date"
+                " " +
+                PageStyles.whiteText
               }
             >
               {format_date_short(past_events[2].node.event_date)}
@@ -340,7 +366,11 @@ const EventPage = ({ data }) => {
           </div>
         </div>
 
-        <div className={PageStyles.singularEvent + " row singular-event"}>
+        <div
+          className={
+            RowStyles.row + " " + PageStyles.singularEvent + " singular-event"
+          }
+        >
           <div className="col-sm-10 col-md-6 past-event-image">
             <Link to={"/events/" + past_events[3].node.slug}>
               <img
@@ -362,8 +392,11 @@ const EventPage = ({ data }) => {
           >
             <span
               className={
+                PageStyles.noHover +
+                " " +
                 PageStyles.pastEventDate +
-                " button flat white-text past-event-date"
+                " " +
+                PageStyles.whiteText
               }
             >
               {format_date_short(past_events[3].node.event_date)}
@@ -385,7 +418,7 @@ const EventPage = ({ data }) => {
   }
 
   return (
-    <div className={PageStyles.eventsPage}>
+    <div className={PageStyles.eventsPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="event-listing">
         <Helmet>
           <title>Events | Doctor Genius</title>
@@ -398,7 +431,7 @@ const EventPage = ({ data }) => {
                 {/* Hero will be a layout component */}
 
                 <Container>
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div className="col-sm-11 col-md-9 col-lap-6">
                       <div
                         className={
@@ -407,8 +440,11 @@ const EventPage = ({ data }) => {
                       >
                         <h1
                           className={
+                            PageStyles.button +
+                            " " +
                             PageStyles.dgCategory +
-                            " button flat white-text dg-category"
+                            " " +
+                            PageStyles.whiteText
                           }
                         >
                           Doctor Genius Events
@@ -426,7 +462,8 @@ const EventPage = ({ data }) => {
                             <a
                               className={
                                 PageStyles.registerNowBtn +
-                                " button flat white-text register-now-btn"
+                                " " +
+                                PageStyles.whiteText
                               }
                               href={featured_event.register_url}
                               target="_blank"
@@ -440,8 +477,13 @@ const EventPage = ({ data }) => {
                         {featured_event.slug !== "" && (
                           <a
                             className={
-                              PageStyles.heroMoreInfoBtn +
-                              " button flat transparent hero-more-info-btn"
+                              PageStyles.button +
+                              " " +
+                              PageStyles.flat +
+                              " " +
+                              PageStyles.transparent +
+                              " " +
+                              PageStyles.heroMoreInfoBtn
                             }
                             href={featured_event.slug}
                           >
@@ -459,9 +501,9 @@ const EventPage = ({ data }) => {
                       >
                         <h3>Next Event Starts:</h3>
                         <div
-                          className={PageStyles.spacer + " spacer solid"}
+                          className={PageStyles.spacer + " " + PageStyles.solid}
                         ></div>
-                        <div className="row">
+                        <div className={RowStyles.row}>
                           <div
                             className={
                               PageStyles.timeHolder + " col-sm-3 time-holder"
@@ -552,21 +594,17 @@ const EventPage = ({ data }) => {
               <div className="content-main">
                 <div
                   className={
-                    PageStyles.upcomingEvents +
-                    " content-block padded upcoming-events"
+                    PageStyles.upcomingEvents + " content-block upcoming-events"
                   }
                 >
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div
                       className={
                         PageStyles.introSection +
                         " col-sm-11 col-md-10 col-lap-9 intro-section"
                       }
                     >
-                      <div className="inner-title center">
-                        <h2>Upcoming Events</h2>
-                      </div>
-
+                      <InnerTitle title="Upcoming Events" centered />
                       <p>
                         Below is information on our upcoming events that can
                         cover a variety of topics about benefiting a private
@@ -577,43 +615,44 @@ const EventPage = ({ data }) => {
                       </p>
                     </div>
                   </div>
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div
                       className={
                         PageStyles.eventCards +
                         " col-sm-11 col-md-9 col-lap-12 event-cards"
                       }
                     >
-                      <div className="row">{display_upcoming_events}</div>
+                      <div className={RowStyles.row}>
+                        {display_upcoming_events}
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="spacer solid"></div>
+                <div
+                  className={PageStyles.spacer + " " + PageStyles.solid}
+                ></div>
 
                 <div
                   className={
-                    PageStyles.featuredPartnersRow +
-                    " row panel-row featured-partners-row"
+                    RowStyles.row + " " + PageStyles.featuredPartnersRow
                   }
                 >
                   <div className="col-sm-12">
                     <div className="content-block">
-                      <div className="inner-title center thin-heading">
-                        <h2>Featured Sponsers</h2>
-                      </div>
+                      <InnerTitle title="Featured Sponsers" centered />
                     </div>
                   </div>
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div className="col-sm-10 col-md-10 col-lap-10 col-lg-11">
-                      <div className="row">
+                      <div className={RowStyles.row}>
                         <div
                           className={
                             PageStyles.logoPartnershipItem +
                             " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
                           }
                         >
-                          <div className="icon-wrapper">
+                          <div className={PageStyles.iconWrapper}>
                             <img
                               className={PageStyles.imgIcon + " img-icon"}
                               src={images.boaLogo.childImageSharp.fluid.src}
@@ -627,7 +666,7 @@ const EventPage = ({ data }) => {
                             " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
                           }
                         >
-                          <div className="icon-wrapper">
+                          <div className={PageStyles.iconWrapper}>
                             <img
                               className={PageStyles.imgIcon + " img-icon"}
                               src={
@@ -643,7 +682,7 @@ const EventPage = ({ data }) => {
                             " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
                           }
                         >
-                          <div className="icon-wrapper">
+                          <div className={PageStyles.iconWrapper}>
                             <img
                               className={PageStyles.imgIcon + " img-icon"}
                               src={
@@ -659,7 +698,7 @@ const EventPage = ({ data }) => {
                             " logo-partnership-item col-sm-10 col-md-6 col-lap-3"
                           }
                         >
-                          <div className="icon-wrapper">
+                          <div className={PageStyles.iconWrapper}>
                             <img
                               className={
                                 PageStyles.imgIcon +
@@ -677,12 +716,18 @@ const EventPage = ({ data }) => {
                   </div>
                 </div>
 
-                <div className="spacer solid"></div>
+                <div
+                  className={PageStyles.spacer + " " + PageStyles.solid}
+                ></div>
 
                 <div className={PageStyles.pastEvents + " past-events"}>
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div className="col-sm-11 col-md-11 col-lap-9 center">
-                      <h2>Past Events</h2>
+                      <InnerTitle
+                        title="Past Events"
+                        centered
+                        id={PageStyles.pastEventsTitle}
+                      />
                       <p
                         className={
                           PageStyles.pastEventDesc + " past-event-desc"
@@ -698,7 +743,7 @@ const EventPage = ({ data }) => {
                     </div>
                   </div>
 
-                  <div className="row">
+                  <div className={RowStyles.row}>
                     <div
                       className={
                         PageStyles.pastEventsTimeline +
@@ -706,52 +751,19 @@ const EventPage = ({ data }) => {
                       }
                       style={eventTimeLineStyles}
                     >
-                      <div className="row">{display_past_events()}</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="spacer solid"></div>
-
-                {/* Begin Demo Footer */}
-                <div
-                  className={
-                    PageStyles.requestDemoFooter +
-                    " row padded tall-top request-demo-footer"
-                  }
-                >
-                  <div className="col-sm-11 col-md-9 col-lap-5">
-                    <div className={PageStyles.contentBlock + " content-block"}>
-                      <div className="inner-title">
-                        <h2>
-                          Start your <span>success</span> with Doctor Genius
-                          today!
-                        </h2>
-                        <div className="accented-paragraph">
-                          <p>
-                            The Genius platform makes every part of your company
-                            process more efficient. Our support team is very
-                            excited to help you and get your company on the
-                            right path of success.
-                          </p>
-                        </div>
+                      <div className={RowStyles.row}>
+                        {display_past_events()}
                       </div>
                     </div>
                   </div>
-                  <div className="col-sm-10 col-md-5 col-lap-5">
-                    <div className="center">
-                      <a
-                        href="/demo"
-                        className={
-                          PageStyles.button + " button flat white-text"
-                        }
-                      >
-                        Request Demo{" "}
-                        <img src={thinArrowRight} alt="Arrow Right" />
-                      </a>
-                    </div>
-                  </div>
                 </div>
+
+                <div
+                  className={PageStyles.spacer + " " + PageStyles.solid}
+                ></div>
+
+                {/* Begin Demo Footer */}
+                <RequestDemoFooter eventsPage smWidth="11" />
                 {/* End Demo Footer */}
               </div>
             </Container>

@@ -1,24 +1,26 @@
 @import "../styles/_site-variables.scss";
 
 .caseStudyPage {
-  .hero {
-    .accentBlock {
-      @include media(">=tablet") {
-        width: 470px;
-        height: 271px;
-      }
-      h2 {
-        @include fluid-type(38px, 45px, $phone, $desktop);
-        @include media(">=tablet") {
-          margin-top: 20px;
-        }
-      }
-    }
-  }
   .Panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px calc(17.5px / 2); /* difference between bootstrap col-4 width and design panel width */
+    @include media("<=laptop") {
+      margin: 20px auto 40px;
+    }
     .iconWrapper {
       height: 86px;
       width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .imgIcon {
+        max-height: 100%;
+        object-fit: contain;
+      }
     }
     @include media("<=laptop") {
       margin: 20px auto;
@@ -52,10 +54,6 @@
   }
 
   .PanelQuadrant {
-    .row {
-      align-items: top;
-    }
-
     h4 {
       font-size: 22px;
       font-weight: $font-weight-semibold;
@@ -98,12 +96,8 @@
     }
   }
 
-  .innerTitle {
-    @include media("<tablet") {
-      padding-bottom: 0;
-    }
-  }
   .subtitle {
+    color: #a8a8a8;
     font-size: $h2-font-size-main;
     font-style: italic;
     @include fluid-type(
@@ -115,9 +109,12 @@
   }
 
   .caseStudyContainer {
-    h3 {
+    h2 {
       font-size: $h2-font-size-main;
       @include fluid-type(21px, 45px, $tablet, $laptop);
+    }
+    > div {
+      margin-bottom: 0;
     }
   }
 
@@ -207,14 +204,31 @@
   }
 
   .imgResponsive {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  /*
+  * Some images from the deisgn have a blurred shadow/background
+  * which makes the actual width larger than the dimensions appear.
+  * This lets them bleed slightly out of their column space to
+  * accomodate. 125% is a just a rough guess
+  */
+  .imgResponsive.blurBleed {
+    width: 90%;
+    transform: translateX(6%);
     @include media("<laptop") {
       width: 100%;
+      transform: translateX(0%);
     }
-    &.blur-bleed {
-      @include media("<laptop") {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-      }
+  }
+  .imgResponsive.blurBleedRight {
+    width: 90%;
+    transform: translateX(-6%);
+    @include media("<laptop") {
+      width: 100%;
+      transform: translateX(0%);
     }
   }
   .imgContainer {
@@ -222,16 +236,11 @@
       padding-bottom: 50px;
     }
   }
-  .requestDemoFooter {
-    h2 {
-      @include media("<desktop") {
-        @include fluid-type(
-          26px,
-          45px,
-          $tablet,
-          $laptop
-        ); /* desktop - 53, tablet - 45, small - 38 */
-      }
+  #caseStudyHeader {
+    font-size: 45px;
+    font-weight: $font-weight-bold;
+    @include media("<=tablet") {
+      font-size: 21px;
     }
   }
 }

@@ -6,63 +6,55 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import Hero from "../components/Hero"
 import { Link } from "gatsby"
 
 import "../styles/ec-aup.scss"
 import PageStyles from "./ec-aup.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  pageType: "ecAup",
+  strapline: "EC AUP",
+  title: [<span>Electronic Communications and</span>, " Acceptable Use Policy"],
+  content: ["Effective Date:", <br />, " October 26, 2018"],
+}
 
 const EcAup = data => {
   return (
-    <div className={PageStyles.ecaupPage}>
+    <div className={PageStyles.ecaupPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="ec-aup">
         <Helmet>
           <title>
             Electronic Communications and Acceptable Use Policy | Doctor Genius
           </title>
         </Helmet>
-        <div className="ec-aup">
+        <div className={PageStyles.ecAup + " ec-aup"}>
           <BackgroundImage
             fluid={data.data.heroBg.childImageSharp.fluid}
             className={PageStyles.gbiEcaup + " gbi-ecaup"}
           >
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-              <Container>
-                <div className="valign-wrapper row">
-                  <div className="col-sm-12">
-                    <div className="hero-content">
-                      <div
-                        className={
-                          PageStyles.accentBlock + " hero-content accent-block"
-                        }
-                      >
-                        <h1>EC AUP</h1>
-                        <h2>
-                          <span>Electronic Communications and</span> Acceptable
-                          Use Policy
-                        </h2>
-                        <div
-                          className={
-                            PageStyles.accentedParagraph + " accented-paragraph"
-                          }
-                        >
-                          <p>
-                            Effective Date:
-                            <br /> October 26, 2018
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6" />
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded tall-top short-bottom">
-                <div class="col-sm-12 col-md-8">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="col-sm-12 col-md-8">
                   <p>
                     This Electronic Communications and Acceptable User Policy
                     (this “Policy”) applies to the use of all Practice AI
@@ -100,9 +92,19 @@ const EcAup = data => {
                   </p>
                 </div>
               </div>
-              <div class="row padded short-top short-bottom">
-                <div class="col-sm-11 col-md-8">
-                  <div class="content-block">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="col-sm-11 col-md-8">
+                  <div className="content-block">
                     <ol>
                       <li>
                         <h4>Required User Consent</h4>

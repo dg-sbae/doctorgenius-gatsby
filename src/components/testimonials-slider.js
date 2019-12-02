@@ -128,6 +128,7 @@ export default class TestimonialsSlider extends React.Component {
       centerPadding: "28%",
       centerMode: true,
       dots: true,
+      dotsClass: styles.slickDots + " slick-dots",
       infinite: true,
       speed: 500,
       slidesToShow: 1,

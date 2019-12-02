@@ -12,7 +12,7 @@ const ContentMarketing = data => {
     <MarketingSolutionsTemplate
       page="content-marketing" /* this should be dynamic from the page props */
       pageTitle="Content Marketing"
-      pageSubtitle="<span>Build New</span> Organic Traffic"
+      pageSubtitle={[<span>Build New</span>, " Organic Traffic"]}
       pageIntro="Our organic content strategy's main objective is to funnel traffic to your website."
       metaTitle="Organic Search Engine Optimized Content | Healthcare Marketing Agency"
       metaDescription="When was the last time your current agency updated your website? Content marketing drives website visibility which in turn drives patients."

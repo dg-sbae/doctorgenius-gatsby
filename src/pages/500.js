@@ -8,6 +8,7 @@ import BackgroundImage from "gatsby-background-image"
 
 import "../styles/500.scss"
 import PageStyles from "./505.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 class DG500Page extends React.Component {
   static propTypes = {
@@ -23,9 +24,9 @@ class DG500Page extends React.Component {
     const pagePaths = data.allSitePage.nodes.map(node => node.path)
 
     return (
-      <div className={PageStyles.fiveZeroFivePage}>
+      <div className={PageStyles.fiveZeroFivePage + " " + RowStyles.rowStyling}>
         {pagePaths.length > 0 && (
-          <DefaultPageLayout location="the-study-post">
+          <DefaultPageLayout location="layout500">
             <div className={`${this.props["*"]} page-500`}>
               <BackgroundImage
                 fluid={data.heroBg.childImageSharp.fluid}
@@ -35,10 +36,10 @@ class DG500Page extends React.Component {
                   {/* Hero will be a layout component */}
 
                   <Container>
-                    <div className="valign-wrapper row">
+                    <div className={RowStyles.row + " valign-wrapper"}>
                       <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                         <div>
-                          <div className="row">
+                          <div className={RowStyles.row}>
                             <div className="col-sm-12 col-md-12 col-lg-12">
                               <h1 className="text-center">500</h1>
                               <h2 className="text-center">
@@ -50,9 +51,9 @@ class DG500Page extends React.Component {
                                 unavailable. &nbsp;
                                 <Link to="/">Return to homepage</Link>
                               </p>
-                              <div class="row">
+                              <div className={RowStyles.row}>
                                 <div
-                                  class={
+                                  className={
                                     PageStyles.sm500 +
                                     " col-sm-12 text-center sm-500"
                                   }
@@ -110,7 +111,7 @@ class DG500Page extends React.Component {
               </BackgroundImage>
               {/*<Main>
                 <Container>
-                  <div className="row padded tall-top short-bottom">
+                  <div className={RowStyles.row + "RowStyles.padded" + "RowStyles.shortBottom" + " " + RowStyles.tallTop}>
                     <div class="col-sm-12 col-md-10">
                       {pagePaths.length > 0 && (
                         <div>

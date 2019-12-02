@@ -6,13 +6,23 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import InnerTitle from "../components/inner-title.js"
+import Hero from "../components/Hero"
 
 import "../styles/privacy-policy.scss"
 import PageStyles from "./privacy-policy.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  pageType: "privacyPolicy",
+  strapline: "Privacy Policy",
+  title: [<span>Our Privacy </span>, "Policy"],
+  content: ["Effective Date:", <br />, "October 26, 2018"],
+}
 
 const PrivacyPolicy = data => {
   return (
-    <div className={PageStyles.privacyPolicyPage}>
+    <div className={PageStyles.privacyPolicyPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="privacy-policy">
         <Helmet>
           <title>Privacy Policy Doctor Genius in Irvine, CA 92606</title>
@@ -21,42 +31,31 @@ const PrivacyPolicy = data => {
             content="Privacy policy of Doctor Genius located in in Irvine, CA 92606."
           />
         </Helmet>
-        <div className="privacy-policy">
+        <div className={PageStyles.privacyPolicy + " privacy-policy"}>
           <BackgroundImage
             fluid={data.data.heroBg.childImageSharp.fluid}
             className={PageStyles.gbiPrivacyPolicy + ` gbi-privacy-policy`}
           >
-            <div className="hero">
-              <Container>
-                <div className="valign-wrapper row">
-                  <div className="col-sm-6">
-                    <div className="hero-content">
-                      <div className="hero-content accent-block">
-                        <h1>Privacy Policy</h1>
-                        <h2>
-                          <span>Our Privacy </span>Policy
-                        </h2>
-                        <div
-                          className={
-                            PageStyles.accentedParagraph + " accented-paragraph"
-                          }
-                        >
-                          <p>
-                            Effective Date:
-                            <br /> October 26, 2018
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6" />
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded tall-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <p>
                     Your privacy is important to our Company (or “we”, “us” or
@@ -66,18 +65,29 @@ const PrivacyPolicy = data => {
                   </p>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <div className="content-block">
-                    <div className={PageStyles.innerTitle + " inner-title"}>
-                      <h2 className="underline">
-                        Our Privacy Policy Explains:
-                      </h2>
-                    </div>
+                    <InnerTitle
+                      title="Our Privacy Policy Explains:"
+                      inContentBlock
+                      underlined
+                      centered
+                    />
                   </div>
                 </div>
               </div>
-              <div className="row">
+              <div className={RowStyles.row}>
                 <div className="col-sm-6">
                   <div className="accented-paragraph">
                     <p>
@@ -89,7 +99,17 @@ const PrivacyPolicy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <div className="content-block">
                     <div className={PageStyles.policyTable + " policy-table"}>
@@ -107,7 +127,17 @@ const PrivacyPolicy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <div className="content-block">
                     <p>
@@ -139,12 +169,25 @@ const PrivacyPolicy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top short-bottom">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-sm-8">
                   <div className="content-block">
-                    <div className={PageStyles.innerTitle + " inner-title"}>
-                      <h2 className="underline">Information We Collect:</h2>
-                    </div>
+                    <InnerTitle
+                      title="Information We Collect:"
+                      inContentBlock
+                      underlined
+                      centered
+                    />
                     <ol>
                       <li>
                         <h4>Information you provide to us</h4>

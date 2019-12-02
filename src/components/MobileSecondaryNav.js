@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import downArrow from "../img/icon/down-arrow.svg"
 
 import styles from "./MobileSecondaryNav.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 import $ from "jquery"
 
@@ -126,7 +127,7 @@ export default class MobileSecondaryNav extends React.Component {
 
   render() {
     return (
-      <div className="row">
+      <div className={RowStyles.row + " " + styles.mobileSecondaryNavHolder}>
         <div
           className={
             "col-12 d-none d-block d-sm-block d-md-none " +

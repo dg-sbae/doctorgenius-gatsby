@@ -13,6 +13,7 @@ import linkedinIcon from "../img/icon/linkedin-circle.svg"
 import youtubeIcon from "../img/icon/youtube-circle.svg"
 
 import FooterStyles from "./Footer.module.scss"
+import RowStyles from "./Row.module.scss"
 
 const ListLink = props => (
   <li>
@@ -33,13 +34,34 @@ const ExternalLink = props => (
 )
 
 export default ({ children }) => (
-  <footer>
+  <footer className={FooterStyles.FooterStyling + " " + RowStyles.rowStyling}>
     <Container>
-      <div className="row padded tall-top footer-row">
+      <div
+        className={
+          RowStyles.row +
+          " " +
+          RowStyles.padded +
+          " " +
+          RowStyles.tallTop +
+          " " +
+          FooterStyles.paddedFooterRow +
+          " " +
+          FooterStyles.footerRow
+        }
+      >
         <div className="col-sm-12 col-lg-4">
-          <img src={logoWhite} className="logo img-responsive" alt="Our Logo" />
+          <img
+            src={logoWhite}
+            className={FooterStyles.logo + " " + FooterStyles.imgResponsive}
+            alt="Our Logo"
+          />
         </div>
-        <div className="d-none d-sm-none d-md-block col-sm-12 col-md-6 col-lg-4 footer-page-links">
+        <div
+          className={
+            FooterStyles.footerPageLinks +
+            " d-none d-sm-none d-md-block col-sm-12 col-md-6 col-lg-4 footer-page-links"
+          }
+        >
           <ul>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/marketing-solutions">Marketing Solutions</ListLink>
@@ -48,7 +70,7 @@ export default ({ children }) => (
             </ListLinkNoPrefetch>
             <ListLink to="/plans">Plans</ListLink>
             <ListLink to="/company">Company</ListLink>
-            <ListLink to="/the-study">Resources</ListLink>
+            <ListLink to="/blog">Resources</ListLink>
             <ListLink to="/demo">Free Demo</ListLink>
             <ListLinkNoPrefetch to="/contact">Contact</ListLinkNoPrefetch>
             <ExternalLink to="https://portal.doctorgenius.com/login">
@@ -57,58 +79,106 @@ export default ({ children }) => (
           </ul>
         </div>
         <div className="col-10 col-sm-10 col-md-6 col-lg-4">
-          <div className="footer-contact-row">
-            <div className="icon-wrapper">
+          <div
+            className={FooterStyles.footerContactRow + " footer-contact-row"}
+          >
+            <div
+              className={
+                FooterStyles.footerIconWrapper + " footer-icon-wrapper"
+              }
+            >
               <img
-                className="img-icon"
+                className={FooterStyles.imgIcon + " img-icon"}
                 src={ringingPhoneIcon}
                 alt="Phone Icon"
               />
             </div>
-            <p className="footer-contact-details">&#40;877&#41; 477-2311</p>
+            <p
+              className={
+                FooterStyles.footerContactDetails + " footer-contact-details"
+              }
+            >
+              &#40;877&#41; 477-2311
+            </p>
           </div>
-          <div className="footer-contact-row">
-            <div className="icon-wrapper">
+          <div
+            className={FooterStyles.footerContactRow + " footer-contact-row"}
+          >
+            <div
+              className={
+                FooterStyles.footerIconWrapper + " footer-icon-wrapper"
+              }
+            >
               <img
-                className="img-icon"
+                className={FooterStyles.imgIcon + " img-icon"}
                 src={envelopeIcon}
                 alt="Envelope Icon"
               />
             </div>
-            <p className="footer-contact-details">support@doctorgenius.com</p>
+            <p
+              className={
+                FooterStyles.footerContactDetails + " footer-contact-details"
+              }
+            >
+              support@doctorgenius.com
+            </p>
           </div>
-          <div className="footer-contact-row">
-            <div className="icon-wrapper">
-              <img className="img-icon" src={mapPin} alt="Map Icon" />
+          <div
+            className={FooterStyles.footerContactRow + " footer-contact-row"}
+          >
+            <div
+              className={
+                FooterStyles.footerIconWrapper + " footer-icon-wrapper"
+              }
+            >
+              <img
+                className={FooterStyles.imgIcon + " img-icon"}
+                src={mapPin}
+                alt="Map Icon"
+              />
             </div>
-            <address className="footer-contact-details">
+            <address
+              className={
+                FooterStyles.footerContactDetails + " footer-contact-details"
+              }
+            >
               2121 Alton Parkway
               <br />
               Irvine, CA 92606
             </address>
           </div>
-          <div className="social-media-row">
-            <div className="social-media-item">
+          <div className={FooterStyles.socialMediaRow + " social-media-row"}>
+            <div
+              className={FooterStyles.socialMediaItem + " social-media-item"}
+            >
               <a href="https://www.facebook.com/DoctorGeniusMarketing">
                 <img src={facebookIcon} alt="Facebook Icon" />
               </a>
             </div>
-            <div className="social-media-item">
+            <div
+              className={FooterStyles.socialMediaItem + " social-media-item"}
+            >
               <a href="https://twitter.com/DoctorGeniusCA">
                 <img src={twitterIcon} alt="Twitter Icon" />
               </a>
             </div>
-            <div className="social-media-item">
+            <div
+              className={FooterStyles.socialMediaItem + " social-media-item"}
+            >
               <a href="https://www.instagram.com/doctor.genius/">
                 <img src={instagramIcon} alt="Instagram Icon" />
               </a>
             </div>
-            <div className="social-media-item">
+            <div
+              className={FooterStyles.socialMediaItem + " social-media-item"}
+            >
               <a href="https://www.linkedin.com/company/doctor-genius">
                 <img src={linkedinIcon} alt="LinkedIn Icon" />
               </a>
             </div>
-            <div className="social-media-item">
+            <div
+              className={FooterStyles.socialMediaItem + " social-media-item"}
+            >
               <a href="https://www.youtube.com/channel/UCEOt77NoRiRrQzDgjpQwDCA/videos">
                 <img src={youtubeIcon} alt="Youtube Icon" />
               </a>
@@ -116,13 +186,17 @@ export default ({ children }) => (
           </div>
         </div>
       </div>
-      <div className="row padded short-top">
+      <div
+        className={
+          RowStyles.row + " " + RowStyles.padded + " " + RowStyles.shortTop
+        }
+      >
         <div className="col-sm-12">
-          <div className="footer-subrow">
+          <div className={FooterStyles.footerSubrow + " footer-subrow"}>
             <div className="copyright-section">
               &copy;2019 Doctor Genius. All Rights Reserved.
             </div>
-            <div className="legal-links">
+            <div className={FooterStyles.legalLinks + " legal-links"}>
               <ListLink to="/privacy-policy">Privacy Policy</ListLink>
               {/* Waiting for page content before we show this link */}
               {/*<span> | </span>

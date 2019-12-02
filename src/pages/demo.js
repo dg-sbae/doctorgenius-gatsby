@@ -9,8 +9,11 @@ import Container from "../components/Container"
 import DemoForm from "../components/demo-form.js"
 import star from "../img/star.svg"
 
+import InnerTitle from "../components/inner-title"
+
 import "../styles/demo.scss"
 import DemoPageStyles from "./demo.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const DemoPage = data => {
   const images = data.data
@@ -20,7 +23,7 @@ const DemoPage = data => {
   }
 
   return (
-    <div className={DemoPageStyles.demoPage}>
+    <div className={DemoPageStyles.demoPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="demo">
         <Helmet>
           <title>
@@ -36,7 +39,14 @@ const DemoPage = data => {
           <div className={DemoPageStyles.hero + " hero"} style={heroStyle}>
             {/* Hero will be a layout component */}
             <Container>
-              <div className={DemoPageStyles.heroRow + " valign-wrapper row"}>
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  DemoPageStyles.heroRow +
+                  " valign-wrapper"
+                }
+              >
                 <div className="col-md-10 order-md-1 col-lg-8 order-lg-1 float-lg-left">
                   <h1>Experience The Solution for Optimal Practice Growth</h1>
                   <p className={DemoPageStyles.disappear + " disappear"}>
@@ -80,7 +90,7 @@ const DemoPage = data => {
                     " col-md-9 order-md-3 col-lg-8 order-lg-3 float-lg-left demo-plans-row"
                   }
                 >
-                  <div className="valign-wrapper row">
+                  <div className={RowStyles.row + " valign-wrapper"}>
                     <div
                       className={
                         DemoPageStyles.ourPlansText +
@@ -92,10 +102,12 @@ const DemoPage = data => {
                           DemoPageStyles.contentBlock + " content-block"
                         }
                       >
-                        <div
-                          className={DemoPageStyles.innerTitle + " inner-title"}
-                        >
-                          <h2>Our Plans</h2>
+                        <InnerTitle
+                          title="Our Plans"
+                          id={DemoPageStyles.slimInnerTitle}
+                          inContentBlock
+                        />
+                        <div>
                           <div
                             className={
                               DemoPageStyles.accentedParagraph +
@@ -180,19 +192,26 @@ const DemoPage = data => {
           </div>
           <Main>
             <Container>
-              <div className="row padded">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-10">
-                  <div
-                    className={
-                      DemoPageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">What Our Clients Are Saying!</h2>
-                  </div>
+                  <InnerTitle
+                    title="What Our Clients Are Saying!"
+                    underlined
+                    centered
+                    id={DemoPageStyles.demoTestimonials}
+                  />
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -211,8 +230,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -230,7 +251,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -304,7 +325,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -322,8 +351,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -341,7 +372,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -424,7 +455,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -442,8 +481,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -461,7 +502,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -530,7 +571,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -548,8 +597,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -567,7 +618,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -630,7 +681,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -648,8 +707,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -667,7 +728,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -728,7 +789,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -747,8 +816,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -766,7 +837,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -822,7 +893,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -841,8 +920,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -860,7 +941,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -930,7 +1011,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -949,8 +1038,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -968,7 +1059,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p
@@ -1022,7 +1113,15 @@ const DemoPage = data => {
                 </div>
               </div>
 
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-lg-1" />
                 <div className="col-sm-12 col-md-10 col-lg-12">
                   <div className={DemoPageStyles.reviewSection + " review"}>
@@ -1040,8 +1139,10 @@ const DemoPage = data => {
                     <div className={DemoPageStyles.body + " body"}>
                       <div
                         className={
+                          RowStyles.row +
+                          " " +
                           DemoPageStyles.mobileReviewHead +
-                          " mobile-review-head row"
+                          " mobile-review-head"
                         }
                       >
                         <div
@@ -1059,7 +1160,7 @@ const DemoPage = data => {
                         <div
                           className={
                             DemoPageStyles.bioContainer +
-                            " col-sm-9 bio-container"
+                            " col-sm-9 offset-sm-1 bio-container"
                           }
                         >
                           <p

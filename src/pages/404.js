@@ -4,8 +4,10 @@ import { graphql, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
+import Container from "../components/Container"
 import "../styles/404.scss"
 import PageStyles from "./404.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 class DG404Page extends React.Component {
   static propTypes = {
@@ -17,9 +19,9 @@ class DG404Page extends React.Component {
     const pagePaths = data.allSitePage.nodes.map(node => node.path)
 
     return (
-      <div className={PageStyles.fourZeroFourPage}>
+      <div className={PageStyles.fourZeroFourPage + " " + RowStyles.rowStyling}>
         {pagePaths.length > 0 && (
-          <DefaultPageLayout location="the-study-post">
+          <DefaultPageLayout location="layout404">
             <div className={`${this.props["*"]} page-404`}>
               <BackgroundImage
                 fluid={data.heroBg.childImageSharp.fluid}
@@ -28,10 +30,10 @@ class DG404Page extends React.Component {
                 <div className={PageStyles.hero + " hero"}>
                   {/* Hero will be a layout component */}
 
-                  <div className={PageStyles.riseUp + " container-fluid"}>
-                    <div className="valign-wrapper row">
+                  <Container>
+                    <div className={RowStyles.row + " valign-wrapper"}>
                       <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                        <div className="row">
+                        <div className={RowStyles.row}>
                           <div className="col-sm-12">
                             <h1 className="text-center">404</h1>
                             <h2 className="text-center">
@@ -43,9 +45,9 @@ class DG404Page extends React.Component {
                               unavailable. &nbsp;
                               <Link to="/">Return to homepage</Link>
                             </p>
-                            <div class="row">
+                            <div className={RowStyles.row}>
                               <div
-                                class={
+                                className={
                                   PageStyles.sm404 +
                                   " col-sm-12 text-center sm-404"
                                 }
@@ -93,12 +95,12 @@ class DG404Page extends React.Component {
                       </div>
                       <div className="col-sm-6" />
                     </div>
-                  </div>
+                  </Container>
                 </div>
               </BackgroundImage>
               {/*<Main>
                 <Container>
-                  <div className="row padded tall-top short-bottom">
+                  <div className={RowStyles.row + "RowStyles.padded" + "RowStyles.shortBottom" + " " + RowStyles.tallTop}>
                     <div class="col-sm-12 col-md-10">
                       {pagePaths.length > 0 && (
                         <div>

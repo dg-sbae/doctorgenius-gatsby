@@ -6,13 +6,22 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import Hero from "../components/Hero"
 
 import "../styles/terms-of-service.scss"
 import PageStyles from "./termsofservice.module.scss"
+import RowStyles from '../components/Row.module.scss'
+
+const heroConfig = {
+  pageType: "termsOfService",
+  strapline: "Terms Of Service",
+  title: [<span>Terms </span>, "Of Service"],
+  content: ["Effective Date:", <br />, "October 26, 2018"],
+}
 
 const TermsOfService = data => {
   return (
-    <div className={PageStyles.termsOfServicePage}>
+    <div className={PageStyles.termsOfServicePage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="termsofservice">
         <Helmet>
           <title>
@@ -20,34 +29,26 @@ const TermsOfService = data => {
           </title>
           <meta name="description" content="Terms Of Service of Doctor Genius located in Irvine, CA 92606." />
         </Helmet>
-        <div className="termsofservice">
+        <div className={PageStyles.termsOfService + " termsofservice"}>
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiTos + " gbi-tos"}>
-          <div className={PageStyles.hero + " hero"}>
-            <Container>
-              <div className="valign-wrapper row">
-                <div className="col-sm-12">
-                  <div className={PageStyles.heroContent + " hero-content"}>
-                    <div className={PageStyles.heroContent + " hero-content accent-block"}>
-                      <h1>Terms Of Service</h1>
-                      <h2>
-                        <span>Terms </span>Of Service
-                      </h2>
-                      <div className={PageStyles.accentedParagraph + " accented-paragraph"}>
-                        <p>
-                          Effective Date:
-                          <br /> October 26, 2018
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Container>
-          </div>
+          <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded tall-top short-bottom">
+              <div className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
+                  RowStyles.shortBottom
+                }>
                 <div class="col-sm-8">
                   <p>
                   These Terms of Service are part of the Marketing Plan Agreement between Company
@@ -78,7 +79,15 @@ const TermsOfService = data => {
                 </div>
               </div>
 
-              <div class="row padded short-top short-bottom">
+              <div className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }>
                 <div class="col-sm-8">
                   <div class="content-block">
 

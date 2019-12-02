@@ -296,3 +296,31 @@
 .closed .cardCopyHolder {
   overflow-y: hidden !important;
 }
+
+.slickDots {
+  /* standard */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+
+  /* overrides */
+
+  bottom: 0;
+  top: 100%;
+
+  margin-top: 40px;
+  position: initial;
+  margin-bottom: 55px;
+  li {
+    margin: 0 16px;
+
+    button:before {
+      width: 21px;
+      height: 21px;
+      font-size: 21px;
+      color: #a9a9a9;
+    }
+  }
+}

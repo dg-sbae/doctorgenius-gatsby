@@ -25,60 +25,8 @@ export default function HTML(props) {
             __html: `
 
             document.addEventListener("DOMContentLoaded", function() {
-              document.addEventListener("scroll", function(e) {
-
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = winScroll / height;
-
-                if (typeof(document.querySelector(".secondary-nav")) !== 'undefined' && document.querySelector(".secondary-nav") !== null) {
-                  var navBottom = document.querySelector("nav.navbar").getBoundingClientRect().bottom;
-                  var secondaryNavTop = document.querySelector(".secondary-nav").getBoundingClientRect().top;
-                  var heroBottom = document.querySelector('.hero').getBoundingClientRect().bottom;
-                }
-
-                if (winScroll > 0 && winScroll < 100) {
-                  document.querySelector("nav.navbar").classList.add("main-navbar-stuck");
-                  document.querySelector("nav.navbar").classList.add("stuck-midway");
-                  document.querySelector("nav.navbar").classList.remove("stuck-fully");
-                } else if (winScroll >= 100) {
-                  document.querySelector("nav.navbar").classList.add("main-navbar-stuck");
-                  document.querySelector("nav.navbar").classList.add("stuck-fully");
-                  document.querySelector("nav.navbar").classList.remove("stuck-midway");
-                } else {
-                  document.querySelector("nav.navbar").classList.remove("main-navbar-stuck");
-                  document.querySelector("nav.navbar").classList.remove("stuck-midway");
-                }
-
-                if (typeof(document.querySelector(".secondary-nav")) !== 'undefined' && document.querySelector(".secondary-nav") !== null) {
-                  if (heroBottom <= navBottom) {
-                    document.querySelector(".secondary-nav-target").classList.add("secondary-nav-stuck");
-                    document.querySelector(".hero").classList.add("shift-down");
-                  } else {
-                    document.querySelector(".secondary-nav-target").classList.remove("secondary-nav-stuck");
-                    document.querySelector(".hero").classList.remove("shift-down");
-                  }
-                }
-              });
+              
             })
-
-            $( document ).ready(function() {
-              function toggleDropdown (e) {
-                const _d = $(e.target).closest('.dropdown'),
-                  _m = $('.dropdown-menu', _d);
-                setTimeout(function(){
-                  const shouldOpen = e.type !== 'click' && _d.is(':hover');
-                  _m.toggleClass('show', shouldOpen);
-                  _d.toggleClass('show', shouldOpen);
-                  $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-                }, e.type === 'mouseleave' ? 100 : 0);
-              }
-
-              $('body')
-                .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-                .on('click', '.dropdown-menu a', toggleDropdown);
-            });
-
           `,
           }}
         />

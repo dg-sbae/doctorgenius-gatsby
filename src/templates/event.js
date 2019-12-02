@@ -8,11 +8,11 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-
-import thinArrowRight from "../img/right-arrow.svg"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import "../styles/event-post.scss"
 import PageStyles from "./event.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const EventPage = ({ data }) => {
   const event_details = data.focus_event
@@ -200,7 +200,12 @@ const EventPage = ({ data }) => {
       <div
         className={
           event_details.include_speakers[0] === "1"
-            ? "row content-block padded speaker-details"
+            ? RowStyles.row +
+              " " +
+              RowStyles.padded +
+              " " +
+              PageStyles.speakerDetails +
+              " content-block speaker-details"
             : "d-none"
         }
       >
@@ -208,8 +213,17 @@ const EventPage = ({ data }) => {
           <h2>{event_details.speaker_section_title}:</h2>
           <h3>{event_details.speaker_section_subtitle}</h3>
         </div>
-        <div className="col-sm-12 col-md-8 col-lap-8">
-          <div className="row speaker-profiles">{speaker_holder}</div>
+        <div className="col-sm-7 col-md-8 col-lap-8">
+          <div
+            className={
+              RowStyles.row +
+              " " +
+              PageStyles.speakerProfiles +
+              " speaker-profiles"
+            }
+          >
+            {speaker_holder}
+          </div>
         </div>
       </div>
     )
@@ -220,7 +234,10 @@ const EventPage = ({ data }) => {
     if (speakers.length > 1) {
       return (
         <div
-          className="col-sm-12 col-md-6 col-lap-3"
+          className={
+            PageStyles.speakerHolder +
+            " col-sm-12 col-md-6 col-lap-3 speaker-holder"
+          }
           key={speaker.speaker_name}
         >
           <div className="speaker-img-wrapper">
@@ -249,15 +266,29 @@ const EventPage = ({ data }) => {
       ) {
         return (
           <div>
-            <div className="spacer solid"></div>
-            <div className="row content-block padded listed-items">
+            <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
+            <div
+              className={
+                RowStyles.row +
+                " " +
+                RowStyles.padded +
+                " " +
+                PageStyles.listedItems +
+                " content-block listed-items"
+              }
+            >
               <div className="col-sm-11 col-md-9 col-lap-6">
                 <h2>{event_details.information_heading1}</h2>
                 {display_h1_information()}
                 <h2>{event_details.information_heading2}</h2>
                 {display_h2_information()}
               </div>
-              <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
+              <div
+                className={
+                  PageStyles.contentImage +
+                  " col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block"
+                }
+              >
                 <img
                   src={
                     event_details.all_image_urls.information_image_url.localFile
@@ -275,8 +306,15 @@ const EventPage = ({ data }) => {
     } else {
       return (
         <div>
-          <div className="spacer solid"></div>
-          <div className="row content-block padded listed-items">
+          <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
+          <div
+            className={
+              RowStyles.row +
+              " " +
+              RowStyles.padded +
+              " content-block listed-items"
+            }
+          >
             <div className="col-sm-11 col-md-9 col-lap-7">
               <h2>{event_details.information_heading1}</h2>
               {display_h1_information()}
@@ -291,44 +329,65 @@ const EventPage = ({ data }) => {
   }
 
   return (
-    <div className={PageStyles.eventDetailPage}>
+    <div className={PageStyles.eventDetailPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="event-post">
         <Helmet>
           <title>Event Details | Doctor Genius</title>
           <meta name="description" content="Doctor Genius | Event." />
         </Helmet>
         <div>
-          <div className="hero" style={styleBackgroundImage}>
-            <div className="hero-overlay">
+          <div
+            className={PageStyles.hero + " hero"}
+            style={styleBackgroundImage}
+          >
+            <div className={PageStyles.heroOverlay + " hero-overlay"}>
               {/* Hero will be a layout component */}
 
               <Container>
-                <div className="row">
+                <div
+                  className={
+                    RowStyles.row + " " + PageStyles.heroRow + " hero-row"
+                  }
+                >
                   <div className="col-sm-12 col-md-9 col-lap-8">
                     <div
                       className={
                         event_details.event_strapline[0] !== ""
-                          ? "continue-edu-class-holder"
+                          ? PageStyles.continueEduClassHolder +
+                            " continue-edu-class-holder"
                           : "d-none"
                       }
                     >
-                      <span className="button flat white-text continue-edu-class">
+                      <span
+                        className={
+                          PageStyles.continueEduClass +
+                          " " +
+                          PageStyles.whiteText +
+                          " continue-edu-class"
+                        }
+                      >
                         {event_details.event_strapline}
                       </span>
                     </div>
-                    <div className="titles">
+                    <div className={PageStyles.titles + " titles"}>
                       <h1>{event_details.event_title}</h1>
                       <h2>{event_details.event_subtitle}</h2>
                     </div>
                     <div
                       className={
                         event_details.register_url[0] !== ""
-                          ? "register-now-btn-holder"
+                          ? PageStyles.registerNowBtnHolder +
+                            " register-now-btn-holder"
                           : "d-none"
                       }
                     >
                       <a
-                        className="button flat white-text register-now-btn"
+                        className={
+                          PageStyles.registerNowBtn +
+                          " " +
+                          PageStyles.whiteText +
+                          " register-now-btn"
+                        }
                         href={event_details.register_url[0]}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -346,29 +405,54 @@ const EventPage = ({ data }) => {
           <Main>
             <Container>
               <div className="main-content">
-                <div className="row padded">
+                <div className={RowStyles.row + " " + RowStyles.padded}>
                   <div className="col-sm-11 col-md-9 col-lap-6">
-                    <div className="content-block event-details">
+                    <div
+                      className={
+                        PageStyles.eventDetails + " content-block event-details"
+                      }
+                    >
                       <h3>Event Details</h3>
                       <p>{event_details.event_details_text}</p>
                     </div>
                   </div>
                   <div className="col-sm-11 col-md-9 col-lap-6">
-                    <div className="row event-date valign-wrapper">
-                      <div className="col-sm-11 col-md-10">
-                        <div className="card row">
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        PageStyles.eventDate +
+                        " event-date valign-wrapper"
+                      }
+                    >
+                      <div
+                        className={PageStyles.date320 + " col-sm-12 col-md-10"}
+                      >
+                        <div
+                          className={
+                            RowStyles.row + " " + PageStyles.card + " card"
+                          }
+                        >
                           <div
-                            className="card-body col-sm-10 col-lap-12 col-lg-9"
-                            id={Webinar === true ? "webinar-location" : ""}
+                            className={
+                              PageStyles.cardBody +
+                              " card-body col-sm-11 col-lap-12 col-lg-9"
+                            }
+                            id={
+                              Webinar === true
+                                ? PageStyles.webinarLocation +
+                                  "webinar-location"
+                                : ""
+                            }
                           >
-                            <p className="card-text">
+                            <p className={PageStyles.cardText + " card-text"}>
                               Date: {format_date(event_details.event_date)}
                             </p>
-                            <p className="card-text">
+                            <p className={PageStyles.cardText + " card-text"}>
                               Time: {convert_time(event_details.start_time)} to{" "}
                               {convert_time(event_details.end_time)}
                             </p>
-                            <p className="card-text">
+                            <p className={PageStyles.cardText + " card-text"}>
                               <span>Location: </span>
                               {display_location(
                                 event_details.event_street_address,
@@ -390,24 +474,44 @@ const EventPage = ({ data }) => {
               <div
                 className={
                   event_details.include_speakers[0] === "1"
-                    ? "spacer solid"
+                    ? PageStyles.spacer + " " + PageStyles.solid
                     : "d-none"
                 }
               ></div>
 
               {display_speakers()}
 
-              <div className="spacer solid"></div>
+              <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
 
-              <div className="row content-block padded dg-marketing-solutions">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  PageStyles.dgMarketingSolutions +
+                  " content-block dg-marketing-solutions"
+                }
+              >
                 <div className="col-sm-11 col-md-9 col-lap-12">
                   <h2>
                     Doctor Genius
                     <br />
                     Marketing Solutions
                   </h2>
-                  <div className="row dg-dictionary">
-                    <div className="col-lap-6">
+                  <div
+                    className={
+                      RowStyles.row +
+                      " " +
+                      PageStyles.dgDictionary +
+                      " dg-dictionary"
+                    }
+                  >
+                    <div
+                      className={
+                        PageStyles.dictionaryCol + " col-lap-6 dictionary-col"
+                      }
+                    >
                       <h4>Website</h4>
                       <p>
                         Our websites are power-packed with fresh and unique
@@ -449,7 +553,11 @@ const EventPage = ({ data }) => {
                         software available
                       </p>
                     </div>
-                    <div className="col-lap-6">
+                    <div
+                      className={
+                        PageStyles.dictionaryCol + " col-lap-6 dictionary-col"
+                      }
+                    >
                       <h4>Genius Portal</h4>
                       <p>
                         Get the information you need about your website and
@@ -494,37 +602,10 @@ const EventPage = ({ data }) => {
                 </div>
               </div>
 
-              <div className="spacer solid"></div>
+              <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
 
               {/* Begin Demo Footer */}
-              <div className="row padded tall-top request-demo-footer">
-                <div className="col-sm-11 col-md-9 col-lap-5">
-                  <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-10 col-md-5 col-lap-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter eventsPage smWidth="11" />
               {/* End Demo Footer */}
             </Container>
           </Main>

@@ -7,15 +7,16 @@ import Img from "gatsby-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
 import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
-import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study-post.scss"
 import PageStyles from "./post.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 function PostPage({ pageContext, data, location }) {
   const categoriesPaths = [
@@ -57,10 +58,10 @@ function PostPage({ pageContext, data, location }) {
   // console.log()
   // let previousPost = (typeof(pageContext.prevNode) !== 'undefined' || pageContext.prevNode != null) ?
   const previousPost = pageContext.prevNode
-    ? "/the-study/" + pageContext.prevNode.slug
+    ? "/blog/" + pageContext.prevNode.slug
     : null
   const nextPost = pageContext.nextNode
-    ? "/the-study/" + pageContext.nextNode.slug
+    ? "/blog/" + pageContext.nextNode.slug
     : null
   /*
   let testIntro = content.slice(1, 2)
@@ -84,8 +85,8 @@ function PostPage({ pageContext, data, location }) {
   */
 
   return (
-    <div className={PageStyles.blogPostPage}>
-      <DefaultPageLayout location="the-study-post">
+    <div className={PageStyles.blogPostPage + " " + RowStyles.rowStyling}>
+      <DefaultPageLayout location="theStudyPost">
         {// Meta description for Genius Lab category post
         mainCategory.name === "Genius Lab" && (
           <Helmet>
@@ -116,13 +117,20 @@ function PostPage({ pageContext, data, location }) {
         )}
 
         <div className="page-wrapper">
-          <div class="hero-padding" />
+          <div class={PageStyles.heroPadding + " hero-padding"} />
           <Main>
             <Container>
-              <div className="row padded short-bottom">
-                <div className="col-lg-1" />
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
                 <div className="col-lg-8">
-                  <div className="pagination">
+                  <div className={PageStyles.pagination + " pagination"}>
                     {previousPost != null ? (
                       <a href={previousPost}>
                         <img src={leftChevron} alt="Navigate to Previous" />
@@ -141,14 +149,19 @@ function PostPage({ pageContext, data, location }) {
                     )}
                   </div>
                 </div>
-                <div className="col-lg-1" />
               </div>
-              <div className="blog-header">
-                <div className="row">
-                  <div className="col-lg-2" />
-                  <div className="col-lg-9">
-                    <div className="row mobile-image-row">
-                      <div className="col-xs-12">
+              <div className={PageStyles.blogHeader + " blog-header"}>
+                <div className={RowStyles.row}>
+                  <div className="col-lg-9 offset-lg-2">
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        PageStyles.mobileImageRow +
+                        " mobile-image-row"
+                      }
+                    >
+                      <div className={PageStyles.imgHolder + " col-xs-12"}>
                         <Img
                           fluid={
                             post.featured_media.localFile.childImageSharp.fluid
@@ -156,24 +169,36 @@ function PostPage({ pageContext, data, location }) {
                         />
                       </div>
                     </div>
-                    <div className="row upper-row">
+                    <div
+                      className={
+                        RowStyles.row + " " + PageStyles.upperRow + " upper-row"
+                      }
+                    >
                       <div class="col-lg-9 order-lg-1 order-sm-3">
-                        <h1 className="title">{he.decode(post.title)}</h1>
+                        <h1 className={PageStyles.title + " title"}>
+                          {he.decode(post.title)}
+                        </h1>
                       </div>
                       <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
-                        <div className="label primary">
+                        <div
+                          className={
+                            PageStyles.label + " " + PageStyles.primary
+                          }
+                        >
                           <p>{mainCategory.name}</p>
                         </div>
                       </div>
 
                       <div className="col-sm-12 col-lg-4 order-sm-4 order-lg-3">
-                        <div className="byline">
-                          <p className="date">{post.date}</p>
+                        <div className={PageStyles.byLine + " byline"}>
+                          <p className={PageStyles.date + " date"}>
+                            {post.date}
+                          </p>
                           <p className="author">{post.author.name}</p>
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
-                        <div className="share-icons">
+                        <div className={PageStyles.shareIcons + " share-icons"}>
                           <p>Share:</p>
                           <a href={facebookShareLink}>
                             {/* https://www.facebook.com/DoctorGeniusMarketing*/}
@@ -206,23 +231,24 @@ function PostPage({ pageContext, data, location }) {
                   <div className="col-lg-1" />
                 </div>
               </div>
-              <div className="row">
+              <div className={RowStyles.row}>
                 <div className="col-lg-1" />
                 <div className="col-lg-10">
-                  <div className="spacer solid" />
+                  <div className={PageStyles.spacer + " " + PageStyles.solid} />
                 </div>
                 <div className="col-lg-1" />
               </div>
-              <div className="row">
-                <div className="col-lg-1" />
+              <div className={RowStyles.row}>
                 <div className="col-lg-8">
-                  <div className="blog-content">
+                  <div className={PageStyles.blogContent + " blog-content"}>
                     <div
                       className="intro"
                       dangerouslySetInnerHTML={{ __html: intro }}
                     />
 
-                    <div className="featured-image">
+                    <div
+                      className={PageStyles.featuredImage + " featured-image"}
+                    >
                       <Img
                         fluid={
                           post.featured_media.localFile.childImageSharp.fluid
@@ -235,15 +261,30 @@ function PostPage({ pageContext, data, location }) {
                     />
                   </div>
                 </div>
-                <div className="col-lg-1" />
               </div>
 
-              <div className="full-bleed-wrapper pad-md events">
-                <div className="full-bleed grey-background" />
+              <div
+                className={
+                  PageStyles.events + " full-bleed-wrapper pad-md events"
+                }
+              >
+                <div
+                  className={
+                    PageStyles.greyBackground + " full-bleed grey-background"
+                  }
+                />
                 <div className="full-bleed-content-wrapper">
                   {/* Begin Events component */}
-                  <div className="events-section">
-                    <div className="row padded tall-top">
+                  <div className={PageStyles.eventsSection}>
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        RowStyles.padded +
+                        " " +
+                        RowStyles.tallTop
+                      }
+                    >
                       <div className="col-lg-12">
                         <div className="title-holder">
                           <h4 className="blog-heading">Webinars & Events</h4>
@@ -254,7 +295,15 @@ function PostPage({ pageContext, data, location }) {
                             </a>
                           </div>
                         </div>
-                        <div className="spacer solid small" />
+                        <div
+                          className={
+                            PageStyles.spacer +
+                            " " +
+                            PageStyles.small +
+                            " " +
+                            PageStyles.solid
+                          }
+                        />
                       </div>
                       {data.events.edges.map(({ node }) => (
                         <div className="col-lg-3">
@@ -277,35 +326,11 @@ function PostPage({ pageContext, data, location }) {
                 </div>
               </div>
               {/* Begin Demo Footer */}
-              <div className="row padded tall-top request-demo-footer">
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5">
-                  <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-9 col-md-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter
+                smWidth="9"
+                mdWidth="5"
+                contentBlockID={PageStyles.demoContentBlock}
+              />
               {/* End Demo Footer */}
             </Container>
           </Main>

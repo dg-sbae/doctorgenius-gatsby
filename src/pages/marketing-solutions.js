@@ -8,23 +8,30 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
+import InnerTitle from "../components/inner-title.js"
+import SecondaryNavigation from "../components/SecondaryNavigation"
+import Hero from "../components/Hero"
+import RequestDemoFooter from "../components/request-demo-footer"
 
-import thinArrowRight from "../img/right-arrow.svg"
-import contentMarketingIcon from "../img/contract.svg"
-import responsiveWebsitesIcon from "../img/website.svg"
-import digitalAdvertisingIcon from "../img/digital-advertising.svg"
-import onlineReputationIcon from "../img/online-reputation.svg"
-import ourTechnologyIcon from "../img/our-technology.svg"
-import hostingSolutionsIcon from "../img/hosting-solutions.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/marketing-solutions.scss"
 import PageStyles from "./marketing-solutions.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  pageType: "marketingSolutions",
+  strapline: "Marketing Solutions",
+  title: [<span>Predictable </span>, " Practice Growth Solution"],
+  content: "Proven and innovative solutions to move your business forward.",
+}
 
 const MarketingSolutions = data => {
   const images = data.data
   return (
-    <div className={PageStyles.marketingSolutionsPage}>
+    <div
+      className={PageStyles.marketingSolutionsPage + " " + RowStyles.rowStyling}
+    >
       <DefaultPageLayout location="marketing-solutions">
         <Helmet>
           <title>
@@ -38,114 +45,22 @@ const MarketingSolutions = data => {
         </Helmet>
         <div className="marketing-solutions">
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className="valign-wrapper row">
-                  <div className="col-sm-12">
-                    <div
-                      className={
-                        PageStyles.heroContent + " hero-content accent-block"
-                      }
-                    >
-                      <h1>Marketing Solutions</h1>
-                      <h2>
-                        <span>Predictable</span> Practice Growth Solution
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          Proven and innovative solutions to move your business
-                          forward.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>
               {/* Begin secondary nav Component: */}
-              <div className="row">
+              <div className={RowStyles.row}>
                 <div className="col-sm-12 panel-row">
-                  <div className="secondary-nav-target">
-                    <div className="secondary-nav">
-                      <div className="panel">
-                        <div className="icon-wrapper">
-                          <a href="/marketing-solutions/websites">
-                            <img
-                              className="img-icon"
-                              src={responsiveWebsitesIcon}
-                              alt="Responsive Websites"
-                            />
-                          </a>
-                        </div>
-                        <p>Responsive Websites</p>
-                      </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
-                          <a href="/marketing-solutions/content-marketing">
-                            <img
-                              className="img-icon"
-                              src={contentMarketingIcon}
-                              alt="Content Marketing"
-                            />
-                          </a>
-                        </div>
-                        <p>Content Marketing</p>
-                      </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
-                          <a href="/marketing-solutions/digital-advertising">
-                            <img
-                              className="img-icon"
-                              src={digitalAdvertisingIcon}
-                              alt="Digital Advertising"
-                            />
-                          </a>
-                        </div>
-                        <p>Digital Advertising</p>
-                      </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
-                          <a href="/marketing-solutions/online-reputation-management">
-                            <img
-                              className="img-icon"
-                              src={onlineReputationIcon}
-                              alt="Online Reputation"
-                            />
-                          </a>
-                        </div>
-                        <p>Online Reputation</p>
-                      </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
-                          <a href="/marketing-solutions/our-technology">
-                            <img
-                              className="img-icon"
-                              src={ourTechnologyIcon}
-                              alt="Our Technology"
-                            />
-                          </a>
-                        </div>
-                        <p>Our Technology</p>
-                      </div>
-                      <div className="panel">
-                        <div className="icon-wrapper">
-                          <a href="/marketing-solutions/hosting-solutions">
-                            <img
-                              className="img-icon"
-                              src={hostingSolutionsIcon}
-                              alt="Hosting Solutions"
-                            />
-                          </a>
-                        </div>
-                        <p>Hosting Solutions</p>
-                      </div>
-                    </div>
-                  </div>
+                  <SecondaryNavigation
+                    pageType="marketingSolutions"
+                    currentPage="parent"
+                  />
                 </div>
               </div>
               {/* End secondary nav Component */}
@@ -156,14 +71,26 @@ const MarketingSolutions = data => {
               />
               {/* End mobile secondary navigation component */}
               {/* Begin Split Row of content and image */}
-              <div className="row padded short-top short-bottom odd-row proven-results-row">
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5 order-sm-2 order-md-1">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom +
+                  " " +
+                  PageStyles.oddRow
+                }
+              >
+                <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Proven and tested results in every step of the way
-                      </h2>
+                    <InnerTitle
+                      title="Proven and tested results in every step of the way"
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p className="s-thin">
                           Powerful data-driven technology helps you leverage
@@ -171,10 +98,13 @@ const MarketingSolutions = data => {
                           performance metrics, make informed business decisions,
                           and improve efficiencies
                         </p>
-                        <a href="/case-study" className="link-with-icon">
+                        <a
+                          href="/case-study"
+                          className={PageStyles.linkWithIcon}
+                        >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           See Case Study
@@ -191,26 +121,42 @@ const MarketingSolutions = data => {
                     }
                     alt="Ligthhouse Page Speed Score"
                     className={
-                      PageStyles.lighthouseImage +
-                      " img-responsive blur-bleed lighthouse-image"
+                      PageStyles.lighthouseImage + " " + PageStyles.blurBleed
                     }
                   />
                 </div>
               </div>
               {/* End Split Row of content and image */}
               {/* Begin Split Row of image and content */}
-              <div className="row padded short-top tall-bottom even-row dashboard-row">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.tallBottom +
+                  " " +
+                  PageStyles.evenRow
+                }
+              >
                 <div className="col-sm-10 col-md-6">
                   <Img
                     fluid={images.portalDashboard.childImageSharp.fluid}
-                    className="img-responsive blur-bleed"
+                    className={
+                      PageStyles.portalDashboard + " " + PageStyles.blurBleed
+                    }
                     alt="Our Client Dashboard"
                   />
                 </div>
-                <div className="col-sm-9 col-md-5">
+                <div className={PageStyles.toolsYouNeed + " col-sm-9 col-md-5"}>
                   <div className="content-block">
-                    <div className="inner-title">
-                      <h2>All the tools you'll need to be in control. </h2>
+                    <InnerTitle
+                      title="All the tools you'll need to be in control."
+                      inContentBlock
+                    />
+                    <div>
                       <div className="accented-paragraph">
                         <p>
                           In order to for you to thrive online, you must also
@@ -220,11 +166,11 @@ const MarketingSolutions = data => {
                         </p>
                         <a
                           href="/marketing-solutions/our-technology"
-                          className="link-with-icon"
+                          className={PageStyles.linkWithIcon}
                         >
                           <img
                             src={rightArrowBlue}
-                            className="link-icon"
+                            className={PageStyles.linkIcon}
                             alt="Icon of a Right Arrow"
                           />
                           Our Technology
@@ -245,21 +191,27 @@ const MarketingSolutions = data => {
                   }
                 ></BackgroundImage>
                 <div className="full-bleed-content-wrapper">
-                  <div className="row">
-                    <div className="col-sm-8 col-md-5">
+                  <div className={RowStyles.row}>
+                    <div
+                      className={
+                        PageStyles.fullBleedContent + " col-sm-8 col-md-5"
+                      }
+                    >
                       <div className="content-block">
-                        <div className="inner-title">
-                          <h2>Check which plan works for your practice</h2>
-                        </div>
+                        <InnerTitle
+                          title="Check which plan works for your practice"
+                          inContentBlock
+                        />
+
                         <div className="accented-paragraph medium-width">
                           <p>
                             From new patient acquisition to retention, Doctor
                             Genius has you covered.
                           </p>
-                          <a href="/plans" className="link-with-icon">
+                          <a href="/plans" className={PageStyles.linkWithIcon}>
                             <img
                               src={rightArrowBlue}
-                              className="link-icon"
+                              className={PageStyles.linkIcon}
                               alt="Icon of a Right Arrow"
                             />
                             See Our Plans
@@ -272,36 +224,9 @@ const MarketingSolutions = data => {
                 </div>
               </div>
               {/* End Full bleed content row (reversed)*/}
+
               {/* Begin Demo Footer */}
-              <div className="row padded tall-top request-demo-footer">
-                <div className="col-md-1" />
-                <div className="col-sm-9 col-md-5">
-                  <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Start your <span>success</span> with Doctor Genius
-                        today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-9 col-md-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <RequestDemoFooter smWidth="9" />
               {/* End Demo Footer */}
             </Container>
           </Main>

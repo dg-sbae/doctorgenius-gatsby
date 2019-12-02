@@ -1,6 +1,12 @@
 @import "../styles/_site-variables.scss";
 
 .privacyPolicyPage {
+  .privacyPolicy {
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
   /* Styles unique to this page component */
   .gbiPrivacyPolicy:before,
   .gbiPrivacyPolicy:after {
@@ -24,14 +30,12 @@
     color: rgba(75, 75, 75, 1);
     b {
       color: black;
+      font-weight: $font-weight-semibold;
     }
   }
   address {
-    margin-left: 2rem;
+    // margin-left: 2rem;
     color: $primary;
-  }
-  .innerTitle {
-    text-align: center;
   }
   ol {
     padding-inline-start: 0;
@@ -48,9 +52,5 @@
   }
   ul {
     margin-bottom: 15px;
-  }
-  li {
-    padding-top: 5px;
-    padding-bottom: 5px;
   }
 }

@@ -7,20 +7,29 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import InnerTitle from "../components/inner-title"
+import Hero from "../components/Hero"
+import RequestDemoFooter from "../components/request-demo-footer"
 
-import "../styles/case-study.scss"
 import PageStyles from "./case-study.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
-import thinArrowRight from "../img/right-arrow.svg"
 import newPatientOppIcon from "../img/icon/new-patient-opportunity.svg"
 import marketingSolutionsIcon from "../img/icon/marketing-solutions-suite.svg"
 import liveSupportIcon from "../img/icon/live-support-concierge.svg"
 import performanceCampaignIcon from "../img/icon/performance-driven-campaigns.svg"
 
+const heroConfig = {
+  strapline: "Case Study",
+  title: [<span>Challenge </span>, " Accepted"],
+  content:
+    "The problem, the answer, and the outcome. Doctor Genius’ performance driven marketing platform in action.",
+}
+
 const CaseStudy = data => {
   const images = data.data
   return (
-    <div className={PageStyles.caseStudyPage}>
+    <div className={PageStyles.caseStudyPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="case-study">
         <Helmet>
           <title>
@@ -34,50 +43,29 @@ const CaseStudy = data => {
         </Helmet>
         <div>
           <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-            <div className={PageStyles.hero + " hero"}>
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className="valign-wrapper row">
-                  <div className="col-sm-12">
-                    <div className="hero-content">
-                      <div
-                        className={
-                          PageStyles.accentBlock + " hero-content accent-block"
-                        }
-                      >
-                        <h1>Case Study</h1>
-                        <h2>
-                          <span>Challenge</span> Accepted
-                        </h2>
-                        <div className="accented-paragraph">
-                          <p>
-                            The problem, the answer, and the outcome. Doctor
-                            Genius’ performance driven marketing platform in
-                            action.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType="caseStudy"
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded panel-row">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">The Client</h2>
-                  </div>
+                  <InnerTitle title="The Client" underlined centered />
                 </div>
               </div>
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div
                   className={
                     PageStyles.logoBlock +
@@ -85,7 +73,7 @@ const CaseStudy = data => {
                   }
                 >
                   <img
-                    className={PageStyles.imgResponsive + " img-responsive"}
+                    className={PageStyles.imgResponsive}
                     src={images.titanDentalLogo.childImageSharp.fixed.src}
                     alt="Titan Dental Care - Digital Marketing Client"
                   />
@@ -119,20 +107,22 @@ const CaseStudy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded panel-row">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">The Challenge</h2>
-                  </div>
+                  <InnerTitle title="The Challenge" underlined centered />
                 </div>
               </div>
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-sm-12 col-md-10 order-2 col-lap-6 order-lap-1 col-lg-6 order-lg-1">
-                  <div className="">
+                  <div>
                     <p>
                       The plan was to rebuild his complete online branding with
                       a new website. Expand his full digital presence across the
@@ -177,24 +167,26 @@ const CaseStudy = data => {
                 >
                   <Img
                     fluid={images.theChallengeImage.childImageSharp.fluid}
-                    className={PageStyles.imgResponsive + " img-responsive"}
+                    className={PageStyles.imgResponsive}
                     alt="Dental Office"
                   />
                 </div>
               </div>
 
-              <div className="row padded panel-row">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">The Solutions</h2>
-                  </div>
+                  <InnerTitle title="The Solutions" underlined centered />
                 </div>
               </div>
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div
                   className={
                     PageStyles.OurPlansIMGContainer +
@@ -203,7 +195,7 @@ const CaseStudy = data => {
                 >
                   <img
                     className={
-                      PageStyles.imgResponsive + " img-responsive blur-bleed"
+                      PageStyles.imgResponsive + " " + PageStyles.blurBleed
                     }
                     src={images.theSolutionsImage.childImageSharp.fixed.src}
                     alt="Acquire New Patients"
@@ -212,34 +204,26 @@ const CaseStudy = data => {
                 <div
                   className={
                     PageStyles.PanelQuadrant +
-                    " col-sm-10 col-md-10 col-lap-5 col-lg-5 panel-quadrant"
+                    " col-sm-10 col-md-10 col-lap-5 col-lg-5"
                   }
                 >
-                  <div className={PageStyles.row + " row"}>
+                  <div className={RowStyles.row}>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
-                        <div
-                          className={PageStyles.iconWrapper + " icon-wrapper"}
-                        >
+                      <div className={PageStyles.Panel}>
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={newPatientOppIcon}
                             alt="Handshake icon"
                           />
                         </div>
                       </div>
 
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           New Patient
                           <br />
@@ -254,26 +238,20 @@ const CaseStudy = data => {
                     </div>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.Panel}>
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={marketingSolutionsIcon}
                             alt="Webpage icon"
                           />
                         </div>
                       </div>
 
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           Marketing
                           <br />
@@ -288,28 +266,22 @@ const CaseStudy = data => {
                       </div>
                     </div>
                   </div>
-                  <div className={PageStyles.row + " row"}>
+                  <div className={RowStyles.row}>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.Panel}>
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={liveSupportIcon}
                             alt="People chat icon"
                           />
                         </div>
                       </div>
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           Live Support
                           <br />
@@ -325,25 +297,19 @@ const CaseStudy = data => {
                     </div>
                     <div
                       className={
-                        PageStyles.PanelQuadItem +
-                        " col-sm-12 col-md-6 panel-quad-item"
+                        PageStyles.PanelQuadItem + " col-sm-12 col-md-6"
                       }
                     >
-                      <div className={PageStyles.Panel + " panel"}>
-                        <div className="icon-wrapper">
+                      <div className={PageStyles.Panel}>
+                        <div className={PageStyles.iconWrapper}>
                           <img
-                            className="img-icon"
+                            className={PageStyles.imgIcon}
                             src={performanceCampaignIcon}
                             alt="Newspaper icon"
                           />
                         </div>
                       </div>
-                      <div
-                        className={
-                          PageStyles.PanelQuadTextBlock +
-                          " panel-quad-text-block"
-                        }
-                      >
+                      <div className={PageStyles.PanelQuadTextBlock}>
                         <h4>
                           Performance Driven
                           <br />
@@ -360,15 +326,17 @@ const CaseStudy = data => {
                   </div>
                 </div>
               </div>
-              <div className="row padded short-top">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop
+                }
+              >
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
-                    <h2 className="underline">The Results</h2>
-                  </div>
+                  <InnerTitle title="The Results" underlined centered />
                 </div>
                 <div
                   className={
@@ -376,51 +344,51 @@ const CaseStudy = data => {
                     " col-md-7 col-lap-7 col-lg-7 case-study-container"
                   }
                 >
-                  <div
-                    className={PageStyles.innerTitle + " inner-title center"}
-                  >
-                    <h3 className="m-0">Case Study: Titan Dental</h3>
-                    <div className={PageStyles.subtitle + " subtitle muted"}>
-                      The first 6 months
-                    </div>
-                  </div>
+                  <InnerTitle
+                    title="Case Study: Titan Dental"
+                    inContentBlock
+                    subtitle="The first 6 months"
+                    centered
+                    id={PageStyles.caseStudyHeader}
+                  />
+
                   <div
                     className={PageStyles.caseStudyTable + " case-study-table"}
                   >
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>1,125%</p>
+                      <p className={PageStyles.callout}>1,125%</p>
                       <p>Increase in Google First-Page Revenue</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>100%</p>
+                      <p className={PageStyles.callout}>100%</p>
                       <p>Increase in Revenue</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>60%</p>
+                      <p className={PageStyles.callout}>60%</p>
                       <p>Growth in organic Search Traffic</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>500%</p>
+                      <p className={PageStyles.callout}>500%</p>
                       <p>Growth in Reviews Across the Web</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>200%</p>
+                      <p className={PageStyles.callout}>200%</p>
                       <p>New Patient Appointments</p>
                     </div>
                     <div
                       className={PageStyles.caseStudyItem + " case-study-item"}
                     >
-                      <p className={PageStyles.callout + " callout"}>88%</p>
+                      <p className={PageStyles.callout}>88%</p>
                       <p>Increase in New Patient Calls!</p>
                     </div>
                   </div>
@@ -429,48 +397,14 @@ const CaseStudy = data => {
                   <Img
                     fluid={images.searchResultsPage.childImageSharp.fluid}
                     className={
-                      PageStyles.imgResponsive + " img-responsive blur-bleed"
+                      PageStyles.imgResponsive + " " + PageStyles.blurBleedRight
                     }
                     alt="Local Business Search Results Page"
                   />
                 </div>
               </div>
-              <div
-                className={
-                  PageStyles.requestDemoFooter +
-                  " row padded tall-top request-demo-footer"
-                }
-              >
-                <div className="col-lg-1" />
-                <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
-                  <div className="content-block">
-                    <div className={PageStyles.innerTitle + " inner-title"}>
-                      <h2>
-                        Start your
-                        <span className="font-weight-semibold"> success </span>
-                        with Doctor Genius today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p className="s-thin">
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-11 col-md-5 col-lg-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-1" />
-              </div>
+
+              <RequestDemoFooter smWidth="11" sThin />
             </Container>
           </Main>
         </div>

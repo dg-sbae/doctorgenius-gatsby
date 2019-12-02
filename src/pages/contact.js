@@ -7,9 +7,10 @@ import ContactForm from "../components/contact-form.js"
 
 import "../styles/contact.scss"
 import PageStyles from "./contact.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 export default props => (
-  <div className={PageStyles.contactPage}>
+  <div className={PageStyles.contactPage + " " + RowStyles.rowStyling}>
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
         <title>
@@ -21,17 +22,13 @@ export default props => (
         />
       </Helmet>
       <div className={props["*"]}>
-        <div className="main-content">
+        <div className={PageStyles.mainContent}>
           <div className={PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}
             <Container>
-              <div className="row padded panel-row title-and-desc">
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-12">
-                  <div
-                    className={
-                      PageStyles.innerTitle + " header inner-title center"
-                    }
-                  >
+                  <div className="header center">
                     <h1>Contact Us</h1>
                     <h3 className={PageStyles.strapline + " strapline"}>
                       Have a question? Need help?
@@ -43,22 +40,14 @@ export default props => (
                   </div>
                 </div>
 
-                <div
-                  className={
-                    PageStyles.contactForm + " row panel-row contact-form"
-                  }
-                >
+                <div className={RowStyles.row + " " + PageStyles.contactForm}>
                   <ContactForm />
                 </div>
               </div>
             </Container>
 
             <Container>
-              <div
-                className={
-                  PageStyles.infoAndMap + " row panel-row info-and-map"
-                }
-              >
+              <div className={RowStyles.row + " " + PageStyles.infoAndMap}>
                 <div
                   className={
                     PageStyles.companyInfo +
@@ -78,8 +67,7 @@ export default props => (
                   </p>
                   <button
                     className={
-                      PageStyles.getDirections +
-                      " mt-4 button nav-button transparent get-directions"
+                      PageStyles.getDirections + " mt-4 get-directions"
                     }
                   >
                     <a

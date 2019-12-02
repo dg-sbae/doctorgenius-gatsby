@@ -5,6 +5,7 @@ import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 
 import ContactFormStyles from "./contact-form.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 import $ from "jquery"
 
@@ -134,11 +135,13 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="form-wrapper">
+      <div
+        className={RowStyles.rowStyling + " " + ContactFormStyles.formWrapper}
+      >
         <form
           onLoad={this.focusWithoutScrolling}
           onSubmit={this.handleFormSubmit}
-          className="row"
+          className={RowStyles.row}
         >
           <div
             className={
@@ -151,7 +154,7 @@ class ContactForm extends React.Component {
                 this.name = ref
               }}
               type="text"
-              className="form-control"
+              className={ContactFormStyles.formControl + " form-control"}
               id="input-name"
               required
             />
@@ -167,7 +170,7 @@ class ContactForm extends React.Component {
                 this.phone = ref
               }}
               type="tel"
-              className="form-control"
+              className={ContactFormStyles.formControl + " form-control"}
               id="input-phone"
               required
             />
@@ -183,7 +186,7 @@ class ContactForm extends React.Component {
                 this.email = ref
               }}
               type="email"
-              className="form-control"
+              className={ContactFormStyles.formControl + " form-control"}
               id="input-email"
               required
             />
@@ -212,8 +215,12 @@ class ContactForm extends React.Component {
             <button
               type="submit"
               className={
+                ContactFormStyles.button +
+                " " +
+                ContactFormStyles.flat +
+                " " +
                 ContactFormStyles.submitButton +
-                " button btn flat submit-contact"
+                " btn submit-contact"
               }
             >
               Contact Us

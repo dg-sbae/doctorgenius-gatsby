@@ -7,16 +7,31 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import FAQAccordion, { FAQ } from "../components/faq-accordion"
+import InnerTitle from "../components/inner-title.js"
+import Hero from "../components/Hero"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import checkmark from "../img/checked.svg"
-import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/plans.scss"
 import PageStyles from "./plans.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  pageType: "plans",
+  strapline: "Our Plans",
+  title: [
+    <span>Solution To Your</span>,
+    " Online Marketing ",
+    <span>Needs</span>,
+  ],
+  content:
+    "From new patient acquisition to retention, Doctor Genius has you covered.",
+}
 
 const Plans = data => {
   return (
-    <div className={PageStyles.plansPage}>
+    <div className={PageStyles.plansPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="plans">
         <Helmet>
           <title>
@@ -29,559 +44,959 @@ const Plans = data => {
         </Helmet>
         <div className="plans">
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid}>
-            <div className="hero">
-              {/* Hero will be a layout component */}
-
-              <Container>
-                <div className="valign-wrapper row">
-                  <div className="col-sm-12">
-                    <div className="hero-content accent-block">
-                      <h1>Our Plans</h1>
-                      <h2>
-                        <span>Solution To Your</span> Online Marketing{" "}
-                        <span>Needs</span>
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          From new patient acquisition to retention, Doctor
-                          Genius has you covered.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
           </BackgroundImage>
           <Main>
             <Container>
-              <div className="row padded sm-pad-none">
+              <div
+                className={
+                  RowStyles.row + " " + RowStyles.padded + " sm-pad-none"
+                }
+              >
                 <div className="col-sm-12 sm-pad-none">
-                  <div className="plans-table">
+                  <div className={PageStyles.plansTable + " plans-table"}>
                     {/* <!-- image-row --> */}
-                    <div className="grid-item image-row">
-                      <div className="background-holder" />
+                    <div
+                      className={
+                        PageStyles.imageRow +
+                        " " +
+                        PageStyles.gridItem +
+                        " grid-item image-row"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.backgroundHolder + " background-holder"
+                        }
+                      />
                       <p>DoctorGenius Tier Package</p>
                     </div>
-                    <div className="grid-item column-signup">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup +
+                        " grid-item column-signup"
+                      }
+                    >
                       <h2>Silver</h2>
                       {/*<p className="column-signup-body">
                       Lorem Ipsum is simply dummy text of the printing and type.
                     </p>*/}
-                      <a href="/demo" className="button rounder">
+                      <a
+                        href="/demo"
+                        className={PageStyles.button + " " + PageStyles.rounder}
+                      >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
-                    <div className="grid-item column-signup">
-                      <span className="recommended button rounder">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup +
+                        " grid-item column-signup"
+                      }
+                    >
+                      <span className={PageStyles.recommended}>
                         Recommended
                       </span>
                       <h2>Gold</h2>
                       {/*<p className="column-signup-body">
                       Lorem Ipsum is simply dummy text of the printing and type.
                     </p>*/}
-                      <a href="/demo" className="button rounder">
+                      <a
+                        href="/demo"
+                        className={PageStyles.button + " " + PageStyles.rounder}
+                      >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
-                    <div className="grid-item column-signup">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup +
+                        " grid-item column-signup"
+                      }
+                    >
                       <h2>Platinum</h2>
                       {/*<p className="column-signup-body">
                       Lorem Ipsum is simply dummy text of the printing and type.
                     </p>*/}
-                      <a href="/demo" className="button rounder">
+                      <a
+                        href="/demo"
+                        className={PageStyles.button + " " + PageStyles.rounder}
+                      >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
                     {/* <!-- /header-row --> */}
 
                     {/* <!-- details section 1: --> */}
-                    <dt className="spacer-row justify-content-start">
-                      <div className="plans-row-title">
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
                         Genius Framework Website
                       </div>
                     </dt>
                     {/* <!-- details section 1 row 1: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       High Performance Website
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 1 row 2: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       SEO Focused Domain Name (Optional)
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 1 row 3: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Secure Reliable Hosting
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 1 row 4: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Migrated/Scraped Pages
                     </div>
-                    <div className="grid-item">10 Pages</div>
-                    <div className="grid-item">20 Pages</div>
-                    <div className="grid-item">50 Pages</div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      10 Pages
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      20 Pages
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      50 Pages
+                    </div>
                     {/* <!-- details section 1 row 5: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Website Revisions
                     </div>
-                    <div className="grid-item">1 Round</div>
-                    <div className="grid-item">3 Rounds</div>
-                    <div className="grid-item">4 Rounds</div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      1 Round
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      3 Rounds
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      4 Rounds
+                    </div>
 
                     {/* <!-- details section 2: --> */}
-                    <dt className="spacer-row justify-content-start">
-                      <div className="plans-row-title">
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
                         Strategic Content Writing
                       </div>
                     </dt>
                     {/* <!-- details section 2 row 1: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Targeted Organic Keywords
                     </div>
-                    <div className="grid-item">25 Keywords</div>
-                    <div className="grid-item">35 Keywords</div>
-                    <div className="grid-item">55 Keywords</div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      25 Keywords
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      35 Keywords
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      55 Keywords
+                    </div>
                     {/* <!-- details section 2 row 2: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Industry Related Service Page Content
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 2 row 3: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Doctor & Staff Page
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 2 row 4: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Call to Action Home Page Slides
                     </div>
-                    <div className="grid-item">3 CTA Slides</div>
-                    <div className="grid-item">6 CTA Slides</div>
-                    <div className="grid-item">8 CTA Slides</div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      3 CTA Slides
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      6 CTA Slides
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      8 CTA Slides
+                    </div>
 
                     {/* <!-- details section 3: --> */}
-                    <dt className="spacer-row justify-content-start">
-                      <div className="plans-row-title">
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
                         Search Engine Optimization
                       </div>
                     </dt>
                     {/* <!-- details section 3 row 1: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       On-Site Optimization
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 3 row 2: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Structured Data Markup
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 3 row 3: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Monthly review from an SEO Analyst
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
 
                     {/* <!-- details section 3: --> */}
-                    <dt className="spacer-row justify-content-start">
-                      <div className="plans-row-title">
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
                         Integrated Performance Reporting
                       </div>
                     </dt>
                     {/* <!-- details section 3 row 1: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Google Analytics Integration
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 3 row 2: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Google Ranking Reporting
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 3 row 3: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Ranking Report Monthly Email
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 3 row 4: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       New Patient Inquiry Reporting
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 3 row 5: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Call & Web Submissions Tracking
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 3 row 6: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Google Analyst Integration
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 3 row 7: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Appointment Request Integration
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
 
                     {/* <!-- details section 4: --> */}
-                    <dt className="spacer-row justify-content-start">
-                      <div className="plans-row-title">
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
                         Social Media Promotion
                       </div>
                     </dt>
                     {/* <!-- details section 4 row 1: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Practice Promoter
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 4 row 2: --> */}
-                    <div className="grid-item plans-row-title">Blog Posts</div>
-                    <div className="grid-item">1 Post/Mo</div>
-                    <div className="grid-item">2 Posts/Mo</div>
-                    <div className="grid-item">3 Posts/Mo</div>
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
+                      Blog Posts
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      1 Post/Mo
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      2 Posts/Mo
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      3 Posts/Mo
+                    </div>
                     {/* <!-- details section 4 row 3: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Social Media Syndication
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 4 row 4: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Social Media Branding
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 4 row 5: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Directory Submissions
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 4 row 6: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Duplicate Suppression
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 4 row 7: --> */}
-                    <dt className="spacer-row justify-content-start">
-                      <div className="plans-row-title">
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
                         Paid Advertising Campaigns
                       </div>
                     </dt>
                     {/* <!-- details section 4 row 8: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Google Search Display Banner Advertising
                     </div>
-                    <div className="grid-item" />
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"} />
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 4 row 9: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Google Re‐Marketing Advertising
                     </div>
-                    <div className="grid-item" />
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"} />
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 4 row 10: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Landing Pages on Sub Domains
                     </div>
-                    <div className="grid-item" />
-                    <div className="grid-item">2 Landing Pages</div>
-                    <div className="grid-item">4 Landing Pages</div>
+                    <div className={PageStyles.gridItem + " grid-item"} />
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      2 Landing Pages
+                    </div>
+                    <div className={PageStyles.gridItem + " grid-item"}>
+                      4 Landing Pages
+                    </div>
 
                     {/* <!-- details section 5: --> */}
-                    <dt className="spacer-row justify-content-start">
-                      <div className="plans-row-title">
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
                         Traditional Marketing
                       </div>
                     </dt>
                     {/* <!-- details section 5 row 1: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Logo Creation or Enhancement
                     </div>
-                    <div className="grid-item" />
-                    <div className="grid-item" />
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"} />
+                    <div className={PageStyles.gridItem + " grid-item"} />
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 5 row 2: -->
-                  <div className="grid-item plans-row-title">
+                  <div className={PageStyles.gridItem + " grid-item plans-row-title"}>
                     2k Branded Business Cards
                   </div>
-                  <div className="grid-item" />
-                  <div className="grid-item" />
-                  <div className="grid-item">
+                  <div className={PageStyles.gridItem + " grid-item"} />
+                  <div className={PageStyles.gridItem + " grid-item"} />
+                  <div className={PageStyles.gridItem + " grid-item"}>
                     <img src={checkmark} alt="checkmark" />
                   </div>
                   */}
                     {/* <!-- details section 6: --> */}
-                    <dt className="spacer-row justify-content-start">
-                      <div className="plans-row-title">Call Tracking</div>
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
+                        Call Tracking
+                      </div>
                     </dt>
                     {/* <!-- details section 6 row 1: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Call Tracking Phone Number
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                     {/* <!-- details section 6 row 2: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Call Tracking Web Integration
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
 
                     {/* <!-- details section 7: --> */}
-                    <dt className="spacer-row justify-content-start">
-                      <div className="plans-row-title">Customer Support</div>
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
+                        Customer Support
+                      </div>
                     </dt>
                     {/* <!-- details section 7 row 1: --> */}
-                    <div className="grid-item plans-row-title">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle +
+                        " grid-item plans-row-title"
+                      }
+                    >
                       Dedicated Support Representative
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    <div className="grid-item">
+                    <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
                   </div>
-                  <div className="plans-table no-bg">
+                  <div
+                    className={
+                      PageStyles.plansTable +
+                      " " +
+                      PageStyles.noBg +
+                      " plans-table no-bg"
+                    }
+                  >
                     {/* <!-- cta section: --> */}
-                    <div className="grid-item" />
-                    <div className="grid-item column-signup">
-                      <a href="/demo" className="button rounder">
+                    <div className={PageStyles.gridItem + " grid-item"} />
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup +
+                        " grid-item column-signup"
+                      }
+                    >
+                      <a
+                        href="/demo"
+                        className={PageStyles.button + " " + PageStyles.rounder}
+                      >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
-                    <div className="grid-item column-signup">
-                      <a href="/demo" className="button rounder">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup +
+                        " grid-item column-signup"
+                      }
+                    >
+                      <a
+                        href="/demo"
+                        className={PageStyles.button + " " + PageStyles.rounder}
+                      >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
-                    <div className="grid-item column-signup">
-                      <a href="/demo" className="button rounder">
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup +
+                        " grid-item column-signup"
+                      }
+                    >
+                      <a
+                        href="/demo"
+                        className={PageStyles.button + " " + PageStyles.rounder}
+                      >
                         Sign Up
                       </a>
-                      {/*<a href="/intentional-404/learn-more" className="subtle-link">
+                      {/*<a href="/intentional-404/learn-more" className={PageStyles.subtleLink}>
                       Learn More
                     </a>*/}
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="row padded">
-                <div className="col-sm-3 col-md-1" />
+              <div className={RowStyles.row + " " + RowStyles.padded}>
                 <div className="col-sm-6 col-md-10">
-                  <div className="inner-title center">
-                    <h2>Commonly Asked Questions</h2>
-                  </div>
+                  <InnerTitle title="Commonly Asked Questions" centered />
                 </div>
-                <div className="col-sm-3 col-md-1" />
               </div>
-              <div className="row padded sm-pad-none">
-                <div className="col-md-1" />
+              <div
+                className={
+                  RowStyles.row + " " + RowStyles.padded + " sm-pad-none"
+                }
+              >
                 <div className="col-sm-12 col-md-10">
                   <div className="faq-table lg-pad">
                     <FAQAccordion>
@@ -787,39 +1202,8 @@ const Plans = data => {
                     </FAQAccordion>
                   </div>
                 </div>
-                <div className="col-md-1" />
               </div>
-              <div className="row padded tall-top request-demo-footer">
-                <div className="col-lg-1" />
-                <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
-                  <div className="content-block">
-                    <div className="inner-title">
-                      <h2>
-                        Start your
-                        <span className="font-weight-semibold"> success </span>
-                        with Doctor Genius today!
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p className="s-thin">
-                          The Genius platform makes every part of your company
-                          process more efficient. Our support team is very
-                          excited to help you and get your company on the right
-                          path of success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-11 col-md-5 col-lg-5">
-                  <div className="center">
-                    <a href="/demo" className="button flat white-text">
-                      Request Demo{" "}
-                      <img src={thinArrowRight} alt="Arrow Right" />
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-1" />
-              </div>
+              <RequestDemoFooter smWidth="11" sThin />
             </Container>
           </Main>
         </div>
