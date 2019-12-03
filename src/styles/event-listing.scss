@@ -1,4 +1,25 @@
 @import "_site-variables.scss";
+/* Adding globally for now, this will need to be incorporated into the new CSS system on merge */
+.event-listing {
+  .cta-btns {
+    display: flex;
+  }
+  @include media(">=laptop") {
+    justify-content: space-between;
+  }
+  @include media("<laptop") {
+    .hero-overlay {
+      background-image: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.2) 0,
+        #fff 85%
+      );
+    }
+    .cta-btns {
+      justify-content: center;
+    }
+  }
+}
 
 .event-listing {
   @include media(">=laptop") {

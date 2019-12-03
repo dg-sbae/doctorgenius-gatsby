@@ -19,6 +19,7 @@ import theStudy from "../img/icon/the-study-white.svg"
 import company from "../img/icon/hotel.svg"
 import contactUs from "../img/icon/contact-us-white.svg"
 import loginPortalIcon from "../../public/icon/icon-portal.svg"
+import eventsIcon from "../img/icon/calendar-white.svg"
 
 import "bootstrap/dist/js/bootstrap.min.js"
 // import "../../static/scripts/navigationFunctionality.js"
@@ -686,15 +687,41 @@ const CompanyListLink = props => (
                 </div>
               </Link>
             </div>
-            <div className="col-sm-6">
-              <div
-                className={
-                  NavStyles.dropdownContentBlock + " dropdown-content-block"
-                }
-              >
-                <Link className="" to={props.to} />
-                <p />
-              </div>
+            <div className="col-sm-6 ">
+              <Link className="" to="/events">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
+                    <img
+                      className="image-icon"
+                      src={eventsIcon}
+                      alt="Events Page Icon"
+                    />
+                  </div>
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
+                      Events
+                    </span>
+                    <p>
+                      Stay up to date with Doctor Genius and all future events
+                    </p>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -805,21 +832,20 @@ const StudySingleListLink = props => (
             </div>
             {/* Hidden until the content for page is finalized */}
             {/*<div className="col-sm-6">
-              <div className="nav-icon-wrapper">
+            <div className="nav-icon-wrapper">
                 <div className={NavStyles.iconWrapper}>
-                  <img className="image-icon" src={webinars} />
+                <img className="image-icon" src={webinars} />
                 </div>
-              </div>
-
-              <div className="dropdown-content-block">
+            </div>
+            <div className="dropdown-content-block">
                 <Link className="" to="/intentional-404">
-                  Webinars
+                Webinars
                 </Link>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                volutpat mi sit amet.
                 </p>
-              </div>
+            </div>
             </div>*/}
           </div>
           <div
@@ -829,57 +855,56 @@ const StudySingleListLink = props => (
           >
             {/* Hidden until the content for page is finalized */}
             {/*<div className="col-sm-6">
-              <div className="nav-icon-wrapper">
+            <div className="nav-icon-wrapper">
                 <div className={NavStyles.iconWrapper}>
-                  <img className="image-icon" src={caseStudy} />
+                <img className="image-icon" src={caseStudy} />
                 </div>
-              </div>
-
-              <div className="dropdown-content-block">
+            </div>
+            <div className="dropdown-content-block">
                 <Link className="" to="/case-study">
-                  Case Studies
+                Case Studies
                 </Link>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                volutpat mi sit amet.
                 </p>
-              </div>
+            </div>
             </div>*/}
             {/* Hidden until the content for page is finalized */}
             {/*<div className="col-sm-6">
-              <div className="nav-icon-wrapper">
+            <div className="nav-icon-wrapper">
                 <div className={NavStyles.iconWrapper}>
-                  <img className="image-icon" src={info} />
+                <img className="image-icon" src={info} />
                 </div>
-              </div>
-              <div className="dropdown-content-block">
+            </div>
+            <div className="dropdown-content-block">
                 <Link className="" to="/intentional-404">
-                  Knowledge Base
+                Knowledge Base
                 </Link>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                volutpat mi sit amet.
                 </p>
-              </div>
+            </div>
             </div>*/}
             {/*</div>*/}
             {/*<div className="row dropdown-row">*/}
             {/* Hidden until the content for page is finalized */}
             {/*<div className="col-sm-6">
-              <div className="nav-icon-wrapper">
+            <div className="nav-icon-wrapper">
                 <div className={NavStyles.iconWrapper}>
-                  <img className="image-icon" src={ourTech} />
+                <img className="image-icon" src={ourTech} />
                 </div>
-              </div>
-              <div className="dropdown-content-block">
+            </div>
+            <div className="dropdown-content-block">
                 <Link className="" to="/intentional-404">
-                  eBooks &amp; Whitepapers
+                eBooks &amp; Whitepapers
                 </Link>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  volutpat mi sit amet.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                volutpat mi sit amet.
                 </p>
-              </div>
+            </div>
             </div>*/}
             <div className="col-sm-6">
               <a

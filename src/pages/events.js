@@ -178,8 +178,8 @@ const EventPage = ({ data }) => {
                 className="card-img-top"
                 src={
                   event.node.all_image_urls.featured_image_url_large != null
-                    ? event.node.all_image_urls.featured_image_url_large
-                        .source_url
+                    ? event.node.featured_media.localFile.childImageSharp.fluid
+                        .src
                     : defaultUpcomingEventImage
                 }
                 alt="Upcoming Event"
@@ -194,7 +194,7 @@ const EventPage = ({ data }) => {
                 <p className={PageStyles.cardEventDate + " card-event-date"}>
                   {format_date_long(event.node.event_date)}
                 </p>
-                <a
+                <Link
                   className={
                     PageStyles.button +
                     " " +
@@ -205,10 +205,10 @@ const EventPage = ({ data }) => {
                     PageStyles.eventMoreInfoBtn +
                     " event-more-info-btn"
                   }
-                  href={event.node.slug}
+                  to={`/events/` + event.node.slug}
                 >
                   + More Info
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -475,7 +475,7 @@ const EventPage = ({ data }) => {
                             </a>
                           ))}
                         {featured_event.slug !== "" && (
-                          <a
+                          <Link
                             className={
                               PageStyles.button +
                               " " +
@@ -485,10 +485,10 @@ const EventPage = ({ data }) => {
                               " " +
                               PageStyles.heroMoreInfoBtn
                             }
-                            href={featured_event.slug}
+                            to={`/events/` + featured_event.slug}
                           >
                             + More Info
-                          </a>
+                          </Link>
                         )}
                       </div>
                     </div>
@@ -789,7 +789,7 @@ export const pageQuery = graphql`
     }
 
     upcoming_events: allWordpressWpEvents(
-      filter: { event_date: { gt: "2019-08-26" }, featured_event: { eq: "0" } }
+      filter: { event_date: { gt: "2019-11-13" }, featured_event: { eq: "0" } }
       limit: 4
     ) {
       edges {
@@ -800,7 +800,7 @@ export const pageQuery = graphql`
     }
 
     past_events: allWordpressWpEvents(
-      filter: { event_date: { lt: "2019-08-26" }, featured_event: { eq: "0" } }
+      filter: { event_date: { lt: "2019-11-13" }, featured_event: { eq: "0" } }
       limit: 4
     ) {
       edges {

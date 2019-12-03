@@ -142,9 +142,9 @@ export default ({ children }) => (
                 FooterStyles.footerContactDetails + " footer-contact-details"
               }
             >
-              2121 Alton Parkway
+              2 S Pointe Dr #200
               <br />
-              Irvine, CA 92606
+              Lake Forest, CA 92630
             </address>
           </div>
           <div className={FooterStyles.socialMediaRow + " social-media-row"}>

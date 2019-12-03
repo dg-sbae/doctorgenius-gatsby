@@ -12,6 +12,7 @@ import Container from "../components/Container"
 import NewsLetterSignUpForm from "../components/newsletter-form.js"
 import RequestDemoFooter from "../components/request-demo-footer"
 import Hero from "../components/Hero"
+import EventsTeaser from "../components/eventsTeaser"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
@@ -243,7 +244,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                     <h3
                       className={
                         PageStyles.blogHeading +
-                        " blog-heading d-sm-none d-lg-block"
+                        " blog-heading d-sm-none d-md-block"
                       }
                     >
                       Latest Posts
@@ -255,7 +256,7 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                         PageStyles.small +
                         " " +
                         PageStyles.solid +
-                        " d-sm-none"
+                        " d-sm-none d-md-block"
                       }
                     />
 
@@ -626,55 +627,8 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                   </PopularPostsColumn>
                 </ResponsivePostsColumn>
               </div>
-              {/* Begin Events component */}
-              <div className={PageStyles.eventsSection}>
-                <div
-                  className={
-                    RowStyles.row +
-                    " " +
-                    RowStyles.padded +
-                    " " +
-                    RowStyles.tallTop
-                  }
-                >
-                  <div className="col-sm-12">
-                    <div className="title-holder">
-                      <h4 className={PageStyles.blogHeading + " blog-heading"}>
-                        Webinars & Events
-                      </h4>
-                      <div className="more-events">
-                        <a href="/intentional-404/MoreEvents">
-                          View More
-                          <img src={rightChevron} alt="View More Events" />
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      className={
-                        PageStyles.spacer +
-                        " " +
-                        PageStyles.solid +
-                        " " +
-                        PageStyles.small
-                      }
-                    />
-                  </div>
-                  {data.events.edges.map(({ node }) => (
-                    <div className="col-sm-3" key={node.title}>
-                      <div className="event-wrapper">
-                        <Img
-                          fluid={data.eventsPlaceholder.childImageSharp.fluid}
-                          alt="Recent Event"
-                        />
-                      </div>
-                      <a href={node.link}>
-                        <p>{he.decode(node.title)}</p>
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* End Events component */}
+
+              <EventsTeaser />
 
               <RequestDemoFooter smWidth="11" sThin />
             </Container>

@@ -89,11 +89,11 @@ const Company = data => {
       <DefaultPageLayout location="company">
         <Helmet>
           <title>
-            Irvine, CA Digital Marketing Agency | About Doctor Genius
+            Lake Forest, CA Digital Marketing Agency | About Doctor Genius
           </title>
           <meta
             name="description"
-            content="Doctor Genius is an Irvine, California based digital marketing agency providing local businesses with branding, websites, content marketing, and social media marketing service."
+            content="Doctor Genius is a Lake Forest, California based digital marketing agency providing local businesses with branding, websites, content marketing, and social media marketing service."
           />
         </Helmet>
         <div className="company">
@@ -126,9 +126,9 @@ const Company = data => {
                     />
                     <div className="accented-paragraph">
                       <p>
-                        We are based in Irvine, California, USA. Doctor Genius
-                        has consistent 5 Star Ratings on Google+, and A Rated
-                        with the BBB. We employ and all-star development,
+                        We are based in Lake Forest, California, USA. Doctor
+                        Genius has consistent 5 Star Ratings on Google+, and A
+                        Rated with the BBB. We employ and all-star development,
                         support, and sales team to provide high level online
                         marketing solutions to medical & health practices within
                         the United States.
@@ -343,12 +343,12 @@ const Company = data => {
                         }
                       >
                         <p>
-                          We are based in Irvine, California, USA. Doctor Genius
-                          has consistent 5 Star Ratings on Google+, and A Rated
-                          with the BBB. We employ and all-star development,
-                          support, and sales team to provide high level online
-                          marketing solutions to medical & health practices
-                          within the United States.
+                          We are based in Lake Forest, California, USA. Doctor
+                          Genius has consistent 5 Star Ratings on Google+, and A
+                          Rated with the BBB. We employ and all-star
+                          development, support, and sales team to provide high
+                          level online marketing solutions to medical & health
+                          practices within the United States.
                         </p>
                         <a
                           href="/demo"

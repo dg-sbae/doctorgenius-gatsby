@@ -168,7 +168,7 @@ const DemoPage = data => {
                       >
                         <div className={DemoPageStyles.planTitle + " title"}>
                           <h3>Platinum Plan</h3>
-                          <p>Maximize Your Pratice Potential</p>
+                          <p>Maximize Your Practice Potential</p>
                         </div>
                         <div
                           className={DemoPageStyles.planStripe + " stripe"}
