@@ -1,6 +1,11 @@
 import React from "react"
+
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
+
+import FormStyles from "./newsletter-form.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
 import $ from "jquery"
 
 class NewsLetterSignUpForm extends React.Component {
@@ -95,7 +100,7 @@ class NewsLetterSignUpForm extends React.Component {
     })
 
     //Additional testing endpoint:
-    /*fetch("https://enj8zi1w9tah.x.pipedream.net", {
+    /*fetch("https://ensbiaw1h4in.x.pipedream.asnet", {
       method: "POST",
       body: stringData,
       headers: {
@@ -111,15 +116,18 @@ class NewsLetterSignUpForm extends React.Component {
 
   render() {
     return (
-      <div className="newsletter row">
+      <div className={RowStyles.row + " " + FormStyles.newsLetter}>
         <div className="col-sm-12">
-          <div className="newsletter-signup">
-            <h4 className="newsletter-heading">Newsletter</h4>
+          <div className={FormStyles.newsLetterSignup}>
+            <h4 className={FormStyles.newsLetterHeading}>Newsletter</h4>
             <p>
               Subscribe to our email newsletter for useful tips and valuable
               resources.
             </p>
-            <form className="newsletter-form" onSubmit={this.handleFormSubmit}>
+            <form
+              className={FormStyles.newsLetterForm}
+              onSubmit={this.handleFormSubmit}
+            >
               <input
                 ref={ref => {
                   this.email = ref
@@ -130,13 +138,16 @@ class NewsLetterSignUpForm extends React.Component {
               />
               <button
                 type="submit"
-                className="button rounder"
+                className={FormStyles.button + " " + FormStyles.rounder}
                 id="newsletter-signup"
               >
                 Submit
               </button>
             </form>
-            <div style={{ display: "none" }} className="lds-ellipsis">
+            <div
+              style={{ display: "none" }}
+              className={FormStyles.ldsEllipsis + " lds-ellipsis"}
+            >
               <div></div>
               <div></div>
               <div></div>
@@ -144,7 +155,7 @@ class NewsLetterSignUpForm extends React.Component {
             </div>
             <div
               className="positive-response"
-              style={{ display: "none", margin: "10px" }}
+              style={{ display: "none", margin: "20px 10px 0" }}
             >
               <img src={checkSuccess} alt="Subscribed!" />
               <p>Subscribed!</p>
@@ -154,7 +165,10 @@ class NewsLetterSignUpForm extends React.Component {
               style={{ display: "none", margin: "10px" }}
             >
               <img src={xFail} alt="Submission Failed" />
-              <p>Submission Failed</p>
+              <p>
+                Submission <br />
+                Failed
+              </p>
             </div>
           </div>
         </div>

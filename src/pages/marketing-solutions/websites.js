@@ -16,7 +16,7 @@ const OurWebsites = data => {
     <MarketingSolutionsTemplate
       page="responsive-websites" /* this should be dynamic from the page props */
       pageTitle="Responsive Websites"
-      pageSubtitle="<span>Design that leaves a lasting</span> impression."
+      pageSubtitle={[<span>Design that leaves a lasting</span>, " impression."]}
       pageIntro="Stun your viewers with exquisitely designed websites & attractive branding. Getting appointments has never been easier."
       metaTitle="Conversion & Mobile First Healthcare Websites | Performance Driven Marketing"
       metaDescription="Start getting the new patients your medical practice deserves. Mobile first results-driven medical websites with performance digital marketing."
@@ -78,7 +78,7 @@ const OurWebsites = data => {
               alt: "A Speedometer",
               title: "Speed",
             },
-            innerTitle: "Websites built to <br/> perform and rank",
+            innerTitle: "Websites built to perform and rank",
             paragraph:
               "Improved site speed is an important signal Google uses in its ranking algorithm. Having a website that loads quickly on both mobile and desktop searches is key to giving your next potential patient the best experience while navigating your website.",
           },

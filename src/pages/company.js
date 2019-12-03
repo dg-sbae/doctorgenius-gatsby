@@ -8,6 +8,8 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
+import InnerTitle from "../components/inner-title"
+import Hero from "../components/Hero"
 
 import logoBlue from "../img/icon/logo-blue.svg"
 import webIcon from "../img/icon/web.svg"
@@ -17,9 +19,19 @@ import starsIcon from "../img/icon/stars.svg"
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/company-page.scss"
+import PageStyles from "./company.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const Company = data => {
   const images = data.data
+
+  const heroConfig = {
+    strapline: "Doctor Genius",
+    title: [<span>What </span>, " we are about"],
+    content:
+      "Doctor Genius establishes and boosts your brand online using innovative digital marketing and search engine optimization strategies.",
+  }
+
   const testimonialContent = [
     {
       cardContent: {
@@ -73,237 +85,45 @@ const Company = data => {
   ]
 
   return (
-    <DefaultPageLayout location="company">
-      <Helmet>
-        <title>
-          Lake Forest, CA Digital Marketing Agency | About Doctor Genius
-        </title>
-        <meta
-          name="description"
-          content="Doctor Genius is an Lake Forest, California based digital marketing agency providing local businesses with branding, websites, content marketing, and social media marketing service."
-        />
-      </Helmet>
-      <div className="company">
-        <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
-          <div className="hero">
-            {/* Hero will be a layout component */}
-
+    <div className={PageStyles.companyPage + " " + RowStyles.rowStyling}>
+      <DefaultPageLayout location="company">
+        <Helmet>
+          <title>
+            Lake Forest, CA Digital Marketing Agency | About Doctor Genius
+          </title>
+          <meta
+            name="description"
+            content="Doctor Genius is a Lake Forest, California based digital marketing agency providing local businesses with branding, websites, content marketing, and social media marketing service."
+          />
+        </Helmet>
+        <div className="company">
+          <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
+            <Hero
+              pageType="company"
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
+          </BackgroundImage>
+          <Main>
             <Container>
-              <div className="valign-wrapper row">
-                <div className="col-sm-12">
-                  <div className="hero-content">
-                    <div className="hero-content accent-block">
-                      <h1>Doctor Genius</h1>
-                      <h2>
-                        <span>What </span>we are about
-                      </h2>
-                      <div className="accented-paragraph">
-                        <p>
-                          Doctor Genius establishes and boosts your brand online
-                          using innovative digital marketing and search engine
-                          optimization strategies.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Container>
-          </div>
-        </BackgroundImage>
-        <Main>
-          <Container>
-            <div className="row padded tall-top">
-              <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6">
-                <div className="content-block">
-                  <div className="innerTitle">
-                    <h2 className="font-weight-medium">
-                      The{" "}
-                      <span className="font-weight-semibold">
-                        Doctor Genius{" "}
-                      </span>
-                      Story
-                    </h2>
-                  </div>
-                  <div className="accented-paragraph">
-                    <p>
-                      We are based in Lake Forest, California, USA. Doctor
-                      Genius has consistent 5 Star Ratings on Google+, and A
-                      Rated with the BBB. We employ and all-star development,
-                      support, and sales team to provide high level online
-                      marketing solutions to medical & health practices within
-                      the United States.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-6 center logo">
-                <img src={logoBlue} alt="Our Logo" />
-              </div>
-            </div>
-
-            <div className="row padded panel-row">
-              <div className="col-sm-12">
-                <div className="inner-title center">
-                  <h2 className="underline font-weight-medium">
-                    Doctor Genius
-                    <span className="font-weight-semibold">
-                      {" "}
-                      by the numbers
-                    </span>
-                  </h2>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-3">
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={webIcon}
-                      alt="Icon of a Website"
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop
+                }
+              >
+                <div className="col-sm-10 offset-md-0 col-md-6">
+                  <div className="content-block">
+                    <InnerTitle
+                      title="The Doctor Genius"
+                      boldText=" Story"
+                      inContentBlock
+                      smallText
                     />
-                  </div>
-                  <p className="panel-heading">1 million +</p>
-                  <p className="panel-body">
-                    Words published to our clients’ website blogs and social
-                    profiles
-                  </p>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-3">
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={searchEngineIcon}
-                      alt="Icon of a Search Engine Page"
-                    />
-                  </div>
-                  <p className="panel-heading">1000+</p>
-                  <p className="panel-body">
-                    Over 1000+ Dental Practices use Doctor Genius Web & SEO
-                    services
-                  </p>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-3">
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={doctorsIcon}
-                      alt="Icon of a Group of Doctors"
-                    />
-                  </div>
-                  <p className="panel-heading">70 +</p>
-                  <p className="panel-body">
-                    In-House Support, Development, and Writers work for Doctor
-                    Genius
-                  </p>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-3">
-                <div className="panel">
-                  <div className="icon-wrapper">
-                    <img
-                      className="img-icon"
-                      src={starsIcon}
-                      alt="Icon of Stars"
-                    />
-                  </div>
-                  <p className="panel-heading">4.9 Stars</p>
-                  <p className="panel-body">
-                    We take pride in our google reviews. Read our{" "}
-                    <a
-                      href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      google reviews.
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="row padded p-sm-0">
-              <div className="col-sm-12 col-md-6">
-                <Img
-                  fluid={images.searchResultsPage.childImageSharp.fluid}
-                  className="img-responsive"
-                  alt="Local Business Search Results Page"
-                />
-              </div>
-              <div className="col-sm-12 col-md-6">
-                <div className="callout">
-                  <div className="inner-title center">
-                    <h2 className="underline short font-weight-normal">
-                      Our
-                      <span className="font-weight-semibold">
-                        {" "}
-                        Clients Average
-                      </span>
-                    </h2>
-                    <div className="callout-heading">
-                      <sup>
-                        Up
-                        <br />
-                        To
-                      </sup>
-                      <p>600%</p>
-                    </div>
-                    <p className="text-accent">New Patient Inquiries</p>
-                    <p className="text-mute sub-text-accent">
-                      12 Months Duration
-                    </p>
-                    <div className="callout-link">
-                      <a
-                        href="/our-clients"
-                        className="link-with-icon font-weight-semibold"
-                      >
-                        <img
-                          src={rightArrowBlue}
-                          className="link-icon"
-                          alt="Icon of a Right Arrow"
-                        />
-                        Learn More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row padded tall-bottom">
-              <div className="col-sm-12">
-                <div className="inner-title center">
-                  <h3 className="strapline">Testimonials</h3>
-                  <h2 className="underline font-weight-normal">
-                    What&nbsp;
-                    <span className="font-weight-semibold">
-                      Clients Are Saying
-                    </span>
-                  </h2>
-                </div>
-              </div>
-              <div className="col-sm-12">
-                <div className="full-bleed-wrapper">
-                  <div className="full-bleed">
-                    <div className="full-bleed-slider">
-                      <TestimonialsSlider cards={testimonialContent} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row padded tall-top request-demo-footer">
-              <div className="col-sm-10 offset-sm-1  offset-md-0 col-md-6 order-sm-2 order-md-1">
-                <div className="content-block">
-                  <div className="innerTitle">
-                    <h2 className="font-weight-normal">
-                      Let's{" "}
-                      <span className="font-weight-semibold">
-                        Talk Partnership
-                      </span>
-                    </h2>
                     <div className="accented-paragraph">
                       <p>
                         We are based in Lake Forest, California, USA. Doctor
@@ -313,35 +133,257 @@ const Company = data => {
                         marketing solutions to medical & health practices within
                         the United States.
                       </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-12 col-md-6 center logo">
+                  <img src={logoBlue} alt="Our Logo" />
+                </div>
+              </div>
+
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  PageStyles.panelRow
+                }
+              >
+                <div className="col-sm-12">
+                  <InnerTitle
+                    centered
+                    title="Doctor Genius "
+                    underlined
+                    boldText="by the numbers"
+                  />
+                </div>
+                <div className="col-sm-6 col-md-3">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
+                      <img
+                        className={PageStyles.imgIcon}
+                        src={webIcon}
+                        alt="Icon of a Website"
+                      />
+                    </div>
+                    <p className={PageStyles.panelHeading}>1 million +</p>
+                    <p className={PageStyles.panelBody}>
+                      Words published to our clients’ website blogs and social
+                      profiles
+                    </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-3">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
+                      <img
+                        className={PageStyles.imgIcon}
+                        src={searchEngineIcon}
+                        alt="Icon of a Search Engine Page"
+                      />
+                    </div>
+                    <p className={PageStyles.panelHeading}>1000+</p>
+                    <p className={PageStyles.panelBody}>
+                      Over 1000+ Dental Practices use Doctor Genius Web & SEO
+                      services
+                    </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-3">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
+                      <img
+                        className={PageStyles.imgIcon}
+                        src={doctorsIcon}
+                        alt="Icon of a Group of Doctors"
+                      />
+                    </div>
+                    <p className={PageStyles.panelHeading}>70 +</p>
+                    <p className={PageStyles.panelBody}>
+                      In-House Support, Development, and Writers work for Doctor
+                      Genius
+                    </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-3">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
+                      <img
+                        className={PageStyles.imgIcon}
+                        src={starsIcon}
+                        alt="Icon of Stars"
+                      />
+                    </div>
+                    <p className={PageStyles.panelHeading}>4.9 Stars</p>
+                    <p className={PageStyles.panelBody}>
+                      We take pride in our google reviews. Read our{" "}
                       <a
-                        href="/demo"
-                        className="link-with-icon font-weight-semibold"
+                        href="https://www.google.com/search?q=doctorgenius&rlz=1C1GCEA_enUS780US780&oq=doctorgenius&aqs=chrome..69i57j69i60l3.1719j0j1&sourceid=chrome&ie=UTF-8#lrd=0x80dcde9f23745717:0x9660a06c68c4bd1,1,,,"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <img
-                          src={rightArrowBlue}
-                          className="link-icon"
-                          alt="Icon of a Right Arrow"
-                        />
-                        Contact Us
+                        google reviews.
                       </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallBottom
+                }
+              >
+                <div className="col-sm-12 col-md-6">
+                  <Img
+                    fluid={images.searchResultsPage.childImageSharp.fluid}
+                    className={PageStyles.imgResponsive}
+                    alt="Local Business Search Results Page"
+                  />
+                </div>
+                <div className="col-sm-12 col-md-6">
+                  <div className={PageStyles.callout}>
+                    <InnerTitle
+                      centered
+                      title="Our "
+                      underlined
+                      boldText="Clients Average"
+                    />
+                    <div className={PageStyles.center}>
+                      <div className={PageStyles.calloutHeading}>
+                        <sup>
+                          Up
+                          <br />
+                          To
+                        </sup>
+                        <p>600%</p>
+                      </div>
+                      <p className={PageStyles.textAccent}>
+                        New Patient Inquiries
+                      </p>
+                      <p className={PageStyles.subTextAccent}>
+                        12 Months Duration
+                      </p>
+                      <div className={PageStyles.calloutLink}>
+                        <a
+                          href="/our-clients"
+                          className={
+                            PageStyles.fontWeightSemibold +
+                            " " +
+                            PageStyles.linkWithIcon
+                          }
+                        >
+                          <img
+                            src={rightArrowBlue}
+                            className={PageStyles.linkIcon}
+                            alt="Icon of a Right Arrow"
+                          />
+                          Learn More
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6 order-sm-1 order-md-2">
-                <Img
-                  fluid={
-                    images.digitalMarketingPartnerShip.childImageSharp.fluid
-                  }
-                  alt="Digital Marketing Partnership"
-                  className="img-responsive"
-                />
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="col-sm-12">
+                  <InnerTitle
+                    centered
+                    strapline="Testimonials"
+                    title="What "
+                    underlined
+                    boldText="Clients Are Saying"
+                  />
+                </div>
+                <div className="col-sm-12">
+                  <div className="full-bleed-wrapper">
+                    <div className="full-bleed">
+                      <div className="full-bleed-slider">
+                        <TestimonialsSlider cards={testimonialContent} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </Container>
-        </Main>
-      </div>
-    </DefaultPageLayout>
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.tallTop +
+                  " " +
+                  PageStyles.letsTalkPartnership +
+                  " lets-talk-partnership"
+                }
+              >
+                <div className="col-sm-10 offset-md-0 col-md-6 order-sm-2 order-md-1">
+                  <div className="content-block">
+                    <InnerTitle
+                      title="Let's "
+                      boldText="Talk Partnership"
+                      inContentBlock
+                    />
+                    <div>
+                      <div
+                        className={
+                          PageStyles.accentedParagraph + " accented-paragraph"
+                        }
+                      >
+                        <p>
+                          We are based in Lake Forest, California, USA. Doctor
+                          Genius has consistent 5 Star Ratings on Google+, and A
+                          Rated with the BBB. We employ and all-star
+                          development, support, and sales team to provide high
+                          level online marketing solutions to medical & health
+                          practices within the United States.
+                        </p>
+                        <a
+                          href="/demo"
+                          className={
+                            PageStyles.fontWeightSemibold +
+                            " " +
+                            PageStyles.linkWithIcon
+                          }
+                        >
+                          <img
+                            src={rightArrowBlue}
+                            className={PageStyles.linkIcon}
+                            alt="Icon of a Right Arrow"
+                          />
+                          Contact Us
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-10 offset-sm-1 offset-md-0 col-md-6 order-sm-1 order-md-2">
+                  <Img
+                    fluid={
+                      images.digitalMarketingPartnerShip.childImageSharp.fluid
+                    }
+                    alt="Digital Marketing Partnership"
+                    className={PageStyles.imgResponsive}
+                  />
+                </div>
+              </div>
+            </Container>
+          </Main>
+        </div>
+      </DefaultPageLayout>
+    </div>
   )
 }
 
@@ -378,7 +420,7 @@ export const ImageQuery = graphql`
     }
     heroBg: file(relativePath: { eq: "about-us-hero.jpg" }) {
       childImageSharp {
-        fluid(quality: 70) {
+        fluid(quality: 80) {
           ...GatsbyImageSharpFluid
         }
       }

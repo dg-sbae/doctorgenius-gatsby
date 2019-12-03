@@ -8,10 +8,11 @@ import BackgroundImage from "gatsby-background-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
-
-import thinArrowRight from "../img/right-arrow.svg"
+import RequestDemoFooter from "../components/request-demo-footer"
 
 import "../styles/event-post.scss"
+import PageStyles from "./event.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 const EventPage = ({ data }) => {
   const event_details = data.focus_event
@@ -199,7 +200,12 @@ const EventPage = ({ data }) => {
       <div
         className={
           event_details.include_speakers[0] === "1"
-            ? "row content-block padded speaker-details"
+            ? RowStyles.row +
+              " " +
+              RowStyles.padded +
+              " " +
+              PageStyles.speakerDetails +
+              " content-block speaker-details"
             : "d-none"
         }
       >
@@ -207,8 +213,17 @@ const EventPage = ({ data }) => {
           <h2>{event_details.speaker_section_title}:</h2>
           <h3>{event_details.speaker_section_subtitle}</h3>
         </div>
-        <div className="col-sm-12 col-md-8 col-lap-8">
-          <div className="row speaker-profiles">{speaker_holder}</div>
+        <div className="col-sm-7 col-md-8 col-lap-8">
+          <div
+            className={
+              RowStyles.row +
+              " " +
+              PageStyles.speakerProfiles +
+              " speaker-profiles"
+            }
+          >
+            {speaker_holder}
+          </div>
         </div>
       </div>
     )
@@ -219,7 +234,10 @@ const EventPage = ({ data }) => {
     if (speakers.length > 1) {
       return (
         <div
-          className="col-sm-12 col-md-6 col-lap-3"
+          className={
+            PageStyles.speakerHolder +
+            " col-sm-12 col-md-6 col-lap-3 speaker-holder"
+          }
           key={speaker.speaker_name}
         >
           <div className="speaker-img-wrapper">
@@ -248,15 +266,29 @@ const EventPage = ({ data }) => {
       ) {
         return (
           <div>
-            <div className="spacer solid"></div>
-            <div className="row content-block padded listed-items">
+            <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
+            <div
+              className={
+                RowStyles.row +
+                " " +
+                RowStyles.padded +
+                " " +
+                PageStyles.listedItems +
+                " content-block listed-items"
+              }
+            >
               <div className="col-sm-11 col-md-9 col-lap-6">
                 <h2>{event_details.information_heading1}</h2>
                 {display_h1_information()}
                 <h2>{event_details.information_heading2}</h2>
                 {display_h2_information()}
               </div>
-              <div className="col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block">
+              <div
+                className={
+                  PageStyles.contentImage +
+                  " col-lap-6 content-image d-none d-lap-block d-lg-block d-xl-block"
+                }
+              >
                 <img
                   src={
                     event_details.all_image_urls.information_image_url.localFile
@@ -274,8 +306,15 @@ const EventPage = ({ data }) => {
     } else {
       return (
         <div>
-          <div className="spacer solid"></div>
-          <div className="row content-block padded listed-items">
+          <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
+          <div
+            className={
+              RowStyles.row +
+              " " +
+              RowStyles.padded +
+              " content-block listed-items"
+            }
+          >
             <div className="col-sm-11 col-md-9 col-lap-7">
               <h2>{event_details.information_heading1}</h2>
               {display_h1_information()}
@@ -290,243 +329,289 @@ const EventPage = ({ data }) => {
   }
 
   return (
-    <DefaultPageLayout location="event-post">
-      <Helmet>
-        <title>Event Details | Doctor Genius</title>
-        <meta name="description" content="Doctor Genius | Event." />
-      </Helmet>
-      <div>
-        <div className="hero" style={styleBackgroundImage}>
-          <div className="hero-overlay">
-            {/* Hero will be a layout component */}
+    <div className={PageStyles.eventDetailPage + " " + RowStyles.rowStyling}>
+      <DefaultPageLayout location="event-post">
+        <Helmet>
+          <title>Event Details | Doctor Genius</title>
+          <meta name="description" content="Doctor Genius | Event." />
+        </Helmet>
+        <div>
+          <div
+            className={PageStyles.hero + " hero"}
+            style={styleBackgroundImage}
+          >
+            <div className={PageStyles.heroOverlay + " hero-overlay"}>
+              {/* Hero will be a layout component */}
 
-            <Container>
-              <div className="row">
-                <div className="col-sm-12 col-md-9 col-lap-8">
-                  <div
-                    className={
-                      event_details.event_strapline[0] !== ""
-                        ? "continue-edu-class-holder"
-                        : "d-none"
-                    }
-                  >
-                    <span className="button flat white-text continue-edu-class">
-                      {event_details.event_strapline}
-                    </span>
-                  </div>
-                  <div className="titles">
-                    <h1 style={{ lineHeight: "1" }}>
-                      {event_details.event_title}
-                    </h1>
-                    <h2>{event_details.event_subtitle}</h2>
-                  </div>
-                  <div
-                    className={
-                      event_details.register_url[0] !== ""
-                        ? "register-now-btn-holder"
-                        : "d-none"
-                    }
-                  >
-                    <a
-                      className="button flat white-text register-now-btn"
-                      href={event_details.register_url[0]}
-                      target="_blank"
-                      rel="noopener noreferrer"
+              <Container>
+                <div
+                  className={
+                    RowStyles.row + " " + PageStyles.heroRow + " hero-row"
+                  }
+                >
+                  <div className="col-sm-12 col-md-9 col-lap-8">
+                    <div
+                      className={
+                        event_details.event_strapline[0] !== ""
+                          ? PageStyles.continueEduClassHolder +
+                            " continue-edu-class-holder"
+                          : "d-none"
+                      }
                     >
-                      {event_details.register_button_text[0] === ""
-                        ? "Register Now"
-                        : event_details.register_button_text[0]}
-                    </a>
+                      <span
+                        className={
+                          PageStyles.continueEduClass +
+                          " " +
+                          PageStyles.whiteText +
+                          " continue-edu-class"
+                        }
+                      >
+                        {event_details.event_strapline}
+                      </span>
+                    </div>
+                    <div className={PageStyles.titles + " titles"}>
+                      <h1>{event_details.event_title}</h1>
+                      <h2>{event_details.event_subtitle}</h2>
+                    </div>
+                    <div
+                      className={
+                        event_details.register_url[0] !== ""
+                          ? PageStyles.registerNowBtnHolder +
+                            " register-now-btn-holder"
+                          : "d-none"
+                      }
+                    >
+                      <a
+                        className={
+                          PageStyles.registerNowBtn +
+                          " " +
+                          PageStyles.whiteText +
+                          " register-now-btn"
+                        }
+                        href={event_details.register_url[0]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {event_details.register_button_text[0] === ""
+                          ? "Register Now"
+                          : event_details.register_button_text[0]}
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Container>
+              </Container>
+            </div>
           </div>
-        </div>
-        <Main>
-          <Container>
-            <div className="main-content">
-              <div className="row padded">
-                <div className="col-sm-11 col-md-9 col-lap-6">
-                  <div className="content-block event-details">
-                    <h3>Event Details</h3>
-                    <p>{event_details.event_details_text}</p>
+          <Main>
+            <Container>
+              <div className="main-content">
+                <div className={RowStyles.row + " " + RowStyles.padded}>
+                  <div className="col-sm-11 col-md-9 col-lap-6">
+                    <div
+                      className={
+                        PageStyles.eventDetails + " content-block event-details"
+                      }
+                    >
+                      <h3>Event Details</h3>
+                      <p>{event_details.event_details_text}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="col-sm-11 col-md-9 col-lap-6">
-                  <div className="row event-date valign-wrapper">
-                    <div className="col-sm-11 col-md-10">
-                      <div className="card row">
+                  <div className="col-sm-11 col-md-9 col-lap-6">
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        PageStyles.eventDate +
+                        " event-date valign-wrapper"
+                      }
+                    >
+                      <div
+                        className={PageStyles.date320 + " col-sm-12 col-md-10"}
+                      >
                         <div
-                          className="card-body col-sm-10 col-lap-12 col-lg-9"
-                          id={Webinar === true ? "webinar-location" : ""}
+                          className={
+                            RowStyles.row + " " + PageStyles.card + " card"
+                          }
                         >
-                          <p className="card-text">
-                            Date: {format_date(event_details.event_date)}
-                          </p>
-                          <p className="card-text">
-                            Time: {convert_time(event_details.start_time)} to{" "}
-                            {convert_time(event_details.end_time)}
-                          </p>
-                          <p className="card-text">
-                            <span>Location: </span>
-                            {display_location(
-                              event_details.event_street_address,
-                              event_details.event_city,
-                              event_details.event_state
-                            )}
-                          </p>
+                          <div
+                            className={
+                              PageStyles.cardBody +
+                              " card-body col-sm-11 col-lap-12 col-lg-9"
+                            }
+                            id={
+                              Webinar === true
+                                ? PageStyles.webinarLocation +
+                                  "webinar-location"
+                                : ""
+                            }
+                          >
+                            <p className={PageStyles.cardText + " card-text"}>
+                              Date: {format_date(event_details.event_date)}
+                            </p>
+                            <p className={PageStyles.cardText + " card-text"}>
+                              Time: {convert_time(event_details.start_time)} to{" "}
+                              {convert_time(event_details.end_time)}
+                            </p>
+                            <p className={PageStyles.cardText + " card-text"}>
+                              <span>Location: </span>
+                              {display_location(
+                                event_details.event_street_address,
+                                event_details.event_city,
+                                event_details.event_state
+                              )}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {event_details.include_information[0] === "1" &&
-              display_information_section()}
+              {event_details.include_information[0] === "1" &&
+                display_information_section()}
 
-            <div
-              className={
-                event_details.include_speakers[0] === "1"
-                  ? "spacer solid"
-                  : "d-none"
-              }
-            ></div>
+              <div
+                className={
+                  event_details.include_speakers[0] === "1"
+                    ? PageStyles.spacer + " " + PageStyles.solid
+                    : "d-none"
+                }
+              ></div>
 
-            {display_speakers()}
+              {display_speakers()}
 
-            <div className="spacer solid"></div>
+              <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
 
-            <div className="row content-block padded dg-marketing-solutions">
-              <div className="col-sm-11 col-md-9 col-lap-12">
-                <h2>
-                  Doctor Genius
-                  <br />
-                  Marketing Solutions
-                </h2>
-                <div className="row dg-dictionary">
-                  <div className="col-lap-6">
-                    <h4>Website</h4>
-                    <p>
-                      Our websites are power-packed with fresh and unique
-                      content tailored to your practice and services
-                    </p>
-                    <h4>Branding</h4>
-                    <p>
-                      Delivering effective brand strategies that gives practices
-                      a major edge in competitive markets
-                    </p>
-                    <h4>Social Media</h4>
-                    <p>
-                      Original patient education content is posted to your
-                      social media profiles to generate general interest in your
-                      medical treatments and services
-                    </p>
-                    <h4>Search Marketing</h4>
-                    <p>
-                      Narrow down your successful keywords, who is clicking on
-                      them, and which keywords yield the highest number of new
-                      patient inquiries
-                    </p>
-                    <h4>Hyper-Local Targeting</h4>
-                    <p>
-                      We increase the focus of who we are targeting to a small
-                      geographic region near your practice
-                    </p>
-                    <h4>Lead Tracking</h4>
-                    <p>
-                      Get a detailed breakdown of your patient inquiries and
-                      their disposition. Determine new or returning patients to
-                      better track your Return On Investment (ROI)
-                    </p>
-                    <h4>Security</h4>
-                    <p>
-                      We are always first in line when it comes to running the
-                      latest technology. In addition to our servers being in the
-                      best location possible, we are also using the best
-                      software available
-                    </p>
-                  </div>
-                  <div className="col-lap-6">
-                    <h4>Genius Portal</h4>
-                    <p>
-                      Get the information you need about your website and
-                      performance in one easy-to-use dashboard
-                    </p>
-                    <h4>Rank Report</h4>
-                    <p>
-                      We provide reporting and analytics to keep you up-to-date
-                      on your first page placement for targeted keywords
-                    </p>
-                    <h4>Review Management</h4>
-                    <p>
-                      9 out of 10 customers read reviews before making a
-                      purchasing decision. Stay informed of what patients are
-                      saying about your practice
-                    </p>
-                    <h4>HOSTING</h4>
-                    <p>
-                      Get reviews from your existing patients fast with our
-                      streamlined SMS and email services
-                    </p>
-                    <h4>Practice Promoter</h4>
-                    <p>
-                      Get reviews from existing patients fast with your
-                      streamlined SMS and e-mail services
-                    </p>
-                    <h4>Recall</h4>
-                    <p>
-                      We have knowledge of each practice, which involves the
-                      clear understanding of their industry and answering the
-                      questions of their patient needs
-                    </p>
-                    <h4>Retention</h4>
-                    <p>
-                      Our goal is to help health practices retain as many
-                      customers as possible, often through customer loyalty and
-                      brand loyalty initiatives
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="spacer solid"></div>
-
-            {/* Begin Demo Footer */}
-            <div className="row padded tall-top request-demo-footer">
-              <div className="col-sm-11 col-md-9 col-lap-5">
-                <div className="content-block">
-                  <div className="inner-title">
-                    <h2>
-                      Start your <span>success</span> with Doctor Genius today!
-                    </h2>
-                    <div className="accented-paragraph">
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  PageStyles.dgMarketingSolutions +
+                  " content-block dg-marketing-solutions"
+                }
+              >
+                <div className="col-sm-11 col-md-9 col-lap-12">
+                  <h2>
+                    Doctor Genius
+                    <br />
+                    Marketing Solutions
+                  </h2>
+                  <div
+                    className={
+                      RowStyles.row +
+                      " " +
+                      PageStyles.dgDictionary +
+                      " dg-dictionary"
+                    }
+                  >
+                    <div
+                      className={
+                        PageStyles.dictionaryCol + " col-lap-6 dictionary-col"
+                      }
+                    >
+                      <h4>Website</h4>
                       <p>
-                        The Genius platform makes every part of your company
-                        process more efficient. Our support team is very excited
-                        to help you and get your company on the right path of
-                        success.
+                        Our websites are power-packed with fresh and unique
+                        content tailored to your practice and services
+                      </p>
+                      <h4>Branding</h4>
+                      <p>
+                        Delivering effective brand strategies that gives
+                        practices a major edge in competitive markets
+                      </p>
+                      <h4>Social Media</h4>
+                      <p>
+                        Original patient education content is posted to your
+                        social media profiles to generate general interest in
+                        your medical treatments and services
+                      </p>
+                      <h4>Search Marketing</h4>
+                      <p>
+                        Narrow down your successful keywords, who is clicking on
+                        them, and which keywords yield the highest number of new
+                        patient inquiries
+                      </p>
+                      <h4>Hyper-Local Targeting</h4>
+                      <p>
+                        We increase the focus of who we are targeting to a small
+                        geographic region near your practice
+                      </p>
+                      <h4>Lead Tracking</h4>
+                      <p>
+                        Get a detailed breakdown of your patient inquiries and
+                        their disposition. Determine new or returning patients
+                        to better track your Return On Investment (ROI)
+                      </p>
+                      <h4>Security</h4>
+                      <p>
+                        We are always first in line when it comes to running the
+                        latest technology. In addition to our servers being in
+                        the best location possible, we are also using the best
+                        software available
+                      </p>
+                    </div>
+                    <div
+                      className={
+                        PageStyles.dictionaryCol + " col-lap-6 dictionary-col"
+                      }
+                    >
+                      <h4>Genius Portal</h4>
+                      <p>
+                        Get the information you need about your website and
+                        performance in one easy-to-use dashboard
+                      </p>
+                      <h4>Rank Report</h4>
+                      <p>
+                        We provide reporting and analytics to keep you
+                        up-to-date on your first page placement for targeted
+                        keywords
+                      </p>
+                      <h4>Review Management</h4>
+                      <p>
+                        9 out of 10 customers read reviews before making a
+                        purchasing decision. Stay informed of what patients are
+                        saying about your practice
+                      </p>
+                      <h4>HOSTING</h4>
+                      <p>
+                        Get reviews from your existing patients fast with our
+                        streamlined SMS and email services
+                      </p>
+                      <h4>Practice Promoter</h4>
+                      <p>
+                        Get reviews from existing patients fast with your
+                        streamlined SMS and e-mail services
+                      </p>
+                      <h4>Recall</h4>
+                      <p>
+                        We have knowledge of each practice, which involves the
+                        clear understanding of their industry and answering the
+                        questions of their patient needs
+                      </p>
+                      <h4>Retention</h4>
+                      <p>
+                        Our goal is to help health practices retain as many
+                        customers as possible, often through customer loyalty
+                        and brand loyalty initiatives
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-10 col-md-5 col-lap-5">
-                <div className="center">
-                  <a href="/demo" className="button flat white-text">
-                    Request Demo <img src={thinArrowRight} alt="Arrow Right" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* End Demo Footer */}
-          </Container>
-        </Main>
-      </div>
-    </DefaultPageLayout>
+
+              <div className={PageStyles.spacer + " " + PageStyles.solid}></div>
+
+              {/* Begin Demo Footer */}
+              <RequestDemoFooter eventsPage smWidth="11" />
+              {/* End Demo Footer */}
+            </Container>
+          </Main>
+        </div>
+      </DefaultPageLayout>
+    </div>
   )
 }
 

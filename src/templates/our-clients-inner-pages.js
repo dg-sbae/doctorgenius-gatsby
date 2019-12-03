@@ -9,16 +9,15 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
-
-import dentalPractices from "../img/icon/tooth-shine-nav.svg"
-import urgentCare from "../img/icon/urgent-care-nav.svg"
-import chiropractorPractices from "../img/icon/chiropractor-nav.svg"
-import cosmeticSurgeons from "../img/icon/surgeon-nav.svg"
-import healthcareMarketing from "../img/icon/sphygmomanometer-nav.svg"
+import InnerTitle from "../components/inner-title.js"
+import Hero from "../components/Hero"
 
 import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 
 import "../styles/our-clients-inner-pages.scss"
+import PageStyles from "./our-clients-inner-pages.module.scss"
+import RowStyles from "../components/Row.module.scss"
+import SecondaryNavigation from "../components/SecondaryNavigation"
 
 export default props => {
   /* These will likely need to be dynamic props */
@@ -41,284 +40,280 @@ export default props => {
     backgroundPosition: "40%",
   }
 
+  const heroConfig = {
+    pageType: "ourClientsInner",
+    strapline: pageTitle,
+    title: pageSubtitle,
+    content: pageIntro,
+  }
+
   return (
-    <DefaultPageLayout>
-      <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-      </Helmet>
-      <div className={"our-clients-inner " + currentPage}>
-        <BackgroundImage fluid={backgroundImage}>
-          <div className="hero">
-            {/* Hero will be a layout component */}
-
+    <div
+      className={PageStyles.ourClientsInnerPage + " " + RowStyles.rowStyling}
+    >
+      <DefaultPageLayout>
+        <Helmet>
+          <title>{metaTitle}</title>
+          <meta name="description" content={metaDescription} />
+        </Helmet>
+        <div className={"our-clients-inner " + currentPage}>
+          <BackgroundImage fluid={backgroundImage}>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
+          </BackgroundImage>
+          <Main>
             <Container>
-              <div className="valign-wrapper row">
-                <div className="col-sm-12">
-                  <div className="hero-content accent-block">
-                    <h1>{pageTitle}</h1>
-                    <h2 dangerouslySetInnerHTML={{ __html: pageSubtitle }} />
-                    <div className="accented-paragraph">
-                      <p>{pageIntro}</p>
-                    </div>
-                  </div>
+              {/* Begin secondary nav Component: */}
+              <div className={RowStyles.row}>
+                <div className="col-sm-12 panel-row">
+                  <SecondaryNavigation
+                    pageType="ourClients"
+                    pageTitle={props.pageTitle}
+                  />
                 </div>
               </div>
-            </Container>
-          </div>
-        </BackgroundImage>
-        <Main>
-          <Container>
-            {/* Begin secondary nav Component: */}
-            <div className="row">
-              <div className="col-sm-12 panel-row">
-                <div className="secondary-nav-target">
-                  <div className="secondary-nav">
-                    <div
-                      className={
-                        (currentPage === "dental-practices" ? "active " : "") +
-                        "panel"
-                      }
-                    >
-                      <div className="icon-wrapper">
-                        <a href="/our-clients/dental-practices">
-                          <img
-                            className="img-icon"
-                            src={dentalPractices}
-                            alt="Dental Practices"
-                          />
-                        </a>
-                      </div>
-                      <p>Dental Practices</p>
-                    </div>
-                    <div
-                      className={
-                        (currentPage === "urgent-care-clinics"
-                          ? "active "
-                          : "") + "panel"
-                      }
-                    >
-                      <div className="icon-wrapper">
-                        <a href="/our-clients/urgent-care-clinics">
-                          <img
-                            className="img-icon"
-                            src={urgentCare}
-                            alt="Urgent Care Clinics"
-                          />
-                        </a>
-                      </div>
-                      <p>Urgent Care Clinics</p>
-                    </div>
-                    <div
-                      className={
-                        (currentPage === "chiropractor-practices"
-                          ? "active "
-                          : "") + "panel"
-                      }
-                    >
-                      <div className="icon-wrapper">
-                        <a href="/our-clients/chiropractor-practices">
-                          <img
-                            className="img-icon"
-                            src={chiropractorPractices}
-                            alt="Chiropractor Practices"
-                          />
-                        </a>
-                      </div>
-                      <p>Chiropractor Practices</p>
-                    </div>
-                    <div
-                      className={
-                        (currentPage === "cosmetic-surgeons" ? "active " : "") +
-                        "panel"
-                      }
-                    >
-                      <div className="icon-wrapper">
-                        <a href="/our-clients/cosmetic-surgeons">
-                          <img
-                            className="img-icon"
-                            src={cosmeticSurgeons}
-                            alt="Cosmetic Surgeons"
-                          />
-                        </a>
-                      </div>
-                      <p>Cosmetic Surgeons</p>
-                    </div>
-                    <div
-                      className={
-                        (currentPage === "healthcare-marketing"
-                          ? "active "
-                          : "") + "panel"
-                      }
-                    >
-                      <div className="icon-wrapper">
-                        <a href="/our-clients/healthcare-marketing">
-                          <img
-                            className="img-icon"
-                            src={healthcareMarketing}
-                            alt="Healthcare Marketing"
-                          />
-                        </a>
-                      </div>
-                      <p>Healthcare Marketing</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* End secondary nav Component */}
+              {/* End secondary nav Component */}
 
-            {/* Begin mobile secondary navigation component */}
-            <MobileSecondaryNav parentPage="ourClients" titleItem={pageTitle} />
-            {/* End mobile secondary navigation component */}
-            {/* Begin main block of text */}
-            <div className="row padded">
-              <div className="col-sm-12 col-md-10 col-lg-10">
-                <div className="content-block">
-                  <div className="inner-title center thin-heading">
-                    <h3 className="strapline">
-                      {contentParagraphBlock.heading.strapline}
-                    </h3>
-                    <h2
-                      className="underline"
+              {/* Begin mobile secondary navigation component */}
+              <MobileSecondaryNav
+                parentPage="ourClients"
+                titleItem={pageTitle}
+              />
+              {/* End mobile secondary navigation component */}
+              {/* Begin main block of text */}
+              <div className={RowStyles.row + " " + RowStyles.padded}>
+                <div className="col-sm-12 col-md-10 col-lg-10">
+                  <div className={PageStyles.contentBlock + " content-block"}>
+                    <div
+                      className={
+                        PageStyles.thinHeading +
+                        " " +
+                        PageStyles.innerTitle +
+                        " " +
+                        PageStyles.centered
+                      }
+                    >
+                      <h3 className={PageStyles.strapline}>
+                        {contentParagraphBlock.heading.strapline}
+                      </h3>
+                      <h2
+                        className={PageStyles.underline}
+                        dangerouslySetInnerHTML={{
+                          __html: contentParagraphBlock.heading.title,
+                        }}
+                      />
+                    </div>
+                    <div
+                      className={
+                        PageStyles.accentedParagraph + " accented-paragraph"
+                      }
                       dangerouslySetInnerHTML={{
-                        __html: contentParagraphBlock.heading.title,
+                        __html: contentParagraphBlock.paragraphBlock,
                       }}
                     />
                   </div>
+                </div>
+              </div>
+              {/* End main block of text */}
+              {/* Begin split page content - conditional render using short circuit */}
+              {isCaseStudy && (
+                <div
+                  className={
+                    PageStyles.spacer +
+                    " " +
+                    PageStyles.solid +
+                    " " +
+                    PageStyles.trim
+                  }
+                />
+              )}
+              {isCaseStudy && (
+                <div
+                  className={
+                    RowStyles.row +
+                    " " +
+                    RowStyles.padded +
+                    " " +
+                    RowStyles.shortTop
+                  }
+                >
                   <div
-                    className="accented-paragraph"
-                    dangerouslySetInnerHTML={{
-                      __html: contentParagraphBlock.paragraphBlock,
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-            {/* End main block of text */}
-            {/* Begin split page content - conditional render using short circuit */}
-            {isCaseStudy && <div className="spacer solid trim" />}
-            {isCaseStudy && (
-              <div className="row padded short-top">
-                <div className="col-sm-12 col-md-7 col-lg-7 order-sm-2 order-md-1 case-study-container">
-                  <div className="inner-title center">
-                    <h3 className="m-0">Case Study: Titan Dental</h3>
-                    <div className="subtitle muted">The first 6 months</div>
+                    className={
+                      PageStyles.caseStudyContainer +
+                      " col-sm-12 col-md-7 col-lg-7 order-sm-2 order-md-1 case-study-container"
+                    }
+                  >
+                    <InnerTitle
+                      title="Case Study: Titan Dental"
+                      inContentBlock
+                      subtitle="The first 6 months"
+                      centered
+                      id={PageStyles.caseStudyHeader}
+                    />
+                    <div
+                      className={
+                        PageStyles.caseStudyTable + " case-study-table"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout}>1,125%</p>
+                        <p>Increase in Google First-Page Revenue</p>
+                      </div>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout}>100%</p>
+                        <p>Increase in Revenue</p>
+                      </div>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout}>60%</p>
+                        <p>Growth in organic Search Traffic</p>
+                      </div>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout}>500%</p>
+                        <p>Growth in Reviews Across the Web</p>
+                      </div>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout}>200%</p>
+                        <p>New Patient Appointments</p>
+                      </div>
+                      <div
+                        className={
+                          PageStyles.caseStudyItem + " case-study-item"
+                        }
+                      >
+                        <p className={PageStyles.callout}>88%</p>
+                        <p>Increase in New Patient Calls!</p>
+                      </div>
+                    </div>
+                    <div className={PageStyles.padMd + " center pad-md"}>
+                      <a href="/case-study" className={PageStyles.linkWithIcon}>
+                        <img
+                          src={rightArrowBlue}
+                          className={PageStyles.linkIcon}
+                          alt="Icon of a Right Arrow"
+                        />
+                        View Case Study
+                      </a>
+                    </div>
                   </div>
-                  <div className="case-study-table">
-                    <div className="case-study-item">
-                      <p className="callout">1,125%</p>
-                      <p>Increase in Google First-Page Revenue</p>
-                    </div>
-                    <div className="case-study-item">
-                      <p className="callout">100%</p>
-                      <p>Increase in Revenue</p>
-                    </div>
-                    <div className="case-study-item">
-                      <p className="callout">60%</p>
-                      <p>Growth in organic Search Traffic</p>
-                    </div>
-                    <div className="case-study-item">
-                      <p className="callout">500%</p>
-                      <p>Growth in Reviews Across the Web</p>
-                    </div>
-                    <div className="case-study-item">
-                      <p className="callout">200%</p>
-                      <p>New Patient Appointments</p>
-                    </div>
-                    <div className="case-study-item">
-                      <p className="callout">88%</p>
-                      <p>Increase in New Patient Calls!</p>
-                    </div>
-                  </div>
-                  <div className="center pad-md">
-                    <a href="/case-study" className="link-with-icon">
-                      <img
-                        src={rightArrowBlue}
-                        className="link-icon"
-                        alt="Icon of a Right Arrow"
-                      />
-                      View Case Study
-                    </a>
+                  <div
+                    className={
+                      PageStyles.imgCol +
+                      " col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col"
+                    }
+                  >
+                    <Img
+                      fluid={caseStudyImage}
+                      className={PageStyles.imgResponsive}
+                      alt="Local Business Search Results Page"
+                    />
                   </div>
                 </div>
-                <div className="col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col">
-                  <Img
-                    fluid={caseStudyImage}
-                    className="img-responsive blur-bleed"
-                    alt="Local Business Search Results Page"
-                  />
-                </div>
-              </div>
-            )}
+              )}
 
-            {/* End split page content */}
-            {/* Begin CTA banner */}
-            <div className="full-bleed-wrapper pad-md">
-              <div
-                className="full-bleed check-plans-background-image"
-                style={fullBleedBgStyle}
-              />
-              <div className="full-bleed-content-wrapper">
-                <div className="row">
-                  <div className="col-sm-4 col-md-6 col-lg-7" />
-                  <div className="col-sm-8 col-md-6 col-lg-5">
-                    <div className="content-block">
-                      <div className="inner-title">
-                        <h2>Check which plan works for your practice</h2>
-                      </div>
-                      <div className="accented-paragraph medium-width">
-                        <p>
-                          Get access to all we have to offer: Genius Framework
-                          Website, Strategic Content Writing, Search Engine
-                          Optimization, Social Media Promotion, Integrated
-                          Performance Reporting, Dedicated Support
-                          Representative.
-                        </p>
-                        <a href="/plans" className="link-with-icon">
-                          <img
-                            src={rightArrowBlue}
-                            className="link-icon"
-                            alt="Icon of a Right Arrow"
-                          />
-                          See Our Plans
-                        </a>
+              {/* End split page content */}
+              {/* Begin CTA banner */}
+              <div className={PageStyles.padMd + " full-bleed-wrapper pad-md"}>
+                <div
+                  className={
+                    PageStyles.checkPlansBackgroundImage +
+                    " full-bleed check-plans-background-image"
+                  }
+                  style={fullBleedBgStyle}
+                />
+                <div className="full-bleed-content-wrapper">
+                  <div className={RowStyles.row}>
+                    <div className="col-sm-4 col-md-6 col-lg-7" />
+                    <div className="col-sm-8 col-md-6 col-lg-5">
+                      <div
+                        className={PageStyles.contentBlock + " content-block"}
+                      >
+                        <InnerTitle
+                          title="Check which plan works for your practice"
+                          inContentBlock
+                        />
+                        <div
+                          className={
+                            PageStyles.accentedParagraph +
+                            " accented-paragraph medium-width"
+                          }
+                        >
+                          <p>
+                            Get access to all we have to offer: Genius Framework
+                            Website, Strategic Content Writing, Search Engine
+                            Optimization, Social Media Promotion, Integrated
+                            Performance Reporting, Dedicated Support
+                            Representative.
+                          </p>
+                          <a
+                            href="/plans"
+                            className={PageStyles.linkWithIconInContent}
+                          >
+                            <img
+                              src={rightArrowBlue}
+                              className={PageStyles.linkIcon}
+                              alt="Icon of a Right Arrow"
+                            />
+                            See Our Plans
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* End CTA banner */}
-            {/* Begin testimonial slider */}
-            <div className="row padded">
-              <div className="col-sm-12">
-                <div className="inner-title center">
-                  <h3 className="strapline">Testimonials</h3>
-                  <h2 className="underline font-weight-normal">
-                    What&nbsp;
-                    <span className="font-weight-semibold">
-                      Clients Are Saying
-                    </span>
-                  </h2>
+              {/* End CTA banner */}
+              {/* Begin testimonial slider */}
+              <div className={RowStyles.row + " " + RowStyles.padded}>
+                <div className="col-sm-12">
+                  <InnerTitle
+                    title="What"
+                    boldText=" Clients Are Saying"
+                    strapline="Testimonials"
+                    underlined
+                    centered
+                  />
                 </div>
-              </div>
-              <div className="col-sm-12">
-                <div className="full-bleed-wrapper">
-                  <div className="full-bleed">
-                    <div className="full-bleed-slider">
-                      <TestimonialsSlider
-                        cards={contentRows.testimonialContent}
-                      />
+                <div className="col-sm-12">
+                  <div className="full-bleed-wrapper">
+                    <div className="full-bleed">
+                      <div className="full-bleed-slider">
+                        <TestimonialsSlider
+                          cards={contentRows.testimonialContent}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* End testimonial slider */}
-          </Container>
-        </Main>
-      </div>
-    </DefaultPageLayout>
+              {/* End testimonial slider */}
+            </Container>
+          </Main>
+        </div>
+      </DefaultPageLayout>
+    </div>
   )
 }

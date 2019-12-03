@@ -12,7 +12,10 @@ const HostingSolutions = data => {
     <MarketingSolutionsTemplate
       page="hosting-solutions" /* this should be dynamic from the page props */
       pageTitle="Hosting Solutions"
-      pageSubtitle="Enterprise Power <span>for Medical Practice Websites</span>"
+      pageSubtitle={[
+        "Enterprise Power ",
+        <span>for Medical Practice Websites</span>,
+      ]}
       pageIntro="We’re always first in line when it comes to running the latest technology."
       metaTitle="Enterprise Power for Medical Practice Websites | Secure Website Hosting"
       metaDescription="Many hosting solutions do not meet our high standards of security, speed, updates, and backup. We are sticklers for the little things that radically enhance your visitors experience."
