@@ -331,8 +331,10 @@ nav {
         background-position: initial;
       }
     }
-    .phoneHolder {
-      background-image: url("../img/icon/phone-blue.svg");
+    .phone > a {
+      .phoneHolder {
+        background-image: url("../img/icon/phone-blue.svg");
+      }
     }
     .navButton {
       border-color: $primary;
@@ -480,7 +482,7 @@ nav.contactNav {
     }
 
     .phone > a .phoneHolder {
-      background-image: url("../img/phone-blue.svg");
+      background-image: url("../img/icon/phone-blue.svg");
     }
     .button.navButton {
       border: 1px solid $primary;
