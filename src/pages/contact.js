@@ -43,8 +43,8 @@ export default props => (
                       Have a question? Need help?
                     </h3>
                     <p className={PageStyles.mutedText + " muted-text"}>
-                      Fill the form below to get directly in contact with our
-                      support staff.
+                      Fill out the form below to get directly in contact with
+                      our support staff.
                     </p>
                   </div>
                 </div>

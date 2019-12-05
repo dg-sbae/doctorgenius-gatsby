@@ -89,6 +89,8 @@ const requestDemoFooter = ({
           " " +
           RowStyles.padded +
           " " +
+          RowStyles.tallBottom +
+          " " +
           RowStyles.tallTop +
           " " +
           requestDemoFooterStyles.requestDemoFooterStylingEvents
