@@ -5,6 +5,9 @@ import Img from "gatsby-image"
 import styles from "./events-teaser.module.scss"
 import rightChevron from "../img/right-chevron.svg"
 
+import eventsStyles from "../components/events-teaser.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
 export default () => (
   <StaticQuery
     query={graphql`
@@ -22,19 +25,39 @@ export default () => (
       }
     `}
     render={data => (
-      <div className="events-section">
-        <div className="row padded medium-top">
+      <div className={eventsStyles.eventsSection + " events-section"}>
+        <div
+          className={
+            RowStyles.row +
+            " " +
+            RowStyles.padded +
+            " " +
+            RowStyles.mediumTop +
+            " row padded medium-top"
+          }
+        >
           <div className="col-lg-12">
-            <div className="title-holder">
-              <h4 className="blog-heading">Webinars & Events</h4>
-              <div className="more-events">
+            <div className={eventsStyles.titleHolder + " title-holder"}>
+              <h4 className={eventsStyles.blogHeading + " blog-heading"}>
+                Webinars & Events
+              </h4>
+              <div className={eventsStyles.moreEvents + " more-events"}>
                 <Link to={"/events"}>
                   View More
                   <img src={rightChevron} alt="View More Events" />
                 </Link>
               </div>
             </div>
-            <div className="spacer solid small" />
+            <div
+              className={
+                eventsStyles.spacer +
+                " " +
+                eventsStyles.solid +
+                " " +
+                eventsStyles.small +
+                " spacer solid small"
+              }
+            />
           </div>
           {data.events.edges.map(({ node }) => (
             <div className="col-lg-3">
