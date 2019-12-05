@@ -50,6 +50,11 @@
     color: $blog-page-headings-color;
     margin-bottom: 0;
   }
+  .eventThumbnailTitle {
+    @include media("<tablet") {
+      margin-bottom: 30px;
+    }
+  }
 }
 .hoverUnderline:hover {
   text-decoration: underline !important;

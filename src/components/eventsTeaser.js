@@ -60,12 +60,12 @@ export default () => (
             />
           </div>
           {data.events.edges.map(({ node }) => (
-            <div className="col-lg-3">
+            <div className="col-sm-12 col-md-3 col-lg-3">
               <Link
                 to={`/events/` + node.slug}
                 className={styles.hoverUnderline}
               >
-                <div className="event-wrapper">
+                <div className={styles.eventWrapper + " event-wrapper"}>
                   <Img
                     fluid={
                       node.all_image_urls.hero_image_url.localFile
@@ -75,7 +75,13 @@ export default () => (
                   />
                 </div>
 
-                <p>{node.event_title}</p>
+                <p
+                  className={
+                    styles.eventThumbnailTitle + " event-thumbnail-title"
+                  }
+                >
+                  {node.event_title}
+                </p>
               </Link>
             </div>
           ))}
