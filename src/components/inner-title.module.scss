@@ -57,14 +57,8 @@
 
 .subtitleMuted {
   color: $mute-text;
-  font-size: 35px;
   margin-top: 0;
-  @include media("<=tablet") {
-    font-size: 20px;
-  }
-  @include media("<=phone") {
-    font-size: 14px;
-  }
+  @include fluid-type(14px, 35px, $phone, $laptop);
 }
 
 .contentBlockInnerTitle {

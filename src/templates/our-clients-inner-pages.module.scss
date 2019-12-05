@@ -9,7 +9,7 @@
       padding-right: 10%;
     }
   }
-  .imgCol {
+  .imgCol[class*="col-"] {
     @include media("<laptop") {
       padding: 0;
     }
@@ -200,8 +200,9 @@
   }
 
   #caseStudyHeader {
-    font-size: 45px;
+    // font-size: 45px;
     font-weight: $font-weight-bold;
+    @include fluid-type(20px, 45px, $phone, $desktop);
     @include media("<=tablet") {
       font-size: 21px;
     }
