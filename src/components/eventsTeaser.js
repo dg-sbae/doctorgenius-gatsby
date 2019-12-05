@@ -38,9 +38,9 @@ export default () => (
         >
           <div className="col-lg-12">
             <div className={eventsStyles.titleHolder + " title-holder"}>
-              <h4 className={eventsStyles.blogHeading + " blog-heading"}>
+              <h3 className={eventsStyles.blogHeading + " blog-heading"}>
                 Webinars & Events
-              </h4>
+              </h3>
               <div className={eventsStyles.moreEvents + " more-events"}>
                 <Link to={"/events"}>
                   View More
