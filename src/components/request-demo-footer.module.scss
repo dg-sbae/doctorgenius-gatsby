@@ -69,14 +69,14 @@
     @include media("<=tablet") {
       font-size: 0.9375rem;
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 0;
       margin-bottom: 60px;
       width: 75%;
       max-width: 300px;
       text-align: center;
     }
     @include media("<=425px") {
-      margin-top: 55px;
+      margin-top: 0;
     }
   }
 
