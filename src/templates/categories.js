@@ -12,6 +12,7 @@ import Container from "../components/Container"
 import NewsLetterSignUpForm from "../components/newsletter-form.js"
 import RequestDemoFooter from "../components/request-demo-footer"
 import Hero from "../components/Hero"
+import EventsTeaser from "../components/eventsTeaser"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
@@ -695,7 +696,7 @@ const CategoriesPage = ({ data, pageContext }) => {
                 </div>
               </div>
               {/* End Events component */}
-
+              <EventsTeaser />
               <RequestDemoFooter
                 smWidth="11"
                 sThin

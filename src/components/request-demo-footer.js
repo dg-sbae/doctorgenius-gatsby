@@ -31,20 +31,13 @@ const requestDemoFooter = ({
           requestDemoFooterStyles.requestDemoFooterStyling
         }
       >
-        <div className="col-lg-1" />
+        <div className="col-md-1" />
         <div
           id={contentBlockID}
           className={
             mdWidth
-              ? `col-sm-` +
-                smWidth +
-                " " +
-                `col-md-` +
-                mdWidth +
-                " offset-md-1 col-lg-5 offset-lg-0"
-              : `col-sm-` +
-                smWidth +
-                " col-md-6 offset-md-1 col-lg-5 offset-lg-0"
+              ? `col-sm-` + smWidth + " " + `col-md-` + mdWidth
+              : `col-sm-` + smWidth + " col-md-5"
           }
         >
           <div className={requestDemoFooterStyles.contentBlock}>
@@ -67,7 +60,9 @@ const requestDemoFooter = ({
             </div>
           </div>
         </div>
-        <div className={`col-sm-` + smWidth + " col-md-5 col-lg-5"}>
+        <div
+          className={`col-sm-` + smWidth + " " + RowStyles.colMd5 + " col-md-5"}
+        >
           <div className={requestDemoFooterStyles.center}>
             <a
               id={buttonID}
@@ -83,7 +78,6 @@ const requestDemoFooter = ({
             </a>
           </div>
         </div>
-        <div className="col-lg-1" />
       </div>
     )
   } else {
@@ -94,6 +88,8 @@ const requestDemoFooter = ({
           RowStyles.row +
           " " +
           RowStyles.padded +
+          " " +
+          RowStyles.tallBottom +
           " " +
           RowStyles.tallTop +
           " " +
@@ -120,7 +116,7 @@ const requestDemoFooter = ({
           </div>
         </div>
 
-        <div className="col-sm-10 col-md-5 col-lap-5">
+        <div className={RowStyles.colMd5 + "col-sm-10 col-md-5 col-lap-5"}>
           <div className={requestDemoFooterStyles.center}>
             <a
               id={buttonID}

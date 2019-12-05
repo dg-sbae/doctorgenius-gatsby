@@ -84,7 +84,12 @@ const MarketingSolutions = data => {
                   PageStyles.oddRow
                 }
               >
-                <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
+                <div
+                  className={
+                    RowStyles.colMd5 +
+                    " col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1"
+                  }
+                >
                   <div className="content-block">
                     <InnerTitle
                       title="Proven and tested results in every step of the way"
@@ -150,7 +155,14 @@ const MarketingSolutions = data => {
                     alt="Our Client Dashboard"
                   />
                 </div>
-                <div className={PageStyles.toolsYouNeed + " col-sm-9 col-md-5"}>
+                <div
+                  className={
+                    PageStyles.toolsYouNeed +
+                    " " +
+                    RowStyles.colMd5 +
+                    " col-sm-9 col-md-5"
+                  }
+                >
                   <div className="content-block">
                     <InnerTitle
                       title="All the tools you'll need to be in control."
@@ -194,7 +206,10 @@ const MarketingSolutions = data => {
                   <div className={RowStyles.row}>
                     <div
                       className={
-                        PageStyles.fullBleedContent + " col-sm-8 col-md-5"
+                        PageStyles.fullBleedContent +
+                        " " +
+                        RowStyles.colMd5 +
+                        " col-sm-8 col-md-5"
                       }
                     >
                       <div className="content-block">

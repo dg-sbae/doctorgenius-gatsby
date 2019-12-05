@@ -8,6 +8,7 @@ import ContactForm from "../components/contact-form.js"
 import "../styles/contact.scss"
 import PageStyles from "./contact.module.scss"
 import RowStyles from "../components/Row.module.scss"
+import InnerTitleStyles from "../components/inner-title.module.scss"
 
 export default props => (
   <div className={PageStyles.contactPage + " " + RowStyles.rowStyling}>
@@ -31,12 +32,19 @@ export default props => (
                 <div className="col-sm-12">
                   <div className="header center">
                     <h1>Contact Us</h1>
-                    <h3 className={PageStyles.strapline + " strapline"}>
+                    <h3
+                      className={
+                        InnerTitleStyles.strapline +
+                        " " +
+                        PageStyles.strapline +
+                        " strapline"
+                      }
+                    >
                       Have a question? Need help?
                     </h3>
                     <p className={PageStyles.mutedText + " muted-text"}>
-                      Fill the form below to get directly in contact with our
-                      support staff.
+                      Fill out the form below to get directly in contact with
+                      our support staff.
                     </p>
                   </div>
                 </div>
