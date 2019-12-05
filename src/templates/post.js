@@ -246,7 +246,10 @@ function PostPage({ pageContext, data, location }) {
 
               <div
                 className={
-                  PageStyles.events + " full-bleed-wrapper pad-md events"
+                  PageStyles.events +
+                  " " +
+                  PageStyles.fullBleedWrapper +
+                  " full-bleed-wrapper pad-md events"
                 }
               >
                 <div
@@ -254,7 +257,12 @@ function PostPage({ pageContext, data, location }) {
                     PageStyles.greyBackground + " full-bleed grey-background"
                   }
                 />
-                <div className="full-bleed-content-wrapper">
+                <div
+                  className={
+                    PageStyles.fullBleedContentWrapper +
+                    " full-bleed-content-wrapper"
+                  }
+                >
                   <EventsTeaser />
                 </div>
               </div>

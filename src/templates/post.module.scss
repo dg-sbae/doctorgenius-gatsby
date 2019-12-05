@@ -92,6 +92,23 @@
   .greyBackground {
     background: #f4f4f4;
     height: 400px;
+    @include media("<tablet") {
+      display: none;
+    }
+  }
+
+  .fullBleedContentWrapper {
+    @include media("<tablet") {
+      position: static;
+      top: 0;
+      transform: translateY(0%);
+    }
+  }
+
+  .fullBleedWrapper {
+    @include media("<laptop") {
+      padding-top: 30px !important;
+    }
   }
 
   .mobileImageRow {
