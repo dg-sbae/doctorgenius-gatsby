@@ -135,11 +135,15 @@
   }
 
   #demoRow {
-    margin-bottom: $m1 * 1.8;
+    // margin-bottom: $m1 * 1.8;
+    margin-bottom: 0;
   }
 
   #demoButton {
     margin-top: $m1 * 2;
+    @include media("<tablet") {
+      margin-top: 0;
+    }
   }
 
   .fontWeightSemibold {
