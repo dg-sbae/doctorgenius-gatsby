@@ -222,6 +222,8 @@ export default props => {
                   <div
                     className={
                       PageStyles.imgCol +
+                      " " +
+                      RowStyles.colMd5 +
                       " col-sm-12 col-md-5 col-lg-5 order-md-2 order-sm-1 img-col"
                     }
                   >

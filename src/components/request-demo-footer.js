@@ -67,7 +67,11 @@ const requestDemoFooter = ({
             </div>
           </div>
         </div>
-        <div className={`col-sm-` + smWidth + " col-md-5 col-lg-5"}>
+        <div
+          className={
+            `col-sm-` + smWidth + " " + RowStyles.colMd5 + " col-md-5 col-lg-5"
+          }
+        >
           <div className={requestDemoFooterStyles.center}>
             <a
               id={buttonID}
@@ -120,7 +124,7 @@ const requestDemoFooter = ({
           </div>
         </div>
 
-        <div className="col-sm-10 col-md-5 col-lap-5">
+        <div className={RowStyles.colMd5 + "col-sm-10 col-md-5 col-lap-5"}>
           <div className={requestDemoFooterStyles.center}>
             <a
               id={buttonID}

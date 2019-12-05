@@ -94,7 +94,9 @@ export default props => {
                     className={
                       (index % 2
                         ? "order-sm-2 order-md-3"
-                        : "order-sm-2 order-md-2") + " col-sm-9 col-md-5"
+                        : "order-sm-2 order-md-2") +
+                      " col-sm-9 col-md-5 " +
+                      RowStyles.colMd5
                     }
                   >
                     <div className="content-block">
@@ -134,7 +136,9 @@ export default props => {
                     className={
                       (index % 2
                         ? "order-sm-1 order-md-2"
-                        : "order-sm-1 order-md-3") + " col-sm-12 col-md-5"
+                        : "order-sm-1 order-md-3") +
+                      " col-sm-12 col-md-5 " +
+                      RowStyles.colMd5
                     }
                   >
                     <img

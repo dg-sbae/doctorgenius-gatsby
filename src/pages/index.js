@@ -209,7 +209,7 @@ export default ({ data }, props) => {
                     alt="New Patient Acquisitions"
                   />
                 </div>
-                <div className="col-sm-9 col-md-5">
+                <div className={RowStyles.colMd5 + " col-sm-9 col-md-5"}>
                   <div className="content-block">
                     <InnerTitle
                       title="Why is Doctor Genius # 1 in new patient acquisitions?"
@@ -238,7 +238,12 @@ export default ({ data }, props) => {
                   RowStyles.shortBottom
                 }
               >
-                <div className="col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1">
+                <div
+                  className={
+                    RowStyles.colMd5 +
+                    " col-sm-9 col-md-5 offset-md-1 order-sm-2 order-md-1"
+                  }
+                >
                   <div className="content-block">
                     <InnerTitle
                       title="What makes Doctor Genius different?"
@@ -281,7 +286,7 @@ export default ({ data }, props) => {
                     alt="Client Satisfaction"
                   />
                 </div>
-                <div className="col-sm-9 col-md-5">
+                <div className={RowStyles.colMd5 + " col-sm-9 col-md-5"}>
                   <div className="content-block">
                     <InnerTitle
                       title="How would you rate Doctor Genius' client satisfaction?"
