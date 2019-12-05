@@ -31,20 +31,13 @@ const requestDemoFooter = ({
           requestDemoFooterStyles.requestDemoFooterStyling
         }
       >
-        <div className="col-lg-1" />
+        <div className="col-md-1" />
         <div
           id={contentBlockID}
           className={
             mdWidth
-              ? `col-sm-` +
-                smWidth +
-                " " +
-                `col-md-` +
-                mdWidth +
-                " offset-md-1 col-lg-5 offset-lg-0"
-              : `col-sm-` +
-                smWidth +
-                " col-md-6 offset-md-1 col-lg-5 offset-lg-0"
+              ? `col-sm-` + smWidth + " " + `col-md-` + mdWidth
+              : `col-sm-` + smWidth + " col-md-5"
           }
         >
           <div className={requestDemoFooterStyles.contentBlock}>
@@ -68,9 +61,7 @@ const requestDemoFooter = ({
           </div>
         </div>
         <div
-          className={
-            `col-sm-` + smWidth + " " + RowStyles.colMd5 + " col-md-5 col-lg-5"
-          }
+          className={`col-sm-` + smWidth + " " + RowStyles.colMd5 + " col-md-5"}
         >
           <div className={requestDemoFooterStyles.center}>
             <a
@@ -87,7 +78,6 @@ const requestDemoFooter = ({
             </a>
           </div>
         </div>
-        <div className="col-lg-1" />
       </div>
     )
   } else {
