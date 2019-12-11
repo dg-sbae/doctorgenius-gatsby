@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -19,6 +19,13 @@ export default () => (
           edges {
             node {
               ...eventListing
+            }
+          }
+        }
+        standardHeroBg: file(relativePath: { eq: "partnerships-hero.jpg" }) {
+          childImageSharp {
+            fluid(quality: 70) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -68,8 +75,10 @@ export default () => (
                 <div className={styles.eventWrapper + " event-wrapper"}>
                   <Img
                     fluid={
-                      node.all_image_urls.hero_image_url.localFile
-                        .childImageSharp.fluid
+                      node.all_image_urls.hero_image_url
+                        ? node.all_image_urls.hero_image_url.localFile
+                            .childImageSharp.fluid
+                        : data.standardHeroBg.childImageSharp.fluid
                     }
                     alt="Recent Event"
                   />
