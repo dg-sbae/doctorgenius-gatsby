@@ -1,5 +1,5 @@
 import React from "react"
-import containerStyles from "./container.module.scss"
+import containerStyles from "./Container.module.scss"
 
 const bootstrapContainerClassName = "container-fluid"
 
