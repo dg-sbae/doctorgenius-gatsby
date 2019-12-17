@@ -49,10 +49,13 @@
     .callout {
       font-size: 2.5rem; /* 40px */
       @include fluid-type(16px, 35px, $tablet, $laptop);
+      @include media("<laptop") {
+        min-width: 50%;
+      }
     }
     p:not(.callout) {
       font-size: 0.9375rem; /* 15px */
-      @include fluid-type(9px, 15px, $phone, $laptop);
+      @include fluid-type(9px, 12.5px, $phone, $laptop);
     }
     .iconWrapper {
       height: 67px;

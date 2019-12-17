@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
 
 // Images - Marketing Solutions Pages
 import contentMarketingIcon from "../img/contract.svg"
@@ -166,15 +167,17 @@ class SecondaryNavigation extends Component {
               }
             >
               <div className={SecondaryNavStyles.iconWrapper + " icon-wrapper"}>
-                <a href={item.url}>
+                <Link to={item.url}>
                   <img
                     className={SecondaryNavStyles.imgIcon + " img-icon"}
                     src={item.source}
                     alt={item.alt}
                   />
-                </a>
+                </Link>
               </div>
-              <p>{item.text}</p>
+              <Link to={item.url} className={SecondaryNavStyles.subtleLink}>
+                <p>{item.text}</p>
+              </Link>
             </div>
           ))}
         </div>
