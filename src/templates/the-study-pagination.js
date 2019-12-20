@@ -10,6 +10,8 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import NewsLetterSignUpForm from "../components/newsletter-form.js"
+import RequestDemoFooter from "../components/request-demo-footer"
+import Hero from "../components/Hero"
 import EventsTeaser from "../components/eventsTeaser"
 
 import twitterIcon from "../img/twitter.svg"
@@ -17,18 +19,35 @@ import facebookIcon from "../img/facebook.svg"
 import instagramIcon from "../img/instagram.svg"
 import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
-import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study.scss"
-//import { isContext } from "vm"
+import PageStyles from "./the-study-pagination.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
+const heroConfig = {
+  pageType: "theStudyPagination",
+  strapline: "Resources",
+  title: [<span>The</span>, " Study"],
+  content:
+    "Providing news and education on all things regarding Practice Management and Digital Marketing to help jumpstart your Practice.",
+}
 
 const ResponsivePostsColumnHeader = props => (
-  <div className="col-sm-12 d-lg-none responsive-tab-trigger">
+  <div
+    className={
+      PageStyles.responsiveTabTrigger +
+      " col-sm-12 d-lg-none responsive-tab-trigger"
+    }
+  >
     <h3
       onClick={props.onClick}
       data-column="latest"
       className={
-        (props.currentColumn === "latest" ? "active" : "") + " blog-heading"
+        (props.currentColumn === "latest"
+          ? `${PageStyles.active} active `
+          : "") +
+        PageStyles.blogHeading +
+        " blog-heading"
       }
     >
       Latest Posts
@@ -37,19 +56,28 @@ const ResponsivePostsColumnHeader = props => (
       onClick={props.onClick}
       data-column="popular"
       className={
-        (props.currentColumn === "popular" ? "active" : "") + " blog-heading"
+        (props.currentColumn === "popular"
+          ? `${PageStyles.active} active `
+          : "") +
+        PageStyles.blogHeading +
+        " blog-heading"
       }
     >
       Popular Posts
     </h3>
-    <div className="spacer small solid" />
+    <div
+      className={
+        PageStyles.spacer + " " + PageStyles.small + " " + PageStyles.solid
+      }
+    />
   </div>
 )
 const LatestPostsColumn = props => (
   <div
     className={
-      (props.currentColumn === "latest" ? "active" : "hidden") +
-      " col-sm-12 col-lg-8 latest-posts"
+      (props.currentColumn === "latest"
+        ? `${PageStyles.active} active`
+        : `${PageStyles.hidden} hidden`) + " col-sm-12 col-lg-8 latest-posts"
     }
   >
     {props.children}
@@ -58,7 +86,9 @@ const LatestPostsColumn = props => (
 const PopularPostsColumn = props => (
   <div
     className={
-      (props.currentColumn === "popular" ? "active" : "hidden") +
+      (props.currentColumn === "popular"
+        ? `${PageStyles.active} active`
+        : `${PageStyles.hidden} hidden`) +
       " col-sm-12 col-md-12 col-lg-4 sidebar"
     }
   >
@@ -142,319 +172,470 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
   }
 
   return (
-    <DefaultPageLayout>
-      <Helmet>
-        <title>Practice Management & Digital Marketing Blog | The Study</title>
-        <meta
-          name="description"
-          content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-        />
-      </Helmet>
-      <div className="the-study">
-        <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
-          <div className="hero">
-            {/* Hero will be a layout component */}
-
+    <div
+      className={PageStyles.theStudyPaginationPage + " " + RowStyles.rowStyling}
+    >
+      <DefaultPageLayout>
+        <Helmet>
+          <title>
+            Practice Management & Digital Marketing Blog | The Study
+          </title>
+          <meta
+            name="description"
+            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+          />
+        </Helmet>
+        <div className="the-study">
+          <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
+            />
+          </BackgroundImage>
+          <Main>
             <Container>
-              <div className="valign-wrapper row">
-                <div className="col-sm-12">
-                  <div className="hero-content accent-block">
-                    <h1>Resources</h1>
-                    <h2>
-                      <span>The</span> Study
-                    </h2>
-                    <div className="accented-paragraph">
-                      <p>
-                        Providing news and education on all things regarding
-                        Practice Management and Digital Marketing to help
-                        jumpstart your Practice.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Container>
-          </div>
-        </BackgroundImage>
-        <Main>
-          <Container>
-            <div className="row padded category">
-              {categoriesPaths.map(category => (
-                <div className="col-sm-4" key={category.name}>
-                  <a href={postsPath + category.slug} rel="nofollow">
-                    <div className="category-image">
-                      <img
-                        src={category.image}
-                        alt={category.name}
-                        className="img-responsive"
-                      />
-                      <div className="label primary">
-                        <p>{category.name}</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              ))}
-            </div>
-            <div className="row padded align-items-start short-top">
-              <ResponsivePostsColumn>
-                <LatestPostsColumn>
-                  <h3 className="blog-heading d-sm-none d-md-block">
-                    Latest Posts
-                  </h3>
-                  <div className=" d-sm-none d-md-block spacer small solid" />
-
-                  {data.latest.edges.map(({ node }) => {
-                    // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
-                    // The deprecated categories on dg.com like "DoctorGenius" were causing an error
-                    const mainCategory = node.categories.find(c =>
-                      categoriesPaths.find(d => d.name === c.name)
-                    )
-                    // console.log(mainCategory)
-                    return (
-                      <div className="latest-post" key={node.title}>
-                        <div className="featured-image-holder">
-                          <a href={postsPath + node.slug}>
-                            <Img
-                              fluid={
-                                node.featured_media.localFile.childImageSharp
-                                  .fluid
-                              }
-                            />
-                          </a>
-                        </div>
-                        <div className="content-holder">
-                          <div className="details">
-                            <p className="date">{node.date}</p>
-                            <p className="label mute">
-                              <a
-                                href={
-                                  // This selects the slug from the categories array matching the mainCategory found above
-                                  postsPath +
-                                  categoriesPaths.find(
-                                    i => i.name === mainCategory.name
-                                  ).slug
-                                }
-                                rel="nofollow"
-                              >
-                                {mainCategory.name}
-                              </a>
-                            </p>
-                          </div>
-                          <h4 className="title">
-                            <a
-                              className="not-a-link"
-                              href={postsPath + node.slug}
-                            >
-                              {he.decode(node.title)}
-                            </a>
-                          </h4>
-                          <p
-                            className="excerpt"
-                            dangerouslySetInnerHTML={{
-                              __html: node.excerpt.replace(
-                                /<a.*?moretag.*?<\/a>/,
-                                '... <a href="' +
-                                  postsPath +
-                                  node.slug +
-                                  '" target="_blank">[ Read More ]</a>'
-                              ),
-                            }}
-                          />
-                          <p className="readmore-link"></p>
-                        </div>
-                      </div>
-                    )
-                  })}
-
-                  <div className="pagination">
-                    {// Controls the prev button
-                    !isFirst && (
-                      <Link to={prevPage} rel="prev">
-                        <img src={leftChevron} alt="Navigate to Previous" />
-                      </Link>
-                    )}
-                    {}
-                    {// Loop to create pagination links based on numOfPages
-
-                    Array.from(
-                      { length: pageContext.numPaginationLinks },
-                      (_, i) => (
-                        <Link
-                          key={`pagination-number${i + start}`}
-                          to={`/blog${
-                            i + start - 1 === 0 ? "" : "/" + (i + start)
-                          }`}
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  PageStyles.category +
+                  " category"
+                }
+              >
+                {categoriesPaths.map(category => (
+                  <div className="col-sm-4" key={category.name}>
+                    <a href={postsPath + category.slug}>
+                      <div
+                        className={PageStyles.categoryImage + " category-image"}
+                      >
+                        <img
+                          src={category.image}
+                          alt={category.name}
+                          className={PageStyles.imgResponsive}
+                        />
+                        <div
+                          className={
+                            PageStyles.label + " " + PageStyles.primary
+                          }
                         >
-                          <p
+                          <p>{category.name}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " align-items-start"
+                }
+              >
+                <ResponsivePostsColumn>
+                  <LatestPostsColumn>
+                    <h3
+                      className={
+                        PageStyles.blogHeading +
+                        " blog-heading d-sm-none d-md-block"
+                      }
+                    >
+                      Latest Posts
+                    </h3>
+                    <div
+                      className={
+                        PageStyles.spacer +
+                        " " +
+                        PageStyles.small +
+                        " " +
+                        PageStyles.solid +
+                        " d-sm-none d-md-block"
+                      }
+                    />
+
+                    {data.latest.edges.map(({ node }) => {
+                      // This combs the list of categories attached to a post and returns the first one matching our sleetced Categories
+                      // The deprecated categories on dg.com like "DoctorGenius" were causing an error
+                      const mainCategory = node.categories.find(c =>
+                        categoriesPaths.find(d => d.name === c.name)
+                      )
+                      // console.log(mainCategory)
+                      return (
+                        <div
+                          className={PageStyles.latestPost + " latest-post"}
+                          key={node.title}
+                        >
+                          <div
                             className={
-                              pageContext.currentPage === i + start
-                                ? "active"
-                                : ""
+                              PageStyles.featuredImageHolder +
+                              " featured-image-holder"
                             }
                           >
-                            {i + start}
-                          </p>
-                        </Link>
+                            <a href={postsPath + node.slug}>
+                              <Img
+                                fluid={
+                                  node.featured_media.localFile.childImageSharp
+                                    .fluid
+                                }
+                              />
+                            </a>
+                          </div>
+                          <div
+                            className={
+                              PageStyles.contentHolder + " content-holder"
+                            }
+                          >
+                            <div className={PageStyles.details + " details"}>
+                              <p className={PageStyles.date + " date"}>
+                                {node.date}
+                              </p>
+                              <p
+                                className={
+                                  PageStyles.label + " " + PageStyles.mute
+                                }
+                              >
+                                <a
+                                  href={
+                                    // This selects the slug from the categories array matching the mainCategory found above
+                                    postsPath +
+                                    categoriesPaths.find(
+                                      i => i.name === mainCategory.name
+                                    ).slug
+                                  }
+                                >
+                                  {mainCategory.name}
+                                </a>
+                              </p>
+                            </div>
+                            <h4 className={PageStyles.title + " title"}>
+                              <a
+                                className={PageStyles.notALink}
+                                href={postsPath + node.slug}
+                                rel="nofollow"
+                              >
+                                {he.decode(node.title)}
+                              </a>
+                            </h4>
+                            <p
+                              className={PageStyles.excerpt + " excerpt"}
+                              dangerouslySetInnerHTML={{
+                                __html: node.excerpt.replace(
+                                  /<a.*?moretag.*?<\/a>/,
+                                  '... <a href="' +
+                                    postsPath +
+                                    node.slug +
+                                    '" target="_blank">[ Read More ]</a>'
+                                ),
+                              }}
+                            />
+                            <p className="readmore-link"></p>
+                          </div>
+                        </div>
                       )
-                    )}
-                    {// Controls the next button
-                    !isLast && (
-                      <Link to={nextPage} rel="next">
-                        <img src={rightChevron} alt="Navigate to Next" />
-                      </Link>
-                    )}
-                  </div>
-                </LatestPostsColumn>
-                <PopularPostsColumn>
-                  <div className="stay-connected">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <h3 className="blog-heading ">Stay Connected</h3>
-                        <div className="spacer small solid" />
-                      </div>
+                    })}
+
+                    <div className={PageStyles.pagination + " pagination"}>
+                      {// Controls the prev button
+                      !isFirst && (
+                        <Link to={prevPage} rel="prev">
+                          <img src={leftChevron} alt="Navigate to Previous" />
+                        </Link>
+                      )}
+                      {}
+                      {// Loop to create pagination links based on numOfPages
+
+                      Array.from(
+                        { length: pageContext.numPaginationLinks },
+                        (_, i) => (
+                          <Link
+                            key={`pagination-number${i + start}`}
+                            to={`/blog${
+                              i + start - 1 === 0 ? "" : "/" + (i + start)
+                            }`}
+                          >
+                            <p
+                              className={
+                                pageContext.currentPage === i + start
+                                  ? `${PageStyles.active} active`
+                                  : ""
+                              }
+                            >
+                              {i + start}
+                            </p>
+                          </Link>
+                        )
+                      )}
+                      {// Controls the next button
+                      !isLast && (
+                        <Link to={nextPage} rel="next">
+                          <img src={rightChevron} alt="Navigate to Next" />
+                        </Link>
+                      )}
                     </div>
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <div className="social-icons-wrapper">
-                          <div className="social-icon-detail">
-                            <img
-                              src={facebookIcon}
-                              className="social-icon"
-                              alt="Facebook"
-                            />
-                            <p>25k</p>
-                            <p className="social-unit">Likes</p>
-                          </div>
-                          <div className="social-icon-detail">
-                            <img
-                              src={twitterIcon}
-                              className="social-icon"
-                              alt="Twitter"
-                            />
-                            <p>231k</p>
-                            <p className="social-unit">Followers</p>
-                          </div>
-                          <div className="social-icon-detail">
-                            <img
-                              src={instagramIcon}
-                              className="social-icon"
-                              alt="Instagram"
-                            />
-                            <p>80k</p>
-                            <p className="social-unit">Followers</p>
+                  </LatestPostsColumn>
+                  <PopularPostsColumn>
+                    <div
+                      className={PageStyles.stayConnected + " stay-connected"}
+                    >
+                      <div className={RowStyles.row}>
+                        <div className="col-sm-12">
+                          <h3
+                            className={
+                              PageStyles.blogHeading + " blog-heading "
+                            }
+                          >
+                            Stay Connected
+                          </h3>
+                          <div
+                            className={
+                              PageStyles.spacer +
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div className={RowStyles.row}>
+                        <div className="col-sm-12">
+                          <div
+                            className={
+                              PageStyles.socialIconsWrapper +
+                              " social-icons-wrapper"
+                            }
+                          >
+                            <div
+                              className={
+                                PageStyles.socialIconDetail +
+                                " social-icon-detail"
+                              }
+                            >
+                              <img
+                                src={facebookIcon}
+                                className="social-icon"
+                                alt="Facebook"
+                              />
+                              <p>25k</p>
+                              <p
+                                className={
+                                  PageStyles.socialUnit + " social-unit"
+                                }
+                              >
+                                Likes
+                              </p>
+                            </div>
+                            <div
+                              className={
+                                PageStyles.socialIconDetail +
+                                " social-icon-detail"
+                              }
+                            >
+                              <img
+                                src={twitterIcon}
+                                className="social-icon"
+                                alt="Twitter"
+                              />
+                              <p>231k</p>
+                              <p
+                                className={
+                                  PageStyles.socialUnit + " social-unit"
+                                }
+                              >
+                                Followers
+                              </p>
+                            </div>
+                            <div
+                              className={
+                                PageStyles.socialIconDetail +
+                                " social-icon-detail"
+                              }
+                            >
+                              <img
+                                src={instagramIcon}
+                                className="social-icon"
+                                alt="Instagram"
+                              />
+                              <p>80k</p>
+                              <p
+                                className={
+                                  PageStyles.socialUnit + " social-unit"
+                                }
+                              >
+                                Followers
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
+                      <NewsLetterSignUpForm />
                     </div>
-                    <NewsLetterSignUpForm />
-                  </div>
-                  <div className="most-popular">
-                    <div className="row d-sm-none d-lg-block padded short-top short-bottom">
-                      <div className="col-sm-12">
-                        <h4 className="blog-heading ">Most Popular</h4>
-                        <div className="d-md-none spacer small solid" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-sm-12">
-                        {data.popular.edges.map(({ node }) => (
-                          <a href={`/blog/${node.slug}`} key={node.title}>
-                            <div className="popular-post">
-                              <div className="featured-image-holder">
-                                {/*console.log(node)*/}
-                                <Img
-                                  fluid={
-                                    node.featured_media.localFile
-                                      .childImageSharp.fluid
-                                  }
-                                />
-                              </div>
-                              <div className="content-holder">
-                                <p className="d-md-block d-lg-none details date">
-                                  {node.date}
-                                </p>
-                                <h5 className="title">
-                                  {he.decode(node.title)}
-                                </h5>
-                                <p className="d-md-none d-lg-block details date">
-                                  {node.date}
-                                </p>
-                                <p
-                                  className="excerpt d-md-block d-lg-none"
-                                  dangerouslySetInnerHTML={{
-                                    __html: node.excerpt.replace(
-                                      /^\//,
-                                      "/blog"
-                                    ),
-                                  }}
-                                />
-                              </div>
-                            </div>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="category-section">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <h4 className="blog-heading ">Category</h4>
-                        <div className="spacer small solid" />
-                        {categoriesPaths.map(category => (
-                          <a
-                            href={postsPath + category.slug}
-                            key={category.name}
-                            rel="nofollow"
+                    <div className="most-popular">
+                      <div
+                        className={
+                          RowStyles.row +
+                          " " +
+                          RowStyles.padded +
+                          " " +
+                          RowStyles.shortTop +
+                          " " +
+                          RowStyles.shortBottom +
+                          " d-sm-none d-lg-block"
+                        }
+                      >
+                        <div className="col-sm-12">
+                          <h4
+                            className={
+                              PageStyles.blogHeading + " blog-heading "
+                            }
                           >
-                            <span className="label primary">
-                              <p>{category.name}</p>
-                            </span>
-                          </a>
-                        ))}
+                            Most Popular
+                          </h4>
+                          <div
+                            className={
+                              PageStyles.spacer +
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid +
+                              " d-md-none"
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div className={RowStyles.row}>
+                        <div className="col-sm-12">
+                          {data.popular.edges.map(({ node }) => (
+                            <a href={`/blog/${node.slug}`} key={node.title}>
+                              <div
+                                className={
+                                  PageStyles.popularPost + " popular-post"
+                                }
+                              >
+                                <div
+                                  className={
+                                    PageStyles.featuredImageHolder +
+                                    " featured-image-holder"
+                                  }
+                                >
+                                  {/*console.log(node)*/}
+                                  <Img
+                                    fluid={
+                                      node.featured_media.localFile
+                                        .childImageSharp.fluid
+                                    }
+                                  />
+                                </div>
+                                <div
+                                  className={
+                                    PageStyles.contentHolder + " content-holder"
+                                  }
+                                >
+                                  <p
+                                    className={
+                                      PageStyles.details +
+                                      " " +
+                                      PageStyles.date +
+                                      " d-md-block d-lg-none details date"
+                                    }
+                                  >
+                                    {node.date}
+                                  </p>
+                                  <h5 className={PageStyles.title + " title"}>
+                                    {he.decode(node.title)}
+                                  </h5>
+                                  <p
+                                    className={
+                                      PageStyles.details +
+                                      " " +
+                                      PageStyles.date +
+                                      " d-none d-lg-block details date"
+                                    }
+                                  >
+                                    {node.date}
+                                  </p>
+                                  <p
+                                    className={
+                                      PageStyles.excerpt +
+                                      " excerpt d-md-block d-lg-none"
+                                    }
+                                    dangerouslySetInnerHTML={{
+                                      __html: node.excerpt.replace(
+                                        /<a.*?moretag.*?<\/a>/,
+                                        '... <a href="' +
+                                          postsPath +
+                                          node.slug +
+                                          '" target="_blank">[ Read More ]</a>'
+                                      ),
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </PopularPostsColumn>
-              </ResponsivePostsColumn>
-            </div>
-
-            <EventsTeaser />
-
-            <div className="row padded tall-top request-demo-footer">
-              <div className="col-lg-1" />
-              <div className="col-sm-11 col-md-6 offset-md-1 col-lg-5 offset-lg-0">
-                <div className="content-block">
-                  <div className="inner-title">
-                    <h2>
-                      Start your{" "}
-                      <span className="font-weight-semibold">success </span>
-                      with Doctor Genius today!
-                    </h2>
-                    <div className="accented-paragraph">
-                      <p className="s-thin">
-                        The Genius platform makes every part of your company
-                        process more efficient. Our support team is very excited
-                        to help you and get your company on the right path of
-                        success.
-                      </p>
+                    <div
+                      className={
+                        PageStyles.categorySection + " category-section"
+                      }
+                    >
+                      <div className={RowStyles.row}>
+                        <div className="col-sm-12">
+                          <h4
+                            className={
+                              PageStyles.blogHeading + " blog-heading "
+                            }
+                          >
+                            Category
+                          </h4>
+                          <div
+                            className={
+                              PageStyles.spacer +
+                              " " +
+                              PageStyles.small +
+                              " " +
+                              PageStyles.solid
+                            }
+                          />
+                          {categoriesPaths.map(category => (
+                            <a
+                              href={postsPath + category.slug}
+                              key={category.name}
+                              rel="nofollow"
+                            >
+                              <span
+                                className={
+                                  PageStyles.label + " " + PageStyles.primary
+                                }
+                              >
+                                <p>{category.name}</p>
+                              </span>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </PopularPostsColumn>
+                </ResponsivePostsColumn>
               </div>
-              <div className="col-sm-11 col-md-5 col-lg-5">
-                <div className="center">
-                  <a href="/demo" className="button flat white-text">
-                    Request Demo <img src={thinArrowRight} alt="Arrow Right" />
-                  </a>
-                </div>
-              </div>
-              <div className="col-lg-1" />
-            </div>
-          </Container>
-        </Main>
-      </div>
-    </DefaultPageLayout>
+
+              <EventsTeaser />
+
+              <RequestDemoFooter smWidth="11" sThin />
+            </Container>
+          </Main>
+        </div>
+      </DefaultPageLayout>
+    </div>
   )
 }
 

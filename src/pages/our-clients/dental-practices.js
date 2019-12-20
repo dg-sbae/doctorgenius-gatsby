@@ -9,7 +9,10 @@ const DentalPracticeInnerPage = data => {
     <OurClientsInnerPages
       page="dental-practices" /* this should be dynamic from the page props */
       pageTitle="Dental Practices"
-      pageSubTitle="<span>Engage and Convert More</span> Patients To Your Practice"
+      pageSubTitle={[
+        <span>Engage and Convert More</span>,
+        " Patients To Your Practice",
+      ]}
       pageIntro="Doctor Genius provides digital marketing solutions by leveraging content, mobile-first web design, SEO, online directories, and social media to drive new patients to your private practice"
       caseStudy={true}
       caseStudyImage={images.SearchResultsPageImage.childImageSharp.fluid}

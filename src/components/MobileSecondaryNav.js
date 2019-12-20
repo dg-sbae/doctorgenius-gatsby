@@ -1,9 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
-import $ from "jquery"
 
-import styles from "./mobile-secondary-nav.module.scss"
 import downArrow from "../img/icon/down-arrow.svg"
+
+import styles from "./MobileSecondaryNav.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
+import $ from "jquery"
 
 const mobileSubNavLinks = {
   marketingSolutions: [
@@ -124,7 +127,7 @@ export default class MobileSecondaryNav extends React.Component {
 
   render() {
     return (
-      <div className="row">
+      <div className={RowStyles.row + " " + styles.mobileSecondaryNavHolder}>
         <div
           className={
             "col-12 d-none d-block d-sm-block d-md-none " +

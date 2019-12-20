@@ -1,36 +1,13 @@
 import React from "react"
 import { navigate } from "gatsby"
+
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
-import $ from "jquery"
-//import { string } from "prop-types"
 
-/* class FormResponse extends React.Component {
-  render() {
-    return (
-      <div className="form-response">
-        <h3>Debug:</h3>
-        <p>Form data received from server:</p>
-        <ul>
-          <li>
-            {this.props.name !== "" ? this.props.name : "No Data Received"}
-          </li>
-          <li>
-            {this.props.phone !== "" ? this.props.phone : "No Data Received"}
-          </li>
-          <li>
-            {this.props.email !== "" ? this.props.email : "No Data Received"}
-          </li>
-          <li>
-            {this.props.company !== ""
-              ? this.props.company
-              : "No Data Received"}
-          </li>
-        </ul>
-      </div>
-    )
-  }
-} */
+import ContactFormStyles from "./contact-form.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
+import $ from "jquery"
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -102,44 +79,8 @@ class ContactForm extends React.Component {
     // data.append("Description", "Form: Contact Us Form")
     data.append("LeadSource", "(New) Main Website Organic")
 
-    /* Debug:
-    alert(
-      "Debug -- Data sent to server:\n" +
-        data +
-        "\n\n" +
-        "Readable format:" +
-        "\nname: " +
-        this.name.value +
-        "\nphone: " +
-        this.phone.value +
-        "\nemail: " +
-        this.email.value +
-        "\nmessage: " +
-        this.message.value
-    )
-    */
-
-    //NodeTest server
-    //fetch("http://nodetest.dgd3v.com/upload", {
-
-    //Salesforce integration:
-    //https://portal.doctorgenius.com/api/dglead
-    //tracking key: a803bcbe-f32d-41b9-81a8-62a4cd6cd446
-
-    //Email to the support team
-    //inboundleads@doctorgenius.com, alexis@doctorgenius.com
-    //[FullName] <noreply@doctorgenius.com>
-    //Doctor Genius "Request Demo"
-    //Name:    [FullName]
-    //Phone:   [PhoneNumber]
-    //Email:   [EmailAddress]
-    //Description: [Description]
-
     //stringData holds the stringified, encoded form data
     let stringData = ""
-
-    // Debug
-    // console.log(Object.fromEntries(data))
 
     // Turn the form body into a string by iterating over the form
     // entries and encoding them as URI components
@@ -153,12 +94,6 @@ class ContactForm extends React.Component {
 
     // Remove the trailing '&' since there's no additional parameter
     stringData = stringData.replace(/&$/, "")
-
-    // Debug:
-    // console.log("Stringified form data:", stringData)
-
-    // Generate a request to our Admin portal (connects to SalesForce)
-    // Handled in the backend server now
 
     // Generate a request to the email server
     fetch("https://nodetest.dgplex.com/contact-us", {
@@ -200,73 +135,110 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="form-wrapper">
+      <div
+        className={RowStyles.rowStyling + " " + ContactFormStyles.formWrapper}
+      >
         <form
           onLoad={this.focusWithoutScrolling}
           onSubmit={this.handleFormSubmit}
-          className="row"
+          className={RowStyles.row}
         >
-          <div className="form-group col-sm-11 col-md-9">
+          <div
+            className={
+              ContactFormStyles.formGroup + " form-group col-sm-11 col-md-9"
+            }
+          >
             <label htmlFor="input-name">First and Last name</label>
             <input
               ref={ref => {
                 this.name = ref
               }}
               type="text"
-              className="form-control"
+              className={ContactFormStyles.formControl + " form-control"}
               id="input-name"
               required
             />
           </div>
-          <div className="form-group col-sm-11 col-md-9">
+          <div
+            className={
+              ContactFormStyles.formGroup + " form-group col-sm-11 col-md-9"
+            }
+          >
             <label htmlFor="input-phone">Phone Number</label>
             <input
               ref={ref => {
                 this.phone = ref
               }}
               type="tel"
-              className="form-control"
+              className={ContactFormStyles.formControl + " form-control"}
               id="input-phone"
               required
             />
           </div>
-          <div className="form-group col-sm-11 col-md-9">
+          <div
+            className={
+              ContactFormStyles.formGroup + " form-group col-sm-11 col-md-9"
+            }
+          >
             <label htmlFor="input-email">Email</label>
             <input
               ref={ref => {
                 this.email = ref
               }}
               type="email"
-              className="form-control"
+              className={ContactFormStyles.formControl + " form-control"}
               id="input-email"
               required
             />
           </div>
-          <div className="form-group col-sm-11 col-md-9">
+          <div
+            className={
+              ContactFormStyles.formGroup + " form-group col-sm-11 col-md-9"
+            }
+          >
             <label htmlFor="input-name">Description</label>
             <input
               ref={ref => {
                 this.description = ref
               }}
               type="textarea"
-              className="form-control"
+              className={ContactFormStyles.formControl + " form-control"}
               id="input-description"
               required
             />
           </div>
-          <div className="form-group col-sm-8 col-md-4">
-            <button type="submit" className="button btn flat submit-contact">
+          <div
+            className={
+              ContactFormStyles.formGroup + " form-group col-sm-8 col-md-4"
+            }
+          >
+            <button
+              type="submit"
+              className={
+                ContactFormStyles.button +
+                " " +
+                ContactFormStyles.flat +
+                " " +
+                ContactFormStyles.submitButton +
+                " btn submit-contact"
+              }
+            >
               Contact Us
             </button>
             <div>
-              <div style={{ display: "none" }} className="lds-ellipsis">
+              <div
+                style={{ display: "none" }}
+                className={ContactFormStyles.ldsEllipsis + " lds-ellipsis"}
+              >
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
               </div>
               <div
-                className="positive-response"
+                className={
+                  ContactFormStyles.positiveResponse + " positive-response"
+                }
                 style={{ display: "none", margin: "10px" }}
               >
                 <img src={checkSuccess} alt="Message Sent!" />

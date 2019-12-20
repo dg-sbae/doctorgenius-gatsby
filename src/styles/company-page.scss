@@ -1,43 +1,10 @@
 @import "_site-variables.scss";
 .company {
-  .hero {
-    h2 {
-      margin-bottom: 20px;
-    }
-    .hero-content {
-      @include media(">=tablet") {
-        width: 514px;
-        height: 280px;
-        margin-top: 90px;
-      }
-    }
-  }
-
   @include media("<tablet") {
+    // ----------- NAVIGATION STYLING -----------
     .logo img {
       margin-top: 40px;
     }
   }
-  .request-demo-footer > div {
-    margin-top: 50px;
-  }
-  .panel {
-    a {
-      text-decoration: none;
-    }
-    .icon-wrapper {
-      height: 67px;
-      width: 103px;
-      margin-bottom: 30px;
-    }
-  }
-
-  .nav-icon-wrapper,
-  .footer-contact-row {
-    .icon-wrapper {
-      height: auto;
-      width: auto;
-      margin-bottom: 0;
-    }
-  }
+  // ----------- END NAVIGATION STYLING -----------
 }

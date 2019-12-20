@@ -7,17 +7,17 @@ import Img from "gatsby-image"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import RequestDemoFooter from "../components/request-demo-footer"
 import EventsTeaser from "../components/eventsTeaser"
 
 import twitterIcon from "../img/twitter.svg"
 import facebookIcon from "../img/facebook.svg"
-//import instagramIcon from "../img/instagram.svg"
-//import youtubeIcon from "../img/youtube.svg"
 import leftChevron from "../img/left-chevron.svg"
 import rightChevron from "../img/right-chevron.svg"
-import thinArrowRight from "../img/right-arrow.svg"
 
 import "../styles/the-study-post.scss"
+import PageStyles from "./post.module.scss"
+import RowStyles from "../components/Row.module.scss"
 
 function PostPage({ pageContext, data, location }) {
   const categoriesPaths = [
@@ -66,99 +66,124 @@ function PostPage({ pageContext, data, location }) {
     : null
 
   return (
-    <DefaultPageLayout location="the-study-post">
-      {// Meta description for Genius Lab category post
-      mainCategory.name === "Genius Lab" && (
-        <Helmet>
-          <title>Genius Lab Archives - Doctor Genius | Doctor Genius</title>
-          <meta
-            name="description"
-            content={
-              post._yoast_wpseo_metadesc ||
-              "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-            }
-          />
-        </Helmet>
-      )}
+    <div className={PageStyles.blogPostPage + " " + RowStyles.rowStyling}>
+      <DefaultPageLayout location="theStudyPost">
+        {// Meta description for Genius Lab category post
+        mainCategory.name === "Genius Lab" && (
+          <Helmet>
+            <title>Genius Lab Archives - Doctor Genius | Doctor Genius</title>
+            <meta
+              name="description"
+              content={
+                post._yoast_wpseo_metadesc ||
+                "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+              }
+            />
+          </Helmet>
+        )}
 
-      {mainCategory.name !== "Genius Lab" && (
-        <Helmet>
-          <title>
-            Practice Management & Digital Marketing Blog | The Study
-          </title>
-          <meta
-            name="description"
-            content={
-              post._yoast_wpseo_metadesc ||
-              "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-            }
-          />
-        </Helmet>
-      )}
+        {mainCategory.name !== "Genius Lab" && (
+          <Helmet>
+            <title>
+              Practice Management & Digital Marketing Blog | The Study
+            </title>
+            <meta
+              name="description"
+              content={
+                post._yoast_wpseo_metadesc ||
+                "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+              }
+            />
+          </Helmet>
+        )}
 
-      <div className="page-wrapper">
-        <div class="hero-padding" />
-        <Main>
-          <Container>
-            <div className="row padded short-bottom">
-              <div className="col-lg-1" />
-              <div className="col-lg-8">
-                <div className="pagination">
-                  {previousPost != null ? (
-                    <a href={previousPost}>
-                      <img src={leftChevron} alt="Navigate to Previous" />
-                      &nbsp;Back
-                    </a>
-                  ) : (
-                    <p>&nbsp;</p>
-                  )}
-                  {nextPost != null ? (
-                    <a href={nextPost}>
-                      Next &nbsp;
-                      <img src={rightChevron} alt="Navigate to Next" />
-                    </a>
-                  ) : (
-                    <p>&nbsp;</p>
-                  )}
+        <div className="page-wrapper">
+          <div class={PageStyles.heroPadding + " hero-padding"} />
+          <Main>
+            <Container>
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="col-lg-8">
+                  <div className={PageStyles.pagination + " pagination"}>
+                    {previousPost != null ? (
+                      <a href={previousPost}>
+                        <img src={leftChevron} alt="Navigate to Previous" />
+                        &nbsp;Back
+                      </a>
+                    ) : (
+                      <p>&nbsp;</p>
+                    )}
+                    {nextPost != null ? (
+                      <a href={nextPost}>
+                        Next &nbsp;
+                        <img src={rightChevron} alt="Navigate to Next" />
+                      </a>
+                    ) : (
+                      <p>&nbsp;</p>
+                    )}
+                  </div>
                 </div>
               </div>
-              <div className="col-lg-1" />
-            </div>
-            <div className="blog-header">
-              <div className="row">
-                <div className="col-lg-2" />
-                <div className="col-lg-9">
-                  <div className="row mobile-image-row">
-                    <div className="col-xs-12">
-                      <Img
-                        fluid={
-                          post.featured_media.localFile.childImageSharp.fluid
-                        }
-                      />
-                    </div>
-                  </div>
-                  <div className="row upper-row">
-                    <div class="col-lg-9 order-lg-1 order-sm-3">
-                      <h1 className="title">{he.decode(post.title)}</h1>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
-                      <div className="label primary">
-                        <p>{mainCategory.name}</p>
+              <div className={PageStyles.blogHeader + " blog-header"}>
+                <div className={RowStyles.row}>
+                  <div className="col-lg-9 offset-lg-2">
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        PageStyles.mobileImageRow +
+                        " mobile-image-row"
+                      }
+                    >
+                      <div className={PageStyles.imgHolder + " col-xs-12"}>
+                        <Img
+                          fluid={
+                            post.featured_media.localFile.childImageSharp.fluid
+                          }
+                        />
                       </div>
                     </div>
+                    <div
+                      className={
+                        RowStyles.row + " " + PageStyles.upperRow + " upper-row"
+                      }
+                    >
+                      <div class="col-lg-9 order-lg-1 order-sm-3">
+                        <h1 className={PageStyles.title + " title"}>
+                          {he.decode(post.title)}
+                        </h1>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
+                        <div
+                          className={
+                            PageStyles.label + " " + PageStyles.primary
+                          }
+                        >
+                          <p>{mainCategory.name}</p>
+                        </div>
+                      </div>
 
-                    <div className="col-sm-12 col-lg-4 order-sm-4 order-lg-3">
-                      <div className="byline">
-                        <p className="date">{post.date}</p>
-                        <p className="author">{post.author.name}</p>
+                      <div className="col-sm-12 col-lg-4 order-sm-4 order-lg-3">
+                        <div className={PageStyles.byLine + " byline"}>
+                          <p className={PageStyles.date + " date"}>
+                            {post.date}
+                          </p>
+                          <p className="author">{post.author.name}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
-                      <div className="share-icons">
-                        <p>Share:</p>
-                        <a href={facebookShareLink}>
-                          {/* https://www.facebook.com/DoctorGeniusMarketing*/}
-                          {/*https://www.facebook.com/sharer/sharer.php?u=
+                      <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
+                        <div className={PageStyles.shareIcons + " share-icons"}>
+                          <p>Share:</p>
+                          <a href={facebookShareLink}>
+                            {/* https://www.facebook.com/DoctorGeniusMarketing*/}
+                            {/*https://www.facebook.com/sharer/sharer.php?u=
                         http%3A%2F%2Fstackoverflow.com
                         (http://stackoverflow.com)
                         %2Fq%2F20956229%2F1101509&picture=http%3A%2F%2Fwww.applezein.net%2Fwordpress%2Fwp-content%2Fuploads%2F2015%2F03%2Ffacebook-logo.jpg
@@ -166,12 +191,12 @@ function PostPage({ pageContext, data, location }) {
                         &title=A+nice+question+about+Facebook
                         &quote=Does+anyone+know+if+there+have+been+recent+changes+which+could+have+suddenly+stopped+this+from+working%3F&description=Apparently%2C+the+accepted+answer+is+not+correct.
 */}
-                          <img src={facebookIcon} alt="Facebook" />
-                        </a>
-                        <a href={twitterShareLink}>
-                          <img src={twitterIcon} alt="Twitter" />
-                        </a>
-                        {/*
+                            <img src={facebookIcon} alt="Facebook" />
+                          </a>
+                          <a href={twitterShareLink}>
+                            <img src={twitterIcon} alt="Twitter" />
+                          </a>
+                          {/*
                         <a href="https://www.instagram.com/doctor.genius/">
                           <img src={instagramIcon} alt="Instagram" />
                         </a>
@@ -179,85 +204,80 @@ function PostPage({ pageContext, data, location }) {
                           <img src={youtubeIcon} alt="YouTube" />
                         </a>
                         */}
+                        </div>
                       </div>
                     </div>
+                    <div className="col-lg-1" />
                   </div>
                   <div className="col-lg-1" />
                 </div>
+              </div>
+              <div className={RowStyles.row}>
+                <div className="col-lg-1" />
+                <div className="col-lg-10">
+                  <div className={PageStyles.spacer + " " + PageStyles.solid} />
+                </div>
                 <div className="col-lg-1" />
               </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-1" />
-              <div className="col-lg-10">
-                <div className="spacer solid" />
-              </div>
-              <div className="col-lg-1" />
-            </div>
-            <div className="row">
-              <div className="col-lg-1" />
-              <div className="col-lg-8">
-                <div className="blog-content">
-                  <div
-                    className="intro"
-                    dangerouslySetInnerHTML={{ __html: intro }}
-                  />
+              <div className={RowStyles.row}>
+                <div className="col-lg-8">
+                  <div className={PageStyles.blogContent + " blog-content"}>
+                    <div
+                      className="intro"
+                      dangerouslySetInnerHTML={{ __html: intro }}
+                    />
 
-                  <div className="featured-image">
-                    <Img
-                      fluid={
-                        post.featured_media.localFile.childImageSharp.fluid
-                      }
+                    <div
+                      className={PageStyles.featuredImage + " featured-image"}
+                    >
+                      <Img
+                        fluid={
+                          post.featured_media.localFile.childImageSharp.fluid
+                        }
+                      />
+                    </div>
+                    <div
+                      className="remainder"
+                      dangerouslySetInnerHTML={{ __html: remainder }}
                     />
                   </div>
-                  <div
-                    className="remainder"
-                    dangerouslySetInnerHTML={{ __html: remainder }}
-                  />
                 </div>
               </div>
-              <div className="col-lg-1" />
-            </div>
 
-            <div className="full-bleed-wrapper pad-md events">
-              <div className="full-bleed grey-background" />
-              <div className="full-bleed-content-wrapper">
-                <EventsTeaser />
-              </div>
-            </div>
-            {/* Begin Demo Footer */}
-            <div className="row padded tall-top request-demo-footer">
-              <div className="col-md-1" />
-              <div className="col-sm-9 col-md-5">
-                <div className="content-block">
-                  <div className="inner-title">
-                    <h2>
-                      Start your <span>success</span> with Doctor Genius today!
-                    </h2>
-                    <div className="accented-paragraph">
-                      <p>
-                        The Genius platform makes every part of your company
-                        process more efficient. Our support team is very excited
-                        to help you and get your company on the right path of
-                        success.
-                      </p>
-                    </div>
-                  </div>
+              <div
+                className={
+                  PageStyles.events +
+                  " " +
+                  PageStyles.fullBleedWrapper +
+                  " full-bleed-wrapper pad-md events"
+                }
+              >
+                <div
+                  className={
+                    PageStyles.greyBackground + " full-bleed grey-background"
+                  }
+                />
+                <div
+                  className={
+                    PageStyles.fullBleedContentWrapper +
+                    " full-bleed-content-wrapper"
+                  }
+                >
+                  <EventsTeaser />
                 </div>
               </div>
-              <div className="col-sm-9 col-md-5">
-                <div className="center">
-                  <a href="/demo" className="button flat white-text">
-                    Request Demo <img src={thinArrowRight} alt="Arrow Right" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* End Demo Footer */}
-          </Container>
-        </Main>
-      </div>
-    </DefaultPageLayout>
+              {/* Begin Demo Footer */}
+              <RequestDemoFooter
+                smWidth="9"
+                mdWidth="5"
+                contentBlockID={PageStyles.demoContentBlock}
+              />
+              {/* End Demo Footer */}
+            </Container>
+          </Main>
+        </div>
+      </DefaultPageLayout>
+    </div>
   )
 }
 export default PostPage

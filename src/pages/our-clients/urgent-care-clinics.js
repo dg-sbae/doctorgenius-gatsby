@@ -9,7 +9,12 @@ const UrgentCareInnerPage = data => {
     <OurClientsInnerPages
       page="urgent-care-clinics" /* this should be dynamic from the page props */
       pageTitle="Urgent Care Clinics"
-      pageSubTitle="<span>Broaden Your</span> Online Presence <span>For New Patients to</span> Find You"
+      pageSubTitle={[
+        <span>Broaden Your</span>,
+        " Online Presence ",
+        <span>For New Patients to</span>,
+        " Find You",
+      ]}
       pageIntro="We bring you a robust platform and digital marketing solutions that focus on new patient acquisition."
       caseStudy={false}
       metaTitle="Grow your Urgent Care Center | Increase Your Patient Base"
