@@ -44,18 +44,17 @@
       margin-bottom: 0;
     }
     .subtitle {
-      @include fluid-type(14px, 29px, $tablet, $laptop);
+      @include fluid-type(8px, 27px, $tablet, $laptop);
     }
     .callout {
       font-size: 2.5rem; /* 40px */
       @include fluid-type(16px, 35px, $tablet, $laptop);
-      @include media("<laptop") {
+      @include media("<tablet") {
         min-width: 50%;
       }
     }
     p:not(.callout) {
-      font-size: 0.9375rem; /* 15px */
-      @include fluid-type(9px, 12.5px, $phone, $laptop);
+      font-size: calc(9px + 6 * (100vw - 375px) / 616);
     }
     .iconWrapper {
       height: 67px;
