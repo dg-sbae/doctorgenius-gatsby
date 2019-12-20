@@ -3,8 +3,6 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import BackgroundImage from "gatsby-background-image"
-
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
@@ -23,7 +21,6 @@ const EventPage = ({ data }) => {
     backgroundImage: "url(" + heroDefaultBg + ")",
   }
 
-  console.log(data, styleBackgroundImage)
   // If there is a hero bg image selected then set that instead
   if (event_details.all_image_urls.hero_image_url != null) {
     styleBackgroundImage = {
@@ -449,8 +446,12 @@ const EventPage = ({ data }) => {
                               Date: {format_date(event_details.event_date)}
                             </p>
                             <p className={PageStyles.cardText + " card-text"}>
-                              Time: {convert_time(event_details.start_time)} to{" "}
-                              {convert_time(event_details.end_time)}
+                              {event_details.start_time[0] !== ""
+                                ? "Time: " +
+                                  convert_time(event_details.start_time) +
+                                  " to " +
+                                  convert_time(event_details.end_time)
+                                : "Time: TBA"}
                             </p>
                             <p className={PageStyles.cardText + " card-text"}>
                               <span>Location: </span>

@@ -32,6 +32,9 @@ const EventPage = ({ data }) => {
   // Adds data to featured_event if there currently is none
   if (data.featured_event.edges.length === 1) {
     featured_event = data.featured_event.edges[0].node
+    if (featured_event.start_time[0] === "") {
+      featured_event.start_time = "00:01"
+    }
   } else {
     featured_event = {
       dummy_data: true,
@@ -565,21 +568,27 @@ const EventPage = ({ data }) => {
                             <span>
                               {format_date_long(featured_event.event_date)}
                             </span>{" "}
-                            <span className={PageStyles.dot + " dot"}>
-                              &middot;
-                            </span>{" "}
-                            <span className="event-time">
-                              {featured_event.start_time !== "" && (
-                                <span className="start-time">
-                                  {convert_time(featured_event.start_time)}
+                            {featured_event.start_time !== "00:01" ? (
+                              <span>
+                                <span className={PageStyles.dot + " dot"}>
+                                  &middot;
+                                </span>{" "}
+                                <span className="event-time">
+                                  {featured_event.start_time !== "" && (
+                                    <span className="start-time">
+                                      {convert_time(featured_event.start_time)}
+                                    </span>
+                                  )}
+                                  {featured_event.end_time !== "" && (
+                                    <span className="end-time">
+                                      -{convert_time(featured_event.end_time)}
+                                    </span>
+                                  )}
                                 </span>
-                              )}
-                              {featured_event.end_time !== "" && (
-                                <span className="end-time">
-                                  -{convert_time(featured_event.end_time)}
-                                </span>
-                              )}
-                            </span>
+                              </span>
+                            ) : (
+                              <span></span>
+                            )}
                           </div>
                         </div>
                       </div>
