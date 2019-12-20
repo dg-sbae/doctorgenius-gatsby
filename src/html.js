@@ -12,6 +12,11 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"
         />
         <link rel="icon" type="image/png" href="/favicon.ico" />
+        <link rel="preload" href="https://go.doctorgenius.com" />
+        <link rel="preload" href="https://pi.pardot.com" />
+        <link rel="preload" href="https://stats.g.doubleclick.net" />
+        <link rel="preload" href="https://p.adsymptotic.com" />
+        <link rel="preload" href="https://track.gaconnector.com" />
         {props.headComponents}
         <script
           src="https://code.jquery.com/jquery-3.3.1.min.js"
