@@ -7,11 +7,20 @@ import OutageForm from "../components/outage-form.js"
 
 import "../styles/contact.scss"
 import PageStyles from "./contact.module.scss"
+import OutageStyles from "./outage.module.scss"
 import RowStyles from "../components/Row.module.scss"
 import InnerTitleStyles from "../components/inner-title.module.scss"
 
 export default props => (
-  <div className={PageStyles.contactPage + " " + RowStyles.rowStyling}>
+  <div
+    className={
+      OutageStyles.outagePage +
+      " " +
+      PageStyles.contactPage +
+      " " +
+      RowStyles.rowStyling
+    }
+  >
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
         <title>
@@ -25,7 +34,7 @@ export default props => (
       </Helmet>
       <div className={props["*"]}>
         <div className={PageStyles.mainContent}>
-          <div className={PageStyles.hero + " hero"}>
+          <div className={OutageStyles.hero + " " + PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}
             <Container>
               <div className={RowStyles.row + " " + RowStyles.padded}>
@@ -42,7 +51,14 @@ export default props => (
                     >
                       Have a question? Need help?
                     </h3>*/}
-                    <p className={PageStyles.mutedText + " muted-text"}>
+                    <p
+                      className={
+                        OutageStyles.tagline +
+                        " " +
+                        PageStyles.mutedText +
+                        " muted-text"
+                      }
+                    >
                       If you are having an outage or emergency outside of our
                       normal operating hours, please complete the outage form
                       below for assistance. A representative will contact you as

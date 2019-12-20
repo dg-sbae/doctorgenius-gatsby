@@ -450,7 +450,8 @@ nav.demoNav {
 }
 
 // Navigation styling relevant to the Contact Page
-nav.contactNav {
+nav.contactNav,
+nav.outageNav {
   @include media(">=laptop") {
     // ----------- NAVIGATION STYLING (DESKTOP) -----------
     .logo a .logoHolder {
