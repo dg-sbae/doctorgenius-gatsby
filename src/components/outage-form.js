@@ -100,7 +100,7 @@ class OutageForm extends React.Component {
     stringData = stringData.replace(/&$/, "")
 
     // Generate a request to the email server
-    fetch("https://nodetest-dev.dgplex.com/outage", {
+    fetch("https://nodetest.dgplex.com/outage", {
       method: "POST",
       body: stringData,
       headers: {
