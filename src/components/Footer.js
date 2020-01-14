@@ -194,7 +194,8 @@ export default ({ children }) => (
         <div className="col-sm-12">
           <div className={FooterStyles.footerSubrow + " footer-subrow"}>
             <div className="copyright-section">
-              &copy;2019 Doctor Genius. All Rights Reserved.
+              &copy;{new Date().getFullYear()} Doctor Genius. All Rights
+              Reserved.
             </div>
             <div className={FooterStyles.legalLinks + " legal-links"}>
               <ListLink to="/privacy-policy">Privacy Policy</ListLink>
