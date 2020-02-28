@@ -110,6 +110,12 @@
         flex-basis: 150px;
         margin: 0;
         padding: 0;
+        @include fluid-type(
+          9px,
+          15px,
+          $phone,
+          $laptop
+        ); /* desktop - 53, tablet - 45, small - 38 */
       }
     }
     .caseStudyItem {
