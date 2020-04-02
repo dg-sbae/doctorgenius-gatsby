@@ -67,7 +67,7 @@ export default () => (
             />
           </div>
           {data.events.edges.map(({ node }) => (
-            <div className="col-sm-12 col-md-3 col-lg-3">
+            <div className="col-sm-12 col-md-3 col-lg-3" key={node.slug}>
               <Link
                 to={`/events/` + node.slug}
                 className={styles.hoverUnderline}

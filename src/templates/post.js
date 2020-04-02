@@ -71,7 +71,7 @@ function PostPage({ pageContext, data, location }) {
         {// Meta description for Genius Lab category post
         mainCategory.name === "Genius Lab" && (
           <Helmet>
-            <title>Genius Lab Archives - Doctor Genius | Doctor Genius</title>
+            <title>{post.title} | The Study</title>
             <meta
               name="description"
               content={
@@ -84,9 +84,7 @@ function PostPage({ pageContext, data, location }) {
 
         {mainCategory.name !== "Genius Lab" && (
           <Helmet>
-            <title>
-              Practice Management & Digital Marketing Blog | The Study
-            </title>
+            <title>{post.title} | The Study</title>
             <meta
               name="description"
               content={
@@ -98,7 +96,7 @@ function PostPage({ pageContext, data, location }) {
         )}
 
         <div className="page-wrapper">
-          <div class={PageStyles.heroPadding + " hero-padding"} />
+          <div className={PageStyles.heroPadding + " hero-padding"} />
           <Main>
             <Container>
               <div
@@ -155,12 +153,12 @@ function PostPage({ pageContext, data, location }) {
                         RowStyles.row + " " + PageStyles.upperRow + " upper-row"
                       }
                     >
-                      <div class="col-lg-9 order-lg-1 order-sm-3">
+                      <div className="col-lg-9 order-lg-1 order-sm-3">
                         <h1 className={PageStyles.title + " title"}>
                           {he.decode(post.title)}
                         </h1>
                       </div>
-                      <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
+                      <div className="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
                         <div
                           className={
                             PageStyles.label + " " + PageStyles.primary
@@ -178,7 +176,7 @@ function PostPage({ pageContext, data, location }) {
                           <p className="author">{post.author.name}</p>
                         </div>
                       </div>
-                      <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
+                      <div className="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
                         <div className={PageStyles.shareIcons + " share-icons"}>
                           <p>Share:</p>
                           <a href={facebookShareLink}>
