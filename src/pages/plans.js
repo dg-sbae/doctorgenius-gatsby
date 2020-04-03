@@ -1051,8 +1051,8 @@ const Plans = data => {
                       <FAQ
                         question={
                           <p>
-                            Can I work with other SEO companies alongside
-                            Dental/Doctor Genius?
+                            Can I work with other SEO companies alongside Doctor
+                            Genius?
                           </p>
                         }
                         answer={
@@ -1090,24 +1090,6 @@ const Plans = data => {
                             help you gain ranking on Google as soon as we
                             confirm your keywords, name, address and business
                             information.
-                          </p>
-                        }
-                      />
-                      <FAQ
-                        question={
-                          <p>
-                            What if there are any spelling and grammar errors on
-                            the new website?
-                          </p>
-                        }
-                        answer={
-                          <p>
-                            Since the priority is exact match keyword content
-                            and density, the website content may not always
-                            focus on being grammatically correct. Thus, the
-                            content we create is for the main purpose of
-                            communicating with Google to increase the visibility
-                            of your services.
                           </p>
                         }
                       />
@@ -1154,10 +1136,10 @@ const Plans = data => {
                         }
                         answer={
                           <p>
-                            Dental Genius/Doctor Genius does not offer email
-                            support or setup. If we are transferring the domain
-                            name over to our account, then we can update mail
-                            records for you (MX records/TXT records).
+                            Doctor Genius does not offer email support or setup.
+                            If we are transferring the domain name over to our
+                            account, then we can update mail records for you (MX
+                            records/TXT records).
                           </p>
                         }
                       />
@@ -1186,7 +1168,7 @@ const Plans = data => {
                         }
                         answer={
                           <p>
-                            Our Dental Genius program does not limit how many
+                            Our Doctor Genius program does not limit how many
                             new patients you can get. We drive traffic to your
                             office through search engine optimization, which is
                             the process of having your site appear in
