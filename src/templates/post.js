@@ -68,32 +68,16 @@ function PostPage({ pageContext, data, location }) {
   return (
     <div className={PageStyles.blogPostPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="theStudyPost">
-        {// Meta description for Genius Lab category post
-        mainCategory.name === "Genius Lab" && (
-          <Helmet>
-            <title>{post.title} | The Study</title>
-            <meta
-              name="description"
-              content={
-                post._yoast_wpseo_metadesc ||
-                "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-              }
-            />
-          </Helmet>
-        )}
-
-        {mainCategory.name !== "Genius Lab" && (
-          <Helmet>
-            <title>{post.title} | The Study</title>
-            <meta
-              name="description"
-              content={
-                post._yoast_wpseo_metadesc ||
-                "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-              }
-            />
-          </Helmet>
-        )}
+        <Helmet>
+          <title>{post.title} | The Study</title>
+          <meta
+            name="description"
+            content={
+              post._yoast_wpseo_metadesc ||
+              "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+            }
+          />
+        </Helmet>
 
         <div className="page-wrapper">
           <div className={PageStyles.heroPadding + " hero-padding"} />
