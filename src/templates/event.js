@@ -237,16 +237,19 @@ const EventPage = ({ data }) => {
           }
           key={speaker.speaker_name}
         >
-          <div className="speaker-img-wrapper">
-            <Img
-              fluid={
-                speaker.speaker_profile_image_url.localFile.childImageSharp
-                  .fluid
-              }
-              className="mx-auto d-block"
-              alt="Speaker Profile"
-            />
-          </div>
+          {speaker.speaker_profile_image_url && (
+            <div className="speaker-img-wrapper">
+              <Img
+                fluid={
+                  speaker.speaker_profile_image_url.localFile.childImageSharp
+                    .fluid
+                }
+                className="mx-auto d-block"
+                alt="Speaker Profile"
+              />
+            </div>
+          )}
+
           <p>{speaker.speaker_name}</p>
         </div>
       )
