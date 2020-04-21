@@ -18,7 +18,7 @@ export const siteFragments = graphql`
       source_url
       localFile {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
