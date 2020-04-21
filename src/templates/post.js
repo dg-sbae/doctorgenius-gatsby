@@ -68,37 +68,19 @@ function PostPage({ pageContext, data, location }) {
   return (
     <div className={PageStyles.blogPostPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="theStudyPost">
-        {// Meta description for Genius Lab category post
-        mainCategory.name === "Genius Lab" && (
-          <Helmet>
-            <title>Genius Lab Archives - Doctor Genius | Doctor Genius</title>
-            <meta
-              name="description"
-              content={
-                post._yoast_wpseo_metadesc ||
-                "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-              }
-            />
-          </Helmet>
-        )}
-
-        {mainCategory.name !== "Genius Lab" && (
-          <Helmet>
-            <title>
-              Practice Management & Digital Marketing Blog | The Study
-            </title>
-            <meta
-              name="description"
-              content={
-                post._yoast_wpseo_metadesc ||
-                "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-              }
-            />
-          </Helmet>
-        )}
+        <Helmet>
+          <title>{post.title} | The Study</title>
+          <meta
+            name="description"
+            content={
+              post._yoast_wpseo_metadesc ||
+              "Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+            }
+          />
+        </Helmet>
 
         <div className="page-wrapper">
-          <div class={PageStyles.heroPadding + " hero-padding"} />
+          <div className={PageStyles.heroPadding + " hero-padding"} />
           <Main>
             <Container>
               <div
@@ -155,12 +137,12 @@ function PostPage({ pageContext, data, location }) {
                         RowStyles.row + " " + PageStyles.upperRow + " upper-row"
                       }
                     >
-                      <div class="col-lg-9 order-lg-1 order-sm-3">
+                      <div className="col-lg-9 order-lg-1 order-sm-3">
                         <h1 className={PageStyles.title + " title"}>
                           {he.decode(post.title)}
                         </h1>
                       </div>
-                      <div class="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
+                      <div className="col-sm-6 col-md-4 col-lg-3 order-sm-1 order-lg-2">
                         <div
                           className={
                             PageStyles.label + " " + PageStyles.primary
@@ -178,7 +160,7 @@ function PostPage({ pageContext, data, location }) {
                           <p className="author">{post.author.name}</p>
                         </div>
                       </div>
-                      <div class="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
+                      <div className="col-sm-6 col-md-4 md-offset-4 col-lg-3 order-sm-1 order-lg-4">
                         <div className={PageStyles.shareIcons + " share-icons"}>
                           <p>Share:</p>
                           <a href={facebookShareLink}>

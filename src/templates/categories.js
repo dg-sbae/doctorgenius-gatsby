@@ -128,6 +128,14 @@ class ResponsivePostsColumn extends Component {
 
 const CategoriesPage = ({ data, pageContext }) => {
   const images = data
+
+  const categoryTitle =
+    pageContext.slug === "genius-lab"
+      ? "Genius Lab"
+      : pageContext.slug === "practice-management"
+      ? "Practice Management"
+      : "Digital Marketing"
+
   //Isolate the blog and categories routes
   //This should be located globally, or the categories and archive page combined
   const postsPath = "/blog/"
@@ -182,30 +190,14 @@ const CategoriesPage = ({ data, pageContext }) => {
   return (
     <div className={PageStyles.categoriesPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout>
-        {// Meta description for Genius Lab category
-        pageContext.slug === "genius-lab" && (
-          <Helmet>
-            <title>Genius Lab Archives - Doctor Genius | Doctor Genius</title>
-            <meta
-              name="description"
-              content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-            />
-            <meta name="robots" content="noindex,nofollow" />
-          </Helmet>
-        )}
-
-        {// Meta description for all of ther categories blog pages
-        pageContext.slug !== "genius-lab" && (
-          <Helmet>
-            <title>
-              Practice Management & Digital Marketing Blog | The Study
-            </title>
-            <meta
-              name="description"
-              content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
-            />
-          </Helmet>
-        )}
+        <Helmet>
+          <title>{categoryTitle} | The Study</title>
+          <meta
+            name="description"
+            content="Actionable advice on how to manage and market your local practice. Start getting the new patients your practice deserves. Practice growth starts here."
+          />
+          <meta name="robots" content="noindex,nofollow" />
+        </Helmet>
 
         <div className="the-study">
           <BackgroundImage fluid={data.heroBg.childImageSharp.fluid}>
