@@ -290,12 +290,14 @@ const CategoriesPage = ({ data, pageContext }) => {
                             }
                           >
                             <a href={postsPath + node.slug}>
-                              <Img
-                                fluid={
-                                  node.featured_media.localFile.childImageSharp
-                                    .fluid
-                                }
-                              />
+                              {node.featured_media && (
+                                <Img
+                                  fluid={
+                                    node.featured_media.localFile
+                                      .childImageSharp.fluid
+                                  }
+                                />
+                              )}
                             </a>
                           </div>
 
@@ -536,15 +538,14 @@ const CategoriesPage = ({ data, pageContext }) => {
                                     " featured-image-holder"
                                   }
                                 >
-                                  {
-                                    //console.log(node)}
+                                  {node.featured_media && (
                                     <Img
                                       fluid={
                                         node.featured_media.localFile
                                           .childImageSharp.fluid
                                       }
                                     />
-                                  }
+                                  )}
                                 </div>
                                 <div
                                   className={
