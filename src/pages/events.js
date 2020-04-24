@@ -253,6 +253,11 @@ const EventPage = ({ data }) => {
                   past_events[0].node.featured_media != null
                     ? past_events[0].node.featured_media.localFile
                         .childImageSharp.fluid.src
+                    : past_events[0].node.featured_media == null
+                    ? past_events[0].node.all_image_urls.hero_image_url
+                        .localFile.childImageSharp.fluid.src
+                    : past_events[0].node.all_image_urls.hero_image_url == null
+                    ? defaultUpcomingEventImage
                     : defaultUpcomingEventImage
                 }
                 alt="Past Event"
