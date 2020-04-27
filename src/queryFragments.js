@@ -85,6 +85,7 @@ export const siteFragments = graphql`
     speaker_section_subtitle
     speaker_section_title
     start_time
+    time_zone
   }
 
   fragment speakers on wordpress__wp_events {
@@ -299,5 +300,6 @@ export const siteFragments = graphql`
     register_url
     start_time
     slug
+    time_zone
   }
 `
