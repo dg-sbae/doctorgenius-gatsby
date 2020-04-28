@@ -74,8 +74,22 @@ const EventPage = ({ data }) => {
     time = time.toString()
     time = time.split(":")
 
+    let time_zone = event_details.time_zone
+    let event_location = event_details.event_street_address
     let hours = Number(time[0])
     let minutes = Number(time[1])
+
+    if (event_location[0] !== "") {
+      if (time_zone == "EST") {
+        hours -= 3
+      } else if (time_zone == "CST") {
+        hours -= 2
+      } else if (time_zone == "MST") {
+        hours -= 1
+      } else {
+        hours = hours
+      }
+    }
 
     let time_value
 
@@ -455,6 +469,11 @@ const EventPage = ({ data }) => {
                                   " to " +
                                   convert_time(event_details.end_time)
                                 : "Time: TBA"}
+                              {event_details.event_street_address[0] == "" && (
+                                <span className={PageStyles.cardText}>
+                                  &nbsp;{event_details.time_zone}
+                                </span>
+                              )}
                             </p>
                             <p className={PageStyles.cardText + " card-text"}>
                               <span>Location: </span>
