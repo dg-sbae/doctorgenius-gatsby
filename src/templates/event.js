@@ -21,6 +21,20 @@ const EventPage = ({ data }) => {
     backgroundImage: "url(" + heroDefaultBg + ")",
   }
 
+  function get_time_zone() {
+    if (event_details.time_zone !== null) {
+      return event_details.time_zone[0] === "EST"
+        ? "EST"
+        : event_details.time_zone[0] === "CST"
+        ? "CST"
+        : event_details.time_zone[0] === "MST"
+        ? "MST"
+        : "PST"
+    } else {
+      return "PST"
+    }
+  }
+
   // If there is a hero bg image selected then set that instead
   if (event_details.all_image_urls.hero_image_url != null) {
     styleBackgroundImage = {
@@ -30,16 +44,6 @@ const EventPage = ({ data }) => {
           .fluid.src +
         ")",
     }
-  }
-
-  //Check to see if webinar to adjust location card-margin
-  let Webinar = null
-  if (
-    (event_details.event_street_address[0],
-    event_details.event_city[0],
-    event_details.event_state[0] === "")
-  ) {
-    Webinar = true
   }
 
   //Handles formatting of date from Javascript ISO standard to full month, day, year.
@@ -436,13 +440,7 @@ const EventPage = ({ data }) => {
                           <div
                             className={
                               PageStyles.cardBody +
-                              " card-body col-sm-11 col-lap-12 col-lg-9"
-                            }
-                            id={
-                              Webinar === true
-                                ? PageStyles.webinarLocation +
-                                  "webinar-location"
-                                : ""
+                              " card-body col-sm-11 col-lap-12 col-lg-10"
                             }
                           >
                             <p className={PageStyles.cardText + " card-text"}>
@@ -455,6 +453,9 @@ const EventPage = ({ data }) => {
                                   " to " +
                                   convert_time(event_details.end_time)
                                 : "Time: TBA"}
+                              <span className={PageStyles.cardText}>
+                                &nbsp;{get_time_zone()}
+                              </span>
                             </p>
                             <p className={PageStyles.cardText + " card-text"}>
                               <span>Location: </span>
