@@ -125,11 +125,14 @@ function PostPage({ pageContext, data, location }) {
                       }
                     >
                       <div className={PageStyles.imgHolder + " col-xs-12"}>
-                        <Img
-                          fluid={
-                            post.featured_media.localFile.childImageSharp.fluid
-                          }
-                        />
+                        {post.featured_media && (
+                          <Img
+                            fluid={
+                              post.featured_media.localFile.childImageSharp
+                                .fluid
+                            }
+                          />
+                        )}
                       </div>
                     </div>
                     <div
@@ -212,11 +215,13 @@ function PostPage({ pageContext, data, location }) {
                     <div
                       className={PageStyles.featuredImage + " featured-image"}
                     >
-                      <Img
-                        fluid={
-                          post.featured_media.localFile.childImageSharp.fluid
-                        }
-                      />
+                      {post.featured_media && (
+                        <Img
+                          fluid={
+                            post.featured_media.localFile.childImageSharp.fluid
+                          }
+                        />
+                      )}
                     </div>
                     <div
                       className="remainder"

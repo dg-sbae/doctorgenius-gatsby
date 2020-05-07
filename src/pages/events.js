@@ -17,11 +17,27 @@ import RowStyles from "../components/Row.module.scss"
 
 const EventPage = ({ data }) => {
   // Globals
-  let upcoming_events = data.upcoming_events.edges
-  const past_events = data.past_events.edges
+  const images = data
+  let upcoming_events = []
+  let past_events = []
   let styleBackgroundImage
   let featured_event
-  const images = data
+
+  let date = new Date()
+  let todays_date =
+    date.getFullYear() +
+    ("0" + (date.getMonth() + 1)).slice(-2) +
+    ("0" + date.getDate()).slice(-2)
+
+  //Sort Upcoming and Past events based on event_date
+  for (let h = 0; h < data.all_events.edges.length; h++) {
+    let e_date = data.all_events.edges[h].node.event_date[0].replace(/-/g, "")
+    if (Number(e_date) > Number(todays_date)) {
+      upcoming_events.push(data.all_events.edges[h])
+    } else {
+      past_events.push(data.all_events.edges[h])
+    }
+  }
 
   const eventTimeLineBg = images.eventTimelineBg.childImageSharp.fluid.src
   const eventTimeLineStyles = {
@@ -237,6 +253,11 @@ const EventPage = ({ data }) => {
                   past_events[0].node.featured_media != null
                     ? past_events[0].node.featured_media.localFile
                         .childImageSharp.fluid.src
+                    : past_events[0].node.featured_media == null
+                    ? past_events[0].node.all_image_urls.hero_image_url
+                        .localFile.childImageSharp.fluid.src
+                    : past_events[0].node.all_image_urls.hero_image_url == null
+                    ? defaultUpcomingEventImage
                     : defaultUpcomingEventImage
                 }
                 alt="Past Event"
@@ -797,20 +818,9 @@ export const pageQuery = graphql`
       }
     }
 
-    upcoming_events: allWordpressWpEvents(
-      filter: { event_date: { gt: "2019-11-13" }, featured_event: { eq: "0" } }
-      limit: 4
-    ) {
-      edges {
-        node {
-          ...eventListing
-        }
-      }
-    }
-
-    past_events: allWordpressWpEvents(
-      filter: { event_date: { lt: "2019-11-13" }, featured_event: { eq: "0" } }
-      limit: 4
+    all_events: allWordpressWpEvents(
+      filter: { featured_event: { eq: "0" } }
+      sort: { fields: event_date, order: DESC }
     ) {
       edges {
         node {

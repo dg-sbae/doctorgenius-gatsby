@@ -279,12 +279,14 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                             }
                           >
                             <a href={postsPath + node.slug}>
-                              <Img
-                                fluid={
-                                  node.featured_media.localFile.childImageSharp
-                                    .fluid
-                                }
-                              />
+                              {node.featured_media && (
+                                <Img
+                                  fluid={
+                                    node.featured_media.localFile
+                                      .childImageSharp.fluid
+                                  }
+                                />
+                              )}
                             </a>
                           </div>
                           <div
@@ -525,13 +527,14 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                     " featured-image-holder"
                                   }
                                 >
-                                  {/*console.log(node)*/}
-                                  <Img
-                                    fluid={
-                                      node.featured_media.localFile
-                                        .childImageSharp.fluid
-                                    }
-                                  />
+                                  {node.featured_media && (
+                                    <Img
+                                      fluid={
+                                        node.featured_media.localFile
+                                          .childImageSharp.fluid
+                                      }
+                                    />
+                                  )}
                                 </div>
                                 <div
                                   className={
