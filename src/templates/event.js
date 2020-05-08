@@ -8,6 +8,8 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import RequestDemoFooter from "../components/request-demo-footer"
 
+import SpeakerPlaceholder from "../img/profile-placeholder.png"
+
 import "../styles/event-post.scss"
 import PageStyles from "./event.module.scss"
 import RowStyles from "../components/Row.module.scss"
@@ -241,7 +243,7 @@ const EventPage = ({ data }) => {
           }
           key={speaker.speaker_name}
         >
-          {speaker.speaker_profile_image_url && (
+          {speaker.speaker_profile_image_url ? (
             <div className="speaker-img-wrapper">
               <Img
                 fluid={
@@ -251,6 +253,10 @@ const EventPage = ({ data }) => {
                 className="mx-auto d-block"
                 alt="Speaker Profile"
               />
+            </div>
+          ) : (
+            <div className="speaker-img-wrapper">
+              <img src={SpeakerPlaceholder} className="mx-auto d-block" />
             </div>
           )}
 
