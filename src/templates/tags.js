@@ -177,6 +177,18 @@ const TagsPage = ({ data, pageContext }) => {
     start = 1
   }
 
+  //Logic to gather popular posts - if less than four grab the latest posts
+  const gather_popular_posts = arr => {
+    let popular_posts_length = data.popular.edges.length
+    for (let y = 0; popular_posts_length < 4; y++) {
+      arr.push(data.latest.edges[y])
+      popular_posts_length++
+    }
+    return arr
+  }
+
+  let popular_posts = gather_popular_posts(data.popular.edges)
+
   return (
     <div className={PageStyles.tagsPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout>
@@ -515,7 +527,7 @@ const TagsPage = ({ data, pageContext }) => {
                       </div>
                       <div className={RowStyles.row}>
                         <div className="col-sm-12">
-                          {data.popular.edges.map(({ node }) => (
+                          {popular_posts.map(({ node }) => (
                             <a href={`/blog/${node.slug}`} key={node.title}>
                               <div
                                 className={
@@ -708,6 +720,7 @@ export const pageQuery = graphql`
       }
     }
     popular: allWordpressPost(
+      filter: { categories: { elemMatch: { wordpress_id: { eq: 139 } } } }
       sort: { fields: [date], order: [DESC] }
       limit: 4
     ) {
