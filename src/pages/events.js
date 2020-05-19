@@ -455,7 +455,7 @@ const EventPage = ({ data }) => {
                 {/* Hero will be a layout component */}
 
                 <Container>
-                  <div className={RowStyles.row}>
+                  <div className={RowStyles.row + " justify-content-start"}>
                     <div className="col-sm-11 col-md-9 col-lap-6">
                       <div
                         className={
