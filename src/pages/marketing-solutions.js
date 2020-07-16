@@ -171,10 +171,10 @@ const MarketingSolutions = data => {
                     <div>
                       <div className="accented-paragraph">
                         <p>
-                          In order to for you to thrive online, you must also
-                          utilize software to effectively manage the
-                          interactions you and your staff has with your leads,
-                          prospective patients, and eventual patients.
+                          To thrive online, you must also utilize software to
+                          effectively manage the interactions you and your staff
+                          have with your leads, prospective patients, and
+                          eventual patients.
                         </p>
                         <a
                           href="/marketing-solutions/our-technology"

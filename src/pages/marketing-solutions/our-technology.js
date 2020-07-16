@@ -28,7 +28,7 @@ const OurTechnology = data => {
               alt: "Genius Portal",
               title: "Genius Portal",
             },
-            innerTitle: "Managed your performance based marketing program",
+            innerTitle: "Managed your performance-based marketing program",
             paragraph:
               "Get the information you need about your marketing program and performance in one easy to use dashboard. Our plans come with access to our data-packed platform.",
           },

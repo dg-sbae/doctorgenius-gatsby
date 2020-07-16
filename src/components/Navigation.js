@@ -458,7 +458,7 @@ const MarketingSolutionsListLink = props => (
                     >
                       Our Technology
                     </span>
-                    <p>Experience our performance based marketing program</p>
+                    <p>Experience our performance-based marketing program</p>
                   </div>
                 </div>
               </Link>
@@ -943,7 +943,7 @@ const StudySingleListLink = props => (
                       Portal Login
                     </span>
                     <p>
-                      Login for clients to our performance based marketing
+                      Login for clients to our performance-based marketing
                       program
                     </p>
                   </div>

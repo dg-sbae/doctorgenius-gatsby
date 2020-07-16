@@ -110,7 +110,7 @@ export default [
     '"specialty": "Local Search Engine Optimization (SEO) Marketing",' +
     '"name": "Local Search Optimization Solutions",' +
     '"alternateName": "Lake Forest, CA Local Business Search Optimization Solutions, Doctor Genius ",' +
-    '"speakable": [ "The Leader in New Patient Acquisition", "Our robust, comprehensive marketing solutions helps keep your online digital marketing presence ahead of competition. We provide tools and analysis to improve new patient acquisition with transparent reporting to measure our results."],' +
+    '"speakable": [ "The Leader in New Patient Acquisition", "Our robust, comprehensive marketing solutions help keep your online digital marketing presence ahead of the competition. We provide tools and analysis to improve new patient acquisition with transparent reporting to measure our results."],' +
     '"url": "https://doctorgenius.com"' +
     "}" +
     "}" +
