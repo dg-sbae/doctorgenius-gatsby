@@ -24,7 +24,7 @@ const PxPage = data => {
   const backgroundImage = images.backgroundImage.childImageSharp.fluid
 
   const heroConfig = {
-    pageType: "pxPackage",
+    pageType: "marketingSolutions",
     strapline: "Paperless Experience Package",
     title: [<span>Stay connected</span>, " When it matters the most"],
     content:
