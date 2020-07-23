@@ -12,7 +12,6 @@ import SecondaryNavigation from "../../components/SecondaryNavigation"
 import InnerTitle from "../../components/inner-title.js"
 import Hero from "../../components/Hero"
 
-import "../../styles/marketing-solutions-inner.scss"
 import PageStyles from "../../pages/marketing-solutions/px-package.module.scss"
 import RowStyles from "../../components/Row.module.scss"
 
@@ -22,13 +21,11 @@ import starsIcon from "../../img/icon/new-patient-opportunity.svg"
 const PxPage = data => {
   const images = data.data
 
-  console.log(images)
-
   const backgroundImage = images.backgroundImage.childImageSharp.fluid
 
   const heroConfig = {
     pageType: "pxPackage",
-    strapline: "pageTitle",
+    strapline: "Paperless Experience Package",
     title: [<span>Stay connected</span>, " When it matters the most"],
     content:
       "Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution.",
@@ -46,7 +43,7 @@ const PxPage = data => {
             content="Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution."
           />
         </Helmet>
-        <div className="marketing-solutions-inner">
+        <div className="px-package-page">
           <BackgroundImage fluid={backgroundImage}>
             <Hero
               pageType={heroConfig.pageType}
@@ -78,8 +75,6 @@ const PxPage = data => {
               {/* First Text/Image Row */}
               <div
                 className={
-                  PageStyles.evenRow +
-                  " even-row " +
                   RowStyles.row +
                   " " +
                   RowStyles.padded +
@@ -92,20 +87,6 @@ const PxPage = data => {
                 <div className="order-md-1 col-md-1" />
                 <div className="order-sm-2 order-md-3 col-sm-9 col-md-6">
                   <div className="content-block">
-                    <div
-                      className={PageStyles.iconStrapline + " icon-strapline"}
-                    >
-                      <img
-                        src={websiteIcon}
-                        className={PageStyles.linkIcon}
-                        alt="Digital Marketing Solutions"
-                      />
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: "Digital Marketing Solutions",
-                        }}
-                      />
-                    </div>
                     <InnerTitle
                       title="Solutions have never been easier"
                       inContentBlock
@@ -139,7 +120,6 @@ const PxPage = data => {
                 </div>
                 <div className="order-sm-12 col-md-1" />
               </div>
-
               {/* End First Text/Image Row */}
 
               {/* First List Item Row */}
@@ -147,8 +127,6 @@ const PxPage = data => {
                 className={
                   PageStyles.listRow +
                   " " +
-                  PageStyles.evenRow +
-                  " even-row " +
                   RowStyles.row +
                   " " +
                   RowStyles.padded +
@@ -408,8 +386,6 @@ const PxPage = data => {
               {/* Additional Text/Image Row */}
               <div
                 className={
-                  PageStyles.evenRow +
-                  " even-row " +
                   RowStyles.row +
                   " " +
                   RowStyles.padded +

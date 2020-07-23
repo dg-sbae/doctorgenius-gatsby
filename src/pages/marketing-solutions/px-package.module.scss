@@ -36,6 +36,9 @@
   .listRow,
   .largeIconRow {
     margin-bottom: $m1 * 3;
+    @include media("<laptop") {
+      margin-bottom: $m1;
+    }
   }
 
   .noDot {
@@ -54,6 +57,9 @@
     font-size: $font-size-lg * 1.25;
     color: $primary;
     font-weight: $font-weight-medium;
+    @include media("<=tablet") {
+      font-size: $font-size-lg * 1.15;
+    }
   }
 
   .noDot img {
@@ -77,7 +83,7 @@
       font-family: $font-family-inner-block-headings;
       font-weight: $font-weight-bold;
       @include media("<=laptop") {
-        font-size: 24px;
+        font-size: 16px;
         margin: 5px 0;
       }
     }
