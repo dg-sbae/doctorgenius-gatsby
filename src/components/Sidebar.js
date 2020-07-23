@@ -125,6 +125,13 @@ const MarketingSolutionsSideNavListLink = props => (
         >
           Hosting Solutions
         </ListLink>
+        <ListLink
+          to="/marketing-solutions/px-package"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Px Package
+        </ListLink>
       </ul>
     </div>
   </li>
