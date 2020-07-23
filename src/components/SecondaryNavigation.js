@@ -63,6 +63,12 @@ class SecondaryNavigation extends Component {
           alt: "Hosting Solutions",
           text: "Hosting Solutions",
         },
+        {
+          url: "/marketing-solutions/px-package",
+          source: responsiveWebsitesIcon,
+          alt: "Paperless Experience Package",
+          text: "PX Package",
+        },
       ],
       ourClients: [
         {

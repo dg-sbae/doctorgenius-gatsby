@@ -16,6 +16,7 @@ const mobileSubNavLinks = {
     { title: "Online Reputation", slug: "online-reputation-management" },
     { title: "Our Technology", slug: "our-technology" },
     { title: "Hosting Solutions", slug: "hosting-solutions" },
+    { title: "Paperless Experience Package", slug: "px-package" },
   ],
   ourClients: [
     { title: "Dental Practices", slug: "dental-practices" },
