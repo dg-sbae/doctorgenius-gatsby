@@ -20,6 +20,7 @@ import company from "../img/icon/hotel.svg"
 import contactUs from "../img/icon/contact-us-white.svg"
 import loginPortalIcon from "../../public/icon/icon-portal.svg"
 import eventsIcon from "../img/icon/calendar-white.svg"
+import pxIcon from "../img/icon/px-nav-white.png"
 
 import "bootstrap/dist/js/bootstrap.min.js"
 // import "../../static/scripts/navigationFunctionality.js"
@@ -562,7 +563,7 @@ const MarketingSolutionsListLink = props => (
                     <div className={NavStyles.iconWrapper}>
                       <img
                         className={NavStyles.imageIcon + " image-icon"}
-                        src={ourTech}
+                        src={pxIcon}
                         alt="Px Package Icon"
                       />
                     </div>

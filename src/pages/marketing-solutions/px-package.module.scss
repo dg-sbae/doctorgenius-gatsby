@@ -26,7 +26,7 @@
     max-width: 100%;
     margin: auto;
     display: block;
-    margin-bottom: $m1 * 1.5;
+    //margin-bottom: $m1 * 1.5;
   }
 
   .linkIcon {
@@ -57,6 +57,7 @@
     font-size: $font-size-lg * 1.25;
     color: $primary;
     font-weight: $font-weight-medium;
+    margin-bottom: 25px;
     @include media("<=tablet") {
       font-size: $font-size-lg * 1.15;
     }

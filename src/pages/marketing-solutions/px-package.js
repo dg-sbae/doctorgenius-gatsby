@@ -16,7 +16,7 @@ import PageStyles from "../../pages/marketing-solutions/px-package.module.scss"
 import RowStyles from "../../components/Row.module.scss"
 
 import websiteIcon from "../../img/icon/marketing-solutions-suite.svg"
-import starsIcon from "../../img/icon/new-patient-opportunity.svg"
+import starsIcon from "../../img/icon/checkmark.svg"
 
 const PxPage = data => {
   const images = data.data
@@ -88,7 +88,7 @@ const PxPage = data => {
                 <div className="order-sm-2 order-md-3 col-sm-9 col-md-6">
                   <div className="content-block">
                     <InnerTitle
-                      title="Solutions have never been easier"
+                      title="Solutions Have Never Been Easier"
                       inContentBlock
                     />
                     <div
@@ -278,7 +278,7 @@ const PxPage = data => {
                   <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <Img
-                        fixed={images.medal.childImageSharp.fixed}
+                        fixed={images.stayConnected.childImageSharp.fixed}
                         className={PageStyles.imgIcon}
                         alt="Stay Connected To Your Patients"
                       />
@@ -292,7 +292,7 @@ const PxPage = data => {
                   <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <Img
-                        fixed={images.money.childImageSharp.fixed}
+                        fixed={images.drivePatient.childImageSharp.fixed}
                         className={PageStyles.imgIcon}
                         alt="Drive Patient Experience and Loyalty"
                       />
@@ -306,7 +306,7 @@ const PxPage = data => {
                   <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <Img
-                        fixed={images.groupChat.childImageSharp.fixed}
+                        fixed={images.workplaceSafe.childImageSharp.fixed}
                         className={PageStyles.imgIcon}
                         alt="Keep Your Workplace Safe and Healthy"
                       />
@@ -320,7 +320,9 @@ const PxPage = data => {
                   <div className={PageStyles.panel}>
                     <div className={PageStyles.iconWrapper}>
                       <Img
-                        fixed={images.stars.childImageSharp.fixed}
+                        fixed={
+                          images.streamlineOperations.childImageSharp.fixed
+                        }
                         className={PageStyles.imgIcon}
                         alt="Streamline Front Office Operations"
                       />
@@ -336,7 +338,7 @@ const PxPage = data => {
               {/* Additional Text/Image Row */}
               <div
                 className={
-                  PageStyles.oddRow +
+                  PageStyles.paperlessForms +
                   " odd-row " +
                   RowStyles.row +
                   " " +
@@ -348,7 +350,7 @@ const PxPage = data => {
                 }
               >
                 <div className="order-md-1 col-md-1" />
-                <div className="order-sm-2 order-md-2 col-sm-9 col-md-5">
+                <div className="order-sm-2 order-md-3 col-sm-9 col-md-5">
                   <div className="content-block">
                     <InnerTitle title="Paperless Forms" inContentBlock />
                     <div
@@ -357,58 +359,10 @@ const PxPage = data => {
                       }
                     >
                       <p
-                        className="s-thin"
+                        className=""
                         dangerouslySetInnerHTML={{
                           __html:
                             "Doctor Genius is here to help you navigate the changing landscape of practice management and patient care with our Px, Patient Experience software package. This package includes everything you need to see stay connected to your patients anytime, anywhere.",
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className={
-                    "order-sm-1 order-md-3 col-sm-12 col-md-5 " +
-                    RowStyles.colMd5
-                  }
-                >
-                  <img
-                    className={PageStyles.imgResponsive}
-                    src={images.image_two.childImageSharp.fluid.src}
-                    alt="Solutions have never been easier"
-                  />
-                </div>
-                <div className="order-sm-12 col-md-1" />
-              </div>
-
-              {/* End Additional Text/Image Row */}
-
-              {/* Additional Text/Image Row */}
-              <div
-                className={
-                  RowStyles.row +
-                  " " +
-                  RowStyles.padded +
-                  " " +
-                  RowStyles.shortTop +
-                  " " +
-                  RowStyles.shortBottom
-                }
-              >
-                <div className="order-md-1 col-md-1" />
-                <div className="order-sm-2 order-md-3 col-sm-9 col-md-5 col-lg-6">
-                  <div className="content-block">
-                    <InnerTitle title="Teledentistry" inContentBlock />
-                    <div
-                      className={
-                        PageStyles.accentedParagraph + " accented-paragraph"
-                      }
-                    >
-                      <p
-                        className="s-thin"
-                        dangerouslySetInnerHTML={{
-                          __html:
-                            "Reduce unnecessary emergency appointments and by using a Teledentistry Emergency Triage Form. This form can be easily accessed from your website, texted, or emailed to allow patients to securely send photos and videos of their dental emergency.",
                         }}
                       />
                     </div>
@@ -434,8 +388,6 @@ const PxPage = data => {
               {/* Additional Text/Image Row */}
               <div
                 className={
-                  PageStyles.oddRow +
-                  " odd-row " +
                   RowStyles.row +
                   " " +
                   RowStyles.padded +
@@ -446,9 +398,9 @@ const PxPage = data => {
                 }
               >
                 <div className="order-md-1 col-md-1" />
-                <div className="order-sm-2 order-md-2 col-sm-9 col-md-5">
+                <div className="order-sm-2 order-md-2 col-sm-9 col-md-5 col-lg-6">
                   <div className="content-block">
-                    <InnerTitle title="Practice Efficiencies" inContentBlock />
+                    <InnerTitle title="Teledentistry" inContentBlock />
                     <div
                       className={
                         PageStyles.accentedParagraph + " accented-paragraph"
@@ -458,7 +410,7 @@ const PxPage = data => {
                         className="s-thin"
                         dangerouslySetInnerHTML={{
                           __html:
-                            "Every piece of paper that exists in your practice requires printing, handling, sorting, filling out, verification, scanning, filing, and shredding. Imagine eliminating all of that busy work with a click.",
+                            "Reduce unnecessary emergency appointments and by using a Teledentistry Emergency Triage Form. This form can be easily accessed from your website, texted, or emailed to allow patients to securely send photos and videos of their dental emergency.",
                         }}
                       />
                     </div>
@@ -472,7 +424,57 @@ const PxPage = data => {
                 >
                   <img
                     className={PageStyles.imgResponsive}
-                    src={images.image_two.childImageSharp.fluid.src}
+                    src={images.image_three.childImageSharp.fluid.src}
+                    alt="Solutions have never been easier"
+                  />
+                </div>
+                <div className="order-sm-12 col-md-1" />
+              </div>
+
+              {/* End Additional Text/Image Row */}
+
+              {/* Additional Text/Image Row */}
+              <div
+                className={
+                  PageStyles.practiceEfficienies +
+                  " odd-row " +
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="order-md-1 col-md-1" />
+                <div className="order-sm-2 order-md-3 col-sm-9 col-md-5">
+                  <div className="content-block">
+                    <InnerTitle title="Practice Efficiencies" inContentBlock />
+                    <div
+                      className={
+                        PageStyles.accentedParagraph + " accented-paragraph"
+                      }
+                    >
+                      <p
+                        className=""
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            "Every piece of paper that exists in your practice requires printing, handling, sorting, filling out, verification, scanning, filing, and shredding. Imagine eliminating all of that busy work with a click.",
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className={
+                    "order-sm-1 order-md-2 col-sm-12 col-md-5 " +
+                    RowStyles.colMd5
+                  }
+                >
+                  <img
+                    className={PageStyles.imgResponsive}
+                    src={images.image_four.childImageSharp.fluid.src}
                     alt="Solutions have never been easier"
                   />
                 </div>
@@ -492,51 +494,67 @@ export default PxPage
 
 export const ImageQuery = graphql`
   query PXImages3 {
-    image_one: file(relativePath: { eq: "content-is-king.png" }) {
+    image_one: file(relativePath: { eq: "px-package-phone.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    image_two: file(relativePath: { eq: "content-marketing.png" }) {
+    image_two: file(relativePath: { eq: "px-package-paperless.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    backgroundImage: file(relativePath: { eq: "content-marketing.jpg" }) {
+    image_three: file(relativePath: { eq: "px-package-tele.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    image_four: file(relativePath: { eq: "px-package-practices.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    backgroundImage: file(relativePath: { eq: "px-package-tablet.jpg" }) {
       childImageSharp {
         fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    medal: file(relativePath: { eq: "google-first-page.png" }) {
+    stayConnected: file(relativePath: { eq: "stay-connected.png" }) {
       childImageSharp {
-        fixed(width: 105) {
+        fixed(width: 96) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    money: file(relativePath: { eq: "increase-in-revenue.png" }) {
+    drivePatient: file(relativePath: { eq: "drive-patient-experience.png" }) {
       childImageSharp {
-        fixed(width: 105) {
+        fixed(width: 96) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    stars: file(relativePath: { eq: "stars.png" }) {
+    streamlineOperations: file(
+      relativePath: { eq: "streamline-operations.png" }
+    ) {
       childImageSharp {
-        fixed(width: 105) {
+        fixed(width: 96) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    groupChat: file(relativePath: { eq: "increase-in-new-patient-calls.png" }) {
+    workplaceSafe: file(relativePath: { eq: "workplace-safe.png" }) {
       childImageSharp {
-        fixed(width: 105) {
+        fixed(width: 96) {
           ...GatsbyImageSharpFixed
         }
       }

@@ -8,6 +8,7 @@ import digitalAdvertisingIcon from "../img/digital-advertising.svg"
 import onlineReputationIcon from "../img/online-reputation.svg"
 import ourTechnologyIcon from "../img/our-technology.svg"
 import hostingSolutionsIcon from "../img/hosting-solutions.svg"
+import pxMarketingIcon from "../img/icon/px-nav.svg"
 
 // Images - Our Clients Pages
 import dentalPractices from "../img/icon/tooth-shine-nav.svg"
@@ -65,7 +66,7 @@ class SecondaryNavigation extends Component {
         },
         {
           url: "/marketing-solutions/px-package",
-          source: responsiveWebsitesIcon,
+          source: pxMarketingIcon,
           alt: "Paperless Experience Package",
           text: "PX Package",
         },
