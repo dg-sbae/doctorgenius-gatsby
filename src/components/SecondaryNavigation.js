@@ -67,7 +67,7 @@ class SecondaryNavigation extends Component {
         {
           url: "/marketing-solutions/px-package",
           source: pxMarketingIcon,
-          alt: "Paperless Experience Package",
+          alt: "Patient Experience Package",
           text: "PX Package",
         },
       ],
