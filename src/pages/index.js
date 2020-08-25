@@ -138,7 +138,7 @@ export default ({ data }, props) => {
                 <div className="col-sm-11 col-md-8 col-lg-6">
                   <div className="accented-paragraph">
                     <p>
-                      Our robust, comprehensive marketing solutions helps keep
+                      Our robust, comprehensive marketing solutions help keep
                       your online digital marketing presence ahead of
                       competition. We provide tools and analysis to improve new
                       patient acquisition with transparent reporting to measure
@@ -219,8 +219,8 @@ export default ({ data }, props) => {
                       <div className="accented-paragraph">
                         <p className="s-thin">
                           When you join the Doctor Genius Family, we are now
-                          partnered. We have a direct interest in your business
-                          doing well.
+                          partnered. We have a direct interest in the success of
+                          your business.
                         </p>
                       </div>
                     </div>
@@ -252,8 +252,8 @@ export default ({ data }, props) => {
                     <div>
                       <div className="accented-paragraph">
                         <p className="m-thin">
-                          We are not a cookie cutter type program. We are a
-                          performance based program and take pride in your
+                          We are not a cookie-cutter type program. We are a
+                          performance-based program and take pride in your
                           success.
                         </p>
                       </div>

@@ -127,9 +127,9 @@ const Company = data => {
                     <div className="accented-paragraph">
                       <p>
                         We are based in Lake Forest, California, USA. Doctor
-                        Genius has consistent 5 Star Ratings on Google+, and A
+                        Genius has consistent 5-star Ratings on Google+, and A
                         Rated with the BBB. We employ and all-star development,
-                        support, and sales team to provide high level online
+                        support, and sales team to provide high-level online
                         marketing solutions to medical & health practices within
                         the United States.
                       </p>
@@ -344,7 +344,7 @@ const Company = data => {
                       >
                         <p>
                           We are based in Lake Forest, California, USA. Doctor
-                          Genius has consistent 5 Star Ratings on Google+, and A
+                          Genius has consistent 5-star Ratings on Google+, and A
                           Rated with the BBB. We employ and all-star
                           development, support, and sales team to provide high
                           level online marketing solutions to medical & health

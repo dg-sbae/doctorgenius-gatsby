@@ -262,9 +262,9 @@ const Partnerships = data => {
                       >
                         <p>
                           We are based in Lake Forest, California, USA. Dental
-                          Genius has consistent 5 Star Ratings on Google. We
-                          employ and all-star development, support, and sales
-                          team to provide high level online marketing solutions
+                          Genius has consistent 5-star Ratings on Google. We
+                          employ an all-star development, support, and sales
+                          team to provide high-level online marketing solutions
                           to medical & health practices within the United
                           States.
                         </p>

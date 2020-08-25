@@ -20,6 +20,7 @@ import company from "../img/icon/hotel.svg"
 import contactUs from "../img/icon/contact-us-white.svg"
 import loginPortalIcon from "../../public/icon/icon-portal.svg"
 import eventsIcon from "../img/icon/calendar-white.svg"
+import pxIcon from "../img/icon/px-nav-white.png"
 
 import "bootstrap/dist/js/bootstrap.min.js"
 // import "../../static/scripts/navigationFunctionality.js"
@@ -458,7 +459,7 @@ const MarketingSolutionsListLink = props => (
                     >
                       Our Technology
                     </span>
-                    <p>Experience our performance based marketing program</p>
+                    <p>Experience our performance-based marketing program</p>
                   </div>
                 </div>
               </Link>
@@ -542,6 +543,51 @@ const MarketingSolutionsListLink = props => (
                   </div>
                 </div>
               </Link>
+            </div>
+          </div>
+          <div
+            className={
+              NavStyles.dropdownRow + " " + RowStyles.row + " dropdown-row"
+            }
+          >
+            <div className="col-sm-6">
+              <Link className="" to="/marketing-solutions/px-package">
+                <div
+                  className={
+                    NavStyles.dropdownItemBlock + " dropdown-item-block"
+                  }
+                >
+                  <div
+                    className={NavStyles.navIconWrapper + " nav-icon-wrapper"}
+                  >
+                    <div className={NavStyles.iconWrapper}>
+                      <img
+                        className={NavStyles.imageIcon + " image-icon"}
+                        src={pxIcon}
+                        alt="Px Package Icon"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className={
+                      NavStyles.dropdownContentBlock + " dropdown-content-block"
+                    }
+                  >
+                    <span
+                      className={
+                        NavStyles.dropdownContentTitle +
+                        " dropdown-content-title"
+                      }
+                    >
+                      Px Package
+                    </span>
+                    <p>Explore our new Paperless Experience Package details.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-sm-6">
+              <span></span>
             </div>
           </div>
         </div>
@@ -943,7 +989,7 @@ const StudySingleListLink = props => (
                       Portal Login
                     </span>
                     <p>
-                      Login for clients to our performance based marketing
+                      Login for clients to our performance-based marketing
                       program
                     </p>
                   </div>
