@@ -25,8 +25,8 @@ const PxPage = data => {
 
   const heroConfig = {
     pageType: "marketingSolutions",
-    strapline: "Paperless Experience Package",
-    title: [<span>Stay connected</span>, " When it matters the most"],
+    strapline: "Patient Experience Package",
+    title: ["Stay connected", <span> when it matters the most</span>],
     content:
       "Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution.",
   }
@@ -100,7 +100,7 @@ const PxPage = data => {
                         className="s-thin"
                         dangerouslySetInnerHTML={{
                           __html:
-                            "The Doctor Genius Px, Patient Experience Package integrates seamlessly with our digital marketing solutions that leverage content, our mobile-first web design, SEO, online directories, and social media to drive new patients to your practice. Learn more about our marketing solutions.",
+                            "The Doctor Genius PX, Patient Experience Package integrates seamlessly with our digital marketing solutions that leverage content, our mobile-first web design, SEO, online directories, and social media to drive new patients to your practice. Learn more about our marketing solutions.",
                         }}
                       />
                     </div>
@@ -362,7 +362,7 @@ const PxPage = data => {
                         className=""
                         dangerouslySetInnerHTML={{
                           __html:
-                            "Doctor Genius is here to help you navigate the changing landscape of practice management and patient care with our Px, Patient Experience software package. This package includes everything you need to see stay connected to your patients anytime, anywhere.",
+                            "Doctor Genius is here to help you navigate the changing landscape of practice management and patient care with our PX, Patient Experience software package. This package includes everything you need to see stay connected to your patients anytime, anywhere.",
                         }}
                       />
                     </div>
