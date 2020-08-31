@@ -203,10 +203,14 @@
   }
 }
 
-.hero.privacyPolicy {
+.hero.privacyPolicy,
+.hero.websiteDevelopmentTerms {
   .heroContent {
     flex: 0 0 50%;
     width: 50%;
+    @include media("<tablet") {
+      width: 100%;
+    }
   }
   .accentedParagraph p {
     color: $primary-text;
