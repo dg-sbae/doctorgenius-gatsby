@@ -26,7 +26,7 @@ const PxPage = data => {
   const heroConfig = {
     pageType: "marketingSolutions",
     strapline: "Patient Experience Package",
-    title: ["Stay connected", <span> when it matters the most</span>],
+    title: [<span>Stay connected</span>, " when it matters the most"],
     content:
       "Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution.",
   }

@@ -130,7 +130,7 @@ const MarketingSolutionsSideNavListLink = props => (
           activeClassName="active"
           partiallyActive={true}
         >
-          Px Package
+          PX Package
         </ListLink>
       </ul>
     </div>

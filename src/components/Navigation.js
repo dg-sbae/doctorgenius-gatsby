@@ -564,7 +564,7 @@ const MarketingSolutionsListLink = props => (
                       <img
                         className={NavStyles.imageIcon + " image-icon"}
                         src={pxIcon}
-                        alt="Px Package Icon"
+                        alt="PX Package Icon"
                       />
                     </div>
                   </div>
@@ -579,9 +579,9 @@ const MarketingSolutionsListLink = props => (
                         " dropdown-content-title"
                       }
                     >
-                      Px Package
+                      PX Package
                     </span>
-                    <p>Explore our new Paperless Experience Package details.</p>
+                    <p>Explore our new Patient Experience Package details.</p>
                   </div>
                 </div>
               </Link>
