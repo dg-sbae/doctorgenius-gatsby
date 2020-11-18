@@ -1,8 +1,11 @@
 # doctorgenius-gatsby(Doctorgenius.com)
+
 The website for Doctor Genius
 
 ## Features
+
 ---
+
 - SEO optimized home, service, and contact pages.
 - "The Study": Blogs generated from our Wordpress site
 - Smart forms to inquery with the DG team.
@@ -38,7 +41,9 @@ below.
 
 The application is now viewable at [http://localhost:8000/](http://localhost:8000/)
 
-## Deployment 
+## Deployment
+
+    The application is deployed directly to doctorgenius.com via SFTP.
 
 ---
 
@@ -47,4 +52,3 @@ The application is now viewable at [http://localhost:8000/](http://localhost:800
 ---
 
 - For any questions please email fullstack@doctogenius.com
-- To submit any issues please
