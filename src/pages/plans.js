@@ -721,7 +721,7 @@ const Plans = data => {
                     <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    {/* <!-- details section 4 row 7: --> */}
+                    {/* <!-- details section 4 row 7: 
                     <dt
                       className={
                         PageStyles.spacerRow + " justify-content-start"
@@ -735,7 +735,8 @@ const Plans = data => {
                         Paid Advertising Campaigns
                       </div>
                     </dt>
-                    {/* <!-- details section 4 row 8: --> */}
+                    --> */}
+                    {/* <!-- details section 4 row 8:
                     <div
                       className={
                         PageStyles.gridItem +
@@ -753,7 +754,8 @@ const Plans = data => {
                     <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    {/* <!-- details section 4 row 9: --> */}
+                     --> */}
+                    {/* <!-- details section 4 row 9:
                     <div
                       className={
                         PageStyles.gridItem +
@@ -771,7 +773,8 @@ const Plans = data => {
                     <div className={PageStyles.gridItem + " grid-item"}>
                       <img src={checkmark} alt="checkmark" />
                     </div>
-                    {/* <!-- details section 4 row 10: --> */}
+                     --> */}
+                    {/* <!-- details section 4 row 10: 
                     <div
                       className={
                         PageStyles.gridItem +
@@ -789,7 +792,7 @@ const Plans = data => {
                     <div className={PageStyles.gridItem + " grid-item"}>
                       4 Landing Pages
                     </div>
-
+                    --> */}
                     {/* <!-- details section 5: --> */}
                     <dt
                       className={
