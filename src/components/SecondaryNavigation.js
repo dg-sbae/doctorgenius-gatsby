@@ -17,6 +17,11 @@ import chiropractorPractices from "../img/icon/chiropractor-nav.svg"
 import cosmeticSurgeons from "../img/icon/surgeon-nav.svg"
 import healthcareMarketing from "../img/icon/sphygmomanometer-nav.svg"
 
+// Images - Px Experience Pages
+import teledentistryIcon from "../img/icon/sphygmomanometer-nav.svg"
+import paperlessFormsIcon from "../img/icon/sphygmomanometer-nav.svg"
+import patientReminderIcon from "../img/icon/sphygmomanometer-nav.svg"
+
 import SecondaryNavStyles from "./SecondaryNavigation.module.scss"
 
 import $ from "jquery"
@@ -103,6 +108,26 @@ class SecondaryNavigation extends Component {
           text: "Healthcare Marketing",
         },
       ],
+      pxExperience: [
+        {
+          url: "/px-experience/teledentistry",
+          source: teledentistryIcon,
+          alt: "Teledentistry",
+          text: "Teledentistry",
+        },
+        {
+          url: "/px-experience/paperless-forms",
+          source: paperlessFormsIcon,
+          alt: "Paperless Forms",
+          text: "Paperless Forms",
+        },
+        {
+          url: "/px-experience/patient-reminder",
+          source: patientReminderIcon,
+          alt: "Patient Reminder",
+          text: "Patient Reminder",
+        }
+      ]
     }
   }
 
