@@ -8,7 +8,7 @@ import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import SecondaryNavigation from "../components/SecondaryNavigation"
 import InnerTitle from "../components/inner-title.js"
-import Hero from "../components/Hero"
+import HeroPx from "../components/HeroPx"
 
 import "../styles/marketing-solutions-inner.scss"
 import PageStyles from "./patient-experience-inner.module.scss"
@@ -25,9 +25,9 @@ export default props => {
   const heroBackgroundImage = props.backgroundImage
 
   const heroConfig = {
-    pageType: "marketingSolutionsInner",
-    strapline: pageTitle,
-    title: pageSubtitle,
+    pageType: "patientExperienceInner",
+    title: pageTitle,
+    subtitle: pageSubtitle,
     content: pageIntro,
   }
 
@@ -42,11 +42,11 @@ export default props => {
           <title>{metaTitle}</title>
           <meta name="description" content={metaDescription} />
         </Helmet>
-        <div className={props.page + " marketing-solutions-inner"}>
+        <div className={props.page + " patient-experience-inner"}>
           <BackgroundImage fluid={heroBackgroundImage}>
-            <Hero
+            <HeroPx
               pageType={heroConfig.pageType}
-              strapline={heroConfig.strapline}
+              subtitle={heroConfig.subtitle}
               title={heroConfig.title}
               content={heroConfig.content}
             />

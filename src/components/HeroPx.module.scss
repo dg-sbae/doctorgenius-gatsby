@@ -1,0 +1,90 @@
+@import "../styles/_site-variables.scss";
+
+.hero {
+  height: 690px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 55% 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  font-family: $font-family-base;
+  line-height: 1.1;
+  @include media("<tablet") {
+    text-align: center;
+  }
+  h1 {
+    color: $primary-text;
+    font-size: 85px;
+    font-weight: $font-weight-semibold;
+    @include media("<=laptop") {
+      font-size: 65px;
+    }
+    @include media("<tablet") {
+      font-size: 55px;
+    }
+  }
+  h2 {
+    color: black;
+    font-size: 61px;
+    font-weight: $font-weight-light;
+    @include media("<=laptop") {
+      font-size: 41px;
+    }
+    @include media("<tablet") {
+      font-size: 31px;
+    }
+  }
+  p {
+    color: $primary-text;
+    font-size: 22px;
+    font-family: $font-family-body-text;
+    font-weight: $font-weight-light;
+    margin-top: 10px;
+    @include media("<=laptop") {
+      font-size: 18px;
+    }
+  }
+}
+
+.hero.patientExperiencePage {
+  @include media("<=tablet") {
+    background-position: 84% 50%;
+  }
+  .heroContent {
+    @include media(">=tablet") {
+      width: 490px;
+      height: 295px;
+      p {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.hero.patientExperienceInner {
+  .heroContent {
+    @include media(">=tablet") {
+      width: 550px;
+      height: 330px;
+      p {
+        width: 90%;
+      }
+    }
+    @include media("<=laptop") {
+      height: auto;
+      h2 {
+        margin-bottom: 15px;
+      }
+    }
+    @include media("<=tablet") {
+      height: auto;
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+

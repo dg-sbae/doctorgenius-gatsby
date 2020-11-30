@@ -11,11 +11,11 @@ const Teledentistry = data => {
   return (
     <PxExperienceTemplate
       page="teledentistry" /* this should be dynamic from the page props */
-      pageTitle="Px Experience"
-      pageSubtitle={["Teledentistry"]}
-      pageIntro="Triage made easy with our technology."
+      pageTitle="Teledentistry"
+      pageSubtitle="Patient First Technlogy"
+      pageIntro="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."
       metaTitle="Teledentistry | Healthcare Marketing Agency"
-      metaDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis efficitur augue, sit amet suscipit turpis gravida eus."
+      metaDescription="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."
       backgroundImage={images.backgroundImage.childImageSharp.fluid}
       contentRows={[
         {
