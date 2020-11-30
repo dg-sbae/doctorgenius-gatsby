@@ -26,9 +26,11 @@ const mobileSubNavLinks = {
     { title: "Healthcare Marketing", slug: "healthcare-marketing" },
   ],
   pxExperience: [
+    { title: "Overview", slug: "patient-experience" },
     { title: "Teledentistry", slug: "teledentistry" },
     { title: "Paperless Forms", slug: "paperless-forms" },
-    { title: "Patient-Reminder", slug: "patient-reminder" }, 
+    { title: "Patient Reminder", slug: "patient-reminder" },
+    { title: "Plans", slug: "plans" },
   ]
 }
 
