@@ -9,7 +9,6 @@ import "../styles/contact.scss"
 import PageStyles from "./contact.module.scss"
 import OutageStyles from "./outage.module.scss"
 import RowStyles from "../components/Row.module.scss"
-import InnerTitleStyles from "../components/inner-title.module.scss"
 
 export default props => (
   <div

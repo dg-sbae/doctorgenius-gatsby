@@ -3,8 +3,6 @@ import { graphql } from "gatsby"
 
 import PxExperienceTemplate from "../../templates/patient-experience-inner"
 
-import websiteIcon from "../../img/icon/website.svg"
-
 const Teledentistry = data => {
   const images = data.data
 
@@ -20,50 +18,63 @@ const Teledentistry = data => {
       contentRows={[
         {
           content: {
-            icon: {
-              url: websiteIcon,
-              alt: "Blog and Social Updates",
-              title: "Blog and Social Updates",
-            },
-            innerTitle: "Content is King",
+            rowType: 'odd-row',
+            title: "Teledentistry",
+            innerTitle: "The ability to do Dentistry remotely",
             paragraph:
-              "Google is an Ecosystem powered by information. Doctor Genius will write content related to your most profitable services and utilize additional techniques like Accelerated Mobile Pages(AMP).",
+              "Our teledentistry solution is a new, paperless and contactless check in experience for your team and patients safety. This solution allows you to pre screen patients with the help of our technology in order to triage more effectively",
+            listTitle: "Contact-less Forms",
+            listItems: [
+              'Cosmetic Questionnaire',
+              "Dental Emergency",
+              "Dental Implants",
+              "TMD",
+              "Virtual Consultation",
+              "COVID-19 Screening"
+            ],
           },
           image: {
             url: images.image_one.childImageSharp.fluid.src,
-            alt: "Content is King",
+            alt: "Teledentistry",
           },
         },
         {
           content: {
-            icon: {
-              url: websiteIcon,
-              alt: "Patient Education",
-              title: "Patient Education",
-            },
-            innerTitle: "Understanding your practice",
+            rowType: 'icon-row',
+            title: "Teledentistry Test",
+            innerTitle: "The ability to do Dentistry remotely",
             paragraph:
-              "Original patient education content is posted to your blog and social media profiles to generate general interest in your medical treatments and services.",
+              "Our teledentistry solution is a new, paperless and contactless check in experience for your team and patients safety. This solution allows you to pre screen patients with the help of our technology in order to triage more effectively",
           },
           image: {
-            url: images.image_two.childImageSharp.fluid.src,
-            alt: "Understanding your practice",
+            url: images.image_one.childImageSharp.fluid.src,
+            alt: "Teledentistry",
           },
         },
         {
           content: {
-            icon: {
-              url: websiteIcon,
-              alt: "Video Education",
-              title: "Video Education",
-            },
-            innerTitle: "Seeing is believing",
+            rowType: 'even-row',
+            title: "Patient-First Experience",
+            innerTitle: "Pre-Screening and Evaluations",
             paragraph:
-              "Strategic deployment of educational videos as an additional avenue for new patients to find you.",
+              "Manage your important documents securely and only a click away with our Doctor Genius PX, Patient Experience software package. The result is enhanced with operational efficiency, increased case acceptance, improved patient experience, and a consistant standard of care",
           },
           image: {
-            url: images.image_three.childImageSharp.fluid.src,
-            alt: "Video Marketing",
+            url: images.image_one.childImageSharp.fluid.src,
+            alt: "Teledentistry",
+          },
+        },
+        {
+          content: {
+            rowType: 'odd-row',
+            title: "Remotely",
+            innerTitle: "We're here to support you, anytime or any place",
+            paragraph:
+              "Doctor Genius community has all the up to date necessary resources for your team to be successful and profitable. Make things simpler for your patients and team in order to provide quality care for your local community. We are here to help you make a 5 star experience with each and every patients.",
+          },
+          image: {
+            url: images.image_one.childImageSharp.fluid.src,
+            alt: "Teledentistry",
           },
         },
       ]}
