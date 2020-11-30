@@ -110,19 +110,19 @@ class SecondaryNavigation extends Component {
       ],
       pxExperience: [
         {
-          url: "/px-experience/teledentistry",
+          url: "/patient-experience/teledentistry",
           source: teledentistryIcon,
           alt: "Teledentistry",
           text: "Teledentistry",
         },
         {
-          url: "/px-experience/paperless-forms",
+          url: "/patient-experience/paperless-forms",
           source: paperlessFormsIcon,
           alt: "Paperless Forms",
           text: "Paperless Forms",
         },
         {
-          url: "/px-experience/patient-reminder",
+          url: "/patient-experience/patient-reminder",
           source: patientReminderIcon,
           alt: "Patient Reminder",
           text: "Patient Reminder",

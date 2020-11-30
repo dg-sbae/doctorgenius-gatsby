@@ -170,6 +170,21 @@
   }
 }
 
+.hero.patientExperiencePage {
+  @include media("<=tablet") {
+    background-position: 84% 50%;
+  }
+  .heroContent {
+    @include media(">=tablet") {
+      width: 490px;
+      height: 295px;
+      p {
+        width: 90%;
+      }
+    }
+  }
+}
+
 .hero.partnerships {
   h2 {
     margin-bottom: 20px;

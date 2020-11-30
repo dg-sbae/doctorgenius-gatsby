@@ -126,7 +126,7 @@ const MarketingSolutionsSideNavListLink = props => (
           Hosting Solutions
         </ListLink>
         <ListLink
-          to="/marketing-solutions/px-package"
+          to="/marketing-solutions/patient-experience"
           activeClassName="active"
           partiallyActive={true}
         >
