@@ -100,16 +100,16 @@ function PostPage({ pageContext, data, location }) {
                         &nbsp;Back
                       </a>
                     ) : (
-                      <p>&nbsp;</p>
-                    )}
+                        <p>&nbsp;</p>
+                      )}
                     {nextPost != null ? (
                       <a href={nextPost}>
                         Next &nbsp;
                         <img src={rightChevron} alt="Navigate to Next" />
                       </a>
                     ) : (
-                      <p>&nbsp;</p>
-                    )}
+                        <p>&nbsp;</p>
+                      )}
                   </div>
                 </div>
               </div>
@@ -231,9 +231,11 @@ function PostPage({ pageContext, data, location }) {
                 </div>
               </div>
 
-              <div className="d-none">
+              {post.blog_author &&
+                (<div className="d-none">
                   <h4>{post.blog_author}</h4>
-              </div>
+                </div>)
+              }
 
               <div
                 className={
