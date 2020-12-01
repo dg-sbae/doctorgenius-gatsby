@@ -231,6 +231,10 @@ function PostPage({ pageContext, data, location }) {
                 </div>
               </div>
 
+              <div className="d-none">
+                  <h4>{post.blog_author}</h4>
+              </div>
+
               <div
                 className={
                   PageStyles.events +
