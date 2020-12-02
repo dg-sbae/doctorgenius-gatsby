@@ -12,6 +12,7 @@ import HeroPx from "../components/HeroPx"
 import "../styles/marketing-solutions-inner.scss"
 import PageStyles from "./patient-experience-inner.module.scss"
 import RowStyles from "../components/Row.module.scss"
+import PxSubFooter from '../components/pxSubfooter'
 
 import checkmarkSmall from '../img/icon/checkmark-sm.svg'
 
@@ -136,9 +137,10 @@ export default props => {
                       />
                     </div>
                   </div>
+                  /* End Split Row of content and image */
                   :
-                  {/* Large Icon Row */ }
-                  < div className = { PageStyles.iconContentRow } >
+                  // Start Large Icon Row
+                  <div className={PageStyles.iconContentRow}>
                     <div
                       className={
                         RowStyles.row +
@@ -182,8 +184,11 @@ export default props => {
                       ))}
                     </div>
                   </div>
+
+
               ))}
-              {/* End Split Row of content and image */}
+              {/* // End Large Icon Row */}
+              <PxSubFooter headerID="hi" />
             </Container>
           </Main>
         </div>
