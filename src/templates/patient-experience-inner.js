@@ -188,7 +188,7 @@ export default props => {
 
               ))}
               {/* // End Large Icon Row */}
-              <PxSubFooter headerID="hi" />
+              <PxSubFooter />
             </Container>
           </Main>
         </div>
