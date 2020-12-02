@@ -41,21 +41,37 @@ const Teledentistry = data => {
         {
           content: {
             rowType: 'icon-row',
-            title: "Teledentistry Test",
-            innerTitle: "The ability to do Dentistry remotely",
-            paragraph:
-              "Our teledentistry solution is a new, paperless and contactless check in experience for your team and patients safety. This solution allows you to pre screen patients with the help of our technology in order to triage more effectively",
-          },
-          image: {
-            url: images.image_one.childImageSharp.fluid.src,
-            alt: "Teledentistry",
-          },
+            title: "Features & Benefits",
+            innerTitle: "How teledentistry benefits your patient's needs",
+            panels: [
+              {
+                icon: images.icon_one.childImageSharp.fluid.src,
+                alt: "Teledentistry Messaging",
+                caption: "Send secure messages that meet HIPAA guidelines to ensure patients privacy and confidentiality."
+              },
+              {
+                icon: images.icon_two.childImageSharp.fluid.src,
+                alt: "Teledentistry Treatment Plans",
+                caption: "Patients can send and receive vital information to you that quickly allows you to create a treatment plan."
+              },
+              {
+                icon: images.icon_three.childImageSharp.fluid.src,
+                alt: "Teledentistry Coronavirus",
+                caption: "Determine if a patient or someone in their home has been diagnosed with the novel coronavirus."
+              },
+              {
+                icon: images.icon_four.childImageSharp.fluid.src,
+                alt: "Teledentistry Patient Care",
+                caption: "Save your patients and team time by making critical decisions regarding at risk patients before they arrive at your office."
+              },
+            ],
+          }
         },
         {
           content: {
             rowType: 'even-row',
             title: "Patient-First Experience",
-            innerTitle: "Pre-Screening and Evaluations",
+            innerTitle: "How teledentistry benefits your patient's needs",
             paragraph:
               "Manage your important documents securely and only a click away with our Doctor Genius PX, Patient Experience software package. The result is enhanced with operational efficiency, increased case acceptance, improved patient experience, and a consistant standard of care",
           },
@@ -86,6 +102,13 @@ export default Teledentistry
 
 export const ImageQuery = graphql`
   query TeledentistryImages {
+    backgroundImage: file(relativePath: { eq: "content-marketing.jpg" }) {
+      childImageSharp {
+        fluid(quality: 70) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     image_one: file(relativePath: { eq: "teledentistry-remote.png" }) {
       childImageSharp {
         fluid {
@@ -107,10 +130,31 @@ export const ImageQuery = graphql`
         }
       }
     }
-    backgroundImage: file(relativePath: { eq: "content-marketing.jpg" }) {
+    icon_one: file(relativePath: { eq: "tele_secure.png" }) {
       childImageSharp {
-        fluid(quality: 70) {
-          ...GatsbyImageSharpFluid
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    icon_two: file(relativePath: { eq: "tele_treatment_plan.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    icon_three: file(relativePath: { eq: "tele_patient_care.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    icon_four: file(relativePath: { eq: "tele_clock.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

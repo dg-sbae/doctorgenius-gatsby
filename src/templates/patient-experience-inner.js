@@ -7,7 +7,6 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import SecondaryNavigation from "../components/SecondaryNavigation"
-import InnerTitle from "../components/inner-title.js"
 import HeroPx from "../components/HeroPx"
 
 import "../styles/marketing-solutions-inner.scss"
@@ -83,9 +82,9 @@ export default props => {
                       " " +
                       RowStyles.padded +
                       " " +
-                      RowStyles.shortTop +
+                      RowStyles.tallTop +
                       " " +
-                      RowStyles.shortBottom
+                      RowStyles.tallBottom
                     }
                   >
                     <div
@@ -138,18 +137,51 @@ export default props => {
                     </div>
                   </div>
                   :
-                  <div className={
-                    PageStyles.iconRow + " " +
-                    RowStyles.row +
-                    " " +
-                    RowStyles.padded +
-                    " " +
-                    RowStyles.shortTop +
-                    " " +
-                    RowStyles.shortBottom
-                  }
-                  ></div>
-
+                  {/* Large Icon Row */ }
+                  < div className = { PageStyles.iconContentRow } >
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        RowStyles.padded +
+                        " " +
+                        RowStyles.tallTop
+                      }
+                    >
+                      <div className={PageStyles.iconContentTitles + " col-sm-10 col-md-7"}>
+                        <h3>{row.content.title}</h3>
+                        <h2>{row.content.innerTitle}</h2>
+                      </div>
+                    </div>
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        PageStyles.panelRow +
+                        " " +
+                        PageStyles.largeIconRow +
+                        " " +
+                        RowStyles.tallBottom
+                      }
+                    >
+                      {row.content.panels.map((panel) => (
+                        <div className="col-sm-6 col-md-3">
+                          <div className={PageStyles.panel}>
+                            <div className={PageStyles.iconWrapper}>
+                              <img
+                                className={PageStyles.imgResponsive}
+                                src={panel.icon}
+                                alt={panel.alt}
+                              />
+                            </div>
+                            <p className={PageStyles.panelCaption}>
+                              {panel.caption}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
               ))}
               {/* End Split Row of content and image */}
             </Container>
