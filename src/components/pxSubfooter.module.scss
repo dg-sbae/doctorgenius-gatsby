@@ -19,6 +19,9 @@
         font-size: 35px;
         margin-bottom: $m1 / 1.5;
       }
+      @include media("<=phone") {
+        margin-bottom: 10px;
+      }
     }
 
     .strapline {
@@ -54,6 +57,7 @@
         font-size: 25px;
       }
       @include media("<=425px") {
+        font-size: 23px;
         margin-top: 0;
       }
     }
