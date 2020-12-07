@@ -106,6 +106,9 @@
     @include media("<=laptop") {
       margin: 20px auto 40px;
     }
+    @include media('<=425px') {
+      margin: 10px 0px;
+    }
 
     .panelCaption {
       color: #000;
@@ -114,7 +117,7 @@
       font-family: $font-family-base;
       font-weight: $font-weight-light;
       @include media("<=laptop") {
-        font-size: 16px;
+        font-size: 15px;
         margin: 5px 0;
       }
     }

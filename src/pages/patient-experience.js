@@ -57,7 +57,7 @@ const PxPage = data => {
               <div className={RowStyles.row}>
                 <div className="col-sm-12 panel-row">
                   <SecondaryNavigation
-                    pageType="pxExperience"
+                    pageType="patientExperience"
                     pageTitle="Patient Experience Package"
                   />
                 </div>
@@ -66,7 +66,7 @@ const PxPage = data => {
 
               {/* Begin mobile secondary navigation component */}
               <MobileSecondaryNav
-                parentPage="pxExperience"
+                parentPage="patientExperience"
                 titleItem="Patient Experience Package"
               />
               {/* End mobile secondary navigation component */}

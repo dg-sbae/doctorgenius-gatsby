@@ -59,7 +59,7 @@ export default props => {
               <div className={RowStyles.row}>
                 <div className="col-sm-12 panel-row">
                   <SecondaryNavigation
-                    pageType="pxExperience"
+                    pageType="patientExperience"
                     pageTitle={props.pageTitle}
                   />
                 </div>
@@ -68,7 +68,7 @@ export default props => {
 
               {/* Begin mobile secondary navigation component */}
               <MobileSecondaryNav
-                parentPage="pxExperience"
+                parentPage="patientExperience"
                 titleItem={pageTitle}
               />
               {/* End mobile secondary navigation component */}
@@ -158,10 +158,6 @@ export default props => {
                     <div
                       className={
                         RowStyles.row +
-                        " " +
-                        PageStyles.panelRow +
-                        " " +
-                        PageStyles.largeIconRow +
                         " " +
                         RowStyles.tallBottom
                       }
