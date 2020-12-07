@@ -25,7 +25,7 @@ const mobileSubNavLinks = {
     { title: "Cosmetic Surgeons", slug: "cosmetic-surgeons" },
     { title: "Healthcare Marketing", slug: "healthcare-marketing" },
   ],
-  pxExperience: [
+  patientExperience: [
     { title: "Overview", slug: "patient-experience" },
     { title: "Teledentistry", slug: "teledentistry" },
     { title: "Paperless Forms", slug: "paperless-forms" },
@@ -56,8 +56,18 @@ export default class MobileSecondaryNav extends React.Component {
     this.state = {
       open: false,
     }
-    this.parentPage =
-      props.parentPage === "ourClients" ? "our-clients" : "marketingSolutions" ? "marketing-solutions" : "patient-experience"
+
+    /*this.parentPage =
+      props.parentPage === "ourClients" ? "our-clients" : "marketingSolutions" ? "marketing-solutions" : "patientExperience" ? "patient-experience" : ""
+    */
+    this.parentPage = null;
+    if (props.parentPage === "ourClients") {
+      this.parentPage = "our-clients";
+    } else if (props.parentPage === "marketingSolutions") {
+      this.parentPage = "marketing-solutions";
+    } else {
+      this.parentPage = "patient-experience";
+    }
   }
 
   onScrollListener = () => {

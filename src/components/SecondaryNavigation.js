@@ -72,10 +72,10 @@ class SecondaryNavigation extends Component {
           text: "Hosting Solutions",
         },
         {
-          url: "/marketing-solutions/px-package",
+          url: "/patient-experience",
           source: pxMarketingIcon,
           alt: "Patient Experience Package",
-          text: "PX Package",
+          text: "Patient Experience (PX)",
         },
       ],
       ourClients: [
@@ -110,7 +110,7 @@ class SecondaryNavigation extends Component {
           text: "Healthcare Marketing",
         },
       ],
-      pxExperience: [
+      patientExperience: [
         {
           url: "/patient-experience/",
           source: overviewIcon,

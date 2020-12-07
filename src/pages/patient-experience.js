@@ -18,480 +18,480 @@ import RowStyles from "../components/Row.module.scss"
 import starsIcon from "../img/icon/checkmark.svg"
 
 const PxPage = data => {
-    const images = data.data
-  
-    const backgroundImage = images.backgroundImage.childImageSharp.fluid
-  
-    const heroConfig = {
-      pageType: "patientExperiencePage",
-      strapline: "Patient Experience Package",
-      title: [<span>Stay connected</span>, " when it matters the most"],
-      content:
-        "Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution.",
-    }
-  
-    return (
-      <div className={PageStyles.pxExperiencePage + " " + RowStyles.rowStyling}>
-        <DefaultPageLayout>
-          <Helmet>
-            <title>
-              "Patient Experience Package | Healthcare Marketing Agency"
+  const images = data.data
+
+  const backgroundImage = images.backgroundImage.childImageSharp.fluid
+
+  const heroConfig = {
+    pageType: "patientExperiencePage",
+    strapline: "Patient Experience Package",
+    title: [<span>Stay connected</span>, " when it matters the most"],
+    content:
+      "Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution.",
+  }
+
+  return (
+    <div className={PageStyles.pxExperiencePage + " " + RowStyles.rowStyling}>
+      <DefaultPageLayout>
+        <Helmet>
+          <title>
+            "Patient Experience Package | Healthcare Marketing Agency"
             </title>
-            <meta
-              name="description"
-              content="Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution."
+          <meta
+            name="description"
+            content="Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution."
+          />
+        </Helmet>
+        <div className="px-package-page">
+          <BackgroundImage fluid={backgroundImage}>
+            <Hero
+              pageType={heroConfig.pageType}
+              strapline={heroConfig.strapline}
+              title={heroConfig.title}
+              content={heroConfig.content}
             />
-          </Helmet>
-          <div className="px-package-page">
-            <BackgroundImage fluid={backgroundImage}>
-              <Hero
-                pageType={heroConfig.pageType}
-                strapline={heroConfig.strapline}
-                title={heroConfig.title}
-                content={heroConfig.content}
+          </BackgroundImage>
+          <Main>
+            <Container>
+              {/* Begin secondary nav Component: */}
+              <div className={RowStyles.row}>
+                <div className="col-sm-12 panel-row">
+                  <SecondaryNavigation
+                    pageType="patientExperience"
+                    pageTitle="Patient Experience Package"
+                  />
+                </div>
+              </div>
+              {/* End secondary nav Component */}
+
+              {/* Begin mobile secondary navigation component */}
+              <MobileSecondaryNav
+                parentPage="patientExperience"
+                titleItem="Patient Experience Package"
               />
-            </BackgroundImage>
-            <Main>
-              <Container>
-                {/* Begin secondary nav Component: */}
-                <div className={RowStyles.row}>
-                  <div className="col-sm-12 panel-row">
-                    <SecondaryNavigation
-                      pageType="pxExperience"
-                      pageTitle="Patient Experience Package"
-                    />
-                  </div>
-                </div>
-                {/* End secondary nav Component */}
-  
-                {/* Begin mobile secondary navigation component */}
-                <MobileSecondaryNav
-                  parentPage="pxExperience"
-                  titleItem="Patient Experience Package"
-                />
-                {/* End mobile secondary navigation component */}
-  
-                {/* First Text/Image Row */}
-                <div
-                  className={
-                    RowStyles.row +
-                    " " +
-                    RowStyles.padded +
-                    " " +
-                    RowStyles.shortTop +
-                    " " +
-                    RowStyles.shortBottom
-                  }
-                >
-                  <div className="order-md-1 col-md-1" />
-                  <div className="order-sm-2 order-md-3 col-sm-9 col-md-6">
-                    <div className="content-block">
-                      <InnerTitle
-                        title="Solutions Have Never Been Easier"
-                        inContentBlock
-                      />
-                      <div
-                        className={
-                          PageStyles.accentedParagraph + " accented-paragraph"
-                        }
-                      >
-                        <p
-                          className="s-thin"
-                          dangerouslySetInnerHTML={{
-                            __html:
-                              "The Doctor Genius PX, Patient Experience Package integrates seamlessly with our digital marketing solutions that leverage content, our mobile-first web design, SEO, online directories, and social media to drive new patients to your practice. Learn more about our marketing solutions.",
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={
-                      "order-sm-1 order-md-2 col-sm-12 col-md-4 " +
-                      RowStyles.colMd5
-                    }
-                  >
-                    <img
-                      className={PageStyles.imgResponsive}
-                      src={images.image_one.childImageSharp.fluid.src}
-                      alt="Solutions have never been easier"
-                    />
-                  </div>
-                  <div className="order-sm-12 col-md-1" />
-                </div>
-                {/* End First Text/Image Row */}
-  
-                {/* First List Item Row */}
-                <div
-                  className={
-                    PageStyles.listRow +
-                    " " +
-                    RowStyles.row +
-                    " " +
-                    RowStyles.padded +
-                    " " +
-                    RowStyles.shortTop +
-                    " " +
-                    RowStyles.shortBottom
-                  }
-                >
-                  <div
-                    className={
-                      RowStyles.row +
-                      " " +
-                      RowStyles.padded +
-                      " " +
-                      PageStyles.panelRow
-                    }
-                  >
-                    <div className="col-sm-12">
-                      <InnerTitle
-                        title="Product Benefits"
-                        underlined
-                        centered
-                        subtitle="Stay connected when it matters the most."
-                      />
-                    </div>
-                  </div>
-                  <div className="order-sm-1 order-md-3 col-sm-12">
-                    <div className="row">
-                      <div className="col-sm-12 col-md-6">
-                        <ul
-                          className={
-                            PageStyles.noDot + " " + PageStyles.productBenefitsUl
-                          }
-                        >
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            Convenient and Safe
-                          </li>
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            Saves Time and Money
-                          </li>
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            Staff and Patient Safety
-                          </li>
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            Triage Emergency Patients
-                          </li>
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            Forms Builder
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="col-sm-12 col-md-6">
-                        <ul className={PageStyles.noDot}>
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            Patient Experience
-                          </li>
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            PMS Integration
-                          </li>
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            Treatment Plans
-                          </li>
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            Practice Efficiencies
-                          </li>
-                          <li>
-                            <img
-                              src={starsIcon}
-                              className={PageStyles.linkIcon}
-                              alt="Digital Marketing Solutions"
-                            />
-                            HIPAA Compliant
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="order-sm-12 col-md-1" />
-                </div>
-                {/* End List Item Row */}
-  
-                {/* Large Icon Row */}
-                <div
-                  className={
-                    RowStyles.row +
-                    " " +
-                    RowStyles.padded +
-                    " " +
-                    PageStyles.panelRow +
-                    " " +
-                    PageStyles.largeIconRow
-                  }
-                >
-                  <div className="col-sm-10">
+              {/* End mobile secondary navigation component */}
+
+              {/* First Text/Image Row */}
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="order-md-1 col-md-1" />
+                <div className="order-sm-2 order-md-3 col-sm-9 col-md-6">
+                  <div className="content-block">
                     <InnerTitle
-                      title="Product Outcomes"
+                      title="Solutions Have Never Been Easier"
+                      inContentBlock
+                    />
+                    <div
+                      className={
+                        PageStyles.accentedParagraph + " accented-paragraph"
+                      }
+                    >
+                      <p
+                        className="s-thin"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            "The Doctor Genius PX, Patient Experience Package integrates seamlessly with our digital marketing solutions that leverage content, our mobile-first web design, SEO, online directories, and social media to drive new patients to your practice. Learn more about our marketing solutions.",
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className={
+                    "order-sm-1 order-md-2 col-sm-12 col-md-4 " +
+                    RowStyles.colMd5
+                  }
+                >
+                  <img
+                    className={PageStyles.imgResponsive}
+                    src={images.image_one.childImageSharp.fluid.src}
+                    alt="Solutions have never been easier"
+                  />
+                </div>
+                <div className="order-sm-12 col-md-1" />
+              </div>
+              {/* End First Text/Image Row */}
+
+              {/* First List Item Row */}
+              <div
+                className={
+                  PageStyles.listRow +
+                  " " +
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div
+                  className={
+                    RowStyles.row +
+                    " " +
+                    RowStyles.padded +
+                    " " +
+                    PageStyles.panelRow
+                  }
+                >
+                  <div className="col-sm-12">
+                    <InnerTitle
+                      title="Product Benefits"
                       underlined
                       centered
-                      subtitle="Informed patient treatment through technology"
+                      subtitle="Stay connected when it matters the most."
                     />
                   </div>
-                  <div className="col-sm-6 col-md-3">
-                    <div className={PageStyles.panel}>
-                      <div className={PageStyles.iconWrapper}>
-                        <Img
-                          fixed={images.stayConnected.childImageSharp.fixed}
-                          className={PageStyles.imgIcon}
-                          alt="Stay Connected To Your Patients"
-                        />
-                      </div>
-                      <p className={PageStyles.panelHeading}>
-                        Stay Connected To Your Patients
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-3">
-                    <div className={PageStyles.panel}>
-                      <div className={PageStyles.iconWrapper}>
-                        <Img
-                          fixed={images.drivePatient.childImageSharp.fixed}
-                          className={PageStyles.imgIcon}
-                          alt="Drive Patient Experience and Loyalty"
-                        />
-                      </div>
-                      <p className={PageStyles.panelHeading}>
-                        Drive Patient Experience and Loyalty
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-3">
-                    <div className={PageStyles.panel}>
-                      <div className={PageStyles.iconWrapper}>
-                        <Img
-                          fixed={images.workplaceSafe.childImageSharp.fixed}
-                          className={PageStyles.imgIcon}
-                          alt="Keep Your Workplace Safe and Healthy"
-                        />
-                      </div>
-                      <p className={PageStyles.panelHeading}>
-                        Keep Your Workplace Safe and Healthy
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-3">
-                    <div className={PageStyles.panel}>
-                      <div className={PageStyles.iconWrapper}>
-                        <Img
-                          fixed={
-                            images.streamlineOperations.childImageSharp.fixed
-                          }
-                          className={PageStyles.imgIcon}
-                          alt="Streamline Front Office Operations"
-                        />
-                      </div>
-                      <p className={PageStyles.panelHeading}>
-                        Streamline Front Office Operations
-                      </p>
-                    </div>
-                  </div>
                 </div>
-                {/* End Large Icon Row */}
-  
-                {/* Additional Text/Image Row */}
-                <div
-                  className={
-                    PageStyles.paperlessForms +
-                    " odd-row " +
-                    RowStyles.row +
-                    " " +
-                    RowStyles.padded +
-                    " " +
-                    RowStyles.shortTop +
-                    " " +
-                    RowStyles.shortBottom
-                  }
-                >
-                  <div className="order-md-1 col-md-1" />
-                  <div className="order-sm-2 order-md-3 col-sm-9 col-md-5">
-                    <div className="content-block">
-                      <InnerTitle title="Paperless Forms" inContentBlock />
-                      <div
+                <div className="order-sm-1 order-md-3 col-sm-12">
+                  <div className="row">
+                    <div className="col-sm-12 col-md-6">
+                      <ul
                         className={
-                          PageStyles.accentedParagraph + " accented-paragraph"
+                          PageStyles.noDot + " " + PageStyles.productBenefitsUl
                         }
                       >
-                        <p
-                          className=""
-                          dangerouslySetInnerHTML={{
-                            __html:
-                              "Doctor Genius is here to help you navigate the changing landscape of practice management and patient care with our PX, Patient Experience software package. This package includes everything you need to see stay connected to your patients anytime, anywhere.",
-                          }}
-                        />
-                      </div>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            Convenient and Safe
+                          </li>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            Saves Time and Money
+                          </li>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            Staff and Patient Safety
+                          </li>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            Triage Emergency Patients
+                          </li>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            Forms Builder
+                          </li>
+                      </ul>
+                    </div>
+                    <div className="col-sm-12 col-md-6">
+                      <ul className={PageStyles.noDot}>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            Patient Experience
+                          </li>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            PMS Integration
+                          </li>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            Treatment Plans
+                          </li>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            Practice Efficiencies
+                          </li>
+                        <li>
+                          <img
+                            src={starsIcon}
+                            className={PageStyles.linkIcon}
+                            alt="Digital Marketing Solutions"
+                          />
+                            HIPAA Compliant
+                          </li>
+                      </ul>
                     </div>
                   </div>
-                  <div
-                    className={
-                      "order-sm-1 order-md-2 col-sm-12 col-md-5 " +
-                      RowStyles.colMd5
-                    }
-                  >
-                    <img
-                      className={PageStyles.imgResponsive}
-                      src={images.image_two.childImageSharp.fluid.src}
-                      alt="Solutions have never been easier"
-                    />
-                  </div>
-                  <div className="order-sm-12 col-md-1" />
                 </div>
-  
-                {/* End Additional Text/Image Row */}
-  
-                {/* Additional Text/Image Row */}
+                <div className="order-sm-12 col-md-1" />
+              </div>
+              {/* End List Item Row */}
+
+              {/* Large Icon Row */}
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  PageStyles.panelRow +
+                  " " +
+                  PageStyles.largeIconRow
+                }
+              >
+                <div className="col-sm-10">
+                  <InnerTitle
+                    title="Product Outcomes"
+                    underlined
+                    centered
+                    subtitle="Informed patient treatment through technology"
+                  />
+                </div>
+                <div className="col-sm-6 col-md-3">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
+                      <Img
+                        fixed={images.stayConnected.childImageSharp.fixed}
+                        className={PageStyles.imgIcon}
+                        alt="Stay Connected To Your Patients"
+                      />
+                    </div>
+                    <p className={PageStyles.panelHeading}>
+                      Stay Connected To Your Patients
+                      </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-3">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
+                      <Img
+                        fixed={images.drivePatient.childImageSharp.fixed}
+                        className={PageStyles.imgIcon}
+                        alt="Drive Patient Experience and Loyalty"
+                      />
+                    </div>
+                    <p className={PageStyles.panelHeading}>
+                      Drive Patient Experience and Loyalty
+                      </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-3">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
+                      <Img
+                        fixed={images.workplaceSafe.childImageSharp.fixed}
+                        className={PageStyles.imgIcon}
+                        alt="Keep Your Workplace Safe and Healthy"
+                      />
+                    </div>
+                    <p className={PageStyles.panelHeading}>
+                      Keep Your Workplace Safe and Healthy
+                      </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-3">
+                  <div className={PageStyles.panel}>
+                    <div className={PageStyles.iconWrapper}>
+                      <Img
+                        fixed={
+                          images.streamlineOperations.childImageSharp.fixed
+                        }
+                        className={PageStyles.imgIcon}
+                        alt="Streamline Front Office Operations"
+                      />
+                    </div>
+                    <p className={PageStyles.panelHeading}>
+                      Streamline Front Office Operations
+                      </p>
+                  </div>
+                </div>
+              </div>
+              {/* End Large Icon Row */}
+
+              {/* Additional Text/Image Row */}
+              <div
+                className={
+                  PageStyles.paperlessForms +
+                  " odd-row " +
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="order-md-1 col-md-1" />
+                <div className="order-sm-2 order-md-3 col-sm-9 col-md-5">
+                  <div className="content-block">
+                    <InnerTitle title="Paperless Forms" inContentBlock />
+                    <div
+                      className={
+                        PageStyles.accentedParagraph + " accented-paragraph"
+                      }
+                    >
+                      <p
+                        className=""
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            "Doctor Genius is here to help you navigate the changing landscape of practice management and patient care with our PX, Patient Experience software package. This package includes everything you need to see stay connected to your patients anytime, anywhere.",
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
                 <div
                   className={
-                    RowStyles.row +
-                    " " +
-                    RowStyles.padded +
-                    " " +
-                    RowStyles.shortTop +
-                    " " +
-                    RowStyles.shortBottom
+                    "order-sm-1 order-md-2 col-sm-12 col-md-5 " +
+                    RowStyles.colMd5
                   }
                 >
-                  <div className="order-md-1 col-md-1" />
-                  <div className="order-sm-2 order-md-2 col-sm-9 col-md-5 col-lg-6">
-                    <div className="content-block">
-                      <InnerTitle title="Teledentistry" inContentBlock />
-                      <div
-                        className={
-                          PageStyles.accentedParagraph + " accented-paragraph"
-                        }
-                      >
-                        <p
-                          className="s-thin"
-                          dangerouslySetInnerHTML={{
-                            __html:
-                              "Reduce unnecessary emergency appointments and by using a Teledentistry Emergency Triage Form. This form can be easily accessed from your website, texted, or emailed to allow patients to securely send photos and videos of their dental emergency.",
-                          }}
-                        />
-                      </div>
+                  <img
+                    className={PageStyles.imgResponsive}
+                    src={images.image_two.childImageSharp.fluid.src}
+                    alt="Solutions have never been easier"
+                  />
+                </div>
+                <div className="order-sm-12 col-md-1" />
+              </div>
+
+              {/* End Additional Text/Image Row */}
+
+              {/* Additional Text/Image Row */}
+              <div
+                className={
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="order-md-1 col-md-1" />
+                <div className="order-sm-2 order-md-2 col-sm-9 col-md-5 col-lg-6">
+                  <div className="content-block">
+                    <InnerTitle title="Teledentistry" inContentBlock />
+                    <div
+                      className={
+                        PageStyles.accentedParagraph + " accented-paragraph"
+                      }
+                    >
+                      <p
+                        className="s-thin"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            "Reduce unnecessary emergency appointments and by using a Teledentistry Emergency Triage Form. This form can be easily accessed from your website, texted, or emailed to allow patients to securely send photos and videos of their dental emergency.",
+                        }}
+                      />
                     </div>
                   </div>
-                  <div
-                    className={
-                      "order-sm-1 order-md-3 col-sm-12 col-md-5 " +
-                      RowStyles.colMd5
-                    }
-                  >
-                    <img
-                      className={PageStyles.imgResponsive}
-                      src={images.image_three.childImageSharp.fluid.src}
-                      alt="Solutions have never been easier"
-                    />
-                  </div>
-                  <div className="order-sm-12 col-md-1" />
                 </div>
-  
-                {/* End Additional Text/Image Row */}
-  
-                {/* Additional Text/Image Row */}
                 <div
                   className={
-                    PageStyles.practiceEfficienies +
-                    " odd-row " +
-                    RowStyles.row +
-                    " " +
-                    RowStyles.padded +
-                    " " +
-                    RowStyles.shortTop +
-                    " " +
-                    RowStyles.shortBottom
+                    "order-sm-1 order-md-3 col-sm-12 col-md-5 " +
+                    RowStyles.colMd5
                   }
                 >
-                  <div className="order-md-1 col-md-1" />
-                  <div className="order-sm-2 order-md-3 col-sm-9 col-md-5">
-                    <div className="content-block">
-                      <InnerTitle title="Practice Efficiencies" inContentBlock />
-                      <div
-                        className={
-                          PageStyles.accentedParagraph + " accented-paragraph"
-                        }
-                      >
-                        <p
-                          className=""
-                          dangerouslySetInnerHTML={{
-                            __html:
-                              "Every piece of paper that exists in your practice requires printing, handling, sorting, filling out, verification, scanning, filing, and shredding. Imagine eliminating all of that busy work with a click.",
-                          }}
-                        />
-                      </div>
+                  <img
+                    className={PageStyles.imgResponsive}
+                    src={images.image_three.childImageSharp.fluid.src}
+                    alt="Solutions have never been easier"
+                  />
+                </div>
+                <div className="order-sm-12 col-md-1" />
+              </div>
+
+              {/* End Additional Text/Image Row */}
+
+              {/* Additional Text/Image Row */}
+              <div
+                className={
+                  PageStyles.practiceEfficienies +
+                  " odd-row " +
+                  RowStyles.row +
+                  " " +
+                  RowStyles.padded +
+                  " " +
+                  RowStyles.shortTop +
+                  " " +
+                  RowStyles.shortBottom
+                }
+              >
+                <div className="order-md-1 col-md-1" />
+                <div className="order-sm-2 order-md-3 col-sm-9 col-md-5">
+                  <div className="content-block">
+                    <InnerTitle title="Practice Efficiencies" inContentBlock />
+                    <div
+                      className={
+                        PageStyles.accentedParagraph + " accented-paragraph"
+                      }
+                    >
+                      <p
+                        className=""
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            "Every piece of paper that exists in your practice requires printing, handling, sorting, filling out, verification, scanning, filing, and shredding. Imagine eliminating all of that busy work with a click.",
+                        }}
+                      />
                     </div>
                   </div>
-                  <div
-                    className={
-                      "order-sm-1 order-md-2 col-sm-12 col-md-5 " +
-                      RowStyles.colMd5
-                    }
-                  >
-                    <img
-                      className={PageStyles.imgResponsive}
-                      src={images.image_four.childImageSharp.fluid.src}
-                      alt="Solutions have never been easier"
-                    />
-                  </div>
-                  <div className="order-sm-12 col-md-1" />
                 </div>
-  
-                {/* End Additional Text/Image Row */}
-              </Container>
-            </Main>
-          </div>
-        </DefaultPageLayout>
-      </div>
-    )
-  }
-  
-  export default PxPage
-  
-  export const ImageQuery = graphql`
+                <div
+                  className={
+                    "order-sm-1 order-md-2 col-sm-12 col-md-5 " +
+                    RowStyles.colMd5
+                  }
+                >
+                  <img
+                    className={PageStyles.imgResponsive}
+                    src={images.image_four.childImageSharp.fluid.src}
+                    alt="Solutions have never been easier"
+                  />
+                </div>
+                <div className="order-sm-12 col-md-1" />
+              </div>
+
+              {/* End Additional Text/Image Row */}
+            </Container>
+          </Main>
+        </div>
+      </DefaultPageLayout>
+    </div>
+  )
+}
+
+export default PxPage
+
+export const ImageQuery = graphql`
     query PXImages {
       image_one: file(relativePath: { eq: "px-package-phone.png" }) {
         childImageSharp {
@@ -560,4 +560,3 @@ const PxPage = data => {
       }
     }
   `
-  

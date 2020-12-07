@@ -7,12 +7,12 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import SecondaryNavigation from "../components/SecondaryNavigation"
-import InnerTitle from "../components/inner-title.js"
 import HeroPx from "../components/HeroPx"
 
 import "../styles/marketing-solutions-inner.scss"
 import PageStyles from "./patient-experience-inner.module.scss"
 import RowStyles from "../components/Row.module.scss"
+import PxSubFooter from '../components/pxSubfooter'
 
 import checkmarkSmall from '../img/icon/checkmark-sm.svg'
 
@@ -59,7 +59,7 @@ export default props => {
               <div className={RowStyles.row}>
                 <div className="col-sm-12 panel-row">
                   <SecondaryNavigation
-                    pageType="pxExperience"
+                    pageType="patientExperience"
                     pageTitle={props.pageTitle}
                   />
                 </div>
@@ -68,7 +68,7 @@ export default props => {
 
               {/* Begin mobile secondary navigation component */}
               <MobileSecondaryNav
-                parentPage="pxExperience"
+                parentPage="patientExperience"
                 titleItem={pageTitle}
               />
               {/* End mobile secondary navigation component */}
@@ -83,9 +83,9 @@ export default props => {
                       " " +
                       RowStyles.padded +
                       " " +
-                      RowStyles.shortTop +
+                      RowStyles.tallTop +
                       " " +
-                      RowStyles.shortBottom
+                      RowStyles.tallBottom
                     }
                   >
                     <div
@@ -137,21 +137,54 @@ export default props => {
                       />
                     </div>
                   </div>
+                  /* End Split Row of content and image */
                   :
-                  <div className={
-                    PageStyles.iconRow + " " +
-                    RowStyles.row +
-                    " " +
-                    RowStyles.padded +
-                    " " +
-                    RowStyles.shortTop +
-                    " " +
-                    RowStyles.shortBottom
-                  }
-                  ></div>
+                  // Start Large Icon Row
+                  <div className={PageStyles.iconContentRow}>
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        RowStyles.padded +
+                        " " +
+                        RowStyles.tallTop
+                      }
+                    >
+                      <div className={PageStyles.iconContentTitles + " col-sm-10 col-md-7"}>
+                        <h3>{row.content.title}</h3>
+                        <h2>{row.content.innerTitle}</h2>
+                      </div>
+                    </div>
+                    <div
+                      className={
+                        RowStyles.row +
+                        " " +
+                        RowStyles.tallBottom
+                      }
+                    >
+                      {row.content.panels.map((panel) => (
+                        <div className="col-sm-6 col-md-3">
+                          <div className={PageStyles.panel}>
+                            <div className={PageStyles.iconWrapper}>
+                              <img
+                                className={PageStyles.imgResponsive}
+                                src={panel.icon}
+                                alt={panel.alt}
+                              />
+                            </div>
+                            <p className={PageStyles.panelCaption}>
+                              {panel.caption}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
 
               ))}
-              {/* End Split Row of content and image */}
+              {/* // End Large Icon Row */}
+              <PxSubFooter />
             </Container>
           </Main>
         </div>

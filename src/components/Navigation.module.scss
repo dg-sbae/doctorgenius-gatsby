@@ -227,6 +227,17 @@ nav {
       .dropdownContentBlock {
         margin-left: 18px;
       }
+      .newTag {
+        color: #285c94;
+        background: $recommended-green;
+        border-radius: 25px;
+        padding: 3px 13px 3px 10px;
+        font-size: 13px;
+        font-weight: $font-weight-bold;
+      }
+      .newTag:hover {
+        color: white;
+      }
     }
     .dropdownMenu.show {
       visibility: visible;
