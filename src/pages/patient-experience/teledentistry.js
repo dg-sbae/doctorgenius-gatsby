@@ -102,9 +102,9 @@ export default Teledentistry
 
 export const ImageQuery = graphql`
   query TeledentistryImages {
-    backgroundImage: file(relativePath: { eq: "content-marketing.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "teledentistry-head.jpg" }) {
       childImageSharp {
-        fluid(quality: 70) {
+        fluid(quality: 90) {
           ...GatsbyImageSharpFluid
         }
       }
