@@ -5,10 +5,17 @@ import RowStyles from "./Row.module.scss"
 
 import pxLogo from "../img/dg-px-logo.svg"
 
-const PxSubfooter = () => {
+const PxSubfooter = data => {
+  const images = data.data
+  let fullBleedBackgroundImage = null;
+
+  const fullBleedBgStyle = {
+    background: "url(" + fullBleedBackgroundImage + ") no-repeat",
+    backgroundPosition: "40%",
+  }
   {
     return (
-      <div className={PxFooterStyles.pxSubfooterStyles}>
+      <div className={PxFooterStyles.pxSubfooterStyles} style={fullBleedBgStyle}>
         <div
           className={
             RowStyles.row +
@@ -51,3 +58,15 @@ const PxSubfooter = () => {
 }
 
 export default PxSubfooter
+
+export const pxFooterQuery = graphql`
+  query PxFooterImages  {
+    backgroundImage: file(relativePath: { eq: "marketing-review-daniel-savarino.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
