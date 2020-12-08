@@ -106,7 +106,7 @@ export default PaperlessForms
 
 export const ImageQuery = graphql`
   query PaperlessFormsImages {
-    backgroundImage: file(relativePath: { eq: "content-marketing.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "paperless-forms-head.jpg" }) {
       childImageSharp {
         fluid(quality: 70) {
           ...GatsbyImageSharpFluid

@@ -106,7 +106,7 @@ export default PatientReminder
 
 export const ImageQuery = graphql`
   query PatientReminderImages {
-    backgroundImage: file(relativePath: { eq: "content-marketing.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "patient-reminder-head.jpg" }) {
       childImageSharp {
         fluid(quality: 70) {
           ...GatsbyImageSharpFluid
