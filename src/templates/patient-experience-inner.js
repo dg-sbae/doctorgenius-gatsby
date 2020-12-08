@@ -172,6 +172,9 @@ export default props => {
                                 alt={panel.alt}
                               />
                             </div>
+                            <p className={PageStyles.panelTitle}>
+                              {panel.title}
+                            </p>
                             <p className={PageStyles.panelCaption}>
                               {panel.caption}
                             </p>
