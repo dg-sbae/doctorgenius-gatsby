@@ -15,6 +15,7 @@ const PatientReminder = data => {
       metaTitle="Patient Reminders | Healthcare Marketing Agency"
       metaDescription="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."
       backgroundImage={images.backgroundImage.childImageSharp.fluid}
+      subfooterBgImage={images.subfooterBgImage.childImageSharp.fluid}
       contentRows={[
         {
           content: {
@@ -107,6 +108,13 @@ export default PatientReminder
 export const ImageQuery = graphql`
   query PatientReminderImages {
     backgroundImage: file(relativePath: { eq: "patient-reminder-head.jpg" }) {
+      childImageSharp {
+        fluid(quality: 70) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    subfooterBgImage: file(relativePath: { eq: "pxSubfooterBg.png" }) {
       childImageSharp {
         fluid(quality: 70) {
           ...GatsbyImageSharpFluid

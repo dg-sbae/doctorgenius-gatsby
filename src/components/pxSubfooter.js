@@ -5,17 +5,10 @@ import RowStyles from "./Row.module.scss"
 
 import pxLogo from "../img/dg-px-logo.svg"
 
-const PxSubfooter = data => {
-  const images = data.data
-  let fullBleedBackgroundImage = null;
-
-  const fullBleedBgStyle = {
-    background: "url(" + fullBleedBackgroundImage + ") no-repeat",
-    backgroundPosition: "40%",
-  }
+const PxSubfooter = () => {
   {
     return (
-      <div className={PxFooterStyles.pxSubfooterStyles} style={fullBleedBgStyle}>
+      <div className={PxFooterStyles.pxSubfooterStyles}>
         <div
           className={
             RowStyles.row +
@@ -23,7 +16,7 @@ const PxSubfooter = data => {
             RowStyles.tallTop
           }
         >
-          <div className="col-sm-10 col-md-10 col-lg-8">
+          <div className="col-sm-10 col-md-10 col-lg-5">
             <div className={PxFooterStyles.contentBlock}>
               <h1>
                 Transform your patient experience with Doctor Genius
@@ -58,15 +51,3 @@ const PxSubfooter = data => {
 }
 
 export default PxSubfooter
-
-export const pxFooterQuery = graphql`
-  query PxFooterImages  {
-    backgroundImage: file(relativePath: { eq: "marketing-review-daniel-savarino.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`

@@ -28,7 +28,7 @@
   }
   h2 {
     color: black;
-    font-size: 51px;
+    font-size: 47px;
     font-weight: $font-weight-light;
     @include media("<=laptop") {
       font-size: 41px;
@@ -67,19 +67,21 @@
 .hero.patientExperienceInner {
   .heroContent {
     @include media(">=tablet") {
-      width: 550px;
+      width: 650px;
       height: 330px;
       p {
         width: 90%;
       }
     }
     @include media("<=laptop") {
+      width: 515px;
       height: auto;
       h2 {
         margin-bottom: 15px;
       }
     }
     @include media("<=tablet") {
+      width: auto;
       height: auto;
       h2 {
         margin-bottom: 10px;

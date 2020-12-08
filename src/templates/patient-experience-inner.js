@@ -25,6 +25,7 @@ export default props => {
   const metaDescription = props.metaDescription
   const contentRows = props.contentRows
   const heroBackgroundImage = props.backgroundImage
+  const subfooterBgImage = props.subfooterBgImage
 
   const heroConfig = {
     pageType: "patientExperienceInner",
@@ -187,7 +188,15 @@ export default props => {
 
               ))}
               {/* // End Large Icon Row */}
-              <PxSubFooter />
+              <div className="full-bleed-wrapper">
+                <div className="full-bleed">
+                  <BackgroundImage fluid={subfooterBgImage}>
+                    <div className={RowStyles.Row}>
+                      <PxSubFooter />
+                    </div>
+                  </BackgroundImage>
+                </div>
+              </div>
             </Container>
           </Main>
         </div>
