@@ -126,11 +126,11 @@ const MarketingSolutionsSideNavListLink = props => (
           Hosting Solutions
         </ListLink>
         <ListLink
-          to="/marketing-solutions/px-package"
+          to="/patient-experience"
           activeClassName="active"
           partiallyActive={true}
         >
-          PX Package
+          Patient Experience (Px)
         </ListLink>
       </ul>
     </div>

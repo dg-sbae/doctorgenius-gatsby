@@ -21,8 +21,7 @@ const heroConfig = {
   ],
 }
 
-const PrivacyPolicy = data => {
-  console.log(data)
+const WebsiteDevelopmentTerms = data => {
   return (
     <div
       className={
@@ -290,7 +289,7 @@ const PrivacyPolicy = data => {
   )
 }
 
-export default PrivacyPolicy
+export default WebsiteDevelopmentTerms
 
 export const ImageQuery = graphql`
   query WebDevImages {
