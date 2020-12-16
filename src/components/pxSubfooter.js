@@ -16,7 +16,7 @@ const PxSubfooter = () => {
             RowStyles.tallTop
           }
         >
-          <div className="col-sm-10 col-md-10 col-lg-8">
+          <div className="col-sm-10 col-md-10 col-lg-5">
             <div className={PxFooterStyles.contentBlock}>
               <h1>
                 Transform your patient experience with Doctor Genius

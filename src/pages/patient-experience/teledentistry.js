@@ -15,6 +15,7 @@ const Teledentistry = data => {
       metaTitle="Teledentistry | Healthcare Marketing Agency"
       metaDescription="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."
       backgroundImage={images.backgroundImage.childImageSharp.fluid}
+      subfooterBgImage={images.subfooterBgImage.childImageSharp.fluid}
       contentRows={[
         {
           content: {
@@ -102,7 +103,14 @@ export default Teledentistry
 
 export const ImageQuery = graphql`
   query TeledentistryImages {
-    backgroundImage: file(relativePath: { eq: "content-marketing.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "teledentistry-head.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    subfooterBgImage: file(relativePath: { eq: "pxSubfooterBg.png" }) {
       childImageSharp {
         fluid(quality: 70) {
           ...GatsbyImageSharpFluid
