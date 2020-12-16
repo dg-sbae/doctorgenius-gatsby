@@ -16,7 +16,7 @@ const mobileSubNavLinks = {
     { title: "Online Reputation", slug: "online-reputation-management" },
     { title: "Our Technology", slug: "our-technology" },
     { title: "Hosting Solutions", slug: "hosting-solutions" },
-    { title: "Patient Experience Package", slug: "px-package" },
+    { title: "Patient Experience Package", slug: "patient-experience" },
   ],
   ourClients: [
     { title: "Dental Practices", slug: "dental-practices" },
@@ -25,6 +25,13 @@ const mobileSubNavLinks = {
     { title: "Cosmetic Surgeons", slug: "cosmetic-surgeons" },
     { title: "Healthcare Marketing", slug: "healthcare-marketing" },
   ],
+  patientExperience: [
+    { title: "Overview", slug: "patient-experience" },
+    { title: "Teledentistry", slug: "teledentistry" },
+    { title: "Paperless Forms", slug: "paperless-forms" },
+    { title: "Patient Reminder", slug: "patient-reminder" },
+    { title: "Plans", slug: "plans" },
+  ]
 }
 
 const ListLink = props => (
@@ -49,8 +56,18 @@ export default class MobileSecondaryNav extends React.Component {
     this.state = {
       open: false,
     }
-    this.parentPage =
-      props.parentPage === "ourClients" ? "our-clients" : "marketing-solutions"
+
+    /*this.parentPage =
+      props.parentPage === "ourClients" ? "our-clients" : "marketingSolutions" ? "marketing-solutions" : "patientExperience" ? "patient-experience" : ""
+    */
+    this.parentPage = null;
+    if (props.parentPage === "ourClients") {
+      this.parentPage = "our-clients";
+    } else if (props.parentPage === "marketingSolutions") {
+      this.parentPage = "marketing-solutions";
+    } else {
+      this.parentPage = "patient-experience";
+    }
   }
 
   onScrollListener = () => {
