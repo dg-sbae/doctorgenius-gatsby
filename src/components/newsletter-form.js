@@ -63,10 +63,10 @@ class NewsLetterSignUpForm extends React.Component {
     // entries and encoding them as URI components
     Object.keys(Object.fromEntries(data)).forEach(
       e =>
-        //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
-        (stringData += `${e}=${encodeURIComponent(
-          Object.fromEntries(data)[e]
-        )}&`)
+      //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
+      (stringData += `${e}=${encodeURIComponent(
+        Object.fromEntries(data)[e]
+      )}&`)
     )
 
     // Remove the trailing '&' since there's no additional parameter
@@ -83,14 +83,14 @@ class NewsLetterSignUpForm extends React.Component {
     //Email:   [EmailAddress]
 
     // Generate a request to the email server
-    fetch("https://nodetest.dgplex.com/newsletter-signup", {
+    fetch("https://nodetest-dev.dgplex.com/newsletter-signup", {
       method: "POST",
       body: stringData,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     }).then(response => {
-      console.log("NodeTest response:", response)
+      console.log("nodetest-dev response:", response)
       response.json().then(body => {
         this.setState({
           email: body.email,
