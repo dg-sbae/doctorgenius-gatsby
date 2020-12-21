@@ -67,7 +67,7 @@ class DemoForm extends React.Component {
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
     data.append("Description", "Form: Request Demo")
-    data.append("LeadSource", "(New) Main Website Organic")
+    data.append("LeadSource", "Main Website Organic")
 
     //stringData holds the stringified, encoded form data
     let stringData = ""
