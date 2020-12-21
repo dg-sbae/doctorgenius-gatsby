@@ -45,6 +45,16 @@ The application is now viewable at [http://localhost:8000/](http://localhost:800
 
     The application is deployed directly to doctorgenius.com via SFTP.
 
+    DEV builds should update all the contact form destination endpoints to: 
+        nodetest-dev.dgplex.com
+        (possibly) also doctorgenius-wordpress.dgplex.com -> doctorgenius-wordpress.dgpd3v.com
+
+    LIVE builds use
+        nodetest.dgplex.com
+        doctorgenius-wordpress.dgplex.com
+
+        ** Inline images for blogs must currently be grabbed by hand from the remote uploads folder
+
 ---
 
 ## Questions / Issue Reporting
