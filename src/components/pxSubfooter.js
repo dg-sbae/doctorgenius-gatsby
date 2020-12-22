@@ -4,7 +4,6 @@ import PxFooterStyles from "./pxSubfooter.module.scss"
 import RowStyles from "./Row.module.scss"
 import Modal from "../components/PxModal"
 
-
 import pxLogo from "../img/dg-px-logo.svg"
 
 class PxSubfooter extends Component {

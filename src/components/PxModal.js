@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import css from "./pxModal.module.scss"
+import PxForm from '../components/px-form'
 
 const Modal = ({ btnID }) => {
   useEffect(() => {
@@ -23,10 +24,10 @@ const Modal = ({ btnID }) => {
       <div className={css.modalContent}>
         <div class={css.modalHeader}>
           <span className={css.close}>&times;</span>
-          <h2>Subscribe Now</h2>
+          <h2>Header if exists</h2>
         </div>
         <div class={css.modalBody}>
-          <p>Sign up with your email for news and updates.</p>
+          <PxForm />
         </div>
         <div class={css.modalFooter}>
           <h3>Modal Footer</h3>
