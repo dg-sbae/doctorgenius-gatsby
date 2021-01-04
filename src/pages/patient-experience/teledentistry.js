@@ -10,7 +10,7 @@ const Teledentistry = data => {
     <PxExperienceTemplate
       page="teledentistry" /* this should be dynamic from the page props */
       pageTitle="Teledentistry"
-      pageSubtitle="Patient First Technlogy"
+      pageSubtitle="Patient First Technology"
       pageIntro="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."
       metaTitle="Teledentistry | Healthcare Marketing Agency"
       metaDescription="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."

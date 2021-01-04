@@ -1,12 +1,21 @@
 import React, { useEffect } from "react"
-import css from "./pxModal.module.scss"
+import { graphql } from "gatsby"
+
 import PxForm from '../components/px-form'
 
-const Modal = ({ btnID }) => {
+import ModalStyles from "./pxModal.module.scss"
+import RowStyles from "../components/Row.module.scss"
+
+import pxLogo from '../img/dg-px-logo.svg'
+import CFImage from '../img/Contact-Form-02.jpg'
+
+const Modal = ({ btnID }, data) => {
+  const images = data.data
+  console.log(images)
   useEffect(() => {
     var modal = document.getElementById("subscribeModal")
     var btn = document.getElementById(btnID)
-    var span = document.getElementsByClassName(`${css.close}`)[0]
+    var span = document.getElementsByClassName(`${ModalStyles.close}`)[0]
     btn.onclick = function () {
       modal.style.display = "block"
     }
@@ -20,20 +29,44 @@ const Modal = ({ btnID }) => {
     }
   })
   return (
-    <div id="subscribeModal" className={css.modal}>
-      <div className={css.modalContent}>
-        <div class={css.modalHeader}>
-          <span className={css.close}>&times;</span>
-          <h2>Header if exists</h2>
+    <div id="subscribeModal" className={ModalStyles.modal + " " + RowStyles.rowStyling}>
+      <div className={ModalStyles.modalContent}>
+        <div className={ModalStyles.modalForm + " " + RowStyles.row}>
+          <div className="col-sm-6">
+            <span className={ModalStyles.close}>&times;</span>
+            <div className={RowStyles.rowStyling}>
+              <div className="col-sm-12">
+                <img src={pxLogo} className={ModalStyles.pxLogo} alt="Doctor Genius PX" />
+                <p className={ModalStyles.modalCaption}>Complete the form below to learn more about improving your patient's experience</p>
+                <PxForm />
+                <p className={ModalStyles.privacyStatement}>
+                  By registering I confirm that I have read and agree to the <br /><a href="/privacy-policy/" target="_blank">Privacy Statement</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <img className={ModalStyles.modalImage} src={CFImage} alt="Patient Experience Package" />
+          </div>
+
         </div>
-        <div class={css.modalBody}>
-          <PxForm />
-        </div>
-        <div class={css.modalFooter}>
-          <h3>Modal Footer</h3>
-        </div>
+
       </div>
     </div>
   )
 }
+
 export default Modal
+
+export const PxFormImageQuerys = graphql`
+  query ModalImages {
+    CFImage: file(relativePath: { eq: "Contact-Form-2.jpg" }) {
+      childImageSharp {
+        fluid(quality: 70) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

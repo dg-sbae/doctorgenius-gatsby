@@ -1,6 +1,5 @@
 import React from "react"
 
-import thinArrowRight from "../img/right-arrow.svg"
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 
@@ -74,10 +73,10 @@ class PxForm extends React.Component {
     // entries and encoding them as URI components
     Object.keys(Object.fromEntries(data)).forEach(
       e =>
-        //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
-        (stringData += `${e}=${encodeURIComponent(
-          Object.fromEntries(data)[e]
-        )}&`)
+      //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
+      (stringData += `${e}=${encodeURIComponent(
+        Object.fromEntries(data)[e]
+      )}&`)
     )
 
     // Remove the trailing '&' since there's no additional parameter
@@ -167,10 +166,12 @@ class PxForm extends React.Component {
                 DemoFormStyles.button +
                 " " +
                 DemoFormStyles.flat +
-                " btn request-demo"
+                " " +
+                DemoFormStyles.rounded +
+                " btn"
               }
             >
-              Get Started <img src={thinArrowRight} alt="Arrow Right" />
+              Get Started
             </button>
             <div
               style={{ display: "none" }}
