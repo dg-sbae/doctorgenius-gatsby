@@ -9,15 +9,17 @@ import { Helmet } from "react-helmet"
 import MobileSecondaryNav from "../../components/MobileSecondaryNav"
 import SecondaryNavigation from "../../components/SecondaryNavigation"
 import HeroPx from "../../components/HeroPx"
+import PxSubFooter from '../../components/pxSubfooter'
 
-//import checkmark from "../../img/checked.svg"
+import checkmark from "../../img/checked.svg"
 
 import PageStyles from "./plans.module.scss"
 import RowStyles from "../../components/Row.module.scss"
 
 const Plans = data => {
   const images = data.data
-
+  const heroBackgroundImage = images.heroBg.childImageSharp.fluid
+  const subfooterBgImage = images.subfooterBgImage.childImageSharp.fluid
   const pageTitle = "PX Plans"
   const heroConfig = {
     pageType: "pxPlansPage",
@@ -39,7 +41,7 @@ const Plans = data => {
           />
         </Helmet>
         <div className="px-plans">
-          <BackgroundImage fluid={images.heroBg.childImageSharp.fluid}>
+          <BackgroundImage fluid={heroBackgroundImage}>
             <HeroPx
               pageType={heroConfig.pageType}
               subtitle={heroConfig.subtitle}
@@ -69,7 +71,315 @@ const Plans = data => {
 
               <div className={RowStyles.row + " " + PageStyles.pxLogo}>
                 <div className="col-sm-12 col-md-7">
-                  <img src={images.pxLogo.childImageSharp.fluid.src} />
+                  <img src={images.pxLogo.childImageSharp.fluid.src} alt="Doctor Genius PX" />
+                </div>
+              </div>
+
+              <div
+                className={
+                  RowStyles.row + " " + RowStyles.padded
+                }
+              >
+                <div className="col-sm-12">
+                  <div className={PageStyles.plansTable}>
+                    {/* <!-- image-row --> */}
+                    <div
+                      className={
+                        PageStyles.imageRow +
+                        " " +
+                        PageStyles.gridItem
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.backgroundHolder + " background-holder"
+                        }
+                      />
+                    </div>
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup
+                      }
+                    >
+                      <h2>Level 1</h2>
+                      <p className="column-signup-body">
+                        Paperless Form
+                      </p>
+
+                    </div>
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup +
+                        " grid-item column-signup"
+                      }
+                    >
+                      <span className={PageStyles.recommended}>
+                        Recommended
+                      </span>
+                      <h2>Level 2</h2>
+                      <p>
+                        Paperless Forms & Reminders
+                      </p>
+
+                    </div>
+
+                    {/* <!-- /header-row --> */}
+
+                    {/* <!-- details section 1: --> */}
+                    <dt
+                      className={
+                        PageStyles.spacerRow + " justify-content-start"
+                      }
+                    >
+                      <div
+                        className={
+                          PageStyles.plansRowTitle + " plans-row-title"
+                        }
+                      >
+                        Doctor Genius PX Includes:
+                      </div>
+                    </dt>
+                    {/* <!-- details section 1 row 1: --> */}
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      COVID-19 Screening Form
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    {/* <!-- details section 1 row 2: --> */}
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      Paperless Forms
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    {/* <!-- details section 1 row 3: --> */}
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      Curbside Check In
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    {/* <!-- details section 1 row 4: --> */}
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      Easy Forms Builder
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    {/* <!-- details section 1 row 5: --> */}
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      PMS Write Back
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      Teledentistry Triage
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    {/* <!-- details section 2 row 2: --> */}
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      Recal (Patient Reminders)
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    {/* <!-- details section 2 row 3: --> */}
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      2 Way Texting
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    {/* <!-- details section 2 row 4: --> */}
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      Mass Texting/Emails
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      Postcard Reminders
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+
+                    {/* <!-- details section 3 row 2: --> */}
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.plansRowTitle
+                      }
+                    >
+                      Voice Reminders
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                    <div className={PageStyles.gridItem}>
+                      <img src={checkmark} alt="checkmark" />
+                    </div>
+                  </div>
+                  <div
+                    className={
+                      PageStyles.plansTable +
+                      " " +
+                      PageStyles.noBg +
+                      " plans-table no-bg"
+                    }
+                  >
+                    {/* <!-- cta section: --> */}
+                    <div className={PageStyles.gridItem} />
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup +
+                        " grid-item column-signup"
+                      }
+                    >
+                      <a
+                        href="/demo"
+                        className={PageStyles.button + " " + PageStyles.rounder}
+                      >
+                        Sign Up
+                      </a>
+                    </div>
+                    <div
+                      className={
+                        PageStyles.gridItem +
+                        " " +
+                        PageStyles.columnSignup +
+                        " grid-item column-signup"
+                      }
+                    >
+                      <a
+                        href="/demo"
+                        className={PageStyles.button + " " + PageStyles.rounder}
+                      >
+                        Sign Up
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div className="full-bleed-wrapper">
+                <div className="full-bleed">
+                  <BackgroundImage fluid={subfooterBgImage}>
+                    <div className={RowStyles.Row}>
+                      <PxSubFooter />
+                    </div>
+                  </BackgroundImage>
                 </div>
               </div>
             </Container>
@@ -94,6 +404,13 @@ export const ImageQuery = graphql`
     pxLogo: file(relativePath: { eq: "px-dg-logo.png" }) {
       childImageSharp {
         fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    subfooterBgImage: file(relativePath: { eq: "pxSubfooterBg.png" }) {
+      childImageSharp {
+        fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -5,8 +5,8 @@ import RowStyles from "./Row.module.scss"
 
 import pxLogo from "../img/dg-px-logo.svg"
 
-const PxSubfooter = () => {
-  {
+class PxSubfooter extends React.Component {
+  render() {
     return (
       <div className={PxFooterStyles.pxSubfooterStyles}>
         <div
