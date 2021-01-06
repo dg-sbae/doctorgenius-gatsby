@@ -15,7 +15,6 @@ import Hero from "../../components/Hero"
 import PageStyles from "../../pages/marketing-solutions/px-package.module.scss"
 import RowStyles from "../../components/Row.module.scss"
 
-import websiteIcon from "../../img/icon/marketing-solutions-suite.svg"
 import starsIcon from "../../img/icon/checkmark.svg"
 
 const PxPage = data => {
