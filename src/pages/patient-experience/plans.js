@@ -408,7 +408,7 @@ export const ImageQuery = graphql`
         }
       }
     }
-    subfooterBgImage: file(relativePath: { eq: "pxSubfooterBg.png" }) {
+    subfooterBgImage: file(relativePath: { eq: "px-subfooter-bg.jpg" }) {
       childImageSharp {
         fluid(quality: 70) {
           ...GatsbyImageSharpFluid

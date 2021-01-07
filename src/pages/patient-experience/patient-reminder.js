@@ -107,14 +107,14 @@ export default PatientReminder
 
 export const ImageQuery = graphql`
   query PatientReminderImages {
-    backgroundImage: file(relativePath: { eq: "patient-reminder-head.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "patient-reminders-head.jpg" }) {
       childImageSharp {
         fluid(quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    subfooterBgImage: file(relativePath: { eq: "pxSubfooterBg.png" }) {
+    subfooterBgImage: file(relativePath: { eq: "px-subfooter-bg.jpg" }) {
       childImageSharp {
         fluid(quality: 70) {
           ...GatsbyImageSharpFluid

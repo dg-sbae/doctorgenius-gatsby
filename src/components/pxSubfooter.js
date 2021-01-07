@@ -1,7 +1,9 @@
 import React from "react"
+import Modal from 'react-modal';
 
 import PxFooterStyles from "./pxSubfooter.module.scss"
 import RowStyles from "./Row.module.scss"
+
 
 import pxLogo from "../img/dg-px-logo.svg"
 
