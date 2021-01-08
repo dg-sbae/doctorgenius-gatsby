@@ -135,11 +135,7 @@ const Plans = data => {
                         PageStyles.spacerRow + " justify-content-start"
                       }
                     >
-                      <div
-                        className={
-                          PageStyles.plansRowTitle + " plans-row-title"
-                        }
-                      >
+                      <div className={PageStyles.plansRowTitle}>
                         Doctor Genius PX Includes:
                       </div>
                     </dt>
