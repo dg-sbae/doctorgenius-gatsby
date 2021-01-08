@@ -10,7 +10,7 @@ const Teledentistry = data => {
     <PxExperienceTemplate
       page="teledentistry" /* this should be dynamic from the page props */
       pageTitle="Teledentistry"
-      pageSubtitle="Patient First Technlogy"
+      pageSubtitle="Patient First Technology"
       pageIntro="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."
       metaTitle="Teledentistry | Healthcare Marketing Agency"
       metaDescription="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."
@@ -72,7 +72,7 @@ const Teledentistry = data => {
           content: {
             rowType: 'even-row',
             title: "Patient-First Experience",
-            innerTitle: "How teledentistry benefits your patient's needs",
+            innerTitle: "Pre-Screening and Evaluations",
             paragraph:
               "Manage your important documents securely and only a click away with our Doctor Genius PX, Patient Experience software package. The result is enhanced with operational efficiency, increased case acceptance, improved patient experience, and a consistant standard of care",
           },

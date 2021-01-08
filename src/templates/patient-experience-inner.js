@@ -148,7 +148,7 @@ export default props => {
                         RowStyles.tallTop
                       }
                     >
-                      <div className={PageStyles.iconContentTitles + " col-sm-10 col-md-7"}>
+                      <div className={PageStyles.iconContentTitles + " col-sm-10 col-md-10 col-lg-8"}>
                         <h3>{row.content.title}</h3>
                         <h2>{row.content.innerTitle}</h2>
                       </div>

@@ -8,7 +8,7 @@ const PatientReminder = data => {
 
   return (
     <PxExperienceTemplate
-      page="patient-reminder" /* this should be dynamic from the page props */
+      page="patient-reminders" /* this should be dynamic from the page props */
       pageTitle="Patient Reminders"
       pageSubtitle="Focus On Your Patients. Automate The Rest."
       pageIntro="Use smart and innovative technology to connect with patients, where it matters most. Help patients become more engaged and informed through our curated program."
@@ -61,7 +61,7 @@ const PatientReminder = data => {
         },
         {
           content: {
-            rowType: 'even-row',
+            rowType: 'odd-row',
             title: "Live Updates",
             innerTitle: "Text Your Patients in Real-Time",
             paragraph:
@@ -74,7 +74,7 @@ const PatientReminder = data => {
         },
         {
           content: {
-            rowType: 'odd-row',
+            rowType: 'even-row',
             title: "Notifications",
             innerTitle: "Reduce No Shows & Last Minute Cancellations",
             paragraph:
@@ -87,7 +87,7 @@ const PatientReminder = data => {
         },
         {
           content: {
-            rowType: 'even-row',
+            rowType: 'odd-row',
             title: "Secured Emails",
             innerTitle: "Patients Privacy is Our Priority",
             paragraph:

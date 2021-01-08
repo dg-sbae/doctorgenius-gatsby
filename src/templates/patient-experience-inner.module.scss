@@ -3,6 +3,7 @@
 .patientExperiencePage {
   .contentTitle {
     $font-family: $font-family-base;
+    width: 99%;
     h3 {
       color: $primary;
       font-weight: $font-weight-semibold;
@@ -22,6 +23,7 @@
 
   .contentParagraph {
     margin-top: 15px;
+    width: 85%;
     p {
       color: #2f2f2f;
       font-family: $font-family-body-text;
