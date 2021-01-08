@@ -252,10 +252,10 @@ const Plans = data => {
                         PageStyles.plansRowTitle
                       }
                     >
-                      Recal (Patient Reminders)
+                      Recall (Patient Reminders)
                     </div>
                     <div className={PageStyles.gridItem}>
-                      <img src={checkmark} alt="checkmark" />
+
                     </div>
                     <div className={PageStyles.gridItem}>
                       <img src={checkmark} alt="checkmark" />
@@ -272,7 +272,7 @@ const Plans = data => {
                       2 Way Texting
                     </div>
                     <div className={PageStyles.gridItem}>
-                      <img src={checkmark} alt="checkmark" />
+
                     </div>
                     <div className={PageStyles.gridItem}>
                       <img src={checkmark} alt="checkmark" />
@@ -289,7 +289,7 @@ const Plans = data => {
                       Mass Texting/Emails
                     </div>
                     <div className={PageStyles.gridItem}>
-                      <img src={checkmark} alt="checkmark" />
+
                     </div>
                     <div className={PageStyles.gridItem}>
                       <img src={checkmark} alt="checkmark" />
@@ -305,7 +305,7 @@ const Plans = data => {
                       Postcard Reminders
                     </div>
                     <div className={PageStyles.gridItem}>
-                      <img src={checkmark} alt="checkmark" />
+
                     </div>
                     <div className={PageStyles.gridItem}>
                       <img src={checkmark} alt="checkmark" />
@@ -322,7 +322,7 @@ const Plans = data => {
                       Voice Reminders
                     </div>
                     <div className={PageStyles.gridItem}>
-                      <img src={checkmark} alt="checkmark" />
+
                     </div>
                     <div className={PageStyles.gridItem}>
                       <img src={checkmark} alt="checkmark" />

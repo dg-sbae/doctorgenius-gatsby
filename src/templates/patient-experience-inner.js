@@ -76,6 +76,7 @@ export default props => {
 
               {/* Begin Split Row of content and image */}
               {contentRows.map((row) => (
+
                 row.content.rowType !== "icon-row" ?
                   <div
                     className={
@@ -92,11 +93,9 @@ export default props => {
                     <div
                       className={
                         (row.content.rowType === 'odd-row'
-                          ? "order-sm-2 order-md-3"
-                          : "order-sm-2 order-md-2") +
-                        " col-sm-9 col-md-6 " +
-                        RowStyles.colMd5
-                      }
+                          ? "order-sm-2 order-md-3 " + PageStyles.oddRow
+                          : "order-sm-2 order-md-2 " + PageStyles.evenRow) +
+                        " col-sm-11 col-md-6"}
                     >
                       <div className="content-block">
                         <div
@@ -125,11 +124,9 @@ export default props => {
                     <div
                       className={
                         (row.content.rowType === 'odd-row'
-                          ? "order-sm-1 order-md-2"
-                          : "order-sm-1 order-md-3") +
-                        " col-sm-12 col-md-6 " +
-                        RowStyles.colMd5
-                      }
+                          ? "order-sm-1 order-md-2" + PageStyles.oddRow
+                          : "order-sm-1 order-md-3 " + PageStyles.evenRow) +
+                        " col-sm-12 col-md-6"}
                     >
                       <img
                         className={PageStyles.imgResponsive}
