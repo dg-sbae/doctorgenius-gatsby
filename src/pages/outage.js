@@ -23,7 +23,7 @@ export default props => (
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
         <title>
-          Contact the Doctor Genius Team in Lake Forest, California | Doctor
+          Contact the Doctor Genius Team in Irvine, California | Doctor
           Genius
         </title>
         <meta
@@ -88,8 +88,8 @@ export default props => (
                       PageStyles.contactAddress + " mt-4 contact-address"
                     }
                   >
-                    2 S Pointe Dr #200 <br />
-                    Lake Forest, CA 92630
+                    16800 Aston Street, Suite 270 <br />
+                    Irvine, CA 92606
                   </p>
                   <button
                     className={

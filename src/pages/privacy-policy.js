@@ -25,10 +25,10 @@ const PrivacyPolicy = data => {
     <div className={PageStyles.privacyPolicyPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="privacy-policy">
         <Helmet>
-          <title>Privacy Policy Doctor Genius in Lake Forest, CA 92630</title>
+          <title>Privacy Policy Doctor Genius in Irvine, CA 92606</title>
           <meta
             name="description"
-            content="Privacy policy of Doctor Genius located in in Lake Forest, CA 92630."
+            content="Privacy policy of Doctor Genius located in in Irvine, CA 92606."
           />
         </Helmet>
         <div className={PageStyles.privacyPolicy + " privacy-policy"}>
@@ -154,9 +154,9 @@ const PrivacyPolicy = data => {
                     <address>
                       Doctor Genius
                       <br />
-                      2 S Pointe Dr #200
+                      16800 Aston Street, Suite 270
                       <br />
-                      Lake Forest, CA 92630
+                      Irvine, CA 92606
                       <br />
                     </address>
                     <p>
