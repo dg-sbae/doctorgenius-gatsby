@@ -1,12 +1,12 @@
-# doctorgenius-gatsby(Doctorgenius.com)
+# doctorgenius-gatsby
 
-The website for Doctor Genius
+The website for Doctor Genius: (doctorgenius.com)
 
 ## Features
 
 ---
 
-- SEO optimized home, service, and contact pages.
+- Blazing-fast loading speed keeps bounce rate low
 - "The Study": Blogs generated from our Wordpress site
 - Smart forms to inquery with the DG team.
 
@@ -14,7 +14,11 @@ The website for Doctor Genius
 
 ---
 
-For development, you will only need Node.js installed on your environement.
+This single project directory serves two related but separate projects.  Navigate to /<root>/server and open the terminal from this location.
+
+For development, you will only need Node.js, a text edtor, file transfer client, installed on your environement.
+
+
 
 ### Node
 
@@ -43,13 +47,22 @@ The application is now viewable at [http://localhost:8000/](http://localhost:800
 
 ## Deployment
 
-    The application is deployed directly to doctorgenius.com via SFTP.
+    When going live, this application is deployed directly to doctorgenius.com via SFTP.  
+    
+    Unlike other projects, this one uses the same domain for the dev and live sites, specifically because we need to make sure the dev site replicates those aspects of a live site.
 
-    DEV builds should update all the contact form destination endpoints to: 
-        nodetest-dev.dgplex.com
-        (possibly) also doctorgenius-wordpress.dgplex.com -> doctorgenius-wordpress.dgpd3v.com
+    Other Relevant URIs:
+        doctorgenius.com (live frontend site)
+        doctorgenius.dgd3v.com (dev frontend site)
+        nodetest.dgplex.com (live backend site)
+        nodetest-dev.dgplex.com (dev backend site)
+
+    DEV builds should _manually_ update all the contact form destination endpoints, after commmitting but before deploying, to: 
+        nodetest.dgplex.com <-> nodetest-dev.dgplex.com
+        doctorgenius-wordpress.dgplex.com <-> doctorgenius-wordpress.dgd3v.com
 
     LIVE builds use
+        doctorgenius.com
         nodetest.dgplex.com
         doctorgenius-wordpress.dgplex.com
 

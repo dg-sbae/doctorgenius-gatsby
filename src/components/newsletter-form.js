@@ -83,14 +83,14 @@ class NewsLetterSignUpForm extends React.Component {
     //Email:   [EmailAddress]
 
     // Generate a request to the email server
-    fetch("https://nodetest-dev.dgplex.com/newsletter-signup", {
+    fetch("https://nodetest.dgplex.com/newsletter-signup", {
       method: "POST",
       body: stringData,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     }).then(response => {
-      console.log("nodetest-dev response:", response)
+      console.log("nodetest response:", response)
       response.json().then(body => {
         this.setState({
           email: body.email,

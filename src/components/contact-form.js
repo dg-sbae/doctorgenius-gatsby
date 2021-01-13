@@ -96,14 +96,14 @@ class ContactForm extends React.Component {
     stringData = stringData.replace(/&$/, "")
 
     // Generate a request to the email server
-    fetch("https://nodetest-dev.dgplex.com/contact-us", {
+    fetch("https://nodetest.dgplex.com/contact-us", {
       method: "POST",
       body: stringData,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     }).then(response => {
-      console.log("nodetest-dev response:", response)
+      console.log("nodetest response:", response)
       response.json().then(body => {
         this.setState({
           name: body.name,

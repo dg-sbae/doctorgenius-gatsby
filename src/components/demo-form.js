@@ -86,14 +86,14 @@ class DemoForm extends React.Component {
     stringData = stringData.replace(/&$/, "")
 
     // Generate a request to the email server
-    fetch("https://nodetest-dev.dgplex.com/upload", {
+    fetch("https://nodetest.dgplex.com/upload", {
       method: "POST",
       body: stringData,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     }).then(response => {
-      console.log("nodetest-dev response:", response)
+      console.log("nodetest response:", response)
       response.json().then(body => {
         this.setState({
           name: body.name,
