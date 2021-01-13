@@ -142,9 +142,9 @@ export default ({ children }) => (
                 FooterStyles.footerContactDetails + " footer-contact-details"
               }
             >
-              2 S Pointe Dr #200
+              16800 Aston Street, Suite 270
               <br />
-              Lake Forest, CA 92630
+              Irvine, CA 92606
             </address>
           </div>
           <div className={FooterStyles.socialMediaRow + " social-media-row"}>
