@@ -67,7 +67,7 @@ class DemoForm extends React.Component {
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
     data.append("Description", "Form: Request Demo")
-    data.append("LeadSource", "(New) Main Website Organic")
+    data.append("LeadSource", "Main Website Organic")
 
     //stringData holds the stringified, encoded form data
     let stringData = ""
@@ -86,14 +86,14 @@ class DemoForm extends React.Component {
     stringData = stringData.replace(/&$/, "")
 
     // Generate a request to the email server
-    fetch("https://nodetest-dev.dgplex.com/upload", {
+    fetch("https://nodetest.dgplex.com/upload", {
       method: "POST",
       body: stringData,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     }).then(response => {
-      console.log("nodetest-dev response:", response)
+      console.log("nodetest response:", response)
       response.json().then(body => {
         this.setState({
           name: body.name,
