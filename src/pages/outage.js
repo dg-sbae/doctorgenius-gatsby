@@ -9,7 +9,6 @@ import "../styles/contact.scss"
 import PageStyles from "./contact.module.scss"
 import OutageStyles from "./outage.module.scss"
 import RowStyles from "../components/Row.module.scss"
-import InnerTitleStyles from "../components/inner-title.module.scss"
 
 export default props => (
   <div
@@ -24,7 +23,7 @@ export default props => (
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
         <title>
-          Contact the Doctor Genius Team in Lake Forest, California | Doctor
+          Contact the Doctor Genius Team in Irvine, California | Doctor
           Genius
         </title>
         <meta
@@ -89,8 +88,8 @@ export default props => (
                       PageStyles.contactAddress + " mt-4 contact-address"
                     }
                   >
-                    2 S Pointe Dr #200 <br />
-                    Lake Forest, CA 92630
+                    16800 Aston Street, Suite 270 <br />
+                    Irvine, CA 92606
                   </p>
                   <button
                     className={

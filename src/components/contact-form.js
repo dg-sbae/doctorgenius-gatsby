@@ -77,7 +77,7 @@ class ContactForm extends React.Component {
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
     // data.append("Description", "Form: Contact Us Form")
-    data.append("LeadSource", "(New) Main Website Organic")
+    data.append("LeadSource", "Main Website Organic")
 
     //stringData holds the stringified, encoded form data
     let stringData = ""
@@ -86,10 +86,10 @@ class ContactForm extends React.Component {
     // entries and encoding them as URI components
     Object.keys(Object.fromEntries(data)).forEach(
       e =>
-        //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
-        (stringData += `${e}=${encodeURIComponent(
-          Object.fromEntries(data)[e]
-        )}&`)
+      //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
+      (stringData += `${e}=${encodeURIComponent(
+        Object.fromEntries(data)[e]
+      )}&`)
     )
 
     // Remove the trailing '&' since there's no additional parameter
@@ -103,7 +103,7 @@ class ContactForm extends React.Component {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     }).then(response => {
-      console.log("NodeTest response:", response)
+      console.log("nodetest response:", response)
       response.json().then(body => {
         this.setState({
           name: body.name,

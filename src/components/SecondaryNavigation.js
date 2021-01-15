@@ -17,6 +17,13 @@ import chiropractorPractices from "../img/icon/chiropractor-nav.svg"
 import cosmeticSurgeons from "../img/icon/surgeon-nav.svg"
 import healthcareMarketing from "../img/icon/sphygmomanometer-nav.svg"
 
+// Images - Px Experience Pages
+import overviewIcon from "../img/px-overview.svg"
+import teledentistryIcon from "../img/icon/px-teledentistry.svg"
+import paperlessFormsIcon from "../img/icon/px-paperless.svg"
+import patientReminderIcon from "../img/icon/px-patient.svg"
+import pxPlansIcon from '../img/icon/px-plans.svg'
+
 import SecondaryNavStyles from "./SecondaryNavigation.module.scss"
 
 import $ from "jquery"
@@ -65,10 +72,10 @@ class SecondaryNavigation extends Component {
           text: "Hosting Solutions",
         },
         {
-          url: "/marketing-solutions/px-package",
+          url: "/patient-experience",
           source: pxMarketingIcon,
           alt: "Patient Experience Package",
-          text: "PX Package",
+          text: "Patient Experience (PX)",
         },
       ],
       ourClients: [
@@ -103,12 +110,44 @@ class SecondaryNavigation extends Component {
           text: "Healthcare Marketing",
         },
       ],
+      patientExperience: [
+        {
+          url: "/patient-experience/",
+          source: overviewIcon,
+          alt: "Overview",
+          text: "Overview"
+        },
+        {
+          url: "/patient-experience/teledentistry",
+          source: teledentistryIcon,
+          alt: "Teledentistry",
+          text: "Teledentistry",
+        },
+        {
+          url: "/patient-experience/paperless-forms",
+          source: paperlessFormsIcon,
+          alt: "Paperless Forms",
+          text: "Paperless Forms",
+        },
+        {
+          url: "/patient-experience/patient-reminder",
+          source: patientReminderIcon,
+          alt: "Patient Reminder",
+          text: "Patient Reminder",
+        },
+        {
+          url: "/patient-experience/plans",
+          source: pxPlansIcon,
+          alt: "PX Plans",
+          text: "PX Plans"
+        }
+      ]
     }
   }
 
   componentDidMount() {
-    $(document).ready(function() {
-      document.addEventListener("scroll", function(e) {
+    $(document).ready(function () {
+      document.addEventListener("scroll", function (e) {
         const winScroll =
           document.body.scrollTop || document.documentElement.scrollTop
         const height =

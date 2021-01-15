@@ -16,8 +16,6 @@ import "../styles/homepage.scss"
 import PageStyles from "./index.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
-import thinArrowRight from "../img/right-arrow.svg"
-
 export default ({ data }, props) => {
   const images = data
   return (

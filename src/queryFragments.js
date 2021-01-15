@@ -8,6 +8,7 @@ export const siteFragments = graphql`
     excerpt
     content
     date(formatString: "MMMM D, YYYY")
+    blog_author
     categories {
       name
     }

@@ -551,7 +551,7 @@ const MarketingSolutionsListLink = props => (
             }
           >
             <div className="col-sm-6">
-              <Link className="" to="/marketing-solutions/px-package">
+              <Link className="" to="/patient-experience/">
                 <div
                   className={
                     NavStyles.dropdownItemBlock + " dropdown-item-block"
@@ -579,7 +579,8 @@ const MarketingSolutionsListLink = props => (
                         " dropdown-content-title"
                       }
                     >
-                      PX Package
+                      Patient Experience (PX) &nbsp;
+                      <span className={NavStyles.newTag + " button flat"}><i>NEW</i></span>
                     </span>
                     <p>Explore our new Patient Experience Package details.</p>
                   </div>
