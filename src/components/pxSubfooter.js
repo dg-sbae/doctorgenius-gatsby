@@ -1,12 +1,14 @@
 import React from "react"
+import Modal from 'react-modal';
 
 import PxFooterStyles from "./pxSubfooter.module.scss"
 import RowStyles from "./Row.module.scss"
 
+
 import pxLogo from "../img/dg-px-logo.svg"
 
-const PxSubfooter = () => {
-  {
+class PxSubfooter extends React.Component {
+  render() {
     return (
       <div className={PxFooterStyles.pxSubfooterStyles}>
         <div
@@ -16,7 +18,7 @@ const PxSubfooter = () => {
             RowStyles.tallTop
           }
         >
-          <div className="col-sm-10 col-md-10 col-lg-5">
+          <div className="col-sm-10 col-md-9 col-lg-5">
             <div className={PxFooterStyles.contentBlock}>
               <h1>
                 Transform your patient experience with Doctor Genius
