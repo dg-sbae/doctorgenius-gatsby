@@ -10,6 +10,8 @@ import PageStyles from "./contact.module.scss"
 import RowStyles from "../components/Row.module.scss"
 import InnerTitleStyles from "../components/inner-title.module.scss"
 
+import address from "../constants/address"
+
 export default props => (
   <div className={PageStyles.contactPage + " " + RowStyles.rowStyling}>
     <DefaultPageLayout location={props["*"]}>
@@ -71,8 +73,7 @@ export default props => (
                       PageStyles.contactAddress + " mt-4 contact-address"
                     }
                   >
-                    2 S Pointe Dr #200 <br />
-                    Lake Forest, CA 92630
+                    {address}
                   </p>
                   <button
                     className={
