@@ -31,11 +31,11 @@ const WebsiteDevelopmentTerms = data => {
       <DefaultPageLayout location="website-development-terms">
         <Helmet>
           <title>
-            Website Development Terms | Doctor Genius in Lake Forest, CA 92630
+            Website Development Terms | Doctor Genius in Irvine, CA 92606
           </title>
           <meta
             name="description"
-            content="Website Development Terms of Doctor Genius located in in Lake Forest, CA 92630."
+            content="Website Development Terms of Doctor Genius located in in Irvine, CA 92606."
           />
         </Helmet>
         <div className="website-developement-terms">
