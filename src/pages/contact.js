@@ -10,7 +10,7 @@ import PageStyles from "./contact.module.scss"
 import RowStyles from "../components/Row.module.scss"
 import InnerTitleStyles from "../components/inner-title.module.scss"
 
-import address from "../constants/address"
+import {dgAddress} from "../variables/globalVariables";
 
 export default props => (
   <div className={PageStyles.contactPage + " " + RowStyles.rowStyling}>
@@ -73,7 +73,7 @@ export default props => (
                       PageStyles.contactAddress + " mt-4 contact-address"
                     }
                   >
-                    {address}
+                    {dgAddress.full}
                   </p>
                   <button
                     className={
