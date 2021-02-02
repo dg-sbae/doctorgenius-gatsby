@@ -12,6 +12,9 @@ import "../styles/terms-of-service.scss"
 import PageStyles from "./termsofservice.module.scss"
 import RowStyles from '../components/Row.module.scss'
 
+import {dgAddress} from "../variables/globalVariables";
+
+
 const heroConfig = {
   pageType: "termsOfService",
   strapline: "Terms Of Service",
@@ -25,9 +28,9 @@ const TermsOfService = data => {
       <DefaultPageLayout location="termsofservice">
         <Helmet>
           <title>
-          Terms Of Service Doctor Genius in Lake Forest, CA 92630
+          Terms Of Service Doctor Genius in {dgAddress.city}, {dgAddress.state} {dgAddress.zipCode}
           </title>
-          <meta name="description" content="Terms Of Service of Doctor Genius located in Lake Forest, CA 92630." />
+          <meta name="description" content="Terms Of Service of Doctor Genius located in Irvine, CA 92606." />
         </Helmet>
         <div className={PageStyles.termsOfService + " termsofservice"}>
           <BackgroundImage fluid={data.data.heroBg.childImageSharp.fluid} className={PageStyles.gbiTos + " gbi-tos"}>

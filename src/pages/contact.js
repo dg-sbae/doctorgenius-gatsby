@@ -17,7 +17,7 @@ export default props => (
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
         <title>
-          Contact the Doctor Genius Team in Lake Forest, California | Doctor
+          Contact the Doctor Genius Team in {dgAddress.city}, {dgAddress.state} | Doctor
           Genius
         </title>
         <meta

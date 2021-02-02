@@ -10,6 +10,8 @@ import "../styles/confirmation.scss"
 import PageStyles from "./confirmation.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
+import {dgAddress} from "../variables/globalVariables";
+
 export default props => (
   <div className={PageStyles.confirmationPage + " " + RowStyles.rowStyling}>
     <DefaultPageLayout location={props["*"]}>
@@ -82,8 +84,9 @@ export default props => (
                       PageStyles.contactAddress + " mt-4 contact-address"
                     }
                   >
-                    2 S Pointe Dr #200 <br />
-                    Lake Forest, CA 92630
+                    {dgAddress.street} <br />
+                    {dgAddress.city}, 
+                    {dgAddress.state} {dgAddress.zipCode}
                   </p>
                   <button
                     className={

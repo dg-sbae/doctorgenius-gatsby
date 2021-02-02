@@ -10,6 +10,8 @@ import PageStyles from "./contact.module.scss"
 import OutageStyles from "./outage.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
+import {dgAddress} from "../variables/globalVariables";
+
 export default props => (
   <div
     className={
@@ -23,7 +25,7 @@ export default props => (
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
         <title>
-          Contact the Doctor Genius Team in Lake Forest, California | Doctor
+          Contact the Doctor Genius Team in {dgAddress.city}, {dgAddress.state} | Doctor
           Genius
         </title>
         <meta
@@ -88,8 +90,9 @@ export default props => (
                       PageStyles.contactAddress + " mt-4 contact-address"
                     }
                   >
-                    2 S Pointe Dr #200 <br />
-                    Lake Forest, CA 92630
+                    {dgAddress.street} <br />
+                    {dgAddress.city}, 
+                    {dgAddress.state} {dgAddress.zipCode}
                   </p>
                   <button
                     className={
