@@ -158,7 +158,7 @@ const PrivacyPolicy = data => {
                       Doctor Genius
                       <br />
                       {dgAddress.street} <br />
-                    {dgAddress.city}, {dgAddress.state} {dgAddress.zipCode}
+                      {dgAddress.city}, {dgAddress.state} {dgAddress.zipCode}
                       <br />
                     </address>
                     <p>
