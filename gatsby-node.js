@@ -2,7 +2,7 @@ const _ = require(`lodash`)
 const Promise = require(`bluebird`)
 const path = require(`path`)
 const slash = require(`slash`)
-console.log("HELLO WORLDS")
+
 // Replacing '/' would result in empty string which is invalid
 const replacePath = path => (path === `/` ? path : path.replace(/\/$/, ``))
 // Implement the Gatsby API “onCreatePage”. This is
