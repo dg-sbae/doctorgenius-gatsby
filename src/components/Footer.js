@@ -15,6 +15,8 @@ import youtubeIcon from "../img/icon/youtube-circle.svg"
 import FooterStyles from "./Footer.module.scss"
 import RowStyles from "./Row.module.scss"
 
+import {dgAddress} from "../variables/globalVariables";
+
 const ListLink = props => (
   <li>
     <Link to={props.to}>{props.children}</Link>
@@ -142,9 +144,9 @@ export default ({ children }) => (
                 FooterStyles.footerContactDetails + " footer-contact-details"
               }
             >
-              16800 Aston Street, Suite 270
-              <br />
-              Irvine, CA 92606
+              {dgAddress.street} <br />
+              {dgAddress.city}, 
+              {dgAddress.state} {dgAddress.zipCode}
             </address>
           </div>
           <div className={FooterStyles.socialMediaRow + " social-media-row"}>

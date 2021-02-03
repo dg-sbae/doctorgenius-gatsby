@@ -12,6 +12,8 @@ import Hero from "../components/Hero"
 import PageStyles from "./website-development-terms.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
+import {dgAddress} from "../variables/globalVariables";
+
 const heroConfig = {
   pageType: "websiteDevelopmentTerms",
   strapline: "Website Development Terms",
@@ -31,11 +33,11 @@ const WebsiteDevelopmentTerms = data => {
       <DefaultPageLayout location="website-development-terms">
         <Helmet>
           <title>
-            Website Development Terms | Doctor Genius in Irvine, CA 92606
+            Website Development Terms | Doctor Genius in {dgAddress.city}, {dgAddress.state} {dgAddress.zipCode}
           </title>
           <meta
             name="description"
-            content="Website Development Terms of Doctor Genius located in in Irvine, CA 92606."
+            content="Website Development Terms of Doctor Genius located in Irvine, CA 92606."
           />
         </Helmet>
         <div className="website-developement-terms">
