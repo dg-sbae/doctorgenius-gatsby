@@ -1,6 +1,5 @@
 import React from "react"
 
-import thinArrowRight from "../img/right-arrow.svg"
 import checkSuccess from "../img/checkSuccess.png"
 import xFail from "../img/xFail.png"
 
@@ -8,14 +7,12 @@ import DemoFormStyles from "./demo-form.module.scss"
 
 import $ from "jquery"
 
-class DemoForm extends React.Component {
+class PxForm extends React.Component {
   constructor(props) {
     super(props)
-
     this.state = {
       name: "",
-      email: "",
-      company: "",
+      practice: "",
       phone: "",
       validationPassed: false,
     }
@@ -60,14 +57,14 @@ class DemoForm extends React.Component {
     data.append("FullName", this.name.value)
     data.append("PhoneNumber", this.phone.value)
     data.append("EmailAddress", this.email.value)
-    data.append("CompanyName", this.company.value)
+    data.append("PracticeName", this.practice.value)
 
     // Add required, internal fields for our Admin connection
     data.append("Status", "New")
     data.append("AccessToken", "a803bcbe-f32d-41b9-81a8-62a4cd6cd446")
     data.append("postToSalesForce", true)
-    data.append("Description", "Form: Request Demo")
-    data.append("LeadSource", "Main Website Organic")
+    data.append("Description", "Form: Request PX")
+    data.append("LeadSource", "Main Website Organic - PX")
 
     //stringData holds the stringified, encoded form data
     let stringData = ""
@@ -76,37 +73,37 @@ class DemoForm extends React.Component {
     // entries and encoding them as URI components
     Object.keys(Object.fromEntries(data)).forEach(
       e =>
-        //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
-        (stringData += `${e}=${encodeURIComponent(
-          Object.fromEntries(data)[e]
-        )}&`)
+      //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
+      (stringData += `${e}=${encodeURIComponent(
+        Object.fromEntries(data)[e]
+      )}&`)
     )
 
     // Remove the trailing '&' since there's no additional parameter
     stringData = stringData.replace(/&$/, "")
 
     // Generate a request to the email server
-    fetch("https://nodetest.dgplex.com/upload", {
+    /*fetch("https://nodetest-dev.dgplex.com/upload", {
       method: "POST",
       body: stringData,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     }).then(response => {
-      console.log("nodetest response:", response)
+      console.log("nodetest-dev response:", response)
       response.json().then(body => {
         this.setState({
           name: body.name,
           phone: body.phone,
-          company: body.company,
+          practice: body.practice,
           email: body.email,
           validationPassed: body.validationPassed,
         })
       })
-    })
+    }) */
 
-    /* Additional testing endpoint:
-    fetch("https://enh4puletkcmw.x.pipedream.net", {
+    // Additional testing endpoint:
+    fetch("https://enkju26ditb.x.pipedream.net", {
       method: "POST",
       body: stringData,
       headers: {
@@ -118,7 +115,7 @@ class DemoForm extends React.Component {
         console.log("requestbin body:", body)
       })
     })
-    */
+
 
     //Trigger form clearing upon completion of all API calls
     //clearFormFields();
@@ -139,7 +136,7 @@ class DemoForm extends React.Component {
             />
             <input
               ref={ref => {
-                this.company = ref
+                this.practice = ref
               }}
               type="text"
               placeholder="Practice Name ( ex. Dental Spa)"
@@ -169,10 +166,12 @@ class DemoForm extends React.Component {
                 DemoFormStyles.button +
                 " " +
                 DemoFormStyles.flat +
-                " btn request-demo"
+                " " +
+                DemoFormStyles.rounded +
+                " btn"
               }
             >
-              Request Demo <img src={thinArrowRight} alt="Arrow Right" />
+              Get Started
             </button>
             <div
               style={{ display: "none" }}
@@ -202,7 +201,7 @@ class DemoForm extends React.Component {
           <FormResponse
             name={this.state.name}
             email={this.state.email}
-            company={this.state.company}
+            practice={this.state.practice}
             phone={this.state.phone}
           />*/}
         </form>
@@ -211,4 +210,4 @@ class DemoForm extends React.Component {
   }
 }
 
-export default DemoForm
+export default PxForm

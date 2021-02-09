@@ -1,13 +1,13 @@
-import React from "react"
-import Modal from 'react-modal';
+import React, { Component } from "react"
 
 import PxFooterStyles from "./pxSubfooter.module.scss"
 import RowStyles from "./Row.module.scss"
+import Modal from "../components/PxModal"
 
 
 import pxLogo from "../img/dg-px-logo.svg"
 
-class PxSubfooter extends React.Component {
+class PxSubfooter extends Component {
   render() {
     return (
       <div className={PxFooterStyles.pxSubfooterStyles}>
@@ -35,12 +35,9 @@ class PxSubfooter extends React.Component {
 
           <div className="col-sm-10 col-lg-4">
             <div className={PxFooterStyles.ctaSection}>
-              <a
-                href="/demo"
-                className={PxFooterStyles.ctaButton}
-              >
-                Get Started
-              </a>
+              <button className={PxFooterStyles.ctaButton} id="pxModal">Get Started</button>
+              <Modal btnID="pxModal" />
+
               <div className={PxFooterStyles.pxLogo}>
                 <img src={pxLogo} alt="Doctor Genius PX" />
               </div>

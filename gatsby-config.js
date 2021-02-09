@@ -73,7 +73,7 @@ module.exports = {
           families: [`Montserrat:400,700`, `Roboto:300,400,500&display=swap`],
         },
       },
-    },
+    },/*
     {
       resolve: `gatsby-plugin-brotli`,
       options: {
@@ -87,7 +87,7 @@ module.exports = {
         extensions: ["css", "html", "js", "svg"],
         path: "gzip-zopfli",
       },
-    },
+    },*/
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
