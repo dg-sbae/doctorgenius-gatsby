@@ -16,6 +16,7 @@ import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 import "../styles/partnerships.scss"
 import PageStyles from "./partnerships.module.scss"
 import RowStyles from "../components/Row.module.scss"
+import { dgAddress } from "../variables/globalVariables"
 
 const heroConfig = {
   pageType: "partnerships",
@@ -261,7 +262,7 @@ const Partnerships = data => {
                         }
                       >
                         <p>
-                          We are based in Irvine, California, USA. Dental
+                          We are based in {dgAddress.city}, California, USA. Dental
                           Genius has consistent 5-star Ratings on Google. We
                           employ an all-star development, support, and sales
                           team to provide high-level online marketing solutions

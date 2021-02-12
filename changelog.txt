@@ -1,4 +1,9 @@
 ----  Change Log -----
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cdaefda94c7da14b12261bae3577bf4334a87c03
 - [2021-02-11] v1.4.0
   Updating LeadSource on relevant forms
   Fleshing out deployment steps in readme for parity/accuracy
@@ -7,6 +12,10 @@
   Administrative updates (codebase cleanup)
   Refactor address display
   Refactor PX Footer Modal
+<<<<<<< HEAD
+=======
+
+>>>>>>> cdaefda94c7da14b12261bae3577bf4334a87c03
   - New PX Content:
   DGW-2029-Teledentistry-Sub-Level
   DGW-2030-Px-Plans-Page
@@ -15,6 +24,10 @@
   DGW-2037-finalize-dgpx-sublevel-pages
   DGW-2037b-dgpx-content-in-place
   DGW-2050-PXFormSubFooter
+<<<<<<< HEAD
+=======
+
+>>>>>>> cdaefda94c7da14b12261bae3577bf4334a87c03
   - Dependency security audit
   Bump http-proxy from 1.17.0 to 1.18.1
   Bump dot-prop from 4.2.0 to 4.2.1

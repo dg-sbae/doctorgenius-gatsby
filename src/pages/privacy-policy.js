@@ -13,6 +13,9 @@ import "../styles/privacy-policy.scss"
 import PageStyles from "./privacy-policy.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
+import {dgAddress} from "../variables/globalVariables";
+
+
 const heroConfig = {
   pageType: "privacyPolicy",
   strapline: "Privacy Policy",
@@ -25,10 +28,10 @@ const PrivacyPolicy = data => {
     <div className={PageStyles.privacyPolicyPage + " " + RowStyles.rowStyling}>
       <DefaultPageLayout location="privacy-policy">
         <Helmet>
-          <title>Privacy Policy Doctor Genius in Irvine, CA 92606</title>
+          <title>Privacy Policy Doctor Genius in {dgAddress.city}, {dgAddress.state} {dgAddress.zipCode}</title>
           <meta
             name="description"
-            content="Privacy policy of Doctor Genius located in in Irvine, CA 92606."
+            content="Privacy policy of Doctor Genius located in Irvine, CA 92606."
           />
         </Helmet>
         <div className={PageStyles.privacyPolicy + " privacy-policy"}>
@@ -154,9 +157,8 @@ const PrivacyPolicy = data => {
                     <address>
                       Doctor Genius
                       <br />
-                      16800 Aston Street, Suite 270
-                      <br />
-                      Irvine, CA 92606
+                      {dgAddress.street} <br />
+                      {dgAddress.city}, {dgAddress.state} {dgAddress.zipCode}
                       <br />
                     </address>
                     <p>

@@ -76,10 +76,10 @@ class DemoForm extends React.Component {
     // entries and encoding them as URI components
     Object.keys(Object.fromEntries(data)).forEach(
       e =>
-      //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
-      (stringData += `${e}=${encodeURIComponent(
-        Object.fromEntries(data)[e]
-      )}&`)
+        //console.log(`key=${e}  value=${Object.fromEntries(data)[e]}`)
+        (stringData += `${e}=${encodeURIComponent(
+          Object.fromEntries(data)[e]
+        )}&`)
     )
 
     // Remove the trailing '&' since there's no additional parameter
