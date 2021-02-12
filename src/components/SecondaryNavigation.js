@@ -148,12 +148,12 @@ class SecondaryNavigation extends Component {
   componentDidMount() {
     $(document).ready(function () {
       document.addEventListener("scroll", function (e) {
-        const winScroll =
-          document.body.scrollTop || document.documentElement.scrollTop
-        const height =
+        /*const winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop*/
+        /*const height =
           document.documentElement.scrollHeight -
-          document.documentElement.clientHeight
-        const scrolled = winScroll / height
+          document.documentElement.clientHeight*/
+        //const scrolled = winScroll / height
 
         if (
           typeof document.querySelector(
@@ -164,9 +164,6 @@ class SecondaryNavigation extends Component {
           var navBottom = document
             .querySelector(`nav.navbar`)
             .getBoundingClientRect().bottom
-          var secondaryNavTop = document
-            .querySelector(`.${SecondaryNavStyles.secondaryNav}`)
-            .getBoundingClientRect().top
           var heroBottom = document
             .querySelector(".hero")
             .getBoundingClientRect().bottom

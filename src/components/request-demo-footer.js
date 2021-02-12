@@ -36,7 +36,7 @@ const requestDemoFooter = ({
           id={contentBlockID}
           className={
             mdWidth
-              ? `col-sm-` + smWidth + " " + `col-md-` + mdWidth
+              ? `col-sm-` + smWidth + " col-md-" + mdWidth
               : `col-sm-` + smWidth + " col-md-5"
           }
         >

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { graphql } from "gatsby"
 
 import PxForm from '../components/px-form'
 
@@ -59,6 +58,8 @@ const Modal = ({ btnID }, data) => {
 
 export default Modal
 
+/*
+//This will need to be updated to use <StaticQuery> method of Graphql Query
 export const PxFormImageQuerys = graphql`
   query ModalImages {
     CFImage: file(relativePath: { eq: "Contact-Form-2.jpg" }) {
@@ -70,3 +71,4 @@ export const PxFormImageQuerys = graphql`
     }
   }
 `
+*/

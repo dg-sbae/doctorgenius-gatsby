@@ -1,7 +1,6 @@
 import React from "react"
 import { Component } from "react"
 import { Link } from "gatsby"
-import Container from "../components/Container"
 
 import house from "../img/icon/house.svg"
 import marketingSolutions from "../img/icon/statistics.svg"

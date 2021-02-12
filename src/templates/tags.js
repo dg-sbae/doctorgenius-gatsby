@@ -39,9 +39,12 @@ const ResponsivePostsColumnHeader = props => (
       " col-sm-12 d-lg-none responsive-tab-trigger"
     }
   >
-    <h3
+    <span
       onClick={props.onClick}
+      onKeyPress={props.onClick}
       data-column="latest"
+      role="button"
+      tabIndex="0"
       className={
         (props.currentColumn === "latest"
           ? `${PageStyles.active} active `
@@ -51,10 +54,13 @@ const ResponsivePostsColumnHeader = props => (
       }
     >
       Latest Posts
-    </h3>
-    <h3
+    </span>
+    <span
       onClick={props.onClick}
+      onKeyPress={props.onClick}
       data-column="popular"
+      role="button"
+      tabIndex="0"
       className={
         (props.currentColumn === "popular"
           ? `${PageStyles.active} active `
@@ -64,7 +70,7 @@ const ResponsivePostsColumnHeader = props => (
       }
     >
       Popular Posts
-    </h3>
+    </span>
     <div
       className={
         PageStyles.spacer + " " + PageStyles.small + " " + PageStyles.solid

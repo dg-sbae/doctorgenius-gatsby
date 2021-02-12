@@ -44,7 +44,7 @@ const ListLink = props => (
 const FirstListLink = props => (
   <li className={props.className} data-toggle={props.dataToggle}>
     <span>{props.children}</span>
-    <span className={styles.downArrowContainer} onClick={props.clickHandler}>
+    <span className={styles.downArrowContainer} onClick={props.clickHandler} onKeyDown={props.clickHandler} role="button" tabIndex="0">
       <img className={styles.downArrow} src={downArrow} alt="Drop down arrow" />
     </span>
   </li>
