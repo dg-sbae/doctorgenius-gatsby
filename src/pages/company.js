@@ -22,6 +22,9 @@ import "../styles/company-page.scss"
 import PageStyles from "./company.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
+import {dgAddress} from "../variables/globalVariables";
+
+
 const Company = data => {
   const images = data.data
 
@@ -89,7 +92,7 @@ const Company = data => {
       <DefaultPageLayout location="company">
         <Helmet>
           <title>
-            Irvine, CA Digital Marketing Agency | About Doctor Genius
+            {dgAddress.city}, CA Digital Marketing Agency | About Doctor Genius
           </title>
           <meta
             name="description"
@@ -126,7 +129,7 @@ const Company = data => {
                     />
                     <div className="accented-paragraph">
                       <p>
-                        We are based in Irvine, California, USA. Doctor
+                        We are based in {dgAddress.city}, California, USA. Doctor
                         Genius has consistent 5-star Ratings on Google+, and A
                         Rated with the BBB. We employ and all-star development,
                         support, and sales team to provide high-level online
@@ -343,7 +346,7 @@ const Company = data => {
                         }
                       >
                         <p>
-                          We are based in Irvine, California, USA. Doctor
+                          We are based in {dgAddress.city}, California, USA. Doctor
                           Genius has consistent 5-star Ratings on Google+, and A
                           Rated with the BBB. We employ and all-star
                           development, support, and sales team to provide high

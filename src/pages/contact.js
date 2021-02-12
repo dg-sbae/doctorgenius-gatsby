@@ -10,12 +10,14 @@ import PageStyles from "./contact.module.scss"
 import RowStyles from "../components/Row.module.scss"
 import InnerTitleStyles from "../components/inner-title.module.scss"
 
+import {dgAddress} from "../variables/globalVariables";
+
 export default props => (
   <div className={PageStyles.contactPage + " " + RowStyles.rowStyling}>
     <DefaultPageLayout location={props["*"]}>
       <Helmet>
         <title>
-          Contact the Doctor Genius Team in Irvine, California | Doctor
+          Contact the Doctor Genius Team in {dgAddress.city}, {dgAddress.state} | Doctor
           Genius
         </title>
         <meta
@@ -71,8 +73,7 @@ export default props => (
                       PageStyles.contactAddress + " mt-4 contact-address"
                     }
                   >
-                    16800 Aston Street, Suite 270 <br />
-                    Irvine, CA 92606
+                    {dgAddress.full}
                   </p>
                   <button
                     className={

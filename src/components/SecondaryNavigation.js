@@ -130,10 +130,10 @@ class SecondaryNavigation extends Component {
           text: "Paperless Forms",
         },
         {
-          url: "/patient-experience/patient-reminder",
+          url: "/patient-experience/patient-reminders",
           source: patientReminderIcon,
-          alt: "Patient Reminder",
-          text: "Patient Reminder",
+          alt: "Patient Reminders",
+          text: "Patient Reminders",
         },
         {
           url: "/patient-experience/plans",
