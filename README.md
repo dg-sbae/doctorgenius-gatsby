@@ -14,11 +14,9 @@ The website for Doctor Genius: (doctorgenius.com)
 
 ---
 
-This single project directory serves two related but separate projects.  Navigate to /<root>/server and open the terminal from this location.
+This single project directory serves two related but separate projects. Navigate to /<root>/server and open the terminal from this location.
 
 For development, you will only need Node.js, a text edtor, file transfer client, installed on your environement.
-
-
 
 ### Node
 
@@ -47,8 +45,8 @@ The application is now viewable at [http://localhost:8000/](http://localhost:800
 
 ## Deployment
 
-    When going live, this application is deployed directly to doctorgenius.com via SFTP.  
-    
+    When going live, this application is deployed directly to doctorgenius.com via SFTP.
+
     Unlike other projects, this one uses the same domain for the dev and live sites, specifically because we need to make sure the dev site replicates those aspects of a live site.
 
     Other Relevant URIs:
@@ -57,7 +55,7 @@ The application is now viewable at [http://localhost:8000/](http://localhost:800
         nodetest.dgplex.com (live backend site)
         nodetest-dev.dgplex.com (dev backend site)
 
-    DEV builds should _manually_ update all the contact form destination endpoints, after commmitting but before deploying, to: 
+    DEV builds should _manually_ update all the contact form destination endpoints, after commmitting but before deploying, to:
         nodetest.dgplex.com <-> nodetest-dev.dgplex.com
         doctorgenius-wordpress.dgplex.com <-> doctorgenius-wordpress.dgd3v.com
 
