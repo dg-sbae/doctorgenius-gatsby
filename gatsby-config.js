@@ -2,6 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Doctor Genius`,
   },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+  },
   plugins: [
     //`gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sass`,
