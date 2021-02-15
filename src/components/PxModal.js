@@ -9,8 +9,6 @@ import pxLogo from '../img/dg-px-logo.svg'
 import CFImage from '../img/Contact-Form-02.jpg'
 
 const Modal = ({ btnID }, data) => {
-  const images = data.data
-  console.log(images)
   useEffect(() => {
     var modal = document.getElementById("subscribeModal")
     var btn = document.getElementById(btnID)

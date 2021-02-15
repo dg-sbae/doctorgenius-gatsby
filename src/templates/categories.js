@@ -295,7 +295,6 @@ const CategoriesPage = ({ data, pageContext }) => {
                       const mainCategory = node.categories.find(c =>
                         categoriesPaths.find(d => d.name === c.name)
                       )
-                      //console.log(mainCategory)
                       return (
                         <div
                           className={PageStyles.latestPost + " latest-post"}
