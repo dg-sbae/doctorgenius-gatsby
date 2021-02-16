@@ -10,8 +10,8 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import NewsLetterSignUpForm from "../components/newsletter-form.js"
-import RequestDemoFooter from "../components/request-demo-footer"
 import Hero from "../components/Hero"
+import RequestDemoFooter from "../components/request-demo-footer"
 import EventsTeaser from "../components/eventsTeaser"
 
 import twitterIcon from "../img/twitter.svg"
@@ -160,9 +160,9 @@ const TagsPage = ({ data, pageContext }) => {
     pageContext.currentPage - 1 === 1
       ? "/blog/" + pageContext.slug
       : "/blog/" +
-        pageContext.slug +
-        "/" +
-        (pageContext.currentPage - 1).toString()
+      pageContext.slug +
+      "/" +
+      (pageContext.currentPage - 1).toString()
   const nextPage =
     "/blog/" + pageContext.slug + "/" + (pageContext.currentPage + 1).toString()
 
@@ -349,9 +349,9 @@ const TagsPage = ({ data, pageContext }) => {
                                 __html: node.excerpt.replace(
                                   /<a.*?moretag.*?<\/a>/,
                                   '... <a href="' +
-                                    postsPath +
-                                    node.slug +
-                                    '" target="_blank">[ Read More ]</a>'
+                                  postsPath +
+                                  node.slug +
+                                  '" target="_blank">[ Read More ]</a>'
                                 ),
                               }}
                             />
@@ -362,23 +362,22 @@ const TagsPage = ({ data, pageContext }) => {
 
                     <div className={PageStyles.pagination + " pagination"}>
                       {// Controls the prev button
-                      !isFirst && (
-                        <Link to={prevPage} rel="prev">
-                          <img src={leftChevron} alt="Navigate to Previous" />
-                        </Link>
-                      )}
-                      {}
+                        !isFirst && (
+                          <Link to={prevPage} rel="prev">
+                            <img src={leftChevron} alt="Navigate to Previous" />
+                          </Link>
+                        )}
+                      { }
                       {// Loop to create pagination links based on numOfPages
 
-                      pageContext.numPaginationLinks > 1 &&
+                        pageContext.numPaginationLinks > 1 &&
                         Array.from(
                           { length: pageContext.numPaginationLinks },
                           (_, i) => (
                             <Link
                               key={`pagination-number${i + start}`}
-                              to={`/blog/${pageContext.slug}/${
-                                i + start - 1 === 0 ? "" : "/" + (i + start)
-                              }`}
+                              to={`/blog/${pageContext.slug}/${i + start - 1 === 0 ? "" : "/" + (i + start)
+                                }`}
                             >
                               <p
                                 className={
@@ -393,11 +392,11 @@ const TagsPage = ({ data, pageContext }) => {
                           )
                         )}
                       {// Controls the next button
-                      !isLast && (
-                        <Link to={nextPage} rel="next">
-                          <img src={rightChevron} alt="Navigate to Next" />
-                        </Link>
-                      )}
+                        !isLast && (
+                          <Link to={nextPage} rel="next">
+                            <img src={rightChevron} alt="Navigate to Next" />
+                          </Link>
+                        )}
                     </div>
                   </LatestPostsColumn>
 
@@ -592,9 +591,9 @@ const TagsPage = ({ data, pageContext }) => {
                                       __html: node.excerpt.replace(
                                         /<a.*?moretag.*?<\/a>/,
                                         '... <a href="' +
-                                          postsPath +
-                                          node.slug +
-                                          '" target="_blank">[ Read More ]</a>'
+                                        postsPath +
+                                        node.slug +
+                                        '" target="_blank">[ Read More ]</a>'
                                       ),
                                     }}
                                   />

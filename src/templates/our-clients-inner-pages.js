@@ -9,6 +9,7 @@ import Main from "../components/main-content"
 import Container from "../components/Container"
 import TestimonialsSlider from "../components/testimonials-slider"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
+import SecondaryNavigation from "../components/SecondaryNavigation"
 import InnerTitle from "../components/inner-title.js"
 import Hero from "../components/Hero"
 
@@ -17,7 +18,6 @@ import rightArrowBlue from "../img/icon/right-arrow-blue.svg"
 import "../styles/our-clients-inner-pages.scss"
 import PageStyles from "./our-clients-inner-pages.module.scss"
 import RowStyles from "../components/Row.module.scss"
-import SecondaryNavigation from "../components/SecondaryNavigation"
 
 export default props => {
   /* These will likely need to be dynamic props */
