@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Doctor Genius`,
+    title: `DoctorGenius`,
     description: 'Healthcare Marketing Website',
     siteUrl: 'https://doctorgenius.com',
-    author: 'Doctor Genius Web Development'
+    author: 'DoctorGenius Web Development'
   },
   plugins: [
     //`gatsby-plugin-remove-trailing-slashes`,
@@ -123,7 +123,7 @@ module.exports = {
               }
             `,
             output: "/feed.xml",
-            title: "Doctor Genius' RSS Feed",
+            title: "DoctorGenius' RSS Feed",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
