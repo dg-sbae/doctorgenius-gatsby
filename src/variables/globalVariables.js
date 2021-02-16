@@ -4,7 +4,7 @@ export const dgAddress = {
     city:"Irvine",
     state:"CA",
     zipCode:"92606",
-    full:"16800 Aston Street, Suite 270, Irvine CA 92606"
+    full:"16800 Aston Street Suite 270 Irvine, CA 92606"
     
 };
 

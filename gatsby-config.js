@@ -5,6 +5,10 @@ module.exports = {
     siteUrl: 'https://doctorgenius.com',
     author: 'DoctorGenius Web Development'
   },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+  },
   plugins: [
     //`gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sass`,
@@ -148,7 +152,7 @@ module.exports = {
         extensions: ["css", "html", "js", "svg"],
         path: "gzip-zopfli",
       },
-    },*/
+    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",

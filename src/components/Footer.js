@@ -145,8 +145,7 @@ export default ({ children }) => (
               }
             >
               {dgAddress.street} <br />
-              {dgAddress.city}, 
-              {dgAddress.state} {dgAddress.zipCode}
+              {dgAddress.city}, {dgAddress.state} {dgAddress.zipCode}
             </address>
           </div>
           <div className={FooterStyles.socialMediaRow + " social-media-row"}>
