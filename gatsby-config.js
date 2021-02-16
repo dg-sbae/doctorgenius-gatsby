@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Doctor Genius`,
+    title: `DoctorGenius`,
+    description: 'Healthcare Marketing Website',
+    siteUrl: 'https://doctorgenius.com',
+    author: 'DoctorGenius Web Development'
   },
   flags: {
     PRESERVE_WEBPACK_CACHE: true,
@@ -79,6 +82,64 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allWordpressPost } }) => {
+              return allWordpressPost.edges.map(edge => {
+                return Object.assign({}, edge.node.internal, {
+                  title: edge.node.title,
+                  description: edge.node.excerpt,
+                  date: edge.node.date,
+                  url: site.siteMetadata.siteUrl + "/blog" + edge.node.path,
+                  custom_elements: [{ "content:encoded": edge.node.content }],
+                })
+              })
+            },
+            query: `
+              {
+                allWordpressPost(
+                  sort: { order: DESC, fields: date },
+                ) {
+                  edges {
+                    node {
+                      title
+                      date
+                      excerpt
+                      content
+                      path
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/feed.xml",
+            title: "DoctorGenius' RSS Feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^\/blog\/",
+            // optional configuration to specify external rss feed, such as feedburner
+            //link: "https://feeds.feedburner.com/gatsby/blog",
+          },
+        ],
+      },
+    },
+    /*{
       resolve: `gatsby-plugin-brotli`,
       options: {
         extensions: [`css`, `html`, `js`, `svg`],
