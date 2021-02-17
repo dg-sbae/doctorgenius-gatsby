@@ -6,14 +6,20 @@ import ModalStyles from "./pxModal.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
 import pxLogo from '../img/dg-px-logo.svg'
-import CFImage from '../img/Contact-Form-02.jpg'
+import formImage from '../img/Contact-Form-02.jpg'
 
+<<<<<<< HEAD
 const Modal = ({ btnID }, data) => {
+=======
+const Modal = ({ buttonID }, data) => {
+  const images = data.data
+  //console.log(images)
+>>>>>>> develop
   useEffect(() => {
     var modal = document.getElementById("subscribeModal")
-    var btn = document.getElementById(btnID)
+    var button = document.getElementById(buttonID)
     var span = document.getElementsByClassName(`${ModalStyles.close}`)[0]
-    btn.onclick = function () {
+    button.onclick = function () {
       modal.style.display = "block"
     }
     span.onclick = function () {
@@ -44,7 +50,7 @@ const Modal = ({ btnID }, data) => {
           </div>
 
           <div className="col-sm-6">
-            <img className={ModalStyles.modalImage} src={CFImage} alt="Patient Experience Package" />
+            <img className={ModalStyles.modalImage} src={formImage} alt="Patient Experience Package" />
           </div>
 
         </div>
@@ -69,4 +75,7 @@ export const PxFormImageQuerys = graphql`
     }
   }
 `
+<<<<<<< HEAD
 */
+=======
+>>>>>>> develop
