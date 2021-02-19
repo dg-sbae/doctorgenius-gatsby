@@ -8,13 +8,8 @@ import RowStyles from "../components/Row.module.scss"
 import pxLogo from '../img/dg-px-logo.svg'
 import formImage from '../img/Contact-Form-02.jpg'
 
-<<<<<<< HEAD
-const Modal = ({ btnID }, data) => {
-=======
 const Modal = ({ buttonID }, data) => {
-  const images = data.data
-  //console.log(images)
->>>>>>> develop
+
   useEffect(() => {
     var modal = document.getElementById("subscribeModal")
     var button = document.getElementById(buttonID)
@@ -75,7 +70,4 @@ export const PxFormImageQuerys = graphql`
     }
   }
 `
-<<<<<<< HEAD
 */
-=======
->>>>>>> develop

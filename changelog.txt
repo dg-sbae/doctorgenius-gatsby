@@ -9,21 +9,19 @@
   Administrative updates (codebase cleanup)
   Refactor address display
   Refactor PX Footer Modal
-
   - New PX Content:
-  DGW-2029-Teledentistry-Sub-Level
-  DGW-2030-Px-Plans-Page
-  DGW-2034-teledent-child-pages
-  DGW-2035-remove-paid-advertising-plans-page
-  DGW-2037-finalize-dgpx-sublevel-pages
-  DGW-2037b-dgpx-content-in-place
-  DGW-2050-PXFormSubFooter
-
+    - DGW-2029-Teledentistry-Sub-Level
+    - DGW-2030-Px-Plans-Page
+    - DGW-2034-teledent-child-pages
+    - DGW-2035-remove-paid-advertising-plans-page
+    - DGW-2037-finalize-dgpx-sublevel-pages
+    - DGW-2037b-dgpx-content-in-place
+    - DGW-2050-PXFormSubFooter
   - Dependency security audit
-  Bump http-proxy from 1.17.0 to 1.18.1
-  Bump dot-prop from 4.2.0 to 4.2.1
-  Bump lodash from 4.17.11 to 4.17.20
-  Bump elliptic from 6.4.1 to 6.5.4
+    - Bump http-proxy from 1.17.0 to 1.18.1
+    - Bump dot-prop from 4.2.0 to 4.2.1
+    - Bump lodash from 4.17.11 to 4.17.20
+    - Bump elliptic from 6.4.1 to 6.5.4
 
 [2020-12-21] v1.4.0
   endpoints streamlined & clarified

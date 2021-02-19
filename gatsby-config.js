@@ -98,6 +98,7 @@ module.exports = {
         `,
         feeds: [
           {
+            // @todo link this function's documentation
             serialize: ({ query: { site, allWordpressPost } }) => {
               return allWordpressPost.edges.map(edge => {
                 return Object.assign({}, edge.node.internal, {
