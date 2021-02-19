@@ -10,7 +10,7 @@ import PageStyles from "./contact.module.scss"
 import OutageStyles from "./outage.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
-import {dgAddress} from "../variables/globalVariables";
+import { dgAddress } from "../variables/globalVariables";
 
 export default props => (
   <div
@@ -22,7 +22,7 @@ export default props => (
       RowStyles.rowStyling
     }
   >
-    <DefaultPageLayout location={props["*"]}>
+    <DefaultPageLayout location="outage">
       <Helmet>
         <title>
           Contact the Doctor Genius Team in {dgAddress.city}, {dgAddress.state} | Doctor Genius
@@ -32,7 +32,7 @@ export default props => (
           content="Need help? Have questions? The live support team at Doctor Genius is here to help. Give us a call, send us an email, connect on social media, or get our address."
         />
       </Helmet>
-      <div className={props["*"]}>
+      <div className="outage">
         <div className={PageStyles.mainContent}>
           <div className={OutageStyles.hero + " " + PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}

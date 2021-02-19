@@ -56,7 +56,6 @@ function PostPage({ pageContext, data, location }) {
     "%20(from%20" +
     escapedLink +
     ")%20."
-  // console.log()
   // let previousPost = (typeof(pageContext.prevNode) !== 'undefined' || pageContext.prevNode != null) ?
   const previousPost = pageContext.prevNode
     ? "/blog/" + pageContext.prevNode.slug

@@ -24,13 +24,17 @@ class OutageForm extends React.Component {
     }
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
+    this.handleLoad = this.handleLoad.bind(this)
   }
 
-  focusWithoutScrolling() {
-    let x = window.scrollX,
-      y = window.scrollY
-    $("#input-name").focus()
-    window.scrollTo(x, y)
+  handleLoad() {
+    window.scrollTo(0, 0)
+  }
+  componentDidMount() {
+    window.addEventListener('load', this.handleLoad)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('load', this.handleLoad)
   }
 
   handleFormSubmit(ev) {
@@ -145,7 +149,6 @@ class OutageForm extends React.Component {
         className={RowStyles.rowStyling + " " + ContactFormStyles.formWrapper}
       >
         <form
-          onLoad={this.focusWithoutScrolling}
           onSubmit={this.handleFormSubmit}
           className={RowStyles.row}
         >

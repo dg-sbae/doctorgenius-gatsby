@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { graphql } from "gatsby"
 
 import PxForm from '../components/px-form'
 
@@ -9,9 +8,13 @@ import RowStyles from "../components/Row.module.scss"
 import pxLogo from '../img/dg-px-logo.svg'
 import formImage from '../img/Contact-Form-02.jpg'
 
+<<<<<<< HEAD
+const Modal = ({ btnID }, data) => {
+=======
 const Modal = ({ buttonID }, data) => {
   const images = data.data
   //console.log(images)
+>>>>>>> develop
   useEffect(() => {
     var modal = document.getElementById("subscribeModal")
     var button = document.getElementById(buttonID)
@@ -59,6 +62,8 @@ const Modal = ({ buttonID }, data) => {
 
 export default Modal
 
+/*
+//This will need to be updated to use <StaticQuery> method of Graphql Query
 export const PxFormImageQuerys = graphql`
   query ModalImages {
     CFImage: file(relativePath: { eq: "Contact-Form-2.jpg" }) {
@@ -70,3 +75,7 @@ export const PxFormImageQuerys = graphql`
     }
   }
 `
+<<<<<<< HEAD
+*/
+=======
+>>>>>>> develop
