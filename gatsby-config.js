@@ -8,6 +8,8 @@ module.exports = {
   flags: {
     PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    FAST_DEV: true,
+    //GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true,
   },
   plugins: [
     //`gatsby-plugin-remove-trailing-slashes`,

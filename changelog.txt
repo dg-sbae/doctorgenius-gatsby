@@ -1,6 +1,13 @@
 ----  Change Log -----
 
 
+- [2021-02-29] v1.5.0
+  - ESLint errors resolved
+  - Gatsby cache-clearing implemented
+  - RSS Feed implemented
+  - 404 Page mobile styling fixed
+  
+
 - [2021-02-11] v1.4.0
   Updating LeadSource on relevant forms
   Fleshing out deployment steps in readme for parity/accuracy
