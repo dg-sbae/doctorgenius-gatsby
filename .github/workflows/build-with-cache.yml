@@ -1,4 +1,6 @@
 on:
+  workflow_dispatch:
+    branches: [master]
   push:
     branches: [master, develop]
   pull_request:
@@ -33,4 +35,4 @@ jobs:
       - name: Yarn install
         run: "yarn install --pure-lockfile"
       - name: Build app
-        run: "yarn run build:incremental"
+        run: "yarn run build"
