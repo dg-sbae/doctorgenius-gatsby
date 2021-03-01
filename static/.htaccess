@@ -65,6 +65,8 @@ RewriteRule ^(.*)$ https://doctorgenius.dgd3v.com/$1 [L,R=301]
 #Direct users to a 404 if attempting to visit the parent Clients page
 #RedirectMatch 404 ^/our-clients/?$
 
+#Shortcut for feed.xml
+Redirect 301 /feed /feed.xml
 
 # Ensure the Gatsby error pages are being used by the server
 ErrorDocument 500 /500/index.html
