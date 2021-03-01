@@ -24,8 +24,8 @@ const Plans = data => {
   const heroConfig = {
     pageType: "pxPlansPage",
     title: "Doctor Genius PX Plans",
-    subtitle: "Affordable Application For Your Practice",
-    content: "Be the leader in your local community by providing the best quality of care to your patients. Enhance your patient experience with our various plans that are meant to be easy, convenient and, of course, done from their phone.",
+    subtitle: "Affordable Application for Your Practice",
+    content: "Be the leader in your local community by providing the best quality of care to your patients. Enhance your patient experience with our various plans that are meant to be easy, convenient, and, of course, done from their phone.",
   }
 
   return (
@@ -181,7 +181,7 @@ const Plans = data => {
                         PageStyles.plansRowTitle
                       }
                     >
-                      Curbside Check In
+                      Curbside Check-In
                     </div>
                     <div className={PageStyles.gridItem}>
                       <img src={checkmark} alt="checkmark" />
@@ -198,7 +198,7 @@ const Plans = data => {
                         PageStyles.plansRowTitle
                       }
                     >
-                      Easy Forms Builder
+                      Easy Form Builder
                     </div>
                     <div className={PageStyles.gridItem}>
                       <img src={checkmark} alt="checkmark" />

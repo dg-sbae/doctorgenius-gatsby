@@ -11,9 +11,9 @@ const Teledentistry = data => {
       page="teledentistry" /* this should be dynamic from the page props */
       pageTitle="Teledentistry"
       pageSubtitle="Patient First Technology"
-      pageIntro="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."
+      pageIntro="Stay ahead of the curve by introducing innovative patient-first technology that positions your dental practice as a safe and convenient solution for providing quality care."
       metaTitle="Teledentistry | Healthcare Marketing Agency"
-      metaDescription="Stay ahead of the curve by introducing innovative patient first technology that positions your dental practice as a safe and convenient solution for providing quality care."
+      metaDescription="Stay ahead of the curve by introducing innovative patient-first technology that positions your dental practice as a safe and convenient solution for providing quality care."
       backgroundImage={images.backgroundImage.childImageSharp.fluid}
       subfooterBgImage={images.subfooterBgImage.childImageSharp.fluid}
       contentRows={[
@@ -21,9 +21,9 @@ const Teledentistry = data => {
           content: {
             rowType: 'odd-row',
             title: "Teledentistry",
-            innerTitle: "The ability to do Dentistry remotely",
+            innerTitle: "The Ability To Do Dentistry Remotely",
             paragraph:
-              "Our teledentistry solution is a new, paperless and contactless check in experience for your team and patients safety. This solution allows you to pre screen patients with the help of our technology in order to triage more effectively",
+              "Our teledentistry solution is a new, paperless and contactless check-in experience for your team and patients' safety. This solution allows you to pre-screen patients with the help of our technology in order to triage more effectively.",
             listTitle: "Contact-less Forms",
             listItems: [
               'Cosmetic Questionnaire',
@@ -43,7 +43,7 @@ const Teledentistry = data => {
           content: {
             rowType: 'icon-row',
             title: "Features & Benefits",
-            innerTitle: "How teledentistry benefits your patient's needs",
+            innerTitle: "How Teledentistry Benefits Your Patient's Needs",
             panels: [
               {
                 icon: images.icon_one.childImageSharp.fluid.src,
@@ -63,7 +63,7 @@ const Teledentistry = data => {
               {
                 icon: images.icon_four.childImageSharp.fluid.src,
                 alt: "Teledentistry Patient Care",
-                caption: "Save your patients and team time by making critical decisions regarding at risk patients before they arrive at your office."
+                caption: "Save your patients and team time by making critical decisions regarding at-risk patients before they arrive at your office."
               },
             ],
           }
@@ -74,7 +74,7 @@ const Teledentistry = data => {
             title: "Patient-First Experience",
             innerTitle: "Pre-Screening and Evaluations",
             paragraph:
-              "Manage your important documents securely and only a click away with our Doctor Genius PX, Patient Experience software package. The result is enhanced with operational efficiency, increased case acceptance, improved patient experience, and a consistant standard of care",
+              "Manage your important documents securely with one click using our Doctor Genius PX, Patient Experience software package. You can see results from more efficient operations to increased case acceptance, improved patient experience, and consistent care standards.",
           },
           image: {
             url: images.image_two.childImageSharp.fluid.src,
@@ -85,9 +85,9 @@ const Teledentistry = data => {
           content: {
             rowType: 'odd-row',
             title: "Remotely",
-            innerTitle: "We're here to support you, anytime or any place",
+            innerTitle: "We're Here To Support You, Anytime or Any Place",
             paragraph:
-              "Doctor Genius community has all the up to date necessary resources for your team to be successful and profitable. Make things simpler for your patients and team in order to provide quality care for your local community. We are here to help you make a 5 star experience with each and every patients.",
+              "Doctor Genius has the up-to-date and necessary resources to help your team be successful and profitable. Make things simpler for your patients and teams, shifting the focus to improving quality care within your local community. We are here to help you make a 5-star experience with each patient.",
           },
           image: {
             url: images.image_three.childImageSharp.fluid.src,

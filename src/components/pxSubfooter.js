@@ -21,8 +21,8 @@ class PxSubfooter extends Component {
           <div className="col-sm-10 col-md-9 col-lg-5">
             <div className={PxFooterStyles.contentBlock}>
               <h1>
-                Transform your patient experience with Doctor Genius
-            </h1>
+                Transform Your Patient Experience With Doctor Genius
+              </h1>
               <div className={PxFooterStyles.strapline}>
                 <p>
                   You're now one step closer to improving your overall patient experience.
