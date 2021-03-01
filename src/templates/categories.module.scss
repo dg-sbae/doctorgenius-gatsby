@@ -7,6 +7,8 @@
     }
   }
   .blogHeading {
+    font-size: 1.17em;
+    font-weight: 700;
     color: $blog-page-headings-color;
     margin-bottom: 0;
   }
@@ -39,7 +41,7 @@
     }
   }
   .responsiveTabTrigger {
-    h3 {
+    span {
       display: inline-block;
       margin-right: 25px;
     }

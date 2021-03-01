@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { graphql } from "gatsby"
 
 import PxForm from '../components/px-form'
 
@@ -7,16 +6,15 @@ import ModalStyles from "./pxModal.module.scss"
 import RowStyles from "../components/Row.module.scss"
 
 import pxLogo from '../img/dg-px-logo.svg'
-import CFImage from '../img/Contact-Form-02.jpg'
+import formImage from '../img/Contact-Form-02.jpg'
 
-const Modal = ({ btnID }, data) => {
-  const images = data.data
-  console.log(images)
+const Modal = ({ buttonID }, data) => {
+
   useEffect(() => {
     var modal = document.getElementById("subscribeModal")
-    var btn = document.getElementById(btnID)
+    var button = document.getElementById(buttonID)
     var span = document.getElementsByClassName(`${ModalStyles.close}`)[0]
-    btn.onclick = function () {
+    button.onclick = function () {
       modal.style.display = "block"
     }
     span.onclick = function () {
@@ -47,7 +45,7 @@ const Modal = ({ btnID }, data) => {
           </div>
 
           <div className="col-sm-6">
-            <img className={ModalStyles.modalImage} src={CFImage} alt="Patient Experience Package" />
+            <img className={ModalStyles.modalImage} src={formImage} alt="Patient Experience Package" />
           </div>
 
         </div>
@@ -59,6 +57,8 @@ const Modal = ({ btnID }, data) => {
 
 export default Modal
 
+/*
+//This will need to be updated to use <StaticQuery> method of Graphql Query
 export const PxFormImageQuerys = graphql`
   query ModalImages {
     CFImage: file(relativePath: { eq: "Contact-Form-2.jpg" }) {
@@ -70,3 +70,4 @@ export const PxFormImageQuerys = graphql`
     }
   }
 `
+*/

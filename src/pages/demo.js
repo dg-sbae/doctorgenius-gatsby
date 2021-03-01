@@ -6,10 +6,9 @@ import { graphql } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
+import InnerTitle from "../components/inner-title"
 import DemoForm from "../components/demo-form.js"
 import star from "../img/star.svg"
-
-import InnerTitle from "../components/inner-title"
 
 import "../styles/demo.scss"
 import DemoPageStyles from "./demo.module.scss"

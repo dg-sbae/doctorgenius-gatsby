@@ -255,10 +255,10 @@ const EventPage = ({ data }) => {
               />
             </div>
           ) : (
-            <div className="speaker-img-wrapper">
-              <img src={SpeakerPlaceholder} className="mx-auto d-block" />
-            </div>
-          )}
+              <div className="speaker-img-wrapper">
+                <img src={SpeakerPlaceholder} alt="Speaker" className="mx-auto d-block" />
+              </div>
+            )}
 
           <p>{speaker.speaker_name}</p>
         </div>

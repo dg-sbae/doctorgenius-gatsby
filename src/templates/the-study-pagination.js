@@ -10,8 +10,8 @@ import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
 import Container from "../components/Container"
 import NewsLetterSignUpForm from "../components/newsletter-form.js"
-import RequestDemoFooter from "../components/request-demo-footer"
 import Hero from "../components/Hero"
+import RequestDemoFooter from "../components/request-demo-footer"
 import EventsTeaser from "../components/eventsTeaser"
 
 import twitterIcon from "../img/twitter.svg"
@@ -39,9 +39,12 @@ const ResponsivePostsColumnHeader = props => (
       " col-sm-12 d-lg-none responsive-tab-trigger"
     }
   >
-    <h3
+    <span
       onClick={props.onClick}
+      onKeyPress={props.onClick}
       data-column="latest"
+      role="button"
+      tabIndex="0"
       className={
         (props.currentColumn === "latest"
           ? `${PageStyles.active} active `
@@ -51,10 +54,13 @@ const ResponsivePostsColumnHeader = props => (
       }
     >
       Latest Posts
-    </h3>
-    <h3
+    </span>
+    <span
       onClick={props.onClick}
+      onKeyPress={props.onClick}
       data-column="popular"
+      role="button"
+      tabIndex="0"
       className={
         (props.currentColumn === "popular"
           ? `${PageStyles.active} active `
@@ -64,7 +70,7 @@ const ResponsivePostsColumnHeader = props => (
       }
     >
       Popular Posts
-    </h3>
+    </span>
     <div
       className={
         PageStyles.spacer + " " + PageStyles.small + " " + PageStyles.solid
@@ -278,7 +284,6 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                       const mainCategory = node.categories.find(c =>
                         categoriesPaths.find(d => d.name === c.name)
                       )
-                      // console.log(mainCategory)
                       return (
                         <div
                           className={PageStyles.latestPost + " latest-post"}
@@ -343,9 +348,9 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                 __html: node.excerpt.replace(
                                   /<a.*?moretag.*?<\/a>/,
                                   '... <a href="' +
-                                    postsPath +
-                                    node.slug +
-                                    '" target="_blank">[ Read More ]</a>'
+                                  postsPath +
+                                  node.slug +
+                                  '" target="_blank">[ Read More ]</a>'
                                 ),
                               }}
                             />
@@ -357,41 +362,40 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
 
                     <div className={PageStyles.pagination + " pagination"}>
                       {// Controls the prev button
-                      !isFirst && (
-                        <Link to={prevPage} rel="prev">
-                          <img src={leftChevron} alt="Navigate to Previous" />
-                        </Link>
-                      )}
-                      {}
+                        !isFirst && (
+                          <Link to={prevPage} rel="prev">
+                            <img src={leftChevron} alt="Navigate to Previous" />
+                          </Link>
+                        )}
+                      { }
                       {// Loop to create pagination links based on numOfPages
 
-                      Array.from(
-                        { length: pageContext.numPaginationLinks },
-                        (_, i) => (
-                          <Link
-                            key={`pagination-number${i + start}`}
-                            to={`/blog${
-                              i + start - 1 === 0 ? "" : "/" + (i + start)
-                            }`}
-                          >
-                            <p
-                              className={
-                                pageContext.currentPage === i + start
-                                  ? `${PageStyles.active} active`
-                                  : ""
-                              }
+                        Array.from(
+                          { length: pageContext.numPaginationLinks },
+                          (_, i) => (
+                            <Link
+                              key={`pagination-number${i + start}`}
+                              to={`/blog${i + start - 1 === 0 ? "" : "/" + (i + start)
+                                }`}
                             >
-                              {i + start}
-                            </p>
-                          </Link>
-                        )
-                      )}
+                              <p
+                                className={
+                                  pageContext.currentPage === i + start
+                                    ? `${PageStyles.active} active`
+                                    : ""
+                                }
+                              >
+                                {i + start}
+                              </p>
+                            </Link>
+                          )
+                        )}
                       {// Controls the next button
-                      !isLast && (
-                        <Link to={nextPage} rel="next">
-                          <img src={rightChevron} alt="Navigate to Next" />
-                        </Link>
-                      )}
+                        !isLast && (
+                          <Link to={nextPage} rel="next">
+                            <img src={rightChevron} alt="Navigate to Next" />
+                          </Link>
+                        )}
                     </div>
                   </LatestPostsColumn>
                   <PopularPostsColumn>
@@ -585,9 +589,9 @@ const TheStudyPaginationPage = ({ data, pageContext }) => {
                                       __html: node.excerpt.replace(
                                         /<a.*?moretag.*?<\/a>/,
                                         '... <a href="' +
-                                          postsPath +
-                                          node.slug +
-                                          '" target="_blank">[ Read More ]</a>'
+                                        postsPath +
+                                        node.slug +
+                                        '" target="_blank">[ Read More ]</a>'
                                       ),
                                     }}
                                   />

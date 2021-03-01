@@ -10,11 +10,11 @@ import PageStyles from "./contact.module.scss"
 import RowStyles from "../components/Row.module.scss"
 import InnerTitleStyles from "../components/inner-title.module.scss"
 
-import {dgAddress} from "../variables/globalVariables";
+import { dgAddress } from "../variables/globalVariables";
 
 export default props => (
   <div className={PageStyles.contactPage + " " + RowStyles.rowStyling}>
-    <DefaultPageLayout location={props["*"]}>
+    <DefaultPageLayout location="contact">
       <Helmet>
         <title>
           Contact the Doctor Genius Team in {dgAddress.city}, {dgAddress.state} | Doctor
@@ -25,7 +25,7 @@ export default props => (
           content="Need help? Have questions? The live support team at Doctor Genius is here to help. Give us a call, send us an email, connect on social media, or get our address."
         />
       </Helmet>
-      <div className={props["*"]}>
+      <div className="contact">
         <div className={PageStyles.mainContent}>
           <div className={PageStyles.hero + " hero"}>
             {/* Hero will be a layout component */}
