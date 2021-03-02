@@ -8,7 +8,7 @@ import RowStyles from "../components/Row.module.scss"
 import pxLogo from '../img/dg-px-logo.svg'
 import formImage from '../img/Contact-Form-02.jpg'
 
-const Modal = () => {
+const Modal = ({ buttonID }, data) => {
   useEffect(() => {
     var modal = document.getElementById("subscribeModal")
     //var button = document.getElementById(buttonID)

@@ -36,7 +36,7 @@ class PxSubfooter extends Component {
           <div className="col-sm-10 col-lg-4">
             <div className={PxFooterStyles.ctaSection}>
               <button className={PxFooterStyles.ctaButton} id="pxModal">Get Started</button>
-              <Modal btnID="pxModal" />
+              <Modal buttonID="pxModal" />
 
               <div className={PxFooterStyles.pxLogo}>
                 <img src={pxLogo} alt="Doctor Genius PX" />
