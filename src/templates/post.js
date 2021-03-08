@@ -214,13 +214,16 @@ function PostPage({ pageContext, data, location }) {
                     <div
                       className={PageStyles.featuredImage + " featured-image"}
                     >
-                      {post.featured_media && (
+                      {(post.featured_media.localFile.childImageSharp.fluid) ?
                         <Img
                           fluid={
                             post.featured_media.localFile.childImageSharp.fluid
                           }
                         />
-                      )}
+                        :
+                        <div className="placeholder"></div>
+
+                      }
                     </div>
                     <div
                       className="remainder"
