@@ -1,3 +1,8 @@
+// placeholder variable for different build actions to take based on env variables
+// ie, proper ENV variables should automatically turn the compression steps off, but we'll 
+// do it manually here for now:
+const devMode = true;
+
 module.exports = {
   siteMetadata: {
     title: `DoctorGenius`,
@@ -142,7 +147,7 @@ module.exports = {
           },
         ],
       },
-    },/*
+    },
     {
       resolve: `gatsby-plugin-brotli`,
       options: {
@@ -156,7 +161,7 @@ module.exports = {
         extensions: ["css", "html", "js", "svg"],
         path: "gzip-zopfli",
       },
-    },*/
+    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
