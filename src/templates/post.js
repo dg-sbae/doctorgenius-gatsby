@@ -124,14 +124,14 @@ function PostPage({ pageContext, data, location }) {
                       }
                     >
                       <div className={PageStyles.imgHolder + " col-xs-12"}>
-                        {post.featured_media ? (
+                        {post.featured_media.localFile ? (
                           <Img
                             fluid={
                               post.featured_media.localFile.childImageSharp
                                 .fluid
                             }
                           />
-                        ) : <div className='placeholder' />}
+                        ) : <div className='missingImagePlaceholder' />}
                       </div>
                     </div>
                     <div
