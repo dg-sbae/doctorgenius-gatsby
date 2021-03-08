@@ -27,7 +27,7 @@ const PxPage = data => {
     strapline: "Patient Experience Package",
     title: [<span>Stay connected</span>, " when it matters the most"],
     content:
-      "Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution.",
+      "Teledentistry is a patient-first technology that allows you to position your office as a tech-forward, convenient solution instantly.",
   }
 
   return (
@@ -39,7 +39,7 @@ const PxPage = data => {
             </title>
           <meta
             name="description"
-            content="Patient first technology like Teledentistry allows you to instantly position your office as a tech-forward, convenient solution."
+            content="Teledentistry is a patient-first technology that allows you to position your office as a tech-forward, convenient solution instantly."
           />
         </Helmet>
         <div className="px-package-page">
@@ -99,7 +99,7 @@ const PxPage = data => {
                         className="s-thin"
                         dangerouslySetInnerHTML={{
                           __html:
-                            "The Doctor Genius PX, Patient Experience Package integrates seamlessly with our digital marketing solutions that leverage content, our mobile-first web design, SEO, online directories, and social media to drive new patients to your practice. Learn more about our marketing solutions.",
+                            "The Doctor Genius PX (Patient Experience Package) integrates seamlessly with our digital marketing solutions that leverage content, mobile-first web design, SEO, online directories, and social media to drive new patients to your practice. Learn more about our marketing solutions.",
                         }}
                       />
                     </div>
@@ -361,7 +361,7 @@ const PxPage = data => {
                         className=""
                         dangerouslySetInnerHTML={{
                           __html:
-                            "Doctor Genius is here to help you navigate the changing landscape of practice management and patient care with our PX, Patient Experience software package. This package includes everything you need to see stay connected to your patients anytime, anywhere.",
+                            "Doctor Genius is here to help you navigate the changing landscape of practice management and patient care with our PX, Patient Experience software package. This package includes everything you need to stay connected to your patients anytime, anywhere.",
                         }}
                       />
                     </div>
@@ -409,7 +409,7 @@ const PxPage = data => {
                         className="s-thin"
                         dangerouslySetInnerHTML={{
                           __html:
-                            "Reduce unnecessary emergency appointments and by using a Teledentistry Emergency Triage Form. This form can be easily accessed from your website, texted, or emailed to allow patients to securely send photos and videos of their dental emergency.",
+                            "Reduce unnecessary emergency appointments by using a Teledentistry Emergency Triage Form. This form can be easily accessed from your website, smartphone, or email to allow patients to send photos and videos of their dental emergency securely.",
                         }}
                       />
                     </div>
@@ -459,7 +459,7 @@ const PxPage = data => {
                         className=""
                         dangerouslySetInnerHTML={{
                           __html:
-                            "Every piece of paper that exists in your practice requires printing, handling, sorting, filling out, verification, scanning, filing, and shredding. Imagine eliminating all of that busy work with a click.",
+                            "Every piece of paper that exists in your practice requires printing, handling, sorting, filling out, verification, scanning, filing, and shredding. Imagine eliminating all of that busy work with one click.",
                         }}
                       />
                     </div>
