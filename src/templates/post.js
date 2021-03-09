@@ -99,16 +99,16 @@ function PostPage({ pageContext, data, location }) {
                         &nbsp;Back
                       </a>
                     ) : (
-                        <p>&nbsp;</p>
-                      )}
+                      <p>&nbsp;</p>
+                    )}
                     {nextPost != null ? (
                       <a href={nextPost}>
                         Next &nbsp;
                         <img src={rightChevron} alt="Navigate to Next" />
                       </a>
                     ) : (
-                        <p>&nbsp;</p>
-                      )}
+                      <p>&nbsp;</p>
+                    )}
                   </div>
                 </div>
               </div>
@@ -124,14 +124,14 @@ function PostPage({ pageContext, data, location }) {
                       }
                     >
                       <div className={PageStyles.imgHolder + " col-xs-12"}>
-                        {post.featured_media && (
+                        {post.featured_media.localFile ? (
                           <Img
                             fluid={
                               post.featured_media.localFile.childImageSharp
                                 .fluid
                             }
                           />
-                        )}
+                        ) : <div className='missingImagePlaceholder' />}
                       </div>
                     </div>
                     <div
@@ -214,13 +214,16 @@ function PostPage({ pageContext, data, location }) {
                     <div
                       className={PageStyles.featuredImage + " featured-image"}
                     >
-                      {post.featured_media && (
+                      {(post.featured_media.localFile.childImageSharp.fluid) ?
                         <Img
                           fluid={
                             post.featured_media.localFile.childImageSharp.fluid
                           }
                         />
-                      )}
+                        :
+                        <div className="placeholder"></div>
+
+                      }
                     </div>
                     <div
                       className="remainder"

@@ -1,3 +1,8 @@
+// placeholder variable for different build actions to take based on env variables
+// ie, proper ENV variables should automatically turn the compression steps off, but we'll 
+// do it manually here for now:
+const devMode = true;
+
 module.exports = {
   siteMetadata: {
     title: `DoctorGenius`,
@@ -9,6 +14,7 @@ module.exports = {
     PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
     FAST_DEV: true,
+    //PARALLEL_SOURCING: true,
     //GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true,
   },
   plugins: [

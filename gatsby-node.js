@@ -397,7 +397,8 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   const { setWebpackConfig } = actions
   setWebpackConfig({
     externals: {
-      jquery: "jQuery",
+      $: "jquery",
+      jQuery: "jquery"
     },
     module: {
       rules: [

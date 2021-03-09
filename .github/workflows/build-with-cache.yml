@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
     branches: [master]
   push:
-    branches: [master, develop]
+    branches: [all]
   pull_request:
     branches: [develop]
 
