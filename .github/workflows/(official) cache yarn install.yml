@@ -69,7 +69,7 @@ jobs:
         id: push_directory
         uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          API_TOKEN_GITHUB: ${{ secrets.GATSBY_ACCESS_TOKEN }}
         with:
           source-directory: "output"
           destination-github-username: "dg-jparmenter"
