@@ -23,14 +23,14 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: gatsby-cache
-          path: .cache/*.*
+          path: .cache
           retention-days: 30
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
           name: gatsby-build
-          path: public/*.*
+          path: public
           retention-days: 30
 
       - name: Use Node.js ${{ matrix.node-version }}
@@ -57,3 +57,25 @@ jobs:
       # Ready to run steps that rely on node_modules
       - name: Build application
         run: yarn build
+
+  beginCD:
+    runs-on: ubuntu-latest
+    needs: runYarn
+    steps:
+      - name: Announce deployment
+        run: echo Deploying to productuion server/$DESTINATION_CLONED_DIRECTORY
+
+      - name: Pushes to another repository
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: "output"
+          destination-github-username: "dg-jparmenter"
+          destination-repository-name: "CD-doctorgenius.com"
+          user-email: jparmenter@doctorgenius.com
+          commit-message: See ORIGIN_COMMIT
+
+      - name: Test get variable exported by push-to-another-repository
+        run: echo $DESTINATION_CLONED_DIRECTORY
