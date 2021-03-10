@@ -19,6 +19,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: gatsby-cache
+          path: .cache/*.*
+          retention-days: 30
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: gatsby-build
+          path: public/*.*
+          retention-days: 30
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
