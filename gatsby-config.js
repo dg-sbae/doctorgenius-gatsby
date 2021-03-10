@@ -14,8 +14,8 @@ module.exports = {
     PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
     FAST_DEV: true,
-    //PARALLEL_SOURCING: true,
-    //GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true,
+    PARALLEL_SOURCING: true,
+    GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true,
   },
   plugins: [
     //`gatsby-plugin-remove-trailing-slashes`,
@@ -148,7 +148,7 @@ module.exports = {
         ],
       },
     },
-    {
+    /* {
       resolve: `gatsby-plugin-brotli`,
       options: {
         extensions: [`css`, `html`, `js`, `svg`],
@@ -161,7 +161,7 @@ module.exports = {
         extensions: ["css", "html", "js", "svg"],
         path: "gzip-zopfli",
       },
-    },
+    }, */
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",

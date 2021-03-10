@@ -55,8 +55,16 @@ typings/
 .env
 
 # gatsby files
-.cache/
-public
+#.cache/
+public/*.zip
+public/**/*.jpg
+public/**/*.png
+public/static/*.*
+public/static/**
+
+#Compressed
+public/gzip-zopfli/**
+public/brotli/**
 
 # Mac files
 .DS_Store
