@@ -83,7 +83,7 @@ class PxForm extends React.Component {
     stringData = stringData.replace(/&$/, "")
 
     // Generate a request to the email server
-    /*fetch("https://nodetest-dev.dgplex.com/upload", {
+    fetch("https://nodetest-dev.dgplex.com/upload", {
       method: "POST",
       body: stringData,
       headers: {
@@ -100,10 +100,10 @@ class PxForm extends React.Component {
           validationPassed: body.validationPassed,
         })
       })
-    }) */
+    })
 
     // Additional testing endpoint:
-    fetch("https://enkju26ditb.x.pipedream.net", {
+    /*fetch("https://ene7rrdh68sdf.x.pipedream.net", {
       method: "POST",
       body: stringData,
       headers: {
@@ -114,7 +114,7 @@ class PxForm extends React.Component {
       response.json().then(body => {
         console.log("requestbin body:", body)
       })
-    })
+    }) */
 
 
     //Trigger form clearing upon completion of all API calls
