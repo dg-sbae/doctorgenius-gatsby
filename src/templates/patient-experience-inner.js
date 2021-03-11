@@ -45,7 +45,7 @@ export default props => {
           <title>{metaTitle}</title>
           <meta name="description" content={metaDescription} />
         </Helmet>
-        <div className={props.page + " patient-experience-inner"}>
+        <div id={heroConfig.pageType} className="patient-experience-inner">
           <BackgroundImage fluid={heroBackgroundImage}>
             <HeroPx
               pageType={heroConfig.pageType}
@@ -76,9 +76,9 @@ export default props => {
 
               {/* Begin Split Row of content and image */}
               {contentRows.map((row) => (
-
                 row.content.rowType !== "icon-row" ?
                   <div
+                    key={row.content.title}
                     className={
                       row.content.rowType + " " +
                       RowStyles.row +
@@ -138,7 +138,7 @@ export default props => {
                   /* End Split Row of content and image */
                   :
                   // Start Large Icon Row
-                  <div className={PageStyles.iconContentRow}>
+                  <div key={row.content.title} className={PageStyles.iconContentRow}>
                     <div
                       className={
                         RowStyles.row +
@@ -161,7 +161,7 @@ export default props => {
                       }
                     >
                       {row.content.panels.map((panel) => (
-                        <div className="col-sm-6 col-md-3">
+                        <div className="col-sm-6 col-md-3" key={panel.title}>
                           <div className={PageStyles.panel}>
                             <div className={PageStyles.iconWrapper}>
                               <img

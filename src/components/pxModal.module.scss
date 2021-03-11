@@ -1,89 +1,95 @@
 @import "../styles/_site-variables.scss";
 
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 3px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modalContent {
-  width: 968px; /* Full width */
-  height: 562px; /* Full height */
+.pxModal {
+  height:588px;
+  width:937px;
   position: relative;
   background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
-}
+  animation-duration: 0.4s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 1;
 
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  .modalContent {
+    text-align: center;
+    padding: 20px 45px;
+  }
+  .modalContent, .modalImageHolder {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .formHolder {
+    width:90%;
+    margin: auto;
+  }
+  /* The Close Button */
+  .modalClose {
+    font-size: 35px;
+    font-weight: bold;
+    float: left;
+    padding-left: 12px;
+  }
+  .modalClose:hover, .modalClose:focus {
+    color: #f2f2f2;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .pxLogo {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .pxModalCaption {
+    font-size: 17px;
+    font-weight: $font-weight-medium;
+    font-family: $font-family-base;
+    padding-top: 10px;
+    color: #656565;
+    width: 90%;
+    margin: auto;
+  }
+  .privacyStatement {
+    font-size: 14px;
+    color: #AEAEAE;
+    font-weight: $font-weight-light;
+    font-family: $font-family-base;
+  }
+  .modalImage {
+    display: block;
+  }
 
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
+  //Styling for tablet
+  @media only screen and (min-width: $tablet) and (max-width: $laptop) {
+    height:588px;
+    width:760px;
+    .modalContent {
+      padding: 10px 25px;
+    }
+  }
 
-/* The Close Button */
-.close {
-  float: left;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #f2f2f2;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.pxLogo {
-  padding-top: 30px;
-  padding-bottom: 10px;
-  width: 100%;
-}
-
-.modalCaption {
-  font-size: 17px;
-  font-weight: $font-weight-medium;
-  font-family: $font-family-base;
-  width: 90%;
-  margin: auto;
-}
-
-.privacyStatement {
-  font-size: 14px;
-  font-weight: $font-weight-light;
-  font-family: $font-family-base;
-}
-
-.modalForm {
-  padding: 2px 16px;
-  span {
-    color: black;
+  @media only screen and(max-width: 767px) {
+    height:560px;
+    width:325px;
+    .modalContent {
+      width: 100%;
+      padding: 5px;
+    }
+    .modalImageHolder {
+      display: none;
+    }
   }
 }
-
-.modalImage {
-  width: 90%;
-}
-
-.modalBody {padding: 2px 16px;}
