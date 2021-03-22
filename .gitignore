@@ -54,9 +54,12 @@ typings/
 # dotenv environment variables file
 .env
 
+#google cloud cred file
+.gcloudCred/google-cloud-creds.json
+.cache
+
 # gatsby files
 #.cache/
-/public
 public/*.zip
 public/**/*.jpg
 public/**/*.png
