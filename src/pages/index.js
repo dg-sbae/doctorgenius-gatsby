@@ -49,7 +49,7 @@ export default ({ data }, props) => {
               >
                 <div className="col-sm-10">
                   <InnerTitle
-                    title="We Care About Your Success"
+                    title="We Care About Your Success (Parallel Runner Testing)"
                     underlined
                     centered
                     strapline="Performance, Results, Excellence"
