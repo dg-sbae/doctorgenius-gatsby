@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
-import Container from "../components/Container"
+import Container from "../components/container"
 import RequestDemoFooter from "../components/request-demo-footer"
 import EventsTeaser from "../components/eventsTeaser"
 

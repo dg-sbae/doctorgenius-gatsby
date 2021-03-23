@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
-import Container from "../components/Container"
+import Container from "../components/container"
 import TestimonialsSlider from "../components/testimonials-slider"
 
 import "../styles/our-clients.scss"

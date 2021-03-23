@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
-import Container from "../components/Container"
+import Container from "../components/container"
 import Main from "../components/main-content"
 
 import "../styles/confirmation.scss"

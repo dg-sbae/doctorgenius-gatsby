@@ -1,6 +1,6 @@
 import React from "react"
 
-import Container from "../components/Container"
+import Container from "../components/container"
 
 import HeroStyles from "./HeroPx.module.scss"
 import RowStyles from "../components/Row.module.scss"

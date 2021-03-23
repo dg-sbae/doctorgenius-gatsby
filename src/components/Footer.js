@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Container from "../components/Container"
+import Container from "../components/container"
 import logoWhite from "../img/icon/logo-white.svg"
 import ringingPhoneIcon from "../img/icon/ringing-phone.svg"
 import envelopeIcon from "../img/icon/mail.svg"

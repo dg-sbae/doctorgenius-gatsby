@@ -5,7 +5,7 @@ import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
-import Container from "../components/Container"
+import Container from "../components/container"
 import FAQAccordion, { FAQ } from "../components/faq-accordion"
 import InnerTitle from "../components/inner-title.js"
 import Hero from "../components/Hero"

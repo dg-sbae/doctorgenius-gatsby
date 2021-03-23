@@ -4,7 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
-import Container from "../components/Container"
+import Container from "../components/container"
 import MobileSecondaryNav from "../components/MobileSecondaryNav"
 import SecondaryNavigation from "../components/SecondaryNavigation"
 import HeroPx from "../components/HeroPx"
