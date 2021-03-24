@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import DefaultPageLayout from "../components/DefaultPageLayout"
 //import Main from "../components/main-content"
-import Container from "../components/Container"
+import Container from "../components/container"
 import BackgroundImage from "gatsby-background-image"
 
 import "../styles/500.scss"

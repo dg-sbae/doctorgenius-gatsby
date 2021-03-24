@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
-import Container from "../components/Container"
+import Container from "../components/container"
 import "../styles/404.scss"
 import PageStyles from "./404.module.scss"
 import RowStyles from "../components/Row.module.scss"

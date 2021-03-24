@@ -7,7 +7,7 @@ import BackgroundImage from "gatsby-background-image"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
 import Main from "../components/main-content"
-import Container from "../components/Container"
+import Container from "../components/container"
 import InnerTitle from "../components/inner-title.js"
 import HomeHero from "../components/HomeHero"
 import RequestDemoFooter from "../components/request-demo-footer"
@@ -49,7 +49,7 @@ export default ({ data }, props) => {
               >
                 <div className="col-sm-10">
                   <InnerTitle
-                    title="We Care About Your Success"
+                    title="We Care About Your Success (Parallel Runner Testing)"
                     underlined
                     centered
                     strapline="Performance, Results, Excellence"

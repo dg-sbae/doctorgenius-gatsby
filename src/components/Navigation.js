@@ -1,7 +1,7 @@
 import React from "react"
 import { Component } from "react"
 import { Link } from "gatsby"
-import Container from "../components/Container"
+import Container from "../components/container"
 import Sidebar from "../components/Sidebar"
 
 import ourTech from "../img/icon/our-technology-white.svg"

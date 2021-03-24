@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 import DefaultPageLayout from "../components/DefaultPageLayout"
-import Container from "../components/Container"
+import Container from "../components/container"
 import ContactForm from "../components/contact-form.js"
 
 import "../styles/contact.scss"

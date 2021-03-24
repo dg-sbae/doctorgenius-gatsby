@@ -1,5 +1,5 @@
 import React from "react"
-import containerStyles from "./Container.module.scss"
+import containerStyles from "./container.module.scss"
 
 export default ({ children, parentClassNames }) => (
   // Receive the className from the parent component if provided
